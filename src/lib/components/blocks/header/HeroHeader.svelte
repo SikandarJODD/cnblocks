@@ -4,6 +4,7 @@
   import { Menu, X } from "@lucide/svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import { scrollY } from "svelte/reactivity/window";
+  import { fade } from "svelte/transition";
 
   let menuItems = [
     { name: "Features", href: "#a" },
@@ -18,14 +19,13 @@
     }
     return false;
   });
-  $inspect({ menuState });
 </script>
 
 <header>
   <nav class="fixed z-20 w-full px-2">
     <div
       class={[
-        "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
+        "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 rounded-2xl",
         isScrolled &&
           "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5",
       ]}
@@ -72,9 +72,11 @@
             {/each}
           </ul>
         </div>
-
         <div
-          class="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent"
+          class={[
+            "bg-background mb-6  w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+            menuState ? "block lg:flex" : "hidden lg:flex",
+          ]}
         >
           <div class="lg:hidden">
             <ul class="space-y-6 text-base">
