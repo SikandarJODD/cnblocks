@@ -5,6 +5,6 @@
 </script>
 
 <div class="h-[300vh]">
-  <HeroTwo />
+  <HeroOne />
   <FeatureOne />
 </div>
