@@ -2,6 +2,9 @@
   import Button from "$lib/components/ui/button/button.svelte";
   import { ChevronRight } from "@lucide/svelte";
   import HeroHeader9 from "../header/HeroHeader9.svelte";
+  import InfiniteSlider from "$lib/components/magic/Marquee.svelte";
+  import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
+  import Marquee from "$lib/components/magic/Marquee.svelte";
 </script>
 
 <HeroHeader9 />
@@ -27,11 +30,13 @@
           <div
             class="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start"
           >
-            <Button size="lg" class="h-12 rounded-full pl-5 pr-3 text-base">
-              <a href="#link">
-                <span class="text-nowrap">Start Building</span>
-                <ChevronRight class="ml-1" />
-              </a>
+            <Button
+              size="lg"
+              href="#"
+              class="h-12 rounded-full pl-5 pr-3 text-base"
+            >
+              <span class="text-nowrap">Start Building</span>
+              <ChevronRight class="ml-1" />
             </Button>
             <Button
               size="lg"
@@ -64,7 +69,7 @@
           <p class="text-end text-sm">Powering the best teams</p>
         </div>
         <div class="relative py-6 md:w-[calc(100%-11rem)]">
-          <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
+          <Marquee>
             <div class="flex">
               <img
                 class="mx-auto h-5 w-fit dark:invert"
@@ -74,7 +79,6 @@
                 width="auto"
               />
             </div>
-
             <div class="flex">
               <img
                 class="mx-auto h-4 w-fit dark:invert"
@@ -138,7 +142,7 @@
                 width="auto"
               />
             </div>
-          </InfiniteSlider>
+          </Marquee>
 
           <div
             class="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"
@@ -147,12 +151,12 @@
             class="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"
           ></div>
           <ProgressiveBlur
-            class="pointer-events-none absolute left-0 top-0 h-full w-20"
+            class="pointer-events-none absolute left-0 top-0 h-full w-20 z-50"
             direction="left"
             blurIntensity={1}
           />
           <ProgressiveBlur
-            class="pointer-events-none absolute right-0 top-0 h-full w-20"
+            class="pointer-events-none absolute right-0 top-0 h-full w-20 z-50"
             direction="right"
             blurIntensity={1}
           />

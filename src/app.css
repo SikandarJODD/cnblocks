@@ -1,13 +1,12 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* @plugin 'tailwindcss-animate'; */
-@import './animate.css';
+@import "./animate.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-
-  --font-mono: 'Geist Mono', 'Fira Code', monospace;
+  --font-mono: "Geist Mono", "Fira Code", monospace;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -92,7 +91,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -129,5 +128,23 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
   }
 }
