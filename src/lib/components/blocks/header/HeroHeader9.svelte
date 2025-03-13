@@ -24,15 +24,17 @@
   <nav class="fixed z-20 w-full px-2">
     <div
       class={[
-        "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 rounded-2xl",
-        isScrolled &&
-          "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5",
+        "mx-auto max-w-7xl rounded-3xl px-6 transition-all duration-300 lg:px-12",
+        isScrolled && "bg-background/50 backdrop-blur-2xl",
       ]}
     >
       <div
-        class="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4"
+        class={[
+          "relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4",
+          isScrolled && "lg:py-4",
+        ]}
       >
-        <div class="flex w-full justify-between lg:w-auto">
+        <div class="flex w-full items-center justify-between gap-12 lg:w-auto">
           <a href="/" aria-label="home" class="flex items-center space-x-2">
             <Logo />
           </a>

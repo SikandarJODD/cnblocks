@@ -1,10 +1,15 @@
 <script>
-  import FeatureOne from "$lib/components/blocks/features/FeatureOne.svelte";
-  import HeroOne from "$lib/components/blocks/hero/hero-one.svelte";
-  import HeroTwo from "$lib/components/blocks/hero/hero-two.svelte";
+  import FooterFive from "$lib/components/blocks/footer/footer-five.svelte";
+  import FooterFour from "$lib/components/blocks/footer/footer-four.svelte";
+  import FooterOne from "$lib/components/blocks/footer/footer-one.svelte";
+  import FooterThree from "$lib/components/blocks/footer/footer-three.svelte";
+  import FooterTwo from "$lib/components/blocks/footer/footer-two.svelte";
 </script>
 
-<div class="h-[300vh]">
-  <HeroTwo />
-  <FeatureOne />
+<div class="min-h-[300vh]">
+  <FooterOne />
+  <FooterTwo />
+  <FooterThree />
+  <FooterFour />
+  <FooterFive />
 </div>

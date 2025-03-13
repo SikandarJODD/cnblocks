@@ -4,6 +4,7 @@
   import { Menu, X } from "@lucide/svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import { scrollY } from "svelte/reactivity/window";
+  import { fade } from "svelte/transition";
 
   let menuItems = [
     { name: "Features", href: "#a" },
