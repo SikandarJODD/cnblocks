@@ -1,15 +1,15 @@
 <script>
-  import FooterFive from "$lib/components/blocks/footer/footer-five.svelte";
-  import FooterFour from "$lib/components/blocks/footer/footer-four.svelte";
-  import FooterOne from "$lib/components/blocks/footer/footer-one.svelte";
-  import FooterThree from "$lib/components/blocks/footer/footer-three.svelte";
-  import FooterTwo from "$lib/components/blocks/footer/footer-two.svelte";
+  import ContactOne from "$lib/components/blocks/contact/contact-one.svelte";
+  import ContactTwo from "$lib/components/blocks/contact/contact-two.svelte";
+  import LoginOne from "$lib/components/blocks/login/login-one.svelte";
+  import LoginThree from "$lib/components/blocks/login/login-three.svelte";
+  import LoginTwo from "$lib/components/blocks/login/login-two.svelte";
+  import SignupOne from "$lib/components/blocks/signup/signup-one.svelte";
+  import SignupThree from "$lib/components/blocks/signup/signup-three.svelte";
+  import SignupTwo from "$lib/components/blocks/signup/signup-two.svelte";
 </script>
 
 <div class="min-h-[300vh]">
-  <FooterOne />
-  <FooterTwo />
-  <FooterThree />
-  <FooterFour />
-  <FooterFive />
+  <ContactOne />
+  <ContactTwo />
 </div>
