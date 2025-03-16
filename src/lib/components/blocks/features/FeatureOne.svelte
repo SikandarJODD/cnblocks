@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
   import { Settings2, Sparkles, Zap } from "@lucide/svelte";
-  import { type Snippet } from "svelte";
   import CardDecorator from "./CardDecorator.svelte";
 </script>
 
