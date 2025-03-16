@@ -23,19 +23,3 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 /features.md
-
-/src/lib/components/blocks/call-to-action
-/src/lib/components/blocks/content
-/src/lib/components/blocks/contact
-/src/lib/components/blocks/cta
-/src/lib/components/blocks/faq
-/src/lib/components/blocks/features
-/src/lib/components/blocks/footer
-/src/lib/components/blocks/header
-/src/lib/components/blocks/hero
-/src/lib/components/blocks/login
-/src/lib/components/blocks/pricing
-/src/lib/components/blocks/signup
-/src/lib/components/blocks/stats
-/src/lib/components/blocks/team
-/src/lib/components/blocks/testimonials

@@ -1,7 +1,26 @@
 <script>
-  import BlockPreview from "$lib/components/web/BlockPreview.svelte";
+  import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
-<div class="min-h-[300vh]">
-  <BlockPreview preview="/mint" title="Try" category="Code" />
-</div>
+<section>
+  <div
+    class="mx-4 max-w-7xl border-x px-8 py-16 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
+  >
+    <div class="max-w-xl">
+      <h1 class="text-balance text-3xl font-bold sm:text-4xl">
+        Svelte Shadcn Marketing Blocks
+      </h1>
+      <p class="mb-6 mt-3 text-base font-montserrat text-muted-foreground">
+        Speed up your workflow with responsive, pre-built UI blocks designed for
+        marketing websites.
+      </p>
+
+      <div class="space-x-1">
+        <Button href="/hero-section">Explore Blocks</Button>
+        <Button variant="secondary" href="/hero-section"
+          >Explore Templates</Button
+        >
+      </div>
+    </div>
+  </div>
+</section>
