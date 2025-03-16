@@ -4,7 +4,7 @@
 
   let navs = [
     { name: "Home", url: "/" },
-    { name: "Blocks", url: "/blocks" },
+    { name: "Blocks", url: "/stats" },
     { name: "Templates", url: "/templates" },
   ];
   let isActive = $derived.by(() => {

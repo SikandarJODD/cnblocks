@@ -30,9 +30,11 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.479.0",
+		"fs": "^0.0.1-security",
 		"mode-watcher": "^0.5.1",
 		"motion": "^12.5.0",
 		"paneforge": "^0.0.6",
+		"path": "^0.12.7",
 		"swiper": "^11.2.5"
 	}
 }
