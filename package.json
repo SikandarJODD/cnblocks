@@ -32,6 +32,7 @@
 		"@lucide/svelte": "^0.479.0",
 		"mode-watcher": "^0.5.1",
 		"motion": "^12.5.0",
+		"paneforge": "^0.0.6",
 		"swiper": "^11.2.5"
 	}
 }
