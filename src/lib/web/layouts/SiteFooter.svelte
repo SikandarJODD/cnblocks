@@ -7,21 +7,24 @@
 
 <footer class="pb-16">
   <div class="mx-auto max-w-7xl px-10 lg:px-6">
-    <a
-      href="/"
-      class="hover:bg-muted -m-2 inline-block rounded-full p-2 duration-200"
-    >
+    <a href="/" class="-m-2 inline-block p-2 duration-200">
       <Logo />
     </a>
     <div
-      class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-gray-700 dark:text-gray-300"
+      class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
     >
-      Created by <a href="https://x.com/MeschacIrung" target="_blank">Méschac Irung</a>, Ported by
+      Created by <a href="https://x.com/MeschacIrung" class="text-primary" target="_blank"
+        >Méschac Irung</a
+      >, Ported by
       <div
         class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white"
       >
         <div class="block">
-          <a class="block pb-2" href="https://x.com/Sikandar_Bhide" target="_blank">Bhide Svelte</a>
+          <a
+            class="block pb-2"
+            href="https://x.com/Sikandar_Bhide"
+            target="_blank">Bhide Svelte</a
+          >
           <div class="-mt-5 grow overflow-hidden">
             <svg
               aria-hidden="true"
@@ -61,9 +64,8 @@
         variant="link"
         class="text-sm text-foreground decoration-primary -ml-4 gap-1"
       >
-
-          GitHub
-          <ArrowUpRight class="!size-3.5 opacity-50" />
+        GitHub
+        <ArrowUpRight class="!size-3.5 opacity-50" />
       </Button>
       <ThemeToggle />
     </div>
