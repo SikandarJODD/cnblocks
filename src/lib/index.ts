@@ -36,8 +36,9 @@ export function numToString(num: number): string {
 
 export function getBlock(
   totalBlocks: number,
+  category: string,
   comps: string[],
-  category: string
+  components: any[]
 ): Block[] {
   let temp = [];
   for (let i = 1; i < totalBlocks + 1; i++) {
@@ -47,6 +48,7 @@ export function getBlock(
       category: category,
       preview: `/preview/${category}/${numToString(i)}`,
       code: comps[i - 1],
+      component: components[i - 1],
     });
   }
   return temp;

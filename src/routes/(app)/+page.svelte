@@ -1,5 +1,4 @@
 <script>
-  import { stats } from "$lib/all_blocks/stats";
   import Button from "$lib/components/ui/button/button.svelte";
 </script>
 

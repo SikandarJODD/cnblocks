@@ -5,4 +5,4 @@ import ContactTwo from "$lib/components/blocks/contact/contact-two.svelte?raw";
 
 let comps = [ContactOne, ContactTwo];
 
-export let contact: Block[] = getBlock(comps.length, comps, "contact");
+// export let contact: Block[] = getBlock(comps.length, comps, "contact");

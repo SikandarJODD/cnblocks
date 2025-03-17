@@ -4,4 +4,5 @@ export interface Block {
   category: string;
   preview: string;
   code: string;
+  component: any;
 }
