@@ -1,10 +1,11 @@
-<script>
+
+<script lang="ts">
   import { slide } from "svelte/transition";
   import Button from "$lib/components/ui/button/button.svelte";
 
   let navs = [
     { name: "Home", url: "/" },
-    { name: "Blocks", url: "/blocks" },
+    { name: "Blocks", url: "/stats" },
     { name: "Templates", url: "/templates" },
   ];
   let isActive = $derived.by(() => {
@@ -108,7 +109,7 @@
   {/if}
 </nav>
 
-{#snippet ThemeToggle()}
+{#snippet themeToggle()}
   <Button onclick={toggleMode} class="rounded-full" variant="ghost" size="icon">
     <!-- Sun Icon -->
     {#if $mode === "light"}
@@ -192,6 +193,6 @@
         /></svg
       ></Button
     >
-    {@render ThemeToggle()}
+    {@render themeToggle()}
   </div>
 {/snippet}
