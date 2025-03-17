@@ -2,14 +2,11 @@
   import { page } from "$app/state";
   import { all_blocks } from "$lib/all_blocks/all_blocks";
   import BlockPreview from "$lib/components/web/BlockPreview.svelte";
-
-  let category = $derived(
-    page.url.pathname.split("/").filter(Boolean)[0] || "/"
-  );
+  let category = $derived(page.params.categoryID);
 
   let categoryPage = $derived.by(() => {
     let categoryBlocks = all_blocks.filter(
-      (block) => block.category.toLowerCase() === category.toLowerCase()
+      (block) => block.category === category
     );
     return categoryBlocks;
   });

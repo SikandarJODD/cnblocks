@@ -1,8 +1,15 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
-  import { onMount, tick } from "svelte";
-  import * as RadioGroup from "$lib/components/ui/radio-group/index";
+  import {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } from "$lib/components/ui/tabs";
+  import Box from "@lucide/svelte/icons/box";
+  import House from "@lucide/svelte/icons/house";
+  import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
 
   interface BlockPreviewProps {
     code?: string;
@@ -55,6 +62,7 @@
   import Separator from "../ui/separator/separator.svelte";
   import Button from "../ui/button/button.svelte";
   import { Check, Code2, Copy, Eye, Maximize, Terminal } from "@lucide/svelte";
+  import CodeBlock from "./CodeBlock.svelte";
 
   let large = new MediaQuery("min-width: 1024px");
 
@@ -85,7 +93,6 @@
 >
   <div class="relative border-y">
     <div
-      aria-hidden
       class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0"
     >
       <div
@@ -101,30 +108,64 @@
     >
       <div class="-ml-3 flex items-center gap-3">
         {#if code}
-          <!-- <RadioGroup.Root class="flex gap-0.5">
-            <RadioGroup.Item
+          <div class="flex gap-0.5">
+            <Button
+              variant={mode === "preview" ? "secondary" : "ghost"}
               onclick={() => (mode = "preview")}
-              aria-label="Block preview"
-              value="100"
-              checked={mode == "preview"}
               class={radioItem}
             >
-              <Eye class="size-3.5 sm:opacity-50" />
+              <!-- <Eye class="size-3 sm:opacity-50" /> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="sm:opacity-80"
+                color="currentColor"
+              >
+                <path
+                  d="M21.544 11.045C21.848 11.4713 22 11.6845 22 12C22 12.3155 21.848 12.5287 21.544 12.955C20.1779 14.8706 16.6892 19 12 19C7.31078 19 3.8221 14.8706 2.45604 12.955C2.15201 12.5287 2 12.3155 2 12C2 11.6845 2.15201 11.4713 2.45604 11.045C3.8221 9.12944 7.31078 5 12 5C16.6892 5 20.1779 9.12944 21.544 11.045Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  opacity="0.4"
+                  d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
               <span class="hidden text-[13px] sm:block">Preview</span>
-            </RadioGroup.Item>
+            </Button>
 
-            <RadioGroup.Item
+            <Button
+              variant={mode === "code" ? "secondary" : "ghost"}
               onclick={() => (mode = "code")}
-              aria-label="Code"
-              value="0"
-              checked={mode == "code"}
               class={radioItem}
             >
-              <Code2 class="size-3.5 sm:opacity-50" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path class="sm:opacity-50" d="M7 8l-4 4l4 4" />
+                <path
+                  class="sm:opacity-50"
+                  stroke="currentColor"
+                  d="M17 8l4 4l-4 4"
+                />
+                <path d="M14 4l-4 16"  /></svg
+              >
               <span class="hidden text-[13px] sm:block">Code</span>
-            </RadioGroup.Item>
-          </RadioGroup.Root> -->
-
+            </Button>
+          </div>
           <Separator orientation="vertical" class="hidden !h-4 lg:block" />
         {/if}
         {#if previewOnly}
@@ -139,7 +180,7 @@
           href={preview}
           target="_blank"
         >
-          <Maximize class="size-4" />
+          <Maximize strokeWidth={1.6} class="!size-4 sm:opacity-70" />
         </Button>
         <Separator orientation="vertical" class="hidden !h-4 lg:block" />
         <span class="text-muted-foreground hidden text-sm lg:block"
@@ -153,7 +194,7 @@
 
       <div class="flex items-center gap-2">
         {#if code}
-          <Button
+          <!-- <Button
             onclick={copyCode}
             size="sm"
             class="size-8 shadow-none md:w-fit"
@@ -165,19 +206,19 @@
             {:else}
               <Terminal class="!size-3.5" />
             {/if}
-            <!-- <span class="hidden font-mono text-xs md:block">
+            <span class="hidden font-mono text-xs md:block">
                               pnpm dlx shadcn@canary add {category}-{titleToNumber(title)}
-                            </span> -->
+                            </span>
           </Button>
           <Separator class="!h-4" orientation="vertical" />
-          <Separator class="!h-4" orientation="vertical" />
+          <Separator class="!h-4" orientation="vertical" /> -->
 
           <Button
             onclick={copyCode}
             size="sm"
-            variant="ghost"
+            variant="secondary"
             aria-label="copy code"
-            class="size-8"
+            class="size-8 bg-secondary/60"
           >
             {#if codeCopied}
               <Check class="size-4" />
@@ -261,7 +302,7 @@
             lang="tsx"
             maxHeight={iframeHeight}
           /> -->
-          code
+          <CodeBlock {code} maxHeight={iframeHeight} />
         {/if}
       </div>
     </div>

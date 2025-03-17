@@ -12,7 +12,7 @@ import StatsTwoCode from "$lib/components/blocks/stats/stats-two.svelte?raw";
 import StatsThreeCode from "$lib/components/blocks/stats/stats-three.svelte?raw";
 import StatsFourCode from "$lib/components/blocks/stats/stats-four.svelte?raw";
 
-let comps = [StatsOneCode, StatsTwoCode, StatsThreeCode, StatsFourCode];
+let codes = [StatsOneCode, StatsTwoCode, StatsThreeCode, StatsFourCode];
 let components = [StatsOne, StatsTwo, StatsThree, StatsFour];
 
-export let stats: Block[] = getBlock(4, "stats", comps, components);
+export let stats: Block[] = getBlock(components.length, "stats", codes, components);
