@@ -1,8 +1,15 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
-  import { onMount, tick } from "svelte";
-  import * as RadioGroup from "$lib/components/ui/radio-group/index";
+  import {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } from "$lib/components/ui/tabs";
+  import Box from "@lucide/svelte/icons/box";
+  import House from "@lucide/svelte/icons/house";
+  import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
 
   interface BlockPreviewProps {
     code?: string;
@@ -85,7 +92,6 @@
 >
   <div class="relative border-y">
     <div
-      aria-hidden
       class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0"
     >
       <div

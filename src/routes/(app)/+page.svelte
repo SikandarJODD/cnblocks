@@ -16,8 +16,8 @@
       </p>
 
       <div class="space-x-1">
-        <Button href="/hero-section">Explore Blocks</Button>
-        <Button variant="secondary" href="/hero-section">
+        <Button href="/stats">Explore Blocks</Button>
+        <Button variant="secondary" href="/templates">
           Explore Templates
         </Button>
       </div>
