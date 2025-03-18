@@ -17,6 +17,7 @@
     category = "Components",
     previewOnly,
   }: BlockPreviewProps = $props();
+  let uid = $props.id();
 
   const radioItem =
     "rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
@@ -74,6 +75,7 @@
 </script>
 
 <section
+  id={uid}
   class="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
 >
   <div class="relative border-y">
@@ -146,7 +148,7 @@
                   stroke="currentColor"
                   d="M17 8l4 4l-4 4"
                 />
-                <path d="M14 4l-4 16"  /></svg
+                <path d="M14 4l-4 16" /></svg
               >
               <span class="hidden text-[13px] sm:block">Code</span>
             </Button>
@@ -198,7 +200,7 @@
           <Separator class="!h-4" orientation="vertical" />
           <Separator class="!h-4" orientation="vertical" /> -->
 
-          <CopyCode code={code} />
+          <CopyCode {code} />
         {/if}
       </div>
     </div>
@@ -268,15 +270,17 @@
         </PaneGroup>
       </div>
 
-      <div class="bg-white dark:bg-transparent">
-        {#if mode === "code"}
-          <!-- <CodeBlock
+      <div id="code-{uid}" class="bg-white dark:bg-transparent">
+        {#key code}
+          {#if mode === "code"}
+            <!-- <CodeBlock
             code={code as string}
             lang="tsx"
             maxHeight={iframeHeight}
           /> -->
-          <CodeBlock {code} maxHeight={iframeHeight} />
-        {/if}
+            <CodeBlock {code} maxHeight={iframeHeight} />
+          {/if}
+        {/key}
       </div>
     </div>
   </div>
