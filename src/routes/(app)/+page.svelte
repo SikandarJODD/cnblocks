@@ -1,4 +1,5 @@
 <script>
+  import { all_blocks } from "$lib/all_blocks/all_blocks";
   import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
@@ -17,9 +18,7 @@
 
       <div class="space-x-1">
         <Button href="/stats">Explore Blocks</Button>
-        <Button variant="secondary" href="/templates">
-          Explore Templates
-        </Button>
+        <Button variant="secondary" href="/templates">Explore Templates</Button>
       </div>
     </div>
   </div>
