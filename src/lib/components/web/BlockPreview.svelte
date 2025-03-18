@@ -1,15 +1,6 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
-  import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-  } from "$lib/components/ui/tabs";
-  import Box from "@lucide/svelte/icons/box";
-  import House from "@lucide/svelte/icons/house";
-  import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
 
   interface BlockPreviewProps {
     code?: string;
@@ -49,20 +40,13 @@
       cliCopied = false;
     }, 2000);
   };
-  let copyCode = () => {
-    codeCopied = true;
-    navigator.clipboard.writeText(code);
-    setTimeout(() => {
-      codeCopied = false;
-    }, 2000);
-  };
-
   let ref: PaneAPI | undefined = $state(undefined);
   import { MediaQuery } from "svelte/reactivity";
   import Separator from "../ui/separator/separator.svelte";
   import Button from "../ui/button/button.svelte";
   import { Check, Code2, Copy, Eye, Maximize, Terminal } from "@lucide/svelte";
   import CodeBlock from "./CodeBlock.svelte";
+  import CopyCode from "./CopyCode.svelte";
 
   let large = new MediaQuery("min-width: 1024px");
 
@@ -82,7 +66,8 @@
     if (iframe) {
       iframe.addEventListener("load", () => {
         isLoading = false;
-        iframeHeight = iframe.contentWindow!.document.body.scrollHeight;
+        let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
+        iframeHeight = contentHeight + 20;
       });
     }
   });
@@ -213,19 +198,7 @@
           <Separator class="!h-4" orientation="vertical" />
           <Separator class="!h-4" orientation="vertical" /> -->
 
-          <Button
-            onclick={copyCode}
-            size="sm"
-            variant="secondary"
-            aria-label="copy code"
-            class="size-8 bg-secondary/60"
-          >
-            {#if codeCopied}
-              <Check class="size-4" />
-            {:else}
-              <Copy class="!size-3.5" />
-            {/if}
-          </Button>
+          <CopyCode code={code} />
         {/if}
       </div>
     </div>
