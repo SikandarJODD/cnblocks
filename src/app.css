@@ -38,15 +38,44 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  --color-chart-1: hsl(var(--chart-1));
-  --color-chart-2: hsl(var(--chart-2));
-  --color-chart-3: hsl(var(--chart-3));
-  --color-chart-4: hsl(var(--chart-4));
-  --color-chart-5: hsl(var(--chart-5));
+  --color-1: hsl(var(--color-1));
+  --color-2: hsl(var(--color-2));
+  --color-3: hsl(var(--color-3));
+  --color-4: hsl(var(--color-4));
+  --color-5: hsl(var(--color-5));
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+  --speed: 2s;
+
+  /* Animations */
+
+  @keyframes flip {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes kitrotate {
+    to {
+      transform: rotate(160deg);
+    }
+  }
+
+  /* Rainbow animation */
+  @keyframes rainbow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+
+  --animate-flip: flip 6s infinite steps(2, end);
+  --animate-kitrotate: kitrotate 3s linear infinite both;
+  --animate-rainbow: rainbow var(--speed, 2s) linear infinite;
 }
 
 /*
@@ -88,12 +117,13 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+    --speed: 2s;
   }
 
   .dark {
@@ -116,11 +146,12 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+    --speed: 2s;
   }
 }
 
