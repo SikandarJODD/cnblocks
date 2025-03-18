@@ -7,14 +7,16 @@
 
 <footer class="pb-16">
   <div class="mx-auto max-w-7xl px-10 lg:px-6">
-    <a href="/" class="-m-2 inline-block p-2 duration-200">
+    <a href="/" aria-label="home" class="-m-2 inline-block p-2 duration-200">
       <Logo />
     </a>
     <div
       class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
     >
-      Created by <a href="https://x.com/MeschacIrung" class="text-primary" target="_blank"
-        >Méschac Irung</a
+      Created by <a
+        href="https://x.com/MeschacIrung"
+        class="text-primary"
+        target="_blank">Méschac Irung</a
       >, Ported by
       <div
         class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white"

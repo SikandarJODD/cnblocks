@@ -1,4 +1,3 @@
-
 <script lang="ts">
   import { slide } from "svelte/transition";
   import Button from "$lib/components/ui/button/button.svelte";
@@ -155,9 +154,16 @@
 {#snippet socials()}
   <div class="flex items-center space-x-1">
     <!-- Sponsor Button -->
-    <Button class="rounded-full" variant="default" href="https://github.com/sponsors/SikandarJODD" target="_blank">Sponsor</Button>
+    <Button
+      aria-label="sponsor"
+      class="rounded-full"
+      variant="default"
+      href="https://github.com/sponsors/SikandarJODD"
+      target="_blank">Sponsor</Button
+    >
     <!-- Gihub -->
     <Button
+      aria-label="github"
       class="rounded-full"
       href="https://github.com/SikandarJODD/cnblocks"
       target="_blank"

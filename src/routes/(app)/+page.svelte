@@ -35,10 +35,9 @@
 
   <meta
     name="keywords"
-    content="Svelte UI components, Svelte marketing blocks, ShadCN-Svelte, responsive UI, landing page builder, Svelte 5, Tailwind v4"
+    content="Svelte UI components, Blocks, Svelte blocks,  Svelte marketing blocks, ShadCN-Svelte, responsive UI, landing page builder, Svelte 5, Tailwind v4"
   />
   <meta name="author" content="Sikandar_Bhide" />
-  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sv-blocks.vercel.app" />
 </svelte:head>
 <section>

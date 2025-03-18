@@ -28,7 +28,7 @@
     <span
       class="backdrop absolute inset-[0.9px] rounded-md bg-secondary dark:bg-neutral-900 transition-colors duration-200 group-hover:bg-neutral-200 dark:group-hover:bg-neutral-900"
     ></span>
-    <span class="z-10 text-muted-foreground text-sm font-medium">
+    <span class="z-10 text-primary text-sm font-medium">
       {@render children?.()}
     </span>
   </a>
