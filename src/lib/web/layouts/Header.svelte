@@ -154,7 +154,8 @@
 
 {#snippet socials()}
   <div class="flex items-center space-x-1">
-    <Button class="rounded-full" variant="default">Sponsor</Button>
+    <!-- Sponsor Button -->
+    <Button class="rounded-full" variant="default" href="https://github.com/sponsors/SikandarJODD" target="_blank">Sponsor</Button>
     <!-- Gihub -->
     <Button
       class="rounded-full"
