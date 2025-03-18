@@ -1,7 +1,11 @@
 # Svelte Shadcn Blocks
 
 A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built with Tailwind CSS v4 and shadcn-svelte.
-![Image](./static/og.png)
+
+
+![image](./static/og.png)
+
+
 ## Features
 
 - **50+ Ready-to-use UI & Marketing Blocks**
