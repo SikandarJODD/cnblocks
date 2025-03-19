@@ -1,12 +1,23 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
-  export let pauseOnHover: boolean = false;
-  export let vertical: boolean = false;
-  export let repeat: number = 4;
-  export let reverse: boolean = false;
+  import type { Snippet } from "svelte";
 
-  let className: any = "";
-  export { className as class };
+  type MarqueeProps = {
+    pauseOnHover?: boolean;
+    vertical?: boolean;
+    repeat?: number;
+    reverse?: boolean;
+    class?: string;
+    children?: Snippet;
+  };
+  let {
+    pauseOnHover = false,
+    vertical = false,
+    repeat = 4,
+    reverse = false,
+    class: _class = "",
+    children,
+  }: MarqueeProps = $props();
 </script>
 
 <div
@@ -16,7 +27,7 @@
       "flex-row": !vertical,
       "flex-col": vertical,
     },
-    className
+    _class
   )}
 >
   {#each { length: repeat } as _, i (i)}
@@ -28,7 +39,7 @@
         "[animation-direction:reverse]": reverse,
       })}
     >
-      <slot>Default</slot>
+      {@render children?.()}
     </div>
   {/each}
 </div>

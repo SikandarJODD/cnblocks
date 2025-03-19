@@ -32,27 +32,20 @@
 
 <Button
   variant="outline"
-  class={cn(
-    "text-muted-foreground relative w-full justify-start text-sm sm:pr-12 md:w-40 lg:w-64"
-  )}
+  class={cn("text-muted-foreground rounded-full md:w-40 lg:w-44")}
   onclick={() => (open = true)}
 >
-  <span class="hidden lg:inline-flex"> Search documentation... </span>
+  <span class="hidden lg:inline-flex">Search Component.. </span>
   <span class="inline-flex lg:hidden">Search...</span>
-  <kbd
-    class="bg-muted pointer-events-none absolute right-1.5 top-1.5 hidden h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex"
-  >
-    <span class="text-xs">⌘</span>K
-  </kbd>
 </Button>
 <Command.Dialog bind:open>
-  <Command.Input placeholder="Type a command or search" />
+  <Command.Input placeholder="Type a component name.." />
   <Command.List>
     <Command.Empty>No results found.</Command.Empty>
-    <Command.Group heading="Links">
+    <Command.Group heading="Components">
       {#each all_names as navItem}
         <Command.Item
-          class="capitalize "
+          class="capitalize"
           value={navItem.title}
           onSelect={() =>
             runCommand(() => {
