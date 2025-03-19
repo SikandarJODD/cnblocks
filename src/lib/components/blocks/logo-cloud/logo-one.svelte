@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <section class="bg-background py-16">
   <div class="mx-auto max-w-5xl px-6">
     <h2 class="text-center text-lg font-medium">

@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { cn } from "$lib/utils";
   import type { ButtonProps } from "./button.svelte";
 
   let {
-    class: className,
+    class: _class,
     variant = "default",
     size = "default",
     ref = $bindable(null),
@@ -16,7 +17,10 @@
 {#if href}
   <a
     {href}
-    class="group relative grid overflow-hidden rounded-md px-4 py-2 dark:shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
+    class={cn(
+      "group relative grid overflow-hidden rounded-md px-4 py-2 dark:shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200",
+      _class
+    )}
   >
     <span>
       <span
@@ -28,13 +32,16 @@
     <span
       class="backdrop absolute inset-[0.9px] rounded-md bg-secondary dark:bg-neutral-900 transition-colors duration-200 group-hover:bg-neutral-200 dark:group-hover:bg-neutral-900"
     ></span>
-    <span class="z-10 text-primary text-sm font-medium">
+    <span class="z-10 text-primary text-sm font-medium text-center">
       {@render children?.()}
     </span>
   </a>
 {:else}
   <button
-    class="group relative grid overflow-hidden rounded-md px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
+    class={cn(
+      "group relative grid overflow-hidden rounded-md px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200",
+      _class
+    )}
   >
     <span>
       <span

@@ -1,9 +1,7 @@
 <script>
   import Logo from "$lib/components/web/Logo.svelte";
-  import { cn } from "$lib/utils";
   import { Menu, X } from "@lucide/svelte";
   import Button from "$lib/components/ui/button/button.svelte";
-  import { scrollY } from "svelte/reactivity/window";
 
   let menuItems = [
     { name: "Features", href: "#a" },
@@ -12,12 +10,7 @@
     { name: "About", href: "#a" },
   ];
   let menuState = $state(false);
-  let isScrolled = $derived.by(() => {
-    if (scrollY.current !== undefined && scrollY.current > 50) {
-      return true;
-    }
-    return false;
-  });
+
 </script>
 
 <header>

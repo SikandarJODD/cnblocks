@@ -48,7 +48,7 @@
       <h1 class="text-balance text-3xl font-bold sm:text-4xl">
         Svelte Shadcn Blocks
       </h1>
-      <h2 class="text-balance text-3xl mt-2 font-bold sm:text-4xl">
+      <h2 class="text-balance text-3xl sm:mt-1 font-bold sm:text-4xl">
         50+ Pre-built UI & Marketing Blocks
       </h2>
       <p class="mb-6 mt-3 text-base font-montserrat text-muted-foreground">
@@ -56,10 +56,10 @@
         marketing websites.
       </p>
 
-      <div class="space-x-2 flex items-center">
-        <Button href="/stats">Explore Blocks</Button>
+      <div class="sm:space-x-2 gap-2 flex items-center flex-wrap">
+        <Button href="/stats" class='w-full sm:w-fit'>Explore Blocks</Button>
         <!-- <Button variant="secondary" href="/templates">Explore Templates</Button> -->
-        <AnimatedButton href="/templates">Explore Templates</AnimatedButton>
+        <AnimatedButton href="/templates" class='w-full sm:w-fit'>Explore Templates</AnimatedButton>
       </div>
     </div>
   </div>

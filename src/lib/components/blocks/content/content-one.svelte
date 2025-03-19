@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <section class="py-16 md:py-32">
   <div class="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
     <h2 class="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">

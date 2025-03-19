@@ -96,6 +96,8 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         {#each navs as nav}
           <a
+            aria-label={nav.name}
+            onclick={() => (isMobileMenu = false)}
             href={nav.url}
             class="block rounded-md px-3 py-2 text-base font-medium text-primary"
             >{nav.name}</a
@@ -154,15 +156,17 @@
 
 {#snippet socials()}
   <div class="flex items-center space-x-1">
-    <SearchComponent />
+    <div class="hidden md:block">
+      <SearchComponent />
+    </div>
     <!-- Sponsor Button -->
-    <Button
+    <!-- <Button
       aria-label="sponsor"
       class="rounded-full"
       variant="default"
       href="https://github.com/sponsors/SikandarJODD"
       target="_blank">Sponsor</Button
-    >
+    > -->
     <!-- Gihub -->
     <Button
       aria-label="github"
