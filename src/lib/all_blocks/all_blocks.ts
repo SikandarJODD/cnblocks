@@ -34,3 +34,25 @@ export let all_blocks: Block[] = [
 ];
 
 export const categories = [...new Set(all_blocks.map((b) => b.category))];
+
+// Precompute category map
+export let category_map: Record<string, Block[]> = {};
+
+for (const block of all_blocks) {
+  if (!category_map[block.category]) {
+    category_map[block.category] = [];
+  }
+  category_map[block.category].push(block);
+}
+
+export let category_blocks = (categoryID: string): Block[] => {
+  return category_map[categoryID] || [];
+};
+
+export let getAllBlockNames = () => {
+  return all_blocks.map((b) => {
+    let title = `${b.category}  ${b.title}`;
+    let href = `/${b.category}#${b.category}-${b.title}`;
+    return { title, href };
+  });
+};
