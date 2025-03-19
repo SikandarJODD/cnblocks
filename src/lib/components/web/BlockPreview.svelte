@@ -17,7 +17,6 @@
     category = "Components",
     previewOnly,
   }: BlockPreviewProps = $props();
-  let uid = $props.id();
 
   const radioItem =
     "rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
@@ -75,7 +74,7 @@
 </script>
 
 <section
-  id={uid}
+  id="{category}-{title}"
   class="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
 >
   <div class="relative border-y">
@@ -93,7 +92,7 @@
     <div
       class="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-6 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]"
     >
-      <div class="-ml-3 flex items-center gap-3">
+      <div class="-ml-3 flex items-center gap-2">
         {#if code}
           <div class="flex gap-0.5">
             <Button
@@ -155,11 +154,6 @@
           </div>
           <Separator orientation="vertical" class="hidden !h-4 lg:block" />
         {/if}
-        {#if previewOnly}
-          {" "}
-          <span class="ml-2 text-sm capitalize">{title}</span>
-          <Separator orientation="vertical" class="!h-4" />{" "}
-        {/if}
         <Button
           variant="ghost"
           size="sm"
@@ -176,7 +170,11 @@
             : width < LGSIZE
               ? "Tablet"
               : "Desktop"}</span
-        >{" "}
+        >
+        <!-- {#if previewOnly} -->
+        <Separator orientation="vertical" class="!h-4" />
+        <span class="ml-0 text-sm capitalize">{category + " " + title}</span>
+        <!-- {/if} -->
       </div>
 
       <div class="flex items-center gap-2">
@@ -270,15 +268,10 @@
         </PaneGroup>
       </div>
 
-      <div id="code-{uid}" class="bg-white dark:bg-transparent">
+      <div class="bg-white dark:bg-transparent">
         {#key code}
           {#if mode === "code"}
-            <!-- <CodeBlock
-            code={code as string}
-            lang="tsx"
-            maxHeight={iframeHeight}
-          /> -->
-            <CodeBlock {code} maxHeight={iframeHeight} />
+            <CodeBlock {code} />
           {/if}
         {/key}
       </div>

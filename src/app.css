@@ -49,6 +49,9 @@
   --radius-sm: calc(var(--radius) - 4px);
   --speed: 2s;
 
+  /* Max Height of Code */
+  --pre-max-height: 500px;
+
   /* Animations */
 
   @keyframes flip {

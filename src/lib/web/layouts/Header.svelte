@@ -19,6 +19,7 @@
   import { toggleMode, mode } from "mode-watcher";
   import Logo from "./Logo.svelte";
   import { page } from "$app/state";
+  import SearchComponent from "./SearchComponent.svelte";
 </script>
 
 <nav class="bg-background border-b">
@@ -153,6 +154,7 @@
 
 {#snippet socials()}
   <div class="flex items-center space-x-1">
+    <SearchComponent />
     <!-- Sponsor Button -->
     <Button
       aria-label="sponsor"

@@ -1,14 +1,11 @@
 <script>
   import { page } from "$app/state";
-  import { all_blocks } from "$lib/all_blocks/all_blocks";
+  import { category_blocks } from "$lib/all_blocks/all_blocks";
   import BlockPreview from "$lib/components/web/BlockPreview.svelte";
-  let category = $derived(page.params.categoryID);
-
-  let categoryPage = $derived.by(() => {
-    let categoryBlocks = all_blocks.filter(
-      (block) => block.category === category
-    );
-    return categoryBlocks;
+  let blocks = $derived.by(() => {
+    let id = page.params.categoryID;
+    let data = category_blocks(id);
+    return data;
   });
 </script>
 
@@ -21,6 +18,6 @@
 <!-- <BlockPreview preview={categoryPage[0].preview} code={categoryPage[0].code} title="code" category="mint"   /> -->
 
 <!-- For Prod -->
-{#each categoryPage as block}
+{#each blocks as block}
   <BlockPreview {...block} />
 {/each}

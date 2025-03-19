@@ -2,9 +2,6 @@
   import { cn } from "$lib/utils";
   let {
     code = "",
-    lang = "",
-    initial = "",
-    maxHeight = 100,
     class: _class = "",
   } = $props();
 
@@ -16,8 +13,8 @@
     htmlCode = await codeToHtml(code, {
       lang: "svelte",
       themes: {
-        dark: "vesper",
-        light: "slack-ochin",
+        dark: "aurora-x",
+        light: 'github-light',
       },
     });
   });
