@@ -22,3 +22,12 @@ If you like this project, please consider supporting me on [GitHub Sponsors](htt
 ## Feedback
 
 If you have any feedback, please reach out to me on [Twitter](https://x.com/Sikandar_Bhide) or create an issue on GitHub.
+
+## License
+
+Published under the [MIT](https://github.com/SikandarJODD/cnblocks/blob/master/LICENSE) license.
+Built by [@Sikandar Bhide](https://github.com/SikandarJODD), [Aidan Bleser](https://github.com/ieedan) 💛
+<br><br>
+<a href="https://github.com/SikandarJODD/cnblocks/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=SikandarJODD/cnblocks" />
+</a>

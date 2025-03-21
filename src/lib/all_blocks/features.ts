@@ -2,21 +2,22 @@ import type { Block } from "../../types/blocks";
 import { getBlock } from "$lib";
 
 // Components
-import FeatureOne from "$lib/components/blocks/features/FeatureOne.svelte";
-import FeatureTwo from "$lib/components/blocks/features/FeatureTwo.svelte";
-import FeatureThree from "$lib/components/blocks/features/FeatureThree.svelte";
-import FeatureFour from "$lib/components/blocks/features/FeatureFour.svelte";
-import FeatureFive from "$lib/components/blocks/features/FeatureFive.svelte";
-import FeatureSix from "$lib/components/blocks/features/FeatureSix.svelte";
-import FeatureSeven from "$lib/components/blocks/features/FeatureSeven.svelte";
+import FeatureOne from "$lib/components/blocks/feature/feature-one.svelte";
+import FeatureTwo from "$lib/components/blocks/feature/feature-two.svelte";
+import FeatureThree from "$lib/components/blocks/feature/feature-three.svelte";
+import FeatureFour from "$lib/components/blocks/feature/feature-four.svelte";
+import FeatureFive from "$lib/components/blocks/feature/feature-five.svelte";
+import FeatureSix from "$lib/components/blocks/feature/feature-six.svelte";
+import FeatureSeven from "$lib/components/blocks/feature/feature-seven.svelte";
+
 // Code
-import FeatureOneCode from "$lib/components/blocks/features/FeatureOne.svelte?raw";
-import FeatureTwoCode from "$lib/components/blocks/features/FeatureTwo.svelte?raw";
-import FeatureThreeCode from "$lib/components/blocks/features/FeatureThree.svelte?raw";
-import FeatureFourCode from "$lib/components/blocks/features/FeatureFour.svelte?raw";
-import FeatureFiveCode from "$lib/components/blocks/features/FeatureFive.svelte?raw";
-import FeatureSixCode from "$lib/components/blocks/features/FeatureSix.svelte?raw";
-import FeatureSevenCode from "$lib/components/blocks/features/FeatureSeven.svelte?raw";
+import FeatureOneCode from "$lib/components/blocks/feature/feature-one.svelte?raw";
+import FeatureTwoCode from "$lib/components/blocks/feature/feature-two.svelte?raw";
+import FeatureThreeCode from "$lib/components/blocks/feature/feature-three.svelte?raw";
+import FeatureFourCode from "$lib/components/blocks/feature/feature-four.svelte?raw";
+import FeatureFiveCode from "$lib/components/blocks/feature/feature-five.svelte?raw";
+import FeatureSixCode from "$lib/components/blocks/feature/feature-six.svelte?raw";
+import FeatureSevenCode from "$lib/components/blocks/feature/feature-seven.svelte?raw";
 
 let codes = [
   FeatureOneCode,
@@ -37,9 +38,9 @@ let components = [
   FeatureSeven,
 ];
 
-export let features: Block[] = getBlock(
+export let feature: Block[] = getBlock(
   components.length,
-  "features",
+  "feature",
   codes,
   components
 );

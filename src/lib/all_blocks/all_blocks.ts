@@ -4,7 +4,7 @@ import { contact } from "./contact";
 import { content } from "./content";
 import { cta } from "./cta";
 import { faq } from "./faqs";
-import { features } from "./features";
+import { feature } from "./features";
 import { footer } from "./footer";
 import { hero } from "./hero";
 import { login } from "./login";
@@ -12,7 +12,7 @@ import { logocloud } from "./logo-cloud";
 import { pricing } from "./pricing";
 import { signup } from "./signup";
 import { stats } from "./stats";
-import { teams } from "./team";
+import { team } from "./team";
 import { testimonials } from "./testimonial";
 
 export let all_blocks: Block[] = [
@@ -21,11 +21,11 @@ export let all_blocks: Block[] = [
   ...footer,
   ...contact,
   ...cta,
-  ...features,
+  ...feature,
   ...faq,
   ...signup,
   ...login,
-  ...teams,
+  ...team,
   ...hero,
   ...logocloud,
   ...pricing,

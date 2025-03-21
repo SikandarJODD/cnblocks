@@ -5,12 +5,12 @@
 	"doNotListCategories": [],
 	"listBlocks": [],
 	"listCategories": [
-		"call-to-action",
+		"cta",
 		"comparator",
 		"contact",
 		"content",
 		"faq",
-		"features",
+		"feature",
 		"footer",
 		"header",
 		"hero",
@@ -20,7 +20,7 @@
 		"signup",
 		"stats",
 		"team",
-		"testimonials"
+		"testimonial"
 	],
 	"excludeDeps": [],
 	"includeBlocks": [],
@@ -29,12 +29,12 @@
 		"ui",
 		"magic",
 		"lib",
-		"call-to-action",
+		"cta",
 		"comparator",
 		"contact",
 		"content",
 		"faq",
-		"features",
+		"feature",
 		"footer",
 		"header",
 		"hero",
@@ -44,7 +44,7 @@
 		"signup",
 		"stats",
 		"team",
-		"testimonials"
+		"testimonial"
 	],
 	"excludeBlocks": ["index", "all_blocks"],
 	"excludeCategories": [],

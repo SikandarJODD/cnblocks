@@ -1,81 +1,17 @@
 {
 	"categories": [
 		{
-			"name": "call-to-action",
-			"blocks": [
-				{
-					"name": "cta-one",
-					"directory": "src/lib/components/blocks/call-to-action",
-					"category": "call-to-action",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"cta-one.svelte"
-					],
-					"localDependencies": [
-						"ui/button"
-					],
-					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
-					},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "cta-three",
-					"directory": "src/lib/components/blocks/call-to-action",
-					"category": "call-to-action",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"cta-three.svelte"
-					],
-					"localDependencies": [
-						"ui/button"
-					],
-					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
-					},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
-					]
-				},
-				{
-					"name": "cta-two",
-					"directory": "src/lib/components/blocks/call-to-action",
-					"category": "call-to-action",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"cta-two.svelte"
-					],
-					"localDependencies": [
-						"ui/button"
-					],
-					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
-					},
-					"dependencies": [],
-					"devDependencies": []
-				}
-			]
-		},
-		{
 			"name": "comparator",
 			"blocks": [
 				{
-					"name": "comparator",
+					"name": "comparator-one",
 					"directory": "src/lib/components/blocks/comparator",
 					"category": "comparator",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"comparator.svelte"
+						"comparator-one.svelte"
 					],
 					"localDependencies": [
 						"ui/button"
@@ -282,6 +218,70 @@
 			]
 		},
 		{
+			"name": "cta",
+			"blocks": [
+				{
+					"name": "cta-one",
+					"directory": "src/lib/components/blocks/cta",
+					"category": "cta",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"cta-one.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "cta-three",
+					"directory": "src/lib/components/blocks/cta",
+					"category": "cta",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"cta-three.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.482.0"
+					]
+				},
+				{
+					"name": "cta-two",
+					"directory": "src/lib/components/blocks/cta",
+					"category": "cta",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"cta-two.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "faq",
 			"blocks": [
 				{
@@ -302,17 +302,17 @@
 			]
 		},
 		{
-			"name": "features",
+			"name": "feature",
 			"blocks": [
 				{
-					"name": "CardDecorator",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "card-decorator",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"CardDecorator.svelte"
+						"card-decorator.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -320,14 +320,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "FeatureEight",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-eight",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureEight.svelte"
+						"feature-eight.svelte"
 					],
 					"localDependencies": [
 						"ui/card"
@@ -341,14 +341,14 @@
 					]
 				},
 				{
-					"name": "FeatureFive",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-five",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureFive.svelte"
+						"feature-five.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -358,14 +358,14 @@
 					]
 				},
 				{
-					"name": "FeatureFour",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-four",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureFour.svelte"
+						"feature-four.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -375,22 +375,22 @@
 					]
 				},
 				{
-					"name": "FeatureOne",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-one",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureOne.svelte"
+						"feature-one.svelte"
 					],
 					"localDependencies": [
 						"ui/card",
-						"features/CardDecorator"
+						"feature/card-decorator"
 					],
 					"_imports_": {
 						"$lib/components/ui/card": "{{ui/card}}",
-						"./CardDecorator.svelte": "{{features/CardDecorator}}.svelte"
+						"./card-decorator.svelte": "{{feature/card-decorator}}.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": [
@@ -398,14 +398,14 @@
 					]
 				},
 				{
-					"name": "FeatureSeven",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-seven",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureSeven.svelte"
+						"feature-seven.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -415,14 +415,14 @@
 					]
 				},
 				{
-					"name": "FeatureSix",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-six",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureSix.svelte"
+						"feature-six.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -432,22 +432,22 @@
 					]
 				},
 				{
-					"name": "FeatureThree",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-three",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureThree.svelte"
+						"feature-three.svelte"
 					],
 					"localDependencies": [
 						"ui/card",
-						"features/CardDecorator"
+						"feature/card-decorator"
 					],
 					"_imports_": {
 						"$lib/components/ui/card": "{{ui/card}}",
-						"./CardDecorator.svelte": "{{features/CardDecorator}}.svelte"
+						"./card-decorator.svelte": "{{feature/card-decorator}}.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": [
@@ -455,22 +455,22 @@
 					]
 				},
 				{
-					"name": "FeatureTwo",
-					"directory": "src/lib/components/blocks/features",
-					"category": "features",
+					"name": "feature-two",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"FeatureTwo.svelte"
+						"feature-two.svelte"
 					],
 					"localDependencies": [
 						"ui/card",
-						"features/CardDecorator"
+						"feature/card-decorator"
 					],
 					"_imports_": {
 						"$lib/components/ui/card": "{{ui/card}}",
-						"./CardDecorator.svelte": "{{features/CardDecorator}}.svelte"
+						"./card-decorator.svelte": "{{feature/card-decorator}}.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": [
@@ -595,14 +595,37 @@
 			"name": "header",
 			"blocks": [
 				{
-					"name": "HeroHeader",
+					"name": "hero-header-eight",
 					"directory": "src/lib/components/blocks/header",
 					"category": "header",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"HeroHeader.svelte"
+						"hero-header-eight.svelte"
+					],
+					"localDependencies": [
+						"web/Logo",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.482.0"
+					]
+				},
+				{
+					"name": "hero-header-nine",
+					"directory": "src/lib/components/blocks/header",
+					"category": "header",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"hero-header-nine.svelte"
 					],
 					"localDependencies": [
 						"web/Logo",
@@ -620,14 +643,14 @@
 					]
 				},
 				{
-					"name": "HeroHeader7",
+					"name": "hero-header-seven",
 					"directory": "src/lib/components/blocks/header",
 					"category": "header",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"HeroHeader7.svelte"
+						"hero-header-seven.svelte"
 					],
 					"localDependencies": [
 						"web/Logo",
@@ -645,37 +668,14 @@
 					]
 				},
 				{
-					"name": "HeroHeader8",
+					"name": "hero-header",
 					"directory": "src/lib/components/blocks/header",
 					"category": "header",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"HeroHeader8.svelte"
-					],
-					"localDependencies": [
-						"web/Logo",
-						"ui/button"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
-					},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
-					]
-				},
-				{
-					"name": "HeroHeader9",
-					"directory": "src/lib/components/blocks/header",
-					"category": "header",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"HeroHeader9.svelte"
+						"hero-header.svelte"
 					],
 					"localDependencies": [
 						"web/Logo",
@@ -912,14 +912,14 @@
 			"name": "logo-cloud",
 			"blocks": [
 				{
-					"name": "logo-one",
+					"name": "logo-cloud-one",
 					"directory": "src/lib/components/blocks/logo-cloud",
 					"category": "logo-cloud",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"logo-one.svelte"
+						"logo-cloud-one.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -927,14 +927,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "logo-three",
+					"name": "logo-cloud-three",
 					"directory": "src/lib/components/blocks/logo-cloud",
 					"category": "logo-cloud",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"logo-three.svelte"
+						"logo-cloud-three.svelte"
 					],
 					"localDependencies": [
 						"magic/Marquee",
@@ -948,14 +948,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "logo-two",
+					"name": "logo-cloud-two",
 					"directory": "src/lib/components/blocks/logo-cloud",
 					"category": "logo-cloud",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"logo-two.svelte"
+						"logo-cloud-two.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -1265,17 +1265,17 @@
 			]
 		},
 		{
-			"name": "testimonials",
+			"name": "testimonial",
 			"blocks": [
 				{
-					"name": "test-five",
-					"directory": "src/lib/components/blocks/testimonials",
-					"category": "testimonials",
+					"name": "testimonial-five",
+					"directory": "src/lib/components/blocks/testimonial",
+					"category": "testimonial",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"test-five.svelte"
+						"testimonial-five.svelte"
 					],
 					"localDependencies": [
 						"ui/avatar",
@@ -1289,14 +1289,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "test-four",
-					"directory": "src/lib/components/blocks/testimonials",
-					"category": "testimonials",
+					"name": "testimonial-four",
+					"directory": "src/lib/components/blocks/testimonial",
+					"category": "testimonial",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"test-four.svelte"
+						"testimonial-four.svelte"
 					],
 					"localDependencies": [
 						"ui/avatar"
@@ -1308,14 +1308,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "test-one",
-					"directory": "src/lib/components/blocks/testimonials",
-					"category": "testimonials",
+					"name": "testimonial-one",
+					"directory": "src/lib/components/blocks/testimonial",
+					"category": "testimonial",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"test-one.svelte"
+						"testimonial-one.svelte"
 					],
 					"localDependencies": [
 						"ui/avatar",
@@ -1329,14 +1329,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "test-six",
-					"directory": "src/lib/components/blocks/testimonials",
-					"category": "testimonials",
+					"name": "testimonial-six",
+					"directory": "src/lib/components/blocks/testimonial",
+					"category": "testimonial",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"test-six.svelte"
+						"testimonial-six.svelte"
 					],
 					"localDependencies": [
 						"ui/avatar",
@@ -1350,14 +1350,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "test-three",
-					"directory": "src/lib/components/blocks/testimonials",
-					"category": "testimonials",
+					"name": "testimonial-three",
+					"directory": "src/lib/components/blocks/testimonial",
+					"category": "testimonial",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"test-three.svelte"
+						"testimonial-three.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
@@ -1365,14 +1365,14 @@
 					"devDependencies": []
 				},
 				{
-					"name": "test-two",
-					"directory": "src/lib/components/blocks/testimonials",
-					"category": "testimonials",
+					"name": "testimonial-two",
+					"directory": "src/lib/components/blocks/testimonial",
+					"category": "testimonial",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"test-two.svelte"
+						"testimonial-two.svelte"
 					],
 					"localDependencies": [
 						"ui/avatar",

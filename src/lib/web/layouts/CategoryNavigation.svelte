@@ -31,7 +31,15 @@
                 "hover:bg-muted dark:text-muted-foreground hover:text-foreground flex h-7 w-fit items-center text-nowrap rounded-full px-1 text-sm text-zinc-700 lg:-mx-2 lg:px-3"
               )}
             >
-              <span class="block w-max text-nowrap capitalize">{category}</span>
+              {#if category === "cta"}
+                <span class="block w-max text-nowrap capitalize">
+                  Call to Action
+                </span>
+              {:else}
+                <span class="block w-max text-nowrap capitalize"
+                  >{category}</span
+                >
+              {/if}
             </a>
           </li>
         {/each}

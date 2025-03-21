@@ -2,14 +2,14 @@ import type { Block } from "../../types/blocks";
 import { getBlock } from "$lib";
 
 // Components
-import LogoOne from "$lib/components/blocks/logo-cloud/logo-one.svelte";
-import LogoTwo from "$lib/components/blocks/logo-cloud/logo-two.svelte";
-import LogoThree from "$lib/components/blocks/logo-cloud/logo-three.svelte";
+import LogoOne from "$lib/components/blocks/logo-cloud/logo-cloud-one.svelte";
+import LogoTwo from "$lib/components/blocks/logo-cloud/logo-cloud-two.svelte";
+import LogoThree from "$lib/components/blocks/logo-cloud/logo-cloud-three.svelte";
 
 // Code
-import LogoOneCode from "$lib/components/blocks/logo-cloud/logo-one.svelte?raw";
-import LogoTwoCode from "$lib/components/blocks/logo-cloud/logo-two.svelte?raw";
-import LogoThreeCode from "$lib/components/blocks/logo-cloud/logo-three.svelte?raw";
+import LogoOneCode from "$lib/components/blocks/logo-cloud/logo-cloud-one.svelte?raw";
+import LogoTwoCode from "$lib/components/blocks/logo-cloud/logo-cloud-two.svelte?raw";
+import LogoThreeCode from "$lib/components/blocks/logo-cloud/logo-cloud-three.svelte?raw";
 
 let codes = [LogoOneCode, LogoTwoCode, LogoThreeCode];
 let components = [LogoOne, LogoTwo, LogoThree];

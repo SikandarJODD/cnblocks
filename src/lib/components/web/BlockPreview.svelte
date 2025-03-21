@@ -31,11 +31,12 @@
   let iframeHeight = $state(0);
   let isLoading = $state(true);
 
-  let codeCopied = $state(false);
   let cliCopied = $state(false);
   let copyCli = () => {
     cliCopied = true;
-    navigator.clipboard.writeText(code);
+    navigator.clipboard.writeText(
+      `npx jsrepo add --repo github/SikandarJODD/cnblocks ${category}/${category}-${title}`
+    );
     setTimeout(() => {
       cliCopied = false;
     }, 2000);
@@ -47,6 +48,7 @@
   import { Check, Code2, Copy, Eye, Maximize, Terminal } from "@lucide/svelte";
   import CodeBlock from "./CodeBlock.svelte";
   import CopyCode from "./CopyCode.svelte";
+  import { scale } from "svelte/transition";
 
   let large = new MediaQuery("min-width: 1024px");
 
@@ -178,28 +180,34 @@
       </div>
 
       <div class="flex items-center gap-2">
-        {#if code}
-          <!-- <Button
-            onclick={copyCode}
-            size="sm"
-            class="size-8 shadow-none md:w-fit"
-            variant="outline"
-            aria-label="copy code"
-          >
-            {#if cliCopied}
-              <Check class="size-4" />
-            {:else}
-              <Terminal class="!size-3.5" />
-            {/if}
-            <span class="hidden font-mono text-xs md:block">
-                              pnpm dlx shadcn@canary add {category}-{titleToNumber(title)}
-                            </span>
-          </Button>
-          <Separator class="!h-4" orientation="vertical" />
-          <Separator class="!h-4" orientation="vertical" /> -->
+        {#key code}
+          {#if code}
+            <Button
+              onclick={copyCli}
+              size="sm"
+              class="size-8 shadow-none md:w-fit relative"
+              variant="outline"
+              aria-label="copy code"
+            >
+              {#if cliCopied}
+                <div in:scale>
+                  <Check class="!size-3.5 text-[#10B981]" />
+                </div>
+              {:else}
+                <div>
+                  <Terminal class="!size-3.5" />
+                </div>
+              {/if}
+              <span class="hidden font-mono text-xs md:block">
+                npx jsrepo add --repo github/SikandarJODD/cnblocks {category}/{category}-{title}
+              </span>
+            </Button>
+            <Separator class="!h-4" orientation="vertical" />
+            <Separator class="!h-4" orientation="vertical" />
 
-          <CopyCode {code} />
-        {/if}
+            <CopyCode {code} />
+          {/if}
+        {/key}
       </div>
     </div>
   </div>
