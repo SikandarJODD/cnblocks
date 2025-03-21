@@ -1,7 +1,14 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
-  import { toast } from "svelte-sonner";
+  import { MediaQuery } from "svelte/reactivity";
+  import Separator from "../ui/separator/separator.svelte";
+  import Button from "../ui/button/button.svelte";
+  import { Check, Maximize, Terminal } from "@lucide/svelte";
+  import CodeBlock from "./CodeBlock.svelte";
+  import { CopyButton } from "../ui/copy-button";
+  import { scale } from "svelte/transition";
+	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
 
   interface BlockPreviewProps {
     code?: string;
@@ -22,35 +29,19 @@
   const radioItem =
     "rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
 
-  const DEFAULTSIZE = 100;
-  const SMSIZE = 30;
-  const MDSIZE = 62;
-  const LGSIZE = 82;
+  const DEFAULT_SIZE = 100;
+  const SM_SIZE = 30;
+  const MD_SIZE = 62;
+  const LG_SIZE = 82;
 
-  let width = $state(DEFAULTSIZE);
+  let width = $state(DEFAULT_SIZE);
   let mode = $state("preview");
   let iframeHeight = $state(0);
   let isLoading = $state(true);
 
-  let cliCopied = $state(false);
-  let copyCli = () => {
-    toast.success("Copied CLI command to clipboard");
-    cliCopied = true;
-    navigator.clipboard.writeText(
-      `npx jsrepo add --repo github/SikandarJODD/cnblocks ${category}/${category}-${title}`
-    );
-    setTimeout(() => {
-      cliCopied = false;
-    }, 2000);
-  };
+  const clipboard = new UseClipboard({ delay: 2000 });
+
   let ref: PaneAPI | undefined = $state(undefined);
-  import { MediaQuery } from "svelte/reactivity";
-  import Separator from "../ui/separator/separator.svelte";
-  import Button from "../ui/button/button.svelte";
-  import { Check, Code2, Copy, Eye, Maximize, Terminal } from "@lucide/svelte";
-  import CodeBlock from "./CodeBlock.svelte";
-  import CopyCode from "./CopyCode.svelte";
-  import { scale } from "svelte/transition";
 
   let large = new MediaQuery("min-width: 1024px");
 
@@ -169,9 +160,9 @@
         </Button>
         <Separator orientation="vertical" class="hidden !h-4 lg:block" />
         <span class="text-muted-foreground hidden text-sm lg:block"
-          >{width < MDSIZE
+          >{width < MD_SIZE
             ? "Mobile"
-            : width < LGSIZE
+            : width < LG_SIZE
               ? "Tablet"
               : "Desktop"}</span
         >
@@ -185,29 +176,28 @@
         {#key code}
           {#if code}
             <Button
-              onclick={copyCli}
+              onclick={() => clipboard.copy(`npx jsrepo add github/SikandarJODD/cnblocks/${category}/${category}-${title}`)}
               size="sm"
               class="size-8 shadow-none md:w-fit relative"
               variant="outline"
               aria-label="copy code"
             >
-              {#if cliCopied}
+              {#if clipboard.status === 'success'}
                 <div in:scale>
                   <Check class="!size-3.5 text-[#10B981]" />
                 </div>
               {:else}
-                <div>
+                <div in:scale>
                   <Terminal class="!size-3.5" />
                 </div>
               {/if}
               <span class="hidden font-mono text-xs md:block">
-                npx jsrepo add --repo github/SikandarJODD/cnblocks {category}/{category}-{title}
+                npx jsrepo add github/SikandarJODD/cnblocks/{category}/{category}-{title}
               </span>
             </Button>
             <Separator class="!h-4" orientation="vertical" />
-            <Separator class="!h-4" orientation="vertical" />
 
-            <CopyCode {code} />
+            <CopyButton text={code} class="size-8 cursor-pointer [&_svg]:size-3.5" size="sm" variant="ghost"/>
           {/if}
         {/key}
       </div>
@@ -238,8 +228,8 @@
             onResize={(size) => {
               width = Number(size);
             }}
-            defaultSize={DEFAULTSIZE}
-            minSize={SMSIZE}
+            defaultSize={DEFAULT_SIZE}
+            minSize={SM_SIZE}
             class="h-fit border-x"
           >
             <iframe
@@ -271,7 +261,7 @@
             <Pane
               id={`code-${title}`}
               order={2}
-              defaultSize={100 - DEFAULTSIZE}
+              defaultSize={100 - DEFAULT_SIZE}
               class="-mr-[0.5px] ml-px"
             ></Pane>
           {/if}

@@ -21,7 +21,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -106,7 +106,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -127,7 +127,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -159,7 +159,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -195,7 +195,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -212,7 +212,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -257,7 +257,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -337,7 +337,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -354,7 +354,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -371,7 +371,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -394,7 +394,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -411,7 +411,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -428,7 +428,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -451,7 +451,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -474,7 +474,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -567,7 +567,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -614,7 +614,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -639,7 +639,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -664,7 +664,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -689,7 +689,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -717,7 +717,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -746,7 +746,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -771,7 +771,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -798,7 +798,7 @@
 						"swiper@^11.2.5"
 					],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -823,7 +823,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -961,7 +961,7 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -987,7 +987,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -1010,7 +1010,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -1033,7 +1033,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -1056,7 +1056,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				},
 				{
@@ -1079,7 +1079,7 @@
 					},
 					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					]
 				}
 			]
@@ -1474,6 +1474,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
+						"@lucide/svelte@^0.483.0",
 						"bits-ui@^1.3.13",
 						"tailwind-variants@^1.0.0"
 					],
@@ -1577,8 +1578,7 @@
 					"dependencies": [],
 					"devDependencies": [
 						"bits-ui@^1.3.13",
-						"lucide-svelte@^0.479.0",
-						"@lucide/svelte@^0.482.0"
+						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js",
