@@ -1,6 +1,7 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
+  import { toast } from "svelte-sonner";
 
   interface BlockPreviewProps {
     code?: string;
@@ -33,6 +34,7 @@
 
   let cliCopied = $state(false);
   let copyCli = () => {
+    toast.success("Copied CLI command to clipboard");
     cliCopied = true;
     navigator.clipboard.writeText(
       `npx jsrepo add --repo github/SikandarJODD/cnblocks ${category}/${category}-${title}`
