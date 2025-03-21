@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { toast } from "svelte-sonner";
   import { cn } from "$lib/utils.js";
   import { Check, Copy } from "@lucide/svelte";
   import Button from "../ui/button/button.svelte";
@@ -6,6 +7,7 @@
   let copied = $state(false);
 
   function handleCopy() {
+    toast.success("Code copied to clipboard");
     copied = true;
     navigator.clipboard.writeText(code);
     setTimeout(() => (copied = false), 1200);

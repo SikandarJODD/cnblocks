@@ -38,6 +38,7 @@
 		"motion": "^12.5.0",
 		"paneforge": "^0.0.6",
 		"path": "^0.12.7",
+		"svelte-sonner": "^0.3.28",
 		"swiper": "^11.2.5"
 	}
 }
