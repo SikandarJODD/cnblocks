@@ -92,11 +92,10 @@
               <h2
                 class="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white"
               >
-                Secure by default
+              Built-In Security
               </h2>
-              <p class="text-foreground">
-                Provident fugit and vero voluptate. magnam magni doloribus
-                dolores voluptates a sapiente nisi.
+              <p class="text-muted-foreground text-sm">
+                Implement best security practices from the start to protect data, users, and your web applications effortlessly.
               </p>
             </div>
           </CardContent>
@@ -188,10 +187,10 @@
               </svg>
             </div>
             <div class="relative z-10 mt-14 space-y-2 text-center">
-              <h2 class="text-lg font-medium transition">Faster than light</h2>
-              <p class="text-foreground">
-                Provident fugit vero voluptate. magnam magni doloribus dolores
-                voluptates inventore nisi.
+              <h2 class="text-lg font-medium transition">Fast & Optimized</h2>
+              <p class="text-muted-foreground text-sm">
+                Optimize performance and keep users engaged with lightning-fast
+                web experiences.
               </p>
             </div>
           </CardContent>
@@ -212,11 +211,11 @@
                 <h2
                   class="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white"
                 >
-                  Faster than light
+                  Continuous Growth
                 </h2>
-                <p class="text-foreground">
-                  Provident fugit vero voluptate. Voluptates a sapiente
-                  inventore nisi.
+                <p class="text-foreground text-sm text-muted-foreground">
+                  Stay ahead with the latest trends
+                  in web development and innovation.
                 </p>
               </div>
             </div>
@@ -293,9 +292,9 @@
                 <h2 class="text-lg font-medium transition">
                   Keep your loved ones safe
                 </h2>
-                <p class="text-foreground">
-                  Voluptate. magnam magni doloribus dolores voluptates a
-                  sapiente inventore nisi.
+                <p class="text-sm text-muted-foreground">
+                  Build, share, and improve projects together using the best
+                  tools for collaboration.
                 </p>
               </div>
             </div>
@@ -310,12 +309,12 @@
                 >
                   <span
                     class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
-                    >Likeur</span
+                    >Saloni</span
                   >
                   <div class="ring-background size-7 ring-4">
                     <img
-                      class="size-full rounded-full"
-                      src="https://avatars.githubusercontent.com/u/102558960?v=4"
+                      class="size-full rounded-full border"
+                      src="https://i.pinimg.com/736x/1a/a2/9b/1aa29b00767818ac4b02d13a50facef3.jpg"
                       alt=""
                     />
                   </div>
@@ -325,14 +324,14 @@
                 >
                   <div class="ring-background size-8 ring-4">
                     <img
-                      class="size-full rounded-full"
-                      src="https://avatars.githubusercontent.com/u/47919550?v=4"
+                      class="size-full rounded-full border"
+                      src="https://pbs.twimg.com/profile_images/1734257897247514625/IaW4s_ba_400x400.jpg"
                       alt=""
                     />
                   </div>
                   <span
                     class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
-                    >M. Irung</span
+                    >Bhide Svelte</span
                   >
                 </div>
                 <div
@@ -340,12 +339,12 @@
                 >
                   <span
                     class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
-                    >B. Ng</span
+                    >Aditya</span
                   >
                   <div class="ring-background size-7 ring-4">
                     <img
-                      class="size-full rounded-full"
-                      src="https://avatars.githubusercontent.com/u/31113941?v=4"
+                      class="size-full rounded-full border"
+                      src="https://i.pinimg.com/736x/20/93/3c/20933c271a9a88fdf161076b1ace17be.jpg"
                       alt=""
                     />
                   </div>

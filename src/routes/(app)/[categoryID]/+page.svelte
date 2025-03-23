@@ -19,6 +19,6 @@
 <!-- <BlockPreview preview={categoryPage[0].preview} code={categoryPage[0].code} title="code" category="mint"   /> -->
 
 <!-- For Prod -->
-{#each blocks as block}
+<!-- {#each blocks as block}
   <BlockPreview {...block} />
-{/each}
+{/each} -->
