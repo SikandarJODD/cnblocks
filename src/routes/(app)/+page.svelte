@@ -57,7 +57,7 @@
       </p>
 
       <div class="sm:space-x-2 gap-2 flex items-center flex-wrap">
-        <Button href="/stats" class='w-full sm:w-fit'>Explore Blocks</Button>
+        <Button href="/hero" class='w-full sm:w-fit'>Explore Blocks</Button>
         <!-- <Button variant="secondary" href="/templates">Explore Templates</Button> -->
         <AnimatedButton href="/templates" class='w-full sm:w-fit'>Explore Templates</AnimatedButton>
       </div>

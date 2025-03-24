@@ -16,21 +16,21 @@ import { team } from "./team";
 import { testimonials } from "./testimonial";
 
 export let all_blocks: Block[] = [
+  ...hero,
+  ...feature,
+  ...content,
   ...stats,
+  ...cta,
+  ...testimonials,
+  ...pricing,
+  ...team,
   ...comparator,
+  ...logocloud,
+  ...faq,
   ...footer,
   ...contact,
-  ...cta,
-  ...feature,
-  ...faq,
   ...signup,
   ...login,
-  ...team,
-  ...hero,
-  ...logocloud,
-  ...pricing,
-  ...testimonials,
-  ...content,
 ];
 
 export const categories = [...new Set(all_blocks.map((b) => b.category))];
