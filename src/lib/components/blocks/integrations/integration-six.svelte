@@ -3,7 +3,7 @@
     Gemini,
     GooglePaLM,
     Replit,
-  } from "../logos";
+  } from "../logos/logos";
   import Button from "$lib/components/ui/button/button.svelte";
   import { Icon, Plus } from "@lucide/svelte";
 </script>

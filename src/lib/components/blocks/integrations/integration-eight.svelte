@@ -6,8 +6,7 @@
     VSCodium,
     Replit,
     MediaWiki,
-  } from "../logos";
-  import Logo from "$lib/components/web/Logo.svelte";
+  } from "../logos/logos";
   import Button from "$lib/components/ui/button/button.svelte";
   import { Icon } from "@lucide/svelte";
 </script>
@@ -93,6 +92,7 @@
     </div>
   </div>
 </section>
+
 {#snippet IntergrationCardv8({
   icon,
   name,

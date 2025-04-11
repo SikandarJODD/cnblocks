@@ -1,5 +1,5 @@
 <script lang="ts">
-  import IntegrationEight from "$lib/components/blocks/integrations/integration-eight.svelte";
+  import IntegrationSeven from "$lib/components/blocks/integrations/integration-seven.svelte";
 </script>
 
-<IntegrationEight />
+<IntegrationSeven />

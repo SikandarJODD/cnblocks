@@ -36,8 +36,9 @@
         "animate-marquee flex-row": !vertical,
         "animate-marquee-vertical flex-col": vertical,
         "group-hover:[animation-play-state:paused]": pauseOnHover,
-        "[animation-direction:reverse]": reverse,
       })}
+      style="animation-direction:{reverse ? 'reverse':'normal'};
+      "
     >
       {@render children?.()}
     </div>

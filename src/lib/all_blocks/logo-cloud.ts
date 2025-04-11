@@ -16,7 +16,7 @@ let components = [LogoOne, LogoTwo, LogoThree];
 
 export let logocloud: Block[] = getBlock(
   components.length,
-  "logo-cloud",
+  "logocloud",
   codes,
   components
 );

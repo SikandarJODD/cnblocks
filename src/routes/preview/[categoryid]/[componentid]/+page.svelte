@@ -5,18 +5,12 @@
   const componentID = $derived(page.params.componentid);
   const categoryID = $derived(page.params.categoryid);
 
-  const category = $derived(
-    page.url.pathname.split("/").filter(Boolean)[0] || "/"
-  );
-
-  const categoryBlocks = $derived.by(() => {
-    let categoryBlocks = all_blocks.filter(
-      (block) => block.category === categoryID
-    );
+  let categoryBlocks = $derived.by(() => {
+    let categoryBlocks = all_blocks[categoryID] || all_blocks["hero"];
     return categoryBlocks;
   });
 
-  const ComponentBlock = $derived.by(() => {
+  let ComponentBlock = $derived.by(() => {
     let componentBlock = categoryBlocks.filter(
       (block) => block.title === componentID
     );

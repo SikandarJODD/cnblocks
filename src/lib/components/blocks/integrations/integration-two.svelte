@@ -1,6 +1,6 @@
 <script lang="ts">
+  // // Scroll below for the code of IntegrationCardv2 component
   import IntegrationCardv2 from "./card/integration-cardv2.svelte";
-
   import {
     Gemini,
     GooglePaLM,
@@ -8,7 +8,7 @@
     VSCodium,
     Replit,
     MediaWiki,
-  } from "../logos";
+  } from "../logos/logos";
   import Logo from "$lib/components/web/Logo.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
 </script>
@@ -63,10 +63,43 @@
           workflow.
         </p>
 
-        <Button href="#" variant="outline" size="sm">
-          Get started
-        </Button>
+        <Button href="#" variant="outline" size="sm">Get started</Button>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Integration Card V2 Component Code -->
+
+<!-- <script lang="ts">
+  import type { Snippet } from "svelte";
+
+  let {
+    children,
+    class: _class,
+    borderClassName,
+  }: {
+    children?: Snippet;
+    class?: string;
+    borderClassName?: string;
+  } = $props();
+</script>
+
+<div
+  class={[
+    "bg-background relative flex size-20 rounded-xl dark:bg-transparent",
+    _class,
+  ]}
+>
+  <div
+    role="presentation"
+    class={[
+      "absolute inset-0 rounded-xl border border-black/20 dark:border-white/25",
+      borderClassName,
+    ]}
+  ></div>
+  <div class="relative z-20 m-auto size-fit *:size-8">
+    {@render children?.()}
+  </div>
+</div>
+ -->

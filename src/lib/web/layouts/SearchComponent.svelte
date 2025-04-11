@@ -34,6 +34,7 @@
   variant="outline"
   class={cn("text-muted-foreground rounded-full md:w-40 lg:w-44")}
   onclick={() => (open = true)}
+  size='sm'
 >
   <span class="hidden lg:inline-flex">Search Component.. </span>
   <span class="inline-flex lg:hidden">Search...</span>

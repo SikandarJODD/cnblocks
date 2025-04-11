@@ -22,14 +22,14 @@
   import SearchComponent from "./SearchComponent.svelte";
 </script>
 
-<nav class="bg-background border-b">
+<nav class="bg-background border-b sticky top-0 z-50">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
+    <div class="flex h-14 items-center justify-between">
       <div class="flex items-center">
         <a href="/" aria-label="home" class="shrink-0">
           <Logo />
         </a>
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="hidden sm:ml-4 sm:block">
           <div class="flex space-x-0.5">
             {#each navs as nav, index}
               <Button

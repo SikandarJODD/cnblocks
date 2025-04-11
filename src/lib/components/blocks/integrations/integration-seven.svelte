@@ -7,9 +7,11 @@
     VSCodium,
     Replit,
     MediaWiki,
-  } from "../logos";
+  } from "../logos/logos";
   import Logo from "$lib/components/web/Logo.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
+
+  // Scroll below for Marquee component code
   import Marquee from "$lib/components/magic/Marquee.svelte";
 </script>
 
@@ -21,7 +23,7 @@
       >
         <div
           role="presentation"
-          class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"
+          class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"
         ></div>
         <div>
           <Marquee>
@@ -93,7 +95,7 @@
         </div>
         <div class="absolute inset-0 m-auto flex size-fit justify-center gap-2">
           <IntegrationCardv7
-            class="shadow-black-950/10 size-16 bg-white/25 shadow-xl backdrop-blur-md backdrop-grayscale dark:border-white/10 dark:shadow-white/15"
+            class="shadow-black-950/10 size-16 bg-white/25 shadow-xl backdrop-blur-sm  dark:border-white/10 dark:shadow-white/15 backdrop-grayscale"
             isCenter={true}
           >
             <Logo />
@@ -114,3 +116,81 @@
     </div>
   </div>
 </section>
+
+<!-- Marquee Component Code -->
+
+<!-- <script lang="ts">
+  import { cn } from "$lib/utils";
+  import type { Snippet } from "svelte";
+
+  type MarqueeProps = {
+    pauseOnHover?: boolean;
+    vertical?: boolean;
+    repeat?: number;
+    reverse?: boolean;
+    class?: string;
+    children?: Snippet;
+  };
+  let {
+    pauseOnHover = false,
+    vertical = false,
+    repeat = 4,
+    reverse = false,
+    class: _class = "",
+    children,
+  }: MarqueeProps = $props();
+</script>
+
+<div
+  class={cn(
+    "group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]",
+    {
+      "flex-row": !vertical,
+      "flex-col": vertical,
+    },
+    _class
+  )}
+>
+  {#each { length: repeat } as _, i (i)}
+    <div
+      class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
+        "animate-marquee flex-row": !vertical,
+        "animate-marquee-vertical flex-col": vertical,
+        "group-hover:[animation-play-state:paused]": pauseOnHover,
+      })}
+      style="animation-direction:{reverse ? 'reverse':'normal'};
+      "
+    >
+      {@render children?.()}
+    </div>
+  {/each}
+</div>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration) linear infinite;
+  }
+</style>
+ -->
