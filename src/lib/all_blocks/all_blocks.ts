@@ -7,6 +7,7 @@ import { faq } from "./faqs";
 import { feature } from "./features";
 import { footer } from "./footer";
 import { hero } from "./hero";
+import { integration } from "./integration";
 import { login } from "./login";
 import { logocloud } from "./logo-cloud";
 import { pricing } from "./pricing";
@@ -19,6 +20,7 @@ export let all_blocks: Block[] = [
   ...hero,
   ...feature,
   ...content,
+  ...integration,
   ...stats,
   ...cta,
   ...testimonials,
