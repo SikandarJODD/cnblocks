@@ -13,11 +13,12 @@
     <div
       class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
     >
-      Created by <a
+      Created by
+      <a
         href="https://x.com/MeschacIrung"
         class="text-primary"
         target="_blank">Méschac Irung</a
-      >, Ported by
+      >Ported by
       <div
         class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white"
       >

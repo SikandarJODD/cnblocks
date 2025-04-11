@@ -320,6 +320,27 @@
 					"devDependencies": []
 				},
 				{
+					"name": "feature-card",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"feature-card.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
 					"name": "feature-eight",
 					"directory": "src/lib/components/blocks/feature",
 					"category": "feature",
@@ -370,6 +391,29 @@
 					"localDependencies": [],
 					"_imports_": {},
 					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "feature-nine",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"feature-nine.svelte"
+					],
+					"localDependencies": [
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [
+						"dotted-map@^2.2.3"
+					],
 					"devDependencies": [
 						"@lucide/svelte@^0.483.0"
 					]
@@ -426,6 +470,31 @@
 					],
 					"localDependencies": [],
 					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "feature-ten",
+					"directory": "src/lib/components/blocks/feature",
+					"category": "feature",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"feature-ten.svelte"
+					],
+					"localDependencies": [
+						"lib/utils",
+						"feature/feature-card",
+						"ui/card"
+					],
+					"_imports_": {
+						"$lib/utils": "{{lib/utils}}",
+						"./feature-card.svelte": "{{feature/feature-card}}.svelte",
+						"$lib/components/ui/card/index.js": "{{ui/card}}/index.js"
+					},
 					"dependencies": [],
 					"devDependencies": [
 						"@lucide/svelte@^0.483.0"
@@ -829,6 +898,236 @@
 			]
 		},
 		{
+			"name": "integrations",
+			"blocks": [
+				{
+					"name": "card",
+					"directory": "src/lib/components/blocks/integrations/card",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"integration-card.svelte",
+						"integration-cardv2.svelte",
+						"integration-cardv3.svelte",
+						"integration-cardv4.svelte",
+						"integration-cardv5.svelte",
+						"integration-cardv7.svelte",
+						"integration-cardv8.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/card",
+						"lib/utils"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					}
+				},
+				{
+					"name": "integration-eight",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-eight.svelte"
+					],
+					"localDependencies": [
+						"logos/logos",
+						"ui/button"
+					],
+					"_imports_": {
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "integration-five",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-five.svelte"
+					],
+					"localDependencies": [
+						"integrations/card",
+						"logos/logos",
+						"web/Logo",
+						"ui/button"
+					],
+					"_imports_": {
+						"./card/integration-cardv5.svelte": "{{integrations/card}}/integration-cardv5.svelte",
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "integration-four",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-four.svelte"
+					],
+					"localDependencies": [
+						"integrations/card",
+						"logos/logos",
+						"web/Logo",
+						"ui/button"
+					],
+					"_imports_": {
+						"./card/integration-cardv4.svelte": "{{integrations/card}}/integration-cardv4.svelte",
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "integration-one",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-one.svelte"
+					],
+					"localDependencies": [
+						"integrations/card",
+						"logos/logos"
+					],
+					"_imports_": {
+						"./card/integration-card.svelte": "{{integrations/card}}/integration-card.svelte",
+						"../logos/logos": "{{logos/logos}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "integration-seven",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-seven.svelte"
+					],
+					"localDependencies": [
+						"integrations/card",
+						"logos/logos",
+						"web/Logo",
+						"ui/button",
+						"magic/Marquee"
+					],
+					"_imports_": {
+						"./card/integration-cardv7.svelte": "{{integrations/card}}/integration-cardv7.svelte",
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "integration-six",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-six.svelte"
+					],
+					"localDependencies": [
+						"logos/logos",
+						"ui/button"
+					],
+					"_imports_": {
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "integration-three",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-three.svelte"
+					],
+					"localDependencies": [
+						"integrations/card",
+						"logos/logos",
+						"web/Logo",
+						"ui/button"
+					],
+					"_imports_": {
+						"./card/integration-cardv3.svelte": "{{integrations/card}}/integration-cardv3.svelte",
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "integration-two",
+					"directory": "src/lib/components/blocks/integrations",
+					"category": "integrations",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-two.svelte"
+					],
+					"localDependencies": [
+						"integrations/card",
+						"logos/logos",
+						"web/Logo",
+						"ui/button"
+					],
+					"_imports_": {
+						"./card/integration-cardv2.svelte": "{{integrations/card}}/integration-cardv2.svelte",
+						"../logos/logos": "{{logos/logos}}",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "login",
 			"blocks": [
 				{
@@ -963,6 +1262,130 @@
 					"devDependencies": [
 						"@lucide/svelte@^0.483.0"
 					]
+				}
+			]
+		},
+		{
+			"name": "logos",
+			"blocks": [
+				{
+					"name": "Gemini",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"Gemini.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "GooglePaLM",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"GooglePaLM.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "logos",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"logos.ts"
+					],
+					"localDependencies": [
+						"logos/Gemini",
+						"logos/Replit",
+						"logos/MagicUI",
+						"logos/VSCodium",
+						"logos/MediaWiki",
+						"logos/GooglePaLM"
+					],
+					"_imports_": {
+						"./Gemini.svelte": "{{logos/Gemini}}.svelte",
+						"./Replit.svelte": "{{logos/Replit}}.svelte",
+						"./MagicUI.svelte": "{{logos/MagicUI}}.svelte",
+						"./VSCodium.svelte": "{{logos/VSCodium}}.svelte",
+						"./MediaWiki.svelte": "{{logos/MediaWiki}}.svelte",
+						"./GooglePaLM.svelte": "{{logos/GooglePaLM}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "MagicUI",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"MagicUI.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "MediaWiki",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"MediaWiki.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "Replit",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"Replit.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "VSCodium",
+					"directory": "src/lib/components/blocks/logos",
+					"category": "logos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"VSCodium.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
 				}
 			]
 		},
@@ -1472,11 +1895,11 @@
 					"localDependencies": [
 						"lib/utils"
 					],
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0",
-						"bits-ui@^1.3.13",
+					"dependencies": [
 						"tailwind-variants@^1.0.0"
+					],
+					"devDependencies": [
+						"bits-ui@^1.3.13"
 					],
 					"_imports_": {
 						"$lib/utils": "{{lib/utils}}",
@@ -1666,10 +2089,11 @@
 					],
 					"localDependencies": [],
 					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": [
-						"clsx@^2.1.1",
+					"dependencies": [
 						"tailwind-merge@^3.0.2"
+					],
+					"devDependencies": [
+						"clsx@^2.1.1"
 					]
 				}
 			]

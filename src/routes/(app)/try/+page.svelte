@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FeatureTen from "$lib/components/blocks/feature/feature-ten.svelte";
+  import IntegrationSeven from "$lib/components/blocks/integrations/integration-seven.svelte";
 </script>
 
-<FeatureTen />
+<IntegrationSeven />
