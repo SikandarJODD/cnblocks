@@ -1,6 +1,6 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { Mail, SendHorizonal } from "@lucide/svelte";
+  import Mail from "@lucide/svelte/icons/mail";
 </script>
 
 <section class="py-16 md:py-32">

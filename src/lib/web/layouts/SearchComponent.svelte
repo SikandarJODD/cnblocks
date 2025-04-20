@@ -4,7 +4,7 @@
   import Button from "$lib/components/ui/button/button.svelte";
   import * as Command from "$lib/components/ui/command/index";
   import { cn } from "$lib/utils";
-  import { Circle } from "@lucide/svelte";
+  import Circle  from "@lucide/svelte/icons/circle";
   import { onMount } from "svelte";
   let open = $state(false);
 

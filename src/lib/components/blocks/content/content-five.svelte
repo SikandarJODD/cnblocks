@@ -1,5 +1,8 @@
 <script>
-  import { Cpu, Lock, Sparkles, Zap } from "@lucide/svelte";
+  import Zap from "@lucide/svelte/icons/zap";
+  import Cpu from "@lucide/svelte/icons/cpu";
+  import Lock from "@lucide/svelte/icons/lock";
+  import Sparkles from "@lucide/svelte/icons/sparkles";
 </script>
 
 <section class="py-16 md:py-32">
@@ -17,9 +20,7 @@
     <img
       class="rounded-(--radius) grayscale"
       src="https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="team image"
-      height=""
-      width=""
+      alt="team_img"
       loading="lazy"
     />
 

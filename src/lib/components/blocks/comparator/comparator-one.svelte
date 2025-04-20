@@ -1,6 +1,7 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { Cpu, Sparkles } from "@lucide/svelte";
+  import Cpu from "@lucide/svelte/icons/cpu";
+  import Sparkles from "@lucide/svelte/icons/sparkles";
   const tableData = [
     {
       feature: "Feature 1",

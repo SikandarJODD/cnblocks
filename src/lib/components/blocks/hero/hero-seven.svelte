@@ -1,6 +1,9 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { ArrowRight, Rocket } from "@lucide/svelte";
+  import Rocket from "@lucide/svelte/icons/rocket";
+  import Menu from "@lucide/svelte/icons/menu";
+  import X from "@lucide/svelte/icons/x";
+  import ArrowRight from "@lucide/svelte/icons/arrow-right";
 
   // import Swiper JS
   import Swiper from "swiper";
@@ -36,7 +39,6 @@
   // Hero Header Component
   import Logo from "$lib/components/web/Logo.svelte";
   import { cn } from "$lib/utils";
-  import { Menu, X } from "@lucide/svelte";
   import { scrollY } from "svelte/reactivity/window";
 
   let menuItems = [

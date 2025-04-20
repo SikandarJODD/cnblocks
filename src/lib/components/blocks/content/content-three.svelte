@@ -1,6 +1,6 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { ChevronRight } from "@lucide/svelte";
+  import ChevronRight from "@lucide/svelte/icons/chevron-right";
 </script>
 
 <section class="py-16 md:py-32">

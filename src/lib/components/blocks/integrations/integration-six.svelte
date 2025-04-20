@@ -1,11 +1,8 @@
 <script lang="ts">
-  import {
-    Gemini,
-    GooglePaLM,
-    Replit,
-  } from "../logos/logos";
+  import { Gemini, GooglePaLM, Replit } from "../logos/logos";
   import Button from "$lib/components/ui/button/button.svelte";
-  import { Icon, Plus } from "@lucide/svelte";
+  import { type Icon } from "@lucide/svelte";
+  import Plus from "@lucide/svelte/icons/plus";
 </script>
 
 <section>
@@ -45,9 +42,7 @@
           workflow.
         </p>
 
-        <Button variant="outline" size="sm">
-          Get started
-        </Button>
+        <Button variant="outline" size="sm">Get started</Button>
       </div>
     </div>
   </div>

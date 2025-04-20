@@ -6,7 +6,9 @@
 	import { Button, type ButtonProps } from '$lib/components/ui/button';
 	import { UseClipboard } from '$lib/hooks/use-clipboard.svelte';
 	import { cn } from '$lib/utils.js';
-	import { Check, Copy, X } from '@lucide/svelte';
+	import Check from '@lucide/svelte/icons/check';
+	import Copy from '@lucide/svelte/icons/copy';
+	import X from '@lucide/svelte/icons/x';
 	import type { Snippet } from 'svelte';
 	import { scale } from 'svelte/transition';
 

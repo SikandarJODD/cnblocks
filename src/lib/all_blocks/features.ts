@@ -12,6 +12,10 @@ import FeatureSeven from "$lib/components/blocks/feature/feature-seven.svelte";
 import FeatureEight from "$lib/components/blocks/feature/feature-eight.svelte";
 import FeatureNine from "$lib/components/blocks/feature/feature-nine.svelte";
 import FeatureTen from "$lib/components/blocks/feature/feature-ten.svelte";
+import FeatureEleven from "$lib/components/blocks/feature/feature-eleven.svelte";
+import FeatureTwelve from "$lib/components/blocks/feature/feature-twelve.svelte";
+import FeatureThirteen from "$lib/components/blocks/feature/feature-thirteen.svelte";
+import FeatureFourteen from "$lib/components/blocks/feature/feature-fourteen.svelte";
 
 // Code
 import FeatureOneCode from "$lib/components/blocks/feature/feature-one.svelte?raw";
@@ -24,6 +28,10 @@ import FeatureSevenCode from "$lib/components/blocks/feature/feature-seven.svelt
 import FeatureEightCode from "$lib/components/blocks/feature/feature-eight.svelte?raw";
 import FeatureNineCode from "$lib/components/blocks/feature/feature-nine.svelte?raw";
 import FeatureTenCode from "$lib/components/blocks/feature/feature-ten.svelte?raw";
+import FeatureElevenCode from "$lib/components/blocks/feature/feature-eleven.svelte?raw";
+import FeatureTwelveCode from "$lib/components/blocks/feature/feature-twelve.svelte?raw";
+import FeatureThirteenCode from "$lib/components/blocks/feature/feature-thirteen.svelte?raw";
+import FeatureFourteenCode from "$lib/components/blocks/feature/feature-fourteen.svelte?raw";
 
 let codes = [
   FeatureOneCode,
@@ -36,6 +44,10 @@ let codes = [
   FeatureEightCode,
   FeatureNineCode,
   FeatureTenCode,
+  FeatureElevenCode,
+  FeatureTwelveCode,
+  FeatureThirteenCode,
+  FeatureFourteenCode,
 ];
 let components = [
   FeatureOne,
@@ -48,6 +60,10 @@ let components = [
   FeatureEight,
   FeatureNine,
   FeatureTen,
+  FeatureEleven,
+  FeatureTwelve,
+  FeatureThirteen,
+  FeatureFourteen,
 ];
 
 export let feature: Block[] = getBlock(

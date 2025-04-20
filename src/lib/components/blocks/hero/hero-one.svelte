@@ -1,5 +1,4 @@
 <script>
-  import { ArrowRight, ChevronRight } from "@lucide/svelte";
   import Button from "$lib/components/ui/button/button.svelte";
 
   // You can store Hero Header Component in seperate file
@@ -8,7 +7,10 @@
   // Hero Header Component
   import Logo from "$lib/components/web/Logo.svelte";
   import { cn } from "$lib/utils";
-  import { Menu, X } from "@lucide/svelte";
+  import Menu from "@lucide/svelte/icons/menu";
+  import X from "@lucide/svelte/icons/x";
+  import ArrowRight from "@lucide/svelte/icons/arrow-right";
+  import ChevronRight  from "@lucide/svelte/icons/chevron-right";
   import { scrollY } from "svelte/reactivity/window";
 
   let menuItems = [

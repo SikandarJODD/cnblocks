@@ -4,7 +4,9 @@
   import { MediaQuery } from "svelte/reactivity";
   import Separator from "../ui/separator/separator.svelte";
   import Button from "../ui/button/button.svelte";
-  import { Check, Maximize, Terminal } from "@lucide/svelte";
+  import Maximize from "@lucide/svelte/icons/maximize";
+  import Terminal from "@lucide/svelte/icons/terminal";
+  import Check from "@lucide/svelte/icons/check";
   import CodeBlock from "./CodeBlock.svelte";
   import { CopyButton } from "../ui/copy-button";
   import { scale } from "svelte/transition";

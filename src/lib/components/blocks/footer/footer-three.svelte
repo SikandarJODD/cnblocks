@@ -4,7 +4,7 @@
   import Label from "$lib/components/ui/label/label.svelte";
   import Logo from "$lib/components/web/Logo.svelte";
   import { cn } from "$lib/utils";
-  import { ChevronsUpDown } from "@lucide/svelte";
+  import ChevronsUpDown  from "@lucide/svelte/icons/chevrons-up-down";
   const links = [
     {
       group: "Product",

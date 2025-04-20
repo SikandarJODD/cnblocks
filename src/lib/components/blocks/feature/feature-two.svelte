@@ -1,6 +1,9 @@
 <script>
   import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
-  import { Settings2, Zap, Sparkles } from "@lucide/svelte";
+  import Zap from "@lucide/svelte/icons/zap";
+  import Settings2 from "@lucide/svelte/icons/settings-2";
+  import Sparkles from "@lucide/svelte/icons/sparkles";
+
   import CardDecorator from "./card-decorator.svelte";
 </script>
 

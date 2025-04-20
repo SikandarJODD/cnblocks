@@ -1,13 +1,15 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { ArrowRight, Rocket } from "@lucide/svelte";
+  import Menu from "@lucide/svelte/icons/menu";
+  import X from "@lucide/svelte/icons/x";
+  import Rocket from "@lucide/svelte/icons/rocket";
+  import ArrowRight from "@lucide/svelte/icons/arrow-right";
 
   // You can store Hero Header Component in seperate file
   // I have used snippet for better readability
 
   // Hero Header Component
   import Logo from "$lib/components/web/Logo.svelte";
-  import { Menu, X } from "@lucide/svelte";
 
   let menuItems = [
     { name: "Features", href: "#a" },

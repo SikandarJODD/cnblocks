@@ -8,7 +8,7 @@
     CardTitle,
     CardFooter,
   } from "$lib/components/ui/card";
-  import { Check } from "@lucide/svelte";
+  import Check from "@lucide/svelte/icons/check";
 
   let pricingList = {
     free: [

@@ -1,5 +1,6 @@
 <script>
-  import { Cpu, Zap } from "@lucide/svelte";
+  import Zap from "@lucide/svelte/icons/zap";
+  import Cpu from "@lucide/svelte/icons/cpu";
 </script>
 
 <section class="py-16 md:py-32">
