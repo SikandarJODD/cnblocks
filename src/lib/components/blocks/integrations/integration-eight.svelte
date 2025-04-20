@@ -8,7 +8,7 @@
     MediaWiki,
   } from "../logos/logos";
   import Button from "$lib/components/ui/button/button.svelte";
-  import { Icon } from "@lucide/svelte";
+  import { type Icon } from "@lucide/svelte";
 </script>
 
 <section>

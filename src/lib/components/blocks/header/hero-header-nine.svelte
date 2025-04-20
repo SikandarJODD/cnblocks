@@ -1,7 +1,8 @@
 <script>
   import Logo from "$lib/components/web/Logo.svelte";
   import { cn } from "$lib/utils";
-  import { Menu, X } from "@lucide/svelte";
+  import Menu from "@lucide/svelte/icons/menu";
+  import X from "@lucide/svelte/icons/x";
   import Button from "$lib/components/ui/button/button.svelte";
   import { scrollY } from "svelte/reactivity/window";
 

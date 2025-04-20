@@ -1,6 +1,8 @@
 <script lang="ts">
   import Logo from "$lib/components/web/Logo.svelte";
-  import { Map as MapIcon, MessageCircle } from "@lucide/svelte";
+  import MapIcon from "@lucide/svelte/icons/map";
+  import MessageCircle from "@lucide/svelte/icons/message-circle";
+
   import DottedMap from "dotted-map";
 
   import { onMount } from "svelte";

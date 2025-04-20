@@ -1,5 +1,8 @@
 <script>
-  import { Activity, DraftingCompass, Mail, Zap } from "@lucide/svelte";
+  import Zap from "@lucide/svelte/icons/zap";
+  import Activity from "@lucide/svelte/icons/activity";
+  import DraftingCompass from "@lucide/svelte/icons/drafting-compass";
+  import Mail from "@lucide/svelte/icons/mail";
 </script>
 
 <section class="py-16 md:py-32">

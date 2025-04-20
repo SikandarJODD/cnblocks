@@ -1,5 +1,8 @@
 <script>
-  import { Cpu, Lock, Sparkles, Zap } from "@lucide/svelte";
+  import Cpu from "@lucide/svelte/icons/cpu";
+  import Lock from "@lucide/svelte/icons/lock";
+  import Sparkles from "@lucide/svelte/icons/sparkles";
+  import Zap from "@lucide/svelte/icons/zap";
 </script>
 
 <section class="py-16 md:py-32">

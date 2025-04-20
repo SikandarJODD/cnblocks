@@ -1,6 +1,7 @@
 <script>
   import Logo from "$lib/components/web/Logo.svelte";
-  import { Menu, X } from "@lucide/svelte";
+  import Menu from "@lucide/svelte/icons/menu";
+  import X from "@lucide/svelte/icons/x";
   import Button from "$lib/components/ui/button/button.svelte";
 
   let menuItems = [

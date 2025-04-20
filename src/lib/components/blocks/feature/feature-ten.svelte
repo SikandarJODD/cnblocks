@@ -1,6 +1,9 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
-  import { Calendar, MapIcon, type Icon } from "@lucide/svelte";
+  import { type Icon } from "@lucide/svelte";
+  import Calendar from "@lucide/svelte/icons/calendar";
+  import MapIcon from "@lucide/svelte/icons/map";
+
   import FeatureCard from "./feature-card.svelte";
   import * as Card from "$lib/components/ui/card/index.js";
 
@@ -33,7 +36,7 @@
 <section class="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-5xl">
     <div class="mx-auto grid gap-4 lg:grid-cols-2">
-      <FeatureCard class='relative'>
+      <FeatureCard class="relative">
         <Card.Header class="pb-3">
           {@render cardHeading({
             icon: MapIcon,

@@ -1,6 +1,5 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { ChevronRight } from "@lucide/svelte";
   import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
   import Marquee from "$lib/components/magic/Marquee.svelte";
 
@@ -10,7 +9,9 @@
   // Hero Header Component
   import Logo from "$lib/components/web/Logo.svelte";
   import { cn } from "$lib/utils";
-  import { Menu, X } from "@lucide/svelte";
+  import ChevronRight from "@lucide/svelte/icons/chevron-right";
+  import Menu from "@lucide/svelte/icons/menu";
+  import X from "@lucide/svelte/icons/x";
   import { scrollY } from "svelte/reactivity/window";
 
   let menuItems = [

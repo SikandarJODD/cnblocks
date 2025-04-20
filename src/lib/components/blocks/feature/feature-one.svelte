@@ -1,7 +1,9 @@
 <script lang="ts">
   import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
-  import { Settings2, Sparkles, Zap } from "@lucide/svelte";
   import CardDecorator from "./card-decorator.svelte";
+  import Zap from "@lucide/svelte/icons/zap";
+  import Settings2 from "@lucide/svelte/icons/settings-2";
+  import Sparkles from "@lucide/svelte/icons/sparkles";
 </script>
 
 <section class="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">

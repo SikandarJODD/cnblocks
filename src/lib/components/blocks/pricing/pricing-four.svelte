@@ -1,14 +1,6 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-    CardFooter,
-  } from "$lib/components/ui/card";
-  import { Check } from "@lucide/svelte";
+  import Check from "@lucide/svelte/icons/check";
 
   let pricingList = {
     free: [

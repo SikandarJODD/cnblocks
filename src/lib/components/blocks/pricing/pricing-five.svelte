@@ -1,6 +1,6 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { Check } from "@lucide/svelte";
+  import Check from "@lucide/svelte/icons/check";
   let list = [
     "First premium advantage",
     "Second advantage weekly",

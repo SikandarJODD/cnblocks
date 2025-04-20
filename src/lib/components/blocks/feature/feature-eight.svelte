@@ -1,6 +1,7 @@
 <script>
   import { Card, CardContent } from "$lib/components/ui/card";
-  import { Shield, Users } from "@lucide/svelte";
+  import Shield from "@lucide/svelte/icons/shield";
+  import Users from "@lucide/svelte/icons/users";
 </script>
 
 <section class="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
@@ -92,10 +93,11 @@
               <h2
                 class="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white"
               >
-              Built-In Security
+                Built-In Security
               </h2>
               <p class="text-muted-foreground text-sm">
-                Implement best security practices from the start to protect data, users, and your web applications effortlessly.
+                Implement best security practices from the start to protect
+                data, users, and your web applications effortlessly.
               </p>
             </div>
           </CardContent>
@@ -214,8 +216,8 @@
                   Continuous Growth
                 </h2>
                 <p class="text-foreground text-sm text-muted-foreground">
-                  Stay ahead with the latest trends
-                  in web development and innovation.
+                  Stay ahead with the latest trends in web development and
+                  innovation.
                 </p>
               </div>
             </div>

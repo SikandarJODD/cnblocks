@@ -1,6 +1,6 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
-  import { ArrowUpRight } from "@lucide/svelte";
+  import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
   import Logo from "./Logo.svelte";
   import ThemeToggle from "./ThemeToggle.svelte";
 </script>
@@ -14,10 +14,8 @@
       class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
     >
       Created by
-      <a
-        href="https://x.com/MeschacIrung"
-        class="text-primary"
-        target="_blank">Méschac Irung</a
+      <a href="https://x.com/MeschacIrung" class="text-primary" target="_blank"
+        >Méschac Irung</a
       >Ported by
       <div
         class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white"
@@ -62,7 +60,7 @@
     </div>
     <div class="flex">
       <Button
-        href="https://github.com/Meschacirung/cnblocks"
+        href="https://github.com/sikandarjodd/cnblocks"
         target="_blank"
         variant="link"
         class="text-sm text-foreground decoration-primary -ml-4 gap-1"
