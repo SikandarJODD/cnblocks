@@ -2,9 +2,15 @@
 
 A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built with Tailwind CSS v4 and shadcn-svelte.
 
-
 ![image](./static/og.png)
 
+## New Components
+
+| Name                   | Preview                                                       |
+| ---------------------- | ------------------------------------------------------------- |
+| 7 New Features Blocks  | [Preview](https://sv-blocks.vercel.app/feature#feature-eight) |
+| 3 New Faq Blocks       | [Preview](https://sv-blocks.vercel.app/faq)                   |
+| Forgot Password Blocks | [Preview](https://sv-blocks.vercel.app/forgot-password)       |
 
 ## Features
 

@@ -1,6 +1,10 @@
 {
 	"$schema": "https://unpkg.com/jsrepo@1.45.0/schemas/registry-config.json",
-	"dirs": ["./src/lib/components/blocks", "./src/lib/components", "./src"],
+	"dirs": [
+		"./src/lib/components/blocks",
+		"./src/lib/components",
+		"./src"
+	],
 	"doNotListBlocks": [],
 	"doNotListCategories": [],
 	"listBlocks": [],
@@ -10,6 +14,7 @@
 		"contact",
 		"content",
 		"faq",
+		"forgot-password",
 		"feature",
 		"footer",
 		"header",
@@ -36,6 +41,7 @@
 		"contact",
 		"content",
 		"faq",
+		"forgot-password",
 		"integrations",
 		"logos",
 		"feature",
@@ -50,7 +56,10 @@
 		"team",
 		"testimonial"
 	],
-	"excludeBlocks": ["index", "all_blocks"],
+	"excludeBlocks": [
+		"index",
+		"all_blocks"
+	],
 	"excludeCategories": [],
 	"preview": true
 }
