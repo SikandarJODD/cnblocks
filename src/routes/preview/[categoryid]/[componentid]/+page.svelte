@@ -9,6 +9,7 @@
   import { contact } from "$lib/all_blocks/contact";
   import { signup } from "$lib/all_blocks/signup";
   import { login } from "$lib/all_blocks/login";
+  import { forgot_password } from "$lib/all_blocks/forgot-password";
 
   const componentID = $derived(page.params.componentid);
   const categoryID = $derived(page.params.categoryid);
@@ -29,6 +30,10 @@
       categoryBlocks = signup;
     } else if (categoryID === "login") {
       categoryBlocks = login;
+    } else if (categoryID === "pricing") {
+      categoryBlocks = pricing;
+    } else if (categoryID === "forgot-password") {
+      categoryBlocks = forgot_password;
     } else {
       categoryBlocks = all_blocks[categoryID] || all_blocks["hero"];
     }

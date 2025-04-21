@@ -49,6 +49,7 @@ export let category_blocks: CategoryBlock[] = [
   { title: "Contact", href: "/contact" },
   { title: "Signup", href: "/signup" },
   { title: "Login", href: "/login" },
+  { title: "Forgot Password", href: "/forgot-password" },
 ];
 /*
 feature
