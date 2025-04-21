@@ -2,7 +2,6 @@ import type { Block } from "../../types/blocks";
 import { comparator } from "./comparator";
 import { content } from "./content";
 import { cta } from "./cta";
-import { faq } from "./faqs";
 import { hero } from "./hero";
 import { logocloud } from "./logo-cloud";
 import { pricing } from "./pricing";
@@ -18,7 +17,6 @@ export let all_blocks: Record<string, Block[]> = {
   team,
   comparator,
   logocloud,
-  faq,
 };
 
 export let categories = [
@@ -30,7 +28,6 @@ export let categories = [
   "team",
   "comparator",
   "logocloud",
-  "faq",
 ];
 type CategoryBlock = {
   title: string;

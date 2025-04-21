@@ -48,15 +48,6 @@
     </div>
     <section>
       <div class="relative pt-24 md:pt-36">
-        <div class="absolute inset-0 -z-20">
-          <img
-            src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605538/night-background_ni3vqb.jpg"
-            alt="background"
-            class="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-            width="3276"
-            height="4095"
-          />
-        </div>
         <div
           class="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"
         ></div>

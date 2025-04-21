@@ -5,7 +5,7 @@
     AccordionItem,
     AccordionTrigger,
   } from "$lib/components/ui/accordion";
-  let faqItems = [
+  const faqItems = [
     {
       id: "item-1",
       question: "How long does shipping take?",
@@ -54,29 +54,32 @@
     <div class="mx-auto mt-12 max-w-xl">
       <Accordion
         type="single"
-        class="bg-card ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0"
+        class="bg-muted dark:bg-muted/50 w-full rounded-2xl p-1"
       >
-        {#each faqItems as item, index}
-          <AccordionItem
-            value={item.id}
-            class={[
-              faqItems.length - 1 !== index ? "border-dashed" : "border-none",
-            ]}
-          >
-            <AccordionTrigger
-              class="cursor-pointer text-base hover:no-underline"
-              >{item.question}</AccordionTrigger
+        {#each faqItems as item}
+          <div class="group">
+            <AccordionItem
+              value={item.id}
+              class="data-[state=open]:bg-card dark:data-[state=open]:bg-muted peer rounded-xl border-none px-7 py-1 data-[state=open]:border-none data-[state=open]:shadow-sm"
             >
-            <AccordionContent>
-              <p class="text-base">{item.answer}</p>
-            </AccordionContent>
-          </AccordionItem>
+              <AccordionTrigger
+                class="cursor-pointer text-base hover:no-underline"
+                >{item.question}</AccordionTrigger
+              >
+              <AccordionContent>
+                <p class="text-base">{item.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
+            <hr
+              class="mx-7 border-dashed group-last:hidden peer-data-[state=open]:opacity-0"
+            />
+          </div>
         {/each}
       </Accordion>
 
-      <p class="text-muted-foreground mt-6 px-4">
+      <p class="text-muted-foreground mt-6 mx-auto w-fit text-sm">
         Can't find what you're looking for? Contact our{" "}
-        <a href="/" class="text-primary font-medium hover:underline">
+        <a href="#" class="text-primary font-medium hover:underline">
           customer support team
         </a>
       </p>
