@@ -10,6 +10,7 @@
   import { signup } from "$lib/all_blocks/signup";
   import { login } from "$lib/all_blocks/login";
   import { forgot_password } from "$lib/all_blocks/forgot-password";
+  import { hero } from "$lib/all_blocks/hero";
 
   const componentID = $derived(page.params.componentid);
   const categoryID = $derived(page.params.categoryid);
@@ -34,8 +35,10 @@
       categoryBlocks = pricing;
     } else if (categoryID === "forgot-password") {
       categoryBlocks = forgot_password;
+    } else if (categoryID === "hero") {
+      categoryBlocks = hero;
     } else {
-      categoryBlocks = all_blocks[categoryID] || all_blocks["hero"];
+      categoryBlocks = all_blocks[categoryID] || hero;
     }
     return categoryBlocks;
   });

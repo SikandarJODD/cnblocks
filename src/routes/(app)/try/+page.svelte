@@ -1,7 +1,6 @@
 <script lang="ts">
-  import ForgotPasswordOne from "$lib/components/blocks/forgot-password/forgot-password-one.svelte";
-  import ForgotPasswordTwo from "$lib/components/blocks/forgot-password/forgot-password-two.svelte";
+  import HeroSix from "$lib/components/blocks/hero/hero-six.svelte";
 </script>
 
-<ForgotPasswordOne />
-<ForgotPasswordTwo />
+<!-- <HeroThree /> -->
+<HeroSix />
