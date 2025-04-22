@@ -8,6 +8,7 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 
 | Name                   | Preview                                                       |
 | ---------------------- | ------------------------------------------------------------- |
+| 4 New Hero Sections    | [Preview](https://sv-blocks.vercel.app/hero#feature-eight)    |
 | 7 New Features Blocks  | [Preview](https://sv-blocks.vercel.app/feature#feature-eight) |
 | 3 New Faq Blocks       | [Preview](https://sv-blocks.vercel.app/faq)                   |
 | Forgot Password Blocks | [Preview](https://sv-blocks.vercel.app/forgot-password)       |
