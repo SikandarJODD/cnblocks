@@ -42,7 +42,7 @@
 </svelte:head>
 <section>
   <div
-    class="mx-4 max-w-7xl border-x px-8 py-16 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
+    class="mx-4 max-w-7xl border-x border-b px-8 py-16 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
   >
     <div class="max-w-2xl">
       <h1 class="text-balance text-3xl font-bold sm:text-4xl">
@@ -57,9 +57,11 @@
       </p>
 
       <div class="sm:space-x-2 gap-2 flex items-center flex-wrap">
-        <Button href="/hero" class='w-full sm:w-fit'>Explore Blocks</Button>
+        <Button href="/hero" class="w-full sm:w-fit">Explore Blocks</Button>
         <!-- <Button variant="secondary" href="/templates">Explore Templates</Button> -->
-        <AnimatedButton href="/templates" class='w-full sm:w-fit'>Explore Templates</AnimatedButton>
+        <AnimatedButton href="/templates" class="w-full sm:w-fit"
+          >Explore Templates</AnimatedButton
+        >
       </div>
     </div>
   </div>

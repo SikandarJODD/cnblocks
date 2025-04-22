@@ -995,6 +995,56 @@
 					]
 				},
 				{
+					"name": "hero-four",
+					"directory": "src/lib/components/blocks/hero",
+					"category": "hero",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"hero-four.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"web/Logo",
+						"lib/utils",
+						"magic/Marquee"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/utils": "{{lib/utils}}",
+						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "hero-nine",
+					"directory": "src/lib/components/blocks/hero",
+					"category": "hero",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"hero-nine.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
 					"name": "hero-one",
 					"directory": "src/lib/components/blocks/hero",
 					"category": "hero",
@@ -1042,6 +1092,54 @@
 					"dependencies": [
 						"swiper@^11.2.5"
 					],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "hero-six",
+					"directory": "src/lib/components/blocks/hero",
+					"category": "hero",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"hero-six.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "hero-three",
+					"directory": "src/lib/components/blocks/hero",
+					"category": "hero",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"hero-three.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"web/Logo",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
 					"devDependencies": [
 						"@lucide/svelte@^0.483.0"
 					]

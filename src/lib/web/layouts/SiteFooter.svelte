@@ -5,7 +5,7 @@
   import ThemeToggle from "./ThemeToggle.svelte";
 </script>
 
-<footer class="pb-16">
+<footer class="py-16">
   <div class="mx-auto max-w-7xl px-10 lg:px-6">
     <a href="/" aria-label="home" class="-m-2 inline-block p-2 duration-200">
       <Logo />
