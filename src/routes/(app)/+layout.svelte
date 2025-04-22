@@ -6,6 +6,6 @@
 </script>
 
 <ModeWatcher defaultMode="system" />
-<!-- <Header /> -->
+<Header />
 {@render children()}
 <SiteFooter />

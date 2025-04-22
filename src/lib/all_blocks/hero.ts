@@ -21,6 +21,8 @@ import HeroFiveCode from "$lib/components/blocks/hero/hero-five.svelte?raw";
 import HeroSixCode from "$lib/components/blocks/hero/hero-six.svelte?raw";
 import HeroSevenCode from "$lib/components/blocks/hero/hero-seven.svelte?raw";
 import HeroEightCode from "$lib/components/blocks/hero/hero-eight.svelte?raw";
+import HeroNineCode from "$lib/components/blocks/hero/hero-nine.svelte?raw";
+
 
 let codes = [
   HeroOneCode,
@@ -31,6 +33,7 @@ let codes = [
   HeroSixCode,
   HeroSevenCode,
   HeroEightCode,
+  HeroNineCode
 ];
 let components = [
   HeroOne,
@@ -41,6 +44,7 @@ let components = [
   HeroSix,
   HeroSeven,
   HeroEight,
+  HeroNine,
 ];
 
 export let hero: Block[] = getBlock(

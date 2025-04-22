@@ -30,9 +30,10 @@
           <Logo />
         </a>
         <div class="hidden sm:ml-4 sm:block">
-          <div class="flex space-x-0.5">
+          <div class="flex space-x-1">
             {#each navs as nav, index}
               <Button
+                size="sm"
                 class="rounded-full font-normal"
                 variant={index === isActive ? "secondary" : "ghost"}
                 href={nav.url}>{nav.name}</Button
