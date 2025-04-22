@@ -1,10 +1,10 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { getAllBlockNames } from "$lib/all_blocks/all_blocks";
   import Button from "$lib/components/ui/button/button.svelte";
   import * as Command from "$lib/components/ui/command/index";
+  import { search_comp } from "$lib/config/search_comp";
   import { cn } from "$lib/utils";
-  import Circle  from "@lucide/svelte/icons/circle";
+  import Circle from "@lucide/svelte/icons/circle";
   import { onMount } from "svelte";
   let open = $state(false);
 
@@ -26,15 +26,13 @@
     open = false;
     cmd();
   }
-
-  let all_names = getAllBlockNames();
 </script>
 
 <Button
   variant="outline"
   class={cn("text-muted-foreground rounded-full md:w-40 lg:w-44")}
   onclick={() => (open = true)}
-  size='sm'
+  size="sm"
 >
   <span class="hidden lg:inline-flex">Search Component.. </span>
   <span class="inline-flex lg:hidden">Search...</span>
@@ -43,22 +41,24 @@
   <Command.Input placeholder="Type a component name.." />
   <Command.List>
     <Command.Empty>No results found.</Command.Empty>
-    <Command.Group heading="Components">
-      {#each all_names as navItem}
-        <Command.Item
-          class="capitalize"
-          value={navItem.title}
-          onSelect={() =>
-            runCommand(() => {
-              navItem.href && goto(navItem.href);
-            })}
-        >
-          <div class="mr-2 flex h-4 w-4 items-center justify-center">
-            <Circle class="h-3 w-3" />
-          </div>
-          {navItem.title}
-        </Command.Item>
-      {/each}
-    </Command.Group>
+    {#each search_comp as navItem}
+      <Command.Group heading={navItem.name}>
+        {#each navItem.subcom as item}
+          <Command.Item
+            class="capitalize"
+            value={item.name}
+            onSelect={() =>
+              runCommand(() => {
+                item.href && goto(item.href);
+              })}
+          >
+            <div class="mr-2 flex h-4 w-4 items-center justify-center">
+              <Circle class="h-3 w-3" />
+            </div>
+            {item.name}
+          </Command.Item>
+        {/each}
+      </Command.Group>
+    {/each}
   </Command.List>
 </Command.Dialog>

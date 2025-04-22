@@ -1,9 +1,11 @@
 <script>
   import AnimatedButton from "$lib/components/ui/button/animated-button.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
+  import { seoMetaTags } from "$lib/config/seo";
+  import { MetaTags } from "svelte-meta-tags";
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
   <title>Svelte Shadcn Blocks - 50+ UI & Marketing Blocks</title>
   <meta
     name="description"
@@ -39,7 +41,10 @@
   />
   <meta name="author" content="Sikandar_Bhide" />
   <link rel="canonical" href="https://sv-blocks.vercel.app" />
-</svelte:head>
+</svelte:head> -->
+
+<MetaTags {...seoMetaTags} />
+
 <section>
   <div
     class="mx-4 max-w-7xl border-x border-b px-8 py-16 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
