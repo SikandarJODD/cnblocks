@@ -19,7 +19,7 @@
   });
 </script>
 
-<MetaTags {...seoMetaTags} title={categoryTitle}  />
+<MetaTags title={categoryTitle} {...seoMetaTags}  />
 
 {#each blocks as block}
   <BlockPreview {...block} />

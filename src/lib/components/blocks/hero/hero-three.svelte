@@ -95,12 +95,12 @@
               <div
                 class="bg-linear-to-l to-background from-background absolute inset-0 via-transparent"
               ></div>
-              <img
+              <!-- <img
                 src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605545/phone-backgroudn_xqgg5g.jpg"
                 alt="Phone Background"
                 width="6240"
                 height="4160"
-              />
+              /> -->
             </div>
           </div>
         </div>

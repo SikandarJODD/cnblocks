@@ -11,9 +11,11 @@
   import { login } from "$lib/all_blocks/login";
   import { forgot_password } from "$lib/all_blocks/forgot-password";
   import { hero } from "$lib/all_blocks/hero";
+  import { faq } from "$lib/all_blocks/faq";
 
-  const componentID = $derived(page.params.componentid);
-  const categoryID = $derived(page.params.categoryid);
+  let componentID = $derived(page.params.componentid);
+  let categoryID = $derived(page.params.categoryid);
+  $inspect({ componentID, categoryID }, "componentID and categoryID");
 
   let categoryBlocks = $derived.by(() => {
     let categoryBlocks = [];
@@ -37,6 +39,8 @@
       categoryBlocks = forgot_password;
     } else if (categoryID === "hero") {
       categoryBlocks = hero;
+    } else if (categoryID === "faq") {
+      categoryBlocks = faq;
     } else {
       categoryBlocks = all_blocks[categoryID] || hero;
     }
