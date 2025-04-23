@@ -17,15 +17,6 @@ export let all_blocks: Record<string, Block[]> = {
   logocloud,
 };
 
-export let categories = [
-  "content",
-  "stats",
-  "cta",
-  "pricing",
-  "team",
-  "comparator",
-  "logocloud",
-];
 type CategoryBlock = {
   title: string;
   href: string;
@@ -48,22 +39,5 @@ export let category_blocks: CategoryBlock[] = [
   { title: "Login", href: "/login" },
   { title: "Forgot Password", href: "/forgot-password" },
 ];
-/*
-feature
-footer
-contact
-testimonial
-signup
-login
-integration
- */
 
-export let getAllBlockNames = () => {
-  return Object.values(all_blocks).flatMap((blocks) => {
-    return blocks.map((b) => {
-      let title = `${b.category}  ${b.title}`;
-      let href = `/${b.category}#${b.category}-${b.title}`;
-      return { title, href };
-    });
-  });
-};
+
