@@ -1,0 +1,14 @@
+[
+  {
+    "title": "New Blocks - Hero Focus Mar 2025",
+    "desc": "Added 50 new blocks",
+    "date": "2025-03-01T00:00:00.000Z",
+    "content": "<p><a href=\"https://next.shadcn-svelte.com\">Svelte</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Vue</a>\r\n<a href=\"https://next.shadcn-svelte.com\">SvelteKit</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Figma</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Svelte</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Vue</a>\r\n<a href=\"https://next.shadcn-svelte.com\">SvelteKit</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Coding</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Vue</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Figma</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Svelte</a>\r\n<a href=\"https://next.shadcn-svelte.com\">SvelteKit</a>\r\n<a href=\"https://next.shadcn-svelte.com\">Figma</a></p>"
+  },
+  {
+    "title": "New Blocks - Integration April 2025",
+    "desc": "Added 10 new blocks & Templates",
+    "date": "2025-04-28T00:00:00.000Z",
+    "content": "<h3>New Integration Blocks</h3>\n<ul>\n<li>Upgrade to Tailwind 4.</li>\n<li>Upgrade to use latest shadcn/ui components from the npx shadcn@canary add command.</li>\n<li>Provide example Tailwind 4 .css file in the docs.</li>\n</ul>\n<p><a href=\"https://next.shadcn-svelte.com\">Tailwind V4</a></p>"
+  }
+]

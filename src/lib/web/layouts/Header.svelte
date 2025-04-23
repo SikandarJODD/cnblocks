@@ -6,6 +6,7 @@
     { name: "Home", url: "/" },
     { name: "Blocks", url: "/hero" },
     { name: "Templates", url: "/templates" },
+    { name: "Changelog", url: "/changelog" },
   ];
   let isActive = $derived.by(() => {
     let url = page.url.pathname.split("/")[1];
