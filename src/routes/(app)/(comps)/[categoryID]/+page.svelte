@@ -8,7 +8,7 @@
   });
 
   import { page } from "$app/state";
-  import { category_blocks } from "$lib/all_blocks/all_blocks";
+  import { category_blocks } from "$lib/all_blocks/category_block";
   import { seoMetaTags } from "$lib/config/seo";
   import { MetaTags } from "svelte-meta-tags";
   let categoryTitle = $derived.by(() => {

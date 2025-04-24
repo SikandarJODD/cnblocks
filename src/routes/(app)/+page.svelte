@@ -2,6 +2,7 @@
   import AnimatedButton from "$lib/components/ui/button/animated-button.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import { seoMetaTags } from "$lib/config/seo";
+  import BlocksCards from "$lib/web/layouts/BlocksCards.svelte";
   import SiteHero from "$lib/web/layouts/SiteHero.svelte";
   import { MetaTags } from "svelte-meta-tags";
 </script>
@@ -72,3 +73,4 @@
   </div>
 </section> -->
 <SiteHero />
+<BlocksCards />
