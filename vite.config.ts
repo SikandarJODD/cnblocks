@@ -5,7 +5,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [tailwindcss(), sveltekit()],
   optimizeDeps: {
-    // entries: ["./src/**/*.{svelte,ts,js}"], // Scan only your source files
     exclude: [
       "swiper",
       "bits-ui",

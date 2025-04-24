@@ -17,27 +17,5 @@ export let all_blocks: Record<string, Block[]> = {
   logocloud,
 };
 
-type CategoryBlock = {
-  title: string;
-  href: string;
-};
-export let category_blocks: CategoryBlock[] = [
-  { title: "Hero", href: "/hero" },
-  { title: "Features", href: "/feature" },
-  { title: "Content", href: "/content" },
-  { title: "Integration", href: "/integration" },
-  { title: "Stats", href: "/stats" },
-  { title: "Call To Action", href: "/cta" },
-  { title: "Pricing", href: "/pricing" },
-  { title: "Team", href: "/team" },
-  { title: "Comparator", href: "/comparator" },
-  { title: "Logo Cloud", href: "/logocloud" },
-  { title: "FAQ", href: "/faq" },
-  { title: "Footer", href: "/footer" },
-  { title: "Contact", href: "/contact" },
-  { title: "Signup", href: "/signup" },
-  { title: "Login", href: "/login" },
-  { title: "Forgot Password", href: "/forgot-password" },
-];
 
 

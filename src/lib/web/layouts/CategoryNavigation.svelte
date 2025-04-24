@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
-  import { category_blocks } from "$lib/all_blocks/all_blocks";
+  import { category_blocks } from "$lib/all_blocks/category_block";
   import { cn } from "$lib/utils";
   let pathname = $derived(
     "/" + page.url.pathname.split("/").filter(Boolean)[0] || "/"
