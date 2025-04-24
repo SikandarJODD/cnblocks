@@ -1,17 +1,13 @@
 <script>
-  import AnimatedButton from "$lib/components/ui/button/animated-button.svelte";
-  import Button from "$lib/components/ui/button/button.svelte";
-  import { seoMetaTags } from "$lib/config/seo";
   import BlocksCards from "$lib/web/layouts/BlocksCards.svelte";
   import SiteHero from "$lib/web/layouts/SiteHero.svelte";
-  import { MetaTags } from "svelte-meta-tags";
 </script>
 
-<!-- <svelte:head>
+<svelte:head>
   <title>Svelte Shadcn Blocks - 50+ UI & Marketing Blocks</title>
   <meta
     name="description"
-    content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages. Supports light & dark mode for seamless design."
+    content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages."
   />
 
   <meta
@@ -20,7 +16,7 @@
   />
   <meta
     property="og:description"
-    content="Easily create landing pages with 50+ responsive UI & marketing blocks built with Svelte 5, Tailwind v4, and ShadCN-Svelte. Supports light & dark mode."
+    content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages."
   />
   <meta property="og:image" content="https://sv-blocks.vercel.app/og.png" />
   <meta property="og:url" content="https://sv-blocks.vercel.app" />
@@ -32,20 +28,20 @@
   />
   <meta
     name="twitter:description"
-    content="50+ UI & marketing blocks for Svelte 5. Fully responsive & supports light/dark mode. Build landing pages effortlessly."
+    content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages."
   />
   <meta name="twitter:image" content="https://sv-blocks.vercel.app/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <meta
     name="keywords"
-    content="Svelte UI components, Blocks, Svelte blocks,  Svelte marketing blocks, ShadCN-Svelte, responsive UI, landing page builder, Svelte 5, Tailwind v4"
+    content="Svelte UI components, Blocks, Svelte blocks,  Svelte marketing blocks, ShadCN-Svelte, responsive UI, landing page builder, Svelte 5, Tailwind v4, Svelte Shadcn Blocks, Svelte marketing components, Svelte UI library, Svelte templates, Svelte components, Svelte UI kit"
   />
   <meta name="author" content="Sikandar_Bhide" />
   <link rel="canonical" href="https://sv-blocks.vercel.app" />
-</svelte:head> -->
+</svelte:head>
 
-<MetaTags {...seoMetaTags} />
+<!-- <MetaTags {...seoMetaTags} /> -->
 
 <!-- <section>
   <div

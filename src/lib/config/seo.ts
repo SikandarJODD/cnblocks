@@ -76,7 +76,6 @@ export let seoMetaTags: MetaTagsProps = {
     images: [
       {
         url: "https://sv-blocks.vercel.app/og.png",
-        secureUrl: "https://sv-blocks.vercel.app/og.png",
         type: "image/png",
         width: 1200,
         height: 630,

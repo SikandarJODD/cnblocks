@@ -84,7 +84,7 @@
                 style="border-radius: calc(0.5rem + 0.125rem + 4px);"
               >
                 <Button
-                  href="#link"
+                  href="/hero"
                   size="lg"
                   class="rounded-xl px-5 text-base"
                 >

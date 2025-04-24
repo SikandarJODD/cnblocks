@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sv-blocks.vercel.app/sitemap.xml

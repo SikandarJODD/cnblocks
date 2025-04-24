@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://sv-blocks.vercel.app/</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/hero</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/templates</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/changelog</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/feature</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/content</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/integration</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/stats</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/cta</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/pricing</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/team</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/comparator</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/logocloud</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/faq</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/footer</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/contact</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/signup</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/login</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/forgot-password</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/five</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/six</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/seven</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/eight</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/hero/nine</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/five</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/six</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/seven</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/eight</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/nine</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/ten</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/eleven</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/twelve</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/thirteen</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/feature/fourteen</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/five</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/six</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/content/seven</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/five</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/six</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/seven</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/integration/eight</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/stats/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/stats/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/stats/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/stats/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/cta/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/cta/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/cta/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/pricing/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/pricing/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/pricing/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/pricing/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/pricing/five</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/team/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/team/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/comparator/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/logocloud/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/logocloud/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/logocloud/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/faq/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/faq/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/faq/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/faq/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/footer/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/footer/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/footer/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/footer/four</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/footer/five</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/contact/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/contact/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/signup/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/signup/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/signup/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/login/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/login/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/login/three</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/forgot-password/one</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sv-blocks.vercel.app/preview/forgot-password/two</loc>
+  <lastmod>2025-04-24T14:48:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
