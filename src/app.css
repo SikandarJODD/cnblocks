@@ -5,9 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-mono: "Geist Mono", "Fira Code", monospace;
-  --font-sans: InterVariable, sans-serif;
-  --font-montserrat: "Montserrat", sans-serif;
+  --font-sans: Inter, sans-serif;
+  --font-display: Sora, sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));

@@ -1,5 +1,19 @@
 export let search_comp: SearchComp[] = [
   {
+    name: "Hero",
+    subcom: [
+      { name: "Hero One", href: "/hero#hero-one" },
+      { name: "Hero Two", href: "/hero#hero-two" },
+      { name: "Hero Three", href: "/hero#hero-three" },
+      { name: "Hero Four", href: "/hero#hero-four" },
+      { name: "Hero Five", href: "/hero#hero-five" },
+      { name: "Hero Six", href: "/hero#hero-six" },
+      { name: "Hero Seven", href: "/hero#hero-seven" },
+      { name: "Hero Eight", href: "/hero#hero-eight" },
+      { name: "Hero Nine", href: "/hero#hero-nine" },
+    ],
+  },
+  {
     name: "Features",
     subcom: [
       { name: "Feature One", href: "/feature#feature-one" },
@@ -22,20 +36,6 @@ export let search_comp: SearchComp[] = [
       { name: "Feature Eighteen", href: "/feature#feature-eighteen" },
       { name: "Feature Nineteen", href: "/feature#feature-nineteen" },
       { name: "Feature Twenty", href: "/feature#feature-twenty" },
-    ],
-  },
-  {
-    name: "Hero",
-    subcom: [
-      { name: "Hero One", href: "/hero#hero-one" },
-      { name: "Hero Two", href: "/hero#hero-two" },
-      { name: "Hero Three", href: "/hero#hero-three" },
-      { name: "Hero Four", href: "/hero#hero-four" },
-      { name: "Hero Five", href: "/hero#hero-five" },
-      { name: "Hero Six", href: "/hero#hero-six" },
-      { name: "Hero Seven", href: "/hero#hero-seven" },
-      { name: "Hero Eight", href: "/hero#hero-eight" },
-      { name: "Hero Nine", href: "/hero#hero-nine" },
     ],
   },
   {

@@ -30,7 +30,7 @@
 
 <Button
   variant="outline"
-  class={cn("text-muted-foreground rounded-full md:w-40 lg:w-44")}
+  class={cn("text-muted-foreground rounded-full md:w-40 lg:w-40")}
   onclick={() => (open = true)}
   size="sm"
 >
