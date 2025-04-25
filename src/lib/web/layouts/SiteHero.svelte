@@ -1,34 +1,28 @@
 <script>
+  import GridPattern from "$lib/components/magic/GridPattern.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
+  import { cn } from "$lib/utils";
   import ArrowRight from "@lucide/svelte/icons/arrow-right";
 </script>
 
 <div>
-  <main class="overflow-hidden">
-    <div
-      class="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block"
-    >
-      <div
-        class="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]"
-      ></div>
-      <div
-        class="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]"
-      ></div>
-      <div
-        class="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]"
-      ></div>
-    </div>
+  <main class="overflow-hidden relative">
+    <GridPattern
+      width={45}
+      height={45}
+      strokeDashArray="4 2"
+      class={cn(
+        "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+      )}
+    />
     <section>
       <div class="relative pt-12 md:pt-16">
-        <div
-          class="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"
-        ></div>
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center sm:mx-auto lg:mr-auto lg:mt-0">
             <div>
               <a
                 href="/changelog"
-                class="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-2 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
+                class="hover:bg-background dark:hover:border-t-border bg-muted/70 group mx-auto flex w-fit items-center gap-2 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
               >
                 <span class="text-foreground text-sm flex items-center gap-1.5">
                   <svg
@@ -64,9 +58,86 @@
             </div>
 
             <h1
-              class="mt-8 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-50 dark:via-neutral-300 dark:to-neutral-600 bg-clip-text text-transparent pb-2 font-display text-3xl md:text-4xl lg:mt-16 xl:text-6xl"
+              class="relative max-w-3xl mx-auto mt-8 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-50 dark:via-neutral-300 dark:to-neutral-600 bg-clip-text text-transparent pb-2 font-display text-3xl md:text-4xl lg:mt-16 xl:text-6xl"
             >
-              Svelte Shadcn Blocks <br />
+              <div
+                class="absolute -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-zap h-auto w-3"
+                  ><path
+                    d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                  ></path></svg
+                >Free
+              </div>
+              <div
+                class="absolute top-14 -left-24 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-code-xml-icon lucide-code-xml w-3"
+                  ><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path
+                    d="m14.5 4-5 16"
+                  /></svg
+                >
+                Templates
+              </div>
+              <div
+                class="absolute -top-10 -right-24 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+              >
+                Integrations<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-star h-auto w-3"
+                  ><path
+                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                  ></path></svg
+                >
+              </div>
+              <div
+                class="absolute top-14 -right-28 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+              >
+                Responsive<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check h-auto w-3"
+                  ><circle cx="12" cy="12" r="10"></circle><path
+                    d="m9 12 2 2 4-4"
+                  ></path></svg
+                >
+              </div>
+              Svelte Shadcn Blocks<br />
               50+ UI & Marketing Blocks
             </h1>
             <p
@@ -98,8 +169,10 @@
     </section>
     <section class="bg-background pb-16 pt-0 md:pb-10">
       <div class="relative m-auto max-w-5xl px-6">
-        <div class="mx-auto mt-12 max-w-2xl flex justify-center gap-6">
-          <div class="flex">
+        <div class="mx-auto mt-12 max-w-2xl flex justify-center gap-4">
+          <div
+            class="flex hover:bg-secondary transition-all duration-200 bg-secondary/50 backdrop-blur-sm border p-2 rounded-lg"
+          >
             <svg
               viewBox="0 0 256 308"
               class="mx-auto h-10 w-10"
@@ -114,7 +187,9 @@
               /></svg
             >
           </div>
-          <div class="flex">
+          <div
+            class="flex hover:bg-secondary transition-all duration-200 bg-secondary/50 backdrop-blur-sm border p-2 rounded-lg"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -134,7 +209,9 @@
               ></svg
             >
           </div>
-          <div class="flex">
+          <div
+            class="flex hover:bg-secondary transition-all duration-200 bg-secondary/50 backdrop-blur-sm border p-2 rounded-lg"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"

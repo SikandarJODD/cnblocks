@@ -69,4 +69,4 @@
   </div>
 </section> -->
 <SiteHero />
-<BlocksCards />
+<!-- <BlocksCards /> -->

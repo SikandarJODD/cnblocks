@@ -6,7 +6,7 @@
 
 <Button onclick={toggleMode} class="rounded-full" variant="ghost" size="icon">
   <!-- Sun Icon -->
-  {#if $mode === "light"}
+  {#if mode.current === "light"}
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"

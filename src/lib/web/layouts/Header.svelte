@@ -1,49 +1,226 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
   import Button from "$lib/components/ui/button/button.svelte";
-
   let navs = [
     { name: "Home", url: "/" },
     { name: "Blocks", url: "/hero" },
     { name: "Templates", url: "/templates" },
     { name: "Changelog", url: "/changelog" },
   ];
-  let isActive = $derived.by(() => {
-    let url = page.url.pathname.split("/")[1];
-    let index = navs.findIndex((nav) => nav.url === `/${url}`);
-    return index;
-  });
-
   // Mobile and user profile state
   let isMobileMenu = $state(false);
   // Dark & Light Mode
   import { toggleMode, mode } from "mode-watcher";
-  import Logo from "./Logo.svelte";
-  import { page } from "$app/state";
-  import SearchComponent from "./SearchComponent.svelte";
+  import { NavigationMenu } from "bits-ui";
+  import CaretDown from "@lucide/svelte/icons/chevron-down";
+  import cn from "clsx";
+  import Badge from "$lib/components/ui/badge/badge.svelte";
+
+  type ListItemProps = {
+    className?: string;
+    title: string;
+    href?: string;
+    content: string;
+    soon?: boolean;
+  };
+
+  let listItems: ListItemProps[] = [
+    {
+      title: "Hero",
+      href: "/hero",
+      content: "9 blocks - bold and striking visuals.",
+    },
+    {
+      title: "Contact Us",
+      href: "/contact",
+      content: "3 blocks - clean and simple layouts.",
+    },
+    {
+      title: "Features",
+      href: "/feature",
+      content: "18 blocks - highlight key benefits.",
+    },
+    {
+      title: "Sign Up",
+      href: "/signup",
+      content: "3 blocks - fast and easy signup.",
+    },
+    {
+      title: "Integrations",
+      href: "/integration",
+      content: "6 blocks - connect with top tools.",
+    },
+    {
+      title: "Login",
+      href: "/login",
+      content: "3 blocks - modern, secure designs.",
+    },
+    {
+      title: "Testimonials",
+      href: "/testimonial",
+      content: "6 blocks - trusted user feedback.",
+    },
+    {
+      title: "Forgot Password",
+      href: "/forgot-password",
+      content: "2 blocks - quick reset options.",
+    },
+  ];
 </script>
 
-<nav class="bg-background border-b sticky top-0 z-50">
+<nav class="bg-transparent backdrop-blur-md sticky top-0 z-[1000]">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-14 items-center justify-between">
-      <div class="flex items-center">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex items-center w-full">
         <a href="/" aria-label="home" class="shrink-0">
-          <Logo />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            role="img"
+            color="currentColor"
+          >
+            <path
+              d="M22 18C22 19.4001 22 20.1002 21.7275 20.635C21.4878 21.1054 21.1054 21.4878 20.635 21.7275C20.1002 22 19.4001 22 18 22C16.5999 22 15.8998 22 15.365 21.7275C14.8946 21.4878 14.5122 21.1054 14.2725 20.635C14 20.1002 14 19.4001 14 18C14 16.5999 14 15.8998 14.2725 15.365C14.5122 14.8946 14.8946 14.5122 15.365 14.2725C15.8998 14 16.5999 14 18 14C19.4001 14 20.1002 14 20.635 14.2725C21.1054 14.5122 21.4878 14.8946 21.7275 15.365C22 15.8998 22 16.5999 22 18Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></path>
+            <path
+              d="M22 10C22 11.4001 22 12.1002 21.7275 12.635C21.4878 13.1054 21.1054 13.4878 20.635 13.7275C20.1002 14 19.4001 14 18 14C16.5999 14 15.8998 14 15.365 13.7275C14.8946 13.4878 14.5122 13.1054 14.2725 12.635C14 12.1002 14 11.4001 14 10C14 8.59987 14 7.8998 14.2725 7.36502C14.5122 6.89462 14.8946 6.51217 15.365 6.27248C15.8998 6 16.5999 6 18 6C19.4001 6 20.1002 6 20.635 6.27248C21.1054 6.51217 21.4878 6.89462 21.7275 7.36502C22 7.8998 22 8.59987 22 10Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></path>
+            <path
+              d="M14 18C14 19.4001 14 20.1002 13.7275 20.635C13.4878 21.1054 13.1054 21.4878 12.635 21.7275C12.1002 22 11.4001 22 10 22C8.59987 22 7.8998 22 7.36502 21.7275C6.89462 21.4878 6.51217 21.1054 6.27248 20.635C6 20.1002 6 19.4001 6 18C6 16.5999 6 15.8998 6.27248 15.365C6.51217 14.8946 6.89462 14.5122 7.36502 14.2725C7.8998 14 8.59987 14 10 14C11.4001 14 12.1002 14 12.635 14.2725C13.1054 14.5122 13.4878 14.8946 13.7275 15.365C14 15.8998 14 16.5999 14 18Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></path>
+            <path
+              opacity="0.4"
+              d="M10 6C10 7.40013 10 8.1002 9.72752 8.63497C9.48783 9.10538 9.10538 9.48783 8.63498 9.72752C8.1002 10 7.40013 10 6 10C4.59987 10 3.8998 10 3.36502 9.72751C2.89462 9.48783 2.51217 9.10538 2.27248 8.63497C2 8.10019 2 7.40013 2 6C2 4.59987 2 3.8998 2.27248 3.36502C2.51217 2.89462 2.89462 2.51217 3.36502 2.27248C3.8998 2 4.59987 2 6 2C7.40013 2 8.1002 2 8.63498 2.27248C9.10538 2.51217 9.48783 2.89462 9.72752 3.36502C10 3.8998 10 4.59987 10 6Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></path>
+          </svg>
         </a>
-        <div class="hidden sm:ml-4 sm:block">
-          <div class="flex space-x-1">
-            {#each navs as nav, index}
-              <Button
-                size="sm"
-                class="rounded-full font-normal"
-                variant={index === isActive ? "secondary" : "ghost"}
-                href={nav.url}>{nav.name}</Button
+        <!-- Desktop -->
+        <div class="hidden sm:ml-6 sm:block w-full">
+          <NavigationMenu.Root class="relative z-10 flex w-full justify-center">
+            <NavigationMenu.List
+              class="group flex list-none items-center justify-center p-1"
+            >
+              <NavigationMenu.Item id="home">
+                <NavigationMenu.Link
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white"
+                  href="/"
+                >
+                  <span class="hidden sm:inline"> Home </span>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item id="blocks">
+                <NavigationMenu.Trigger
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white"
+                >
+                  Blocks
+                  <CaretDown
+                    class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    aria-hidden="true"
+                  />
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content
+                  class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
+                >
+                  <div>
+                    <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-[580px]">
+                      {#each listItems as component (component.title)}
+                        {@render ListItem({
+                          href: component.href,
+                          title: component.title,
+                          content: component.content,
+                        })}
+                      {/each}
+                    </ul>
+                  </div>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item value="getting-started">
+                <NavigationMenu.Trigger
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white"
+                >
+                  Templates
+                  <CaretDown
+                    class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    aria-hidden="true"
+                  />
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content
+                  class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
+                >
+                  <ul
+                    class="m-0 grid list-none gap-x-2.5 p-3 sm:w-[600px] sm:grid-flow-col sm:grid-rows-3"
+                  >
+                    <li class="row-span-3 mb-2 sm:mb-0">
+                      <NavigationMenu.Link
+                        href="/"
+                        class="from-muted/50 to-muted bg-linear-to-b outline-hidden flex h-full w-full select-none flex-col justify-end rounded-md p-4 no-underline focus:shadow-md"
+                      >
+                        <!-- <Icons.logo class="h-6 w-6" /> -->
+                        <div class="mb-2 mt-4 text-lg font-medium">
+                          Svelte Shadcn Blocks
+                        </div>
+                        <p class="text-muted-foreground text-sm leading-tight">
+                          80+ UI & Marketing Blocks
+                        </p>
+                      </NavigationMenu.Link>
+                    </li>
+                    {@render ListItem({
+                      href: "/templates",
+                      title: "Startup Template",
+                      content: `Get 30% Off! Use code <span class='text-primary'>ILoveSvelte</span>`,
+                    })}
+                    {@render ListItem({
+                      title: "Landing Page",
+                      content: `Stunning Landing Page`,
+                      soon: true,
+                    })}
+                    {@render ListItem({
+                      title: "Marketing Template",
+                      content: `All-in-one Marketing Template`,
+                      soon: true,
+                    })}
+                  </ul>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item id="changelog">
+                <NavigationMenu.Link
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white"
+                  href="/changelog"
+                >
+                  <span class="hidden sm:inline"> Changelog </span>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Indicator
+                class="data-[state=hidden]:animate-fade-out data-[state=visible]:animate-fade-in top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 transition-[all,transform_250ms_ease] duration-200 data-[state=hidden]:opacity-0"
               >
-            {/each}
-          </div>
+                <div
+                  class="bg-border relative top-[70%] size-2.5 rotate-[45deg] rounded-tl-[2px]"
+                ></div>
+              </NavigationMenu.Indicator>
+            </NavigationMenu.List>
+            <div
+              class="perspective-[2000px] absolute left-0 top-full flex w-full justify-center"
+            >
+              <NavigationMenu.Viewport
+                class="text-popover-foreground bg-background data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in relative mt-2.5 h-[var(--bits-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md border shadow-lg transition-[width,_height] duration-200 sm:w-[var(--bits-navigation-menu-viewport-width)] "
+              />
+            </div>
+          </NavigationMenu.Root>
         </div>
       </div>
-      <div class="hidden sm:block">
+      <div class="hidden sm:ml-6 sm:block">
         {@render socials()}
       </div>
       <div class="-mr-2 flex sm:hidden">
@@ -98,25 +275,23 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         {#each navs as nav}
           <a
-            aria-label={nav.name}
-            onclick={() => (isMobileMenu = false)}
             href={nav.url}
             class="block rounded-md px-3 py-2 text-base font-medium text-primary"
             >{nav.name}</a
           >
         {/each}
       </div>
-      <div class="flex justify-end pb-2 pr-4">
+      <div class="flex justify-end pb-2">
         {@render socials()}
       </div>
     </div>
   {/if}
 </nav>
 
-{#snippet themeToggle()}
-  <Button onclick={toggleMode} class="rounded-full" variant="ghost" size="icon">
+{#snippet ThemeToggle()}
+  <Button onclick={toggleMode} variant="ghost" size="icon">
     <!-- Sun Icon -->
-    {#if $mode === "light"}
+    {#if mode.current === "light"}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -157,26 +332,9 @@
 {/snippet}
 
 {#snippet socials()}
-  <div class="flex items-center space-x-1">
-    <div class="hidden md:block">
-      <SearchComponent />
-    </div>
-    <!-- Sponsor Button -->
-    <!-- <Button
-      aria-label="sponsor"
-      class="rounded-full"
-      variant="default"
-      href="https://github.com/sponsors/SikandarJODD"
-      target="_blank">Sponsor</Button
-    > -->
+  <div class="flex items-center space-x-0.5">
     <!-- Gihub -->
-    <Button
-      aria-label="github"
-      class="rounded-full"
-      href="https://github.com/SikandarJODD/cnblocks"
-      target="_blank"
-      size="icon"
-      variant="ghost"
+    <Button size="icon" variant="ghost"
       ><svg
         viewBox="0 0 256 250"
         width="256"
@@ -191,12 +349,7 @@
       </svg></Button
     >
     <!-- Twitter  -->
-    <Button
-      class="rounded-full"
-      href="https://x.com/Sikandar_Bhide"
-      target="_blank"
-      size="icon"
-      variant="ghost"
+    <Button size="icon" variant="ghost"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="1200"
@@ -208,6 +361,35 @@
         /></svg
       ></Button
     >
-    {@render themeToggle()}
+    {@render ThemeToggle()}
   </div>
+{/snippet}
+
+{#snippet ListItem({
+  className,
+  title,
+  content,
+  href,
+  soon = false,
+}: ListItemProps)}
+  <li class="relative">
+    {#if soon}
+      <div class="absolute top-2 right-2 z-50">
+        <Badge variant="secondary" class="gap-1.5 rounded-full">Soon</Badge>
+      </div>
+    {/if}
+    <NavigationMenu.Link
+      class={cn(
+        "hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground outline-hidden block select-none space-y-1 rounded-md p-3 leading-none no-underline transition-colors",
+        className,
+        soon && "opacity-50"
+      )}
+      {href}
+    >
+      <div class="text-sm font-medium leading-none">{title}</div>
+      <p class="text-muted-foreground line-clamp-2 text-sm leading-snug">
+        {@html content}
+      </p>
+    </NavigationMenu.Link>
+  </li>
 {/snippet}
