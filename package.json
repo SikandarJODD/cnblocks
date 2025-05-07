@@ -1,7 +1,6 @@
 {
-	"name": "sv-cnblocks",
-	"private": true,
-	"version": "0.0.1",
+	"name": "@bhide-svelte/cnblocks",
+	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -10,7 +9,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"build:registry": "jsrepo build"
+		"build:registry": "jsrepo build",
+		"ci:release": "jsrepo publish --verbose && changeset tag"
 	},
 	"devDependencies": {
 		"@lucide/svelte": "^0.483.0",
@@ -34,6 +34,8 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@changesets/cli": "^2.29.3",
+		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
 		"dotted-map": "^2.2.3",
 		"mode-watcher": "^1.0.2",
 		"paneforge": "^0.0.6",
