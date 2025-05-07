@@ -178,7 +178,7 @@
         {#key code}
           {#if code}
             <Button
-              onclick={() => clipboard.copy(`npx jsrepo add github/SikandarJODD/cnblocks/${category}/${category}-${title}`)}
+              onclick={() => clipboard.copy(`npx jsrepo add @bhide-svelte/cnblocks/${category}/${category}-${title}`)}
               size="sm"
               class="size-8 shadow-none md:w-fit relative"
               variant="outline"
@@ -194,7 +194,7 @@
                 </div>
               {/if}
               <span class="hidden font-mono text-xs md:block">
-                npx jsrepo add github/SikandarJODD/cnblocks/{category}/{category}-{title}
+                npx jsrepo add @bhide-svelte/cnblocks/{category}/{category}-{title}
               </span>
             </Button>
             <Separator class="!h-4" orientation="vertical" />

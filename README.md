@@ -1,5 +1,8 @@
 # Svelte Shadcn Blocks
 
+[![jsrepo](https://jsrepo.com/badges/@bhide-svelte/cnblocks)](https://jsrepo.com/@bhide-svelte/cnblocks)
+[![jsrepo](https://jsrepo.com/badges/@bhide-svelte/cnblocks/dm)](https://jsrepo.com/@bhide-svelte/cnblocks)
+
 A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built with Tailwind CSS v4 and shadcn-svelte.
 
 ![image](./static/og.png)
