@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: npm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -32,7 +32,7 @@ jobs:
         with:
           commit: 'chore(release): version package'
           title: 'chore(release): version package'
-          publish: npm ci:release
+          publish: true
         env:
           JSREPO_TOKEN: ${{ secrets.JSREPO_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
