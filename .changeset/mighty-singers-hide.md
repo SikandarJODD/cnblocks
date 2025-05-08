@@ -1,5 +1,0 @@
----
-"@sv/cnblocks": patch
----
-
-chore: initial release
