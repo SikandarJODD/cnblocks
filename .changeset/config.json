@@ -1,0 +1,18 @@
+{
+	"$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+	"changelog": [
+		"@svitejs/changesets-changelog-github-compact",
+		{ "repo": "SikandarJODD/cnblocks" }
+	],
+	"commit": false,
+	"fixed": [],
+	"linked": [],
+	"access": "restricted",
+	"baseBranch": "master",
+	"updateInternalDependencies": "patch",
+	"ignore": [],
+	"privatePackages": {
+		"version": true,
+		"tag": true
+	}
+}

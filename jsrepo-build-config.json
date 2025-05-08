@@ -1,5 +1,7 @@
 {
 	"$schema": "https://unpkg.com/jsrepo@1.45.0/schemas/registry-config.json",
+	"name": "@bhide-svelte/cnblocks",
+	"version": "package",
 	"dirs": [
 		"./src/lib/components/blocks",
 		"./src/lib/components",
