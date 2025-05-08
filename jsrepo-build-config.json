@@ -67,5 +67,20 @@
 		"web"
 	],
 	"excludeCategories": [],
-	"preview": true
+	"preview": true,
+	"meta": {
+		"author": [
+			"SikandarJODD",
+			"Aidan Bleser"
+		],
+		"bugs": "https://github.com/SikandarJODD/cnblocks/issues",
+		"description": "Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages.",
+		"homepage": "https://sv-blocks.vercel.app",
+		"repository": "https://github.com/SikandarJODD/cnblocks",
+		"tags": [
+			"ui",
+			"components",
+			"marketing"
+		]
+	}
 }
