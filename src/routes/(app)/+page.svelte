@@ -41,7 +41,6 @@
   <link rel="canonical" href="https://sv-blocks.vercel.app" />
 </svelte:head>
 
-<!-- <MetaTags {...seoMetaTags} /> -->
 
 <!-- <section>
   <div

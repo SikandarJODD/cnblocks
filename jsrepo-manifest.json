@@ -304,6 +304,21 @@
 					"devDependencies": []
 				},
 				{
+					"name": "faq-one",
+					"directory": "src/lib/components/blocks/faq",
+					"category": "faq",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"faq-one.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
 					"name": "faq-three",
 					"directory": "src/lib/components/blocks/faq",
 					"category": "faq",
@@ -340,21 +355,6 @@
 					"_imports_": {
 						"$lib/components/ui/accordion": "{{ui/accordion}}"
 					},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "faq",
-					"directory": "src/lib/components/blocks/faq",
-					"category": "faq",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"faq.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				}
@@ -500,11 +500,10 @@
 					"_imports_": {
 						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
 					},
-					"dependencies": [
-						"dotted-map@^2.2.3"
-					],
+					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
+						"@lucide/svelte@^0.483.0",
+						"dotted-map@^2.2.3"
 					]
 				},
 				{
@@ -1089,11 +1088,10 @@
 						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
-					"dependencies": [
-						"swiper@^11.2.5"
-					],
+					"dependencies": [],
 					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
+						"@lucide/svelte@^0.483.0",
+						"swiper@^11.2.5"
 					]
 				},
 				{
@@ -2146,7 +2144,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19",
+						"bits-ui@^1.4.6",
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
@@ -2171,7 +2169,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19"
+						"bits-ui@^1.4.6"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2194,7 +2192,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19",
+						"bits-ui@^1.4.6",
 						"tailwind-variants@^1.0.0"
 					],
 					"_imports_": {
@@ -2223,7 +2221,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19"
+						"bits-ui@^1.4.6"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2245,7 +2243,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19"
+						"bits-ui@^1.4.6"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2267,7 +2265,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19"
+						"bits-ui@^1.4.6"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2296,7 +2294,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19",
+						"bits-ui@^1.4.6",
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
@@ -2320,7 +2318,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19"
+						"bits-ui@^1.4.6"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2342,7 +2340,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.3.19"
+						"bits-ui@^1.4.6"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"

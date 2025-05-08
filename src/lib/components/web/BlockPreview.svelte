@@ -10,7 +10,7 @@
   import CodeBlock from "./CodeBlock.svelte";
   import { CopyButton } from "../ui/copy-button";
   import { scale } from "svelte/transition";
-	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+  import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
 
   interface BlockPreviewProps {
     code?: string;
@@ -178,13 +178,16 @@
         {#key code}
           {#if code}
             <Button
-              onclick={() => clipboard.copy(`npx jsrepo add @bhide-svelte/cnblocks/${category}/${category}-${title}`)}
+              onclick={() =>
+                clipboard.copy(
+                  `npx jsrepo add @sv/cnblocks/${category}/${category}-${title}`
+                )}
               size="sm"
               class="size-8 shadow-none md:w-fit relative"
               variant="outline"
               aria-label="copy code"
             >
-              {#if clipboard.status === 'success'}
+              {#if clipboard.status === "success"}
                 <div in:scale>
                   <Check class="!size-3.5 text-[#10B981]" />
                 </div>
@@ -194,12 +197,17 @@
                 </div>
               {/if}
               <span class="hidden font-mono text-xs md:block">
-                npx jsrepo add @bhide-svelte/cnblocks/{category}/{category}-{title}
+                npx jsrepo add @sv/cnblocks/{category}/{category}-{title}
               </span>
             </Button>
             <Separator class="!h-4" orientation="vertical" />
 
-            <CopyButton text={code} class="size-8 cursor-pointer [&_svg]:size-3.5" size="sm" variant="ghost"/>
+            <CopyButton
+              text={code}
+              class="size-8 cursor-pointer [&_svg]:size-3.5"
+              size="sm"
+              variant="ghost"
+            />
           {/if}
         {/key}
       </div>
@@ -251,7 +259,7 @@
                 class="bg-background absolute inset-0 right-2 flex items-center justify-center border-x"
               >
                 <div
-                  class="border-primary size-6 animate-spin rounded-full border-2 border-t-transparent"
+                  class="border-primary size-6 animate-spin rounded-full border border-t-transparent"
                 ></div>
               </div>
             {/if}

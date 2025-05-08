@@ -2,4 +2,4 @@
 "@sv/cnblocks": patch
 ---
 
-chore: initial release
+Updated JS Repo
