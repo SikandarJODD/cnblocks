@@ -19,7 +19,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.0.7",
-		"bits-ui": "^1.4.6",
+		"bits-ui": "^1.4.7",
 		"clsx": "^2.1.1",
 		"dotted-map": "^2.2.3",
 		"mode-watcher": "^1.0.6",
