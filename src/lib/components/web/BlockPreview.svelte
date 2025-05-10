@@ -58,16 +58,23 @@
   //     }, 3000);
   //   }
   // });
-  $effect(() => {
-    const iframe = iframeRef;
-    if (iframe) {
-      iframe.addEventListener("load", () => {
-        isLoading = false;
-        let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
-        iframeHeight = contentHeight + 20;
-      });
-    }
-  });
+  // $effect(() => {
+  //   const iframe = iframeRef;
+  //   if (iframe) {
+  //     iframe.addEventListener("load", () => {
+  //       isLoading = false;
+  //       let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
+  //       iframeHeight = contentHeight + 20;
+  //     });
+  //   }
+  // });
+
+  import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+  } from "$lib/components/ui/tooltip";
 </script>
 
 <section
@@ -177,36 +184,46 @@
       <div class="flex items-center gap-2">
         {#key code}
           {#if code}
-            <Button
-              onclick={() =>
-                clipboard.copy(
-                  `npx jsrepo add @sv/cnblocks/${category}/${category}-${title}`
-                )}
-              size="sm"
-              class="size-8 shadow-none md:w-fit relative"
-              variant="outline"
-              aria-label="copy code"
-            >
-              {#if clipboard.status === "success"}
-                <div in:scale>
-                  <Check class="!size-3.5 text-[#10B981]" />
-                </div>
-              {:else}
-                <div in:scale>
-                  <Terminal class="!size-3.5" />
-                </div>
-              {/if}
-              <span class="hidden font-mono text-xs md:block">
-                npx jsrepo add @sv/cnblocks/{category}/{category}-{title}
-              </span>
-            </Button>
+            <TooltipProvider delayDuration={0}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Button
+                    onclick={() =>
+                      clipboard.copy(
+                        `npx jsrepo add @sv/cnblocks/${category}/${category}-${title}`
+                      )}
+                    size="sm"
+                    class="size-8 shadow-none md:w-fit relative"
+                    variant="outline"
+                    aria-label="copy code"
+                  >
+                    {#if clipboard.status === "success"}
+                      <div in:scale>
+                        <Check class="!size-3.5 text-[#10B981]" />
+                      </div>
+                    {:else}
+                      <div in:scale>
+                        <Terminal class="!size-3.5" />
+                      </div>
+                    {/if}
+                    <span class="hidden font-mono text-xs md:block">
+                      npx jsrepo add @sv/cnblocks/{category}/{category}-{title}
+                    </span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent align="start" class="px-2 py-1 text-[10px]"
+                  >Copy CLI Command</TooltipContent
+                >
+              </Tooltip>
+            </TooltipProvider>
+
             <Separator class="!h-4" orientation="vertical" />
 
             <CopyButton
               text={code}
               class="size-8 cursor-pointer [&_svg]:size-3.5"
               size="sm"
-              variant="ghost"
+              variant="outline"
             />
           {/if}
         {/key}
@@ -253,6 +270,14 @@
               id={`block-${title}`}
               style="
                 --iframe-height: {iframeHeight}px;"
+              onload={() => {
+                isLoading = false;
+                let contentHeight =
+                  iframeRef?.contentWindow?.document.body.scrollHeight;
+                if (contentHeight) {
+                  iframeHeight = contentHeight + 20;
+                }
+              }}
             ></iframe>
             {#if isLoading}
               <div

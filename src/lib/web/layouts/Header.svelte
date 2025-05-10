@@ -6,6 +6,7 @@
     { name: "Blocks", url: "/hero" },
     { name: "Templates", url: "/templates" },
     { name: "Changelog", url: "/changelog" },
+    { name: "Docs", url: "/docs/installation" },
   ];
   // Mobile and user profile state
   let isMobileMenu = $state(false);
@@ -100,6 +101,14 @@
                   <span class="hidden sm:inline"> Home </span>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
+              <NavigationMenu.Item id="docs">
+                <NavigationMenu.Link
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
+                  href="/docs"
+                >
+                  <span class="hidden sm:inline"> Docs </span>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
               <NavigationMenu.Item id="blocks">
                 <NavigationMenu.Trigger
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
@@ -126,7 +135,7 @@
                   </div>
                 </NavigationMenu.Content>
               </NavigationMenu.Item>
-              <NavigationMenu.Item value="getting-started">
+              <NavigationMenu.Item value="templates">
                 <NavigationMenu.Trigger
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                 >
