@@ -58,16 +58,16 @@
   //     }, 3000);
   //   }
   // });
-  $effect(() => {
-    const iframe = iframeRef;
-    if (iframe) {
-      iframe.addEventListener("load", () => {
-        isLoading = false;
-        let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
-        iframeHeight = contentHeight + 20;
-      });
-    }
-  });
+  // $effect(() => {
+  //   const iframe = iframeRef;
+  //   if (iframe) {
+  //     iframe.addEventListener("load", () => {
+  //       isLoading = false;
+  //       let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
+  //       iframeHeight = contentHeight + 20;
+  //     });
+  //   }
+  // });
 
   import {
     Tooltip,
@@ -270,6 +270,14 @@
               id={`block-${title}`}
               style="
                 --iframe-height: {iframeHeight}px;"
+              onload={() => {
+                isLoading = false;
+                let contentHeight =
+                  iframeRef?.contentWindow?.document.body.scrollHeight;
+                if (contentHeight) {
+                  iframeHeight = contentHeight + 20;
+                }
+              }}
             ></iframe>
             {#if isLoading}
               <div

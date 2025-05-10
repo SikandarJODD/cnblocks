@@ -36,7 +36,7 @@ If you have any feedback, please reach out to me on [Twitter](https://x.com/Sika
 ## License
 
 Published under the [MIT](https://github.com/SikandarJODD/cnblocks/blob/master/LICENSE) license.
-Built by [@Sikandar Bhide](https://github.com/SikandarJODD), [Aidan Bleser](https://github.com/ieedan) 💛
+Built by [@Sikandar Bhide](https://github.com/SikandarJODD), [@Aidan Bleser](https://github.com/ieedan) 💛
 <br><br>
 <a href="https://github.com/SikandarJODD/cnblocks/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=SikandarJODD/cnblocks" />
