@@ -25,6 +25,11 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 - **Easy to Customize** – Modify styles and components effortlessly
 - **Optimized for Performance** – Fast loading and minimal footprint
 
+## Inspiration
+
+This project is inspired from [Tailark](https://tailark.com/).
+The goal is to provide a similar experience for Svelte developers.
+
 ## Sponsor
 
 If you like this project, please consider supporting me on [GitHub Sponsors](https://github.com/sponsors/SikandarJODD).
