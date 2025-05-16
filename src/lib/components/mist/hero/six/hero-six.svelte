@@ -6,20 +6,20 @@
 
 <section class="py-20">
   <div class="relative z-10 mx-auto w-full max-w-2xl px-6 lg:px-0">
-    <div class="relative text-center">
-      <!-- <MistKitLogo class="mx-auto" /> -->
-      {@render MistKitLogo({ _class: "mx-auto" })}
-      <h1 class="mx-auto mt-16 max-w-xl text-balance text-5xl font-medium">
+    <div class="relative">
+      <!-- <MistKitLogo  /> -->
+      {@render MistKitLogo()}
+      <h1 class="mt-16 max-w-xl text-balance text-5xl font-medium">
         The Note App
       </h1>
 
-      <p class="text-muted-foreground mx-auto mb-6 mt-4 text-balance text-xl">
+      <p class="text-muted-foreground mb-6 mt-4 text-balance text-xl">
         The Note App is a simple note app that allows you to create and manage
         your notes.
       </p>
 
       <div
-        class="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:justify-center sm:*:w-auto"
+        class="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:*:w-auto"
       >
         <Button>
           <span class="text-nowrap">Get Started</span>
@@ -54,7 +54,7 @@
 
     <div class="mt-8 flex flex-wrap items-center gap-4">
       <p class="text-muted-foreground text-center">Trusted by teams at :</p>
-      <div class="flex flex-wrap items-center justify-center gap-8">
+      <div class="flex items-center justify-center gap-8">
         <div class="flex">
           <img
             class="mx-auto h-4 w-fit"
@@ -96,8 +96,9 @@
     </div>
   </div>
 </section>
+
 <!-- ring-black/10 === ring-1 -->
-{#snippet MistKitLogo({ _class }: { _class?: string })}
+{#snippet MistKitLogo(_class = "")}
   <div
     aria-hidden="true"
     class={cn(
