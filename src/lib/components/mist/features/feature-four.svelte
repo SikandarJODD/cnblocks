@@ -23,7 +23,7 @@
 <section
   class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)]"
 >
-  <div class="py-24">
+  <div class="bg-muted/50 py-24">
     <div class="mx-auto w-full max-w-5xl px-6">
       <div>
         <h2 class="text-foreground mt-4 text-4xl font-semibold">
@@ -37,11 +37,10 @@
       </div>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <Card variant="soft" class="p-6">
+        <Card class="p-6">
           <div class="flex aspect-video items-center justify-center">
-            {@render CodeIllustration({
-              _class: "w-full",
-            })}
+            <!-- <CodeIllustration class="w-full" /> -->
+            {@render CodeIllustration({ _class: "w-full" })}
           </div>
           <div class="text-center">
             <h3 class="text-foreground text-xl font-semibold">
@@ -52,11 +51,12 @@
             </p>
           </div>
         </Card>
-        <Card variant="soft" class="p-6">
+        <Card class="p-6">
           <div class="flex aspect-video items-center justify-center">
-            <!-- <ScheduleIllustation class="border" /> -->
+            <!-- <ScheduleIllustation class="border" variant="mixed" /> -->
             {@render ScheduleIllustation({
               _class: "border",
+              variant: "mixed",
             })}
           </div>
           <div class="text-center">

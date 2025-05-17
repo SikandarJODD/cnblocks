@@ -17,8 +17,8 @@
       </div>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
         <div class="space-y-4">
-          <Card class="aspect-video overflow-hidden px-6">
-            <Card class="h-full translate-y-6" />
+          <Card variant="soft" class="aspect-video overflow-hidden px-6">
+            <Card  class="h-full translate-y-6" />
           </Card>
           <div class="sm:max-w-sm">
             <h3 class="text-foreground text-xl font-semibold">
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="space-y-4">
-          <Card class="aspect-video overflow-hidden p-6">
+          <Card variant="soft" class="aspect-video overflow-hidden p-6">
             <Card class="h-full" />
           </Card>
           <div class="sm:max-w-sm">
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="space-y-4">
-          <Card class="aspect-video overflow-hidden">
+          <Card variant="soft" class="aspect-video overflow-hidden">
             <Card class="translate-6 h-full" />
           </Card>
           <div class="sm:max-w-sm">

@@ -2,6 +2,7 @@
   import { Card } from "$lib/components/ui/card";
   import FeatureTable from "./feature-table.svelte";
 </script>
+
 <!-- Card Variant : soft  -->
 <section>
   <div class="bg-muted/50 py-24">
@@ -30,8 +31,8 @@
           <p class="text-muted-foreground my-4 text-lg">
             Effortlessly plan and execute your marketing campaigns organized.
           </p>
-          <Card class="aspect-video overflow-hidden px-6" >
-            <Card class="h-full translate-y-6" />
+          <Card variant="soft" class="aspect-video overflow-hidden px-6">
+            <Card  class="h-full translate-y-6" />
           </Card>
         </div>
         <div>
@@ -43,8 +44,8 @@
             schedule.
           </p>
 
-          <Card class="aspect-video overflow-hidden" >
-            <Card class="translate-6 h-full" />
+          <Card variant="soft" class="aspect-video overflow-hidden">
+            <Card  class="translate-6 h-full" />
           </Card>
         </div>
       </div>
