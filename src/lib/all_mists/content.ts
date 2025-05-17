@@ -1,20 +1,22 @@
 import type { MistBlock } from "$lib/types/mists";
 import ContentOne from "$lib/components/mist/content/content-one.svelte";
+import ContentOneCode from "$lib/components/mist/content/content-one.svelte?raw";
 import ContentTwo from "$lib/components/mist/content/content-two.svelte";
+import ContentTwoCode from "$lib/components/mist/content/content-two.svelte?raw";
 import ContentThree from "$lib/components/mist/content/content-three.svelte";
+import ContentThreeCode from "$lib/components/mist/content/content-three.svelte?raw";
 import ContentFour from "$lib/components/mist/content/content-four.svelte";
+import ContentFourCode from "$lib/components/mist/content/content-four.svelte?raw";
 
 export const all_mists_content: MistBlock[] = [
   {
     slug: "one",
     title: "Content One",
     category: "content",
-    preview: "Smart Editor with Tailark integration",
+    preview: "/preview/mist/content/one",
     code: {
-      code: (
-        await import("$lib/components/mist/content/content-one.svelte?raw")
-      ).default,
-      lang: "svelte",
+      code: ContentOneCode,
+      lang: "svelte"
     },
     component: ContentOne,
   },
@@ -22,12 +24,10 @@ export const all_mists_content: MistBlock[] = [
     slug: "two",
     title: "Content Two",
     category: "content",
-    preview: "Content layout with two columns",
+    preview: "/preview/mist/content/two",
     code: {
-      code: (
-        await import("$lib/components/mist/content/content-two.svelte?raw")
-      ).default,
-      lang: "svelte",
+      code: ContentTwoCode,
+      lang: "svelte"
     },
     component: ContentTwo,
   },
@@ -35,12 +35,10 @@ export const all_mists_content: MistBlock[] = [
     slug: "three",
     title: "Content Three",
     category: "content",
-    preview: "Content layout with three sections",
+    preview: "/preview/mist/content/three",
     code: {
-      code: (
-        await import("$lib/components/mist/content/content-three.svelte?raw")
-      ).default,
-      lang: "svelte",
+      code: ContentThreeCode,
+      lang: "svelte"
     },
     component: ContentThree,
   },
@@ -48,12 +46,10 @@ export const all_mists_content: MistBlock[] = [
     slug: "four",
     title: "Content Four",
     category: "content",
-    preview: "Content layout with four sections",
+    preview: "/preview/mist/content/four",
     code: {
-      code: (
-        await import("$lib/components/mist/content/content-four.svelte?raw")
-      ).default,
-      lang: "svelte",
+      code: ContentFourCode,
+      lang: "svelte"
     },
     component: ContentFour,
   },

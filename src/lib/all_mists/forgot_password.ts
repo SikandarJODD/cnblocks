@@ -1,6 +1,6 @@
 import type { MistBlock } from "$lib/types/mists";
 import ForgotPasswordOne from "$lib/components/mist/forgot-password/forgot-password-one.svelte";
-
+import ForgotPasswordOneCode from "$lib/components/mist/forgot-password/forgot-password-one.svelte?raw";
 export const all_mists_forgot_password: MistBlock[] = [
   {
     slug: "one",
@@ -8,11 +8,7 @@ export const all_mists_forgot_password: MistBlock[] = [
     category: "forgot-password",
     preview: "/preview/mist/forgot-password/one",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/forgot-password/forgot-password-one.svelte?raw"
-        )
-      ).default,
+      code: ForgotPasswordOneCode,
       lang: "svelte",
     },
     component: ForgotPasswordOne,

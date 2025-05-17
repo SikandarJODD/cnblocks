@@ -4,7 +4,11 @@ import TestimonialTwo from "$lib/components/mist/testimonial/testimonial-two.sve
 import TestimonialThree from "$lib/components/mist/testimonial/testimonial-three.svelte";
 import TestimonialFour from "$lib/components/mist/testimonial/testimonial-four.svelte";
 import TestimonialFive from "$lib/components/mist/testimonial/testimonial-five.svelte";
-
+import TestimonialOneCode from "$lib/components/mist/testimonial/testimonial-one.svelte?raw";
+import TestimonialTwoCode from "$lib/components/mist/testimonial/testimonial-two.svelte?raw";
+import TestimonialThreeCode from "$lib/components/mist/testimonial/testimonial-three.svelte?raw";
+import TestimonialFourCode from "$lib/components/mist/testimonial/testimonial-four.svelte?raw";
+import TestimonialFiveCode from "$lib/components/mist/testimonial/testimonial-five.svelte?raw";
 export const all_mists_testimonial: MistBlock[] = [
   {
     slug: "one",
@@ -12,11 +16,7 @@ export const all_mists_testimonial: MistBlock[] = [
     category: "testimonial",
     preview: "/preview/mist/testimonial/one",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/testimonial/testimonial-one.svelte?raw"
-        )
-      ).default,
+      code: TestimonialOneCode,
       lang: "svelte",
     },
     component: TestimonialOne,
@@ -27,11 +27,7 @@ export const all_mists_testimonial: MistBlock[] = [
     category: "testimonial",
     preview: "/preview/mist/testimonial/two",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/testimonial/testimonial-two.svelte?raw"
-        )
-      ).default,
+      code: TestimonialTwoCode,
       lang: "svelte",
     },
     component: TestimonialTwo,
@@ -42,11 +38,7 @@ export const all_mists_testimonial: MistBlock[] = [
     category: "testimonial",
     preview: "/preview/mist/testimonial/three",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/testimonial/testimonial-three.svelte?raw"
-        )
-      ).default,
+      code: TestimonialThreeCode,
       lang: "svelte",
     },
     component: TestimonialThree,
@@ -57,11 +49,7 @@ export const all_mists_testimonial: MistBlock[] = [
     category: "testimonial",
     preview: "/preview/mist/testimonial/four",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/testimonial/testimonial-four.svelte?raw"
-        )
-      ).default,
+      code: TestimonialFourCode,
       lang: "svelte",
     },
     component: TestimonialFour,
@@ -72,11 +60,7 @@ export const all_mists_testimonial: MistBlock[] = [
     category: "testimonial",
     preview: "/preview/mist/testimonial/five",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/testimonial/testimonial-five.svelte?raw"
-        )
-      ).default,
+      code: TestimonialFiveCode,
       lang: "svelte",
     },
     component: TestimonialFive,

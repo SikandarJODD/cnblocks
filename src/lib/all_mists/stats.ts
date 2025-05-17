@@ -4,18 +4,10 @@ import StatsTwo from "$lib/components/mist/stats/stats-two.svelte";
 import StatsThree from "$lib/components/mist/stats/stats-three.svelte";
 import StatsFour from "$lib/components/mist/stats/stats-four.svelte";
 
-const statsOneCode = await import(
-  "$lib/components/mist/stats/stats-one.svelte?raw"
-);
-const statsTwoCode = await import(
-  "$lib/components/mist/stats/stats-two.svelte?raw"
-);
-const statsThreeCode = await import(
-  "$lib/components/mist/stats/stats-three.svelte?raw"
-);
-const statsFourCode = await import(
-  "$lib/components/mist/stats/stats-four.svelte?raw"
-);
+import StatsOneCode from "$lib/components/mist/stats/stats-one.svelte?raw";
+import StatsTwoCode from "$lib/components/mist/stats/stats-two.svelte?raw";
+import StatsThreeCode from "$lib/components/mist/stats/stats-three.svelte?raw";
+import StatsFourCode from "$lib/components/mist/stats/stats-four.svelte?raw";
 
 export const all_mists_stats: MistBlock[] = [
   {
@@ -24,7 +16,7 @@ export const all_mists_stats: MistBlock[] = [
     category: "stats",
     preview: "/preview/mist/stats/one",
     code: {
-      code: statsOneCode.default,
+      code: StatsOneCode,
       lang: "svelte",
     },
     component: StatsOne,
@@ -35,7 +27,7 @@ export const all_mists_stats: MistBlock[] = [
     category: "stats",
     preview: "/preview/mist/stats/two",
     code: {
-      code: statsTwoCode.default,
+      code: StatsTwoCode,
       lang: "svelte",
     },
     component: StatsTwo,
@@ -46,7 +38,7 @@ export const all_mists_stats: MistBlock[] = [
     category: "stats",
     preview: "/preview/mist/stats/three",
     code: {
-      code: statsThreeCode.default,
+      code: StatsThreeCode,
       lang: "svelte",
     },
     component: StatsThree,
@@ -57,7 +49,7 @@ export const all_mists_stats: MistBlock[] = [
     category: "stats",
     preview: "/preview/mist/stats/four",
     code: {
-      code: statsFourCode.default,
+      code: StatsFourCode,
       lang: "svelte",
     },
     component: StatsFour,

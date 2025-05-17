@@ -45,12 +45,10 @@ export const all_mists_features: MistBlock[] = [
       {
         code: FeatureOneCode,
         lang: "svelte",
-        hightlight: "svelte",
       },
       {
         code: FeatureTable,
         lang: "svelte",
-        hightlight: "svelte",
       },
     ],
   },
@@ -60,13 +58,10 @@ export const all_mists_features: MistBlock[] = [
     category: "features",
     preview: "/preview/mist/features/two",
     component: FeatureTwo,
-    code: [
-      {
-        code: FeatureTwoCode,
-        lang: "svelte",
-        hightlight: "svelte",
-      },
-    ],
+    code: {
+      code: FeatureTwoCode,
+      lang: "svelte",
+    },
   },
   {
     slug: "three",
@@ -77,7 +72,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureThreeCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -89,7 +83,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureFourCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -101,7 +94,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureFiveCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -113,7 +105,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureSixCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -125,7 +116,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureSevenCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -137,7 +127,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureEightCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -149,7 +138,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureNineCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -161,7 +149,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureTenCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -173,7 +160,6 @@ export const all_mists_features: MistBlock[] = [
     code: {
       code: FeatureElevenCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
 ];

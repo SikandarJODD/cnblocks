@@ -1,8 +1,12 @@
 import type { MistBlock } from '$lib/types/mists';
 import FooterOne from '$lib/components/mist/footer/footer-one.svelte';
+import FooterOneCode from '$lib/components/mist/footer/footer-one.svelte?raw';
 import FooterTwo from '$lib/components/mist/footer/footer-two.svelte';
+import FooterTwoCode from '$lib/components/mist/footer/footer-two.svelte?raw';
 import FooterThree from '$lib/components/mist/footer/footer-three.svelte';
+import FooterThreeCode from '$lib/components/mist/footer/footer-three.svelte?raw';
 import FooterFour from '$lib/components/mist/footer/footer-four.svelte';
+import FooterFourCode from '$lib/components/mist/footer/footer-four.svelte?raw';
 
 export const all_mists_footer: MistBlock[] = [
   {
@@ -11,8 +15,8 @@ export const all_mists_footer: MistBlock[] = [
     category: 'footer',
     preview: '/preview/mist/footer/one',
     code: {
-      code: (await import('$lib/components/mist/footer/footer-one.svelte?raw')).default,
-      lang: 'svelte'
+      code: FooterOneCode,
+      lang: 'svelte',
     },
     component: FooterOne
   },
@@ -22,8 +26,8 @@ export const all_mists_footer: MistBlock[] = [
     category: 'footer',
     preview: '/preview/mist/footer/two',
     code: {
-      code: (await import('$lib/components/mist/footer/footer-two.svelte?raw')).default,
-      lang: 'svelte'
+      code: FooterTwoCode,
+      lang: 'svelte',
     },
     component: FooterTwo
   },
@@ -33,8 +37,8 @@ export const all_mists_footer: MistBlock[] = [
     category: 'footer',
     preview: '/preview/mist/footer/three',
     code: {
-      code: (await import('$lib/components/mist/footer/footer-three.svelte?raw')).default,
-      lang: 'svelte'
+      code: FooterThreeCode,
+      lang: 'svelte',
     },
     component: FooterThree
   },
@@ -44,8 +48,8 @@ export const all_mists_footer: MistBlock[] = [
     category: 'footer',
     preview: '/preview/mist/footer/four',
     code: {
-      code: (await import('$lib/components/mist/footer/footer-four.svelte?raw')).default,
-      lang: 'svelte'
+      code: FooterFourCode,
+      lang: 'svelte',
     },
     component: FooterFour
   }

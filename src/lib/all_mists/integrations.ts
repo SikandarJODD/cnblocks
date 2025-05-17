@@ -1,7 +1,10 @@
 import type { MistBlock } from "$lib/types/mists";
 import IntegrationOne from "$lib/components/mist/integration/integration-one.svelte";
+import IntegrationOneCode from "$lib/components/mist/integration/integration-one.svelte?raw";
 import IntegrationTwo from "$lib/components/mist/integration/integration-two.svelte";
+import IntegrationTwoCode from "$lib/components/mist/integration/integration-two.svelte?raw";
 import IntegrationThree from "$lib/components/mist/integration/integration-three.svelte";
+import IntegrationThreeCode from "$lib/components/mist/integration/integration-three.svelte?raw";
 
 export const all_mists_integrations: MistBlock[] = [
   {
@@ -10,11 +13,7 @@ export const all_mists_integrations: MistBlock[] = [
     category: "integration",
     preview: "/preview/mist/integration/one",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/integration/integration-one.svelte?raw"
-        )
-      ).default,
+      code: IntegrationOneCode,
       lang: "svelte",
     },
     component: IntegrationOne,
@@ -25,11 +24,7 @@ export const all_mists_integrations: MistBlock[] = [
     category: "integration",
     preview: "/preview/mist/integration/two",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/integration/integration-two.svelte?raw"
-        )
-      ).default,
+      code: IntegrationTwoCode,
       lang: "svelte",
     },
     component: IntegrationTwo,
@@ -40,11 +35,7 @@ export const all_mists_integrations: MistBlock[] = [
     category: "integration",
     preview: "/preview/mist/integration/three",
     code: {
-      code: (
-        await import(
-          "$lib/components/mist/integration/integration-three.svelte?raw"
-        )
-      ).default,
+      code: IntegrationThreeCode,
       lang: "svelte",
     },
     component: IntegrationThree,
