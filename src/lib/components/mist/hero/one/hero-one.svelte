@@ -23,7 +23,7 @@
             </p>
 
             <div class="flex items-center gap-3">
-              <Button size="lg" class="pr-4.5">
+              <Button variant="mdefault" size="lg" class="pr-4.5">
                 <span class="text-nowrap">Get Started</span>
                 <ChevronRight class="opacity-50" />
               </Button>
