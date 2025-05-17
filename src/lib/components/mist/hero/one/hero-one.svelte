@@ -2,9 +2,11 @@
   import { Button } from "$lib/components/ui/button";
   import ChevronRight from "@lucide/svelte/icons/chevron-right";
   import CirclePlay from "@lucide/svelte/icons/circle-play";
+  import Header from "./header.svelte";
 </script>
 
-<main class="overflow-hidden">
+<Header />
+<main class="overflow-hidden [--color-primary:var(--color-indigo-500)]" >
   <section class="bg-linear-to-b to-muted from-background">
     <div class="relative py-36">
       <div class="relative z-10 mx-auto w-full max-w-5xl px-6">
