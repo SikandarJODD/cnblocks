@@ -211,7 +211,7 @@
                       </div>
                     {/if}
                     <span class="hidden font-mono text-xs md:block">
-                      npx jsrepo add @sv/cnblocks/{category}/{slug}
+                      npx jsrepo add @sv/cnblocks/m{category}/{slug}
                     </span>
                   </Button>
                 </TooltipTrigger>
