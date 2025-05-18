@@ -7,6 +7,10 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 
 ![image](./static/og.png)
 
+## 50 New Mist Blocks
+
+Visit [Mist Blocks](https://sv-blocks.vercel.app/mist/hero) to see the new blocks.
+
 ## New Components
 
 | Name                   | Preview                                                       |
