@@ -4,7 +4,7 @@
   import BookOpen from "@lucide/svelte/icons/book-open";
 </script>
 
-<section class="py-20">
+<section class="py-20 [--color-primary:theme(colors.indigo.500)]">
   <div class="relative z-10 mx-auto w-full max-w-2xl px-6 lg:px-0">
     <div class="relative">
       <!-- <MistKitLogo  /> -->
@@ -21,7 +21,7 @@
       <div
         class="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:*:w-auto"
       >
-        <Button>
+        <Button variant='mdefault'>
           <span class="text-nowrap">Get Started</span>
         </Button>
         <Button variant="ghost">

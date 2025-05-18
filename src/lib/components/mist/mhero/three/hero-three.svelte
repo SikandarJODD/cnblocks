@@ -4,7 +4,7 @@
 </script>
 
 <Header />
-<main class="bg-muted/50 overflow-hidden">
+<main class="bg-muted/50 overflow-hidden [--color-primary:theme(colors.indigo.500)]">
   <section>
     <div class="relative py-24">
       <div class="mx-auto max-w-5xl px-6">
@@ -21,7 +21,7 @@
           <div
             class="flex flex-col items-center gap-3 *:w-full sm:flex-row sm:*:w-fit"
           >
-            <Button href="/" size="lg">
+            <Button variant='mdefault' href="/" size="lg">
               <span class="text-nowrap">Start Building</span>
             </Button>
             <Button href="/" size="lg" variant="outline">

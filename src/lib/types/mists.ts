@@ -8,6 +8,7 @@ export interface MistBlock {
 }
 
 export interface MistCode {
+  name?: string;
   code: string;
   lang?: string;
   hightlight?: string;

@@ -21,7 +21,7 @@
   });
 </script>
 
-<header>
+<header  class='[--color-primary:theme(colors.indigo.500)]'>
   <nav
     data-state={menuState && "active"}
     class={cn(
@@ -89,13 +89,13 @@
             <Button
               variant="ghost"
               size="sm"
-              class={cn(isScrolled && "lg:hidden")}
+              class={cn(isScrolled && "lg:hidden",'rounded-full')}
               href="#"
             >
-              <span>Login</span>
+              Login
             </Button>
-            <Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}>
-              <span>Sign Up</span>
+            <Button href="#" size="sm" variant='mdefault' class={cn(isScrolled && "lg:hidden",'rounded-full')}>
+              Sign Up
             </Button>
             <Button
               size="sm"

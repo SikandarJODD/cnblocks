@@ -93,7 +93,7 @@
     },
     {
       title: "Features",
-      href: "/mist/features",
+      href: "/mist/feature",
       content: "11 blocks - highlight key benefits.",
     },
     {

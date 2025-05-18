@@ -7,7 +7,7 @@ export let category_blocks: CategoryBlock[] = [
   { title: "Hero", href: "/hero", length: 9 },
   { title: "Features", href: "/feature", length: 14 },
   { title: "Content", href: "/content", length: 7 },
-  { title: "Integration", href: "/integration", length: 8 },
+  { title: "Integration", href: "/integrations", length: 8 },
   { title: "Stats", href: "/stats", length: 4 },
   { title: "Call To Action", href: "/cta", length: 3 },
   { title: "Pricing", href: "/pricing", length: 5 },

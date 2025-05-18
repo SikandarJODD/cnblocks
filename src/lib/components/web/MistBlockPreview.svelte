@@ -25,6 +25,7 @@
     code: string;
     lang?: string;
     hightlight?: string;
+    name?: string;
   }
 
   let {
@@ -83,6 +84,7 @@
     TooltipProvider,
     TooltipTrigger,
   } from "$lib/components/ui/tooltip";
+  import CodeEditor from "./CodeEditor.svelte";
 </script>
 
 <section
@@ -223,12 +225,9 @@
 
             <Separator class="!h-4" orientation="vertical" />
 
-            <!-- <CopyButton
-              text={code.code}
-              class="size-8 cursor-pointer [&_svg]:size-3.5"
-              size="sm"
-              variant="outline"
-            /> -->
+            {#if !Array.isArray(code)}
+              <CopyButton text={code.code} />
+            {/if}
           {/if}
         {/key}
       </div>
@@ -310,13 +309,7 @@
       <div class="bg-white dark:bg-transparent">
         {#key code}
           {#if mode === "code"}
-            {#if Array.isArray(code)}
-              {#each code as codeItem}
-                <CodeBlock code={codeItem.code} />
-              {/each}
-            {:else}
-              <CodeBlock code={code.code} />
-            {/if}
+            <CodeEditor {code} />
           {/if}
         {/key}
       </div>

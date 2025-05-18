@@ -17,6 +17,7 @@ import HeroSix from "$lib/components/mist/mhero/six/hero-six.svelte";
 import HeroSixCode from "$lib/components/mist/mhero/six/hero-six.svelte?raw";
 
 import type { MistBlock } from "$lib/types/mists";
+import Header from "$lib/components/mist/mhero/one/header.svelte?raw";
 
 export const all_mists_heros: MistBlock[] = [
   {
@@ -25,11 +26,18 @@ export const all_mists_heros: MistBlock[] = [
     category: "hero",
     preview: "/preview/mist/hero/one",
     component: HeroOne,
-    code: {
-      code: HeroOneCode,
-      lang: "svelte",
-      hightlight: "svelte",
-    },
+    code: [
+      {
+        code: HeroOneCode,
+        lang: "svelte",
+        name: "hero.svelte",
+      },
+      {
+        code: Header,
+        lang: "svelte",
+        name: "header.svelte",
+      },
+    ],
   },
   {
     slug: "two",
@@ -37,11 +45,18 @@ export const all_mists_heros: MistBlock[] = [
     category: "hero",
     preview: "/preview/mist/hero/two",
     component: HeroTwo,
-    code: {
-      code: HeroTwoCode,
-      lang: "svelte",
-      hightlight: "svelte",
-    },
+    code: [
+      {
+        code: HeroTwoCode,
+        lang: "svelte",
+        name: "hero.svelte",
+      },
+      {
+        code: Header,
+        lang: "svelte",
+        name: "header.svelte",
+      },
+    ],
   },
   {
     slug: "three",
@@ -49,11 +64,18 @@ export const all_mists_heros: MistBlock[] = [
     category: "hero",
     preview: "/preview/mist/hero/three",
     component: HeroThree,
-    code: {
-      code: HeroThreeCode,
-      lang: "svelte",
-      hightlight: "svelte",
-    },
+    code: [
+      {
+        code: HeroThreeCode,
+        lang: "svelte",
+        name: "hero.svelte",
+      },
+      {
+        code: Header,
+        lang: "svelte",
+        name: "header.svelte",
+      },
+    ],
   },
   {
     slug: "four",
@@ -61,11 +83,18 @@ export const all_mists_heros: MistBlock[] = [
     category: "hero",
     preview: "/preview/mist/hero/four",
     component: HeroFour,
-    code: {
-      code: HeroFourCode,
-      lang: "svelte",
-      hightlight: "svelte",
-    },
+    code: [
+      {
+        code: HeroFourCode,
+        lang: "svelte",
+        name: "hero.svelte",
+      },
+      {
+        code: Header,
+        lang: "svelte",
+        name: "header.svelte",
+      },
+    ],
   },
   {
     slug: "five",
@@ -76,7 +105,6 @@ export const all_mists_heros: MistBlock[] = [
     code: {
       code: HeroFiveCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
   {
@@ -88,7 +116,6 @@ export const all_mists_heros: MistBlock[] = [
     code: {
       code: HeroSixCode,
       lang: "svelte",
-      hightlight: "svelte",
     },
   },
 ];

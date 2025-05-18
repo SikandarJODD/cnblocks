@@ -22,7 +22,7 @@
 
 <div
   class={cn(
-    "[&_code]:text-[13px]/2 [&_pre]:max-h-(--pre-max-height) [&_code]:font-mono [&_pre]:min-h-[20rem] [&_pre]:overflow-auto [&_pre]:border-l  [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:!bg-zinc-900/50",
+    "[&_code]:text-[13px]/2 [&_pre]:max-h-(--pre-max-height) [&_code]:font-mono [&_pre]:min-h-[32rem] [&_pre]:overflow-auto [&_pre]:border-l  [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:!bg-zinc-900/50",
     _class
   )}
 >
