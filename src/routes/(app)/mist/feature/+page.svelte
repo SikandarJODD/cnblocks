@@ -1,8 +1,8 @@
-<script>
-  import { all_mists_content } from "$lib/all_mists/content";
+<script lang="ts">
+  import { all_mists_features } from "$lib/all_mists/feature";
   import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
 </script>
 
-{#each all_mists_content as block}
+{#each all_mists_features as block}
   <MistBlockPreview {...block} />
 {/each}

@@ -1,10 +1,9 @@
 <script>
-  import { page } from '$app/stores';
+  import { all_mists_stats } from "$lib/all_mists/stats";
+  import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
 </script>
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-6">Stats Components</h1>
-  <div class="grid gap-8">
-    <!-- Stats components will be listed here -->
-  </div>
-</div>
+{#each all_mists_stats as block}
+  <MistBlockPreview {...block} />
+{/each}
+

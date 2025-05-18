@@ -1,10 +1,8 @@
-<script>
-  import { page } from '$app/stores';
+<script lang="ts">
+  import { all_mists_testimonial } from "$lib/all_mists/testimonial";
+  import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
 </script>
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-6">Testimonials Components</h1>
-  <div class="grid gap-8">
-    <!-- Testimonials components will be listed here -->
-  </div>
-</div>
+{#each all_mists_testimonial as block}
+  <MistBlockPreview {...block} />
+{/each}

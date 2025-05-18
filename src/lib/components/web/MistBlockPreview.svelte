@@ -109,6 +109,7 @@
               variant={mode === "preview" ? "secondary" : "ghost"}
               onclick={() => (mode = "preview")}
               class={radioItem}
+              size="sm"
             >
               <!-- <Eye class="size-3 sm:opacity-50" /> -->
               <svg
@@ -138,6 +139,7 @@
             <Button
               variant={mode === "code" ? "secondary" : "ghost"}
               onclick={() => (mode = "code")}
+              size="sm"
               class={radioItem}
             >
               <svg
@@ -166,7 +168,6 @@
         {/if}
         <Button
           variant="ghost"
-          size="sm"
           class="size-8"
           href={preview}
           target="_blank"
@@ -183,7 +184,7 @@
         >
         <!-- {#if previewOnly} -->
         <Separator orientation="vertical" class="!h-4" />
-        <span class="ml-0 text-sm capitalize">{category + " " + title}</span>
+        <span class="ml-0 text-sm capitalize">{title}</span>
         <!-- {/if} -->
       </div>
 

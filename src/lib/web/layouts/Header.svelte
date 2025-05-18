@@ -1,13 +1,19 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
   import Button from "$lib/components/ui/button/button.svelte";
-  let navs = [
+  let navs: NavItem[] = [
     { name: "Home", url: "/" },
     { name: "Blocks", url: "/hero" },
+    { name: "Mists", url: "/mists", isNew: true },
     { name: "Templates", url: "/templates" },
     { name: "Changelog", url: "/changelog" },
     { name: "Docs", url: "/docs/installation" },
   ];
+  type NavItem = {
+    name: string;
+    url: string;
+    isNew?: boolean;
+  };
   // Mobile and user profile state
   let isMobileMenu = $state(false);
   // Dark & Light Mode
@@ -78,6 +84,24 @@
       content: "4 blocks - clear and concise answers.",
     },
   ];
+
+  let mist_navs: ListItemProps[] = [
+    {
+      title: "Hero",
+      href: "/mist/hero",
+      content: "9 blocks - bold and striking visuals.",
+    },
+    {
+      title: "Features",
+      href: "/mist/features",
+      content: "11 blocks - highlight key benefits.",
+    },
+    {
+      title: "Content",
+      href: "/mist/content",
+      content: "5 blocks - engaging and informative.",
+    },
+  ];
 </script>
 
 <nav class="bg-transparent backdrop-blur-md sticky top-0 z-[1000]">
@@ -101,12 +125,21 @@
                   <span class="hidden sm:inline"> Home </span>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
+
               <NavigationMenu.Item id="docs">
                 <NavigationMenu.Link
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                   href="/docs"
                 >
                   <span class="hidden sm:inline"> Docs </span>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item id="mist">
+                <NavigationMenu.Link
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
+                  href="/mist/hero"
+                >
+                  <span class="hidden sm:inline"> Mist </span>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
               <NavigationMenu.Item id="blocks">

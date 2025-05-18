@@ -38,8 +38,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "one",
     title: "Feature One",
-    category: "features",
-    preview: "/preview/mist/features/one",
+    category: "feature",
+    preview: "/preview/mist/feature/one",
     component: FeatureOne,
     code: [
       {
@@ -55,8 +55,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "two",
     title: "Feature Two",
-    category: "features",
-    preview: "/preview/mist/features/two",
+    category: "feature",
+    preview: "/preview/mist/feature/two",
     component: FeatureTwo,
     code: {
       code: FeatureTwoCode,
@@ -66,8 +66,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "three",
     title: "Feature Three",
-    category: "features",
-    preview: "/preview/mist/features/three",
+    category: "feature",
+    preview: "/preview/mist/feature/three",
     component: FeatureThree,
     code: {
       code: FeatureThreeCode,
@@ -77,8 +77,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "four",
     title: "Feature Four",
-    category: "features",
-    preview: "/preview/mist/features/four",
+    category: "feature",
+    preview: "/preview/mist/feature/four",
     component: FeatureFour,
     code: {
       code: FeatureFourCode,
@@ -88,8 +88,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "five",
     title: "Feature Five",
-    category: "features",
-    preview: "/preview/mist/features/five",
+    category: "feature",
+    preview: "/preview/mist/feature/five",
     component: FeatureFive,
     code: {
       code: FeatureFiveCode,
@@ -99,8 +99,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "six",
     title: "Feature Six",
-    category: "features",
-    preview: "/preview/mist/features/six",
+    category: "feature",
+    preview: "/preview/mist/feature/six",
     component: FeatureSix,
     code: {
       code: FeatureSixCode,
@@ -110,8 +110,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "seven",
     title: "Feature Seven",
-    category: "features",
-    preview: "/preview/mist/features/seven",
+    category: "feature",
+    preview: "/preview/mist/feature/seven",
     component: FeatureSeven,
     code: {
       code: FeatureSevenCode,
@@ -121,8 +121,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "eight",
     title: "Feature Eight",
-    category: "features",
-    preview: "/preview/mist/features/eight",
+    category: "feature",
+    preview: "/preview/mist/feature/eight",
     component: FeatureEight,
     code: {
       code: FeatureEightCode,
@@ -132,8 +132,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "nine",
     title: "Feature Nine",
-    category: "features",
-    preview: "/preview/mist/features/nine",
+    category: "feature",
+    preview: "/preview/mist/feature/nine",
     component: FeatureNine,
     code: {
       code: FeatureNineCode,
@@ -143,8 +143,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "ten",
     title: "Feature Ten",
-    category: "features",
-    preview: "/preview/mist/features/ten",
+    category: "feature",
+    preview: "/preview/mist/feature/ten",
     component: FeatureTen,
     code: {
       code: FeatureTenCode,
@@ -154,8 +154,8 @@ export const all_mists_features: MistBlock[] = [
   {
     slug: "eleven",
     title: "Feature Eleven",
-    category: "features",
-    preview: "/preview/mist/features/eleven",
+    category: "feature",
+    preview: "/preview/mist/feature/eleven",
     component: FeatureEleven,
     code: {
       code: FeatureElevenCode,

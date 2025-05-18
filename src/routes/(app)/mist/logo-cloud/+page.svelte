@@ -1,10 +1,8 @@
 <script>
-  import { page } from '$app/stores';
+  import { all_mists_logocloud } from "$lib/all_mists/logocloud";
+  import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
 </script>
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-6">Logo Cloud Components</h1>
-  <div class="grid gap-8">
-    <!-- Logo cloud components will be listed here -->
-  </div>
-</div>
+{#each all_mists_logocloud as block}
+  <MistBlockPreview {...block} />
+{/each}
