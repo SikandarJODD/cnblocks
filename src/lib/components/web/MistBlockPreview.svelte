@@ -18,6 +18,7 @@
     title: string;
     category: string;
     previewOnly?: boolean;
+    slug: string;
   }
 
   export interface MistCode {
@@ -31,6 +32,7 @@
     preview,
     title = "Hero Section",
     category = "Components",
+    slug,
     previewOnly,
   }: BlockPreviewProps = $props();
 
@@ -166,12 +168,7 @@
           </div>
           <Separator orientation="vertical" class="hidden !h-4 lg:block" />
         {/if}
-        <Button
-          variant="ghost"
-          class="size-8"
-          href={preview}
-          target="_blank"
-        >
+        <Button variant="ghost" class="size-8" href={preview} target="_blank">
           <Maximize strokeWidth={1.6} class="!size-4 sm:opacity-70" />
         </Button>
         <Separator orientation="vertical" class="hidden !h-4 lg:block" />
@@ -197,7 +194,7 @@
                   <Button
                     onclick={() =>
                       clipboard.copy(
-                        `npx jsrepo add @sv/cnblocks/${category}/${category}-${title}`
+                        `npx jsrepo add @sv/cnblocks/m${category}/${slug}`
                       )}
                     size="sm"
                     class="size-8 shadow-none md:w-fit relative"
@@ -214,7 +211,7 @@
                       </div>
                     {/if}
                     <span class="hidden font-mono text-xs md:block">
-                      npx jsrepo add @sv/cnblocks/{category}/{category}-{title}
+                      npx jsrepo add @sv/cnblocks/{category}/{slug}
                     </span>
                   </Button>
                 </TooltipTrigger>

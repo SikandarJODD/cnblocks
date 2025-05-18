@@ -1,20 +1,20 @@
-import HeroOne from "$lib/components/mist/hero/one/hero-one.svelte";
-import HeroOneCode from "$lib/components/mist/hero/one/hero-one.svelte?raw";
+import HeroOne from "$lib/components/mist/mhero/one/hero-one.svelte";
+import HeroOneCode from "$lib/components/mist/mhero/one/hero-one.svelte?raw";
 
-import HeroTwo from "$lib/components/mist/hero/two/hero-two.svelte";
-import HeroTwoCode from "$lib/components/mist/hero/two/hero-two.svelte?raw";
+import HeroTwo from "$lib/components/mist/mhero/two/hero-two.svelte";
+import HeroTwoCode from "$lib/components/mist/mhero/two/hero-two.svelte?raw";
 
-import HeroThree from "$lib/components/mist/hero/three/hero-three.svelte";
-import HeroThreeCode from "$lib/components/mist/hero/three/hero-three.svelte?raw";
+import HeroThree from "$lib/components/mist/mhero/three/hero-three.svelte";
+import HeroThreeCode from "$lib/components/mist/mhero/three/hero-three.svelte?raw";
 
-import HeroFour from "$lib/components/mist/hero/four/hero-four.svelte";
-import HeroFourCode from "$lib/components/mist/hero/four/hero-four.svelte?raw";
+import HeroFour from "$lib/components/mist/mhero/four/hero-four.svelte";
+import HeroFourCode from "$lib/components/mist/mhero/four/hero-four.svelte?raw";
 
-import HeroFive from "$lib/components/mist/hero/five/hero-five.svelte";
-import HeroFiveCode from "$lib/components/mist/hero/five/hero-five.svelte?raw";
+import HeroFive from "$lib/components/mist/mhero/five/hero-five.svelte";
+import HeroFiveCode from "$lib/components/mist/mhero/five/hero-five.svelte?raw";
 
-import HeroSix from "$lib/components/mist/hero/six/hero-six.svelte";
-import HeroSixCode from "$lib/components/mist/hero/six/hero-six.svelte?raw";
+import HeroSix from "$lib/components/mist/mhero/six/hero-six.svelte";
+import HeroSixCode from "$lib/components/mist/mhero/six/hero-six.svelte?raw";
 
 import type { MistBlock } from "$lib/types/mists";
 

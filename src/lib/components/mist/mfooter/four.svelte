@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Logo from "$lib/web/layouts/Logo.svelte";
+  import Logo from "$lib/components/web/Logo.svelte";
   const links = [
     {
       title: "Features",
@@ -28,7 +28,9 @@
   ];
 </script>
 
-<footer class="bg-background border-b py-12 [--color-primary:var(--color-indigo-500)]">
+<footer
+  class="bg-background border-b py-12 [--color-primary:var(--color-indigo-500)]"
+>
   <div class="mx-auto max-w-5xl px-6">
     <div class="flex flex-wrap justify-between gap-12">
       <div class="order-last flex items-center gap-3 md:order-first">

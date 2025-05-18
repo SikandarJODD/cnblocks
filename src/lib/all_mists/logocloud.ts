@@ -1,8 +1,8 @@
 import type { MistBlock } from "$lib/types/mists";
-import LogocloudOne from "$lib/components/mist/logocloud/logocloud-one.svelte";
-import LogocloudOneCode from "$lib/components/mist/logocloud/logocloud-one.svelte?raw";
-import LogocloudTwo from "$lib/components/mist/logocloud/logocloud-two.svelte";
-import LogocloudTwoCode from "$lib/components/mist/logocloud/logocloud-two.svelte?raw";
+import LogocloudOne from "$lib/components/mist/mlogocloud/one.svelte";
+import LogocloudOneCode from "$lib/components/mist/mlogocloud/one.svelte?raw";
+import LogocloudTwo from "$lib/components/mist/mlogocloud/two.svelte";
+import LogocloudTwoCode from "$lib/components/mist/mlogocloud/two.svelte?raw";
 
 export const all_mists_logocloud: MistBlock[] = [
   {

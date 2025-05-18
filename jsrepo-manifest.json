@@ -988,16 +988,16 @@
 						"hero-five.svelte"
 					],
 					"localDependencies": [
-						"ui/button",
-						"magic/ProgressiveBlur",
 						"magic/Marquee",
+						"magic/ProgressiveBlur",
+						"ui/button",
 						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/magic/ProgressiveBlur.svelte": "{{magic/ProgressiveBlur}}.svelte",
 						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte",
+						"$lib/components/magic/ProgressiveBlur.svelte": "{{magic/ProgressiveBlur}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
@@ -2094,6 +2094,1113 @@
 			]
 		},
 		{
+			"name": "mcomparator",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mcomparator",
+					"category": "mcomparator",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				}
+			]
+		},
+		{
+			"name": "mcontact",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mcontact",
+					"category": "mcontact",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/card",
+						"ui/input",
+						"ui/label",
+						"ui/select",
+						"ui/textarea"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
+						"$lib/components/ui/select": "{{ui/select}}",
+						"$lib/components/ui/textarea/textarea.svelte": "{{ui/textarea}}/textarea.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mcontent",
+			"blocks": [
+				{
+					"name": "four",
+					"directory": "src/lib/components/mist/mcontent",
+					"category": "mcontent",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"four.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mcontent",
+					"category": "mcontent",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/toggle-group",
+						"ui/button",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/toggle-group": "{{ui/toggle-group}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mcontent",
+					"category": "mcontent",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mcontent",
+					"category": "mcontent",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"ui/toggle-group",
+						"ui/button",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/toggle-group": "{{ui/toggle-group}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				}
+			]
+		},
+		{
+			"name": "mcta",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mcta",
+					"category": "mcta",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mcta",
+					"category": "mcta",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mcta",
+					"category": "mcta",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mfeatures",
+			"blocks": [
+				{
+					"name": "eight",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"eight.svelte"
+					],
+					"localDependencies": [
+						"ui/card"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "eleven",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"eleven.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "five",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"five.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "four",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"four.svelte"
+					],
+					"localDependencies": [
+						"ui/toggle-group",
+						"ui/button",
+						"ui/card",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/toggle-group": "{{ui/toggle-group}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "nine",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"nine.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mfeatures/one",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"feature-table.svelte",
+						"one.svelte"
+					],
+					"localDependencies": [
+						"lib/utils",
+						"ui/card"
+					],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {
+						"$lib/utils": "{{lib/utils}}",
+						"$lib/components/ui/card": "{{ui/card}}"
+					}
+				},
+				{
+					"name": "seven",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"seven.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "six",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"six.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/card"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "ten",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"ten.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [
+						"ui/toggle-group",
+						"ui/button",
+						"ui/card",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/toggle-group": "{{ui/toggle-group}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mfeatures",
+					"category": "mfeatures",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"ui/card"
+					],
+					"_imports_": {
+						"$lib/components/ui/card": "{{ui/card}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mfooter",
+			"blocks": [
+				{
+					"name": "four",
+					"directory": "src/lib/components/mist/mfooter",
+					"category": "mfooter",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"four.svelte"
+					],
+					"localDependencies": [
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mfooter",
+					"category": "mfooter",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mfooter",
+					"category": "mfooter",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mfooter",
+					"category": "mfooter",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mforgot-password",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mforgot-password",
+					"category": "mforgot-password",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/input",
+						"ui/label",
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mhero",
+			"blocks": [
+				{
+					"name": "five",
+					"directory": "src/lib/components/mist/mhero/five",
+					"category": "mhero",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"hero-five.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"lib/utils"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					}
+				},
+				{
+					"name": "four",
+					"directory": "src/lib/components/mist/mhero/four",
+					"category": "mhero",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"header.svelte",
+						"hero-four.svelte"
+					],
+					"localDependencies": [
+						"web/Logo",
+						"lib/utils",
+						"ui/button"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/utils": "{{lib/utils}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					}
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mhero/one",
+					"category": "mhero",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"header.svelte",
+						"hero-one.svelte"
+					],
+					"localDependencies": [
+						"web/Logo",
+						"lib/utils",
+						"ui/button"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/utils": "{{lib/utils}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/button": "{{ui/button}}"
+					}
+				},
+				{
+					"name": "six",
+					"directory": "src/lib/components/mist/mhero/six",
+					"category": "mhero",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"hero-six.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"lib/utils"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/utils": "{{lib/utils}}"
+					}
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mhero/three",
+					"category": "mhero",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"header.svelte",
+						"hero-three.svelte"
+					],
+					"localDependencies": [
+						"web/Logo",
+						"lib/utils",
+						"ui/button"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/utils": "{{lib/utils}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					}
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mhero/two",
+					"category": "mhero",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"header.svelte",
+						"hero-two.svelte"
+					],
+					"localDependencies": [
+						"web/Logo",
+						"lib/utils",
+						"ui/button"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					],
+					"_imports_": {
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
+						"$lib/utils": "{{lib/utils}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					}
+				}
+			]
+		},
+		{
+			"name": "mlogin",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mlogin",
+					"category": "mlogin",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/input",
+						"ui/label",
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mlogocloud",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mlogocloud",
+					"category": "mlogocloud",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mlogocloud",
+					"category": "mlogocloud",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mpricing",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mpricing",
+					"category": "mpricing",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mpricing",
+					"category": "mpricing",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"ui/card",
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/card": "{{ui/card}}",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				}
+			]
+		},
+		{
+			"name": "msignup",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/msignup",
+					"category": "msignup",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/input",
+						"ui/label",
+						"web/Logo"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
+						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mstats",
+			"blocks": [
+				{
+					"name": "four",
+					"directory": "src/lib/components/mist/mstats",
+					"category": "mstats",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"four.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mstats",
+					"category": "mstats",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/card"
+					],
+					"_imports_": {
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mstats",
+					"category": "mstats",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mstats",
+					"category": "mstats",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mteam",
+			"blocks": [
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mteam",
+					"category": "mteam",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/avatar"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/avatar": "{{ui/avatar}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mteam",
+					"category": "mteam",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/avatar",
+						"ui/hover-card"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/avatar": "{{ui/avatar}}",
+						"$lib/components/ui/hover-card": "{{ui/hover-card}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				}
+			]
+		},
+		{
+			"name": "mtestimonial",
+			"blocks": [
+				{
+					"name": "five",
+					"directory": "src/lib/components/mist/mtestimonial",
+					"category": "mtestimonial",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"five.svelte"
+					],
+					"localDependencies": [
+						"ui/avatar"
+					],
+					"_imports_": {
+						"$lib/components/ui/avatar": "{{ui/avatar}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "four",
+					"directory": "src/lib/components/mist/mtestimonial",
+					"category": "mtestimonial",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"four.svelte"
+					],
+					"localDependencies": [
+						"ui/avatar"
+					],
+					"_imports_": {
+						"$lib/components/ui/avatar": "{{ui/avatar}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mtestimonial",
+					"category": "mtestimonial",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mtestimonial",
+					"category": "mtestimonial",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [
+						"ui/avatar",
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/components/ui/avatar": "{{ui/avatar}}",
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mtestimonial",
+					"category": "mtestimonial",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"ui/avatar"
+					],
+					"_imports_": {
+						"$lib/components/ui/avatar": "{{ui/avatar}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "magic",
 			"blocks": [
 				{
@@ -2157,7 +3264,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6",
+						"bits-ui@^1.4.8",
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
@@ -2182,7 +3289,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6"
+						"bits-ui@^1.4.8"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2205,7 +3312,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6",
+						"bits-ui@^1.4.8",
 						"tailwind-variants@^1.0.0"
 					],
 					"_imports_": {
@@ -2234,7 +3341,30 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6"
+						"bits-ui@^1.4.8",
+						"tailwind-variants@^1.0.0"
+					],
+					"_imports_": {
+						"$lib/utils.js": "{{lib/utils}}.js"
+					}
+				},
+				{
+					"name": "hover-card",
+					"directory": "src/lib/components/ui/hover-card",
+					"category": "ui",
+					"tests": false,
+					"subdirectory": true,
+					"list": false,
+					"files": [
+						"hover-card-content.svelte",
+						"index.ts"
+					],
+					"localDependencies": [
+						"lib/utils"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"bits-ui@^1.4.8"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2256,7 +3386,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6"
+						"bits-ui@^1.4.8"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2278,7 +3408,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6"
+						"bits-ui@^1.4.8"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2307,7 +3437,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6",
+						"bits-ui@^1.4.8",
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
@@ -2331,7 +3461,7 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6"
+						"bits-ui@^1.4.8"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
@@ -2353,10 +3483,58 @@
 					],
 					"dependencies": [],
 					"devDependencies": [
-						"bits-ui@^1.4.6"
+						"bits-ui@^1.4.8"
 					],
 					"_imports_": {
 						"$lib/utils.js": "{{lib/utils}}.js"
+					}
+				},
+				{
+					"name": "toggle",
+					"directory": "src/lib/components/ui/toggle",
+					"category": "ui",
+					"tests": false,
+					"subdirectory": true,
+					"list": false,
+					"files": [
+						"index.ts",
+						"toggle.svelte"
+					],
+					"localDependencies": [
+						"lib/utils"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"bits-ui@^1.4.8",
+						"tailwind-variants@^1.0.0"
+					],
+					"_imports_": {
+						"$lib/utils.js": "{{lib/utils}}.js"
+					}
+				},
+				{
+					"name": "toggle-group",
+					"directory": "src/lib/components/ui/toggle-group",
+					"category": "ui",
+					"tests": false,
+					"subdirectory": true,
+					"list": false,
+					"files": [
+						"index.ts",
+						"toggle-group-item.svelte",
+						"toggle-group.svelte"
+					],
+					"localDependencies": [
+						"lib/utils",
+						"ui/toggle"
+					],
+					"dependencies": [],
+					"devDependencies": [
+						"bits-ui@^1.4.8"
+					],
+					"_imports_": {
+						"$lib/utils.js": "{{lib/utils}}.js",
+						"$lib/components/ui/toggle/index.js": "{{ui/toggle}}/index.js"
 					}
 				}
 			]

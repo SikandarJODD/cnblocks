@@ -1,36 +1,36 @@
-import FeatureOne from "$lib/components/mist/features/one/feature-one.svelte";
-import FeatureOneCode from "$lib/components/mist/features/one/feature-one.svelte?raw";
-import FeatureTable from "$lib/components/mist/features/one/feature-table.svelte?raw";
+import FeatureOne from "$lib/components/mist/mfeatures/one/one.svelte";
+import FeatureOneCode from "$lib/components/mist/mfeatures/one/one.svelte?raw";
+import FeatureTable from "$lib/components/mist/mfeatures/one/feature-table.svelte?raw";
 
-import FeatureTwo from "$lib/components/mist/features/feature-two.svelte";
-import FeatureTwoCode from "$lib/components/mist/features/feature-two.svelte?raw";
+import FeatureTwo from "$lib/components/mist/mfeatures/two.svelte";
+import FeatureTwoCode from "$lib/components/mist/mfeatures/two.svelte?raw";
 
-import FeatureThree from "$lib/components/mist/features/feature-three.svelte";
-import FeatureThreeCode from "$lib/components/mist/features/feature-three.svelte?raw";
+import FeatureThree from "$lib/components/mist/mfeatures/three.svelte";
+import FeatureThreeCode from "$lib/components/mist/mfeatures/three.svelte?raw";
 
-import FeatureFour from "$lib/components/mist/features/feature-four.svelte";
-import FeatureFourCode from "$lib/components/mist/features/feature-four.svelte?raw";
+import FeatureFour from "$lib/components/mist/mfeatures/four.svelte";
+import FeatureFourCode from "$lib/components/mist/mfeatures/four.svelte?raw";
 
-import FeatureFive from "$lib/components/mist/features/feature-five.svelte";
-import FeatureFiveCode from "$lib/components/mist/features/feature-five.svelte?raw";
+import FeatureFive from "$lib/components/mist/mfeatures/five.svelte";
+import FeatureFiveCode from "$lib/components/mist/mfeatures/five.svelte?raw";
 
-import FeatureSix from "$lib/components/mist/features/feature-six.svelte";
-import FeatureSixCode from "$lib/components/mist/features/feature-six.svelte?raw";
+import FeatureSix from "$lib/components/mist/mfeatures/six.svelte";
+import FeatureSixCode from "$lib/components/mist/mfeatures/six.svelte?raw";
 
-import FeatureSeven from "$lib/components/mist/features/feature-seven.svelte";
-import FeatureSevenCode from "$lib/components/mist/features/feature-seven.svelte?raw";
+import FeatureSeven from "$lib/components/mist/mfeatures/seven.svelte";
+import FeatureSevenCode from "$lib/components/mist/mfeatures/seven.svelte?raw";
 
-import FeatureEight from "$lib/components/mist/features/feature-eight.svelte";
-import FeatureEightCode from "$lib/components/mist/features/feature-eight.svelte?raw";
+import FeatureEight from "$lib/components/mist/mfeatures/eight.svelte";
+import FeatureEightCode from "$lib/components/mist/mfeatures/eight.svelte?raw";
 
-import FeatureNine from "$lib/components/mist/features/feature-nine.svelte";
-import FeatureNineCode from "$lib/components/mist/features/feature-nine.svelte?raw";
+import FeatureNine from "$lib/components/mist/mfeatures/nine.svelte";
+import FeatureNineCode from "$lib/components/mist/mfeatures/nine.svelte?raw";
 
-import FeatureTen from "$lib/components/mist/features/feature-ten.svelte";
-import FeatureTenCode from "$lib/components/mist/features/feature-ten.svelte?raw";
+import FeatureTen from "$lib/components/mist/mfeatures/ten.svelte";
+import FeatureTenCode from "$lib/components/mist/mfeatures/ten.svelte?raw";
 
-import FeatureEleven from "$lib/components/mist/features/feature-eleven.svelte";
-import FeatureElevenCode from "$lib/components/mist/features/feature-eleven.svelte?raw";
+import FeatureEleven from "$lib/components/mist/mfeatures/eleven.svelte";
+import FeatureElevenCode from "$lib/components/mist/mfeatures/eleven.svelte?raw";
 
 import type { MistBlock } from "$lib/types/mists";
 

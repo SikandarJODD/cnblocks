@@ -1,5 +1,5 @@
 <script>
-  import ContactOne from "$lib/components/mist/contact/contact-one.svelte";
+  import ContactOne from "$lib/components/mist/mcontact/one.svelte";
 </script>
 
 <ContactOne />

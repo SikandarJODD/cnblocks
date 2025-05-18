@@ -2,11 +2,11 @@
   import Button from "$lib/components/ui/button/button.svelte";
   import Input from "$lib/components/ui/input/input.svelte";
   import Label from "$lib/components/ui/label/label.svelte";
-  import Logo from "$lib/web/layouts/Logo.svelte";
+  import Logo from "$lib/components/web/Logo.svelte";
 </script>
 
 <section
-  class="bg-linear-to-b from-muted to-background flex min-h-screen px-4 py-16 md:py-32 [--color-primary:var(--color-indigo-500)] "
+  class="bg-linear-to-b from-muted to-background flex min-h-screen px-4 py-16 md:py-32 [--color-primary:var(--color-indigo-500)]"
 >
   <form action="" class="max-w-92 m-auto h-fit w-full">
     <div class="p-6">
@@ -15,8 +15,8 @@
           <Logo />
         </a>
         <h1 class="mt-6 text-balance text-xl font-semibold">
-          <span class="text-muted-foreground">Welcome back to Tailark!</span> Sign
-          in to continue
+          <span class="text-muted-foreground">Welcome to Tailark!</span> Create an
+          Account to Get Started
         </h1>
       </div>
 
@@ -96,13 +96,10 @@
         <Button class="w-full" variant="mdefault" size="default">Continue</Button>
       </div>
     </div>
-
     <div class="px-6">
       <p class="text-muted-foreground text-sm">
-        Don't have an account ?
-        <Button href="/signup" variant="link" class="px-2">
-          Create account
-        </Button>
+        Already have an account ?
+        <Button href="/login" variant="link" class="px-2">Sign In</Button>
       </p>
     </div>
   </form>

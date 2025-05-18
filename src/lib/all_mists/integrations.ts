@@ -1,10 +1,10 @@
 import type { MistBlock } from "$lib/types/mists";
-import IntegrationOne from "$lib/components/mist/integration/integration-one.svelte";
-import IntegrationOneCode from "$lib/components/mist/integration/integration-one.svelte?raw";
-import IntegrationTwo from "$lib/components/mist/integration/integration-two.svelte";
-import IntegrationTwoCode from "$lib/components/mist/integration/integration-two.svelte?raw";
-import IntegrationThree from "$lib/components/mist/integration/integration-three.svelte";
-import IntegrationThreeCode from "$lib/components/mist/integration/integration-three.svelte?raw";
+import IntegrationOne from "$lib/components/mist/mintegration/one.svelte";
+import IntegrationOneCode from "$lib/components/mist/mintegration/one.svelte?raw";
+import IntegrationTwo from "$lib/components/mist/mintegration/two.svelte";
+import IntegrationTwoCode from "$lib/components/mist/mintegration/two.svelte?raw";
+import IntegrationThree from "$lib/components/mist/mintegration/three.svelte";
+import IntegrationThreeCode from "$lib/components/mist/mintegration/three.svelte?raw";
 
 export const all_mists_integrations: MistBlock[] = [
   {

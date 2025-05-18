@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Logo from "$lib/web/layouts/Logo.svelte";
-
+   import Logo from "$lib/components/web/Logo.svelte";
   let links = [
     {
       group: "Product",

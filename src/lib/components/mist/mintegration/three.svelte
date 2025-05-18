@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Gemini from "../logos/Gemini.svelte";
-  import GooglePaLM from "../logos/GooglePaLM.svelte";
-  import Replit from "../logos/Replit.svelte";
-  import MediaWiki from "../logos/MediaWiki.svelte";
-  import MagicUI from "../logos/MagicUI.svelte";
-  import VSCodium from "../logos/VSCodium.svelte";
+  import Gemini from "../mlogos/Gemini.svelte";
+  import GooglePaLM from "../mlogos/GooglePaLM.svelte";
+  import Replit from "../mlogos/Replit.svelte";
+  import MediaWiki from "../mlogos/MediaWiki.svelte";
+  import MagicUI from "../mlogos/MagicUI.svelte";
+  import VSCodium from "../mlogos/VSCodium.svelte";
   import IntegrationCard from "./integration-card.svelte";
 </script>
 

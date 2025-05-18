@@ -1,12 +1,12 @@
 import type { MistBlock } from "$lib/types/mists";
-import ContentOne from "$lib/components/mist/content/content-one.svelte";
-import ContentOneCode from "$lib/components/mist/content/content-one.svelte?raw";
-import ContentTwo from "$lib/components/mist/content/content-two.svelte";
-import ContentTwoCode from "$lib/components/mist/content/content-two.svelte?raw";
-import ContentThree from "$lib/components/mist/content/content-three.svelte";
-import ContentThreeCode from "$lib/components/mist/content/content-three.svelte?raw";
-import ContentFour from "$lib/components/mist/content/content-four.svelte";
-import ContentFourCode from "$lib/components/mist/content/content-four.svelte?raw";
+import ContentOne from "$lib/components/mist/mcontent/one.svelte";
+import ContentOneCode from "$lib/components/mist/mcontent/one.svelte?raw";
+import ContentTwo from "$lib/components/mist/mcontent/two.svelte";
+import ContentTwoCode from "$lib/components/mist/mcontent/two.svelte?raw";
+import ContentThree from "$lib/components/mist/mcontent/three.svelte";
+import ContentThreeCode from "$lib/components/mist/mcontent/three.svelte?raw";
+import ContentFour from "$lib/components/mist/mcontent/four.svelte";
+import ContentFourCode from "$lib/components/mist/mcontent/four.svelte?raw";
 
 export const all_mists_content: MistBlock[] = [
   {

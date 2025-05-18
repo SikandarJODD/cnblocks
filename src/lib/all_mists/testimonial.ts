@@ -1,14 +1,14 @@
 import type { MistBlock } from "$lib/types/mists";
-import TestimonialOne from "$lib/components/mist/testimonial/testimonial-one.svelte";
-import TestimonialTwo from "$lib/components/mist/testimonial/testimonial-two.svelte";
-import TestimonialThree from "$lib/components/mist/testimonial/testimonial-three.svelte";
-import TestimonialFour from "$lib/components/mist/testimonial/testimonial-four.svelte";
-import TestimonialFive from "$lib/components/mist/testimonial/testimonial-five.svelte";
-import TestimonialOneCode from "$lib/components/mist/testimonial/testimonial-one.svelte?raw";
-import TestimonialTwoCode from "$lib/components/mist/testimonial/testimonial-two.svelte?raw";
-import TestimonialThreeCode from "$lib/components/mist/testimonial/testimonial-three.svelte?raw";
-import TestimonialFourCode from "$lib/components/mist/testimonial/testimonial-four.svelte?raw";
-import TestimonialFiveCode from "$lib/components/mist/testimonial/testimonial-five.svelte?raw";
+import TestimonialOne from "$lib/components/mist/mtestimonial/one.svelte";
+import TestimonialTwo from "$lib/components/mist/mtestimonial/two.svelte";
+import TestimonialThree from "$lib/components/mist/mtestimonial/three.svelte";
+import TestimonialFour from "$lib/components/mist/mtestimonial/four.svelte";
+import TestimonialFive from "$lib/components/mist/mtestimonial/five.svelte";
+import TestimonialOneCode from "$lib/components/mist/mtestimonial/one.svelte?raw";
+import TestimonialTwoCode from "$lib/components/mist/mtestimonial/two.svelte?raw";
+import TestimonialThreeCode from "$lib/components/mist/mtestimonial/three.svelte?raw";
+import TestimonialFourCode from "$lib/components/mist/mtestimonial/four.svelte?raw";
+import TestimonialFiveCode from "$lib/components/mist/mtestimonial/five.svelte?raw";
 export const all_mists_testimonial: MistBlock[] = [
   {
     slug: "one",
