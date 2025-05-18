@@ -6,7 +6,7 @@ import LogocloudTwoCode from "$lib/components/mist/mlogocloud/two.svelte?raw";
 
 export const all_mists_logocloud: MistBlock[] = [
   {
-    slug: "logocloud-one",
+    slug: "one",
     title: "Logo Cloud One",
     category: "logocloud",
     preview: "/preview/mist/logocloud/one",
@@ -17,7 +17,7 @@ export const all_mists_logocloud: MistBlock[] = [
     component: LogocloudOne,
   },
   {
-    slug: "logocloud-two",
+    slug: "two",
     title: "Logo Cloud Two",
     category: "logocloud",
     preview: "/preview/mist/logocloud/two",
