@@ -20,6 +20,8 @@
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-xs",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        neutral: "bg-foreground text-background hover:brightness-95",
+        mdefault: 'bg-primary text-primary-foreground hover:brightness-95',
       },
       size: {
         default: "h-9 px-4 py-2",

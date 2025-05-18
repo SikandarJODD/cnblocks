@@ -30,12 +30,11 @@
                     width="18"
                     height="18"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    class="fill-orange-600 text-orange-600"
                     fill-opacity="0.1"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     role="img"
-                    color="currentColor"
-                    stroke-opacity="0.9"
+                    stroke-opacity="0.7"
                   >
                     <path
                       d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
@@ -61,7 +60,7 @@
               class="relative max-w-3xl mx-auto mt-8 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-50 dark:via-neutral-300 dark:to-neutral-600 bg-clip-text text-transparent pb-2 font-display text-3xl md:text-4xl lg:mt-16 xl:text-6xl"
             >
               <div
-                class="absolute -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute dark:text-green-400 -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +79,7 @@
                 >Free
               </div>
               <div
-                class="absolute top-14 -left-24 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute top-14 dark:text-yellow-400 -left-24 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +99,7 @@
                 Templates
               </div>
               <div
-                class="absolute -top-10 -right-24 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute -top-10 -right-24 dark:text-blue-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
               >
                 Integrations<svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +118,7 @@
                 >
               </div>
               <div
-                class="absolute top-14 -right-28 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute top-14 -right-28 dark:text-orange-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
               >
                 Responsive<svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -162,6 +161,15 @@
                   <span class="text-nowrap">Explore Blocks</span>
                 </Button>
               </div>
+
+              <Button
+                href="/mist/hero"
+                size="lg"
+                class="rounded-xl px-5 text-base"
+                variant="mdefault"
+              >
+                <span class="text-nowrap">New Mist Blocks</span>
+              </Button>
             </div>
           </div>
         </div>

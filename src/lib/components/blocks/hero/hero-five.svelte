@@ -1,7 +1,7 @@
 <script>
-  import Button from "$lib/components/ui/button/button.svelte";
-  import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
   import Marquee from "$lib/components/magic/Marquee.svelte";
+  import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
+  import Button from "$lib/components/ui/button/button.svelte";
 
   // You can store Hero Header Component in seperate file
   // I have used snippet for better readability

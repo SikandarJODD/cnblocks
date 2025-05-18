@@ -10,5 +10,11 @@
     "desc": "Added 20 new blocks",
     "date": "2025-04-24T00:00:00.000Z",
     "content": "<p>Added 9 Hero Blocks</p>\n<p><a href=\"/hero#hero-one\">Hero One</a>\r\n<a href=\"/hero#hero-two\">Hero Two</a>\r\n<a href=\"/hero#hero-three\">Hero Three</a>\r\n<a href=\"/hero#hero-four\">Hero Four</a>\r\n<a href=\"/hero#hero-five\">Hero Five</a>\r\n<a href=\"/hero#hero-six\">Hero Six</a>\r\n<a href=\"/hero#hero-seven\">Hero Seven</a>\r\n<a href=\"/hero#hero-eight\">Hero Eight</a>\r\n<a href=\"/hero#hero-nine\">Hero Nine</a></p>\n<p>Added 8 Feature Blocks</p>\n<p><a href=\"/feature#feature-eight\">Feature Eight</a>\r\n<a href=\"/feature#feature-nine\">Feature Nine</a>\r\n<a href=\"/feature#feature-ten\">Feature Ten</a>\r\n<a href=\"/feature#feature-eleven\">Feature Eleven</a>\r\n<a href=\"/feature#feature-twelve\">Feature Twelve</a>\r\n<a href=\"/feature#feature-thirteen\">Feature Thirteen</a>\r\n<a href=\"/feature#feature-fourteen\">Feature Fourteen</a></p>\n<p>Added 4 Faq Blocks</p>\n<p><a href=\"/faq#faq-one\">FAQ One</a>\r\n<a href=\"/faq#faq-two\">FAQ Two</a>\r\n<a href=\"/faq#faq-three\">FAQ Three</a>\r\n<a href=\"/faq#faq-four\">FAQ Four</a></p>"
+  },
+  {
+    "title": "50 New Blocks",
+    "desc": "Inspired by Notion, built on top of Svelte 5, Shadcn Svelte and Tailwind V4",
+    "date": "2025-05-18T00:00:00.000Z",
+    "content": "<p>Added 50 New Blocks - MIST Blocks</p>\n<p>Visit the <a href=\"/mist/hero\">Blocks</a> page to see the new blocks.</p>\n<p>Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Svelte 5, Shadcn Svelte and Tailwind V4.</p>"
   }
 ]

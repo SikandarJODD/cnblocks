@@ -1,6 +1,5 @@
-<script lang="ts">
-  import HeroSix from "$lib/components/blocks/hero/hero-six.svelte";
+<script>
+  import ContactOne from "$lib/components/mist/mcontact/one.svelte";
 </script>
 
-<!-- <HeroThree /> -->
-<HeroSix />
+<ContactOne />

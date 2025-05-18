@@ -1,13 +1,19 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
   import Button from "$lib/components/ui/button/button.svelte";
-  let navs = [
+  let navs: NavItem[] = [
     { name: "Home", url: "/" },
     { name: "Blocks", url: "/hero" },
+    { name: "Mists", url: "/mists", isNew: true },
     { name: "Templates", url: "/templates" },
     { name: "Changelog", url: "/changelog" },
     { name: "Docs", url: "/docs/installation" },
   ];
+  type NavItem = {
+    name: string;
+    url: string;
+    isNew?: boolean;
+  };
   // Mobile and user profile state
   let isMobileMenu = $state(false);
   // Dark & Light Mode
@@ -78,6 +84,39 @@
       content: "4 blocks - clear and concise answers.",
     },
   ];
+
+  let mist_navs: ListItemProps[] = [
+    {
+      title: "Hero",
+      href: "/mist/hero",
+      content: "9 blocks - bold and striking visuals.",
+    },
+    {
+      title: "Features",
+      href: "/mist/features",
+      content: "11 blocks - highlight key benefits.",
+    },
+    {
+      title: "Content",
+      href: "/mist/content",
+      content: "5 blocks - engaging and informative.",
+    },
+    {
+      title: "Testimonials",
+      href: "/mist/testimonials",
+      content: "4 blocks - trusted user feedback.",
+    },
+    {
+      title: "Pricing",
+      href: "/mist/pricing",
+      content: "3 blocks - competitive pricing.",
+    },
+    {
+      title: "Team",
+      href: "/mist/team",
+      content: "3 blocks - team members.",
+    },
+  ];
 </script>
 
 <nav class="bg-transparent backdrop-blur-md sticky top-0 z-[1000]">
@@ -101,6 +140,7 @@
                   <span class="hidden sm:inline"> Home </span>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
+
               <NavigationMenu.Item id="docs">
                 <NavigationMenu.Link
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
@@ -109,6 +149,7 @@
                   <span class="hidden sm:inline"> Docs </span>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
+
               <NavigationMenu.Item id="blocks">
                 <NavigationMenu.Trigger
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
@@ -125,6 +166,32 @@
                   <div>
                     <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-[580px]">
                       {#each listItems as component (component.title)}
+                        {@render ListItem({
+                          href: component.href,
+                          title: component.title,
+                          content: component.content,
+                        })}
+                      {/each}
+                    </ul>
+                  </div>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item id="mist">
+                <NavigationMenu.Trigger
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
+                >
+                  Mist
+                  <CaretDown
+                    class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    aria-hidden="true"
+                  />
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content
+                  class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
+                >
+                  <div>
+                    <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-[580px]">
+                      {#each mist_navs as component (component.title)}
                         {@render ListItem({
                           href: component.href,
                           title: component.title,
