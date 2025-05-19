@@ -103,134 +103,6 @@
 			]
 		},
 		{
-			"name": "content",
-			"blocks": [
-				{
-					"name": "content-five",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-five.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
-					]
-				},
-				{
-					"name": "content-four",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-four.svelte"
-					],
-					"localDependencies": [
-						"ui/button"
-					],
-					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
-					},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
-					]
-				},
-				{
-					"name": "content-one",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-one.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "content-seven",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-seven.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
-					]
-				},
-				{
-					"name": "content-six",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-six.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "content-three",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-three.svelte"
-					],
-					"localDependencies": [
-						"ui/button"
-					],
-					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
-					},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
-					]
-				},
-				{
-					"name": "content-two",
-					"directory": "src/lib/components/blocks/content",
-					"category": "content",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"content-two.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
-					]
-				}
-			]
-		},
-		{
 			"name": "cta",
 			"blocks": [
 				{
@@ -507,12 +379,8 @@
 					"files": [
 						"feature-nine.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": [
 						"@lucide/svelte@^0.483.0",
@@ -697,14 +565,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -734,12 +600,8 @@
 					"files": [
 						"footer-one.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				},
@@ -757,14 +619,12 @@
 						"ui/button",
 						"ui/input",
 						"ui/label",
-						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
 						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
 					"dependencies": [],
@@ -782,12 +642,8 @@
 					"files": [
 						"footer-two.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				}
@@ -809,14 +665,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -834,14 +688,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -862,11 +714,9 @@
 						"hero-header-eight.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
@@ -885,12 +735,10 @@
 						"hero-header-nine.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
@@ -910,12 +758,10 @@
 						"hero-header-seven.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
@@ -935,12 +781,10 @@
 						"hero-header.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
@@ -965,12 +809,10 @@
 						"hero-eight.svelte"
 					],
 					"localDependencies": [
-						"ui/button",
-						"web/Logo"
+						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": [
@@ -991,14 +833,12 @@
 						"magic/Marquee",
 						"magic/ProgressiveBlur",
 						"ui/button",
-						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
 						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte",
 						"$lib/components/magic/ProgressiveBlur.svelte": "{{magic/ProgressiveBlur}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
 					"dependencies": [],
@@ -1018,13 +858,11 @@
 					],
 					"localDependencies": [
 						"ui/button",
-						"web/Logo",
 						"lib/utils",
 						"magic/Marquee"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte"
 					},
@@ -1044,12 +882,10 @@
 						"hero-nine.svelte"
 					],
 					"localDependencies": [
-						"ui/button",
-						"web/Logo"
+						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": [
@@ -1068,12 +904,10 @@
 					],
 					"localDependencies": [
 						"ui/button",
-						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
 					"dependencies": [],
@@ -1093,12 +927,10 @@
 					],
 					"localDependencies": [
 						"ui/button",
-						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
 					"dependencies": [],
@@ -1118,12 +950,10 @@
 						"hero-six.svelte"
 					],
 					"localDependencies": [
-						"ui/button",
-						"web/Logo"
+						"ui/button"
 					],
 					"_imports_": {
-						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": [
@@ -1142,12 +972,10 @@
 					],
 					"localDependencies": [
 						"ui/button",
-						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
 					"dependencies": [],
@@ -1167,12 +995,10 @@
 					],
 					"localDependencies": [
 						"ui/button",
-						"web/Logo",
 						"lib/utils"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}"
 					},
 					"dependencies": [],
@@ -1183,12 +1009,12 @@
 			]
 		},
 		{
-			"name": "integrations",
+			"name": "integration",
 			"blocks": [
 				{
 					"name": "card",
-					"directory": "src/lib/components/blocks/integrations/card",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration/card",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": true,
 					"list": true,
@@ -1218,8 +1044,8 @@
 				},
 				{
 					"name": "integration-eight",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1241,8 +1067,8 @@
 				},
 				{
 					"name": "integration-five",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1250,15 +1076,13 @@
 						"integration-five.svelte"
 					],
 					"localDependencies": [
-						"integrations/card",
+						"integration/card",
 						"logos/logos",
-						"web/Logo",
 						"ui/button"
 					],
 					"_imports_": {
-						"./card/integration-cardv5.svelte": "{{integrations/card}}/integration-cardv5.svelte",
+						"./card/integration-cardv5.svelte": "{{integration/card}}/integration-cardv5.svelte",
 						"../logos/logos": "{{logos/logos}}",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
@@ -1266,8 +1090,8 @@
 				},
 				{
 					"name": "integration-four",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1275,15 +1099,13 @@
 						"integration-four.svelte"
 					],
 					"localDependencies": [
-						"integrations/card",
+						"integration/card",
 						"logos/logos",
-						"web/Logo",
 						"ui/button"
 					],
 					"_imports_": {
-						"./card/integration-cardv4.svelte": "{{integrations/card}}/integration-cardv4.svelte",
+						"./card/integration-cardv4.svelte": "{{integration/card}}/integration-cardv4.svelte",
 						"../logos/logos": "{{logos/logos}}",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
@@ -1291,8 +1113,8 @@
 				},
 				{
 					"name": "integration-one",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1300,11 +1122,11 @@
 						"integration-one.svelte"
 					],
 					"localDependencies": [
-						"integrations/card",
+						"integration/card",
 						"logos/logos"
 					],
 					"_imports_": {
-						"./card/integration-card.svelte": "{{integrations/card}}/integration-card.svelte",
+						"./card/integration-card.svelte": "{{integration/card}}/integration-card.svelte",
 						"../logos/logos": "{{logos/logos}}"
 					},
 					"dependencies": [],
@@ -1312,8 +1134,8 @@
 				},
 				{
 					"name": "integration-seven",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1321,16 +1143,14 @@
 						"integration-seven.svelte"
 					],
 					"localDependencies": [
-						"integrations/card",
+						"integration/card",
 						"logos/logos",
-						"web/Logo",
 						"ui/button",
 						"magic/Marquee"
 					],
 					"_imports_": {
-						"./card/integration-cardv7.svelte": "{{integrations/card}}/integration-cardv7.svelte",
+						"./card/integration-cardv7.svelte": "{{integration/card}}/integration-cardv7.svelte",
 						"../logos/logos": "{{logos/logos}}",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte"
 					},
@@ -1339,8 +1159,8 @@
 				},
 				{
 					"name": "integration-six",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1362,8 +1182,8 @@
 				},
 				{
 					"name": "integration-three",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1371,15 +1191,13 @@
 						"integration-three.svelte"
 					],
 					"localDependencies": [
-						"integrations/card",
+						"integration/card",
 						"logos/logos",
-						"web/Logo",
 						"ui/button"
 					],
 					"_imports_": {
-						"./card/integration-cardv3.svelte": "{{integrations/card}}/integration-cardv3.svelte",
+						"./card/integration-cardv3.svelte": "{{integration/card}}/integration-cardv3.svelte",
 						"../logos/logos": "{{logos/logos}}",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
@@ -1387,8 +1205,8 @@
 				},
 				{
 					"name": "integration-two",
-					"directory": "src/lib/components/blocks/integrations",
-					"category": "integrations",
+					"directory": "src/lib/components/blocks/integration",
+					"category": "integration",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -1396,15 +1214,13 @@
 						"integration-two.svelte"
 					],
 					"localDependencies": [
-						"integrations/card",
+						"integration/card",
 						"logos/logos",
-						"web/Logo",
 						"ui/button"
 					],
 					"_imports_": {
-						"./card/integration-cardv2.svelte": "{{integrations/card}}/integration-cardv2.svelte",
+						"./card/integration-cardv2.svelte": "{{integration/card}}/integration-cardv2.svelte",
 						"../logos/logos": "{{logos/logos}}",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					},
 					"dependencies": [],
@@ -1428,14 +1244,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -1453,14 +1267,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -1478,75 +1290,15 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
-				}
-			]
-		},
-		{
-			"name": "logo-cloud",
-			"blocks": [
-				{
-					"name": "logo-cloud-one",
-					"directory": "src/lib/components/blocks/logo-cloud",
-					"category": "logo-cloud",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"logo-cloud-one.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "logo-cloud-three",
-					"directory": "src/lib/components/blocks/logo-cloud",
-					"category": "logo-cloud",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"logo-cloud-three.svelte"
-					],
-					"localDependencies": [
-						"magic/Marquee",
-						"lib/utils"
-					],
-					"_imports_": {
-						"$lib/components/magic/Marquee.svelte": "{{magic/Marquee}}.svelte",
-						"$lib/utils": "{{lib/utils}}"
-					},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "logo-cloud-two",
-					"directory": "src/lib/components/blocks/logo-cloud",
-					"category": "logo-cloud",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"logo-cloud-two.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": [
-						"@lucide/svelte@^0.483.0"
-					]
 				}
 			]
 		},
@@ -1806,14 +1558,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -1831,14 +1581,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -1856,14 +1604,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -2574,12 +2320,8 @@
 					"files": [
 						"four.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				},
@@ -2593,12 +2335,8 @@
 					"files": [
 						"one.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				},
@@ -2612,12 +2350,8 @@
 					"files": [
 						"three.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				},
@@ -2631,12 +2365,8 @@
 					"files": [
 						"two.svelte"
 					],
-					"localDependencies": [
-						"web/Logo"
-					],
-					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
-					},
+					"localDependencies": [],
+					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": []
 				}
@@ -2658,14 +2388,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -2710,7 +2438,6 @@
 						"hero-four.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
@@ -2719,7 +2446,6 @@
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					}
@@ -2736,7 +2462,6 @@
 						"hero-one.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
@@ -2745,7 +2470,6 @@
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/button": "{{ui/button}}"
@@ -2786,7 +2510,6 @@
 						"hero-three.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
@@ -2795,7 +2518,6 @@
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					}
@@ -2812,7 +2534,6 @@
 						"hero-two.svelte"
 					],
 					"localDependencies": [
-						"web/Logo",
 						"lib/utils",
 						"ui/button"
 					],
@@ -2821,7 +2542,6 @@
 						"@lucide/svelte@^0.483.0"
 					],
 					"_imports_": {
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte",
 						"$lib/utils": "{{lib/utils}}",
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
 					}
@@ -2844,14 +2564,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -2960,14 +2678,12 @@
 					"localDependencies": [
 						"ui/button",
 						"ui/input",
-						"ui/label",
-						"web/Logo"
+						"ui/label"
 					],
 					"_imports_": {
 						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
 						"$lib/components/ui/input/input.svelte": "{{ui/input}}/input.svelte",
-						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte",
-						"$lib/components/web/Logo.svelte": "{{web/Logo}}.svelte"
+						"$lib/components/ui/label/label.svelte": "{{ui/label}}/label.svelte"
 					},
 					"dependencies": [],
 					"devDependencies": []
@@ -3536,26 +3252,6 @@
 						"$lib/utils.js": "{{lib/utils}}.js",
 						"$lib/components/ui/toggle/index.js": "{{ui/toggle}}/index.js"
 					}
-				}
-			]
-		},
-		{
-			"name": "web",
-			"blocks": [
-				{
-					"name": "Logo",
-					"directory": "src/lib/components/web",
-					"category": "web",
-					"tests": false,
-					"subdirectory": false,
-					"list": false,
-					"files": [
-						"Logo.svelte"
-					],
-					"localDependencies": [],
-					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": []
 				}
 			]
 		},

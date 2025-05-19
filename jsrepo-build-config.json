@@ -21,7 +21,7 @@
 		"feature",
 		"footer",
 		"header",
-		"integrations",
+		"integration",
 		"logos",
 		"hero",
 		"login",
@@ -61,7 +61,7 @@
 		"content",
 		"faq",
 		"forgot-password",
-		"integrations",
+		"integration",
 		"logos",
 		"feature",
 		"footer",
@@ -97,9 +97,19 @@
 		"data",
 		"config",
 		"content",
-		"web"
+		"web",
+		"all_mists"
 	],
-	"excludeCategories": [],
+	"excludeCategories": [
+		"web",
+		"index",
+		"all_blocks",
+		"data",
+		"config",
+		"content",
+		"web",
+		"all_mists"
+	],
 	"preview": true,
 	"meta": {
 		"author": [
