@@ -2051,12 +2051,12 @@
 			]
 		},
 		{
-			"name": "mfeatures",
+			"name": "mfeature",
 			"blocks": [
 				{
 					"name": "eight",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2076,8 +2076,8 @@
 				},
 				{
 					"name": "eleven",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2098,9 +2098,28 @@
 					]
 				},
 				{
+					"name": "feature-table",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"feature-table.svelte"
+					],
+					"localDependencies": [
+						"lib/utils"
+					],
+					"_imports_": {
+						"$lib/utils": "{{lib/utils}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
 					"name": "five",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2120,8 +2139,8 @@
 				},
 				{
 					"name": "four",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2147,8 +2166,8 @@
 				},
 				{
 					"name": "nine",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2170,30 +2189,29 @@
 				},
 				{
 					"name": "one",
-					"directory": "src/lib/components/mist/mfeatures/one",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
-					"subdirectory": true,
+					"subdirectory": false,
 					"list": true,
 					"files": [
-						"feature-table.svelte",
 						"one.svelte"
 					],
 					"localDependencies": [
-						"lib/utils",
-						"ui/card"
+						"ui/card",
+						"mfeature/feature-table"
 					],
-					"dependencies": [],
-					"devDependencies": [],
 					"_imports_": {
-						"$lib/utils": "{{lib/utils}}",
-						"$lib/components/ui/card": "{{ui/card}}"
-					}
+						"$lib/components/ui/card": "{{ui/card}}",
+						"./feature-table.svelte": "{{mfeature/feature-table}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
 				},
 				{
 					"name": "seven",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2215,8 +2233,8 @@
 				},
 				{
 					"name": "six",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2238,8 +2256,8 @@
 				},
 				{
 					"name": "ten",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2261,8 +2279,8 @@
 				},
 				{
 					"name": "three",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2288,8 +2306,8 @@
 				},
 				{
 					"name": "two",
-					"directory": "src/lib/components/mist/mfeatures",
-					"category": "mfeatures",
+					"directory": "src/lib/components/mist/mfeature",
+					"category": "mfeature",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
@@ -2549,6 +2567,125 @@
 			]
 		},
 		{
+			"name": "mintegration",
+			"blocks": [
+				{
+					"name": "integration-card",
+					"directory": "src/lib/components/mist/mintegration",
+					"category": "mintegration",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"integration-card.svelte"
+					],
+					"localDependencies": [
+						"ui/button",
+						"ui/card"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte",
+						"$lib/components/ui/card/card.svelte": "{{ui/card}}/card.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "one",
+					"directory": "src/lib/components/mist/mintegration",
+					"category": "mintegration",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"one.svelte"
+					],
+					"localDependencies": [
+						"mlogos/Gemini",
+						"mlogos/GooglePaLM",
+						"mlogos/Replit",
+						"mlogos/MediaWiki",
+						"mlogos/MagicUI",
+						"mlogos/VSCodium"
+					],
+					"_imports_": {
+						"../mlogos/Gemini.svelte": "{{mlogos/Gemini}}.svelte",
+						"../mlogos/GooglePaLM.svelte": "{{mlogos/GooglePaLM}}.svelte",
+						"../mlogos/Replit.svelte": "{{mlogos/Replit}}.svelte",
+						"../mlogos/MediaWiki.svelte": "{{mlogos/MediaWiki}}.svelte",
+						"../mlogos/MagicUI.svelte": "{{mlogos/MagicUI}}.svelte",
+						"../mlogos/VSCodium.svelte": "{{mlogos/VSCodium}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "three",
+					"directory": "src/lib/components/mist/mintegration",
+					"category": "mintegration",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"three.svelte"
+					],
+					"localDependencies": [
+						"mlogos/Gemini",
+						"mlogos/GooglePaLM",
+						"mlogos/Replit",
+						"mlogos/MediaWiki",
+						"mlogos/MagicUI",
+						"mlogos/VSCodium",
+						"mintegration/integration-card"
+					],
+					"_imports_": {
+						"../mlogos/Gemini.svelte": "{{mlogos/Gemini}}.svelte",
+						"../mlogos/GooglePaLM.svelte": "{{mlogos/GooglePaLM}}.svelte",
+						"../mlogos/Replit.svelte": "{{mlogos/Replit}}.svelte",
+						"../mlogos/MediaWiki.svelte": "{{mlogos/MediaWiki}}.svelte",
+						"../mlogos/MagicUI.svelte": "{{mlogos/MagicUI}}.svelte",
+						"../mlogos/VSCodium.svelte": "{{mlogos/VSCodium}}.svelte",
+						"./integration-card.svelte": "{{mintegration/integration-card}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "two",
+					"directory": "src/lib/components/mist/mintegration",
+					"category": "mintegration",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"two.svelte"
+					],
+					"localDependencies": [
+						"mlogos/Gemini",
+						"mlogos/GooglePaLM",
+						"mlogos/Replit",
+						"mlogos/MediaWiki",
+						"mlogos/MagicUI",
+						"mlogos/VSCodium",
+						"ui/button"
+					],
+					"_imports_": {
+						"../mlogos/Gemini.svelte": "{{mlogos/Gemini}}.svelte",
+						"../mlogos/GooglePaLM.svelte": "{{mlogos/GooglePaLM}}.svelte",
+						"../mlogos/Replit.svelte": "{{mlogos/Replit}}.svelte",
+						"../mlogos/MediaWiki.svelte": "{{mlogos/MediaWiki}}.svelte",
+						"../mlogos/MagicUI.svelte": "{{mlogos/MagicUI}}.svelte",
+						"../mlogos/VSCodium.svelte": "{{mlogos/VSCodium}}.svelte",
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "mlogin",
 			"blocks": [
 				{
@@ -2603,6 +2740,130 @@
 					"list": true,
 					"files": [
 						"two.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "mlogos",
+			"blocks": [
+				{
+					"name": "Gemini",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"Gemini.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "GooglePaLM",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"GooglePaLM.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "logos",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"logos.ts"
+					],
+					"localDependencies": [
+						"mlogos/Gemini",
+						"mlogos/Replit",
+						"mlogos/MagicUI",
+						"mlogos/VSCodium",
+						"mlogos/MediaWiki",
+						"mlogos/GooglePaLM"
+					],
+					"_imports_": {
+						"./Gemini.svelte": "{{mlogos/Gemini}}.svelte",
+						"./Replit.svelte": "{{mlogos/Replit}}.svelte",
+						"./MagicUI.svelte": "{{mlogos/MagicUI}}.svelte",
+						"./VSCodium.svelte": "{{mlogos/VSCodium}}.svelte",
+						"./MediaWiki.svelte": "{{mlogos/MediaWiki}}.svelte",
+						"./GooglePaLM.svelte": "{{mlogos/GooglePaLM}}.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "MagicUI",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"MagicUI.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "MediaWiki",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"MediaWiki.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "Replit",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"Replit.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "VSCodium",
+					"directory": "src/lib/components/mist/mlogos",
+					"category": "mlogos",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"VSCodium.svelte"
 					],
 					"localDependencies": [],
 					"_imports_": {},
