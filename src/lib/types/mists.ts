@@ -11,5 +11,5 @@ export interface MistCode {
   name?: string;
   code: string;
   lang?: string;
-  hightlight?: string;
+  highlight?: (number | [number, number])[];
 }

@@ -26,7 +26,7 @@
 </script>
 
 <section
-  class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)]"
+  class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)]"
 >
   <div class="py-24">
     <div class="mx-auto w-full max-w-5xl px-6">
@@ -120,6 +120,7 @@
     </div>
   </Card>
 {/snippet}
+
 {#snippet CodeReviewIllustration()}
   <div aria-hidden="true" class="relative mt-6">
     <Card
@@ -161,6 +162,7 @@
     </Card>
   </div>
 {/snippet}
+
 {#snippet AIAssistantIllustration()}
   <Card
     aria-hidden
@@ -194,7 +196,7 @@
           </Button>
         </div>
 
-        <Button size="icon" class="size-7 rounded-2xl bg-black">
+        <Button size="icon" variant="mdefault" class="size-7 rounded-2xl">
           <ArrowUp strokeWidth={3} />
         </Button>
       </div>

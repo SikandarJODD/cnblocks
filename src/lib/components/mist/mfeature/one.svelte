@@ -4,7 +4,7 @@
 </script>
 
 <!-- Card Variant : soft  -->
-<section>
+<section class='[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)]'>
   <div class="bg-muted/50 py-24">
     <div class="mx-auto w-full max-w-5xl px-6">
       <div>

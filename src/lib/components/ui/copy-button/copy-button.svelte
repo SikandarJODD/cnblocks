@@ -26,7 +26,7 @@
   let {
     text,
     icon,
-    animationDuration = 800,
+    animationDuration = 300,
     variant = "ghost",
     size = "icon",
     onCopy,
@@ -34,7 +34,7 @@
     ...restProps
   }: Props = $props();
 
-  const clipboard = new UseClipboard({ delay: 2000 });
+  const clipboard = new UseClipboard({ delay: 1500 });
 </script>
 
 <TooltipProvider delayDuration={0}>
@@ -44,7 +44,7 @@
         {...restProps}
         {variant}
         {size}
-        class={cn(className)}
+        class={cn("h-8 w-8 z-50", className)}
         type="button"
         name="copy"
         tabindex={-1}
@@ -54,21 +54,21 @@
         }}
       >
         {#if clipboard.status === "success"}
-          <div in:scale={{ duration: animationDuration, start: 0.85 }}>
-            <Check class="text-[#10B981]" />
+          <div in:scale={{ duration: animationDuration, start: 0.5 }}>
+            <Check class="text-[#10B981] !size-3.5" />
             <span class="sr-only">Copied</span>
           </div>
         {:else if clipboard.status === "failure"}
-          <div in:scale={{ duration: animationDuration, start: 0.85 }}>
-            <X />
+          <div in:scale={{ duration: animationDuration, start: 0.5 }}>
+            <X class="!size-3.5" />
             <span class="sr-only">Failed to copy</span>
           </div>
         {:else}
-          <div in:scale={{ duration: animationDuration, start: 0.85 }}>
+          <div in:scale={{ duration: animationDuration, start: 0.5 }}>
             {#if icon}
               {@render icon()}
             {:else}
-              <Copy />
+              <Copy class="!size-3.5 opacity-50" />
             {/if}
             <span class="sr-only">Copy</span>
           </div>

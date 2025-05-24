@@ -5,6 +5,9 @@
   let pathname = $derived(
     "/" + page.url.pathname.split("/").filter(Boolean)[0] || "/"
   );
+  let isActive = (href: string) => {
+    return page.url.pathname === href;
+  };
 </script>
 
 <div class="dark:border-border/50 relative z-40 border-b">
@@ -17,14 +20,14 @@
           <li
             class={cn(
               "flex h-full snap-start items-center border-b border-b-transparent",
-              pathname === category.href && "border-primary"
+              isActive(category.href) && "border-primary"
             )}
           >
             <a
               href={category.href}
               class={cn(
-                pathname === category.href && "text-foreground!",
-                "hover:bg-muted dark:text-muted-foreground hover:text-foreground flex h-7 w-fit items-center text-nowrap rounded-full px-1 text-[13px] text-zinc-700 lg:-mx-2 lg:px-3"
+                isActive(category.href) && "text-primary!",
+                "hover:bg-muted dark:text-muted-foreground hover:text-foreground flex h-7 w-fit items-center text-nowrap rounded-full px-1 text-[13px] text-zinc-700 lg:-mx-2 lg:px-3 transition-all duration-300"
               )}
             >
               <span class="block w-max text-nowrap capitalize"

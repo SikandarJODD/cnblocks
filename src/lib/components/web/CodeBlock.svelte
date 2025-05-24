@@ -1,11 +1,9 @@
 <script>
   import { cn } from "$lib/utils";
-  let {
-    code = "",
-    class: _class = "",
-  } = $props();
 
-  import { codeToHtml } from "shiki";
+  let { code = "", class: _class = "" } = $props();
+
+  import { codeToHtml, createHighlighter } from "shiki";
   import { onMount } from "svelte";
 
   let htmlCode = $state("");
@@ -14,8 +12,9 @@
       lang: "svelte",
       themes: {
         dark: "aurora-x",
-        light: 'github-light',
+        light: "github-light",
       },
+
     });
   });
 </script>
@@ -29,3 +28,8 @@
   {@html htmlCode}
 </div>
 
+<!-- <style>
+  :global(.highlighted-word) {
+    background-color: #000;
+  }
+</style> -->
