@@ -24,8 +24,8 @@
   export interface MistCode {
     code: string;
     lang?: string;
-    hightlight?: string;
     name?: string;
+    highlight?: (number | [number, number])[];
   }
 
   let {
@@ -36,6 +36,8 @@
     slug,
     previewOnly,
   }: BlockPreviewProps = $props();
+
+
 
   const radioItem =
     "rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
@@ -307,11 +309,9 @@
       </div>
 
       <div class="bg-white dark:bg-transparent">
-        {#key code}
-          {#if mode === "code"}
-            <CodeEditor {code} />
-          {/if}
-        {/key}
+        {#if mode === "code"}
+          <CodeEditor {code} />
+        {/if}
       </div>
     </div>
   </div>

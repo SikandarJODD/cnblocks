@@ -15,7 +15,6 @@
 
   let componentID = $derived(page.params.componentid);
   let categoryID = $derived(page.params.categoryid);
-  $inspect({ componentID, categoryID }, "componentID and categoryID");
 
   let categoryBlocks = $derived.by(() => {
     let categoryBlocks = [];

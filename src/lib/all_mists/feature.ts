@@ -32,6 +32,8 @@ import FeatureTenCode from "$lib/components/mist/mfeature/ten.svelte?raw";
 import FeatureEleven from "$lib/components/mist/mfeature/eleven.svelte";
 import FeatureElevenCode from "$lib/components/mist/mfeature/eleven.svelte?raw";
 
+import CardCode from "$lib/components/ui/card/card.svelte?raw";
+
 import type { MistBlock } from "$lib/types/mists";
 
 export const all_mists_features: MistBlock[] = [
@@ -45,10 +47,18 @@ export const all_mists_features: MistBlock[] = [
       {
         code: FeatureOneCode,
         lang: "svelte",
+        name: "Feature.svelte",
       },
       {
         code: FeatureTable,
         lang: "svelte",
+        name: "FeatureTable.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
       },
     ],
   },
@@ -58,10 +68,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/two",
     component: FeatureTwo,
-    code: {
-      code: FeatureTwoCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureTwoCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "three",
@@ -69,10 +88,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/three",
     component: FeatureThree,
-    code: {
-      code: FeatureThreeCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureThreeCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "four",
@@ -80,10 +108,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/four",
     component: FeatureFour,
-    code: {
-      code: FeatureFourCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureFourCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "five",
@@ -91,10 +128,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/five",
     component: FeatureFive,
-    code: {
-      code: FeatureFiveCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureFiveCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "six",
@@ -102,10 +148,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/six",
     component: FeatureSix,
-    code: {
-      code: FeatureSixCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureSixCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "seven",
@@ -113,10 +168,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/seven",
     component: FeatureSeven,
-    code: {
-      code: FeatureSevenCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureSevenCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "eight",
@@ -124,10 +188,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/eight",
     component: FeatureEight,
-    code: {
-      code: FeatureEightCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureEightCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "nine",
@@ -135,10 +208,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/nine",
     component: FeatureNine,
-    code: {
-      code: FeatureNineCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureNineCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "ten",
@@ -146,10 +228,19 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/ten",
     component: FeatureTen,
-    code: {
-      code: FeatureTenCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureTenCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
   {
     slug: "eleven",
@@ -157,9 +248,18 @@ export const all_mists_features: MistBlock[] = [
     category: "feature",
     preview: "/preview/mist/feature/eleven",
     component: FeatureEleven,
-    code: {
-      code: FeatureElevenCode,
-      lang: "svelte",
-    },
+    code: [
+      {
+        code: FeatureElevenCode,
+        lang: "svelte",
+        name: "Feature.svelte",
+      },
+      {
+        code: CardCode,
+        lang: "svelte",
+        name: "Card.svelte",
+        highlight: [10],
+      },
+    ],
   },
 ];

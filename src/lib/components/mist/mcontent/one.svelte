@@ -20,7 +20,7 @@
 </script>
 
 <section
-  class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)]"
+  class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)]"
 >
   <div class="bg-muted/50 py-24">
     <div class="mx-auto w-full max-w-5xl px-6">
@@ -90,7 +90,7 @@
         }
       )}
     >
-      <Button size="sm" class="rounded-sm">
+      <Button variant="mdefault" size="sm" class="rounded-sm">
         <Calendar1 class="size-3" />
         <span class="text-sm font-medium">Schedule</span>
       </Button>
@@ -118,7 +118,8 @@
       </Button>
     </div>
     <span>
-      <span class="bg-secondary text-secondary-foreground py-1 text-sm"
+      <span
+        class="bg-secondary dark:bg-secondary/10 text-secondary-foreground py-1 text-sm"
         >Tomorrow 8:30 pm</span
       > is our priority.
     </span>

@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@changesets/cli": "^2.29.3",
 		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
+		"isomorphic-dompurify": "^2.25.0",
 		"jsrepo": "^2.0.2"
 	}
 }

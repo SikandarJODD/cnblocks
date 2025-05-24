@@ -26,7 +26,7 @@
   ];
 </script>
 
-<section>
+<section class='[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)]'>
   <div class="py-24">
     <div class="mx-auto w-full max-w-2xl px-6 lg:px-0">
       <div>
@@ -205,7 +205,7 @@
           </Button>
         </div>
 
-        <Button size="icon" class="size-7 rounded-2xl bg-black">
+        <Button size="icon" variant="mdefault" class="size-7 rounded-2xl">
           <ArrowUp strokeWidth={3} />
         </Button>
       </div>

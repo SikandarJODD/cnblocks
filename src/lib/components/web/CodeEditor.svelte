@@ -8,6 +8,7 @@
   import Copy from "@lucide/svelte/icons/copy";
   import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
   import { scale } from "svelte/transition";
+  import Code from "./code/code.svelte";
 
   let {
     code,
@@ -97,18 +98,25 @@
       <!-- <CopyButton {copied} onCopy={copy} /> -->
       {#key selectedIndex}
         {@render CopyButton()}
-        <CodeBlock code={code[selectedIndex].code} />
+        <!-- <CodeBlock code={code[selectedIndex].code} /> -->
+        <Code
+          code={code[selectedIndex].code}
+          highlight={code[selectedIndex]?.highlight}
+        />
       {/key}
     </div>
   </div>
 {:else}
-  {@render CopyButton()}
-  <CodeBlock code={code.code} />
+  <!-- {@render CopyButton()} -->
+  <!-- <CodeBlock code={code.code} /> -->
+  <div class='relative sm:w-full h-[36rem]'>
+    <Code code={code.code} highlight={code?.highlight} />
+  </div>
 {/if}
 
 {#snippet CopyButton()}
   <Button
-    class="absolute top-2 right-6 h-8 w-8 z-50 backdrop-blur-sm"
+    class="absolute top-2 right-2 h-8 w-8 z-50 backdrop-blur-sm"
     variant="ghost"
     size="icon"
     onclick={copyCode}
