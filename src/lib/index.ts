@@ -47,10 +47,9 @@ export function getBlock(
       title: numToString(i),
       category: category,
       preview: `/preview/${category}/${numToString(i)}`,
-      code: comps[i - 1],
+      code: { code: comps[i - 1] },
       component: components[i - 1],
     });
   }
   return temp;
 }
-

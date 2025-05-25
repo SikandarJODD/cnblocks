@@ -109,7 +109,7 @@
 {:else}
   <!-- {@render CopyButton()} -->
   <!-- <CodeBlock code={code.code} /> -->
-  <div class='relative sm:w-full h-[36rem]'>
+  <div class="relative sm:w-full h-[36rem]">
     <Code code={code.code} highlight={code?.highlight} />
   </div>
 {/if}

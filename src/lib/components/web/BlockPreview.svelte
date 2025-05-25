@@ -7,13 +7,19 @@
   import Maximize from "@lucide/svelte/icons/maximize";
   import Terminal from "@lucide/svelte/icons/terminal";
   import Check from "@lucide/svelte/icons/check";
-  import CodeBlock from "./CodeBlock.svelte";
+  import CodeEditor from "./CodeEditor.svelte";
   import { CopyButton } from "../ui/copy-button";
   import { scale } from "svelte/transition";
   import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
 
+  export interface MistCode {
+    code: string;
+    lang?: string;
+    name?: string;
+    highlight?: (number | [number, number])[];
+  }
   interface BlockPreviewProps {
-    code?: string;
+    code: MistCode | MistCode[];
     preview: string;
     title: string;
     category: string;
@@ -21,7 +27,7 @@
   }
 
   let {
-    code = "svcode",
+    code,
     preview,
     title = "Hero Section",
     category = "Components",
@@ -101,6 +107,7 @@
           <div class="flex gap-0.5">
             <Button
               variant={mode === "preview" ? "secondary" : "ghost"}
+              size="sm"
               onclick={() => (mode = "preview")}
               class={radioItem}
             >
@@ -131,6 +138,7 @@
 
             <Button
               variant={mode === "code" ? "secondary" : "ghost"}
+              size="sm"
               onclick={() => (mode = "code")}
               class={radioItem}
             >
@@ -217,14 +225,11 @@
               </Tooltip>
             </TooltipProvider>
 
-            <Separator class="!h-4" orientation="vertical" />
+            {#if !Array.isArray(code)}
+              <Separator class="!h-4" orientation="vertical" />
 
-            <CopyButton
-              text={code}
-              class="size-8 cursor-pointer [&_svg]:size-3.5"
-              size="sm"
-              variant="outline"
-            />
+              <CopyButton text={code.code} />
+            {/if}
           {/if}
         {/key}
       </div>
@@ -304,11 +309,11 @@
       </div>
 
       <div class="bg-white dark:bg-transparent">
-        {#key code}
-          {#if mode === "code"}
-            <CodeBlock {code} />
-          {/if}
-        {/key}
+        <!-- {#key code} -->
+        {#if mode === "code"}
+          <CodeEditor {code} />
+        {/if}
+        <!-- {/key} -->
       </div>
     </div>
   </div>

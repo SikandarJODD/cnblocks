@@ -72,7 +72,7 @@
       hl?.codeToHtml(code, {
         lang: lang,
         themes: {
-          dark: "aurora-x",
+          dark: "github-dark",
           light: "github-light",
         },
         transformers: [
@@ -172,7 +172,7 @@
   }
 
   :global(pre.shiki) {
-    @apply overflow-auto rounded-none bg-inherit py-4 text-sm;
+    @apply overflow-auto rounded-none bg-inherit py-4 text-xs
     max-height: min(100%, 650px);
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */

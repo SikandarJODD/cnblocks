@@ -60,7 +60,7 @@ easy done
           href="https://jsrepo.dev"
           target="_blank"
           rel="noopener"
-          class="text-yellow-500 underline underline-offset-2">JSRepo CLI</a
+          class="text-yellow-500 underline underline-offset-2">jsrepo CLI</a
         > to install the blocks.
       </p>
     </div>
@@ -79,8 +79,8 @@ easy done
           <h2 class="font-medium text-primary">Create a new Svelte project</h2>
           <DocsCodeBlock
             fileName="Terminal"
-            code="npx sv@0.6.18 create my-app"
-            lang="shellscript"
+            code="npx sv create my-app"
+            lang='bash'
           />
         </div>
       </div>
@@ -98,8 +98,8 @@ easy done
           <h2 class="font-medium text-primary">Add Tailwind CSS</h2>
           <DocsCodeBlock
             fileName="Terminal"
-            code="npx sv@0.6.18 add tailwindcss"
-            lang="shellscript"
+            code="npx sv add tailwindcss"
+            lang="bash"
           />
         </div>
       </div>
@@ -118,7 +118,7 @@ easy done
           <DocsCodeBlock
             fileName="Terminal"
             code="npx shadcn-svelte@next init"
-            lang="shellscript"
+            lang="bash"
           />
         </div>
       </div>
@@ -133,11 +133,11 @@ easy done
         class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
       >
         <div class="space-y-4 pb-8 pl-8 pt-1">
-          <h2 class="font-medium text-primary">That's It Now Add Any blocks</h2>
+          <h2 class="font-medium text-primary">Now Add Any blocks</h2>
           <DocsCodeBlock
             fileName="Terminal"
             code="npx jsrepo add @sv/cnblocks/hero/hero-one"
-            lang="shellscript"
+            lang="bash"
           />
         </div>
       </div>
@@ -165,7 +165,7 @@ easy done
 ◇ Fetched manifest from @sv/cnblocks
 │
 └ All done!`}
-            lang="shellscript"
+            lang="bash"
           />
         </div>
       </div>

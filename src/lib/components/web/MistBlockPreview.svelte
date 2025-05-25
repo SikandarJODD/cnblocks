@@ -7,7 +7,6 @@
   import Maximize from "@lucide/svelte/icons/maximize";
   import Terminal from "@lucide/svelte/icons/terminal";
   import Check from "@lucide/svelte/icons/check";
-  import CodeBlock from "./CodeBlock.svelte";
   import { CopyButton } from "../ui/copy-button";
   import { scale } from "svelte/transition";
   import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
@@ -36,8 +35,6 @@
     slug,
     previewOnly,
   }: BlockPreviewProps = $props();
-
-
 
   const radioItem =
     "rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
@@ -225,9 +222,9 @@
               </Tooltip>
             </TooltipProvider>
 
-            <Separator class="!h-4" orientation="vertical" />
-
             {#if !Array.isArray(code)}
+              <Separator class="!h-4" orientation="vertical" />
+
               <CopyButton text={code.code} />
             {/if}
           {/if}

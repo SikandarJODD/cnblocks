@@ -18,6 +18,7 @@ export type SupportedLanguage = keyof typeof bundledLanguages;
 export const highlighter = createHighlighterCore({
   themes: [
     import("@shikijs/themes/github-light"),
+    import("@shikijs/themes/github-dark"),
     import("@shikijs/themes/aurora-x"),
   ],
   langs: Object.entries(bundledLanguages).map(([_, lang]) => lang),

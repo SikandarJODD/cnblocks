@@ -9,13 +9,13 @@
   type CodeBlockProps = {
     code: string;
     fileName?: string;
-    lang?: string;
+    lang?: SupportedLanguage;
     class?: string;
   };
   let {
     code = "",
     fileName = "",
-    lang = "shellscript",
+    lang = "bash",
     class: _class = "",
   }: CodeBlockProps = $props();
   let copyCode = new UseClipboard({ delay: 1000 });
@@ -23,19 +23,22 @@
     await copyCode.copy(code);
   };
 
-  import { codeToHtml } from "shiki";
-  import { onMount } from "svelte";
+  // import { codeToHtml } from "shiki";
+  // import { onMount } from "svelte";
+  import Code from "$lib/components/web/code/code.svelte";
+  import type { SupportedLanguage } from "$lib/components/web/code/shiki";
+  import { scale } from "svelte/transition";
 
-  let htmlCode = $state("");
-  onMount(async () => {
-    htmlCode = await codeToHtml(code, {
-      lang: lang,
-      themes: {
-        dark: 'vesper',
-        light: "github-light",
-      },
-    });
-  });
+  // let htmlCode = $state("");
+  // onMount(async () => {
+  //   htmlCode = await codeToHtml(code, {
+  //     lang: lang,
+  //     themes: {
+  //       dark: "github-light",
+  //       light: "github-light",
+  //     },
+  //   });
+  // });
 </script>
 
 <div
@@ -68,17 +71,23 @@
         class="relative flex h-7 w-7 items-center justify-center rounded-md text-foreground outline-none focus-visible:ring-1 dark:text-neutral-500 dark:focus-visible:ring-neutral-800"
       >
         {#if copyCode.status === "success"}
-          <CheckIcon size={14} />
+          <span in:scale={{ start: 0.6 }}>
+            <CheckIcon size={14} />
+          </span>
         {:else}
-          <CopyIcon size={14} />
+          <span in:scale={{ start: 0.6 }}>
+            <CopyIcon size={14} />
+          </span>
         {/if}
       </button>
     </div>
   {/if}
-  <div
+  <!-- <div
     class="relative overflow-x-auto p-4 [&_pre]:!bg-transparent [&_code]:text-sm"
   >
     {@html htmlCode}
-    <!-- {@html htmlCode} -->
+  </div> -->
+  <div>
+    <Code class="border-none" {code} {lang} hideLines={true} />
   </div>
 </div>

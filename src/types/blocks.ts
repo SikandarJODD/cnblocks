@@ -3,6 +3,13 @@ export interface Block {
   title: string;
   category: string;
   preview: string;
-  code: string;
+  code: MistCode | MistCode[];
   component: any;
+}
+
+export interface MistCode {
+  name?: string;
+  code: string;
+  lang?: string;
+  highlight?: (number | [number, number])[];
 }

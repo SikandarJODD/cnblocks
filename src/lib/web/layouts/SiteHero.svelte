@@ -60,7 +60,7 @@
               class="relative max-w-3xl mx-auto mt-8 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-50 dark:via-neutral-300 dark:to-neutral-600 bg-clip-text text-transparent pb-2 font-display text-3xl md:text-4xl lg:mt-16 xl:text-6xl"
             >
               <div
-                class="absolute dark:text-green-400 -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute dark:text-green-400 -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-green-500 text-sm font-normal text-green-500 bg-green-100 dark:bg-green-900/40 rounded-t-sm pr-1.5 pl-1 pt-0.5 underline-offset-3 lg:flex"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@
                 >Free
               </div>
               <div
-                class="absolute top-14 dark:text-yellow-400 -left-24 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute top-14 dark:text-yellow-400 -left-24 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-yellow-500 text-sm font-normal text-yellow-500 bg-yellow-100/80 dark:bg-yellow-900/30 rounded-t-sm pr-1.5 pl-1 pt-0.5 underline-offset-3 lg:flex"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@
                 Templates
               </div>
               <div
-                class="absolute -top-10 -right-24 dark:text-blue-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute -top-10 -right-24 dark:text-blue-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-blue-500 text-sm font-normal text-blue-500 bg-blue-100 dark:bg-blue-900/40 rounded-t-sm pr-1 pl-1.5 pt-0.5 underline-offset-3 lg:flex"
               >
                 Integrations<svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@
                 >
               </div>
               <div
-                class="absolute top-14 -right-28 dark:text-orange-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-muted-foreground text-sm font-normal text-muted-foreground underline-offset-3 lg:flex"
+                class="absolute top-14 -right-28 dark:text-orange-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-orange-500 bg-orange-100 dark:bg-orange-900/40 text-sm font-normal text-orange-500 rounded-t-sm pr-1 pl-1.5 pt-0.5 underline-offset-3 lg:flex"
               >
                 Responsive<svg
                   xmlns="http://www.w3.org/2000/svg"
