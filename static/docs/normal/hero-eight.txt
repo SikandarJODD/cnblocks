@@ -1,0 +1,70 @@
+# HeroEight Normal Block
+
+## Description
+A modern, responsive hero section component featuring a clean navigation header, dynamic content layout, and partner showcase section. The component includes a responsive navigation bar with mobile menu support, a hero section with call-to-action, and a partner logos section. Perfect for modern SaaS and product landing pages.
+
+## File Path
+`$lib/components/blocks/hero/hero-eight.svelte`
+
+## Dependencies
+- **Shadcn Svelte**: Button component from `$lib/components/ui/button/button.svelte`
+- **Lucide Svelte**: Icons from `@lucide/svelte` (Menu, X, Rocket, ArrowRight)
+- **Tailwind CSS**: Utility classes for styling
+
+## Components
+
+### Hero Header
+A responsive navigation bar component that includes:
+- Logo with SVG icon
+- Navigation menu items
+- Mobile menu toggle
+- Sign Up and Login buttons
+- Responsive layout with mobile-first design
+
+## State
+
+### menuState
+`$state(false)` - A reactive boolean controlling the mobile menu's open/closed state. Toggled via a button with `onclick={() => (menuState = !menuState)}`.
+
+### menuItems
+Array of navigation items with name and href properties:
+```javascript
+[
+  { name: "Features", href: "#a" },
+  { name: "Solution", href: "#a" },
+  { name: "Pricing", href: "#a" },
+  { name: "About", href: "#a" }
+]
+```
+
+## Usage
+Import the HeroEight component from the blocks directory and add it to your Svelte page. Ensure Shadcn Svelte, Lucide Svelte, and Tailwind CSS are configured in your project.
+
+### Example
+```svelte
+<script>
+  import HeroEight from "$lib/components/blocks/hero/hero-eight.svelte";
+</script>
+
+<HeroEight />
+```
+
+## Styling
+Uses Tailwind CSS classes:
+
+- **Navigation**: `fixed`, `z-20`, `bg-white`, `backdrop-blur`, `border-b`, `border-dashed`
+- **Hero Section**: `relative`, `pt-24`, `overflow-hidden`
+- **Content**: `max-w-7xl`, `mx-auto`, `px-6`
+- **Partner Logos**: `max-w-5xl`, `flex-wrap`, `gap-x-12`, `gap-y-8`
+
+## Features
+- **Responsive Design**: Mobile-first approach with collapsible menu and adaptive layouts
+- **Navigation**: Clean header with mobile menu and authentication buttons
+- **Hero Section**: Prominent headline with call-to-action and featured image
+- **Partner Showcase**: Grid of partner logos with dark mode support
+
+## Notes
+- **Dark Mode**: Supports dark mode with appropriate color adjustments
+- **Accessibility**: Includes proper ARIA labels and semantic HTML
+- **Performance**: Optimized image loading with proper width/height attributes
+- **Responsive**: Fully responsive design with mobile-first approach

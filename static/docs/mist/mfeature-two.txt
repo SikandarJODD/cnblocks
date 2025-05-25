@@ -1,0 +1,26 @@
+# Mist Feature Two Component
+
+## Description
+A streamlined feature showcase section that presents task management capabilities in a grid layout. The component displays three feature cards with descriptions, focusing on marketing campaigns and AI meeting scheduling features.
+
+## Usage
+```svelte
+<script>
+  import MFeatureTwo from "$lib/components/mist/mfeature/two.svelte";
+</script>
+
+<MFeatureTwo />
+```
+
+## Features
+- Responsive grid layout (1-3 columns based on screen size)
+- Card-based feature presentation with soft variant styling
+- Consistent spacing and typography with responsive text sizing
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Card component with soft variant styling
+- Implements responsive grid using Tailwind CSS
+- Optimized for different screen sizes with semantic HTML

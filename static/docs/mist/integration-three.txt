@@ -1,0 +1,40 @@
+# Integration Three
+
+## Description
+A comprehensive integration showcase with cards, featuring detailed information about each integration.
+
+## Usage
+
+```svelte
+<script>
+  import IntegrationThree from "$lib/components/mist/mintegration/three.svelte";
+</script>
+
+<IntegrationThree />
+```
+
+## Features
+
+- Grid layout of integration cards
+- Each card contains a logo, title, and description
+- Responsive grid (1 column on mobile, 2 on tablet, 3 on desktop)
+- Section title and description
+- Uses IntegrationCard component for consistent styling
+
+## Notes
+
+- Requires the following logo components to be available:
+  - Gemini
+  - GooglePaLM
+  - Replit
+  - MediaWiki
+  - MagicUI
+  - VSCodium
+- Uses IntegrationCard component with the following props:
+  - title: string
+  - description: string
+  - children: Snippet (for logo)
+- Cards use soft variant styling
+- Includes a descriptive section header
+- Automatically centers content with max-width constraints
+- Responsive padding and spacing

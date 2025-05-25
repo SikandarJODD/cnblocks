@@ -1,0 +1,17 @@
+# Hero Block
+
+## Description
+A full-width hero section with a headline, subheadline, and call-to-action button, styled for modern marketing pages.
+
+## Usage
+Import the Hero component and add it to your Svelte page. No props or slots required.
+
+```<script>
+  import Hero from '$lib/components/mist/mhero/two/hero-two.svelte';
+</script>
+
+<Hero />
+```
+
+## Notes
+Responsive design, adjusts layout for mobile and desktop.

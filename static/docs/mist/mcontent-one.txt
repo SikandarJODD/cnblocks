@@ -1,0 +1,27 @@
+# MContent One
+
+## Description
+A sophisticated content section featuring a smart editor interface with AI-powered editing capabilities. The component showcases a modern layout with interactive elements and visual illustrations.
+
+## Usage
+```svelte
+<script>
+  import MContentOne from "$lib/components/mist/mcontent/one.svelte";
+</script>
+
+<MContentOne />
+```
+
+## Features
+- Smart editor interface with formatting controls
+- Interactive schedule illustration
+- Code illustration with import functionality
+- Responsive grid layout
+- Dark mode support
+- Customizable color scheme
+
+## Notes
+- Uses Tailwind CSS for styling
+- Integrates Lucide icons
+- Supports multiple variants (elevated, outlined, mixed)
+- Includes toggle group functionality for text formatting

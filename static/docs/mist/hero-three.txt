@@ -1,0 +1,22 @@
+# Hero Block Three
+
+## Description
+A modern hero section featuring a headline, subheadline, dual call-to-action buttons, trusted company logos, and a large app screenshot. This hero section is designed for SaaS and product landing pages with a focus on building trust through social proof.
+
+## Usage
+Import the Hero component and add it to your Svelte page:
+
+```<script>
+  import Hero from '$lib/components/mist/mhero/three/hero-three.svelte';
+</script>
+
+<Hero />
+```
+
+## Notes
+- Includes a header component with navigation
+- Features a two-column layout with text and image
+- Displays trusted company logos for social proof
+- Responsive design with mobile-first approach
+- Uses a muted background with indigo primary color
+- Includes two CTA buttons: primary and outline variants

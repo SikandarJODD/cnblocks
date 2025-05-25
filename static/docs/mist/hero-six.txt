@@ -1,0 +1,26 @@
+# Hero Block Six
+
+## Description
+A left-aligned hero section featuring a custom logo, headline, subheadline, and a unique design with a background image and overlaid app screenshot. This hero section is designed for modern note-taking applications with a focus on simplicity and visual appeal.
+
+## Usage
+Import the Hero component and add it to your Svelte page:
+
+```<script>
+  import Hero from '$lib/components/mist/mhero/six/hero-six.svelte';
+</script>
+
+<Hero />
+```
+
+## Notes
+- Features a custom MistKit logo with animation effects
+- Left-aligned layout with maximum width constraints
+- Includes a background image with an overlaid app screenshot
+- Responsive design with different padding for mobile and desktop
+- Uses indigo as the primary color
+- Includes two CTA buttons: primary and ghost variants
+- Enhanced visual hierarchy with rounded corners and shadow effects
+- Includes a trusted companies section with logos
+- Custom logo component with gradient background and icon
+- Similar to hero-five but with left-aligned text content

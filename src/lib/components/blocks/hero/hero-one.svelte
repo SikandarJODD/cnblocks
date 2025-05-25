@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  // Shadcn Svelte UI Button Component
   import Button from "$lib/components/ui/button/button.svelte";
 
   // You can store Hero Header Component in seperate file
@@ -13,12 +14,18 @@
   import ChevronRight  from "@lucide/svelte/icons/chevron-right";
   import { scrollY } from "svelte/reactivity/window";
 
-  let menuItems = [
+  type MenuItem = {
+    name: string;
+    href: string;
+  };
+
+  let menuItems: MenuItem[] = [
     { name: "Features", href: "#a" },
     { name: "Solution", href: "#a" },
     { name: "Pricing", href: "#a" },
     { name: "About", href: "#a" },
   ];
+
   let menuState = $state(false);
   let isScrolled = $derived.by(() => {
     if (scrollY.current !== undefined && scrollY.current > 50) {
@@ -28,6 +35,21 @@
   });
 </script>
 
+<!--
+@component
+
+- Hero component with a navigation header, main hero content with call-to-action buttons, and a customer showcase section. The component includes smooth scroll-based animations and a responsive mobile menu.
+
+@example
+```svelte
+<HeroOne />
+
+
+
+```
+
+
+ -->
 <div>
   <!-- Scroll below to see the snippet code  -->
   {@render heroheader()}

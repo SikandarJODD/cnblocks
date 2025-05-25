@@ -4,7 +4,9 @@
 </script>
 
 <Header />
-<main class="bg-muted/50 overflow-hidden [--color-primary:theme(colors.indigo.500)]">
+<main
+  class="bg-muted/50 overflow-hidden [--color-primary:theme(colors.indigo.500)]"
+>
   <section>
     <div class="relative py-24">
       <div class="mx-auto max-w-5xl px-6">
@@ -21,7 +23,7 @@
           <div
             class="flex flex-col items-center gap-3 *:w-full sm:flex-row sm:*:w-fit"
           >
-            <Button variant='mdefault' href="/" size="lg">
+            <Button variant="mdefault" href="/" size="lg">
               <span class="text-nowrap">Start Building</span>
             </Button>
             <Button href="/" size="lg" variant="outline">
@@ -75,7 +77,7 @@
 
         <div class="relative -mr-56 mt-16 sm:mr-0">
           <div
-            class="bg-background rounded-(--radius) relative mx-auto overflow-hidden border border-transparent shadow-lg shadow-black/10 ring-1 ring-black/10"
+            class="bg-background rounded-(--radius) relative mx-auto overflow-hidden border border-transparent shadow-lg shadow-black/10 ring-black/10"
           >
             <img
               src="/mist/tailark-2.png"

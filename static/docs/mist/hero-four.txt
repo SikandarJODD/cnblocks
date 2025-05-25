@@ -1,0 +1,23 @@
+# Hero Block Four
+
+## Description
+A centered hero section with a large headline, subheadline, dual call-to-action buttons, and a unique design featuring a background image with an overlaid app screenshot. This hero section is designed for modern SaaS and product landing pages with a focus on visual appeal and trust building.
+
+## Usage
+Import the Hero component and add it to your Svelte page:
+
+```<script>
+  import Hero from '$lib/components/mist/mhero/four/hero-four.svelte';
+</script>
+
+<Hero />
+```
+
+## Notes
+- Centered layout with maximum width constraints
+- Features a background image with an overlaid app screenshot
+- Includes trusted company logos section
+- Responsive design with different padding for mobile and desktop
+- Uses indigo as the primary color
+- Includes two CTA buttons: primary and outline variants
+- Enhanced visual hierarchy with rounded corners and shadow effects

@@ -4,7 +4,6 @@
   import DOMPurify from "isomorphic-dompurify";
   import { onMount } from "svelte";
   import type { HighlighterCore } from "shiki";
-  // import { CopyButton } from '$lib/components/ui/copy-button';
   import { cn } from "$lib/utils";
 
   const style = tv({
@@ -66,7 +65,6 @@
 
   let hl = $state<HighlighterCore>();
 
-  // let highlighted = $state("");
   let highlighted = $derived(
     DOMPurify.sanitize(
       hl?.codeToHtml(code, {
@@ -103,52 +101,13 @@
   onMount(() => {
     highlighter.then((highlighter) => {
       hl = highlighter;
-      // highlighted = DOMPurify.sanitize(
-      //   hl.codeToHtml(code, {
-      //     lang: lang,
-      //     themes: {
-      //       dark: "aurora-x",
-      //       light: "github-light",
-      //     },
-      //     transformers: [
-      //       {
-      //         pre: (el) => {
-      //           el.properties.style = "";
-
-      //           if (!hideLines) {
-      //             el.properties.class += " line-numbers";
-      //           }
-
-      //           return el;
-      //         },
-      //         line: (node, line) => {
-      //           if (within(line, highlight)) {
-      //             node.properties.class =
-      //               node.properties.class + " line--highlighted";
-      //           }
-
-      //           return node;
-      //         },
-      //       },
-      //     ],
-      //   }) ?? code
-      // );
     });
   });
 </script>
 
 <div class={cn(style({ variant }), className)}>
   {@html highlighted}
-  <!-- {#if !hideCopy}
-		<div
-			class={cn(
-				'absolute top-2 right-2 flex place-items-center justify-center',
-				copyButtonContainerClass
-			)}
-		> -->
-  <!-- <CopyButton text={code} /> -->
-  <!-- </div> -->
-  <!-- {/if} -->
+
 </div>
 
 <style lang="postcss">

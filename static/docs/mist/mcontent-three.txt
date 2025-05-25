@@ -1,0 +1,27 @@
+# MContent Three
+
+## Description
+A clean and modern content section showcasing AI-powered content creation capabilities. Features a large hero image with an overlaid application screenshot.
+
+## Usage
+```svelte
+<script>
+  import MContentThree from "$lib/components/mist/mcontent/three.svelte";
+</script>
+
+<MContentThree />
+```
+
+## Features
+- Hero section with emoji icon
+- Large background image
+- Overlaid application screenshot
+- Responsive design
+- Clean typography
+- Modern layout
+
+## Notes
+- Uses Tailwind CSS for styling
+- Requires external image assets
+- Optimized for different screen sizes
+- Simple and focused design

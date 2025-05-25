@@ -1,0 +1,133 @@
+# HeroSix Normal Block
+
+## Description
+A modern, responsive hero section component featuring a full-width video background, centered content overlay, and a unique parallax scrolling effect. The component includes a clean navigation header, animated text elements, and a floating action button design. Perfect for immersive landing pages and video-based marketing sites.
+
+## File Path
+`$lib/components/blocks/hero/hero-six.svelte`
+
+## Dependencies
+- **Shadcn Svelte**: Button component from `$lib/components/ui/button/button.svelte`
+- **Lucide Svelte**: Icons from `@lucide/svelte`
+- **Tailwind CSS**: Utility classes via `$lib/utils` (cn helper)
+- **Svelte Reactivity**: scrollY from `svelte/reactivity/window` for scroll-based effects
+
+## Snippets
+
+### heroheader
+A snippet defining a responsive navigation bar with a logo, menu items, and buttons. It includes a toggleable mobile menu (visible on small screens) and changes appearance when scrolled (isScrolled). Used via `{@render heroheader()}` in the component's markup.
+
+## State
+
+### menuState
+`$state(false)` - A reactive boolean controlling the mobile menu's open/closed state. Toggled via a button with `onclick={() => (menuState = !menuState)}`.
+
+## Derived State
+
+### isScrolled
+`$derived.by(() => scrollY.current !== undefined && scrollY.current > 50)` - A boolean that returns true when the page is scrolled past 50 pixels, triggering a smaller, blurred navbar with a border.
+
+## Usage
+Import the HeroSix component from the blocks directory and add it to your Svelte page. Ensure Shadcn Svelte, Lucide Svelte, and Tailwind CSS are configured in your project.
+
+### Example
+```svelte
+<script>
+  import HeroSix from "$lib/components/blocks/hero/hero-six.svelte";
+</script>
+
+<HeroSix />
+```
+
+## Styling
+Uses Tailwind CSS classes:
+
+- **Navigation**: `fixed`, `z-20`, `bg-background/50`, `backdrop-blur-lg` (when scrolled), `rounded-2xl`
+- **Hero**: `relative`, `min-h-screen`, `overflow-hidden`
+- **Video**: `absolute`, `inset-0`, `w-full`, `h-full`, `object-cover`
+- **Overlay**: `absolute`, `inset-0`, `bg-black/50`, `flex`, `items-center`, `justify-center`
+
+## Notes
+- **Responsive**: Mobile menu toggles on small screens; video scales appropriately on mobile
+- **Animations**: Scroll-based navbar transitions and parallax scrolling effects
+- **Features**:
+  - Full-width video background
+  - Parallax scrolling effect
+  - Animated text elements
+  - Floating action buttons
+  - Dark mode support
+  - Video fallback image
+  - Custom overlay gradients
+
+## Features
+- Responsive navigation with mobile menu
+- Dashed border header design
+- Email subscription form with icon
+- Feature list with bullet points
+- "New" badge with custom styling
+- App illustration with dark mode variants
+- Dark mode support
+- Smooth animations and transitions
+
+## Notes
+- Uses Tailwind CSS for styling
+- Requires Lucide icons (@lucide/svelte)
+- Implements scroll-based header state management
+- Uses Svelte's built-in state management
+- Includes custom SVG logo implementation
+- Features email form validation
+- Responsive image handling for light/dark modes
+
+## Dependencies
+- @lucide/svelte
+- Tailwind CSS
+- Button component from Shadcn Svelte UI library
+  ```bash
+  # Installation
+  npx shadcn-svelte@next add button
+  ```
+
+## Technical Details
+- Implements scroll-based header transparency using Svelte's reactivity
+- Uses CSS Grid and Flexbox for layout
+- Implements responsive design using Tailwind breakpoints
+- Uses CSS transforms and transitions for smooth animations
+- Implements proper semantic HTML structure
+- Uses CSS custom properties for theme support
+- Features custom badge styling
+- Responsive image handling with dark mode support
+
+## AI/LLM Generation Notes
+- Component uses standard Svelte syntax and conventions
+- State management is handled through Svelte's built-in reactivity
+- Styling is primarily done through Tailwind utility classes
+- Component is self-contained with no required props
+- Uses standard Svelte event handling patterns
+- Implements proper accessibility attributes
+- Uses standard Svelte component structure with script, markup, and style sections
+- Integrates with Shadcn Svelte UI components
+- Custom badge and form implementation
+
+## Implementation Patterns
+1. **State Management**
+   - Uses Svelte's reactive declarations
+   - Implements scroll-based state changes
+   - Manages mobile menu state
+   - Form state handling
+
+2. **Styling Approach**
+   - Tailwind utility classes
+   - CSS custom properties for theming
+   - Responsive design patterns
+   - Shadcn Svelte UI component integration
+   - Custom badge styling
+   - Dashed border design
+   - Dark mode image handling
+
+3. **Component Architecture**
+   - Modular structure
+   - Reusable sub-components
+   - Clean separation of concerns
+   - Integration with Shadcn Svelte UI library
+   - Form handling implementation
+   - Feature list implementation

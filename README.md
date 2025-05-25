@@ -7,7 +7,15 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 
 ![image](./static/og.png)
 
-## 50 New Mist Blocks
+## Documentation
+
+LLM-friendly documentation is in `/static/docs`, with `normal/` for bold, vibrant blocks and `/static/docs/mist` for clean, Notion-inspired blocks. Each file provides usage examples and Tailwind styles for AI code generation.
+
+Docs for Mist Variant : [Visit](/static/docs/mist)
+
+Docs for Normal Variant : [Visit](/static/docs/normal)
+
+## 50+ New Mist Blocks
 
 Visit [Mist Blocks](https://sv-blocks.vercel.app/mist/hero) to see the new blocks.
 

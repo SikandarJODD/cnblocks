@@ -1,0 +1,27 @@
+# MContent Two
+
+## Description
+A variant of the smart editor content section with an alternative layout arrangement. Features the same functionality as MContent One but with a different visual structure.
+
+## Usage
+```svelte
+<script>
+  import MContentTwo from "$lib/components/mist/mcontent/two.svelte";
+</script>
+
+<MContentTwo />
+```
+
+## Features
+- Smart editor interface with formatting tools
+- Schedule illustration with priority indicator
+- Code illustration with import functionality
+- Responsive grid layout
+- Dark mode support
+- Customizable color scheme
+
+## Notes
+- Uses Tailwind CSS for styling
+- Integrates Lucide icons
+- Supports multiple variants (elevated, outlined, mixed)
+- Includes toggle group functionality for text formatting

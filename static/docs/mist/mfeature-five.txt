@@ -1,0 +1,27 @@
+# Mist Feature Five Component
+
+## Description
+A feature showcase section that highlights AI coding assistant capabilities with a clean, modern design. The component includes a main heading, feature descriptions with icons, and a large screenshot display of the application interface.
+
+## Usage
+```svelte
+<script>
+  import MFeatureFive from "$lib/components/mist/mfeature/five.svelte";
+</script>
+
+<MFeatureFive />
+```
+
+## Features
+- Responsive grid layout with icon-based feature highlights
+- Large screenshot display with shadow and border effects
+- Muted background styling with dark mode support
+- Call-to-action button with responsive image handling
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with responsive grid layout
+- Implements proper image handling and accessibility
+- Features muted background with consistent typography

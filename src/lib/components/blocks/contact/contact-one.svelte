@@ -7,6 +7,19 @@
   import { Textarea } from "$lib/components/ui/textarea";
 </script>
 
+<!--
+@component
+
+- A component that displays a contact form.
+
+@example
+```svelte
+<ContactOne />
+```
+
+
+ -->
+
 <section class="py-32">
   <div class="mx-auto max-w-3xl px-8 lg:px-0">
     <h1 class="text-center text-4xl font-semibold lg:text-5xl">
@@ -20,7 +33,7 @@
       <div>
         <h2 class="text-xl font-semibold">Let's get you to the right place</h2>
         <p class="mt-4 text-sm">
-          Reach out to our sales team! We’re eager to learn more about how you
+          Reach out to our sales team! We're eager to learn more about how you
           plan to use our application.
         </p>
       </div>

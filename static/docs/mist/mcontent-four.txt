@@ -1,0 +1,28 @@
+# MContent Four
+
+## Description
+A feature-rich content section highlighting AI content creation capabilities with statistics and key features. Includes a responsive grid layout and animated statistics display.
+
+## Usage
+```svelte
+<script>
+  import MContentFour from "$lib/components/mist/mcontent/four.svelte";
+</script>
+
+<MContentFour />
+```
+
+## Features
+- Feature cards with emoji icons
+- Statistics display with arrow indicators
+- Responsive grid layout
+- Container queries support
+- Clean typography
+- Modern design elements
+
+## Notes
+- Uses Tailwind CSS for styling
+- Integrates Lucide icons
+- Supports container queries
+- Customizable statistics data
+- Responsive grid system

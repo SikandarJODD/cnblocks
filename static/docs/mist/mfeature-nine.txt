@@ -1,0 +1,27 @@
+# Mist Feature Nine Component
+
+## Description
+A vertically stacked feature showcase section that presents AI-driven solutions in an alternating layout. Each feature combines an illustration card with descriptive text, creating a balanced and engaging presentation of the product's capabilities.
+
+## Usage
+```svelte
+<script>
+  import MFeatureNine from "$lib/components/mist/mfeature/nine.svelte";
+</script>
+
+<MFeatureNine />
+```
+
+## Features
+- Centered layout with alternating feature presentation
+- Interactive card illustrations with hover animations
+- User avatar displays with AI assistant interface
+- Dark mode support with gradient mask effects
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with custom snippets for illustrations
+- Implements hover animations and user avatar management
+- Features responsive design with accessibility support

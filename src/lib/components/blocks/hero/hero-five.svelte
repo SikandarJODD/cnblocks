@@ -20,6 +20,7 @@
     { name: "Pricing", href: "#a" },
     { name: "About", href: "#a" },
   ];
+
   let menuState = $state(false);
   let isScrolled = $derived.by(() => {
     if (scrollY.current !== undefined && scrollY.current > 50) {
@@ -28,6 +29,8 @@
     return false;
   });
 </script>
+
+
 
 <!-- Scroll below to see the snippet code  -->
 {@render heroHeader()}

@@ -7,6 +7,7 @@
   import Card from "$lib/components/ui/card/card.svelte";
   import { cn } from "$lib/utils";
 
+  // Lucide Icons
   import BoldIcon from "@lucide/svelte/icons/bold";
   import Calendar1 from "@lucide/svelte/icons/calendar-1";
   import Ellipsis from "@lucide/svelte/icons/ellipsis";
@@ -19,6 +20,7 @@
     variant?: "elevated" | "outlined" | "mixed";
   };
 </script>
+
 
 <section
   class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)]"

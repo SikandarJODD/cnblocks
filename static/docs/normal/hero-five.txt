@@ -1,0 +1,60 @@
+# HeroFive Normal Block
+
+## Description
+A modern, responsive hero section component featuring a centered layout with a large headline, animated statistics, and a unique particle background effect. The component includes a clean navigation header, call-to-action buttons, and a floating elements design. Perfect for data-driven landing pages and marketing sites.
+
+## File Path
+`$lib/components/blocks/hero/hero-five.svelte`
+
+## Dependencies
+- **Shadcn Svelte**: Button component from `$lib/components/ui/button/button.svelte`
+- **Lucide Svelte**: Icons from `@lucide/svelte`
+- **Tailwind CSS**: Utility classes via `$lib/utils` (cn helper)
+- **Svelte Reactivity**: scrollY from `svelte/reactivity/window` for scroll-based effects
+
+## Snippets
+
+### heroheader
+A snippet defining a responsive navigation bar with a logo, menu items, and buttons. It includes a toggleable mobile menu (visible on small screens) and changes appearance when scrolled (isScrolled). Used via `{@render heroheader()}` in the component's markup.
+
+## State
+
+### menuState
+`$state(false)` - A reactive boolean controlling the mobile menu's open/closed state. Toggled via a button with `onclick={() => (menuState = !menuState)}`.
+
+## Derived State
+
+### isScrolled
+`$derived.by(() => scrollY.current !== undefined && scrollY.current > 50)` - A boolean that returns true when the page is scrolled past 50 pixels, triggering a smaller, blurred navbar with a border.
+
+## Usage
+Import the HeroFive component from the blocks directory and add it to your Svelte page. Ensure Shadcn Svelte, Lucide Svelte, and Tailwind CSS are configured in your project.
+
+### Example
+```svelte
+<script>
+  import HeroFive from "$lib/components/blocks/hero/hero-five.svelte";
+</script>
+
+<HeroFive />
+```
+
+## Styling
+Uses Tailwind CSS classes:
+
+- **Navigation**: `fixed`, `z-20`, `bg-background/50`, `backdrop-blur-lg` (when scrolled), `rounded-2xl`
+- **Hero**: `flex`, `flex-col`, `items-center`, `text-center`, `min-h-screen`, `relative`
+- **Stats**: `grid`, `grid-cols-3`, `gap-8`, `mt-12`
+- **Particles**: `absolute`, `inset-0`, `-z-10`, `opacity-50`
+
+## Notes
+- **Responsive**: Mobile menu toggles on small screens; stats adjust to single column on mobile
+- **Animations**: Scroll-based navbar transitions and floating particle effects
+- **Features**:
+  - Animated statistics with counters
+  - Particle background effect
+  - Floating elements design
+  - Dark mode support
+  - Custom SVG illustrations
+  - Responsive typography
+  - Interactive hover states

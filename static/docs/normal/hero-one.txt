@@ -1,0 +1,53 @@
+# HeroOne Normal Block
+
+## Description
+A bold, full-width hero section with a gradient background, responsive navigation header, call-to-action buttons, and a customer showcase. Designed for vibrant marketing pages, it features smooth scroll-based animations and a toggleable mobile menu.
+
+## File Path
+`$lib/components/blocks/hero-one.svelte`
+
+## Dependencies
+- **Shadcn Svelte**: Button component from `$lib/components/ui/button/button.svelte`
+- **Lucide Svelte**: Icons (Menu, X, ArrowRight, ChevronRight) from `@lucide/svelte/icons/*`
+- **Tailwind CSS**: Utility classes via `$lib/utils` (cn helper)
+- **Svelte Reactivity**: scrollY from `svelte/reactivity/window` for scroll-based effects
+
+## Snippets
+
+### heroheader
+A snippet defining a responsive navigation bar with a logo, menu items, and buttons. It includes a toggleable mobile menu (visible on small screens) and changes appearance when scrolled (isScrolled). Used via `{@render heroheader()}` in the component's markup.
+
+## State
+
+### menuState
+`$state(false)` - A reactive boolean controlling the mobile menu's open/closed state. Toggled via a button with `onclick={() => (menuState = !menuState)}`.
+
+## Derived State
+
+### isScrolled
+`$derived.by(() => scrollY.current !== undefined && scrollY.current > 50)` - A boolean that returns true when the page is scrolled past 50 pixels, triggering a smaller, blurred navbar with a border.
+
+## Usage
+Import the HeroOne component from the blocks directory and add it to your Svelte page. Ensure Shadcn Svelte, Lucide Svelte, and Tailwind CSS are configured in your project.
+
+### Example
+```svelte
+<script>
+  import HeroOne from '$lib/components/blocks/hero-one.svelte';
+</script>
+
+<HeroOne />
+```
+
+## Styling
+Uses Tailwind CSS classes:
+
+- **Navigation**: `fixed`, `z-20`, `bg-background/50`, `backdrop-blur-lg` (when scrolled), `rounded-2xl`
+- **Hero**: `bg-gradient-to-r`, `from-blue-600`, `to-purple-600` (via var(--color-background)), `text-white`, `py-24`, `text-center`
+- **Customer Showcase**: `grid`, `grid-cols-4`, `gap-x-12`, `group-hover:blur-xs`
+
+## Notes
+- **Responsive**: Mobile menu toggles on small screens; customer logos adjust to a single column on mobile
+- **Animations**: Scroll-based navbar transitions and hover effects on customer showcase
+- **Variant**: This is the Normal variant, with bold colors and gradients. For a clean, Notion-inspired version, use MHeroOne from `$lib/components/mist/mhero-one.svelte`
+

@@ -41,7 +41,7 @@
           />
 
           <div
-            class="bg-background rounded-(--radius) relative m-4 overflow-hidden border border-transparent shadow-xl shadow-black/15 ring-1 ring-black/10 sm:m-8 md:m-12"
+            class="bg-background rounded-(--radius) relative m-4 overflow-hidden border border-transparent shadow-xl shadow-black/15 ring-1  sm:m-8 md:m-12"
           >
             <img
               src="/mist/tailark-2.png"

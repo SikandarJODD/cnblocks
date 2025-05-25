@@ -1,0 +1,35 @@
+# Integration One
+
+## Description
+A simple horizontal integration showcase component that displays a row of integration logos with a label.
+
+## Usage
+
+```svelte
+<script>
+  import IntegrationOne from "$lib/components/mist/mintegration/one.svelte";
+</script>
+
+<IntegrationOne />
+```
+
+## Features
+
+- Displays integration logos in a horizontal layout
+- Includes a "Integrate with:" label
+- Responsive design with flex layout
+- Divides logos with vertical separators
+- Uses consistent sizing for all logos
+
+## Notes
+
+- Requires the following logo components to be available:
+  - Gemini
+  - GooglePaLM
+  - Replit
+  - MediaWiki
+  - MagicUI
+  - VSCodium
+- Logos are sized at 5 units (size-5)
+- Uses muted foreground color for the label text
+- Automatically centers content with max-width constraints

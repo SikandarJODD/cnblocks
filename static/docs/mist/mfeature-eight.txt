@@ -1,0 +1,27 @@
+# Mist Feature Eight Component
+
+## Description
+A streamlined feature showcase section that combines a full-width hero card with three feature cards below. The component features a large screenshot display in the hero section and simple, clean feature cards with icons and descriptions.
+
+## Usage
+```svelte
+<script>
+  import MFeatureEight from "$lib/components/mist/mfeature/eight.svelte";
+</script>
+
+<MFeatureEight />
+```
+
+## Features
+- Full-width hero card with large screenshot display
+- Three-column grid with icon-based feature highlights
+- Clean, minimal design with gradient mask effects
+- Responsive image handling with custom border radius
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with full-width hero section
+- Implements gradient masks and proper image handling
+- Features responsive design with consistent typography

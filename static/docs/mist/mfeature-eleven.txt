@@ -1,0 +1,27 @@
+# Mist Feature Eleven Component
+
+## Description
+A marketing-focused feature showcase section that combines a full-width hero card with a background image and a grid of feature highlights. The component features an AI assistant interface overlay and three key marketing capabilities presented in a responsive grid.
+
+## Usage
+```svelte
+<script>
+  import MFeatureEleven from "$lib/components/mist/mfeature/eleven.svelte";
+</script>
+
+<MFeatureEleven />
+```
+
+## Features
+- Full-width hero card with background image overlay
+- Three-column feature grid with container queries
+- Interactive AI assistant interface with hover animations
+- Responsive typography with gradient mask effects
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with container query-based layout
+- Implements background image overlay and gradient masks
+- Features responsive design with accessibility support

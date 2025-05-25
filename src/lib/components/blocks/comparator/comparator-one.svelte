@@ -1,8 +1,16 @@
-<script>
+<script lang="ts">
   import Button from "$lib/components/ui/button/button.svelte";
   import Cpu from "@lucide/svelte/icons/cpu";
   import Sparkles from "@lucide/svelte/icons/sparkles";
-  const tableData = [
+
+  type TableData = {
+    feature: string;
+    free: string | boolean;
+    pro: string | boolean;
+    startup: string | boolean;
+  };
+
+  let tableData: TableData[] = [
     {
       feature: "Feature 1",
       free: true,
@@ -48,6 +56,19 @@
   ];
 </script>
 
+<!--
+@component
+
+- A component that compares free, pro and startup plans.
+
+@example
+```svelte
+<ComparatorOne />
+```
+
+@param {Object} tableData - The data for the table .
+-->
+
 <section class="py-16 md:py-32">
   <div class="mx-auto max-w-5xl px-6">
     <div class="w-full overflow-auto lg:overflow-visible">
@@ -86,7 +107,7 @@
             <tr class="*:border-b *:py-3">
               <td class="text-muted-foreground">{row.feature}</td>
               <td>
-                {#if typeof row.free === 'boolean' && row.free}
+                {#if typeof row.free === "boolean" && row.free}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -105,7 +126,7 @@
               </td>
               <td class="bg-muted border-none px-4">
                 <div class="-mb-3 border-b py-3">
-                  {#if typeof row.pro === 'boolean' && row.pro}
+                  {#if typeof row.pro === "boolean" && row.pro}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -124,7 +145,7 @@
                 </div>
               </td>
               <td>
-                {#if typeof row.startup ==='boolean' && row.startup}
+                {#if typeof row.startup === "boolean" && row.startup}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -156,7 +177,7 @@
             <tr class="*:border-b *:py-3">
               <td class="text-muted-foreground">{row.feature}</td>
               <td>
-                {#if typeof row.free === 'boolean' && row.free}
+                {#if typeof row.free === "boolean" && row.free}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -173,7 +194,7 @@
               </td>
               <td class="bg-muted border-none px-4">
                 <div class="-mb-3 border-b py-3">
-                  {#if typeof row.pro === 'boolean' && row.pro}
+                  {#if typeof row.pro === "boolean" && row.pro}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -192,7 +213,7 @@
                 </div>
               </td>
               <td>
-                {#if typeof row.startup ==='boolean' && row.startup}
+                {#if typeof row.startup === "boolean" && row.startup}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

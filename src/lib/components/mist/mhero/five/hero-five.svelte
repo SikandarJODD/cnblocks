@@ -21,7 +21,7 @@
       <div
         class="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:justify-center sm:*:w-auto"
       >
-        <Button variant='mdefault'>
+        <Button variant="mdefault">
           <span class="text-nowrap">Get Started</span>
         </Button>
         <Button variant="ghost">
@@ -40,7 +40,7 @@
       />
 
       <div
-        class="bg-background rounded-(--radius) relative m-4 overflow-hidden border border-transparent shadow-xl shadow-black/15 ring-1 ring-black/10 sm:m-8 md:m-12"
+        class="bg-background rounded-(--radius) relative m-4 overflow-hidden border border-transparent shadow-xl shadow-black/15 ring-1 sm:m-8 md:m-12"
       >
         <img
           src="/mist/tailark-2.png"

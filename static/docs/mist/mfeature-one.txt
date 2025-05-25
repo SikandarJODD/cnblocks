@@ -1,0 +1,27 @@
+# Mist Feature One Component
+
+## Description
+A modern feature showcase section that highlights task management capabilities with a clean, professional design. The component includes a feature table, marketing campaign showcase, AI meeting scheduler, and a testimonial section.
+
+## Usage
+```svelte
+<script>
+  import MFeatureOne from "$lib/components/mist/mfeature/one.svelte";
+</script>
+
+<MFeatureOne />
+```
+
+## Features
+- Responsive grid layout with dark mode support
+- Feature table and marketing campaign showcase
+- AI meeting scheduler with testimonial section
+- Custom color theming through CSS variables
+
+## Props
+No direct props required. The component uses theme colors and styling through CSS variables.
+
+## Notes
+- Uses Card and FeatureTable components from UI library
+- Implements responsive design with semantic HTML
+- Includes accessibility features for decorative elements

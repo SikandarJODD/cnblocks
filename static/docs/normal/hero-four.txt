@@ -1,0 +1,133 @@
+# HeroFour Normal Block
+
+## Description
+A modern, responsive hero section component featuring a split layout design with an image on one side and content on the other. The component includes a clean navigation header, animated content sections, and a unique gradient background effect. Perfect for showcasing product features or company information.
+
+## File Path
+`$lib/components/blocks/hero/hero-four.svelte`
+
+## Dependencies
+- **Shadcn Svelte**: Button component from `$lib/components/ui/button/button.svelte`
+- **Lucide Svelte**: Icons from `@lucide/svelte`
+- **Tailwind CSS**: Utility classes via `$lib/utils` (cn helper)
+- **Svelte Reactivity**: scrollY from `svelte/reactivity/window` for scroll-based effects
+
+## Snippets
+
+### heroheader
+A snippet defining a responsive navigation bar with a logo, menu items, and buttons. It includes a toggleable mobile menu (visible on small screens) and changes appearance when scrolled (isScrolled). Used via `{@render heroheader()}` in the component's markup.
+
+## State
+
+### menuState
+`$state(false)` - A reactive boolean controlling the mobile menu's open/closed state. Toggled via a button with `onclick={() => (menuState = !menuState)}`.
+
+## Derived State
+
+### isScrolled
+`$derived.by(() => scrollY.current !== undefined && scrollY.current > 50)` - A boolean that returns true when the page is scrolled past 50 pixels, triggering a smaller, blurred navbar with a border.
+
+## Usage
+Import the HeroFour component from the blocks directory and add it to your Svelte page. Ensure Shadcn Svelte, Lucide Svelte, and Tailwind CSS are configured in your project.
+
+### Example
+```svelte
+<script>
+  import HeroFour from "$lib/components/blocks/hero/hero-four.svelte";
+</script>
+
+<HeroFour />
+```
+
+## Styling
+Uses Tailwind CSS classes:
+
+- **Navigation**: `fixed`, `z-20`, `bg-background/50`, `backdrop-blur-lg` (when scrolled), `rounded-2xl`
+- **Hero**: `grid`, `grid-cols-2`, `gap-8`, `items-center`, `min-h-screen`
+- **Content**: `flex`, `flex-col`, `gap-6`, `text-left`
+- **Image**: `relative`, `aspect-square`, `rounded-2xl`, `overflow-hidden`
+
+## Notes
+- **Responsive**: Mobile menu toggles on small screens; layout switches to single column on mobile
+- **Animations**: Scroll-based navbar transitions and content fade-in effects
+- **Features**:
+  - Split layout design with image and content
+  - Animated content sections
+  - Unique gradient background effects
+  - Dark mode support
+  - Responsive image handling
+  - Custom SVG illustrations
+  - Content alignment options
+
+## Features
+- Responsive navigation with mobile menu
+- Scroll-based header transparency
+- Split layout hero content
+- Animated customer logo marquee
+- Progressive blur effects
+- Call-to-action buttons
+- Dark mode support
+- Smooth animations and transitions
+
+## Notes
+- Uses Tailwind CSS for styling
+- Requires Lucide icons (@lucide/svelte)
+- Implements scroll-based header state management
+- Uses Svelte's built-in state management
+- Includes custom Marquee component
+- Features progressive blur effects
+- TypeScript support
+
+## Dependencies
+- @lucide/svelte
+- Tailwind CSS
+- Button component from Shadcn Svelte UI library
+- Custom Marquee component
+  ```bash
+  # Installation
+  npx shadcn-svelte@next add button
+  ```
+
+## Technical Details
+- Implements scroll-based header transparency using Svelte's reactivity
+- Uses CSS Grid and Flexbox for layout
+- Implements responsive design using Tailwind breakpoints
+- Uses CSS transforms and transitions for smooth animations
+- Implements proper semantic HTML structure
+- Uses CSS custom properties for theme support
+- Features progressive blur effects using custom component
+- TypeScript type definitions for props
+
+## AI/LLM Generation Notes
+- Component uses standard Svelte syntax and conventions
+- State management is handled through Svelte's built-in reactivity
+- Styling is primarily done through Tailwind utility classes
+- Component is self-contained with no required props
+- Uses standard Svelte event handling patterns
+- Implements proper accessibility attributes
+- Uses standard Svelte component structure with script, markup, and style sections
+- Integrates with Shadcn Svelte UI components
+- TypeScript integration for better type safety
+
+## Implementation Patterns
+1. **State Management**
+   - Uses Svelte's reactive declarations
+   - Implements scroll-based state changes
+   - Manages mobile menu state
+   - TypeScript state typing
+
+2. **Styling Approach**
+   - Tailwind utility classes
+   - CSS custom properties for theming
+   - Responsive design patterns
+   - Shadcn Svelte UI component integration
+   - Progressive blur effects
+   - Custom Marquee component styling
+
+3. **Component Architecture**
+   - Modular structure
+   - Reusable sub-components
+   - Clean separation of concerns
+   - Integration with Shadcn Svelte UI library
+   - TypeScript type definitions
+   - Custom component integration

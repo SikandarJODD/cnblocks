@@ -1,0 +1,38 @@
+# Integration Two
+
+## Description
+A centered integration showcase component with a title, logo grid, and a call-to-action button.
+
+## Usage
+
+```svelte
+<script>
+  import IntegrationTwo from "$lib/components/mist/mintegration/two.svelte";
+</script>
+
+<IntegrationTwo />
+```
+
+## Features
+
+- Centered layout with title and description
+- Grid of integration logos with background styling
+- Call-to-action button for more integrations
+- Responsive design
+- Rounded corners on the logo grid
+- Consistent logo sizing
+
+## Notes
+
+- Requires the following logo components to be available:
+  - Gemini
+  - GooglePaLM
+  - Replit
+  - MediaWiki
+  - MagicUI
+  - VSCodium
+- Uses Button component from UI library
+- Logos are sized at 8 units (size-8)
+- Includes a "More Integrations" button with outline variant
+- Uses subtle background colors for logo containers
+- Automatically centers content with max-width constraints

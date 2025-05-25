@@ -1,0 +1,45 @@
+# Integration Card
+
+A reusable card component for displaying integration information with a logo, title, and description.
+
+## Usage
+
+```svelte
+<script>
+  import IntegrationCard from "$lib/components/mist/mintegration/integration-card.svelte";
+  import YourLogo from "./your-logo.svelte";
+</script>
+
+<IntegrationCard
+  title="Integration Name"
+  description="Description of the integration"
+>
+  <YourLogo />
+</IntegrationCard>
+```
+
+## Props
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| title | string | Yes | The title of the integration |
+| description | string | Yes | A brief description of the integration |
+| children | Snippet | No | The logo component to be displayed |
+
+## Features
+
+- Soft variant card styling
+- Consistent spacing and layout
+- Logo container with fixed size
+- Title with semibold font weight
+- Description with muted foreground color
+- Line clamping for description (2 lines)
+
+## Notes
+
+- Uses Card component from UI library
+- Requires Button component from UI library
+- Logo container is sized at 10 units (size-10)
+- Description text is limited to 2 lines with line-clamp
+- Uses muted foreground color for description text
+- Includes proper spacing between elements

@@ -1,0 +1,27 @@
+# Mist Feature Ten Component
+
+## Description
+A marketing-focused feature showcase section that presents AI-driven solutions in a grid layout. The component features a prominent AI assistant card at the top, followed by two feature cards below, each with its own illustration and description.
+
+## Usage
+```svelte
+<script>
+  import MFeatureTen from "$lib/components/mist/mfeature/ten.svelte";
+</script>
+
+<MFeatureTen />
+```
+
+## Features
+- Centered layout with full-width AI assistant card
+- Two-column grid with interactive illustrations
+- Hover animations and user avatar displays
+- Dark mode support with gradient mask effects
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with custom snippets for illustrations
+- Implements hover animations and user avatar management
+- Features responsive design with accessibility support

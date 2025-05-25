@@ -1,0 +1,29 @@
+# Mist Feature Four Component
+
+## Description
+A feature showcase section that demonstrates AI integration capabilities with a muted background and interactive illustrations. The component includes two feature cards with custom illustrations for code and scheduling features, using a mixed variant style for enhanced visual appeal.
+
+## Usage
+```svelte
+<script>
+  import MFeatureFour from "$lib/components/mist/mfeature/four.svelte";
+</script>
+
+<MFeatureFour />
+```
+
+## Features
+- Muted background with mixed variant card styling
+- Interactive illustrations with toggle groups and gradient masks
+- Responsive grid layout with dark mode support
+- Animated UI elements and custom button components
+
+## Props
+### IllustrationProps for CodeIllustration and ScheduleIllustration Snippets
+- `_class`: string (optional) - Additional CSS classes
+- `variant`: "elevated" | "outlined" | "mixed" (optional) - Visual style variant
+
+## Notes
+- Uses Lucide icons with custom snippets for illustrations
+- Implements muted background and mixed variant styling
+- Features responsive design with accessibility support

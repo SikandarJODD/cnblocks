@@ -1,0 +1,29 @@
+# Mist Feature Three Component
+
+## Description
+An advanced feature showcase section that demonstrates AI integration capabilities with interactive illustrations. The component includes two main feature cards with custom illustrations for code and scheduling features, along with interactive UI elements.
+
+## Usage
+```svelte
+<script>
+  import MFeatureThree from "$lib/components/mist/mfeature/three.svelte";
+</script>
+
+<MFeatureThree />
+```
+
+## Features
+- Interactive illustrations with custom snippets and toggle groups
+- Responsive grid layout with dark mode support
+- Code and schedule illustrations with gradient masks
+- Animated UI elements and custom button components
+
+## Props
+### IllustrationProps for CodeIllustration and ScheduleIllustration Snippets
+- `_class`: string (optional) - Additional CSS classes
+- `variant`: "elevated" | "outlined" | "mixed" (optional) - Visual style variant
+
+## Notes
+- Uses Lucide icons with custom snippets for illustrations
+- Implements interactive toggle groups and button variants
+- Features responsive design with accessibility support

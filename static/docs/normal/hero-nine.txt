@@ -1,0 +1,60 @@
+# HeroNine Normal Block
+
+## Description
+A modern, responsive hero section component featuring a dynamic pricing table layout, animated feature highlights, and a unique gradient orb background. The component includes a clean navigation header, interactive pricing cards, and a floating elements design. Perfect for SaaS products and subscription-based services.
+
+## File Path
+`$lib/components/blocks/hero/hero-nine.svelte`
+
+## Dependencies
+- **Shadcn Svelte**: Button component from `$lib/components/ui/button/button.svelte`
+- **Lucide Svelte**: Icons from `@lucide/svelte`
+- **Tailwind CSS**: Utility classes via `$lib/utils` (cn helper)
+- **Svelte Reactivity**: scrollY from `svelte/reactivity/window` for scroll-based effects
+
+## Snippets
+
+### heroheader
+A snippet defining a responsive navigation bar with a logo, menu items, and buttons. It includes a toggleable mobile menu (visible on small screens) and changes appearance when scrolled (isScrolled). Used via `{@render heroheader()}` in the component's markup.
+
+## State
+
+### menuState
+`$state(false)` - A reactive boolean controlling the mobile menu's open/closed state. Toggled via a button with `onclick={() => (menuState = !menuState)}`.
+
+## Derived State
+
+### isScrolled
+`$derived.by(() => scrollY.current !== undefined && scrollY.current > 50)` - A boolean that returns true when the page is scrolled past 50 pixels, triggering a smaller, blurred navbar with a border.
+
+## Usage
+Import the HeroNine component from the blocks directory and add it to your Svelte page. Ensure Shadcn Svelte, Lucide Svelte, and Tailwind CSS are configured in your project.
+
+### Example
+```svelte
+<script>
+  import HeroNine from "$lib/components/blocks/hero/hero-nine.svelte";
+</script>
+
+<HeroNine />
+```
+
+## Styling
+Uses Tailwind CSS classes:
+
+- **Navigation**: `fixed`, `z-20`, `bg-background/50`, `backdrop-blur-lg` (when scrolled), `rounded-2xl`
+- **Hero**: `relative`, `min-h-screen`, `overflow-hidden`
+- **Pricing**: `grid`, `grid-cols-3`, `gap-8`, `mt-12`
+- **Orb**: `absolute`, `inset-0`, `-z-10`, `opacity-20`
+
+## Notes
+- **Responsive**: Mobile menu toggles on small screens; pricing cards adjust to single column on mobile
+- **Animations**: Scroll-based navbar transitions and pricing card hover effects
+- **Features**:
+  - Dynamic pricing table layout
+  - Animated feature highlights
+  - Gradient orb background
+  - Dark mode support
+  - Custom SVG illustrations
+  - Interactive pricing cards
+  - Smooth transitions

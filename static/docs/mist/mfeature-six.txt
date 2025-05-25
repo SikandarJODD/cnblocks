@@ -1,0 +1,27 @@
+# Mist Feature Six Component
+
+## Description
+A comprehensive feature showcase section that presents AI-driven development solutions through three interactive cards. Each card features a unique illustration with hover effects, user avatars, and interactive elements demonstrating different AI capabilities.
+
+## Usage
+```svelte
+<script>
+  import MFeatureSix from "$lib/components/mist/mfeature/six.svelte";
+</script>
+
+<MFeatureSix />
+```
+
+## Features
+- Three-column responsive grid with interactive card illustrations
+- Hover animations and user avatar displays
+- AI assistant interface with code review visualization
+- Dark mode support with custom button variants
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with custom snippets for illustrations
+- Implements hover animations and user avatar management
+- Features responsive design with accessibility support

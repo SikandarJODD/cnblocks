@@ -1,0 +1,27 @@
+# Mist Feature Seven Component
+
+## Description
+An advanced feature showcase section that combines a full-width hero card with three feature cards below. The component includes interactive illustrations, user avatars, and a large screenshot display, all with hover effects and animations.
+
+## Usage
+```svelte
+<script>
+  import MFeatureSeven from "$lib/components/mist/mfeature/seven.svelte";
+</script>
+
+<MFeatureSeven />
+```
+
+## Features
+- Full-width hero card with large screenshot display
+- Three-column grid with interactive illustrations
+- Hover animations and user avatar displays
+- Dark mode support with gradient mask effects
+
+## Props
+No direct props required. The component uses default styling and layout classes.
+
+## Notes
+- Uses Lucide icons with custom snippets for illustrations
+- Implements hover animations and user avatar management
+- Features responsive design with accessibility support
