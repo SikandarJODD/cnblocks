@@ -21,10 +21,11 @@
 </script>
 
 <header class="[--color-primary:theme(colors.indigo.500)]">
+  <!-- add `fixed` class below to make it fixed on top -->
   <nav
     data-state={menuState && "active"}
     class={cn(
-      "fixed z-20 w-full transition-all duration-300",
+      "z-20 w-full transition-all duration-300",
       isScrolled && "bg-background/75 border-b border-black/5 backdrop-blur-lg"
     )}
   >
