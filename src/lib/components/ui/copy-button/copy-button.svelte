@@ -75,7 +75,7 @@
         {/if}
       </Button>
     </TooltipTrigger>
-    <TooltipContent align="start" side="top" class="px-2 py-1 text-[10px]"
+    <TooltipContent align='center' side="top" class="px-2 py-1 text-[10px]"
       >Copy Code</TooltipContent
     >
   </Tooltip>

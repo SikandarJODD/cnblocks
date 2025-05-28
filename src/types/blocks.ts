@@ -1,10 +1,12 @@
+import type { Component } from "svelte";
+
 export interface Block {
   slug: string;
   title: string;
   category: string;
   preview: string;
   code: MistCode | MistCode[];
-  component: any;
+  component: Component;
 }
 
 export interface MistCode {
