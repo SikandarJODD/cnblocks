@@ -119,9 +119,9 @@
       <div
         class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
       >
-        <div class="space-y-4 pl-8 pt-1">
+        <div class="space-y-4 pb-10 pl-8 pt-1">
           <h2 class="font-medium text-primary">Add Cursor Rules</h2>
-          <p>
+          <p class="text-muted-foreground text-sm">
             Create new file in <code
               class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
               >.cursor/rules</code
@@ -217,7 +217,7 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
         class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
       >
         <div class="space-y-4 pb-10 pl-8 pt-1">
-          <h2 class="font-medium text-primary">Example Prompt for Cursor</h2>
+          <h2 class="font-medium text-primary">Example Prompt</h2>
           <DocsCodeBlock
             fileName="Terminal"
             code={`Hey can you create a landing page using \`jsrepo\` and using \`@sv/cnblocks\` \nwhich should include hero section with Notion Mist Style, \nContent Setion, Feature Section, CTA and Footer with \nResponsive UI and Notion style theme related \nto SASS Product with good Content and Images.`}
