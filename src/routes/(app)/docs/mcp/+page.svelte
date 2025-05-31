@@ -35,16 +35,11 @@
       <p
         class="text-[16px] font-normal leading-relaxed text-black/80 dark:text-primary/50"
       >
-        Add MCP Server to your project to use it with Cursor | Windsurf.
-      </p>
-      <p
-        class="text-[16px] font-normal leading-relaxed text-black/80 dark:text-primary/50"
-      >
         Here we are using <a
-          href="https://jsrepo.dev"
+          href="https://jsrepo.dev/docs/registry/mcp"
           target="_blank"
           rel="noopener"
-          class="text-yellow-500 underline underline-offset-2">jsrepo CLI</a
+          class="text-yellow-500 underline underline-offset-2">jsrepo</a
         > to integrate MCP Server to your project.
       </p>
     </div>
@@ -63,14 +58,13 @@
           <h2 class="font-medium text-primary">Cursor Usage</h2>
           <p class="text-muted-foreground text-sm">
             Add the following code to your <code
-              class="font-mono text-primary bg-secondary rounded-md px-1"
+              class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
               >.cursor/mcp.json</code
             > file:
           </p>
           <DocsCodeBlock
             fileName="Terminal"
-            code={`
-    {
+            code={`   {
     	"mcpServers": {
     		"jsrepo": {
     			"command": "npx",
@@ -96,14 +90,13 @@
           <h2 class="font-medium text-primary">Windsurf Usage</h2>
           <p class="text-muted-foreground text-sm">
             Add the following code to your <code
-              class="font-mono text-primary bg-secondary rounded-md px-1"
+              class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
               >.codeium/windsurf/mcp_config.json</code
             > file:
           </p>
           <DocsCodeBlock
             fileName="Terminal"
-            code={`
-    {
+            code={`   {
     	"mcpServers": {
     		"jsrepo": {
     			"command": "npx",
@@ -130,11 +123,11 @@
           <h2 class="font-medium text-primary">Add Cursor Rules</h2>
           <p>
             Create new file in <code
-              class="font-mono text-primary bg-secondary rounded-md px-1"
+              class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
               >.cursor/rules</code
             >
             folder and create new file
-            <code class="font-mono text-primary bg-secondary rounded-md px-1"
+            <code class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
               >svelte-blocks.mdc</code
             >
             and add the following code:
@@ -172,7 +165,7 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
 - Use Images from Unsplash if not present or has static image.
 
 ## Component Usage Guidelines
-- Component names follow the format: <HeroOne />, <FeatureGridTwo />, etc.
+- Component names follow the format: <HeroOne />, <FeatureTwo />, etc.
 - Every component is a Svelte file with full props and children support.
 - Support custom colors, spacing, and content via Tailwind utility classes or props.
 
@@ -182,10 +175,8 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
 \`\`\`
 
 \`\`\`prompt
- Create a Marketing page which include Hero in Notion Mist Style, Content, Feature, CTA and Footer with Responsive UI and Notion style theme using \`@sv/cnblocks\` from \`jsrepo\`
-\`\`\`
-
-`} lang="bash" />
+ Create a Marketing page which include Hero in Notion Mist Style, Content,\n Feature, CTA and Footer with Responsive UI and Notion style theme using \`@sv/cnblocks\` from \`jsrepo\`
+\`\`\``} lang="bash" />
         </div>
       </div>
     </div>

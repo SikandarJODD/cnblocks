@@ -2,6 +2,40 @@
 	"$schema": "https://unpkg.com/jsrepo@1.45.0/schemas/registry-config.json",
 	"name": "@sv/cnblocks",
 	"version": "package",
+	"meta": {
+		"author": [
+			"SikandarJODD",
+			"Aidan Bleser"
+		],
+		"bugs": "https://github.com/SikandarJODD/cnblocks/issues",
+		"description": "Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages.",
+		"homepage": "https://sv-blocks.vercel.app",
+		"repository": "https://github.com/SikandarJODD/cnblocks",
+		"tags": [
+			"ui",
+			"components",
+			"marketing"
+		]
+	},
+	"configFiles": [
+		{
+			"name": "Cursor Rules",
+			"path": "./.cursor/rules/svelte-blocks.mdc",
+			"expectedPath": "./.cursor/rules/svelte-blocks.mdc",
+			"optional": true
+		}
+	],
+	"defaultPaths": {
+		"blocks": "$lib/components/blocks",
+		"mist": "$lib/components/mist",
+		"web": "$lib/components/web",
+		"magic": "$lib/components/magic",
+		"ui": "$lib/components/ui",
+		"*": "$lib/blocks",
+		"hooks": "$lib/hooks",
+		"actions": "$lib/actions",
+		"utils": "$lib/utils"
+	},
 	"dirs": [
 		"./src/lib/components/blocks",
 		"./src/lib/components/mist",
@@ -112,35 +146,5 @@
 		"web",
 		"all_mists"
 	],
-	"preview": true,
-	"meta": {
-		"author": [
-			"SikandarJODD",
-			"Aidan Bleser"
-		],
-		"bugs": "https://github.com/SikandarJODD/cnblocks/issues",
-		"description": "Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages.",
-		"homepage": "https://sv-blocks.vercel.app",
-		"repository": "https://github.com/SikandarJODD/cnblocks",
-		"tags": [
-			"ui",
-			"components",
-			"marketing"
-		]
-	},
-	"configFiles": [
-		{
-			"name": "Cursor Rules",
-			"path": "./.cursor/rules",
-			"expectedPath": "./.cursor/rules/svelte-blocks.mdc",
-			"optional": true
-		}
-	],
-	"defaultPaths": {
-		"blocks": "$lib/components/blocks",
-		"mist": "$lib/components/mist",
-		"web": "$lib/components/web",
-		"magic": "$lib/components/magic",
-		"ui": "$lib/components/ui"
-	}
+	"preview": true
 }
