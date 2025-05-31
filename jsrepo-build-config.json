@@ -127,5 +127,20 @@
 			"components",
 			"marketing"
 		]
+	},
+	"configFiles": [
+		{
+			"name": "Cursor Rules",
+			"path": "./.cursor/rules",
+			"expectedPath": "./.cursor/rules/svelte-blocks.mdc",
+			"optional": true
+		}
+	],
+	"defaultPaths": {
+		"blocks": "$lib/components/blocks",
+		"mist": "$lib/components/mist",
+		"web": "$lib/components/web",
+		"magic": "$lib/components/magic",
+		"ui": "$lib/components/ui"
 	}
 }
