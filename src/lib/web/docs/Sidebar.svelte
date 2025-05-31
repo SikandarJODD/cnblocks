@@ -4,6 +4,7 @@
   let routes = [
     { name: "Introduction", slug: "/docs" },
     { name: "Installation", slug: "/docs/installation" },
+    { name: "MCP Server", slug: "/docs/mcp" },
     { name: "Sponsors", slug: "/docs/sponsors" },
   ];
   let isActive = (slug: string) => {

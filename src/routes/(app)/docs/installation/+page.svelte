@@ -1,21 +1,6 @@
 <script lang="ts">
   import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
   import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
-  /*
-Get started
-- Introduction - main docs starting point
-- Installation - using CLI
-- Sponsors
-
-I need breadcrumb
-Title
-desc
-- create new project - select tailwind css
-install shadcn svelte command ..update
-- jsrepo command
-- add path to it
-easy done
-*/
 </script>
 
 <svelte:head>
