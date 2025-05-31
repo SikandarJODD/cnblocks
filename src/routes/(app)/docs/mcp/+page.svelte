@@ -127,12 +127,15 @@
               >.cursor/rules</code
             >
             folder and create new file
-            <code class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
+            <code
+              class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
               >svelte-blocks.mdc</code
             >
             and add the following code:
           </p>
-          <DocsCodeBlock fileName="Terminal" code={`
+          <DocsCodeBlock
+            fileName="Terminal"
+            code={`
 ---
 description: Svelte Marketing Blocks
 globs:
@@ -176,7 +179,50 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
 
 \`\`\`prompt
  Create a Marketing page which include Hero in Notion Mist Style, Content,\n Feature, CTA and Footer with Responsive UI and Notion style theme using \`@sv/cnblocks\` from \`jsrepo\`
-\`\`\``} lang="bash" />
+\`\`\``}
+            lang="bash"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div
+        class="absolute flex h-9 w-9 select-none items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 dark:bg-neutral-800"
+      >
+        <span class="font-semibold text-primary">4</span>
+      </div>
+      <div
+        class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
+      >
+        <div class="space-y-4 pb-10 pl-8 pt-1">
+          <h2 class="font-medium text-primary">
+            Install jsrepo & Run MCP Server
+          </h2>
+          <DocsCodeBlock
+            fileName="Terminal"
+            code={`npm install -g jsrepo \n# Run MCP Server\njsrepo mcp`}
+            lang="bash"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div
+        class="absolute flex h-9 w-9 select-none items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 dark:bg-neutral-800"
+      >
+        <span class="font-semibold text-primary">5</span>
+      </div>
+      <div
+        class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
+      >
+        <div class="space-y-4 pb-10 pl-8 pt-1">
+          <h2 class="font-medium text-primary">Example Prompt for Cursor</h2>
+          <DocsCodeBlock
+            fileName="Terminal"
+            code={`Hey can you create a landing page using \`jsrepo\` and using \`@sv/cnblocks\` \nwhich should include hero section with Notion Mist Style, \nContent Setion, Feature Section, CTA and Footer with \nResponsive UI and Notion style theme related \nto SASS Product with good Content and Images.`}
+            lang="bash"
+          />
         </div>
       </div>
     </div>
