@@ -217,10 +217,53 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
         class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
       >
         <div class="space-y-4 pb-10 pl-8 pt-1">
+          <h2 class="font-medium text-primary">Create jsrepo.json</h2>
+          <p class="text-muted-foreground text-sm">
+            Create a new file in the root of your project named <code
+              class="font-mono text-primary bg-secondary rounded-sm px-1 py-0.5"
+              >jsrepo.json</code
+            >
+            and add the following code:
+          </p>
+          <DocsCodeBlock
+            fileName="Terminal"
+            code={`{
+  "$schema": "https://unpkg.com/jsrepo@1.47.0/schemas/project-config.json",
+  "repos": [
+    "github/sikandarjodd/cnblocks"
+  ],
+  "includeTests": false,
+  "watermark": true,
+  "configFiles": {},
+  "paths": {
+    "*": "$lib/components/blocks",
+    "mist": "$lib/components/mist",
+    "magic": "$lib/components/magic",
+    "ui": "$lib/components/ui",
+    "hooks": "$lib/hooks",
+    "utils": "$lib/utils"
+  }
+}`}
+            lang="json"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div
+        class="absolute flex h-9 w-9 select-none items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 dark:bg-neutral-800"
+      >
+        <span class="font-semibold text-primary">6</span>
+      </div>
+      <div
+        class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900"
+      >
+        <div class="space-y-4 pb-10 pl-8 pt-1">
           <h2 class="font-medium text-primary">Example Prompt</h2>
           <DocsCodeBlock
             fileName="Terminal"
-            code={`Hey can you create a landing page using \`jsrepo\` and using \`@sv/cnblocks\` \nwhich should include hero section with Notion Mist Style, \nContent Setion, Feature Section, CTA and Footer with \nResponsive UI and Notion style theme related \nto SASS Product with good Content and Images.`}
+            code={`Hey can you create a Notion Style Landing page using \`jsrepo\` and using \`@sv/cnblocks\` \nwhich should include Hero Four, \nContent Setion, Feature Section, Footer\nrelated to Image as service with good Content and Images.\nUse images from Unsplash related to SASS Product.`}
             lang="bash"
           />
         </div>

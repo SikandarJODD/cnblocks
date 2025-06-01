@@ -9,10 +9,11 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 
 ## Overview
 
+Visit to Preview the blocks: [Svelte Shadcn Blocks](https://sv-blocks.vercel.app/)
 Svelte Shadcn Blocks consists of 2 main variants:
 
-**Normal** - A vibrant, bold design with a focus on marketing and UI components.
-**Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
+1. **Normal** - A vibrant, bold design with a focus on marketing and UI components.
+2. **Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
 
 Each variant include **50+ blocks** that can be used in your projects.
 These blocks are designed to be easily customizable and integrate seamlessly with your Svelte applications.
