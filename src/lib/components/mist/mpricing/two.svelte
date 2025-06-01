@@ -9,7 +9,9 @@
   import Check from "@lucide/svelte/icons/check";
 </script>
 
-<div class="bg-muted relative py-16 md:py-32 [--color-primary:var(--color-indigo-500)]">
+<div
+  class="bg-muted dark:bg-muted/30 relative py-16 md:py-32 [--color-primary:var(--color-indigo-500)]"
+>
   <div class="mx-auto max-w-5xl px-6">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">
@@ -47,9 +49,9 @@
             </ul>
           </div>
           <div
-            class=" bg-background rounded-(--radius) @3xl:mx-0 @3xl:-my-3 -mx-1 border-transparent shadow ring-1"
+            class=" bg-background rounded-(--radius) @3xl:mx-0 @3xl:-my-3 -mx-1 dark:border-x shadow ring-1"
           >
-            <div class="@3xl:py-3 @3xl:px-0 relative px-1">
+            <div class="@3xl:py-3  @3xl:px-0 relative px-1">
               <CardHeader class="p-8">
                 <CardTitle class="font-medium">Pro</CardTitle>
                 <span class="mb-0.5 mt-2 block text-2xl font-semibold"
@@ -58,7 +60,7 @@
                 <CardDescription class="text-sm">Per editor</CardDescription>
               </CardHeader>
               <div class="@3xl:mx-0 -mx-1 border-y px-8 py-4">
-                <Button class="w-full">Get Started</Button>
+                <Button variant="mdefault" class="w-full">Get Started</Button>
               </div>
 
               <ul role="list" class="space-y-3 p-8">

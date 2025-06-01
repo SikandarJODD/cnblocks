@@ -12,10 +12,13 @@
   class="[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)]
   dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary:theme(color.indigo.950)] dark:[--color-secondary-foreground:theme(color.indigo.200)]"
 >
-  <div class="py-24">
-    <div class="mx-auto w-full max-w-5xl px-6">
+  <div class="py-16 md:py-24">
+    <div class="mx-auto w-full max-w-5xl px-2 md:px-6">
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <Card variant="soft" class="col-span-full overflow-hidden pl-6 pt-6 dark:bg-muted/80">
+        <Card
+          variant="soft"
+          class="col-span-full overflow-hidden pl-6 pt-6 dark:bg-muted/80 border-b border-secondary"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

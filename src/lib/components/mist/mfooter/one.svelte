@@ -1,7 +1,4 @@
 <script lang="ts">
-
-
-
   let links = [
     {
       title: "Features",
@@ -30,7 +27,7 @@
   ];
 </script>
 
-<footer class="bg-muted py-16 [--color-primary:var(--color-indigo-500)]">
+<footer class="bg-muted dark:bg-muted/30 py-16 [--color-primary:var(--color-indigo-500)]">
   <div class="mx-auto max-w-5xl px-6">
     <a href="/" aria-label="go home" class="mx-auto block size-fit">
       <svg
