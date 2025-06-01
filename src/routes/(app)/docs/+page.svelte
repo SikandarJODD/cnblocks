@@ -1,20 +1,6 @@
 <script lang="ts">
   import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
-  /*
-Get started
-- Introduction - main docs starting point
-- Installation - using CLI
-- Sponsors
-
-I need breadcrumb
-Title
-desc
-- create new project - select tailwind css
-install shadcn svelte command ..update
-- jsrepo command
-- add path to it
-easy done
-*/
+  import { marked } from "marked";
   const members = [
     {
       name: "Bhide Svelte",
@@ -29,6 +15,17 @@ easy done
       href: "https://github.com/ieedan",
     },
   ];
+
+  let overview_content = `## Overview
+  Svelte Shadcn Blocks consists of 2 main variants:
+
+1. **Normal** - A vibrant, bold design with a focus on marketing and UI components.
+2. **Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
+
+Each variant include **50+ blocks** that can be used in your projects. These blocks are designed to be easily customizable and integrate seamlessly with your Svelte applications.
+
+You can use these blocks to build landing pages, marketing sites, dashboards, and more.
+  `;
 </script>
 
 <svelte:head>
@@ -68,6 +65,20 @@ easy done
         This is a collection of marketing components built with Svelte 5, Tailwind
         CSS v4 and Shadcn Svelte.
       </p>
+      <p
+        class="text-[16px] font-normal leading-relaxed text-black/80 dark:text-muted-foreground"
+      >
+        This project is inspired by <a
+          href="https://tailark.com"
+          class="underline text-primary"
+          target="_blank">Tailark</a
+        >, this project is designed to bring a similarly smooth and efficient
+        experience to Svelte developers, with a focus on building landing and
+        marketing pages effortlessly.
+      </p>
+    </div>
+    <div class="prose max-w-none dark:prose-invert prose-p:my-1 prose-li:my-1 prose-h2:my-3.5">
+      {@html marked(overview_content)}
     </div>
   </div>
   <div class="grid grid-cols-2 gap-4 border-t py-4 md:grid-cols-6">
