@@ -5,7 +5,7 @@
 </script>
 
 <section class='[--color-primary:var(--color-indigo-500)]'>
-  <div class="bg-muted py-12">
+  <div class="bg-muted/50 dark:bg-muted/30 py-12">
     <div class="mx-auto max-w-5xl px-6">
       <h2
         class="text-foreground max-w-lg text-balance text-3xl font-semibold lg:text-4xl"
@@ -17,7 +17,7 @@
         repellendus.
       </p>
       <div class="mt-8 flex gap-3">
-        <Button href="#" class="pr-2">
+        <Button variant='mdefault' href="#" class="pr-2">
           Try Mist for Free
           <ChevronRight strokeWidth={2.5} class="size-3.5! opacity-50" />
         </Button>

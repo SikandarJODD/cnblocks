@@ -14,7 +14,7 @@
 </script>
 
 <section
-  class="bg-muted py-15 sm:py-24 lg:py-32 [--color-primary:var(--color-indigo-500)]"
+  class="bg-muted dark:bg-muted/30 py-15 sm:py-24 lg:py-32 [--color-primary:var(--color-indigo-500)]"
 >
   <div class="mx-auto max-w-4xl px-4 lg:px-0">
     <h1 class="text-4xl font-semibold lg:text-5xl">

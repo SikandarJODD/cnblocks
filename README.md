@@ -7,14 +7,6 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 
 ![image](./static/og.png)
 
-## Documentation
-
-LLM-friendly documentation is in `/static/docs`, with `normal/` for bold, vibrant blocks and `/static/docs/mist` for clean, Notion-inspired blocks. Each file provides usage examples and Tailwind styles for AI code generation.
-
-Docs for Mist Variant : [Visit](/static/docs/mist)
-
-Docs for Normal Variant : [Visit](/static/docs/normal)
-
 ## 50+ New Mist Blocks
 
 Visit [Mist Blocks](https://sv-blocks.vercel.app/mist/hero) to see the new blocks.
@@ -30,12 +22,26 @@ Visit [Mist Blocks](https://sv-blocks.vercel.app/mist/hero) to see the new block
 
 ## Features
 
-- **50+ Ready-to-use UI & Marketing Blocks**
+- **100+ Ready-to-use UI & Marketing Blocks**
+- **Free & Open Source** - Licensed under MIT
 - **Fully Responsive** – Works seamlessly across all screen sizes
 - **Light & Dark Mode Support**
-- **Built with Modern Technologies** – Svelte 5, Tailwind v4, and shadcn-svelte
 - **Easy to Customize** – Modify styles and components effortlessly
-- **Optimized for Performance** – Fast loading and minimal footprint
+- **CLI Support** – jsrepo CLI for easy installation and updates
+
+## Documentation
+
+LLM-friendly documentation is in `/static/docs`, with `normal/` for bold, vibrant blocks and `/static/docs/mist` for clean, Notion-inspired blocks. Each file provides usage examples and Tailwind styles for AI code generation.
+
+Docs for Mist Variant : [Visit](/static/docs/mist)
+
+Docs for Normal Variant : [Visit](/static/docs/normal)
+
+Docs for MCP Server Integration : [Visit](https://sv-blocks.vercel.app/docs/mcp)
+
+## Installation & Usage
+
+Visit the [installation guide](https://sv-blocks.vercel.app/docs/installation) for detailed instructions on how to set up and use Svelte Shadcn Blocks in your project.
 
 ## Inspiration
 

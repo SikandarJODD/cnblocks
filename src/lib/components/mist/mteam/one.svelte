@@ -62,7 +62,7 @@
 </script>
 
 <section>
-  <div class="bg-muted/50 py-24">
+  <div class="bg-muted/50 dark:bg-muted/30 py-24">
     <div class="@container mx-auto w-full max-w-5xl px-6">
       <div class="mb-12">
         <h2 class="text-foreground text-4xl font-semibold">Meet Our Team</h2>

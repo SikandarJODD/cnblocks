@@ -16,8 +16,8 @@
       )}
     />
     <section>
-      <div class="relative pt-12 md:pt-10">
-        <div class="mx-auto max-w-7xl px-6">
+      <div class="relative pt-6 md:pt-10">
+        <div class="mx-auto max-w-7xl px-2 md:px-6">
           <div class="text-center sm:mx-auto lg:mr-auto lg:mt-0">
             <div>
               <a
@@ -57,7 +57,7 @@
             </div>
 
             <h1
-              class="relative max-w-3xl mx-auto mt-0 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent pb-2  text-3xl md:text-4xl lg:mt-16 xl:text-6xl/tight font-display"
+              class="relative max-w-3xl mx-auto mt-6 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent pb-2 text-3xl md:text-4xl lg:mt-16 xl:text-6xl/tight font-display"
             >
               <div
                 class="absolute dark:text-green-400 -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-green-500 text-sm font-normal text-green-500 bg-green-100 dark:bg-green-900/40 rounded-t-sm pr-1.5 pl-1 pt-0.5 underline-offset-3 lg:flex"
@@ -140,7 +140,7 @@
               100+ UI & Marketing Blocks
             </h1>
             <p
-              class="mx-auto mt-10 max-w-3xl text-balance text-lg text-muted-foreground"
+              class="mx-auto mt-6 md:mt-10 max-w-3xl text-balance text-sm md:text-lg text-muted-foreground"
             >
               Speed up your workflow with responsive,<br /> Pre-built UI blocks designed
               for marketing websites.
@@ -171,9 +171,9 @@
         </div>
       </div>
     </section>
-    <section class="bg-background pb-16 pt-0 md:pb-10">
+    <section class="bg-background pb-0 pt-0 md:pb-10">
       <div class="relative m-auto max-w-5xl px-6">
-        <div class="mx-auto mt-10 max-w-2xl flex justify-center gap-4">
+        <div class="mx-auto mt-4 mt-10 max-w-2xl flex justify-center gap-4">
           <div
             class="flex hover:bg-secondary transition-all duration-200 bg-secondary/50 backdrop-blur-sm border p-2 rounded-lg"
           >

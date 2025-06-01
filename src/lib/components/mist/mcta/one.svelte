@@ -13,7 +13,7 @@
           Build 10x Faster with Mist
         </h2>
         <div class="flex justify-center gap-3">
-          <Button href="#" size="lg">
+          <Button variant='mdefault' href="#" size="lg">
             Get Started
           </Button>
           <Button href="#" variant="outline" size="lg">
