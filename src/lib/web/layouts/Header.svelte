@@ -23,6 +23,7 @@
   import cn from "clsx";
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import Logo from "./Logo.svelte";
+  import McpDialog from "./MCPDialog.svelte";
 
   type ListItemProps = {
     className?: string;
@@ -307,7 +308,10 @@
           </NavigationMenu.Root>
         </div>
       </div>
-      <div class="hidden sm:ml-6 sm:block">
+      <div class="hidden sm:ml-6 sm:flex sm:items-center ">
+        <div class="hidden md:block">
+          <McpDialog />
+        </div>
         {@render socials()}
       </div>
       <div class="-mr-2 flex sm:hidden">

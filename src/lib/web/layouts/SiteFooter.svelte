@@ -90,7 +90,7 @@
     </div>
     <div class="flex">
       <Button
-        href="https://github.com/sikandarjodd/cnblocks"
+        href="https://github.com/SikandarJODD/cnblocks"
         target="_blank"
         variant="link"
         class="text-sm text-foreground decoration-primary -ml-4 gap-1"
