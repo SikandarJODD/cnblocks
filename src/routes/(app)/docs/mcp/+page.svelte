@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>MCP Server - Shadcn Marketing Blocks</title>
+  <title>MCP Server | Shadcn Marketing Blocks</title>
   <meta
     name="description"
     content="Install & configure Marketing Blocks in your Svelte project using the CLI."

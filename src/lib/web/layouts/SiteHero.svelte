@@ -12,17 +12,17 @@
       height={45}
       strokeDashArray="4 2"
       class={cn(
-        "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+        "[mask-image:radial-gradient(800px_circle_at_top_center,white,transparent)]"
       )}
     />
     <section>
-      <div class="relative pt-12 md:pt-16">
+      <div class="relative pt-12 md:pt-10">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center sm:mx-auto lg:mr-auto lg:mt-0">
             <div>
               <a
-                href="/changelog"
-                class="hover:bg-muted dark:hover:border-t-border bg-muted/70 group mx-auto flex w-fit items-center gap-2 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
+                href="/docs/mcp"
+                class="hover:bg-muted backdrop-blur-xs dark:hover:border-t-border bg-muted dark:bg-muted/60 group mx-auto flex w-fit items-center gap-2 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
               >
                 <span class="text-foreground text-sm flex items-center gap-1.5">
                   <svg
@@ -30,7 +30,7 @@
                     width="18"
                     height="18"
                     viewBox="0 0 24 24"
-                    class="fill-orange-600 text-orange-600"
+                    class="fill-sky-500 text-sky-500"
                     fill-opacity="0.1"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     role="img"
@@ -44,7 +44,7 @@
                       stroke-linejoin="round"
                     ></path>
                   </svg>
-                  Introducing 20 New Blocks
+                  Introducing MCP Server
                 </span>
                 <div
                   class="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500"
@@ -57,7 +57,7 @@
             </div>
 
             <h1
-              class="relative max-w-3xl mx-auto mt-8 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-50 dark:via-neutral-300 dark:to-neutral-600 bg-clip-text text-transparent pb-2 font-display text-3xl md:text-4xl lg:mt-16 xl:text-6xl"
+              class="relative max-w-3xl mx-auto mt-0 text-balance font-medium bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent pb-2  text-3xl md:text-4xl lg:mt-16 xl:text-6xl/tight font-display"
             >
               <div
                 class="absolute dark:text-green-400 -top-10 -left-20 hidden w-fit -rotate-12 gap-1 border-b border-dashed border-green-500 text-sm font-normal text-green-500 bg-green-100 dark:bg-green-900/40 rounded-t-sm pr-1.5 pl-1 pt-0.5 underline-offset-3 lg:flex"
@@ -99,9 +99,9 @@
                 Templates
               </div>
               <div
-                class="absolute -top-10 -right-24 dark:text-blue-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-blue-500 text-sm font-normal text-blue-500 bg-blue-100 dark:bg-blue-900/40 rounded-t-sm pr-1 pl-1.5 pt-0.5 underline-offset-3 lg:flex"
+                class="absolute -top-10 -right-24 dark:text-teal-400 hidden w-fit rotate-12 gap-1 border-b border-dashed border-teal-500 text-sm font-normal text-teal-600 bg-teal-100 dark:bg-teal-900/40 rounded-t-sm pr-1 pl-1.5 pt-0.5 underline-offset-3 lg:flex"
               >
-                Integrations<svg
+                CLI Support<svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -137,38 +137,34 @@
                 >
               </div>
               Svelte Shadcn Blocks<br />
-              50+ UI & Marketing Blocks
+              100+ UI & Marketing Blocks
             </h1>
             <p
-              class="mx-auto mt-8 max-w-3xl text-balance text-lg font-display text-muted-foreground"
+              class="mx-auto mt-10 max-w-3xl text-balance text-lg text-muted-foreground"
             >
               Speed up your workflow with responsive,<br /> Pre-built UI blocks designed
               for marketing websites.
             </p>
 
             <div
-              class="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
+              class="mt-9 flex flex-col items-center justify-center gap-4 md:flex-row"
             >
-              <div
-                class="bg-foreground/10 border p-0.5"
+              <!-- <div
+                class="bg-foreground border p-0.5"
                 style="border-radius: calc(0.5rem + 0.125rem + 4px);"
-              >
-                <Button
-                  href="/hero"
-                  size="lg"
-                  class="rounded-xl px-5 text-base"
-                >
-                  <span class="text-nowrap">Explore Blocks</span>
-                </Button>
-              </div>
+              > -->
+              <Button href="/hero" size="lg" class="px-5 text-base">
+                <span class="text-nowrap">Explore Blocks</span>
+              </Button>
+              <!-- </div> -->
 
               <Button
                 href="/mist/hero"
+                variant="outline"
                 size="lg"
-                class="rounded-xl px-5 text-base"
-                variant="mdefault"
+                class="border-dashed px-5 dark:border-primary/40 border-primary bg-muted shadow-md"
               >
-                <span class="text-nowrap">New Mist Blocks</span>
+                <span class="text-nowrap">Notion-Style Blocks</span>
               </Button>
             </div>
           </div>
@@ -177,7 +173,7 @@
     </section>
     <section class="bg-background pb-16 pt-0 md:pb-10">
       <div class="relative m-auto max-w-5xl px-6">
-        <div class="mx-auto mt-12 max-w-2xl flex justify-center gap-4">
+        <div class="mx-auto mt-10 max-w-2xl flex justify-center gap-4">
           <div
             class="flex hover:bg-secondary transition-all duration-200 bg-secondary/50 backdrop-blur-sm border p-2 rounded-lg"
           >

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Installation - Shadcn Marketing Blocks</title>
+  <title>Installation | Shadcn Marketing Blocks</title>
   <meta
     name="description"
     content="Install & configure Marketing Blocks in your Svelte project using the CLI."

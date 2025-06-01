@@ -14,7 +14,7 @@
     children,
     title,
     description,
-    link = "https://github.com/sikandarjodd/cnblocks",
+    link = "https://github.com/SikandarJODD/cnblocks",
   }: IntegrationCardProps = $props();
 </script>
 
