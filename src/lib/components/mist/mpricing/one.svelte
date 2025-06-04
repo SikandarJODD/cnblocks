@@ -4,7 +4,7 @@
   import Check from "@lucide/svelte/icons/check";
 </script>
 
-<div class="bg-muted relative py-16 md:py-32 [--color-primary:var(--color-indigo-500)]">
+<div class="bg-muted dark:bg-muted/30 relative py-16 md:py-32 [--color-primary:var(--color-indigo-500)]">
   <div class="mx-auto max-w-5xl px-6">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">
@@ -30,7 +30,7 @@
             </span>
 
             <div class="flex justify-center">
-              <Button size="lg">Get started</Button>
+              <Button variant='mdefault' size="lg">Get started</Button>
             </div>
 
             <p class="text-muted-foreground mt-12 text-sm">
@@ -55,28 +55,28 @@
               class="mt-12 flex flex-wrap items-center justify-between gap-6"
             >
               <img
-                class="h-5 w-fit"
+                class="h-5 w-fit dark:invert"
                 src="https://html.tailus.io/blocks/customers/nvidia.svg"
                 alt="Nvidia Logo"
                 height="20"
                 width="auto"
               />
               <img
-                class="h-4 w-fit"
+                class="h-4 w-fit dark:invert"
                 src="https://html.tailus.io/blocks/customers/column.svg"
                 alt="Column Logo"
                 height="16"
                 width="auto"
               />
               <img
-                class="h-4 w-fit"
+                class="h-4 w-fit dark:invert"
                 src="https://html.tailus.io/blocks/customers/github.svg"
                 alt="GitHub Logo"
                 height="16"
                 width="auto"
               />
               <img
-                class="h-5 w-fit"
+                class="h-5 w-fit dark:invert"
                 src="https://html.tailus.io/blocks/customers/nike.svg"
                 alt="Nike Logo"
                 height="20"

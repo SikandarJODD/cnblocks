@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>Shadcn Marketing Blocks</title>
+  <title>Sponsors | Shadcn Marketing Blocks</title>
   <meta
     name="description"
     content="Welcome to Shadcn Marketing Blocks! This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and Shadcn Svelte."

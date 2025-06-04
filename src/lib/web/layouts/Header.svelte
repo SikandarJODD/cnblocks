@@ -22,7 +22,7 @@
   import CaretDown from "@lucide/svelte/icons/chevron-down";
   import cn from "clsx";
   import Badge from "$lib/components/ui/badge/badge.svelte";
-  import Logo from "./Logo.svelte";
+  import McpDialog from "./MCPDialog.svelte";
 
   type ListItemProps = {
     className?: string;
@@ -119,7 +119,7 @@
   ];
 </script>
 
-<nav class="bg-transparent backdrop-blur-md sticky top-0 z-[1000]">
+<nav class="bg-transparent backdrop-blur-2xl sticky top-0 z-[1000]">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center w-full">
@@ -307,7 +307,10 @@
           </NavigationMenu.Root>
         </div>
       </div>
-      <div class="hidden sm:ml-6 sm:block">
+      <div class="hidden sm:ml-6 sm:flex sm:items-center gap-2">
+        <div class="hidden md:block">
+          <McpDialog />
+        </div>
         {@render socials()}
       </div>
       <div class="-mr-2 flex sm:hidden">

@@ -4,6 +4,7 @@
   import DOMPurify from "isomorphic-dompurify";
   import { onMount } from "svelte";
   import type { HighlighterCore } from "shiki";
+  import { CopyButton } from "$lib/components/ui/copy-button";
   import { cn } from "$lib/utils";
 
   const style = tv({
@@ -59,7 +60,7 @@
     copyButtonContainerClass = undefined,
     class: className = undefined,
     hideLines = false,
-    hideCopy = false,
+    hideCopy = true,
     highlight = [],
   }: Props = $props();
 
@@ -108,6 +109,16 @@
 <div class={cn(style({ variant }), className)}>
   {@html highlighted}
 
+  {#if !hideCopy}
+    <div
+      class={cn(
+        "absolute top-2 right-2 flex place-items-center justify-center",
+        copyButtonContainerClass
+      )}
+    >
+      <CopyButton text={code} />
+    </div>
+  {/if}
 </div>
 
 <style lang="postcss">

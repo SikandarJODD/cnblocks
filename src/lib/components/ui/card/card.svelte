@@ -7,7 +7,7 @@
     variants: {
       variant: {
         default: "bg-card text-card-foreground rounded-xl border shadow-sm",
-        soft: "bg-foreground/5 border-none",
+        soft: "bg-foreground/5 dark:bg-foreground/5 border-none",
         mixed: "bg-foreground/5 border border-foreground.5",
       },
     },

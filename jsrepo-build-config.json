@@ -19,7 +19,7 @@
 	},
 	"configFiles": [
 		{
-			"name": "Cursor Rules",
+			"name": "Svelte Shadcn Blocks Cursor Rules",
 			"path": "./.cursor/rules/svelte-blocks.mdc",
 			"expectedPath": "./.cursor/rules/svelte-blocks.mdc",
 			"optional": true
@@ -31,7 +31,7 @@
 		"web": "$lib/components/web",
 		"magic": "$lib/components/magic",
 		"ui": "$lib/components/ui",
-		"*": "$lib/blocks",
+		"*": "$lib/components/blocks",
 		"hooks": "$lib/hooks",
 		"actions": "$lib/actions",
 		"utils": "$lib/utils"

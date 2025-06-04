@@ -63,7 +63,7 @@
             name="email"
             id="email"
             placeholder="Your email"
-            class=" border-transparent ring-1"
+            class=" border-transparent dark:border-input ring-1"
           />
         </div>
         <!-- You can use variant='default'  -->

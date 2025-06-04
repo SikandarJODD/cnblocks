@@ -4,7 +4,7 @@
   import Calendar from "@lucide/svelte/icons/calendar";
   import MapIcon from "@lucide/svelte/icons/map";
 
-  import FeatureCard from "./feature-card.svelte";
+  import FeatureCard from "$lib/components/blocks/feature/feature-card.svelte";
   import * as Card from "$lib/components/ui/card/index.js";
 
   interface CircleConfig {

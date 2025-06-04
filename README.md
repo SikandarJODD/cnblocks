@@ -7,6 +7,28 @@ A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built
 
 ![image](./static/og.png)
 
+## Overview
+
+Visit to Preview the blocks: [Svelte Shadcn Blocks](https://sv-blocks.vercel.app/)
+Svelte Shadcn Blocks consists of 2 main variants:
+
+1. **Normal** - A vibrant, bold design with a focus on marketing and UI components.
+2. **Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
+
+Each variant include **50+ blocks** that can be used in your projects.
+These blocks are designed to be easily customizable and integrate seamlessly with your Svelte applications.
+
+You can use these blocks to build landing pages, marketing sites, dashboards, and more.
+
+## Features
+
+- **100+ Ready-to-use UI & Marketing Blocks**
+- **Free & Open Source** - Licensed under MIT
+- **Fully Responsive** – Works seamlessly across all screen sizes
+- **Light & Dark Mode Support**
+- **Easy to Customize** – Modify styles and components effortlessly
+- **CLI Support** – jsrepo CLI for easy installation and updates
+
 ## Documentation
 
 LLM-friendly documentation is in `/static/docs`, with `normal/` for bold, vibrant blocks and `/static/docs/mist` for clean, Notion-inspired blocks. Each file provides usage examples and Tailwind styles for AI code generation.
@@ -15,27 +37,11 @@ Docs for Mist Variant : [Visit](/static/docs/mist)
 
 Docs for Normal Variant : [Visit](/static/docs/normal)
 
-## 50+ New Mist Blocks
+Docs for MCP Server Integration : [Visit](https://sv-blocks.vercel.app/docs/mcp)
 
-Visit [Mist Blocks](https://sv-blocks.vercel.app/mist/hero) to see the new blocks.
+## Installation & Usage
 
-## New Components
-
-| Name                   | Preview                                                       |
-| ---------------------- | ------------------------------------------------------------- |
-| 4 New Hero Sections    | [Preview](https://sv-blocks.vercel.app/hero#feature-eight)    |
-| 7 New Features Blocks  | [Preview](https://sv-blocks.vercel.app/feature#feature-eight) |
-| 3 New Faq Blocks       | [Preview](https://sv-blocks.vercel.app/faq)                   |
-| Forgot Password Blocks | [Preview](https://sv-blocks.vercel.app/forgot-password)       |
-
-## Features
-
-- **50+ Ready-to-use UI & Marketing Blocks**
-- **Fully Responsive** – Works seamlessly across all screen sizes
-- **Light & Dark Mode Support**
-- **Built with Modern Technologies** – Svelte 5, Tailwind v4, and shadcn-svelte
-- **Easy to Customize** – Modify styles and components effortlessly
-- **Optimized for Performance** – Fast loading and minimal footprint
+Visit the [installation guide](https://sv-blocks.vercel.app/docs/installation) for detailed instructions on how to set up and use Svelte Shadcn Blocks in your project.
 
 ## Inspiration
 
@@ -46,9 +52,41 @@ The goal is to provide a similar experience for Svelte developers.
 
 If you like this project, please consider supporting me on [GitHub Sponsors](https://github.com/sponsors/SikandarJODD).
 
-## Feedback
+## Contributing
+Contributions are welcome! 💛
+If you have ideas for new blocks, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
 
 If you have any feedback, please reach out to me on [Twitter](https://x.com/Sikandar_Bhide) or create an issue on GitHub.
+
+## Project Structure
+if you want to add new blocks follow the structure below:
+
+```mermaid
+---
+config:
+  layout: dagre
+---
+flowchart TD
+    A["cnblocks repository"] --> B["lib"]
+    B --> C["components"]
+    C --> Z["ui"] & X["50+ Blocks"] & Y["50+ Mist Blocks"]
+    Z --> ZA["Shadcn Svelte"]
+    X --> D["UI & Marketing Blocks"]
+    Y --> E["Notion Style, Clean Minimal Blocks"]
+    A@{ shape: rounded}
+    B@{ shape: rounded}
+    C@{ shape: rounded}
+    Z@{ shape: rounded}
+    X@{ shape: rounded}
+    Y@{ shape: rounded}
+    ZA@{ shape: rounded}
+    D@{ shape: rounded}
+    E@{ shape: rounded}
+    linkStyle 3 stroke:#424242,fill:none
+    linkStyle 4 stroke:#424242,fill:none
+    linkStyle 7 stroke:#424242,fill:none
+```
+
 
 ## License
 
