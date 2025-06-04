@@ -122,6 +122,134 @@
 			]
 		},
 		{
+			"name": "content",
+			"blocks": [
+				{
+					"name": "content-five",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-five.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "content-four",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-four.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "content-one",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-one.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "content-seven",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-seven.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "content-six",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-six.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "content-three",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-three.svelte"
+					],
+					"localDependencies": [
+						"ui/button"
+					],
+					"_imports_": {
+						"$lib/components/ui/button/button.svelte": "{{ui/button}}/button.svelte"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				},
+				{
+					"name": "content-two",
+					"directory": "src/lib/components/blocks/content",
+					"category": "content",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"content-two.svelte"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"@lucide/svelte@^0.483.0"
+					]
+				}
+			]
+		},
+		{
 			"name": "cta",
 			"blocks": [
 				{

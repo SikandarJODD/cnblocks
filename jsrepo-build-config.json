@@ -46,6 +46,7 @@
 	"doNotListCategories": [],
 	"listBlocks": [],
 	"listCategories": [
+		"content",
 		"cta",
 		"comparator",
 		"contact",
@@ -132,7 +133,6 @@
 		"all_blocks",
 		"data",
 		"config",
-		"content",
 		"web",
 		"all_mists"
 	],
@@ -142,7 +142,6 @@
 		"all_blocks",
 		"data",
 		"config",
-		"content",
 		"web",
 		"all_mists"
 	],
