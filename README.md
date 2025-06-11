@@ -5,7 +5,7 @@
 
 A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built with Tailwind CSS v4 and shadcn-svelte.
 
-![image](./static/og.png)
+![image](https://sv-blocks.vercel.app/og.png)
 
 ## Overview
 
