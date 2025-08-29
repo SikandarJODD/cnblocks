@@ -1,7 +1,7 @@
 <script lang="ts">
   const stats = [
     {
-      name: "Bandwith increase",
+      name: "Bandwidth increase",
       value: "+162%",
     },
     {
