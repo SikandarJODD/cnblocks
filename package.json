@@ -42,6 +42,7 @@
 	"dependencies": {
 		"@changesets/cli": "^2.29.4",
 		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
+		"dompurify": "^3.3.0",
 		"marked": "^15.0.12"
 	}
 }
