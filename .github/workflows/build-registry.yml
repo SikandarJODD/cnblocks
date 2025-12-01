@@ -1,0 +1,36 @@
+name: build-registry
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build registry.json
+        run: jsrepo build
+      - name: Create pull request with changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: 'chore: update `registry.json`'
+          body: |
+            - Update `registry.json`
+            ---
+            This PR was auto generated
+          branch: build-registry
+          commit-message: build `registry.json`

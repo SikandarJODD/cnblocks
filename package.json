@@ -1,6 +1,6 @@
 {
 	"name": "@sv/cnblocks",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -24,6 +24,7 @@
 		"bits-ui": "^1.4.8",
 		"clsx": "^2.1.1",
 		"dotted-map": "^2.2.3",
+		"jsrepo": "^3.0.5",
 		"mode-watcher": "^1.0.6",
 		"paneforge": "^0.0.6",
 		"shiki": "^3.2.1",
@@ -41,8 +42,7 @@
 	"dependencies": {
 		"@changesets/cli": "^2.29.4",
 		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
-		"isomorphic-dompurify": "^2.25.0",
-		"jsrepo": "^2.3.2",
+		"dompurify": "^3.3.0",
 		"marked": "^15.0.12"
 	}
 }

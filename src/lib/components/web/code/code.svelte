@@ -1,11 +1,12 @@
 <script lang="ts">
   import { tv, type VariantProps } from "tailwind-variants";
   import { highlighter, type SupportedLanguage } from "./shiki";
-  import DOMPurify from "isomorphic-dompurify";
+  import DOMPurify from "dompurify";
   import { onMount } from "svelte";
   import type { HighlighterCore } from "shiki";
   import { CopyButton } from "$lib/components/ui/copy-button";
   import { cn } from "$lib/utils";
+  import { browser } from "$app/environment";
 
   const style = tv({
     base: "not-prose relative h-full max-h-[650px] overflow-auto rounded-none border-l",
@@ -66,8 +67,8 @@
 
   let hl = $state<HighlighterCore>();
 
-  let highlighted = $derived(
-    DOMPurify.sanitize(
+  let highlighted = $derived.by(() => {
+    const html =
       hl?.codeToHtml(code, {
         lang: lang,
         themes: {
@@ -95,9 +96,11 @@
             },
           },
         ],
-      }) ?? code
-    )
-  );
+      }) ?? code;
+
+    // Only sanitize in browser - DOMPurify requires DOM APIs
+    return browser ? DOMPurify.sanitize(html) : html;
+  });
 
   onMount(() => {
     highlighter.then((highlighter) => {
