@@ -772,7 +772,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "Gemini",
+		"name": "logo-gemini",
 		"description": "Google Gemini AI logo SVG component",
 		"add": "when-added",
 		"type": "logos",
@@ -783,7 +783,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "GooglePaLM",
+		"name": "logo-google-palm",
 		"description": "Google PaLM AI logo SVG component",
 		"add": "when-added",
 		"type": "logos",
@@ -794,7 +794,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "logos",
+		"name": "logo-collection",
 		"description": "Logo collection utilities and exports",
 		"add": "when-added",
 		"type": "logos",
@@ -805,7 +805,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "MagicUI",
+		"name": "logo-magic-ui",
 		"description": "Magic UI logo SVG component",
 		"add": "when-added",
 		"type": "logos",
@@ -816,7 +816,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "MediaWiki",
+		"name": "logo-media-wiki",
 		"description": "MediaWiki logo SVG component",
 		"add": "when-added",
 		"type": "logos",
@@ -827,7 +827,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "Replit",
+		"name": "logo-replit",
 		"description": "Replit logo SVG component",
 		"add": "when-added",
 		"type": "logos",
@@ -838,7 +838,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "VSCodium",
+		"name": "logo-vscodium",
 		"description": "VSCodium logo SVG component",
 		"add": "when-added",
 		"type": "logos",
@@ -1562,7 +1562,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogos",
+		"name": "mlogo-collection",
 		"description": "Mist-style logo collection utilities",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1771,7 +1771,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "Marquee",
+		"name": "marquee",
 		"description": "Animated horizontal scrolling marquee",
 		"add": "when-needed",
 		"type": "magic",
@@ -1782,7 +1782,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "ProgressiveBlur",
+		"name": "progressive-blur",
 		"description": "Progressive blur effect component",
 		"add": "when-needed",
 		"type": "magic",
@@ -2083,7 +2083,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "Svelte Shadcn Blocks Cursor Rules",
+		"name": "cursor-rules",
 		"description": "Cursor IDE rules for Svelte Shadcn Blocks",
 		"title": "Svelte Shadcn Blocks Cursor Rules",
 		"add": "optionally-on-init",

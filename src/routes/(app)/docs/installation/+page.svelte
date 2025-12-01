@@ -65,7 +65,7 @@
           <DocsCodeBlock
             fileName="Terminal"
             code="npx sv create my-app"
-            lang='bash'
+            lang="bash"
           />
         </div>
       </div>
@@ -121,7 +121,7 @@
           <h2 class="font-medium text-primary">Now Add Any blocks</h2>
           <DocsCodeBlock
             fileName="Terminal"
-            code="npx jsrepo add @sv/cnblocks/hero/hero-one"
+            code="npx jsrepo add @sv/cnblocks/hero-one"
             lang="bash"
           />
         </div>

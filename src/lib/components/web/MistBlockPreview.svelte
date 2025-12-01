@@ -406,9 +406,7 @@
                 <TooltipTrigger>
                   <Button
                     onclick={() =>
-                      clipboard.copy(
-                        `npx jsrepo add @sv/cnblocks/m${category}/${slug}`
-                      )}
+                      clipboard.copy(`npx jsrepo add @sv/cnblocks/${slug}`)}
                     size="sm"
                     class="size-8 shadow-none md:w-fit relative"
                     variant="outline"
@@ -424,7 +422,7 @@
                       </div>
                     {/if}
                     <span class="hidden font-mono text-xs md:block">
-                      npx jsrepo add @sv/cnblocks/m{category}/{slug}
+                      npx jsrepo add @sv/cnblocks/{slug}
                     </span>
                   </Button>
                 </TooltipTrigger>
