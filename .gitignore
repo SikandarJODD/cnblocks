@@ -25,3 +25,5 @@ vite.config.ts.timestamp-*
 /features.md
 
 .cursor/rules
+
+/scripts

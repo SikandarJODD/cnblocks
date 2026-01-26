@@ -13,14 +13,15 @@
 		"ci:release": "jsrepo publish --verbose && changeset tag"
 	},
 	"devDependencies": {
-		"@lucide/svelte": "^0.483.0",
+		"@internationalized/date": "^3.10.1",
+		"@lucide/svelte": "^0.561.0",
 		"@shikijs/langs": "^3.4.2",
 		"@shikijs/themes": "^3.4.2",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.0.7",
-		"bits-ui": "^1.4.8",
+		"bits-ui": "^2.15.4",
 		"clsx": "^2.1.1",
 		"dotted-map": "^2.2.3",
 		"jsrepo": "^3.0.5",
