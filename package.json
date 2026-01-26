@@ -16,7 +16,6 @@
 		"@lucide/svelte": "^0.483.0",
 		"@shikijs/langs": "^3.4.2",
 		"@shikijs/themes": "^3.4.2",
-		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.16",
@@ -41,6 +40,7 @@
 	},
 	"dependencies": {
 		"@changesets/cli": "^2.29.4",
+		"@sveltejs/adapter-vercel": "^6.3.1",
 		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
 		"dompurify": "^3.3.0",
 		"marked": "^15.0.12"
