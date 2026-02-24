@@ -3,6 +3,7 @@
   import Button from "$lib/components/ui/button/button.svelte";
   let navs: NavItem[] = [
     { name: "Home", url: "/" },
+    { name: "Veil", url: "/veil", isNew: true },
     { name: "Blocks", url: "/hero" },
     { name: "Mists", url: "/mist/hero", isNew: true },
     { name: "Templates", url: "/templates" },
@@ -18,8 +19,8 @@
   let isMobileMenu = $state(false);
   // Dark & Light Mode
   import { toggleMode, mode } from "mode-watcher";
-  import { NavigationMenu } from "bits-ui";
   import CaretDown from "@lucide/svelte/icons/chevron-down";
+  import { NavigationMenu } from "bits-ui";
   import cn from "clsx";
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import McpDialog from "./MCPDialog.svelte";
@@ -119,7 +120,7 @@
   ];
 </script>
 
-<nav class="bg-transparent backdrop-blur-2xl sticky top-0 z-[1000]">
+<nav class="bg-transparent backdrop-blur-2xl sticky top-0 z-1000">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center w-full">
@@ -171,6 +172,15 @@
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
+              <NavigationMenu.Item id="veil">
+                <NavigationMenu.Link
+                  class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
+                  href="/veil"
+                >
+                  <span class="hidden sm:inline"> Veil </span>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
               <NavigationMenu.Item id="docs">
                 <NavigationMenu.Link
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
@@ -186,7 +196,7 @@
                 >
                   Blocks
                   <CaretDown
-                    class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    class="relative top-px ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
                     aria-hidden="true"
                   />
                 </NavigationMenu.Trigger>
@@ -194,7 +204,7 @@
                   class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
                 >
                   <div>
-                    <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-[580px]">
+                    <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-145">
                       {#each listItems as component (component.title)}
                         {@render ListItem({
                           href: component.href,
@@ -212,7 +222,7 @@
                 >
                   Mist
                   <CaretDown
-                    class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    class="relative top-px ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
                     aria-hidden="true"
                   />
                 </NavigationMenu.Trigger>
@@ -220,7 +230,7 @@
                   class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
                 >
                   <div>
-                    <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-[580px]">
+                    <ul class="grid gap-2 p-2 md:grid-cols-2 lg:w-145">
                       {#each mist_navs as component (component.title)}
                         {@render ListItem({
                           href: component.href,
@@ -238,7 +248,7 @@
                 >
                   Templates
                   <CaretDown
-                    class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    class="relative top-px ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
                     aria-hidden="true"
                   />
                 </NavigationMenu.Trigger>
@@ -246,7 +256,7 @@
                   class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
                 >
                   <ul
-                    class="m-0 grid list-none gap-x-2.5 p-3 sm:w-[600px] sm:grid-flow-col sm:grid-rows-3"
+                    class="m-0 grid list-none gap-x-2.5 p-3 sm:w-150 sm:grid-flow-col sm:grid-rows-3"
                   >
                     <li class="row-span-3 mb-2 sm:mb-0">
                       <NavigationMenu.Link
@@ -293,7 +303,7 @@
                 class="data-[state=hidden]:animate-fade-out data-[state=visible]:animate-fade-in top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 transition-[all,transform_250ms_ease] duration-200 data-[state=hidden]:opacity-0"
               >
                 <div
-                  class="bg-border relative top-[70%] size-2.5 rotate-[45deg] rounded-tl-[2px]"
+                  class="bg-border relative top-[70%] size-2.5 rotate-45 rounded-tl-[2px]"
                 ></div>
               </NavigationMenu.Indicator>
             </NavigationMenu.List>
@@ -301,7 +311,7 @@
               class="perspective-[2000px] absolute left-0 top-full flex w-full justify-center"
             >
               <NavigationMenu.Viewport
-                class="text-popover-foreground bg-background data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in relative mt-2.5 h-[var(--bits-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-lg border shadow-lg transition-[width,_height] duration-100 sm:w-[var(--bits-navigation-menu-viewport-width)] "
+                class="text-popover-foreground bg-background data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in relative mt-2.5 h-(--bits-navigation-menu-viewport-height) w-full origin-[top_center] overflow-hidden rounded-lg border shadow-lg transition-[width,height] duration-100 sm:w-(--bits-navigation-menu-viewport-width) "
               />
             </div>
           </NavigationMenu.Root>
@@ -480,7 +490,7 @@
       class={cn(
         "hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground outline-hidden block select-none space-y-1 rounded-md p-2.5 leading-none no-underline transition-colors",
         className,
-        soon && "opacity-50"
+        soon && "opacity-50",
       )}
       {href}
     >
