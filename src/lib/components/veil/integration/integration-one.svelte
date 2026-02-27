@@ -1,13 +1,13 @@
 <script>
-  import { Button } from "$lib/components/ui/button";
+  import { Button } from "$lib/components/ui/veil/button";
   import { ChevronRight } from "@lucide/svelte";
-  import IntegrationIllustrationTwo from "./integration-illustration-two.svelte";
+  import IntegrationIllustration from "./integration-illustration.svelte";
 </script>
 
 <section class="bg-background @container py-24">
-  <div class="mx-auto max-w-2xl">
-    <IntegrationIllustrationTwo />
-    <div class="mx-auto mt-12 max-w-md text-balance px-6 text-center">
+  <div class="mx-auto max-w-2xl px-6">
+    <IntegrationIllustration />
+    <div class="mx-auto mt-12 max-w-md text-balance text-center">
       <h2 class="font-serif text-4xl font-medium">
         Connect Your Favorite Tools
       </h2>

@@ -1,0 +1,48 @@
+<script lang="ts">
+  import Logo from "$lib/components/web/Logo.svelte";
+  import SocialMediaOne from "./social-media-one.svelte";
+  import ThemeSwitcher from "./theme-switcher.svelte";
+
+  type LinkItem = { label: string; href: string };
+
+  const links: LinkItem[] = [
+    { label: "Features", href: "#" },
+    { label: "Pricing", href: "#" },
+    { label: "Blog", href: "#" },
+  ];
+
+  const year = new Date().getFullYear();
+</script>
+
+<footer class="bg-background @container py-12">
+  <div class="mx-auto max-w-2xl px-6">
+    <div class="flex flex-col">
+      <a
+        href="/"
+        aria-label="go home"
+        class="hover:bg-foreground/5 -ml-1.5 flex size-8 rounded-lg *:m-auto"
+      >
+        <Logo class="size-5" />
+      </a>
+      <nav class="my-8 flex flex-col gap-y-4">
+        {#each links as link (link.label)}
+          <a
+            href={link.href}
+            class="text-muted-foreground hover:text-foreground text-sm transition-colors"
+          >
+            {link.label}
+          </a>
+        {/each}
+      </nav>
+
+      <div class="flex justify-between">
+        <ThemeSwitcher />
+        <SocialMediaOne />
+      </div>
+
+      <p class="text-muted-foreground border-foreground/10 mt-2 border-t border-dashed pt-6 text-sm">
+        &copy; {year} Veil.
+      </p>
+    </div>
+  </div>
+</footer>
