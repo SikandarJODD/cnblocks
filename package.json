@@ -10,7 +10,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"build:registry": "jsrepo build",
-		"ci:release": "jsrepo publish --verbose && changeset tag"
+		"ci:release": "jsrepo publish --verbose && changeset tag",
+		"create:tailark": "node scripts/create-tailark-feature.mjs"
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.10.1",
