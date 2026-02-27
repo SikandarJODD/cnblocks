@@ -18,19 +18,19 @@
       id: "item-1",
       question: "How does the free trial work?",
       answer:
-        "Start with a 14-day free trial with full access to all features. No credit card required. You can upgrade to a paid plan at any time during or after the trial.",
+        "Start with a 14-day free trial with full access to all features. No credit card required.",
     },
     {
       id: "item-2",
       question: "Can I change my plan later?",
       answer:
-        "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the difference.",
+        "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.",
     },
     {
       id: "item-3",
       question: "What payment methods do you accept?",
       answer:
-        "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.",
+        "We accept all major credit cards, PayPal, and bank transfers for annual plans.",
     },
     {
       id: "item-4",
@@ -42,21 +42,28 @@
       id: "item-5",
       question: "Do you offer refunds?",
       answer:
-        "We offer a 30-day money-back guarantee. If you're not satisfied, contact us within 30 days for a full refund.",
+        "We offer a 30-day money-back guarantee. Contact us within 30 days for a full refund.",
+    },
+    {
+      id: "item-6",
+      question: "How do I cancel my subscription?",
+      answer:
+        "You can cancel anytime from your account settings. Your access continues until the billing period ends.",
     },
   ];
 </script>
 
 <section class="bg-background @container py-24">
-  <div class="mx-auto max-w-2xl px-6">
+  <div class="mx-auto max-w-3xl px-6">
     <div class="text-center">
       <h2 class="text-balance font-serif text-4xl font-medium">
-        Frequently Asked Questions
+        Common Questions
       </h2>
       <p class="text-muted-foreground mx-auto mt-4 max-w-md text-balance">
-        Find answers to common questions about our platform.
+        Everything you need to know about our platform.
       </p>
     </div>
+
     <Card variant="outline" class="mt-12 p-2">
       <Accordion type="single" collapsible>
         {#each faqItems as item (item.id)}
@@ -71,11 +78,10 @@
         {/each}
       </Accordion>
     </Card>
-    <p class="text-muted-foreground mt-6 text-center text-sm">
-      Still have questions?
-      <a href="#" class="text-primary font-medium hover:underline">
-        Contact support
-      </a>
+
+    <p class="text-muted-foreground mt-8 text-center text-sm">
+      Have another question?
+      <a href="#" class="text-primary font-medium hover:underline">Get in touch</a>
     </p>
   </div>
 </section>

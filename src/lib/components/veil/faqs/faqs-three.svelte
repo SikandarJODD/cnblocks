@@ -47,39 +47,33 @@
 </script>
 
 <section class="bg-background @container py-24">
-  <div class="mx-auto max-w-3xl px-6">
-    <div class="@xl:flex-row @xl:items-start @xl:gap-12 flex flex-col gap-8">
-      <div class="@xl:sticky @xl:top-24 @xl:w-64 shrink-0">
-        <h2 class="font-serif text-3xl font-medium">FAQs</h2>
-        <p class="text-muted-foreground mt-3 text-sm">Your questions answered</p>
-        <p class="text-muted-foreground @xl:block mt-6 hidden text-sm">
-          Need more help?
-          <a href="#" class="text-primary font-medium hover:underline">
-            Contact us
-          </a>
-        </p>
-      </div>
-
-      <div class="flex-1">
-        <Accordion type="single" collapsible>
-          {#each faqItems as item (item.id)}
-            <AccordionItem value={item.id} class="border-dashed">
-              <AccordionTrigger class="cursor-pointer py-4 text-sm font-medium hover:no-underline">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent>
-                <p class="text-muted-foreground pb-2 text-sm">{item.answer}</p>
-              </AccordionContent>
-            </AccordionItem>
-          {/each}
-        </Accordion>
-        <p class="text-muted-foreground @xl:hidden mt-6 text-sm">
-          Need more help?
-          <a href="#" class="text-primary font-medium hover:underline">
-            Contact us
-          </a>
-        </p>
-      </div>
-    </div>
+  <div class="mx-auto max-w-2xl px-6">
+    <h2 class="text-center font-serif text-4xl font-medium">
+      Your Questions Answered
+    </h2>
+    <Accordion type="single" collapsible class="mt-12">
+      {#each faqItems as item (item.id)}
+        <div class="group">
+          <AccordionItem
+            value={item.id}
+            class="data-[state=open]:bg-muted/50 peer rounded-xl border-none px-5 py-1 transition-colors"
+          >
+            <AccordionTrigger class="cursor-pointer py-4 text-sm font-medium hover:no-underline">
+              {item.question}
+            </AccordionTrigger>
+            <AccordionContent>
+              <p class="text-muted-foreground pb-2 text-sm">{item.answer}</p>
+            </AccordionContent>
+          </AccordionItem>
+          <hr class="mx-5 group-last:hidden peer-data-[state=open]:opacity-0" />
+        </div>
+      {/each}
+    </Accordion>
+    <p class="text-muted-foreground mt-8 text-center text-sm">
+      Can't find what you're looking for?
+      <a href="#" class="text-primary font-medium hover:underline">
+        Contact support
+      </a>
+    </p>
   </div>
 </section>
