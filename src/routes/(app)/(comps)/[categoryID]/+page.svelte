@@ -21,6 +21,6 @@
 
 <MetaTags {...seoMetaTags} title={categoryTitle} />
 
-{#each blocks as block}
+<!-- {#each blocks as block}
   <BlockPreview {...block} />
-{/each}
+{/each} -->
