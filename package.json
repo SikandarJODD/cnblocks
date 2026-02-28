@@ -15,7 +15,7 @@
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.10.1",
-		"@lucide/svelte": "^0.575.0",
+		"@lucide/svelte": "^0.561.0",
 		"@shikijs/langs": "^3.4.2",
 		"@shikijs/themes": "^3.4.2",
 		"@sveltejs/kit": "^2.16.0",
