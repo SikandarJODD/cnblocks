@@ -87,7 +87,7 @@
 						class={cn(
 							"absolute inset-0 z-50 m-auto flex size-fit h-11 items-center rounded-lg transition-all duration-500",
 							isScrolled
-								? "gap-4 bg-card shadow-lg shadow-foreground/6.5 ring-1 ring-border backdrop-blur"
+								? "gap-4 bg-card shadow-lg ring-1 shadow-foreground/6.5 ring-border backdrop-blur"
 								: "gap-0 bg-transparent"
 						)}
 					>
@@ -126,7 +126,7 @@
 				{/if}
 
 				<div
-					class="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl bg-card p-6 shadow-2xl shadow-zinc-300/20 ring-1 ring-border in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:ring-transparent lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent"
+					class="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl bg-card p-6 shadow-2xl ring-1 shadow-zinc-300/20 ring-border in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:ring-transparent lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent"
 				>
 					<div class="lg:hidden">
 						<ul class="flex gap-1 max-lg:flex-col">

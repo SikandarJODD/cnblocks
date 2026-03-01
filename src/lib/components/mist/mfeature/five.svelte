@@ -48,7 +48,7 @@
 
 			<div class="relative -mx-12 mt-16 px-12">
 				<div
-					class="relative mx-auto overflow-hidden rounded-xl border border-foreground/20 bg-background shadow-lg shadow-black/10 ring-1"
+					class="relative mx-auto overflow-hidden rounded-xl border border-foreground/20 bg-background shadow-lg ring-1 shadow-black/10"
 				>
 					<img src="/mist/tailark-2.png" alt="app screen" width="2880" height="1842" />
 				</div>

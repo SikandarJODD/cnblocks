@@ -7,7 +7,7 @@
 		variants: {
 			variant: {
 				default:
-					"bg-card shadow-lg shadow-foreground/5 ring-1 ring-foreground/6.5 dark:shadow-black/10",
+					"bg-card shadow-lg ring-1 shadow-foreground/5 ring-foreground/6.5 dark:shadow-black/10",
 				soft: "bg-muted",
 				mixed: "border bg-muted",
 				outline: "bg-card ring-1 ring-border",

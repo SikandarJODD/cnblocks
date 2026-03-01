@@ -40,7 +40,7 @@
 			<div class="space-y-3">
 				<Sidebar.Group class="">
 					<Sidebar.GroupLabel
-						class="text-sidebar-foreground/60 px-1 text-[11px] font-semibold tracking-wide uppercase"
+						class="px-1 text-[11px] font-semibold tracking-wide text-sidebar-foreground/60 uppercase"
 					>
 						Get Started
 					</Sidebar.GroupLabel>
@@ -66,7 +66,7 @@
 
 				<Sidebar.Group class="p-1.5 pt-0">
 					<Sidebar.GroupLabel
-						class="text-sidebar-foreground/60 px-1 text-[11px] font-semibold tracking-wide uppercase"
+						class="px-1 text-[11px] font-semibold tracking-wide text-sidebar-foreground/60 uppercase"
 					>
 						Components
 						<!-- ({veilSidebarConfig.totalComponents}) -->
@@ -86,7 +86,7 @@
 										{/snippet}
 									</Sidebar.MenuButton>
 									<Sidebar.MenuBadge
-										class="bg-sidebar-accent/60 text-sidebar-foreground/80 end-2 top-1.5 rounded-md px-1.5 text-[11px]"
+										class="end-2 top-1.5 rounded-md bg-sidebar-accent/60 px-1.5 text-[11px] text-sidebar-foreground/80"
 									>
 										{item.count}
 									</Sidebar.MenuBadge>

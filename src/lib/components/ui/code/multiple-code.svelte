@@ -47,9 +47,9 @@
 			{#each code as item, index}
 				<Button
 					class={cn(
-						`flex w-full items-center justify-start gap-1.5 rounded-none border-transparent border-l-2 pl-6! text-xs hover:bg-neutral-200/70 hover:dark:bg-zinc-900 [&_svg:not([class*='size-'])]:size-3`,
+						`flex w-full items-center justify-start gap-1.5 rounded-none border-l-2 border-transparent pl-6! text-xs hover:bg-neutral-200/70 hover:dark:bg-zinc-900 [&_svg:not([class*='size-'])]:size-3`,
 						selectedIndex === index &&
-							"border-muted-foreground border-l-2 bg-neutral-200/40 dark:bg-zinc-800/50"
+							"border-l-2 border-muted-foreground bg-neutral-200/40 dark:bg-zinc-800/50"
 					)}
 					variant="ghost"
 					onclick={() => (selectedIndex = index)}

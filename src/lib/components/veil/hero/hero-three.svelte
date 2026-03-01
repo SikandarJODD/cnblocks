@@ -63,7 +63,7 @@
 							</div>
 						{/each}
 						<div
-							class="absolute inset-0 m-auto mt-auto flex h-fit min-w-sm justify-between gap-3 rounded-full bg-card p-2 shadow-xl shadow-foreground/6.5 ring-1 ring-border sm:inset-2 dark:shadow-black/6.5"
+							class="absolute inset-0 m-auto mt-auto flex h-fit min-w-sm justify-between gap-3 rounded-full bg-card p-2 shadow-xl ring-1 shadow-foreground/6.5 ring-border sm:inset-2 dark:shadow-black/6.5"
 						>
 							<div class="flex items-center gap-2">
 								<div

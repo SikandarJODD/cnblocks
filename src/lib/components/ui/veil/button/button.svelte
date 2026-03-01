@@ -10,9 +10,9 @@
 				default: "bg-foreground text-background hover:brightness-95",
 				neutral: "bg-foreground text-background hover:brightness-95",
 				destructive:
-					"bg-destructive text-destructive-foreground shadow-md hover:bg-destructive/90",
+					"text-destructive-foreground bg-destructive shadow-md hover:bg-destructive/90",
 				outline:
-					"border border-transparent bg-card text-foreground shadow-sm shadow-black/6.5 ring-1 ring-foreground/15 duration-200 hover:bg-muted/50",
+					"border border-transparent bg-card text-foreground shadow-sm ring-1 shadow-black/6.5 ring-foreground/15 duration-200 hover:bg-muted/50",
 				secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
 				ghost: "text-foreground/75 hover:bg-foreground/5 hover:text-foreground",
 				link: "text-primary underline-offset-4 hover:underline",

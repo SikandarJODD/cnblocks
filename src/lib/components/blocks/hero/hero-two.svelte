@@ -84,7 +84,7 @@
 						class="absolute inset-0 z-10 bg-linear-to-b from-transparent from-35% to-background"
 					></div>
 					<div
-						class="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border bg-background p-4 shadow-lg inset-shadow-2xs shadow-zinc-950/15 ring-1 ring-background dark:inset-shadow-white/20"
+						class="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border bg-background p-4 shadow-lg ring-1 inset-shadow-2xs shadow-zinc-950/15 ring-background dark:inset-shadow-white/20"
 					>
 						<img
 							class="relative hidden aspect-15/8 rounded-2xl bg-background dark:block"

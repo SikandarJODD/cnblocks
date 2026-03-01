@@ -39,7 +39,7 @@
 						class="relative flex h-56 -rotate-12 rotate-x-12 rotate-y-2 rotate-z-10 flex-col rounded-3xl border bg-muted py-4 pl-4"
 					>
 						<div
-							class="absolute bottom-15 left-4 min-w-56 rounded-2xl bg-card p-1 shadow-xl shadow-foreground/10 ring-1 ring-border dark:shadow-black/25"
+							class="absolute bottom-15 left-4 min-w-56 rounded-2xl bg-card p-1 shadow-xl ring-1 shadow-foreground/10 ring-border dark:shadow-black/25"
 						>
 							<div
 								class="flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm hover:bg-muted [&>svg]:size-4 [&>svg]:opacity-65"
@@ -83,7 +83,7 @@
 						</div>
 
 						<div
-							class="mt-auto flex h-fit justify-between gap-3 rounded-full bg-card p-2 shadow-xs shadow-foreground/6.5 ring-1 ring-border dark:shadow-black/6.5"
+							class="mt-auto flex h-fit justify-between gap-3 rounded-full bg-card p-2 shadow-xs ring-1 shadow-foreground/6.5 ring-border dark:shadow-black/6.5"
 						>
 							<div class="flex items-center gap-2">
 								<div

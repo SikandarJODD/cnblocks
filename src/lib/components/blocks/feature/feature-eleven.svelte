@@ -42,7 +42,7 @@
 	>
 		{#each stats as stat, index}
 			<div
-				class="border-blue-100 border-l-2 pl-6 md:border-l md:text-center lg:border-gray-200 lg:first:border-none dark:border-blue-900 lg:dark:border-gray-800"
+				class="border-l-2 border-blue-100 pl-6 md:border-l md:text-center lg:border-gray-200 lg:first:border-none dark:border-blue-900 lg:dark:border-gray-800"
 			>
 				<dd
 					class="inline-block bg-gradient-to-t from-blue-900 to-blue-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent lg:text-6xl dark:from-blue-700 dark:to-blue-400"

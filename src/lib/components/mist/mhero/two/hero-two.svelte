@@ -19,7 +19,7 @@
 						>
 							<div
 								aria-hidden="true"
-								class="relative flex size-5 items-center justify-center rounded border border-background bg-linear-to-b from-primary to-foreground shadow-md shadow-black/20 ring-1 ring-black/10 dark:inset-shadow-2xs"
+								class="relative flex size-5 items-center justify-center rounded border border-background bg-linear-to-b from-primary to-foreground shadow-md ring-1 shadow-black/20 ring-black/10 dark:inset-shadow-2xs"
 							>
 								<div
 									class="absolute inset-x-0 inset-y-1.5 border-y border-dotted border-white/25"
@@ -54,7 +54,7 @@
 					<div class="relative z-10 mx-auto max-w-5xl px-6">
 						<div class="mt-12 md:mt-16">
 							<div
-								class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg shadow-black/10 ring-1 ring-black/10"
+								class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg ring-1 shadow-black/10 ring-black/10"
 							>
 								<img
 									src="/mist/tailark-2.png"

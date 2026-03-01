@@ -38,7 +38,7 @@
 			{@const Icon = item.icon}
 			<div class="col-span-full sm:col-span-2 lg:col-span-1">
 				<div
-					class="w-fit rounded-lg p-2 shadow-md shadow-blue-400/30 ring-1 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5"
+					class="w-fit rounded-lg p-2 shadow-md ring-1 shadow-blue-400/30 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5"
 				>
 					<Icon aria-hidden="true" class="size-6 text-blue-600 dark:text-blue-400" />
 				</div>

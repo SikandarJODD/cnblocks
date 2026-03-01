@@ -35,7 +35,7 @@
 			/>
 
 			<div
-				class="relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl shadow-black/15 ring-1 sm:m-8 md:m-12"
+				class="relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl ring-1 shadow-black/15 sm:m-8 md:m-12"
 			>
 				<img
 					src="/mist/tailark-2.png"
@@ -96,7 +96,7 @@
 	<div
 		aria-hidden="true"
 		class={cn(
-			"relative flex size-9 translate-y-0.5 items-center justify-center rounded-(--radius) border border-background bg-linear-to-b from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ",
+			"relative flex size-9 translate-y-0.5 items-center justify-center rounded-(--radius) border border-background bg-linear-to-b from-yellow-300 to-orange-600 shadow-lg ring-1 shadow-black/20 ",
 			_class
 		)}
 	>

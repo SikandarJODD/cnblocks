@@ -13,7 +13,7 @@
 			aria-label="go home"
 			variant="ghost"
 			size="sm"
-			class="inline-block h-auto border-transparent border-t-2 py-3 hover:bg-transparent"
+			class="inline-block h-auto border-t-2 border-transparent py-3 hover:bg-transparent"
 		>
 			<Logo class="w-fit" />
 		</Button>

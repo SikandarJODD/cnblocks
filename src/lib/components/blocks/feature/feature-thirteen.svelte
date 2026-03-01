@@ -32,7 +32,7 @@
 		{#each features as item}
 			<div class="col-span-full sm:col-span-2 lg:col-span-1">
 				<span
-					class="rounded-lg bg-blue-50/50 px-3 py-1.5 leading-4 font-semibold tracking-tighter shadow-sm shadow-blue-500/20 ring-1 ring-blue-200/20 sm:text-sm dark:bg-blue-900/20 dark:ring-blue-800/30"
+					class="rounded-lg bg-blue-50/50 px-3 py-1.5 leading-4 font-semibold tracking-tighter shadow-sm ring-1 shadow-blue-500/20 ring-blue-200/20 sm:text-sm dark:bg-blue-900/20 dark:ring-blue-800/30"
 				>
 					<span
 						class="bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400"
