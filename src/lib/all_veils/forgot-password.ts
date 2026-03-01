@@ -2,10 +2,10 @@
 
 import ForgotPasswordOne from "$lib/components/veil/forgot-password/forgot-password-one.svelte";
 import ForgotPasswordOneCode from "$lib/components/veil/forgot-password/forgot-password-one.svelte?raw";
-import ForgotPasswordThree from "$lib/components/veil/forgot-password/forgot-password-three.svelte";
-import ForgotPasswordThreeCode from "$lib/components/veil/forgot-password/forgot-password-three.svelte?raw";
 import ForgotPasswordTwo from "$lib/components/veil/forgot-password/forgot-password-two.svelte";
 import ForgotPasswordTwoCode from "$lib/components/veil/forgot-password/forgot-password-two.svelte?raw";
+import ForgotPasswordThree from "$lib/components/veil/forgot-password/forgot-password-three.svelte";
+import ForgotPasswordThreeCode from "$lib/components/veil/forgot-password/forgot-password-three.svelte?raw";
 
 export const all_veils_forgot_password: MistBlock[] = [
   {
@@ -21,18 +21,6 @@ export const all_veils_forgot_password: MistBlock[] = [
     component: ForgotPasswordOne,
   },
   {
-    slug: "forgot-password-three",
-    title: "Forgot Password Three",
-    category: "forgot-password",
-    preview: "/preview/veil/forgot-password/forgot-password-three",
-    itemId: "veil-forgot-password-three",
-    code: {
-      code: ForgotPasswordThreeCode,
-      lang: "svelte",
-    },
-    component: ForgotPasswordThree,
-  },
-  {
     slug: "forgot-password-two",
     title: "Forgot Password Two",
     category: "forgot-password",
@@ -43,5 +31,17 @@ export const all_veils_forgot_password: MistBlock[] = [
       lang: "svelte",
     },
     component: ForgotPasswordTwo,
+  },
+  {
+    slug: "forgot-password-three",
+    title: "Forgot Password Three",
+    category: "forgot-password",
+    preview: "/preview/veil/forgot-password/forgot-password-three",
+    itemId: "veil-forgot-password-three",
+    code: {
+      code: ForgotPasswordThreeCode,
+      lang: "svelte",
+    },
+    component: ForgotPasswordThree,
   },
 ];

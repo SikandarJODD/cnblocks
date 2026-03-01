@@ -2,10 +2,10 @@
 
 import LoginOne from "$lib/components/veil/login/login-one.svelte";
 import LoginOneCode from "$lib/components/veil/login/login-one.svelte?raw";
-import LoginThree from "$lib/components/veil/login/login-three.svelte";
-import LoginThreeCode from "$lib/components/veil/login/login-three.svelte?raw";
 import LoginTwo from "$lib/components/veil/login/login-two.svelte";
 import LoginTwoCode from "$lib/components/veil/login/login-two.svelte?raw";
+import LoginThree from "$lib/components/veil/login/login-three.svelte";
+import LoginThreeCode from "$lib/components/veil/login/login-three.svelte?raw";
 
 export const all_veils_login: MistBlock[] = [
   {
@@ -21,18 +21,6 @@ export const all_veils_login: MistBlock[] = [
     component: LoginOne,
   },
   {
-    slug: "login-three",
-    title: "Login Three",
-    category: "login",
-    preview: "/preview/veil/login/login-three",
-    itemId: "veil-login-three",
-    code: {
-      code: LoginThreeCode,
-      lang: "svelte",
-    },
-    component: LoginThree,
-  },
-  {
     slug: "login-two",
     title: "Login Two",
     category: "login",
@@ -43,5 +31,17 @@ export const all_veils_login: MistBlock[] = [
       lang: "svelte",
     },
     component: LoginTwo,
+  },
+  {
+    slug: "login-three",
+    title: "Login Three",
+    category: "login",
+    preview: "/preview/veil/login/login-three",
+    itemId: "veil-login-three",
+    code: {
+      code: LoginThreeCode,
+      lang: "svelte",
+    },
+    component: LoginThree,
   },
 ];

@@ -2,10 +2,10 @@
 
 import PricingOne from "$lib/components/veil/pricing/pricing-one.svelte";
 import PricingOneCode from "$lib/components/veil/pricing/pricing-one.svelte?raw";
-import PricingThree from "$lib/components/veil/pricing/pricing-three.svelte";
-import PricingThreeCode from "$lib/components/veil/pricing/pricing-three.svelte?raw";
 import PricingTwo from "$lib/components/veil/pricing/pricing-two.svelte";
 import PricingTwoCode from "$lib/components/veil/pricing/pricing-two.svelte?raw";
+import PricingThree from "$lib/components/veil/pricing/pricing-three.svelte";
+import PricingThreeCode from "$lib/components/veil/pricing/pricing-three.svelte?raw";
 
 export const all_veils_pricing: MistBlock[] = [
   {
@@ -21,18 +21,6 @@ export const all_veils_pricing: MistBlock[] = [
     component: PricingOne,
   },
   {
-    slug: "pricing-three",
-    title: "Pricing Three",
-    category: "pricing",
-    preview: "/preview/veil/pricing/pricing-three",
-    itemId: "veil-pricing-three",
-    code: {
-      code: PricingThreeCode,
-      lang: "svelte",
-    },
-    component: PricingThree,
-  },
-  {
     slug: "pricing-two",
     title: "Pricing Two",
     category: "pricing",
@@ -43,5 +31,17 @@ export const all_veils_pricing: MistBlock[] = [
       lang: "svelte",
     },
     component: PricingTwo,
+  },
+  {
+    slug: "pricing-three",
+    title: "Pricing Three",
+    category: "pricing",
+    preview: "/preview/veil/pricing/pricing-three",
+    itemId: "veil-pricing-three",
+    code: {
+      code: PricingThreeCode,
+      lang: "svelte",
+    },
+    component: PricingThree,
   },
 ];

@@ -1,27 +1,15 @@
 ﻿import type { MistBlock } from "$lib/types/mists";
 
-import HeaderFour from "$lib/components/veil/header/header-four.svelte";
-import HeaderFourCode from "$lib/components/veil/header/header-four.svelte?raw";
 import HeaderOne from "$lib/components/veil/header/header-one.svelte";
 import HeaderOneCode from "$lib/components/veil/header/header-one.svelte?raw";
-import HeaderThree from "$lib/components/veil/header/header-three.svelte";
-import HeaderThreeCode from "$lib/components/veil/header/header-three.svelte?raw";
 import HeaderTwo from "$lib/components/veil/header/header-two.svelte";
 import HeaderTwoCode from "$lib/components/veil/header/header-two.svelte?raw";
+import HeaderThree from "$lib/components/veil/header/header-three.svelte";
+import HeaderThreeCode from "$lib/components/veil/header/header-three.svelte?raw";
+import HeaderFour from "$lib/components/veil/header/header-four.svelte";
+import HeaderFourCode from "$lib/components/veil/header/header-four.svelte?raw";
 
 export const all_veils_header: MistBlock[] = [
-  {
-    slug: "header-four",
-    title: "Header Four",
-    category: "header",
-    preview: "/preview/veil/header/header-four",
-    itemId: "veil-header-four",
-    code: {
-      code: HeaderFourCode,
-      lang: "svelte",
-    },
-    component: HeaderFour,
-  },
   {
     slug: "header-one",
     title: "Header One",
@@ -33,6 +21,18 @@ export const all_veils_header: MistBlock[] = [
       lang: "svelte",
     },
     component: HeaderOne,
+  },
+  {
+    slug: "header-two",
+    title: "Header Two",
+    category: "header",
+    preview: "/preview/veil/header/header-two",
+    itemId: "veil-header-two",
+    code: {
+      code: HeaderTwoCode,
+      lang: "svelte",
+    },
+    component: HeaderTwo,
   },
   {
     slug: "header-three",
@@ -47,15 +47,15 @@ export const all_veils_header: MistBlock[] = [
     component: HeaderThree,
   },
   {
-    slug: "header-two",
-    title: "Header Two",
+    slug: "header-four",
+    title: "Header Four",
     category: "header",
-    preview: "/preview/veil/header/header-two",
-    itemId: "veil-header-two",
+    preview: "/preview/veil/header/header-four",
+    itemId: "veil-header-four",
     code: {
-      code: HeaderTwoCode,
+      code: HeaderFourCode,
       lang: "svelte",
     },
-    component: HeaderTwo,
+    component: HeaderFour,
   },
 ];

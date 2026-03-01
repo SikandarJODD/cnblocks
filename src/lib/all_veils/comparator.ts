@@ -2,10 +2,10 @@
 
 import ComparatorOne from "$lib/components/veil/comparator/comparator-one.svelte";
 import ComparatorOneCode from "$lib/components/veil/comparator/comparator-one.svelte?raw";
-import ComparatorThree from "$lib/components/veil/comparator/comparator-three.svelte";
-import ComparatorThreeCode from "$lib/components/veil/comparator/comparator-three.svelte?raw";
 import ComparatorTwo from "$lib/components/veil/comparator/comparator-two.svelte";
 import ComparatorTwoCode from "$lib/components/veil/comparator/comparator-two.svelte?raw";
+import ComparatorThree from "$lib/components/veil/comparator/comparator-three.svelte";
+import ComparatorThreeCode from "$lib/components/veil/comparator/comparator-three.svelte?raw";
 
 export const all_veils_comparator: MistBlock[] = [
   {
@@ -21,18 +21,6 @@ export const all_veils_comparator: MistBlock[] = [
     component: ComparatorOne,
   },
   {
-    slug: "comparator-three",
-    title: "Comparator Three",
-    category: "comparator",
-    preview: "/preview/veil/comparator/comparator-three",
-    itemId: "veil-comparator-three",
-    code: {
-      code: ComparatorThreeCode,
-      lang: "svelte",
-    },
-    component: ComparatorThree,
-  },
-  {
     slug: "comparator-two",
     title: "Comparator Two",
     category: "comparator",
@@ -43,5 +31,17 @@ export const all_veils_comparator: MistBlock[] = [
       lang: "svelte",
     },
     component: ComparatorTwo,
+  },
+  {
+    slug: "comparator-three",
+    title: "Comparator Three",
+    category: "comparator",
+    preview: "/preview/veil/comparator/comparator-three",
+    itemId: "veil-comparator-three",
+    code: {
+      code: ComparatorThreeCode,
+      lang: "svelte",
+    },
+    component: ComparatorThree,
   },
 ];

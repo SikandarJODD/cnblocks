@@ -1,27 +1,15 @@
 ﻿import type { MistBlock } from "$lib/types/mists";
 
-import FaqsFour from "$lib/components/veil/faqs/faqs-four.svelte";
-import FaqsFourCode from "$lib/components/veil/faqs/faqs-four.svelte?raw";
 import FaqsOne from "$lib/components/veil/faqs/faqs-one.svelte";
 import FaqsOneCode from "$lib/components/veil/faqs/faqs-one.svelte?raw";
-import FaqsThree from "$lib/components/veil/faqs/faqs-three.svelte";
-import FaqsThreeCode from "$lib/components/veil/faqs/faqs-three.svelte?raw";
 import FaqsTwo from "$lib/components/veil/faqs/faqs-two.svelte";
 import FaqsTwoCode from "$lib/components/veil/faqs/faqs-two.svelte?raw";
+import FaqsThree from "$lib/components/veil/faqs/faqs-three.svelte";
+import FaqsThreeCode from "$lib/components/veil/faqs/faqs-three.svelte?raw";
+import FaqsFour from "$lib/components/veil/faqs/faqs-four.svelte";
+import FaqsFourCode from "$lib/components/veil/faqs/faqs-four.svelte?raw";
 
 export const all_veils_faqs: MistBlock[] = [
-  {
-    slug: "faqs-four",
-    title: "Faqs Four",
-    category: "faqs",
-    preview: "/preview/veil/faqs/faqs-four",
-    itemId: "veil-faqs-four",
-    code: {
-      code: FaqsFourCode,
-      lang: "svelte",
-    },
-    component: FaqsFour,
-  },
   {
     slug: "faqs-one",
     title: "Faqs One",
@@ -33,6 +21,18 @@ export const all_veils_faqs: MistBlock[] = [
       lang: "svelte",
     },
     component: FaqsOne,
+  },
+  {
+    slug: "faqs-two",
+    title: "Faqs Two",
+    category: "faqs",
+    preview: "/preview/veil/faqs/faqs-two",
+    itemId: "veil-faqs-two",
+    code: {
+      code: FaqsTwoCode,
+      lang: "svelte",
+    },
+    component: FaqsTwo,
   },
   {
     slug: "faqs-three",
@@ -47,15 +47,15 @@ export const all_veils_faqs: MistBlock[] = [
     component: FaqsThree,
   },
   {
-    slug: "faqs-two",
-    title: "Faqs Two",
+    slug: "faqs-four",
+    title: "Faqs Four",
     category: "faqs",
-    preview: "/preview/veil/faqs/faqs-two",
-    itemId: "veil-faqs-two",
+    preview: "/preview/veil/faqs/faqs-four",
+    itemId: "veil-faqs-four",
     code: {
-      code: FaqsTwoCode,
+      code: FaqsFourCode,
       lang: "svelte",
     },
-    component: FaqsTwo,
+    component: FaqsFour,
   },
 ];
