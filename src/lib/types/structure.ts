@@ -16,5 +16,6 @@ export type ComponentMeta = {
 export type ComponentDoc = ComponentMeta & {
 	preview?: Component;
 	previewCode?: CodeBlock | CodeBlock[];
+	previewHref?: string;
 	seo: SEO;
 };

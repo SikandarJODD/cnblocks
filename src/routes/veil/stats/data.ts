@@ -20,6 +20,7 @@ type StatsOverviewItem = {
 	title: string;
 	description: string;
 	href: string;
+	previewHref: string;
 	preview: Component;
 };
 
@@ -46,6 +47,7 @@ const statsOneDoc: ComponentDoc = {
 	},
 	preview: StatsOne,
 	previewCode: toCodeBlock("stats-one.svelte", StatsOneCode),
+	previewHref: "/preview/veil/stats/stats-one",
 };
 
 const statsTwoDoc: ComponentDoc = {
@@ -59,6 +61,7 @@ const statsTwoDoc: ComponentDoc = {
 	},
 	preview: StatsTwo,
 	previewCode: toCodeBlock("stats-two.svelte", StatsTwoCode),
+	previewHref: "/preview/veil/stats/stats-two",
 };
 
 const statsThreeDoc: ComponentDoc = {
@@ -72,6 +75,7 @@ const statsThreeDoc: ComponentDoc = {
 	},
 	preview: StatsThree,
 	previewCode: toCodeBlock("stats-three.svelte", StatsThreeCode),
+	previewHref: "/preview/veil/stats/stats-three",
 };
 
 const statsFourDoc: ComponentDoc = {
@@ -85,6 +89,7 @@ const statsFourDoc: ComponentDoc = {
 	},
 	preview: StatsFour,
 	previewCode: toCodeBlock("stats-four.svelte", StatsFourCode),
+	previewHref: "/preview/veil/stats/stats-four",
 };
 
 export const statsDocsBySlug: Record<StatsSlug, ComponentDoc> = {
@@ -111,6 +116,7 @@ export const statsOverview: {
 			title: "Stats One",
 			description: "Compact metrics and clear hierarchy.",
 			href: "/veil/stats/stats-one",
+			previewHref: "/preview/veil/stats/stats-one",
 			preview: StatsOne,
 		},
 		{
@@ -118,6 +124,7 @@ export const statsOverview: {
 			title: "Stats Two",
 			description: "Metrics with chart-style visual texture.",
 			href: "/veil/stats/stats-two",
+			previewHref: "/preview/veil/stats/stats-two",
 			preview: StatsTwo,
 		},
 		{
@@ -125,6 +132,7 @@ export const statsOverview: {
 			title: "Stats Three",
 			description: "Stats layout paired with a visual backdrop.",
 			href: "/veil/stats/stats-three",
+			previewHref: "/preview/veil/stats/stats-three",
 			preview: StatsThree,
 		},
 		{
@@ -132,6 +140,7 @@ export const statsOverview: {
 			title: "Stats Four",
 			description: "Split composition with strong directional flow.",
 			href: "/veil/stats/stats-four",
+			previewHref: "/preview/veil/stats/stats-four",
 			preview: StatsFour,
 		},
 	],

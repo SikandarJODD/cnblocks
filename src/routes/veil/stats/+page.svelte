@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SEOComponent from "$lib/seo/SEO.svelte";
+	import { PreviewFrame } from "$lib/components/ui/preview-component";
 	import { statsOverview } from "./data";
 </script>
 
@@ -15,22 +16,24 @@
 		<p class="text-muted-foreground max-w-3xl">{statsOverview.description}</p>
 	</section>
 
-	<section class="grid gap-6 md:grid-cols-2">
+	<section class="grid gap-6 md:grid-cols-1">
 		{#each statsOverview.items as item}
-			<article class="overflow-hidden rounded-xl border bg-card">
-				<div class="bg-background p-3">
+			<div class="space-y-2">
+				<PreviewFrame
+					componentName={item.title}
+					installCommand={`npx jsrepo add @sv/cnblocks/veil-${item.slug}`}
+					previewHref={item.previewHref}
+					themeSetupHref="/docs/installation"
+				>
 					<svelte:component this={item.preview} />
-				</div>
-				<div class="space-y-2 border-t p-4">
-					<div class="flex items-center justify-between gap-3">
-						<h2 class="text-lg font-medium">{item.title}</h2>
-						<a class="text-primary text-sm font-medium hover:underline" href={item.href}>
-							Open docs
-						</a>
-					</div>
+				</PreviewFrame>
+				<div class="flex items-center justify-between gap-3 px-1">
 					<p class="text-muted-foreground text-sm">{item.description}</p>
+					<a class="text-primary shrink-0 text-sm font-medium hover:underline" href={item.href}>
+						Open docs
+					</a>
 				</div>
-			</article>
+			</div>
 		{/each}
 	</section>
 </div>

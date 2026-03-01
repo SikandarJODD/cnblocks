@@ -10,6 +10,9 @@
     seo: SEO;
     preview?: Component;
     previewCode?: CodeBlock | CodeBlock[];
+    previewInstallCommand?: string;
+    previewHref?: string;
+    previewThemeSetupHref?: string;
     descriptionClass?: string;
   };
 </script>
@@ -17,7 +20,7 @@
 <script lang="ts">
   import { page } from "$app/state";
   import { H1, H2, Paragraph, H3 } from "$lib/components/markdown/index";
-  import { PreviewComponent } from "$lib/components/ui/preview-component";
+  import { PreviewFrame } from "$lib/components/ui/preview-component";
   import SEOComponent from "$lib/seo/SEO.svelte";
   import InstallComponent from "./InstallComponent.svelte";
 
@@ -28,11 +31,17 @@
     seo,
     preview,
     previewCode,
+    previewInstallCommand,
+    previewHref,
+    previewThemeSetupHref = "/docs/installation",
     descriptionClass = "",
   }: ComponentDocPageProps = $props();
 
   let PreviewComp = $derived(preview);
   let installUrl = $derived(`${page.url.origin}/r/${id}.json`);
+  let previewInstallCmd = $derived(
+    previewInstallCommand ?? `npx jsrepo add @sv/cnblocks/${id}`,
+  );
 
   let getURLPath = (url: string) => {
     // clean url by removing query params and hash
@@ -65,11 +74,17 @@
   </section>
 
   <section>
-    <PreviewComponent code={previewCode}>
+    <PreviewFrame
+      componentName={title}
+      installCommand={previewInstallCmd}
+      {previewHref}
+      themeSetupHref={previewThemeSetupHref}
+      code={previewCode}
+    >
       {#if PreviewComp}
         <PreviewComp />
       {/if}
-    </PreviewComponent>
+    </PreviewFrame>
   </section>
 
   <section>
