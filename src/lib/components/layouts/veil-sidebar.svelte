@@ -4,28 +4,12 @@
     url: string;
   };
 
-  type VeilVariantLink = {
-    title: string;
-    id: string;
-    url: string;
-  };
-
   type VeilComponentCategory = {
     title: string;
     slug: string;
     url: string;
-    items: VeilVariantLink[];
+    items: string[];
   };
-
-  const createVariant = (
-    slug: string,
-    id: string,
-    label: string,
-  ): VeilVariantLink => ({
-    title: `${label} (${id})`,
-    id,
-    url: `/veil/${slug}/${id}`,
-  });
 
   const gettingStarted: GettingStartedLink[] = [
     { title: "Introduction", url: "/veil/introduction" },
@@ -38,230 +22,129 @@
       title: "Hero",
       slug: "hero",
       url: "/veil/hero",
-      items: [
-        createVariant("hero", "hero-one", "Integration Grid Hero"),
-        createVariant("hero", "hero-two", "Logo Matrix Hero"),
-        createVariant("hero", "hero-three", "AI Prompt Hero"),
-        createVariant("hero", "hero-four", "AI Workspace Hero"),
-        createVariant("hero", "hero-five", "Product Spotlight Hero"),
-      ],
+      items: ["hero-one", "hero-two", "hero-three", "hero-four", "hero-five"],
     },
     {
       title: "Header",
       slug: "header",
       url: "/veil/header",
-      items: [
-        createVariant("header", "header-one", "Classic Center Nav"),
-        createVariant("header", "header-two", "Floating Morph Nav"),
-        createVariant("header", "header-three", "Classic Center Nav Alt"),
-        createVariant("header", "header-four", "Floating Morph Nav Alt"),
-      ],
+      items: ["header-one", "header-two", "header-three", "header-four"],
     },
     {
       title: "Features",
       slug: "features",
       url: "/veil/features",
-      items: [
-        createVariant("features", "features-one", "Feature Cards Outline"),
-        createVariant("features", "features-two", "Feature Cards Mixed"),
-        createVariant(
-          "features",
-          "features-three",
-          "Interactive Feature Switcher",
-        ),
-      ],
+      items: ["features-one", "features-two", "features-three"],
     },
     {
       title: "Content",
       slug: "content",
       url: "/veil/content",
-      items: [
-        createVariant("content", "content-one", "Split Text Content"),
-        createVariant("content", "content-two", "Two-Column Highlights"),
-        createVariant("content", "content-three", "Icon Feature Highlights"),
-      ],
+      items: ["content-one", "content-two", "content-three"],
     },
     {
       title: "Integration",
       slug: "integration",
       url: "/veil/integration",
-      items: [
-        createVariant(
-          "integration",
-          "integration-one",
-          "Linear Integrations Diagram",
-        ),
-        createVariant(
-          "integration",
-          "integration-two",
-          "Orbit Integrations Diagram",
-        ),
-      ],
+      items: ["integration-one", "integration-two"],
     },
     {
       title: "Call To Action",
       slug: "call-to-action",
       url: "/veil/call-to-action",
       items: [
-        createVariant(
-          "call-to-action",
-          "call-to-action-one",
-          "Dual CTA Centered",
-        ),
-        createVariant("call-to-action", "call-to-action-two", "Offer Card CTA"),
-        createVariant("call-to-action", "call-to-action-three", "Newsletter CTA"),
-        createVariant(
-          "call-to-action",
-          "call-to-action-four",
-          "Pricing CTA Card",
-        ),
+        "call-to-action-one",
+        "call-to-action-two",
+        "call-to-action-three",
+        "call-to-action-four",
       ],
     },
     {
       title: "Stats",
       slug: "stats",
       url: "/veil/stats",
-      items: [
-        createVariant("stats", "stats-one", "Stats Grid Basic"),
-        createVariant("stats", "stats-two", "Stats Plus Bars"),
-        createVariant("stats", "stats-three", "Stats Plus Globe"),
-        createVariant("stats", "stats-four", "Stats Split Globe"),
-      ],
+      items: ["stats-one", "stats-two", "stats-three", "stats-four"],
     },
     {
       title: "Pricing",
       slug: "pricing",
       url: "/veil/pricing",
-      items: [
-        createVariant("pricing", "pricing-one", "Tiered Plans Grid"),
-        createVariant("pricing", "pricing-two", "Usage-Based Tiers"),
-        createVariant("pricing", "pricing-three", "Monthly vs Annual Plans"),
-      ],
+      items: ["pricing-one", "pricing-two", "pricing-three"],
     },
     {
       title: "Testimonial",
       slug: "testimonial",
       url: "/veil/testimonial",
       items: [
-        createVariant("testimonial", "testimonial-one", "Testimonial Cards"),
-        createVariant(
-          "testimonial",
-          "testimonial-two",
-          "Card Quote Highlights",
-        ),
-        createVariant(
-          "testimonial",
-          "testimonial-three",
-          "Quote with Accent Bar",
-        ),
-        createVariant(
-          "testimonial",
-          "testimonial-four",
-          "Centered Single Quote",
-        ),
+        "testimonial-one",
+        "testimonial-two",
+        "testimonial-three",
+        "testimonial-four",
       ],
     },
     {
       title: "Team",
       slug: "team",
       url: "/veil/team",
-      items: [
-        createVariant("team", "team-one", "Founder Profiles Detailed"),
-        createVariant("team", "team-two", "Founder Profiles Compact"),
-      ],
+      items: ["team-one", "team-two"],
     },
     {
       title: "Logo Cloud",
       slug: "logo-cloud",
       url: "/veil/logo-cloud",
-      items: [
-        createVariant("logo-cloud", "logo-cloud-one", "Static Logo Grid"),
-        createVariant("logo-cloud", "logo-cloud-two", "Animated Logo Shuffle"),
-      ],
+      items: ["logo-cloud-one", "logo-cloud-two"],
     },
     {
       title: "FAQs",
       slug: "faqs",
       url: "/veil/faqs",
-      items: [
-        createVariant("faqs", "faqs-one", "FAQ Card Accordion"),
-        createVariant("faqs", "faqs-two", "Split Sidebar FAQ"),
-        createVariant("faqs", "faqs-three", "Minimal FAQ List"),
-        createVariant("faqs", "faqs-four", "FAQ Card Expanded"),
-      ],
+      items: ["faqs-one", "faqs-two", "faqs-three", "faqs-four"],
     },
     {
       title: "Contact",
       slug: "contact",
       url: "/veil/contact",
-      items: [
-        createVariant("contact", "contact-one", "Contact Details Form"),
-        createVariant("contact", "contact-two", "Sales Inquiry Form"),
-      ],
+      items: ["contact-one", "contact-two"],
     },
     {
       title: "Signup",
       slug: "signup",
       url: "/veil/signup",
-      items: [
-        createVariant("signup", "signup-one", "Signup Full Layout"),
-        createVariant("signup", "signup-two", "Signup Card Social"),
-        createVariant("signup", "signup-three", "Signup Minimal"),
-      ],
+      items: ["signup-one", "signup-two", "signup-three"],
     },
     {
       title: "Login",
       slug: "login",
       url: "/veil/login",
-      items: [
-        createVariant("login", "login-one", "Login Full Layout"),
-        createVariant("login", "login-two", "Login Card Social"),
-        createVariant("login", "login-three", "Login Minimal"),
-      ],
+      items: ["login-one", "login-two", "login-three"],
     },
     {
       title: "Forgot Password",
       slug: "forgot-password",
       url: "/veil/forgot-password",
       items: [
-        createVariant(
-          "forgot-password",
-          "forgot-password-one",
-          "Reset Full Layout",
-        ),
-        createVariant(
-          "forgot-password",
-          "forgot-password-two",
-          "Reset Card Layout",
-        ),
-        createVariant("forgot-password", "forgot-password-three", "Reset Minimal"),
+        "forgot-password-one",
+        "forgot-password-two",
+        "forgot-password-three",
       ],
     },
     {
       title: "Comparator",
       slug: "comparator",
       url: "/veil/comparator",
-      items: [
-        createVariant("comparator", "comparator-one", "Plan Comparison Table"),
-        createVariant("comparator", "comparator-two", "Free vs Pro Table"),
-        createVariant(
-          "comparator",
-          "comparator-three",
-          "Stacked Plan Comparison",
-        ),
-      ],
+      items: ["comparator-one", "comparator-two", "comparator-three"],
     },
     {
       title: "Footer",
       slug: "footer",
       url: "/veil/footer",
       items: [
-        createVariant("footer", "footer-one", "Multi-Column Footer"),
-        createVariant("footer", "footer-two", "Centered Social Footer"),
-        createVariant("footer", "footer-three", "Split Nav Footer"),
-        createVariant("footer", "footer-four", "Brand Social Footer"),
-        createVariant("footer", "footer-five", "Theme Toggle Footer"),
-        createVariant("footer", "footer-six", "Compact Utility Footer"),
+        "footer-one",
+        "footer-two",
+        "footer-three",
+        "footer-four",
+        "footer-five",
+        "footer-six",
       ],
     },
   ];
@@ -276,29 +159,38 @@
   import { page } from "$app/state";
   import * as ScrollArea from "$lib/components/ui/scroll-area";
   import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+  import { cn } from "$lib/utils.js";
   import type { ComponentProps } from "svelte";
 
   let {
     ref = $bindable(null),
+    class: className,
     ...restProps
   }: ComponentProps<typeof Sidebar.Root> = $props();
 
   const pathname = $derived(page.url.pathname);
 </script>
 
-<Sidebar.Root {...restProps} bind:ref>
-  <Sidebar.Content class="overflow-hidden">
-    <ScrollArea.Root class="h-full">
-      <div class="space-y-4 p-2">
-        <Sidebar.Group>
-          <Sidebar.GroupLabel>Get Started</Sidebar.GroupLabel>
+<Sidebar.Root {...restProps} bind:ref class={cn("md:top-6", className)}>
+  <Sidebar.Content class="overflow-hidden px-2 pb-3">
+    <ScrollArea.Root class="h-full pt-3">
+      <div class="space-y-3 rounded-xl border border-sidebar-border/70 bg-sidebar/60 p-2.5 shadow-sm">
+        <Sidebar.Group class="p-1.5">
+          <Sidebar.GroupLabel class="px-1 text-[11px] font-semibold uppercase tracking-wide text-sidebar-foreground/60">
+            Get Started
+          </Sidebar.GroupLabel>
           <Sidebar.GroupContent>
-            <Sidebar.Menu>
+            <Sidebar.Menu class="gap-0.5">
               {#each gettingStarted as link (link.title)}
                 <Sidebar.MenuItem>
-                  <Sidebar.MenuButton isActive={pathname === link.url}>
+                  <Sidebar.MenuButton
+                    class="h-8 rounded-lg px-2.5 text-[13px]"
+                    isActive={pathname === link.url}
+                  >
                     {#snippet child({ props })}
-                      <a href={link.url} {...props}>{link.title}</a>
+                      <a href={link.url} {...props}>
+                        <span class="block truncate">{link.title}</span>
+                      </a>
                     {/snippet}
                   </Sidebar.MenuButton>
                 </Sidebar.MenuItem>
@@ -307,26 +199,39 @@
           </Sidebar.GroupContent>
         </Sidebar.Group>
 
-        <Sidebar.Group>
-          <Sidebar.GroupLabel>Components ({totalComponents})</Sidebar.GroupLabel>
+        <Sidebar.Group class="p-1.5 pt-0">
+          <Sidebar.GroupLabel class="px-1 text-[11px] font-semibold uppercase tracking-wide text-sidebar-foreground/60">
+            Components ({totalComponents})
+          </Sidebar.GroupLabel>
           <Sidebar.GroupContent>
-            <Sidebar.Menu>
+            <Sidebar.Menu class="gap-1">
               {#each componentCategories as category (category.slug)}
                 <Sidebar.MenuItem>
                   <Sidebar.MenuButton
+                    class="h-8 rounded-lg px-2.5 text-[13px]"
                     isActive={pathname === category.url || pathname.startsWith(`${category.url}/`)}
                   >
                     {#snippet child({ props })}
-                      <a href={category.url} {...props}>{category.title}</a>
+                      <a href={category.url} {...props}>
+                        <span class="block truncate">{category.title}</span>
+                      </a>
                     {/snippet}
                   </Sidebar.MenuButton>
-                  <Sidebar.MenuBadge>{category.items.length}</Sidebar.MenuBadge>
-                  <Sidebar.MenuSub>
-                    {#each category.items as item (item.id)}
+                  <Sidebar.MenuBadge class="end-2 top-1.5 text-[11px] text-sidebar-foreground/70">
+                    {category.items.length}
+                  </Sidebar.MenuBadge>
+                  <Sidebar.MenuSub class="mt-1 gap-0.5 border-sidebar-border/70 ps-2.5">
+                    {#each category.items as item (item)}
+                      {@const itemUrl = `/veil/${category.slug}/${item}`}
                       <Sidebar.MenuSubItem>
-                        <Sidebar.MenuSubButton isActive={pathname === item.url}>
+                        <Sidebar.MenuSubButton
+                          class="h-7 rounded-md px-2 text-xs text-sidebar-foreground/85"
+                          isActive={pathname === itemUrl}
+                        >
                           {#snippet child({ props })}
-                            <a href={item.url} {...props}>{item.title}</a>
+                            <a href={itemUrl} {...props}>
+                              <span class="block truncate">{item.replaceAll("-", " ")}</span>
+                            </a>
                           {/snippet}
                         </Sidebar.MenuSubButton>
                       </Sidebar.MenuSubItem>

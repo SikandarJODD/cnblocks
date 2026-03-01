@@ -30,7 +30,7 @@ const components: VeilComponentCategory[] = [
   { title: "Content", slug: "content", href: "/veil#components-content", count: 3 },
   { title: "Integration", slug: "integration", href: "/veil#components-integration", count: 2 },
   { title: "Call To Action", slug: "call-to-action", href: "/veil#components-call-to-action", count: 4 },
-  { title: "Stats", slug: "stats", href: "/veil#components-stats", count: 4 },
+  { title: "Stats", slug: "stats", href: "/veil/stats", count: 4 },
   { title: "Pricing", slug: "pricing", href: "/veil#components-pricing", count: 3 },
   { title: "Testimonial", slug: "testimonial", href: "/veil#components-testimonial", count: 4 },
   { title: "Team", slug: "team", href: "/veil#components-team", count: 2 },
