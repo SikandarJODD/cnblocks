@@ -40,3 +40,24 @@ export let all_mists_category_block: CategoryBlock[] = [
   { title: "Login", href: "/mist/login", length: 3 },
   { title: "Forgot Password", href: "/mist/forgot-password", length: 2 },
 ];
+
+export let all_veils_category_block: CategoryBlock[] = [
+  { title: "Hero", href: "/veil/hero", length: 5 },
+  { title: "Header", href: "/veil/header", length: 4 },
+  { title: "Features", href: "/veil/features", length: 3 },
+  { title: "Content", href: "/veil/content", length: 3 },
+  { title: "Integration", href: "/veil/integration", length: 2 },
+  { title: "Call To Action", href: "/veil/call-to-action", length: 4 },
+  { title: "Stats", href: "/veil/stats", length: 4 },
+  { title: "Pricing", href: "/veil/pricing", length: 3 },
+  { title: "Testimonial", href: "/veil/testimonial", length: 4 },
+  { title: "Team", href: "/veil/team", length: 2 },
+  { title: "Logo Cloud", href: "/veil/logo-cloud", length: 2 },
+  { title: "FAQs", href: "/veil/faqs", length: 4 },
+  { title: "Contact", href: "/veil/contact", length: 2 },
+  { title: "Signup", href: "/veil/signup", length: 3 },
+  { title: "Login", href: "/veil/login", length: 3 },
+  { title: "Forgot Password", href: "/veil/forgot-password", length: 3 },
+  { title: "Comparator", href: "/veil/comparator", length: 3 },
+  { title: "Footer", href: "/veil/footer", length: 6 },
+];
