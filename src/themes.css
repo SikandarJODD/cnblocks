@@ -1,4 +1,4 @@
-[data-theme="mist"] {
+[data-theme="mist"] .theme-container {
 	--radius: 0.625rem;
 	--background: var(--color-white);
 	--foreground: var(--color-zinc-950);
@@ -44,27 +44,37 @@
 	@apply *:text-foreground;
 }
 
-[data-theme="veil"] {
+[data-theme="veil"] .theme-container {
 	--radius: 0.625rem;
+
 	--background: oklch(0.9779 0.0042 56.38);
 	--foreground: oklch(0.3421 0.0379 61.15);
+
 	--card: var(--color-white);
 	--card-foreground: oklch(0.3421 0.0379 61.15);
+
 	--popover: var(--color-white);
 	--popover-foreground: oklch(0.3421 0.0379 61.15);
+
 	--primary: oklch(0.5967 0.0558 61.59);
 	--primary-foreground: oklch(0.1448 0 0);
+
 	--secondary: --alpha(var(--primary)/15%);
 	--secondary-foreground: oklch(0.3421 0.0379 61.15);
+
 	--muted: --alpha(var(--foreground)/5%);
 	--muted-foreground: oklch(0.4563 0.0061 48.59);
+
 	--accent: oklch(0.9068 0.0112 89.73);
 	--accent-foreground: oklch(0.3467 0.0231 86.12);
+
 	--destructive: var(--color-red-600);
 	--destructive-foreground: var(--color-white);
+
 	--border: --alpha(var(--foreground)/7.5%);
 	--input: --alpha(var(--foreground)/20%);
 	--ring: var(--primary);
+
 	--font-family: "Geist", sans-serif;
 
 	@variant dark {

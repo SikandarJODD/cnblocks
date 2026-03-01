@@ -411,7 +411,7 @@
 			></div>
 		</div>
 
-		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:border-r lg:px-0">
+		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:border-x lg:px-0">
 			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
 				{#if showIframeComp}
 					<PaneGroup direction="horizontal">
