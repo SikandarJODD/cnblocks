@@ -16,6 +16,9 @@ export type ComponentMeta = {
 export type ComponentDoc = ComponentMeta & {
 	preview?: Component;
 	previewCode?: CodeBlock | CodeBlock[];
+	previewAddItem?: string;
+	previewRegistryOptions?: readonly string[];
+	previewRegistry?: string;
 	previewHref?: string;
 	seo: SEO;
 };

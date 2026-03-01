@@ -21,6 +21,8 @@ type StatsOverviewItem = {
 	description: string;
 	href: string;
 	previewHref: string;
+	addItem: string;
+	installUrl: string;
 	preview: Component;
 };
 
@@ -47,6 +49,7 @@ const statsOneDoc: ComponentDoc = {
 	},
 	preview: StatsOne,
 	previewCode: toCodeBlock("stats-one.svelte", StatsOneCode),
+	previewAddItem: "veil-stats-one",
 	previewHref: "/preview/veil/stats/stats-one",
 };
 
@@ -61,6 +64,7 @@ const statsTwoDoc: ComponentDoc = {
 	},
 	preview: StatsTwo,
 	previewCode: toCodeBlock("stats-two.svelte", StatsTwoCode),
+	previewAddItem: "veil-stats-two",
 	previewHref: "/preview/veil/stats/stats-two",
 };
 
@@ -75,6 +79,7 @@ const statsThreeDoc: ComponentDoc = {
 	},
 	preview: StatsThree,
 	previewCode: toCodeBlock("stats-three.svelte", StatsThreeCode),
+	previewAddItem: "veil-stats-three",
 	previewHref: "/preview/veil/stats/stats-three",
 };
 
@@ -89,6 +94,7 @@ const statsFourDoc: ComponentDoc = {
 	},
 	preview: StatsFour,
 	previewCode: toCodeBlock("stats-four.svelte", StatsFourCode),
+	previewAddItem: "veil-stats-four",
 	previewHref: "/preview/veil/stats/stats-four",
 };
 
@@ -117,6 +123,8 @@ export const statsOverview: {
 			description: "Compact metrics and clear hierarchy.",
 			href: "/veil/stats/stats-one",
 			previewHref: "/preview/veil/stats/stats-one",
+			addItem: "veil-stats-one",
+			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-one.json",
 			preview: StatsOne,
 		},
 		{
@@ -125,6 +133,8 @@ export const statsOverview: {
 			description: "Metrics with chart-style visual texture.",
 			href: "/veil/stats/stats-two",
 			previewHref: "/preview/veil/stats/stats-two",
+			addItem: "veil-stats-two",
+			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-two.json",
 			preview: StatsTwo,
 		},
 		{
@@ -133,6 +143,8 @@ export const statsOverview: {
 			description: "Stats layout paired with a visual backdrop.",
 			href: "/veil/stats/stats-three",
 			previewHref: "/preview/veil/stats/stats-three",
+			addItem: "veil-stats-three",
+			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-three.json",
 			preview: StatsThree,
 		},
 		{
@@ -141,6 +153,8 @@ export const statsOverview: {
 			description: "Split composition with strong directional flow.",
 			href: "/veil/stats/stats-four",
 			previewHref: "/preview/veil/stats/stats-four",
+			addItem: "veil-stats-four",
+			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-four.json",
 			preview: StatsFour,
 		},
 	],

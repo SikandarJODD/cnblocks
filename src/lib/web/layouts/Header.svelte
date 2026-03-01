@@ -120,7 +120,7 @@
   ];
 </script>
 
-<nav class="bg-transparent backdrop-blur-2xl sticky top-0 z-1000">
+<nav class="bg-transparent backdrop-blur-2xl border-b sticky top-0 z-1000">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center w-full">

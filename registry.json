@@ -1,0 +1,63 @@
+{
+ "$schema": "https://shadcn-svelte.com/schema/registry.json",
+ "name": "acme",
+ "homepage": "https://acme.com",
+ "items": [
+  {
+   "name": "veil-stats-one",
+   "type": "registry:block",
+   "title": "Veil Stats One",
+   "description": "A minimal stats section with compact metric highlights.",
+   "registryDependencies": [],
+   "files": [
+    {
+     "path": "src/lib/components/veil/stats/stats-one.svelte",
+     "type": "registry:component",
+     "target": "src/lib/components/veil/stats/stats-one.svelte"
+    }
+   ]
+  },
+  {
+   "name": "veil-stats-two",
+   "type": "registry:block",
+   "title": "Veil Stats Two",
+   "description": "A stats layout with subtle visual rhythm and chart-like accents.",
+   "registryDependencies": [],
+   "files": [
+    {
+     "path": "src/lib/components/veil/stats/stats-two.svelte",
+     "type": "registry:component",
+     "target": "src/lib/components/veil/stats/stats-two.svelte"
+    }
+   ]
+  },
+  {
+   "name": "veil-stats-three",
+   "type": "registry:block",
+   "title": "Veil Stats Three",
+   "description": "A stats section with visual media support and strong emphasis blocks.",
+   "registryDependencies": [],
+   "files": [
+    {
+     "path": "src/lib/components/veil/stats/stats-three.svelte",
+     "type": "registry:component",
+     "target": "src/lib/components/veil/stats/stats-three.svelte"
+    }
+   ]
+  },
+  {
+   "name": "veil-stats-four",
+   "type": "registry:block",
+   "title": "Veil Stats Four",
+   "description": "A split-layout stats section with directional composition.",
+   "registryDependencies": [],
+   "files": [
+    {
+     "path": "src/lib/components/veil/stats/stats-four.svelte",
+     "type": "registry:component",
+     "target": "src/lib/components/veil/stats/stats-four.svelte"
+    }
+   ]
+  }
+ ]
+}

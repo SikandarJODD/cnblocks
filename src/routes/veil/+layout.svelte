@@ -8,7 +8,7 @@
 <Header></Header>
 <Sidebar.Provider>
   <VeilSidebar></VeilSidebar>
-  <div class="w-full px-10 py-6">
+  <div class="w-full px-10  py-6">
     {@render children()}
   </div>
 </Sidebar.Provider>

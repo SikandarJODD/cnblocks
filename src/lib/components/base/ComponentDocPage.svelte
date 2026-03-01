@@ -10,7 +10,10 @@
     seo: SEO;
     preview?: Component;
     previewCode?: CodeBlock | CodeBlock[];
+    previewAddItem?: string;
     previewInstallCommand?: string;
+    previewRegistryOptions?: readonly string[];
+    previewRegistry?: string;
     previewHref?: string;
     previewThemeSetupHref?: string;
     descriptionClass?: string;
@@ -31,7 +34,10 @@
     seo,
     preview,
     previewCode,
+    previewAddItem,
     previewInstallCommand,
+    previewRegistryOptions = ["@sv/cnblocks"],
+    previewRegistry,
     previewHref,
     previewThemeSetupHref = "/docs/installation",
     descriptionClass = "",
@@ -39,8 +45,12 @@
 
   let PreviewComp = $derived(preview);
   let installUrl = $derived(`${page.url.origin}/r/${id}.json`);
+  let resolvedPreviewAddItem = $derived(previewAddItem ?? id);
   let previewInstallCmd = $derived(
     previewInstallCommand ?? `npx jsrepo add @sv/cnblocks/${id}`,
+  );
+  let resolvedPreviewRegistry = $derived(
+    previewRegistry ?? previewRegistryOptions[0] ?? "@sv/cnblocks",
   );
 
   let getURLPath = (url: string) => {
@@ -76,7 +86,10 @@
   <section>
     <PreviewFrame
       componentName={title}
+      addItem={resolvedPreviewAddItem}
       installCommand={previewInstallCmd}
+      registryOptions={previewRegistryOptions}
+      registry={resolvedPreviewRegistry}
       {previewHref}
       themeSetupHref={previewThemeSetupHref}
       code={previewCode}

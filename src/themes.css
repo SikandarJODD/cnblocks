@@ -41,7 +41,7 @@
     --ring: var(--color-indigo-500);
   }
 
-  @apply *:text-foreground
+  @apply *:text-foreground;
 }
 
 [data-theme="veil"] .theme-container {
@@ -65,8 +65,10 @@
   --border: --alpha(var(--foreground)/7.5%);
   --input: --alpha(var(--foreground)/20%);
   --ring: var(--primary);
+  --font-family: "Geist", sans-serif;
 
   @variant dark {
+    --font-family: "Geist", sans-serif;
     --background: oklch(0.1448 0 0);
     --foreground: oklch(0.9027 0.0137 60.56);
 
@@ -89,7 +91,7 @@
     --input: --alpha(var(--foreground)/15%);
   }
 
-  @apply *:text-foreground selection:text-primary selection:bg-muted
+  @apply *:text-foreground selection:text-primary selection:bg-muted;
 }
 
 [data-theme='dark'] .theme-container {
@@ -120,6 +122,6 @@
     --chart-4: var(--color-purple-500);
     --chart-5: var(--color-pink-500);
 
-    @apply *:text-foreground scheme-dark
+    @apply *:text-foreground scheme-dark;
 
 }

@@ -34,12 +34,14 @@
   };
 </script>
 
-<Sidebar.Root {...restProps} bind:ref class={cn("md:top-6", className)}>
-  <Sidebar.Content class="overflow-hidden px-2 pb-3">
-    <ScrollArea.Root class="h-full pt-3">
-      <div class="space-y-3 rounded-xl border border-sidebar-border/70 bg-sidebar/70 p-2.5 shadow-sm">
-        <Sidebar.Group class="p-1.5">
-          <Sidebar.GroupLabel class="px-1 text-[11px] font-semibold uppercase tracking-wide text-sidebar-foreground/60">
+<Sidebar.Root {...restProps} bind:ref class={cn("top-16", className)}>
+  <Sidebar.Content class="overflow-hidden">
+    <ScrollArea.Root class="h-full" scrollbarYClasses="hidden">
+      <div class="space-y-3">
+        <Sidebar.Group class="">
+          <Sidebar.GroupLabel
+            class="px-1 text-[11px] font-semibold uppercase tracking-wide text-sidebar-foreground/60"
+          >
             Get Started
           </Sidebar.GroupLabel>
           <Sidebar.GroupContent>
@@ -63,8 +65,11 @@
         </Sidebar.Group>
 
         <Sidebar.Group class="p-1.5 pt-0">
-          <Sidebar.GroupLabel class="px-1 text-[11px] font-semibold uppercase tracking-wide text-sidebar-foreground/60">
-            Components ({veilSidebarConfig.totalComponents})
+          <Sidebar.GroupLabel
+            class="px-1 text-[11px] font-semibold uppercase tracking-wide text-sidebar-foreground/60"
+          >
+            Components
+            <!-- ({veilSidebarConfig.totalComponents}) -->
           </Sidebar.GroupLabel>
           <Sidebar.GroupContent>
             <Sidebar.Menu class="gap-1">
@@ -80,7 +85,9 @@
                       </a>
                     {/snippet}
                   </Sidebar.MenuButton>
-                  <Sidebar.MenuBadge class="end-2 top-1.5 rounded-md bg-sidebar-accent/60 px-1.5 text-[11px] text-sidebar-foreground/80">
+                  <Sidebar.MenuBadge
+                    class="end-2 top-1.5 rounded-md bg-sidebar-accent/60 px-1.5 text-[11px] text-sidebar-foreground/80"
+                  >
                     {item.count}
                   </Sidebar.MenuBadge>
                 </Sidebar.MenuItem>
@@ -91,5 +98,5 @@
       </div>
     </ScrollArea.Root>
   </Sidebar.Content>
-  <Sidebar.Rail />
+  <!-- <Sidebar.Rail /> -->
 </Sidebar.Root>

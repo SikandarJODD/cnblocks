@@ -1,10 +1,10 @@
 import { error } from "@sveltejs/kit";
-import type { PageLoad } from "./$types";
+import type { EntryGenerator, PageLoad } from "./$types";
 import { statsDocsBySlug, statsSlugs, type StatsSlug } from "../../../../veil/stats/data";
 
 export const prerender = true;
 
-export const entries = () => statsSlugs.map((slug) => ({ slug }));
+export const entries: EntryGenerator = () => statsSlugs.map((slug) => ({ slug }));
 
 export const load: PageLoad = ({ params }) => {
 	const slug = params.slug as StatsSlug;
