@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from 'paneforge';
-	import { MediaQuery } from 'svelte/reactivity';
-	import Separator from '../ui/separator/separator.svelte';
-	import Button from '../ui/button/button.svelte';
-	import Maximize from '@lucide/svelte/icons/maximize';
-	import PreviewInstallAdd from './PreviewInstallAdd.svelte';
-	import { CopyButton } from '../ui/copy-button';
-	import { scale } from 'svelte/transition';
-	import type { Component } from 'svelte';
+	import { cn } from "$lib/utils";
+	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
+	import { MediaQuery } from "svelte/reactivity";
+	import Separator from "../ui/separator/separator.svelte";
+	import Button from "../ui/button/button.svelte";
+	import Maximize from "@lucide/svelte/icons/maximize";
+	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
+	import { CopyButton } from "../ui/copy-button";
+	import { scale } from "svelte/transition";
+	import type { Component } from "svelte";
 
 	interface BlockPreviewProps {
 		itemId?: string;
@@ -32,15 +32,15 @@
 		itemId,
 		code,
 		preview,
-		title = 'Hero Section',
-		category = 'Components',
+		title = "Hero Section",
+		category = "Components",
 		slug,
 		previewOnly,
-		component: BlockComponent
+		component: BlockComponent,
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
-		'rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted';
+		"rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
@@ -48,13 +48,13 @@
 	const LG_SIZE = 82;
 
 	let width = $state(DEFAULT_SIZE);
-	let mode = $state('preview');
+	let mode = $state("preview");
 	let iframeHeight = $state(0);
 	let isLoading = $state(true);
 
 	let ref: PaneAPI | undefined = $state(undefined);
 
-	let large = new MediaQuery('min-width: 1024px');
+	let large = new MediaQuery("min-width: 1024px");
 
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
 	// onMount(() => {
@@ -82,9 +82,9 @@
 		Tooltip,
 		TooltipContent,
 		TooltipProvider,
-		TooltipTrigger
-	} from '$lib/components/ui/tooltip';
-	import CodeEditor from './CodeEditor.svelte';
+		TooltipTrigger,
+	} from "$lib/components/ui/tooltip";
+	import CodeEditor from "./CodeEditor.svelte";
 
 	let showIframeComp = $state(false);
 </script>
@@ -110,8 +110,8 @@
 				{#if code}
 					<div class="flex gap-0.5">
 						<Button
-							variant={mode === 'preview' ? 'secondary' : 'ghost'}
-							onclick={() => (mode = 'preview')}
+							variant={mode === "preview" ? "secondary" : "ghost"}
+							onclick={() => (mode = "preview")}
 							class={radioItem}
 							size="sm"
 						>
@@ -141,8 +141,8 @@
 						</Button>
 
 						<Button
-							variant={mode === 'code' ? 'secondary' : 'ghost'}
-							onclick={() => (mode = 'code')}
+							variant={mode === "code" ? "secondary" : "ghost"}
+							onclick={() => (mode = "code")}
 							size="sm"
 							class={radioItem}
 						>
@@ -158,7 +158,11 @@
 								stroke-linejoin="round"
 								><path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path class="sm:opacity-50" d="M7 8l-4 4l4 4" />
-								<path class="sm:opacity-50" stroke="currentColor" d="M17 8l4 4l-4 4" />
+								<path
+									class="sm:opacity-50"
+									stroke="currentColor"
+									d="M17 8l4 4l-4 4"
+								/>
 								<path d="M14 4l-4 16" /></svg
 							>
 							<span class="hidden text-[13px] sm:block">Code</span>
@@ -171,7 +175,7 @@
 				</Button>
 				<Separator orientation="vertical" class="hidden !h-4 lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
-					>{width < MD_SIZE ? 'Mobile' : width < LG_SIZE ? 'Tablet' : 'Desktop'}</span
+					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
 				<!-- {#if previewOnly} -->
 				<Separator orientation="vertical" class="!h-4" />
@@ -224,7 +228,9 @@
 										</svg>
 									</Button></TooltipTrigger
 								>
-								<TooltipContent align="center" class="px-2 py-1 text-[10px]">Laptop</TooltipContent>
+								<TooltipContent align="center" class="px-2 py-1 text-[10px]"
+									>Laptop</TooltipContent
+								>
 							</Tooltip>
 						</TooltipProvider>
 
@@ -267,7 +273,9 @@
 										</svg>
 									</Button></TooltipTrigger
 								>
-								<TooltipContent align="center" class="px-2 py-1 text-[10px]">Tablet</TooltipContent>
+								<TooltipContent align="center" class="px-2 py-1 text-[10px]"
+									>Tablet</TooltipContent
+								>
 							</Tooltip>
 						</TooltipProvider>
 
@@ -313,7 +321,9 @@
 										</svg>
 									</Button></TooltipTrigger
 								>
-								<TooltipContent align="center" class="px-2 py-1 text-[10px]">Mobile</TooltipContent>
+								<TooltipContent align="center" class="px-2 py-1 text-[10px]"
+									>Mobile</TooltipContent
+								>
 							</Tooltip>
 						</TooltipProvider>
 					</div>
@@ -339,28 +349,36 @@
 								>
 									<path
 										d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
-										class={showIframeComp ? 'fill-green-500/10 stroke-green-500' : 'stroke-primary'}
+										class={showIframeComp
+											? "fill-green-500/10 stroke-green-500"
+											: "stroke-primary"}
 										stroke-width="1.5"
 										stroke-linecap="round"
 										stroke-linejoin="round"
 									></path>
 									<path
 										d="M10 3L10 21"
-										class={showIframeComp ? 'stroke-green-500' : 'stroke-primary'}
+										class={showIframeComp
+											? "stroke-green-500"
+											: "stroke-primary"}
 										stroke-width="1.5"
 										stroke-linecap="round"
 										stroke-linejoin="round"
 									></path>
 									<path
 										d="M5.5 7H6.5M5.5 10H6.5"
-										class={showIframeComp ? 'stroke-green-500' : 'stroke-primary'}
+										class={showIframeComp
+											? "stroke-green-500"
+											: "stroke-primary"}
 										stroke-width="1.5"
 										stroke-linecap="round"
 										stroke-linejoin="round"
 									></path>
 									<path
 										d="M17 10L15 12L17 14"
-										class={showIframeComp ? 'stroke-green-500' : 'stroke-primary'}
+										class={showIframeComp
+											? "stroke-green-500"
+											: "stroke-primary"}
 										stroke-width="1.5"
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -388,14 +406,16 @@
 
 	<div class="relative">
 		<div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
-			<div class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-(--color-border)"></div>
+			<div
+				class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-(--color-border)"
+			></div>
 			<div
 				class="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-(--color-border)"
 			></div>
 		</div>
 
 		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:border-r lg:px-0">
-			<div class={cn('bg-white dark:bg-transparent', mode === 'code' && 'hidden')}>
+			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
 				{#if showIframeComp}
 					<PaneGroup direction="horizontal">
 						<Pane
@@ -422,7 +442,8 @@
                 --iframe-height: {iframeHeight}px;"
 								onload={() => {
 									isLoading = false;
-									let contentHeight = iframeRef?.contentWindow?.document.body.scrollHeight;
+									let contentHeight =
+										iframeRef?.contentWindow?.document.body.scrollHeight;
 									if (contentHeight) {
 										iframeHeight = contentHeight + 20;
 									}
@@ -458,7 +479,7 @@
 			</div>
 
 			<div class="bg-white dark:bg-transparent">
-				{#if mode === 'code'}
+				{#if mode === "code"}
 					<CodeEditor {code} />
 				{/if}
 			</div>

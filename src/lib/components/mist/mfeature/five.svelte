@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import Target from '@lucide/svelte/icons/target';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Target from "@lucide/svelte/icons/target";
 </script>
 
 <section
@@ -28,8 +28,8 @@
 							<h3 class="text-lg font-semibold text-foreground">Code Generation</h3>
 						</div>
 						<p class="mt-3 text-balance text-muted-foreground">
-							Just describe the code you want to write and we'll generate it for you. From
-							boilerplate code to complex business logic, we've got you covered.
+							Just describe the code you want to write and we'll generate it for you.
+							From boilerplate code to complex business logic, we've got you covered.
 						</p>
 					</div>
 
@@ -39,8 +39,8 @@
 							<h3 class="text-lg font-semibold text-foreground">Code Review</h3>
 						</div>
 						<p class="mt-3 text-balance text-muted-foreground">
-							Get instant feedback on your code. Our AI will review your code and suggest
-							improvements in terms of best practices and performance.
+							Get instant feedback on your code. Our AI will review your code and
+							suggest improvements in terms of best practices and performance.
 						</p>
 					</div>
 				</div>

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Card, CardContent } from '$lib/components/ui/card';
-	import { Input } from '$lib/components/ui/input';
-	import { Separator } from '$lib/components/ui/separator';
-	import LogoIcon from './logo-icon.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Card, CardContent } from "$lib/components/ui/card";
+	import { Input } from "$lib/components/ui/input";
+	import { Separator } from "$lib/components/ui/separator";
+	import LogoIcon from "./logo-icon.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center">
@@ -15,7 +15,7 @@
 				<div class="space-y-2 text-center">
 					<h1 class="text-3xl font-semibold text-foreground">Welcome back!</h1>
 					<p class="text-sm text-muted-foreground">
-						First time here?{' '}
+						First time here?{" "}
 						<a href="#" class="text-foreground hover:underline"> Sign up for free </a>
 					</p>
 				</div>
@@ -41,9 +41,9 @@
 				</div>
 
 				<p class="w-11/12 text-center text-xs text-muted-foreground">
-					You acknowledge that you read, and agree, to our{' '}
-					<a href="#" class="underline hover:text-foreground"> Terms of Service </a>{' '}
-					and our{' '}
+					You acknowledge that you read, and agree, to our{" "}
+					<a href="#" class="underline hover:text-foreground"> Terms of Service </a>{" "}
+					and our{" "}
 					<a href="#" class="underline hover:text-foreground"> Privacy Policy </a>
 					.
 				</p>

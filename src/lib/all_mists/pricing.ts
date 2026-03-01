@@ -1,35 +1,35 @@
-import type { MistBlock } from '$lib/types/mists';
-import PricingOne from '$lib/components/mist/mpricing/one.svelte';
-import PricingTwo from '$lib/components/mist/mpricing/two.svelte';
+import type { MistBlock } from "$lib/types/mists";
+import PricingOne from "$lib/components/mist/mpricing/one.svelte";
+import PricingTwo from "$lib/components/mist/mpricing/two.svelte";
 
-import PricingOneCode from '$lib/components/mist/mpricing/one.svelte?raw';
-import PricingTwoCode from '$lib/components/mist/mpricing/two.svelte?raw';
+import PricingOneCode from "$lib/components/mist/mpricing/one.svelte?raw";
+import PricingTwoCode from "$lib/components/mist/mpricing/two.svelte?raw";
 
 export const all_mists_pricing: MistBlock[] = [
 	{
-		slug: 'one',
-		title: 'Pricing One',
-		category: 'pricing',
-		preview: '/preview/mist/pricing/one',
+		slug: "one",
+		title: "Pricing One",
+		category: "pricing",
+		preview: "/preview/mist/pricing/one",
 
-		itemId: 'mist-pricing-one',
+		itemId: "mist-pricing-one",
 		code: {
 			code: PricingOneCode,
-			lang: 'svelte'
+			lang: "svelte",
 		},
-		component: PricingOne
+		component: PricingOne,
 	},
 	{
-		slug: 'two',
-		title: 'Pricing Two',
-		category: 'pricing',
-		preview: '/preview/mist/pricing/two',
+		slug: "two",
+		title: "Pricing Two",
+		category: "pricing",
+		preview: "/preview/mist/pricing/two",
 
-		itemId: 'mist-pricing-two',
+		itemId: "mist-pricing-two",
 		code: {
 			code: PricingTwoCode,
-			lang: 'svelte'
+			lang: "svelte",
 		},
-		component: PricingTwo
-	}
+		component: PricingTwo,
+	},
 ];

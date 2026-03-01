@@ -1,7 +1,7 @@
 <script lang="ts">
-	import HeaderTwo from '$lib/components/veil/header/header-two.svelte';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
+	import HeaderTwo from "$lib/components/veil/header/header-two.svelte";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
 	import {
 		Clerk,
 		Claude,
@@ -11,9 +11,9 @@
 		Slack,
 		Supabase,
 		Twilio,
-		Vercel
-	} from '$lib/svgs';
-	import { ChevronRight } from '@lucide/svelte';
+		Vercel,
+	} from "$lib/svgs";
+	import { ChevronRight } from "@lucide/svelte";
 </script>
 
 <HeaderTwo />
@@ -95,7 +95,8 @@
 								class="mx-a flex h-8 h-10 w-fit items-center gap-2 rounded-xl px-3 shadow-foreground/10 sm:h-10 sm:px-4"
 							>
 								<Claude class="size-3 sm:size-4" />
-								<span class="font-medium text-nowrap max-sm:text-xs">Claude AI</span>
+								<span class="font-medium text-nowrap max-sm:text-xs">Claude AI</span
+								>
 							</Card>
 						</div>
 						<div class="blur-[2px]">

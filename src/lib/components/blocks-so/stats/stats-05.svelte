@@ -1,29 +1,29 @@
 <script lang="ts">
-	import { Card, CardContent, CardFooter } from '$lib/components/ui/card';
-	import { cn } from '$lib/utils';
+	import { Card, CardContent, CardFooter } from "$lib/components/ui/card";
+	import { cn } from "$lib/utils";
 
 	const data = [
 		{
-			name: 'Monthly recurring revenue',
-			value: '$34.1K',
-			change: '+6.1%',
-			changeType: 'positive',
-			href: '#'
+			name: "Monthly recurring revenue",
+			value: "$34.1K",
+			change: "+6.1%",
+			changeType: "positive",
+			href: "#",
 		},
 		{
-			name: 'Users',
-			value: '500.1K',
-			change: '+19.2%',
-			changeType: 'positive',
-			href: '#'
+			name: "Users",
+			value: "500.1K",
+			change: "+19.2%",
+			changeType: "positive",
+			href: "#",
 		},
 		{
-			name: 'User growth',
-			value: '11.3%',
-			change: '-1.2%',
-			changeType: 'negative',
-			href: '#'
-		}
+			name: "User growth",
+			value: "11.3%",
+			change: "-1.2%",
+			changeType: "negative",
+			href: "#",
+		},
 	];
 </script>
 
@@ -38,10 +38,10 @@
 						</span>
 						<span
 							class={cn(
-								'text-sm font-medium',
-								item.changeType === 'positive'
-									? 'text-emerald-700 dark:text-emerald-500'
-									: 'text-red-700 dark:text-red-500'
+								"text-sm font-medium",
+								item.changeType === "positive"
+									? "text-emerald-700 dark:text-emerald-500"
+									: "text-red-700 dark:text-red-500"
 							)}
 						>
 							{item.change}

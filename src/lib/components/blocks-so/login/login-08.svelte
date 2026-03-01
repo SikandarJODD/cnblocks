@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Card, CardContent, CardFooter, CardHeader } from '$lib/components/ui/card';
-	import { Checkbox } from '$lib/components/ui/checkbox';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { EyeIcon, EyeOffIcon, Key } from '@lucide/svelte';
-	import LogoIcon from './logo-icon.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Card, CardContent, CardFooter, CardHeader } from "$lib/components/ui/card";
+	import { Checkbox } from "$lib/components/ui/checkbox";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { EyeIcon, EyeOffIcon, Key } from "@lucide/svelte";
+	import LogoIcon from "./logo-icon.svelte";
 
 	let isPasswordVisible = $state(false);
 
@@ -22,7 +22,9 @@
 			</div>
 			<div>
 				<h2 class="text-2xl font-semibold">Sign in to Acme</h2>
-				<p class="text-sm text-muted-foreground">Welcome back! Please enter your details.</p>
+				<p class="text-sm text-muted-foreground">
+					Welcome back! Please enter your details.
+				</p>
 			</div>
 		</CardHeader>
 		<CardContent class="space-y-6">
@@ -40,13 +42,13 @@
 						id="password"
 						class="pe-9"
 						placeholder="Enter your password"
-						type={isPasswordVisible ? 'text' : 'password'}
+						type={isPasswordVisible ? "text" : "password"}
 					/>
 					<button
 						class="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md text-muted-foreground/80 transition-[color,box-shadow] outline-none hover:text-foreground focus:z-10 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
 						type="button"
 						onclick={togglePasswordVisibility}
-						aria-label={isPasswordVisible ? 'Hide password' : 'Show password'}
+						aria-label={isPasswordVisible ? "Hide password" : "Show password"}
 						aria-pressed={isPasswordVisible}
 						aria-controls="password"
 					>
@@ -73,7 +75,7 @@
 		</CardContent>
 		<CardFooter class="flex justify-center border-t py-4!">
 			<p class="text-center text-sm text-muted-foreground">
-				New to Acme?{' '}
+				New to Acme?{" "}
 				<a href="#" class="text-primary hover:underline"> Sign up </a>
 			</p>
 		</CardFooter>

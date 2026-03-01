@@ -1,8 +1,8 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
-	import Logo from './Logo.svelte';
-	import ThemeToggle from './ThemeToggle.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
+	import Logo from "./Logo.svelte";
+	import ThemeToggle from "./ThemeToggle.svelte";
 </script>
 
 <footer class="py-16">
@@ -44,13 +44,16 @@
 			class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
 		>
 			Created by
-			<a href="https://x.com/MeschacIrung" class="text-primary" target="_blank">Méschac Irung</a
+			<a href="https://x.com/MeschacIrung" class="text-primary" target="_blank"
+				>Méschac Irung</a
 			>Ported by
 			<div
 				class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white"
 			>
 				<div class="block">
-					<a class="block pb-2" href="https://x.com/Sikandar_Bhide" target="_blank">Bhide Svelte</a>
+					<a class="block pb-2" href="https://x.com/Sikandar_Bhide" target="_blank"
+						>Bhide Svelte</a
+					>
 					<div class="-mt-5 grow overflow-hidden">
 						<svg
 							aria-hidden="true"

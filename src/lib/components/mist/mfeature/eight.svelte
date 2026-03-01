@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Card from '$lib/components/ui/card/card.svelte';
+	import Card from "$lib/components/ui/card/card.svelte";
 
-	import Layout from '@lucide/svelte/icons/layout';
-	import Target from '@lucide/svelte/icons/target';
-	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
+	import Layout from "@lucide/svelte/icons/layout";
+	import Target from "@lucide/svelte/icons/target";
+	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
 </script>
 
 <section
@@ -17,8 +17,8 @@
 					<Layout class="size-5 text-primary" />
 					<h3 class="mt-5 text-lg font-semibold text-foreground">AI Code Generation</h3>
 					<p class="mt-3 max-w-xl text-balance text-muted-foreground">
-						Our advanced AI models transform natural language into production-ready code,
-						streamlining development workflows and enabling faster iteration.
+						Our advanced AI models transform natural language into production-ready
+						code, streamlining development workflows and enabling faster iteration.
 					</p>
 					<div class="-mt-2 mr-0.5 -ml-2 mask-b-from-95% pt-2 pl-2">
 						<div
@@ -38,22 +38,29 @@
 					<Target class="size-5 text-primary" />
 					<h3 class="mt-5 text-lg font-semibold text-foreground">AI Code Generation</h3>
 					<p class="mt-3 text-balance text-muted-foreground">
-						Our advanced AI models transform natural language into production-ready code.
+						Our advanced AI models transform natural language into production-ready
+						code.
 					</p>
 				</Card>
 
 				<Card variant="soft" class="p-6">
 					<CalendarCheck class="size-5 text-primary" />
-					<h3 class="mt-5 text-lg font-semibold text-foreground">Intelligent Code Review</h3>
+					<h3 class="mt-5 text-lg font-semibold text-foreground">
+						Intelligent Code Review
+					</h3>
 					<p class="mt-3 text-balance text-muted-foreground">
-						Our AI analyzes your code for bugs, security issues, and optimization opportunities.
+						Our AI analyzes your code for bugs, security issues, and optimization
+						opportunities.
 					</p>
 				</Card>
 				<Card variant="soft" class="p-6">
 					<Sparkles class="size-5 text-primary" />
-					<h3 class="mt-5 text-lg font-semibold text-foreground">Contextual AI Assistant</h3>
+					<h3 class="mt-5 text-lg font-semibold text-foreground">
+						Contextual AI Assistant
+					</h3>
 					<p class="mt-3 text-balance text-muted-foreground">
-						A personalized AI companion that understands your codebase and helps solve complex...
+						A personalized AI companion that understands your codebase and helps solve
+						complex...
 					</p>
 				</Card>
 			</div>

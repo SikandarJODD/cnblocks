@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button, { buttonVariants } from '$lib/components/ui/button/button.svelte';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
+	import Button, { buttonVariants } from "$lib/components/ui/button/button.svelte";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
 </script>
 
 <section
@@ -44,7 +44,9 @@
 					</svg>
 				</a>
 				<h1 class="mt-6 text-xl font-semibold text-balance">Forgot Your Password?</h1>
-				<p class="mt-1 text-sm text-muted-foreground">Enter your email to receive a reset link</p>
+				<p class="mt-1 text-sm text-muted-foreground">
+					Enter your email to receive a reset link
+				</p>
 			</div>
 
 			<div class="mt-6 space-y-6">

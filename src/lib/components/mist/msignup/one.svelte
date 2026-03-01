@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
 </script>
 
 <section
@@ -44,7 +44,8 @@
 					</svg>
 				</a>
 				<h1 class="mt-6 text-xl font-semibold text-balance">
-					<span class="text-muted-foreground">Welcome to Tailark!</span> Create an Account to Get Started
+					<span class="text-muted-foreground">Welcome to Tailark!</span> Create an Account to
+					Get Started
 				</h1>
 			</div>
 

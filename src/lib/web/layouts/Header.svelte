@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import { slide } from "svelte/transition";
+	import Button from "$lib/components/ui/button/button.svelte";
 	let navs: NavItem[] = [
-		{ name: 'Home', url: '/' },
-		{ name: 'Veil', url: '/veil', isNew: true },
-		{ name: 'Blocks', url: '/hero' },
-		{ name: 'Mists', url: '/mist/hero', isNew: true },
-		{ name: 'Templates', url: '/templates' },
-		{ name: 'Changelog', url: '/changelog' },
-		{ name: 'Docs', url: '/docs/installation' }
+		{ name: "Home", url: "/" },
+		{ name: "Veil", url: "/veil", isNew: true },
+		{ name: "Blocks", url: "/hero" },
+		{ name: "Mists", url: "/mist/hero", isNew: true },
+		{ name: "Templates", url: "/templates" },
+		{ name: "Changelog", url: "/changelog" },
+		{ name: "Docs", url: "/docs/installation" },
 	];
 	type NavItem = {
 		name: string;
@@ -18,12 +18,12 @@
 	// Mobile and user profile state
 	let isMobileMenu = $state(false);
 	// Dark & Light Mode
-	import { toggleMode, mode } from 'mode-watcher';
-	import CaretDown from '@lucide/svelte/icons/chevron-down';
-	import { NavigationMenu } from 'bits-ui';
-	import cn from 'clsx';
-	import Badge from '$lib/components/ui/badge/badge.svelte';
-	import McpDialog from './MCPDialog.svelte';
+	import { toggleMode, mode } from "mode-watcher";
+	import CaretDown from "@lucide/svelte/icons/chevron-down";
+	import { NavigationMenu } from "bits-ui";
+	import cn from "clsx";
+	import Badge from "$lib/components/ui/badge/badge.svelte";
+	import McpDialog from "./MCPDialog.svelte";
 
 	type ListItemProps = {
 		className?: string;
@@ -35,88 +35,88 @@
 
 	let listItems: ListItemProps[] = [
 		{
-			title: 'Hero',
-			href: '/hero',
-			content: '9 blocks - bold and striking visuals.'
+			title: "Hero",
+			href: "/hero",
+			content: "9 blocks - bold and striking visuals.",
 		},
 		{
-			title: 'Contact Us',
-			href: '/contact',
-			content: '2 blocks - clean and simple layouts.'
+			title: "Contact Us",
+			href: "/contact",
+			content: "2 blocks - clean and simple layouts.",
 		},
 		{
-			title: 'Features',
-			href: '/feature',
-			content: '14 blocks - highlight key benefits.'
+			title: "Features",
+			href: "/feature",
+			content: "14 blocks - highlight key benefits.",
 		},
 		{
-			title: 'Sign Up',
-			href: '/signup',
-			content: '3 blocks - fast and easy signup.'
+			title: "Sign Up",
+			href: "/signup",
+			content: "3 blocks - fast and easy signup.",
 		},
 		{
-			title: 'Integrations',
-			href: '/integration',
-			content: '8 blocks - connect with top tools.'
+			title: "Integrations",
+			href: "/integration",
+			content: "8 blocks - connect with top tools.",
 		},
 		{
-			title: 'Login',
-			href: '/login',
-			content: '3 blocks - modern, secure designs.'
+			title: "Login",
+			href: "/login",
+			content: "3 blocks - modern, secure designs.",
 		},
 		{
-			title: 'Testimonials',
-			href: '/testimonial',
-			content: '6 blocks - trusted user feedback.'
+			title: "Testimonials",
+			href: "/testimonial",
+			content: "6 blocks - trusted user feedback.",
 		},
 		{
-			title: 'Forgot Password',
-			href: '/forgot-password',
-			content: '2 blocks - quick reset options.'
+			title: "Forgot Password",
+			href: "/forgot-password",
+			content: "2 blocks - quick reset options.",
 		},
 		{
-			title: 'Content',
-			href: '/content',
-			content: '7 blocks - engaging and informative.'
+			title: "Content",
+			href: "/content",
+			content: "7 blocks - engaging and informative.",
 		},
 		{
-			title: 'FAQ',
-			href: '/faq',
-			content: '4 blocks - clear and concise answers.'
-		}
+			title: "FAQ",
+			href: "/faq",
+			content: "4 blocks - clear and concise answers.",
+		},
 	];
 
 	let mist_navs: ListItemProps[] = [
 		{
-			title: 'Hero',
-			href: '/mist/hero',
-			content: '9 blocks - bold and striking visuals.'
+			title: "Hero",
+			href: "/mist/hero",
+			content: "9 blocks - bold and striking visuals.",
 		},
 		{
-			title: 'Features',
-			href: '/mist/feature',
-			content: '11 blocks - highlight key benefits.'
+			title: "Features",
+			href: "/mist/feature",
+			content: "11 blocks - highlight key benefits.",
 		},
 		{
-			title: 'Content',
-			href: '/mist/content',
-			content: '5 blocks - engaging and informative.'
+			title: "Content",
+			href: "/mist/content",
+			content: "5 blocks - engaging and informative.",
 		},
 		{
-			title: 'Testimonials',
-			href: '/mist/testimonials',
-			content: '4 blocks - trusted user feedback.'
+			title: "Testimonials",
+			href: "/mist/testimonials",
+			content: "4 blocks - trusted user feedback.",
 		},
 		{
-			title: 'Pricing',
-			href: '/mist/pricing',
-			content: '3 blocks - competitive pricing.'
+			title: "Pricing",
+			href: "/mist/pricing",
+			content: "3 blocks - competitive pricing.",
 		},
 		{
-			title: 'Team',
-			href: '/mist/team',
-			content: '3 blocks - team members.'
-		}
+			title: "Team",
+			href: "/mist/team",
+			content: "3 blocks - team members.",
+		},
 	];
 </script>
 
@@ -160,7 +160,9 @@
 				<!-- Desktop -->
 				<div class="hidden w-full sm:ml-6 sm:block">
 					<NavigationMenu.Root class="relative z-10 flex w-full justify-center">
-						<NavigationMenu.List class="group flex list-none items-center justify-center p-1">
+						<NavigationMenu.List
+							class="group flex list-none items-center justify-center p-1"
+						>
 							<NavigationMenu.Item id="home">
 								<NavigationMenu.Link
 									class="data-[state=open]:shadow-mini group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted dark:hover:bg-muted dark:data-[state=open]:bg-muted"
@@ -207,7 +209,7 @@
 												{@render ListItem({
 													href: component.href,
 													title: component.title,
-													content: component.content
+													content: component.content,
 												})}
 											{/each}
 										</ul>
@@ -233,7 +235,7 @@
 												{@render ListItem({
 													href: component.href,
 													title: component.title,
-													content: component.content
+													content: component.content,
 												})}
 											{/each}
 										</ul>
@@ -261,26 +263,30 @@
 												href="/"
 												class="flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b from-muted/50 to-muted p-4 no-underline outline-hidden select-none focus:shadow-md"
 											>
-												<div class="mt-4 mb-2 text-lg font-medium">Svelte Shadcn Blocks</div>
-												<p class="text-sm leading-tight text-muted-foreground">
+												<div class="mt-4 mb-2 text-lg font-medium">
+													Svelte Shadcn Blocks
+												</div>
+												<p
+													class="text-sm leading-tight text-muted-foreground"
+												>
 													50+ UI & Marketing Blocks
 												</p>
 											</NavigationMenu.Link>
 										</li>
 										{@render ListItem({
-											href: '/templates',
-											title: 'Startup Template',
-											content: `Get 30% Off! Use code <span class='text-primary'>ILoveSvelte</span>`
+											href: "/templates",
+											title: "Startup Template",
+											content: `Get 30% Off! Use code <span class='text-primary'>ILoveSvelte</span>`,
 										})}
 										{@render ListItem({
-											title: 'Landing Page',
+											title: "Landing Page",
 											content: `Stunning Landing Page`,
-											soon: true
+											soon: true,
 										})}
 										{@render ListItem({
-											title: 'Marketing Template',
+											title: "Marketing Template",
 											content: `All-in-one Marketing Template`,
-											soon: true
+											soon: true,
 										})}
 									</ul>
 								</NavigationMenu.Content>
@@ -297,10 +303,14 @@
 							<NavigationMenu.Indicator
 								class="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 transition-[all,transform_250ms_ease] duration-200 data-[state=hidden]:animate-fade-out data-[state=hidden]:opacity-0 data-[state=visible]:animate-fade-in"
 							>
-								<div class="relative top-[70%] size-2.5 rotate-45 rounded-tl-[2px] bg-border"></div>
+								<div
+									class="relative top-[70%] size-2.5 rotate-45 rounded-tl-[2px] bg-border"
+								></div>
 							</NavigationMenu.Indicator>
 						</NavigationMenu.List>
-						<div class="absolute top-full left-0 flex w-full justify-center perspective-[2000px]">
+						<div
+							class="absolute top-full left-0 flex w-full justify-center perspective-[2000px]"
+						>
 							<NavigationMenu.Viewport
 								class="relative mt-2.5 h-(--bits-navigation-menu-viewport-height) w-full origin-[top_center] overflow-hidden rounded-lg border bg-background text-popover-foreground shadow-lg transition-[width,height] duration-100 data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in sm:w-(--bits-navigation-menu-viewport-width) "
 							/>
@@ -316,7 +326,11 @@
 			</div>
 			<div class="-mr-2 flex sm:hidden">
 				<!-- Mobile menu button -->
-				<Button onclick={() => (isMobileMenu = !isMobileMenu)} size="icon" variant="secondary">
+				<Button
+					onclick={() => (isMobileMenu = !isMobileMenu)}
+					size="icon"
+					variant="secondary"
+				>
 					<span class="sr-only">Open main menu</span>
 					<!-- Mobile Menu  -->
 					<svg
@@ -344,7 +358,11 @@
 						aria-hidden="true"
 						data-slot="icon"
 					>
-						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6 18 18 6M6 6l12 12"
+						/>
 					</svg>
 				</Button>
 			</div>
@@ -357,7 +375,9 @@
 			<div class="space-y-1 px-2">
 				<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 				{#each navs as nav}
-					<a href={nav.url} class="block rounded-md px-3 py-2 text-base font-medium text-primary"
+					<a
+						href={nav.url}
+						class="block rounded-md px-3 py-2 text-base font-medium text-primary"
 						>{nav.name}</a
 					>
 				{/each}
@@ -372,7 +392,7 @@
 {#snippet ThemeToggle()}
 	<Button onclick={toggleMode} variant="ghost" size="icon">
 		<!-- Sun Icon -->
-		{#if mode.current === 'light'}
+		{#if mode.current === "light"}
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -456,9 +476,9 @@
 		{/if}
 		<NavigationMenu.Link
 			class={cn(
-				'block space-y-1 rounded-md p-2.5 leading-none no-underline outline-hidden transition-colors select-none hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground',
+				"block space-y-1 rounded-md p-2.5 leading-none no-underline outline-hidden transition-colors select-none hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground",
 				className,
-				soon && 'opacity-50'
+				soon && "opacity-50"
 			)}
 			{href}
 		>

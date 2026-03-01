@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Logo from '$lib/components/web/Logo.svelte';
+	import Logo from "$lib/components/web/Logo.svelte";
 
 	type LinkItem = { label: string; href: string };
 
 	const links: LinkItem[] = [
-		{ label: 'Home', href: '#' },
-		{ label: 'Features', href: '#' },
-		{ label: 'Pricing', href: '#' },
-		{ label: 'About', href: '#' },
-		{ label: 'Blog', href: '#' },
-		{ label: 'Contact', href: '#' }
+		{ label: "Home", href: "#" },
+		{ label: "Features", href: "#" },
+		{ label: "Pricing", href: "#" },
+		{ label: "About", href: "#" },
+		{ label: "Blog", href: "#" },
+		{ label: "Contact", href: "#" },
 	];
 
 	const year = new Date().getFullYear();
@@ -37,13 +37,22 @@
 		<div class="flex flex-col-reverse gap-4 pt-8 @xl:flex-row @xl:justify-between">
 			<p class="text-sm text-muted-foreground">&copy; {year} Veil.</p>
 			<div class="flex flex-wrap gap-4">
-				<a href="#" class="text-sm text-muted-foreground transition-colors hover:text-foreground">
+				<a
+					href="#"
+					class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+				>
 					Privacy Policy
 				</a>
-				<a href="#" class="text-sm text-muted-foreground transition-colors hover:text-foreground">
+				<a
+					href="#"
+					class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+				>
 					Terms of Service
 				</a>
-				<a href="#" class="text-sm text-muted-foreground transition-colors hover:text-foreground">
+				<a
+					href="#"
+					class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+				>
 					Cookies
 				</a>
 			</div>

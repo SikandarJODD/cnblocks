@@ -1,8 +1,8 @@
 <script>
-	import Zap from '@lucide/svelte/icons/zap';
-	import Cpu from '@lucide/svelte/icons/cpu';
-	import Lock from '@lucide/svelte/icons/lock';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
+	import Zap from "@lucide/svelte/icons/zap";
+	import Cpu from "@lucide/svelte/icons/cpu";
+	import Lock from "@lucide/svelte/icons/lock";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
 </script>
 
 <section class="py-16 md:py-32">
@@ -12,8 +12,8 @@
 				The Lyra ecosystem brings together our models, products and platforms.
 			</h2>
 			<p>
-				Lyra is evolving to be more than just the models. It supports an entire ecosystem — from
-				products to the APIs and platforms helping developers and businesses innovate.
+				Lyra is evolving to be more than just the models. It supports an entire ecosystem —
+				from products to the APIs and platforms helping developers and businesses innovate.
 			</p>
 		</div>
 		<img

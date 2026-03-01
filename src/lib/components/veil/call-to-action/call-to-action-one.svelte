@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { ChevronRight } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { ChevronRight } from "@lucide/svelte";
 
 	type Props = {
 		title?: string;
@@ -12,12 +12,12 @@
 	};
 
 	let {
-		title = 'Ready to Get Started?',
-		description = 'Join thousands of teams already using our platform to build better products faster.',
-		primaryLabel = 'Start Free Trial',
-		primaryHref = '#link',
-		secondaryLabel = 'Talk to Sales',
-		secondaryHref = '#link'
+		title = "Ready to Get Started?",
+		description = "Join thousands of teams already using our platform to build better products faster.",
+		primaryLabel = "Start Free Trial",
+		primaryHref = "#link",
+		secondaryLabel = "Talk to Sales",
+		secondaryHref = "#link",
 	}: Props = $props();
 </script>
 

@@ -1,22 +1,22 @@
 <script lang="ts">
-	import Card from '$lib/components/ui/card/card.svelte';
+	import Card from "$lib/components/ui/card/card.svelte";
 
-	import ArrowUp from '@lucide/svelte/icons/arrow-up';
-	import Globe from '@lucide/svelte/icons/globe';
-	import Plus from '@lucide/svelte/icons/plus';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import ArrowUp from "@lucide/svelte/icons/arrow-up";
+	import Globe from "@lucide/svelte/icons/globe";
+	import Plus from "@lucide/svelte/icons/plus";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
+	import Button from "$lib/components/ui/button/button.svelte";
 
-	const AIDEN_BLESER = 'https://avatars.githubusercontent.com/u/117548273?v=4';
-	const BHIDE_SVELTE = 'https://avatars.githubusercontent.com/u/93428946?v=4';
-	const RICH_HARRIS = 'https://avatars.githubusercontent.com/u/1162160?v=4';
-	const HUNTER_JOHNSTON = 'https://avatars.githubusercontent.com/u/64506580?v=4';
+	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";
+	const BHIDE_SVELTE = "https://avatars.githubusercontent.com/u/93428946?v=4";
+	const RICH_HARRIS = "https://avatars.githubusercontent.com/u/1162160?v=4";
+	const HUNTER_JOHNSTON = "https://avatars.githubusercontent.com/u/64506580?v=4";
 
 	let avatars = [
-		{ src: BHIDE_SVELTE, alt: 'Bhide Svelte' },
-		{ src: AIDEN_BLESER, alt: 'Aiden Blesser' },
-		{ src: RICH_HARRIS, alt: 'Rich Harris' },
-		{ src: HUNTER_JOHNSTON, alt: 'Hunter Johnston' }
+		{ src: BHIDE_SVELTE, alt: "Bhide Svelte" },
+		{ src: AIDEN_BLESER, alt: "Aiden Blesser" },
+		{ src: RICH_HARRIS, alt: "Rich Harris" },
+		{ src: HUNTER_JOHNSTON, alt: "Hunter Johnston" },
 	];
 </script>
 
@@ -53,7 +53,8 @@
 					<div class="space-y-2">
 						<h3 class="text-xl font-medium">Design Layouts</h3>
 						<p class="text-muted-foreground">
-							Create visually appealing layouts that capture your audience's attention.
+							Create visually appealing layouts that capture your audience's
+							attention.
 						</p>
 					</div>
 				</div>
@@ -70,7 +71,8 @@
 		<div class="w-fit">
 			<Sparkles class="size-3.5 fill-purple-300 stroke-purple-300" />
 			<p class="mt-2 line-clamp-2 text-sm">
-				How can I optimize my neural network to reduce inference time while maintaining accuracy?
+				How can I optimize my neural network to reduce inference time while maintaining
+				accuracy?
 			</p>
 		</div>
 		<div class="-mx-3 mt-3 -mb-3 space-y-3 rounded-lg bg-foreground/5 p-3">

@@ -1,8 +1,8 @@
 <script>
-	import Zap from '@lucide/svelte/icons/zap';
-	import Activity from '@lucide/svelte/icons/activity';
-	import DraftingCompass from '@lucide/svelte/icons/drafting-compass';
-	import Mail from '@lucide/svelte/icons/mail';
+	import Zap from "@lucide/svelte/icons/zap";
+	import Activity from "@lucide/svelte/icons/activity";
+	import DraftingCompass from "@lucide/svelte/icons/drafting-compass";
+	import Mail from "@lucide/svelte/icons/mail";
 </script>
 
 <section class="py-16 md:py-32">
@@ -12,8 +12,8 @@
 				<div class="md:pr-6 lg:pr-0">
 					<h2 class="text-4xl font-semibold lg:text-5xl">Built for Scaling teams</h2>
 					<p class="mt-6">
-						Orrupti aut temporibus assumenda atque ab, accusamus sit, molestiae veniam laboriosam
-						pariatur.
+						Orrupti aut temporibus assumenda atque ab, accusamus sit, molestiae veniam
+						laboriosam pariatur.
 					</p>
 				</div>
 				<ul class="mt-8 divide-y border-y *:flex *:items-center *:gap-3 *:py-3">

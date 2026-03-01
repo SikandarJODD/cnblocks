@@ -1,13 +1,13 @@
 <script>
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import Button from "$lib/components/ui/button/button.svelte";
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
 </script>
@@ -55,16 +55,19 @@
 
 					<button
 						onclick={() => (menuState = !menuState)}
-						aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+						aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 						class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 					>
 						<Menu
-							class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+							class={[
+								"m-auto size-6 duration-200",
+								menuState && "scale-0 rotate-180 opacity-0",
+							]}
 						/>
 						<X
 							class={[
-								'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-								menuState && 'scale-100 rotate-0 opacity-100'
+								"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+								menuState && "scale-100 rotate-0 opacity-100",
 							]}
 						/>
 					</button>
@@ -72,8 +75,8 @@
 
 				<div
 					class={[
-						'mb-6  w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-						menuState ? 'block lg:flex' : 'hidden'
+						"mb-6  w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+						menuState ? "block lg:flex" : "hidden",
 					]}
 				>
 					<div class="lg:pr-4">

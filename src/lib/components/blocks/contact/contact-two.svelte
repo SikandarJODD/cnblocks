@@ -1,15 +1,17 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { Card } from '$lib/components/ui/card';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
-	import * as Select from '$lib/components/ui/select/index.js';
-	import { Textarea } from '$lib/components/ui/textarea';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { Card } from "$lib/components/ui/card";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
+	import * as Select from "$lib/components/ui/select/index.js";
+	import { Textarea } from "$lib/components/ui/textarea";
 </script>
 
 <section class="py-32">
 	<div class="mx-auto max-w-4xl px-4 lg:px-0">
-		<h1 class="mb-12 text-center text-4xl font-semibold lg:text-5xl">Help us route your inquiry</h1>
+		<h1 class="mb-12 text-center text-4xl font-semibold lg:text-5xl">
+			Help us route your inquiry
+		</h1>
 
 		<div class="grid divide-y border md:grid-cols-2 md:gap-4 md:divide-x md:divide-y-0">
 			<div class="flex flex-col justify-between space-y-8 p-6 sm:p-12">
@@ -45,8 +47,8 @@
 			<Card class="mx-auto max-w-lg p-8 sm:p-16">
 				<h3 class="text-xl font-semibold">Let's get you to the right place</h3>
 				<p class="mt-4 text-sm">
-					Reach out to our sales team! We’re eager to learn more about how you plan to use our
-					application.
+					Reach out to our sales team! We’re eager to learn more about how you plan to use
+					our application.
 				</p>
 
 				<div class="mt-12 space-y-6 *:space-y-3 **:[&>label]:block">

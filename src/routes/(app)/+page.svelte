@@ -1,7 +1,7 @@
 <script>
-	import FeatureSection from '$lib/web/layouts/FeatureSection.svelte';
-	import FeatureSectionTwo from '$lib/web/layouts/FeatureSectionTwo.svelte';
-	import SiteHero from '$lib/web/layouts/SiteHero.svelte';
+	import FeatureSection from "$lib/web/layouts/FeatureSection.svelte";
+	import FeatureSectionTwo from "$lib/web/layouts/FeatureSectionTwo.svelte";
+	import SiteHero from "$lib/web/layouts/SiteHero.svelte";
 </script>
 
 <svelte:head>

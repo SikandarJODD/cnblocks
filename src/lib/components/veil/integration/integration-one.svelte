@@ -1,7 +1,7 @@
 <script>
-	import { Button } from '$lib/components/ui/veil/button';
-	import { ChevronRight } from '@lucide/svelte';
-	import IntegrationIllustration from './integration-illustration.svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { ChevronRight } from "@lucide/svelte";
+	import IntegrationIllustration from "./integration-illustration.svelte";
 </script>
 
 <section class="@container bg-background py-24">

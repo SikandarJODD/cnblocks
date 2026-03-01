@@ -1,10 +1,10 @@
 <script lang="ts">
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	let content = [
-		{ value: '90+', label: 'Integrations' },
-		{ value: '56%', label: 'Productivity Boost' },
-		{ value: '24/7', label: 'Customer Support' },
-		{ value: '10k+', label: 'Active Users' }
+		{ value: "90+", label: "Integrations" },
+		{ value: "56%", label: "Productivity Boost" },
+		{ value: "24/7", label: "Customer Support" },
+		{ value: "10k+", label: "Active Users" },
 	];
 </script>
 
@@ -13,10 +13,12 @@
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div class="@container mx-auto max-w-2xl">
 				<div>
-					<h2 class="text-4xl font-semibold text-foreground">Create Content with AI Assistance</h2>
+					<h2 class="text-4xl font-semibold text-foreground">
+						Create Content with AI Assistance
+					</h2>
 					<p class="mt-4 mb-12 text-xl text-muted-foreground">
-						Our AI assistant helps you create better content faster. Generate ideas, improve your
-						writing, and design layouts with simple prompts.
+						Our AI assistant helps you create better content faster. Generate ideas,
+						improve your writing, and design layouts with simple prompts.
 					</p>
 				</div>
 
@@ -39,7 +41,8 @@
 						<span class="mb-4 block text-3xl">🎨</span>
 						<h3 class="text-xl font-medium">Design Layouts</h3>
 						<p class="text-muted-foreground">
-							Create visually appealing layouts that capture your audience's attention.
+							Create visually appealing layouts that capture your audience's
+							attention.
 						</p>
 					</div>
 				</div>

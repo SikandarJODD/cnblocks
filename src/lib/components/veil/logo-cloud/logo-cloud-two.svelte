@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
-	import { Beacon, Bolt, Cisco, Hulu, Spotify, Supabase, Vercel } from '$lib/svgs';
+	import { onDestroy, onMount } from "svelte";
+	import { Beacon, Bolt, Cisco, Hulu, Spotify, Supabase, Vercel } from "$lib/svgs";
 
-	type LogoGroup = 'ai' | 'hosting' | 'payments' | 'streaming';
+	type LogoGroup = "ai" | "hosting" | "payments" | "streaming";
 	type LogoItem = {
 		key: string;
 		component: any;
@@ -12,35 +12,35 @@
 
 	const logos: Record<LogoGroup, LogoItem[]> = {
 		ai: [
-			{ key: 'bolt', component: Bolt, className: 'h-3.5 w-full' },
-			{ key: 'beacon', component: Beacon, className: 'h-3.5 w-full' },
-			{ key: 'hulu', component: Hulu, className: 'h-3.5 w-full' }
+			{ key: "bolt", component: Bolt, className: "h-3.5 w-full" },
+			{ key: "beacon", component: Beacon, className: "h-3.5 w-full" },
+			{ key: "hulu", component: Hulu, className: "h-3.5 w-full" },
 		],
 		hosting: [
-			{ key: 'supabase', component: Supabase, className: 'size-5' },
-			{ key: 'spotify', component: Spotify, className: 'h-5 w-full' },
+			{ key: "supabase", component: Supabase, className: "size-5" },
+			{ key: "spotify", component: Spotify, className: "h-5 w-full" },
 			{
-				key: 'vercel',
+				key: "vercel",
 				component: Vercel,
-				className: 'h-3.5 w-full',
-				props: { variant: 'full' }
-			}
+				className: "h-3.5 w-full",
+				props: { variant: "full" },
+			},
 		],
 		payments: [
-			{ key: 'hulu', component: Hulu, className: 'h-3.5 w-full' },
+			{ key: "hulu", component: Hulu, className: "h-3.5 w-full" },
 			{
-				key: 'vercel',
+				key: "vercel",
 				component: Vercel,
-				className: 'h-3.5 w-full',
-				props: { variant: 'full' }
+				className: "h-3.5 w-full",
+				props: { variant: "full" },
 			},
-			{ key: 'spotify', component: Spotify, className: 'h-5 w-full' }
+			{ key: "spotify", component: Spotify, className: "h-5 w-full" },
 		],
 		streaming: [
-			{ key: 'cisco', component: Cisco, className: 'h-5 w-full' },
-			{ key: 'hulu', component: Hulu, className: 'h-3.5 w-full' },
-			{ key: 'spotify', component: Spotify, className: 'h-5 w-full' }
-		]
+			{ key: "cisco", component: Cisco, className: "h-5 w-full" },
+			{ key: "hulu", component: Hulu, className: "h-3.5 w-full" },
+			{ key: "spotify", component: Spotify, className: "h-5 w-full" },
+		],
 	};
 
 	const groups = Object.keys(logos) as LogoGroup[];

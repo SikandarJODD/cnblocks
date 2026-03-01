@@ -1,7 +1,7 @@
 <script>
-	import { Card, CardContent } from '$lib/components/ui/card';
-	import Shield from '@lucide/svelte/icons/shield';
-	import Users from '@lucide/svelte/icons/users';
+	import { Card, CardContent } from "$lib/components/ui/card";
+	import Shield from "@lucide/svelte/icons/shield";
+	import Users from "@lucide/svelte/icons/users";
 </script>
 
 <section class="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
@@ -73,7 +73,12 @@
 										/>
 									</linearGradient>
 									<clip-path id="clip0_0_1">
-										<rect width="129" height="72" fill="white" transform="translate(41)" />
+										<rect
+											width="129"
+											height="72"
+											fill="white"
+											transform="translate(41)"
+										/>
 									</clip-path>
 								</defs>
 							</svg>
@@ -85,8 +90,8 @@
 								Built-In Security
 							</h2>
 							<p class="text-sm text-muted-foreground">
-								Implement best security practices from the start to protect data, users, and your
-								web applications effortlessly.
+								Implement best security practices from the start to protect data,
+								users, and your web applications effortlessly.
 							</p>
 						</div>
 					</CardContent>
@@ -153,7 +158,10 @@
 										y2="123"
 										gradientUnits="userSpaceOnUse"
 									>
-										<stop class="text-primary/15 dark:text-primary/35" stop-color="currentColor" />
+										<stop
+											class="text-primary/15 dark:text-primary/35"
+											stop-color="currentColor"
+										/>
 										<stop
 											class="text-transparent"
 											offset="1"
@@ -162,7 +170,12 @@
 										/>
 									</linearGradient>
 									<clip-path id="clip0_0_106">
-										<rect width="358" height="30" fill="white" transform="translate(14 14)" />
+										<rect
+											width="358"
+											height="30"
+											fill="white"
+											transform="translate(14 14)"
+										/>
 									</clip-path>
 								</defs>
 							</svg>
@@ -170,14 +183,19 @@
 						<div class="relative z-10 mt-14 space-y-2 text-center">
 							<h2 class="text-lg font-medium transition">Fast & Optimized</h2>
 							<p class="text-sm text-muted-foreground">
-								Optimize performance and keep users engaged with lightning-fast web experiences.
+								Optimize performance and keep users engaged with lightning-fast web
+								experiences.
 							</p>
 						</div>
 					</CardContent>
 				</Card>
-				<Card class="card variant-outlined relative col-span-full overflow-hidden lg:col-span-3">
+				<Card
+					class="card variant-outlined relative col-span-full overflow-hidden lg:col-span-3"
+				>
 					<CardContent class="grid pt-6 sm:grid-cols-2">
-						<div class="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
+						<div
+							class="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6"
+						>
 							<div
 								class="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5"
 							>
@@ -190,7 +208,8 @@
 									Continuous Growth
 								</h2>
 								<p class="text-sm text-foreground text-muted-foreground">
-									Stay ahead with the latest trends in web development and innovation.
+									Stay ahead with the latest trends in web development and
+									innovation.
 								</p>
 							</div>
 						</div>
@@ -198,11 +217,14 @@
 							class="relative mt-6 -mr-6 -mb-6 h-fit rounded-tl-(--radius) border-t border-l p-6 py-6 sm:ml-6"
 						>
 							<div class="absolute top-2 left-3 flex gap-1">
-								<span class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"
+								<span
+									class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"
 								></span>
-								<span class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"
+								<span
+									class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"
 								></span>
-								<span class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"
+								<span
+									class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"
 								></span>
 							</div>
 							<svg
@@ -232,7 +254,10 @@
 										y2="230.114"
 										gradientUnits="userSpaceOnUse"
 									>
-										<stop class="text-primary/15 dark:text-primary/35" stop-color="currentColor" />
+										<stop
+											class="text-primary/15 dark:text-primary/35"
+											stop-color="currentColor"
+										/>
 										<stop
 											class="text-transparent"
 											offset="1"
@@ -245,28 +270,41 @@
 						</div>
 					</CardContent>
 				</Card>
-				<Card class="card variant-outlined relative col-span-full overflow-hidden lg:col-span-3">
+				<Card
+					class="card variant-outlined relative col-span-full overflow-hidden lg:col-span-3"
+				>
 					<CardContent class="grid h-full pt-6 sm:grid-cols-2">
-						<div class="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
+						<div
+							class="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6"
+						>
 							<div
 								class="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5"
 							>
 								<Users class="m-auto size-6" stroke-width={1} />
 							</div>
 							<div class="space-y-2">
-								<h2 class="text-lg font-medium transition">Keep your loved ones safe</h2>
+								<h2 class="text-lg font-medium transition">
+									Keep your loved ones safe
+								</h2>
 								<p class="text-sm text-muted-foreground">
-									Build, share, and improve projects together using the best tools for
-									collaboration.
+									Build, share, and improve projects together using the best tools
+									for collaboration.
 								</p>
 							</div>
 						</div>
 						<div
 							class="relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px before:bg-(--color-border) sm:-my-6 sm:-mr-6"
 						>
-							<div class="relative flex h-full flex-col justify-center space-y-6 py-6">
-								<div class="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-									<span class="block h-fit rounded border px-2 py-1 text-xs shadow-sm">Saloni</span>
+							<div
+								class="relative flex h-full flex-col justify-center space-y-6 py-6"
+							>
+								<div
+									class="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2"
+								>
+									<span
+										class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
+										>Saloni</span
+									>
 									<div class="size-7 ring-4 ring-background">
 										<img
 											class="size-full rounded-full border"
@@ -283,12 +321,18 @@
 											alt=""
 										/>
 									</div>
-									<span class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
+									<span
+										class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
 										>Bhide Svelte</span
 									>
 								</div>
-								<div class="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-									<span class="block h-fit rounded border px-2 py-1 text-xs shadow-sm">Aditya</span>
+								<div
+									class="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2"
+								>
+									<span
+										class="block h-fit rounded border px-2 py-1 text-xs shadow-sm"
+										>Aditya</span
+									>
 									<div class="size-7 ring-4 ring-background">
 										<img
 											class="size-full rounded-full border"

@@ -1,21 +1,21 @@
 <script lang="ts">
-	import MapIcon from '@lucide/svelte/icons/map';
-	import MessageCircle from '@lucide/svelte/icons/message-circle';
+	import MapIcon from "@lucide/svelte/icons/map";
+	import MessageCircle from "@lucide/svelte/icons/message-circle";
 
-	import DottedMap from 'dotted-map';
+	import DottedMap from "dotted-map";
 
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
 	let map: any = $state();
 	let points: any = $state([]);
 	onMount(() => {
-		map = new DottedMap({ height: 55, grid: 'diagonal' });
+		map = new DottedMap({ height: 55, grid: "diagonal" });
 		points = map.getPoints();
 	});
 
 	let svgOptions = {
-		backgroundColor: 'var(--color-background)',
-		color: 'currentColor',
-		radius: 0.15
+		backgroundColor: "var(--color-background)",
+		color: "currentColor",
+		radius: 0.15,
 	};
 </script>
 
@@ -46,7 +46,9 @@
 				</div>
 
 				<div class="relative overflow-hidden">
-					<div class="absolute inset-0 z-1 bg-radial from-transparent to-background to-75%"></div>
+					<div
+						class="absolute inset-0 z-1 bg-radial from-transparent to-background to-75%"
+					></div>
 					{@render Map()}
 				</div>
 			</div>
@@ -109,9 +111,11 @@
 				</div>
 
 				<div>
-					<div class="mb-1 ml-auto w-3/5 rounded-(--radius) bg-blue-600 p-3 text-xs text-white">
-						Molestiae numquam debitis et ullam distinctio provident nobis repudiandae deleniti
-						necessitatibus.
+					<div
+						class="mb-1 ml-auto w-3/5 rounded-(--radius) bg-blue-600 p-3 text-xs text-white"
+					>
+						Molestiae numquam debitis et ullam distinctio provident nobis repudiandae
+						deleniti necessitatibus.
 					</div>
 					<span class="block text-right text-xs text-muted-foreground">Now</span>
 				</div>
@@ -124,7 +128,7 @@
 </section>
 
 {#snippet Map()}
-	{@const viewBox = '0 0 120 60'}
+	{@const viewBox = "0 0 120 60"}
 
 	<svg
 		{viewBox}

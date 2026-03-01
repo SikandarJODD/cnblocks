@@ -1,17 +1,17 @@
 <script lang="ts">
 	// Shadcn Svelte UI Button Component
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability
 
 	// Hero Header Component
-	import { cn } from '$lib/utils';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import { scrollY } from 'svelte/reactivity/window';
+	import { cn } from "$lib/utils";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import { scrollY } from "svelte/reactivity/window";
 
 	type MenuItem = {
 		name: string;
@@ -19,10 +19,10 @@
 	};
 
 	let menuItems: MenuItem[] = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 
 	let menuState = $state(false);
@@ -72,7 +72,9 @@
 								href="#link"
 								class="group mx-auto flex w-fit items-center gap-4 rounded-full border bg-muted p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 hover:bg-background dark:border-t-white/5 dark:shadow-zinc-950 dark:hover:border-t-border"
 							>
-								<span class="text-sm text-foreground">Introducing Support for AI Models</span>
+								<span class="text-sm text-foreground"
+									>Introducing Support for AI Models</span
+								>
 								<span
 									class="block h-4 w-0.5 border-l bg-white dark:border-background dark:bg-zinc-700"
 								></span>
@@ -94,15 +96,19 @@
 							</a>
 						</div>
 
-						<h1 class="mt-8 text-6xl text-balance md:text-7xl lg:mt-16 xl:text-[5.25rem]">
+						<h1
+							class="mt-8 text-6xl text-balance md:text-7xl lg:mt-16 xl:text-[5.25rem]"
+						>
 							Modern Solutions for Customer Engagement
 						</h1>
 						<p class="mx-auto mt-8 max-w-2xl text-lg text-balance">
-							Highly customizable components for building modern websites and applications that look
-							and feel the way you mean it.
+							Highly customizable components for building modern websites and
+							applications that look and feel the way you mean it.
 						</p>
 
-						<div class="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+						<div
+							class="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
+						>
 							<div
 								class="border bg-foreground/10 p-0.5"
 								style="border-radius: calc(0.5rem + 0.125rem + 4px);"
@@ -111,7 +117,9 @@
 									<span class="text-nowrap">Start Building</span>
 								</Button>
 							</div>
-							<Button size="lg" variant="ghost" class="rounded-xl px-5">Request a demo</Button>
+							<Button size="lg" variant="ghost" class="rounded-xl px-5"
+								>Request a demo</Button
+							>
 						</div>
 					</div>
 				</div>
@@ -240,8 +248,9 @@
 		<nav class="z-20 w-full px-2">
 			<div
 				class={[
-					'mx-auto mt-2 max-w-6xl rounded-2xl px-6 transition-all duration-300 lg:px-12',
-					isScrolled && 'max-w-4xl rounded-2xl border bg-background/50 backdrop-blur-lg lg:px-5'
+					"mx-auto mt-2 max-w-6xl rounded-2xl px-6 transition-all duration-300 lg:px-12",
+					isScrolled &&
+						"max-w-4xl rounded-2xl border bg-background/50 backdrop-blur-lg lg:px-5",
 				]}
 			>
 				<div
@@ -284,16 +293,19 @@
 
 						<button
 							onclick={() => (menuState = !menuState)}
-							aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+							aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 							class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 						>
 							<Menu
-								class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+								class={[
+									"m-auto size-6 duration-200",
+									menuState && "scale-0 rotate-180 opacity-0",
+								]}
 							/>
 							<X
 								class={[
-									'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-									menuState && 'scale-100 rotate-0 opacity-100'
+									"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+									menuState && "scale-100 rotate-0 opacity-100",
 								]}
 							/>
 						</button>
@@ -315,8 +327,8 @@
 					</div>
 					<div
 						class={[
-							'mb-6 w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-							menuState ? 'block lg:flex' : 'hidden lg:flex'
+							"mb-6 w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+							menuState ? "block lg:flex" : "hidden lg:flex",
 						]}
 					>
 						<div class="lg:hidden">
@@ -333,12 +345,25 @@
 								{/each}
 							</ul>
 						</div>
-						<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-							<Button variant="outline" size="sm" class={cn(isScrolled && 'lg:hidden')} href="#">
+						<div
+							class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+						>
+							<Button
+								variant="outline"
+								size="sm"
+								class={cn(isScrolled && "lg:hidden")}
+								href="#"
+							>
 								Login
 							</Button>
-							<Button href="#" size="sm" class={cn(isScrolled && 'lg:hidden')}>Sign Up</Button>
-							<Button size="sm" href="#" class={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
+							<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+								>Sign Up</Button
+							>
+							<Button
+								size="sm"
+								href="#"
+								class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+							>
 								Get Strated
 							</Button>
 						</div>

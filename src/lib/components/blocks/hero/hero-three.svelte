@@ -1,19 +1,19 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 	// Hero Header Component
 
-	import { cn } from '$lib/utils';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import { scrollY } from 'svelte/reactivity/window';
-	import Mail from '@lucide/svelte/icons/mail';
-	import SendHorizonal from '@lucide/svelte/icons/send-horizontal';
+	import { cn } from "$lib/utils";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import { scrollY } from "svelte/reactivity/window";
+	import Mail from "@lucide/svelte/icons/mail";
+	import SendHorizonal from "@lucide/svelte/icons/send-horizontal";
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
 	let isScrolled = $derived.by(() => {
@@ -49,8 +49,8 @@
 						Your gateway to endless entertainment experiences
 					</h1>
 					<p class="mx-auto mt-12 max-w-2xl text-lg text-pretty">
-						Tailwindcss highly customizable components for building modern websites and applications
-						that look and feel the way you mean it.
+						Tailwindcss highly customizable components for building modern websites and
+						applications that look and feel the way you mean it.
 					</p>
 
 					<div class="mt-12">
@@ -58,7 +58,9 @@
 							<div
 								class="relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.5rem)] border bg-background pr-2 shadow shadow-zinc-950/5 has-[input:focus]:ring-2 has-[input:focus]:ring-muted"
 							>
-								<Mail class="pointer-events-none absolute inset-y-0 left-4 my-auto size-4" />
+								<Mail
+									class="pointer-events-none absolute inset-y-0 left-4 my-auto size-4"
+								/>
 
 								<input
 									placeholder="Your mail address"
@@ -67,9 +69,16 @@
 								/>
 
 								<div class="md:pr-1.5 lg:pr-0">
-									<Button aria-label="submit" size="sm" class="rounded-(--radius)">
+									<Button
+										aria-label="submit"
+										size="sm"
+										class="rounded-(--radius)"
+									>
 										<span class="hidden md:block">Get Started</span>
-										<SendHorizonal class="relative mx-auto size-5 md:hidden" strokeWidth={2} />
+										<SendHorizonal
+											class="relative mx-auto size-5 md:hidden"
+											strokeWidth={2}
+										/>
 									</Button>
 								</div>
 							</div>
@@ -135,8 +144,9 @@
 		<nav class="fixed z-20 w-full px-2">
 			<div
 				class={[
-					'mx-auto mt-2 max-w-6xl rounded-2xl px-6 transition-all duration-300 lg:px-12',
-					isScrolled && 'max-w-4xl rounded-2xl border bg-background/50 backdrop-blur-lg lg:px-5'
+					"mx-auto mt-2 max-w-6xl rounded-2xl px-6 transition-all duration-300 lg:px-12",
+					isScrolled &&
+						"max-w-4xl rounded-2xl border bg-background/50 backdrop-blur-lg lg:px-5",
 				]}
 			>
 				<div
@@ -179,16 +189,19 @@
 
 						<button
 							onclick={() => (menuState = !menuState)}
-							aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+							aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 							class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 						>
 							<Menu
-								class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+								class={[
+									"m-auto size-6 duration-200",
+									menuState && "scale-0 rotate-180 opacity-0",
+								]}
 							/>
 							<X
 								class={[
-									'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-									menuState && 'scale-100 rotate-0 opacity-100'
+									"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+									menuState && "scale-100 rotate-0 opacity-100",
 								]}
 							/>
 						</button>
@@ -210,8 +223,8 @@
 					</div>
 					<div
 						class={[
-							'mb-6 w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-							menuState ? 'block lg:flex' : 'hidden lg:flex'
+							"mb-6 w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+							menuState ? "block lg:flex" : "hidden lg:flex",
 						]}
 					>
 						<div class="lg:hidden">
@@ -228,12 +241,25 @@
 								{/each}
 							</ul>
 						</div>
-						<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-							<Button variant="outline" size="sm" class={cn(isScrolled && 'lg:hidden')} href="#">
+						<div
+							class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+						>
+							<Button
+								variant="outline"
+								size="sm"
+								class={cn(isScrolled && "lg:hidden")}
+								href="#"
+							>
 								Login
 							</Button>
-							<Button href="#" size="sm" class={cn(isScrolled && 'lg:hidden')}>Sign Up</Button>
-							<Button size="sm" href="#" class={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
+							<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+								>Sign Up</Button
+							>
+							<Button
+								size="sm"
+								href="#"
+								class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+							>
 								Get Strated
 							</Button>
 						</div>

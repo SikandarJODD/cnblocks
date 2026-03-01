@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
 </script>
 
 <section class="[--color-primary:var(--color-indigo-500)]">
@@ -9,9 +9,9 @@
 				class="relative max-w-xl pl-6 before:absolute before:inset-y-0 before:left-0 before:w-1 before:rounded-full before:bg-primary"
 			>
 				<p class="text-lg text-foreground">
-					Using Tailark has been like unlocking a secret design superpower. It's the perfect fusion
-					of simplicity and versatility, enabling us to create UIs that are as stunning as they are
-					user-friendly.
+					Using Tailark has been like unlocking a secret design superpower. It's the
+					perfect fusion of simplicity and versatility, enabling us to create UIs that are
+					as stunning as they are user-friendly.
 				</p>
 				<footer class="mt-4 flex items-center gap-2">
 					<Avatar class=" size-6 border border-transparent shadow ring-1">

@@ -1,9 +1,9 @@
 <script lang="ts">
 	// Scroll below for the code of IntegrationCardv3 component
-	import IntegrationCardv3 from './card/integration-cardv3.svelte';
-	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from '../logos/logos';
+	import IntegrationCardv3 from "./card/integration-cardv3.svelte";
+	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
 <section>
@@ -82,7 +82,8 @@
 						Integrate with your favorite tools
 					</h2>
 					<p class="text-muted-foreground">
-						Connect seamlessly with popular platforms and services to enhance your workflow.
+						Connect seamlessly with popular platforms and services to enhance your
+						workflow.
 					</p>
 
 					<Button variant="outline" size="sm">Get started</Button>

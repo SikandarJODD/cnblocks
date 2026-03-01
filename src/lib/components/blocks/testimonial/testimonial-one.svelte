@@ -1,6 +1,6 @@
 <script>
-	import { Avatar, AvatarImage, AvatarFallback } from '$lib/components/ui/avatar';
-	import { Card, CardContent, CardHeader } from '$lib/components/ui/card';
+	import { Avatar, AvatarImage, AvatarFallback } from "$lib/components/ui/avatar";
+	import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
 </script>
 
 <section class="py-16 md:py-32">
@@ -10,8 +10,8 @@
 				Build by makers, loved by thousand developers
 			</h2>
 			<p>
-				Gemini is evolving to be more than just the models. It supports an entire to the APIs and
-				platforms helping developers and businesses innovate.
+				Gemini is evolving to be more than just the models. It supports an entire to the
+				APIs and platforms helping developers and businesses innovate.
 			</p>
 		</div>
 
@@ -29,10 +29,11 @@
 				<CardContent>
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p class="text-xl font-medium">
-							Tailus has transformed the way I develop web applications. Their extensive collection
-							of UI components, blocks, and templates has significantly accelerated my workflow. The
-							flexibility to customize every aspect allows me to create unique user experiences.
-							Tailus is a game-changer for modern web development
+							Tailus has transformed the way I develop web applications. Their
+							extensive collection of UI components, blocks, and templates has
+							significantly accelerated my workflow. The flexibility to customize
+							every aspect allows me to create unique user experiences. Tailus is a
+							game-changer for modern web development
 						</p>
 
 						<div class="grid grid-cols-[auto_1fr] items-center gap-3">
@@ -49,7 +50,9 @@
 
 							<div>
 								<cite class="text-sm font-medium">Shekinah Tshiokufila</cite>
-								<span class="block text-sm text-muted-foreground">Software Ingineer</span>
+								<span class="block text-sm text-muted-foreground"
+									>Software Ingineer</span
+								>
 							</div>
 						</div>
 					</blockquote>
@@ -59,8 +62,8 @@
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p class="text-xl font-medium">
-							Tailus is really extraordinary and very practical, no need to break your head. A real
-							gold mine.
+							Tailus is really extraordinary and very practical, no need to break your
+							head. A real gold mine.
 						</p>
 
 						<div class="grid grid-cols-[auto_1fr] items-center gap-3">
@@ -76,7 +79,9 @@
 							</Avatar>
 							<div>
 								<cite class="text-sm font-medium">Jonathan Yombo</cite>
-								<span class="block text-sm text-muted-foreground">Software Ingineer</span>
+								<span class="block text-sm text-muted-foreground"
+									>Software Ingineer</span
+								>
 							</div>
 						</div>
 					</blockquote>
@@ -86,8 +91,8 @@
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p>
-							Great work on tailfolio template. This is one of the best personal website that I have
-							seen so far!
+							Great work on tailfolio template. This is one of the best personal
+							website that I have seen so far!
 						</p>
 
 						<div class="grid [grid-template-columns:auto_1fr] items-center gap-3">
@@ -103,7 +108,9 @@
 							</Avatar>
 							<div>
 								<cite class="text-sm font-medium">Yucel Faruksahan</cite>
-								<span class="block text-sm text-muted-foreground">Creator, Tailkits</span>
+								<span class="block text-sm text-muted-foreground"
+									>Creator, Tailkits</span
+								>
 							</div>
 						</div>
 					</blockquote>
@@ -113,8 +120,8 @@
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p>
-							Great work on tailfolio template. This is one of the best personal website that I have
-							seen so far!
+							Great work on tailfolio template. This is one of the best personal
+							website that I have seen so far!
 						</p>
 
 						<div class="grid grid-cols-[auto_1fr] gap-3">
@@ -130,7 +137,9 @@
 							</Avatar>
 							<div>
 								<p class="text-sm font-medium">Rodrigo Aguilar</p>
-								<span class="block text-sm text-muted-foreground">Creator, TailwindAwesome</span>
+								<span class="block text-sm text-muted-foreground"
+									>Creator, TailwindAwesome</span
+								>
 							</div>
 						</div>
 					</blockquote>

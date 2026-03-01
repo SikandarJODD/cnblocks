@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { Spring } from 'svelte/motion';
+	import { onMount } from "svelte";
+	import { Spring } from "svelte/motion";
 
 	interface Props {
 		firstImage?: string;
@@ -9,23 +9,23 @@
 		firstImageClass?: string;
 		secondImageClass?: string;
 		initialSliderPercentage?: number;
-		slideMode?: 'hover' | 'drag';
+		slideMode?: "hover" | "drag";
 		showHandlebar?: boolean;
 		autoplay?: boolean;
 		autoplayDuration?: number;
 	}
 
 	let {
-		firstImage = '/hero_dark.png',
-		secondImage = '/hero_light.png',
-		class: className = 'w-[400px] h-[250px] w-[200px] sm:h-[450px] sm:w-full rounded-tl-(--radius)',
-		firstImageClass = 'object-cover object-bottom',
-		secondImageClass = 'object-cover object-bottom',
+		firstImage = "/hero_dark.png",
+		secondImage = "/hero_light.png",
+		class: className = "w-[400px] h-[250px] w-[200px] sm:h-[450px] sm:w-full rounded-tl-(--radius)",
+		firstImageClass = "object-cover object-bottom",
+		secondImageClass = "object-cover object-bottom",
 		initialSliderPercentage = 46,
-		slideMode = 'hover',
+		slideMode = "hover",
 		showHandlebar = true,
 		autoplay = false,
-		autoplayDuration = 5000
+		autoplayDuration = 5000,
 	}: Props = $props();
 
 	let sliderXPercent = new Spring(initialSliderPercentage, { stiffness: 0.15 });
@@ -69,23 +69,23 @@
 
 	function mouseLeaveHandler() {
 		isMouseOver = false;
-		if (slideMode === 'hover') {
+		if (slideMode === "hover") {
 			sliderXPercent.set(initialSliderPercentage);
 		}
-		if (slideMode === 'drag') {
+		if (slideMode === "drag") {
 			isDragging = false;
 		}
 		startAutoplay();
 	}
 
 	function handleStart(clientX: number) {
-		if (slideMode === 'drag') {
+		if (slideMode === "drag") {
 			isDragging = true;
 		}
 	}
 
 	function handleEnd() {
-		if (slideMode === 'drag') {
+		if (slideMode === "drag") {
 			isDragging = false;
 		}
 	}
@@ -93,7 +93,7 @@
 	function handleMove(clientX: number) {
 		if (!sliderRef) return;
 
-		if (slideMode === 'hover' || (slideMode === 'drag' && isDragging)) {
+		if (slideMode === "hover" || (slideMode === "drag" && isDragging)) {
 			const rect = sliderRef.getBoundingClientRect();
 			const x = clientX - rect.left;
 			const percent = (x / rect.width) * 100;
@@ -186,8 +186,8 @@
 					alt="first image"
 					src={firstImage}
 					class={[
-						'absolute inset-0 z-20 h-full  w-full flex-shrink-0 select-none dark:bg-black',
-						firstImageClass
+						"absolute inset-0 z-20 h-full  w-full flex-shrink-0 select-none dark:bg-black",
+						firstImageClass,
 					]}
 					draggable="false"
 				/>
@@ -199,8 +199,8 @@
 		<!-- svelte-ignore a11y_img_redundant_alt -->
 		<img
 			class={[
-				'absolute top-0 left-0 z-[19] h-full w-full rounded-tl-3xl select-none',
-				secondImageClass
+				"absolute top-0 left-0 z-[19] h-full w-full rounded-tl-3xl select-none",
+				secondImageClass,
 			]}
 			alt="second image"
 			src={secondImage}

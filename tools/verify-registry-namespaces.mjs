@@ -1,41 +1,41 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from "node:fs";
+import path from "node:path";
 
 const ROOT = process.cwd();
-const REGISTRY_PATH = path.join(ROOT, 'registry.json');
-const MAP_PATH = path.join(ROOT, 'src', 'lib', 'generated', 'registry-namespaces.ts');
-const STATIC_DIR = path.join(ROOT, 'static');
-const REGISTRY_ITEM_SCHEMA = 'https://shadcn-svelte.com/schema/registry-item.json';
+const REGISTRY_PATH = path.join(ROOT, "registry.json");
+const MAP_PATH = path.join(ROOT, "src", "lib", "generated", "registry-namespaces.ts");
+const STATIC_DIR = path.join(ROOT, "static");
+const REGISTRY_ITEM_SCHEMA = "https://shadcn-svelte.com/schema/registry-item.json";
 
 function readJson(filePath) {
-	return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+	return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
 function normalizePath(value) {
-	return String(value).replace(/\\/g, '/');
+	return String(value).replace(/\\/g, "/");
 }
 
 function getClassifyPath(file) {
 	if (file?.relativePath) return normalizePath(file.relativePath);
-	return normalizePath(file?.path ?? '');
+	return normalizePath(file?.path ?? "");
 }
 
 function classify(files) {
 	const normalized = files.map((file) => getClassifyPath(file));
-	const hasVeil = normalized.some((filePath) => filePath.includes('src/lib/components/veil/'));
-	const hasMist = normalized.some((filePath) => filePath.includes('src/lib/components/mist/'));
+	const hasVeil = normalized.some((filePath) => filePath.includes("src/lib/components/veil/"));
+	const hasMist = normalized.some((filePath) => filePath.includes("src/lib/components/mist/"));
 	if (hasVeil && hasMist) {
-		throw new Error(`Ambiguous namespace for files: ${normalized.join(', ')}`);
+		throw new Error(`Ambiguous namespace for files: ${normalized.join(", ")}`);
 	}
-	if (hasVeil) return 'v';
-	if (hasMist) return 'm';
-	return 'r';
+	if (hasVeil) return "v";
+	if (hasMist) return "m";
+	return "r";
 }
 
 function parseGeneratedNamespaceMap(source) {
 	const match = source.match(/registryNamespaces = (\{[\s\S]*\}) as const;/);
 	if (!match) {
-		throw new Error('Could not parse registryNamespaces object from generated map');
+		throw new Error("Could not parse registryNamespaces object from generated map");
 	}
 	return JSON.parse(match[1]);
 }
@@ -59,14 +59,14 @@ function countJsonFiles(dirPath) {
 	if (!fs.existsSync(dirPath)) return 0;
 	return fs
 		.readdirSync(dirPath, { withFileTypes: true })
-		.filter((entry) => entry.isFile() && entry.name.endsWith('.json')).length;
+		.filter((entry) => entry.isFile() && entry.name.endsWith(".json")).length;
 }
 
 function main() {
 	const registry = readJson(REGISTRY_PATH);
-	assert(Array.isArray(registry.items), 'registry.json missing items array');
+	assert(Array.isArray(registry.items), "registry.json missing items array");
 
-	const mapSource = fs.readFileSync(MAP_PATH, 'utf8');
+	const mapSource = fs.readFileSync(MAP_PATH, "utf8");
 	const namespaceMap = parseGeneratedNamespaceMap(mapSource);
 
 	const names = new Set();
@@ -75,7 +75,7 @@ function main() {
 	const namespaceCounts = { r: 0, v: 0, m: 0 };
 
 	for (const item of registry.items) {
-		assert(item?.name, 'Found registry item without name');
+		assert(item?.name, "Found registry item without name");
 		assert(!names.has(item.name), `Duplicate item name: ${item.name}`);
 		names.add(item.name);
 
@@ -90,17 +90,17 @@ function main() {
 		const canonicalPath = path.join(STATIC_DIR, expectedNamespace, `${item.name}.json`);
 		verifyManifestFile(canonicalPath, item.name);
 
-		if (item.name.startsWith('veil-')) {
+		if (item.name.startsWith("veil-")) {
 			veilCount += 1;
 		}
-		if (item.name.startsWith('veil-stats-')) {
+		if (item.name.startsWith("veil-stats-")) {
 			veilStatsCount += 1;
 		}
 	}
 
 	assert(
 		Object.keys(namespaceMap).length === registry.items.length,
-		'Namespace map count does not match registry item count'
+		"Namespace map count does not match registry item count"
 	);
 	assert(veilCount === 60, `Expected 60 Veil items, found ${veilCount}`);
 	assert(veilStatsCount === 4, `Expected 4 Veil stats items, found ${veilStatsCount}`);
@@ -109,21 +109,21 @@ function main() {
 		`Expected 56 non-stats Veil items, found ${veilCount - veilStatsCount}`
 	);
 	assert(
-		countJsonFiles(path.join(STATIC_DIR, 'r')) === namespaceCounts.r,
-		'static/r count mismatch'
+		countJsonFiles(path.join(STATIC_DIR, "r")) === namespaceCounts.r,
+		"static/r count mismatch"
 	);
 	assert(
-		countJsonFiles(path.join(STATIC_DIR, 'v')) === namespaceCounts.v,
-		'static/v count mismatch'
+		countJsonFiles(path.join(STATIC_DIR, "v")) === namespaceCounts.v,
+		"static/v count mismatch"
 	);
 	assert(
-		countJsonFiles(path.join(STATIC_DIR, 'm')) === namespaceCounts.m,
-		'static/m count mismatch'
+		countJsonFiles(path.join(STATIC_DIR, "m")) === namespaceCounts.m,
+		"static/m count mismatch"
 	);
-	assert(countJsonFiles(path.join(STATIC_DIR, 'mist')) === 0, 'Expected static/mist to be empty');
+	assert(countJsonFiles(path.join(STATIC_DIR, "mist")) === 0, "Expected static/mist to be empty");
 
 	if (namespaceMap.marquee !== undefined) {
-		assert(namespaceMap.marquee === 'r', 'Expected marquee namespace to be r');
+		assert(namespaceMap.marquee === "r", "Expected marquee namespace to be r");
 	}
 
 	console.log(

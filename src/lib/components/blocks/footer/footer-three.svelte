@@ -1,123 +1,123 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
 
-	import { cn } from '$lib/utils';
-	import ChevronsUpDown from '@lucide/svelte/icons/chevrons-up-down';
+	import { cn } from "$lib/utils";
+	import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
 	const links = [
 		{
-			group: 'Product',
+			group: "Product",
 			items: [
 				{
-					title: 'Features',
-					href: '#'
+					title: "Features",
+					href: "#",
 				},
 				{
-					title: 'Solution',
-					href: '#'
+					title: "Solution",
+					href: "#",
 				},
 				{
-					title: 'Customers',
-					href: '#'
+					title: "Customers",
+					href: "#",
 				},
 				{
-					title: 'Pricing',
-					href: '#'
+					title: "Pricing",
+					href: "#",
 				},
 				{
-					title: 'Help',
-					href: '#'
+					title: "Help",
+					href: "#",
 				},
 				{
-					title: 'About',
-					href: '#'
-				}
-			]
+					title: "About",
+					href: "#",
+				},
+			],
 		},
 		{
-			group: 'Solution',
+			group: "Solution",
 			items: [
 				{
-					title: 'Startup',
-					href: '#'
+					title: "Startup",
+					href: "#",
 				},
 				{
-					title: 'Freelancers',
-					href: '#'
+					title: "Freelancers",
+					href: "#",
 				},
 				{
-					title: 'Organizations',
-					href: '#'
+					title: "Organizations",
+					href: "#",
 				},
 				{
-					title: 'Students',
-					href: '#'
+					title: "Students",
+					href: "#",
 				},
 				{
-					title: 'Collaboration',
-					href: '#'
+					title: "Collaboration",
+					href: "#",
 				},
 				{
-					title: 'Design',
-					href: '#'
+					title: "Design",
+					href: "#",
 				},
 				{
-					title: 'Management',
-					href: '#'
-				}
-			]
+					title: "Management",
+					href: "#",
+				},
+			],
 		},
 		{
-			group: 'Company',
+			group: "Company",
 			items: [
 				{
-					title: 'About',
-					href: '#'
+					title: "About",
+					href: "#",
 				},
 				{
-					title: 'Careers',
-					href: '#'
+					title: "Careers",
+					href: "#",
 				},
 				{
-					title: 'Blog',
-					href: '#'
+					title: "Blog",
+					href: "#",
 				},
 				{
-					title: 'Press',
-					href: '#'
+					title: "Press",
+					href: "#",
 				},
 				{
-					title: 'Contact',
-					href: '#'
+					title: "Contact",
+					href: "#",
 				},
 				{
-					title: 'Help',
-					href: '#'
-				}
-			]
+					title: "Help",
+					href: "#",
+				},
+			],
 		},
 		{
-			group: 'Legal',
+			group: "Legal",
 			items: [
 				{
-					title: 'Licence',
-					href: '#'
+					title: "Licence",
+					href: "#",
 				},
 				{
-					title: 'Privacy',
-					href: '#'
+					title: "Privacy",
+					href: "#",
 				},
 				{
-					title: 'Cookies',
-					href: '#'
+					title: "Cookies",
+					href: "#",
 				},
 				{
-					title: 'Security',
-					href: '#'
-				}
-			]
-		}
+					title: "Security",
+					href: "#",
+				},
+			],
+		},
 	];
 </script>
 
@@ -288,7 +288,9 @@
 	</div>
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="grid gap-12 md:grid-cols-5 md:gap-0 lg:grid-cols-4">
-			<div class="grid grid-cols-2 gap-6 sm:grid-cols-4 md:col-span-5 md:row-start-1 lg:col-span-3">
+			<div
+				class="grid grid-cols-2 gap-6 sm:grid-cols-4 md:col-span-5 md:row-start-1 lg:col-span-3"
+			>
 				{#each links as link}
 					<div class="space-y-4 text-sm">
 						<span class="block font-medium">{link.group}</span>
@@ -303,7 +305,9 @@
 					</div>
 				{/each}
 			</div>
-			<form class="row-start-1 border-b pb-8 text-sm md:col-span-2 md:border-none lg:col-span-1">
+			<form
+				class="row-start-1 border-b pb-8 text-sm md:col-span-2 md:border-none lg:col-span-1"
+			>
 				<div class="space-y-4">
 					<Label for="mail" class="block font-medium">Newsletter</Label>
 					<div class="flex gap-2">
@@ -332,9 +336,9 @@
 					/>
 					<select
 						class={cn(
-							'flex h-9 w-full min-w-32 appearance-none rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
-							'focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50',
-							'aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40'
+							"flex h-9 w-full min-w-32 appearance-none rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+							"focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50",
+							"aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40"
 						)}
 						name="language"
 					>

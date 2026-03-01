@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 
 	type ComponentProps = Record<string, unknown> & { class?: string };
-	const { class: className = '', ...restProps }: ComponentProps = $props();
+	const { class: className = "", ...restProps }: ComponentProps = $props();
 </script>
 
-<hr {...restProps} class={cn('my-12 border-t border-border', className)} />
+<hr {...restProps} class={cn("my-12 border-t border-border", className)} />

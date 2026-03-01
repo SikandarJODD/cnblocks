@@ -1,17 +1,17 @@
 <script lang="ts">
-	import CodeBlock from './CodeBlock.svelte';
-	import type { MistCode } from './MistBlockPreview.svelte';
-	import ChevronDown from '@lucide/svelte/icons/chevron-down';
-	import Button from '../ui/button/button.svelte';
-	import { cn } from '$lib/utils';
-	import Check from '@lucide/svelte/icons/check';
-	import Copy from '@lucide/svelte/icons/copy';
-	import { UseClipboard } from '$lib/hooks/use-clipboard.svelte';
-	import { scale } from 'svelte/transition';
-	import Code from './code/code.svelte';
+	import CodeBlock from "./CodeBlock.svelte";
+	import type { MistCode } from "./MistBlockPreview.svelte";
+	import ChevronDown from "@lucide/svelte/icons/chevron-down";
+	import Button from "../ui/button/button.svelte";
+	import { cn } from "$lib/utils";
+	import Check from "@lucide/svelte/icons/check";
+	import Copy from "@lucide/svelte/icons/copy";
+	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+	import { scale } from "svelte/transition";
+	import Code from "./code/code.svelte";
 
 	let {
-		code
+		code,
 	}: {
 		code: MistCode | MistCode[];
 	} = $props();
@@ -62,8 +62,8 @@
 					{#each code as item, index}
 						<Button
 							class={cn(
-								'flex w-full items-center justify-start gap-1.5 rounded-none py-2 pr-5.5 pl-12 text-xs hover:bg-neutral-200/70 hover:dark:bg-zinc-900',
-								selectedIndex === index && 'bg-neutral-200/70 dark:bg-zinc-800/50'
+								"flex w-full items-center justify-start gap-1.5 rounded-none py-2 pr-5.5 pl-12 text-xs hover:bg-neutral-200/70 hover:dark:bg-zinc-900",
+								selectedIndex === index && "bg-neutral-200/70 dark:bg-zinc-800/50"
 							)}
 							variant="ghost"
 							onclick={() => (selectedIndex = index)}
@@ -83,7 +83,7 @@
 									fill="#FFF"
 								/></svg
 							>
-							<span>{item?.name || 'Untitled'}</span>
+							<span>{item?.name || "Untitled"}</span>
 						</Button>
 					{/each}
 				</div>
@@ -113,7 +113,7 @@
 		size="icon"
 		onclick={copyCode}
 	>
-		{#if clipboard.status === 'success'}
+		{#if clipboard.status === "success"}
 			<span in:scale>
 				<Check class="!size-3.5 text-[#10B981]" />
 			</span>

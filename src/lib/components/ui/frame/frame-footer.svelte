@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { HTMLAttributes } from 'svelte/elements';
-	import { cn, type WithElementRef } from '$lib/utils.js';
+	import type { HTMLAttributes } from "svelte/elements";
+	import { cn, type WithElementRef } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -13,7 +13,7 @@
 <footer
 	bind:this={ref}
 	data-slot="frame-panel-footer"
-	class={cn('px-5 py-4', className)}
+	class={cn("px-5 py-4", className)}
 	{...restProps}
 >
 	{@render children?.()}

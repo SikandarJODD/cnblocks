@@ -1,23 +1,23 @@
 <script lang="ts">
-	import Logo from '$lib/components/web/Logo.svelte';
-	import { Github, Linkedin, Twitter } from '@lucide/svelte';
-	import type { Component } from 'svelte';
+	import Logo from "$lib/components/web/Logo.svelte";
+	import { Github, Linkedin, Twitter } from "@lucide/svelte";
+	import type { Component } from "svelte";
 
 	type LinkItem = { label: string; href: string };
 	type SocialItem = { icon: Component; href: string; label: string };
 
 	const links: LinkItem[] = [
-		{ label: 'Features', href: '#' },
-		{ label: 'Pricing', href: '#' },
-		{ label: 'About', href: '#' },
-		{ label: 'Blog', href: '#' },
-		{ label: 'Contact', href: '#' }
+		{ label: "Features", href: "#" },
+		{ label: "Pricing", href: "#" },
+		{ label: "About", href: "#" },
+		{ label: "Blog", href: "#" },
+		{ label: "Contact", href: "#" },
 	];
 
 	const social: SocialItem[] = [
-		{ icon: Twitter, href: '#', label: 'Twitter' },
-		{ icon: Github, href: '#', label: 'GitHub' },
-		{ icon: Linkedin, href: '#', label: 'LinkedIn' }
+		{ icon: Twitter, href: "#", label: "Twitter" },
+		{ icon: Github, href: "#", label: "GitHub" },
+		{ icon: Linkedin, href: "#", label: "LinkedIn" },
 	];
 
 	const year = new Date().getFullYear();

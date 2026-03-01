@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
+	import type { Snippet } from "svelte";
 
 	let {
 		children,
 		class: _class,
-		borderClassName
+		borderClassName,
 	}: {
 		children?: Snippet;
 		class?: string;
@@ -12,12 +12,12 @@
 	} = $props();
 </script>
 
-<div class={['relative flex size-20 rounded-xl bg-background dark:bg-transparent', _class]}>
+<div class={["relative flex size-20 rounded-xl bg-background dark:bg-transparent", _class]}>
 	<div
 		role="presentation"
 		class={[
-			'absolute inset-0 rounded-xl border border-black/20 dark:border-white/25',
-			borderClassName
+			"absolute inset-0 rounded-xl border border-black/20 dark:border-white/25",
+			borderClassName,
 		]}
 	></div>
 	<div class="relative z-20 m-auto size-fit *:size-8">

@@ -1,40 +1,41 @@
 <script lang="ts">
 	let benefits = [
 		{
-			title: 'Work in Zurich',
-			description: 'We are in-person first and have a fantastic office in Zurich.'
+			title: "Work in Zurich",
+			description: "We are in-person first and have a fantastic office in Zurich.",
 		},
 		{
-			title: 'Competitive salary & equity',
-			description: 'We pay competitive salary and option packages to attract the very best talent.'
-		},
-		{
-			title: 'Health, dental, vision',
-			description: 'Database pays all of your health, dental, and vision insurance.'
-		},
-		{
-			title: 'Yearly off-sites',
+			title: "Competitive salary & equity",
 			description:
-				'We bring everyone together at an interesting location to discuss the big picture.'
+				"We pay competitive salary and option packages to attract the very best talent.",
 		},
 		{
-			title: 'Book budget',
-			description: 'We provide every employee with a 350 dollar budget for books.'
+			title: "Health, dental, vision",
+			description: "Database pays all of your health, dental, and vision insurance.",
 		},
 		{
-			title: 'Tasty snacks',
+			title: "Yearly off-sites",
 			description:
-				'The fridge and pantry are stocked + free dinner catered every night (incl. weekends).'
+				"We bring everyone together at an interesting location to discuss the big picture.",
 		},
 		{
-			title: '20 PTO days per year',
-			description: 'Take time off to recharge and come back refreshed.'
+			title: "Book budget",
+			description: "We provide every employee with a 350 dollar budget for books.",
 		},
 		{
-			title: 'Spotify Premium',
+			title: "Tasty snacks",
 			description:
-				'We really have the best fringe benefits, even a Spotify subscription is included.'
-		}
+				"The fridge and pantry are stocked + free dinner catered every night (incl. weekends).",
+		},
+		{
+			title: "20 PTO days per year",
+			description: "Take time off to recharge and come back refreshed.",
+		},
+		{
+			title: "Spotify Premium",
+			description:
+				"We really have the best fringe benefits, even a Spotify subscription is included.",
+		},
 	];
 </script>
 

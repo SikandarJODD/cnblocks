@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { scrollY } from 'svelte/reactivity/window';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import MistCategoryNav from '$lib/web/layouts/MistCategoryNav.svelte';
-	import type { Snippet } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { scrollY } from "svelte/reactivity/window";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import MistCategoryNav from "$lib/web/layouts/MistCategoryNav.svelte";
+	import type { Snippet } from "svelte";
+	import { fly } from "svelte/transition";
 
 	let { children }: { children: Snippet } = $props();
-	let visible = $derived(typeof scrollY.current === 'undefined' ? 600 : scrollY.current > 1200);
+	let visible = $derived(typeof scrollY.current === "undefined" ? 600 : scrollY.current > 1200);
 </script>
 
 <div>
@@ -28,7 +28,7 @@
 			size="icon"
 			variant="secondary"
 			class="rounded-full"
-			onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

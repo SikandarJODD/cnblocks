@@ -1,6 +1,6 @@
 <script>
-	import Zap from '@lucide/svelte/icons/zap';
-	import Cpu from '@lucide/svelte/icons/cpu';
+	import Zap from "@lucide/svelte/icons/zap";
+	import Cpu from "@lucide/svelte/icons/cpu";
 </script>
 
 <section class="py-16 md:py-32">
@@ -11,13 +11,13 @@
 		<div class="relative">
 			<div class="relative z-10 space-y-4 md:w-1/2">
 				<p class="text-body">
-					Lyra is evolving to be more than just the models. <span class="text-title font-medium"
-						>It supports an entire ecosystem</span
+					Lyra is evolving to be more than just the models. <span
+						class="text-title font-medium">It supports an entire ecosystem</span
 					> — from products innovate.
 				</p>
 				<p>
-					It supports an entire ecosystem — from products to the APIs and platforms helping
-					developers and businesses innovate
+					It supports an entire ecosystem — from products to the APIs and platforms
+					helping developers and businesses innovate
 				</p>
 
 				<div class="grid grid-cols-2 gap-3 pt-6 sm:gap-4">

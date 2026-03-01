@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DocsCodeBlock from '$lib/web/docs/DocsCodeBlock.svelte';
-	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index';
+	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
+	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
 </script>
 
 <svelte:head>
@@ -76,7 +76,11 @@
 			<div class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900">
 				<div class="space-y-4 pt-1 pb-8 pl-8">
 					<h2 class="font-medium text-primary">Add Shadcn Svelte</h2>
-					<DocsCodeBlock fileName="Terminal" code="npx shadcn-svelte@next init" lang="bash" />
+					<DocsCodeBlock
+						fileName="Terminal"
+						code="npx shadcn-svelte@next init"
+						lang="bash"
+					/>
 				</div>
 			</div>
 		</div>

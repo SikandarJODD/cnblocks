@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { RadioGroup as RadioGroupPrimitive, type WithoutChildrenOrChild } from 'bits-ui';
-	import Circle from '@lucide/svelte/icons/circle';
-	import { cn } from '$lib/utils.js';
+	import { RadioGroup as RadioGroupPrimitive, type WithoutChildrenOrChild } from "bits-ui";
+	import Circle from "@lucide/svelte/icons/circle";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -15,7 +15,7 @@
 <RadioGroupPrimitive.Item
 	bind:ref
 	class={cn(
-		'aspect-square size-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
+		"aspect-square size-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
 		className
 	)}
 	{...restProps}

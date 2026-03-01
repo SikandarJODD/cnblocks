@@ -1,21 +1,21 @@
 <script lang="ts">
-	import HeaderThree from '$lib/components/veil/header/header-three.svelte';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { AudioLines, ChevronRight, MessageCircle, Mic2, Plus } from '@lucide/svelte';
+	import HeaderThree from "$lib/components/veil/header/header-three.svelte";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { AudioLines, ChevronRight, MessageCircle, Mic2, Plus } from "@lucide/svelte";
 
 	const prompts = [
-		'How do I integrate Supabase authentication?',
-		'Set up real-time subscriptions with Firebase',
-		'Connect Slack notifications to my app',
-		'Implement Twilio SMS verification',
-		'Add Linear issue tracking integration',
-		'Set up Figma design sync',
-		'Deploy to Vercel with environment variables',
-		'Configure Clerk user management',
-		'Build an AI assistant with Claude',
-		'Create a webhook endpoint for Stripe',
-		'Set up OAuth with multiple providers',
-		'Implement rate limiting for API endpoints'
+		"How do I integrate Supabase authentication?",
+		"Set up real-time subscriptions with Firebase",
+		"Connect Slack notifications to my app",
+		"Implement Twilio SMS verification",
+		"Add Linear issue tracking integration",
+		"Set up Figma design sync",
+		"Deploy to Vercel with environment variables",
+		"Configure Clerk user management",
+		"Build an AI assistant with Claude",
+		"Create a webhook endpoint for Stripe",
+		"Set up OAuth with multiple providers",
+		"Implement rate limiting for API endpoints",
 	];
 </script>
 
@@ -41,7 +41,8 @@
 							Ship faster. Integrate smarter.
 						</h1>
 						<p class="mt-4 text-balance text-muted-foreground">
-							Veil is your all-in-one engine for adding seamless integrations to your app.
+							Veil is your all-in-one engine for adding seamless integrations to your
+							app.
 						</p>
 
 						<Button class="mt-6 pr-1.5" href="#link">
@@ -49,9 +50,14 @@
 							<ChevronRight class="opacity-50" />
 						</Button>
 					</div>
-					<div aria-hidden class="relative mask-y-from-50% max-md:mx-auto max-md:*:scale-90">
+					<div
+						aria-hidden
+						class="relative mask-y-from-50% max-md:mx-auto max-md:*:scale-90"
+					>
 						{#each prompts as prompt}
-							<div class="flex items-center gap-2 px-14 py-2 text-sm text-muted-foreground">
+							<div
+								class="flex items-center gap-2 px-14 py-2 text-sm text-muted-foreground"
+							>
 								<MessageCircle class="size-3.5 opacity-50" />
 								<span class="text-nowrap">{prompt}</span>
 							</div>

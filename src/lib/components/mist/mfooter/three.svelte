@@ -1,39 +1,39 @@
 <script lang="ts">
 	const links = [
 		{
-			group: 'Product',
+			group: "Product",
 			items: [
 				{
-					title: 'Features',
-					href: '/'
+					title: "Features",
+					href: "/",
 				},
 				{
-					title: 'Solution',
-					href: '/'
-				}
-			]
+					title: "Solution",
+					href: "/",
+				},
+			],
 		},
 		{
-			group: 'Company',
+			group: "Company",
 			items: [
 				{
-					title: 'About',
-					href: '/'
+					title: "About",
+					href: "/",
 				},
 				{
-					title: 'Licence',
-					href: '/'
+					title: "Licence",
+					href: "/",
 				},
 				{
-					title: 'Privacy',
-					href: '/'
+					title: "Privacy",
+					href: "/",
 				},
 				{
-					title: 'Cookies',
-					href: '/'
-				}
-			]
-		}
+					title: "Cookies",
+					href: "/",
+				},
+			],
+		},
 	];
 </script>
 

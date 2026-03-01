@@ -1,26 +1,26 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Card from '$lib/components/ui/card/card.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Card from "$lib/components/ui/card/card.svelte";
 
-	import ArrowUp from '@lucide/svelte/icons/arrow-up';
-	import Globe from '@lucide/svelte/icons/globe';
-	import Plus from '@lucide/svelte/icons/plus';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
-	import Play from '@lucide/svelte/icons/play';
-	import Signature from '@lucide/svelte/icons/signature';
-	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
-	import Target from '@lucide/svelte/icons/target';
+	import ArrowUp from "@lucide/svelte/icons/arrow-up";
+	import Globe from "@lucide/svelte/icons/globe";
+	import Plus from "@lucide/svelte/icons/plus";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
+	import Play from "@lucide/svelte/icons/play";
+	import Signature from "@lucide/svelte/icons/signature";
+	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
+	import Target from "@lucide/svelte/icons/target";
 
-	const AIDEN_BLESER = 'https://avatars.githubusercontent.com/u/117548273?v=4';
-	const BHIDE_SVELTE = 'https://avatars.githubusercontent.com/u/93428946?v=4';
-	const RICH_HARRIS = 'https://avatars.githubusercontent.com/u/1162160?v=4';
-	const HUNTER_JOHNSTON = 'https://avatars.githubusercontent.com/u/64506580?v=4';
+	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";
+	const BHIDE_SVELTE = "https://avatars.githubusercontent.com/u/93428946?v=4";
+	const RICH_HARRIS = "https://avatars.githubusercontent.com/u/1162160?v=4";
+	const HUNTER_JOHNSTON = "https://avatars.githubusercontent.com/u/64506580?v=4";
 
 	let avatars = [
-		{ src: BHIDE_SVELTE, alt: 'Bhide Svelte' },
-		{ src: AIDEN_BLESER, alt: 'Aiden Blesser' },
-		{ src: RICH_HARRIS, alt: 'Rich Harris' },
-		{ src: HUNTER_JOHNSTON, alt: 'Hunter Johnston' }
+		{ src: BHIDE_SVELTE, alt: "Bhide Svelte" },
+		{ src: AIDEN_BLESER, alt: "Aiden Blesser" },
+		{ src: RICH_HARRIS, alt: "Rich Harris" },
+		{ src: HUNTER_JOHNSTON, alt: "Hunter Johnston" },
 	];
 </script>
 
@@ -39,7 +39,8 @@
 					<Target class="size-5 text-primary" />
 					<h3 class="mt-5 text-lg font-semibold text-foreground">AI Code Generation</h3>
 					<p class="mt-3 text-balance text-muted-foreground">
-						Our advanced AI models transform natural language into production-ready code.
+						Our advanced AI models transform natural language into production-ready
+						code.
 					</p>
 
 					{@render MettingIllustration()}
@@ -47,18 +48,24 @@
 
 				<Card variant="soft" class="group overflow-hidden px-6 pt-6">
 					<CalendarCheck class="size-5 text-primary" />
-					<h3 class="mt-5 text-lg font-semibold text-foreground">Intelligent Code Review</h3>
+					<h3 class="mt-5 text-lg font-semibold text-foreground">
+						Intelligent Code Review
+					</h3>
 					<p class="mt-3 text-balance text-muted-foreground">
-						Our AI analyzes your code for bugs, security issues, and optimization opportunities.
+						Our AI analyzes your code for bugs, security issues, and optimization
+						opportunities.
 					</p>
 
 					{@render CodeReviewIllustration()}
 				</Card>
 				<Card variant="soft" class="group overflow-hidden px-6 pt-6">
 					<Sparkles class="size-5 text-primary" />
-					<h3 class="mt-5 text-lg font-semibold text-foreground">Contextual AI Assistant</h3>
+					<h3 class="mt-5 text-lg font-semibold text-foreground">
+						Contextual AI Assistant
+					</h3>
 					<p class="mt-3 text-balance text-muted-foreground">
-						A personalized AI companion that understands your codebase and helps solve complex...
+						A personalized AI companion that understands your codebase and helps solve
+						complex...
 					</p>
 
 					<div class="-mx-2 -mt-2 mask-b-from-50 px-2 pt-2">
@@ -78,7 +85,9 @@
 			>
 				PDF
 			</div>
-			<div class="h-10 w-8 rounded-md border bg-gradient-to-b from-zinc-100 to-zinc-200"></div>
+			<div
+				class="h-10 w-8 rounded-md border bg-gradient-to-b from-zinc-100 to-zinc-200"
+			></div>
 		</div>
 		<div class="mb-0.5 text-sm font-semibold">AI Strategy Meeting</div>
 		<div class="mb-4 flex gap-2 text-sm">
@@ -87,7 +96,9 @@
 		<div class="mb-2 flex -space-x-1.5">
 			<div class="flex -space-x-1.5">
 				{#each avatars as avatar, index}
-					<div class="size-7 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5">
+					<div
+						class="size-7 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+					>
 						<img
 							class="aspect-square rounded-full object-cover"
 							src={avatar.src}
@@ -109,7 +120,9 @@
 			class="aspect-video w-4/5 translate-y-4 p-3 transition-transform duration-200 ease-in-out group-hover:-rotate-3"
 		>
 			<div class="mb-3 flex items-center gap-2">
-				<div class="size-6 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5">
+				<div
+					class="size-6 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+				>
 					<img
 						class="aspect-square rounded-full object-cover"
 						src={BHIDE_SVELTE}
@@ -149,7 +162,8 @@
 		<div class="w-fit">
 			<Sparkles class="size-3.5 fill-purple-300 stroke-purple-300" />
 			<p class="mt-2 line-clamp-2 text-sm">
-				How can I optimize my neural network to reduce inference time while maintaining accuracy?
+				How can I optimize my neural network to reduce inference time while maintaining
+				accuracy?
 			</p>
 		</div>
 		<div class="-mx-3 mt-3 -mb-3 space-y-3 rounded-lg bg-foreground/5 p-3">

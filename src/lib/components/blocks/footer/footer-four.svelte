@@ -1,29 +1,29 @@
 <script>
 	const links = [
 		{
-			title: 'Features',
-			href: '#'
+			title: "Features",
+			href: "#",
 		},
 		{
-			title: 'Solution',
-			href: '#'
+			title: "Solution",
+			href: "#",
 		},
 		{
-			title: 'Customers',
-			href: '#'
+			title: "Customers",
+			href: "#",
 		},
 		{
-			title: 'Pricing',
-			href: '#'
+			title: "Pricing",
+			href: "#",
 		},
 		{
-			title: 'Help',
-			href: '#'
+			title: "Help",
+			href: "#",
 		},
 		{
-			title: 'About',
-			href: '#'
-		}
+			title: "About",
+			href: "#",
+		},
 	];
 </script>
 
@@ -35,7 +35,10 @@
 			>
 			<div class="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
 				{#each links as link, index}
-					<a href={link.href} class="block text-muted-foreground duration-150 hover:text-primary">
+					<a
+						href={link.href}
+						class="block text-muted-foreground duration-150 hover:text-primary"
+					>
 						<span>{link.title}</span>
 					</a>
 				{/each}

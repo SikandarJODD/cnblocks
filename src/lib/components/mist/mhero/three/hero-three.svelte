@@ -1,6 +1,6 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Header from './header.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Header from "./header.svelte";
 </script>
 
 <Header />
@@ -73,7 +73,12 @@
 					<div
 						class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg shadow-black/10 ring-black/10"
 					>
-						<img src="/mist/tailark-2.png" alt="app screen" width="2880" height="1842" />
+						<img
+							src="/mist/tailark-2.png"
+							alt="app screen"
+							width="2880"
+							height="1842"
+						/>
 					</div>
 				</div>
 			</div>

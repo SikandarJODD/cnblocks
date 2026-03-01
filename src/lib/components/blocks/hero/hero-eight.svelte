@@ -1,9 +1,9 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import Rocket from '@lucide/svelte/icons/rocket';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import Rocket from "@lucide/svelte/icons/rocket";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability
@@ -11,10 +11,10 @@
 	// Hero Header Component
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
 </script>
@@ -31,7 +31,9 @@
 						href="/"
 						class="mx-auto flex w-fit items-center gap-2 rounded-(--radius) border p-1 pr-3"
 					>
-						<span class="rounded-[calc(var(--radius)-0.25rem)] bg-muted px-2 py-1 text-xs">New</span
+						<span
+							class="rounded-[calc(var(--radius)-0.25rem)] bg-muted px-2 py-1 text-xs"
+							>New</span
 						>
 						<span class="text-sm">Introduction Tailus UI Html</span>
 						<span class="block h-4 w-px bg-(--color-border)"></span>
@@ -45,12 +47,12 @@
 						Modern Software testing reimagined
 					</h1>
 					<p class="mx-auto mt-8 hidden max-w-2xl text-lg text-wrap sm:block">
-						Tailwindcss highly customizable components for building modern websites and applications
-						that look and feel the way you mean it.
+						Tailwindcss highly customizable components for building modern websites and
+						applications that look and feel the way you mean it.
 					</p>
 					<p class="mx-auto mt-6 max-w-2xl text-wrap sm:hidden">
-						Highly customizable components for building modern websites and applications, with your
-						personal spark.
+						Highly customizable components for building modern websites and
+						applications, with your personal spark.
 					</p>
 
 					<div class="mt-8">
@@ -86,7 +88,9 @@
 	</section>
 	<section class="relative z-10 bg-background pb-16">
 		<div class="m-auto max-w-5xl px-6">
-			<h2 class="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
+			<h2 class="text-center text-lg font-medium">
+				Your favorite companies are our partners.
+			</h2>
 			<div
 				class="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12"
 			>
@@ -178,7 +182,9 @@
 			class="fixed z-20 w-full border-b border-dashed bg-white backdrop-blur md:relative dark:bg-zinc-950/50 lg:dark:bg-transparent"
 		>
 			<div class="m-auto max-w-5xl px-6">
-				<div class="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+				<div
+					class="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4"
+				>
 					<div class="flex w-full justify-between lg:w-auto">
 						<a href="/" aria-label="home" class="flex items-center space-x-2">
 							<svg
@@ -216,16 +222,19 @@
 
 						<button
 							onclick={() => (menuState = !menuState)}
-							aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+							aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 							class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 						>
 							<Menu
-								class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+								class={[
+									"m-auto size-6 duration-200",
+									menuState && "scale-0 rotate-180 opacity-0",
+								]}
 							/>
 							<X
 								class={[
-									'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-									menuState && 'scale-100 rotate-0 opacity-100'
+									"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+									menuState && "scale-100 rotate-0 opacity-100",
 								]}
 							/>
 						</button>
@@ -233,12 +242,14 @@
 
 					<div
 						class={[
-							'mb-6  w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-							menuState ? 'block lg:flex' : 'hidden'
+							"mb-6  w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+							menuState ? "block lg:flex" : "hidden",
 						]}
 					>
 						<div class="lg:pr-4">
-							<ul class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
+							<ul
+								class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm"
+							>
 								{#each menuItems as item, index}
 									<li>
 										<a

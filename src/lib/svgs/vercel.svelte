@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { SVGAttributes } from 'svelte/elements';
+	import type { SVGAttributes } from "svelte/elements";
 
-	type VercelVariant = 'icon' | 'full';
+	type VercelVariant = "icon" | "full";
 
-	let { variant = 'icon', ...props }: { variant?: VercelVariant } & SVGAttributes<SVGSVGElement> =
+	let { variant = "icon", ...props }: { variant?: VercelVariant } & SVGAttributes<SVGSVGElement> =
 		$props();
 </script>
 
-{#if variant === 'full'}
+{#if variant === "full"}
 	<svg
 		aria-label="Vercel logotype"
 		height="1em"

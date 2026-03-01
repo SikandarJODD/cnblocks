@@ -1,7 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import 'tw-animate-css';
-@import './themes.css';
+@import "tw-animate-css";
+@import "./themes.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -146,7 +146,7 @@
 	--color-5: var(--color-5);
 
 	/* Font */
-	--font-sans: 'Geist', sans-serif;
+	--font-sans: "Geist", sans-serif;
 	/* --font-sans: Inter, sans-serif; */
 	--font-display: Sora, sans-serif;
 
@@ -226,25 +226,25 @@
 }
 
 @property --top-mask-height {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 0px;
 }
 
 @property --bottom-mask-height {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 64px;
 }
 
 @property --left-mask-width {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 0px;
 }
 
 @property --right-mask-width {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 64px;
 }

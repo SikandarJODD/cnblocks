@@ -1,9 +1,9 @@
 <script lang="ts">
 	// Scroll below for the component code
-	import IntegrationCardv5 from './card/integration-cardv5.svelte';
-	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from '../logos/logos';
+	import IntegrationCardv5 from "./card/integration-cardv5.svelte";
+	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
 <section>
@@ -23,13 +23,17 @@
 				<div
 					class="absolute inset-0 flex aspect-square items-center justify-center rounded-full border-t bg-linear-to-b from-muted-foreground/15 to-transparent to-25%"
 				>
-					<IntegrationCardv5 class="absolute top-1/4 left-0 -translate-x-1/6 -translate-y-1/4">
+					<IntegrationCardv5
+						class="absolute top-1/4 left-0 -translate-x-1/6 -translate-y-1/4"
+					>
 						<Gemini />
 					</IntegrationCardv5>
 					<IntegrationCardv5 class="absolute top-0 -translate-y-1/2">
 						<Replit />
 					</IntegrationCardv5>
-					<IntegrationCardv5 class="absolute top-1/4 right-0 translate-x-1/6 -translate-y-1/4">
+					<IntegrationCardv5
+						class="absolute top-1/4 right-0 translate-x-1/6 -translate-y-1/4"
+					>
 						<MagicUI />
 					</IntegrationCardv5>
 				</div>
@@ -39,14 +43,20 @@
 					<IntegrationCardv5 class="absolute top-0 -translate-y-1/2">
 						<VSCodium />
 					</IntegrationCardv5>
-					<IntegrationCardv5 class="absolute top-1/4 left-0 -translate-x-1/4 -translate-y-1/4">
+					<IntegrationCardv5
+						class="absolute top-1/4 left-0 -translate-x-1/4 -translate-y-1/4"
+					>
 						<MediaWiki />
 					</IntegrationCardv5>
-					<IntegrationCardv5 class="absolute top-1/4 right-0 translate-x-1/4 -translate-y-1/4">
+					<IntegrationCardv5
+						class="absolute top-1/4 right-0 translate-x-1/4 -translate-y-1/4"
+					>
 						<GooglePaLM />
 					</IntegrationCardv5>
 				</div>
-				<div class="absolute inset-x-0 bottom-0 mx-auto my-2 flex w-fit justify-center gap-2">
+				<div
+					class="absolute inset-x-0 bottom-0 mx-auto my-2 flex w-fit justify-center gap-2"
+				>
 					<div class="relative z-20 rounded-full border bg-muted p-1">
 						<IntegrationCardv5
 							class="shadow-black-950/10 size-16 border-black/20 shadow-xl dark:border-white/25 dark:bg-background dark:shadow-white/15"

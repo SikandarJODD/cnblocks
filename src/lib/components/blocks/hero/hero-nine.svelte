@@ -1,20 +1,20 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability
 
 	// Hero Header Component
 
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import { scrollY } from 'svelte/reactivity/window';
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import { scrollY } from "svelte/reactivity/window";
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
 	let isScrolled = $derived.by(() => {
@@ -29,7 +29,10 @@
 	<!-- Scroll below to see the snippet code  -->
 	{@render header()}
 	<main>
-		<div aria-hidden class="absolute inset-0 isolate z-2 hidden opacity-50 contain-strict lg:block">
+		<div
+			aria-hidden
+			class="absolute inset-0 isolate z-2 hidden opacity-50 contain-strict lg:block"
+		>
 			<div
 				class="absolute top-0 left-0 h-320 w-140 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]"
 			/>
@@ -48,8 +51,8 @@
 						Modern Software testing reimagined
 					</h1>
 					<p class="mx-auto my-8 max-w-2xl text-xl">
-						Officiis laudantium excepturi ducimus rerum dignissimos, and tempora nam vitae,
-						excepturi ducimus iste provident dolores.
+						Officiis laudantium excepturi ducimus rerum dignissimos, and tempora nam
+						vitae, excepturi ducimus iste provident dolores.
 					</p>
 
 					<Button href="#" size="lg">
@@ -75,7 +78,10 @@
 								aria-hidden
 								class="absolute -inset-16 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] [--color-border:var(--color-zinc-400)] sm:-inset-32 dark:[--color-border:color-mix(in_oklab,var(--color-white)_20%,transparent)]"
 							/>
-							<div aria-hidden class="absolute inset-0 z-11 bg-gradient-to-l from-background" />
+							<div
+								aria-hidden
+								class="absolute inset-0 z-11 bg-gradient-to-l from-background"
+							/>
 							<div
 								aria-hidden
 								class="absolute inset-0 z-2 size-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,transparent_40%,var(--color-background)_100%)]"
@@ -106,7 +112,9 @@
 		</section>
 		<section class="relative z-10 bg-background py-16">
 			<div class="m-auto max-w-5xl px-6">
-				<h2 class="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
+				<h2 class="text-center text-lg font-medium">
+					Your favorite companies are our partners.
+				</h2>
 				<div
 					class="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12"
 				>
@@ -199,7 +207,9 @@
 			class="fixed z-20 w-full border-b border-dashed bg-white backdrop-blur md:relative dark:bg-zinc-950/50 lg:dark:bg-transparent"
 		>
 			<div class="m-auto max-w-5xl px-6">
-				<div class="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+				<div
+					class="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4"
+				>
 					<div class="flex w-full justify-between lg:w-auto">
 						<a href="/" aria-label="home" class="flex items-center space-x-2">
 							<svg
@@ -237,16 +247,19 @@
 
 						<button
 							onclick={() => (menuState = !menuState)}
-							aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+							aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 							class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 						>
 							<Menu
-								class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+								class={[
+									"m-auto size-6 duration-200",
+									menuState && "scale-0 rotate-180 opacity-0",
+								]}
 							/>
 							<X
 								class={[
-									'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-									menuState && 'scale-100 rotate-0 opacity-100'
+									"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+									menuState && "scale-100 rotate-0 opacity-100",
 								]}
 							/>
 						</button>
@@ -254,12 +267,14 @@
 
 					<div
 						class={[
-							'mb-6  w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-							menuState ? 'block lg:flex' : 'hidden'
+							"mb-6  w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+							menuState ? "block lg:flex" : "hidden",
 						]}
 					>
 						<div class="lg:pr-4">
-							<ul class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
+							<ul
+								class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm"
+							>
 								{#each menuItems as item, index}
 									<li>
 										<a

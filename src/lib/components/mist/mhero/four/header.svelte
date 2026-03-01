@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { scrollY } from 'svelte/reactivity/window';
+	import { cn } from "$lib/utils";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { scrollY } from "svelte/reactivity/window";
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
 	let isScrolled = $derived.by(() => {
@@ -22,10 +22,10 @@
 
 <header class="[--color-primary:theme(colors.indigo.500)]">
 	<nav
-		data-state={menuState && 'active'}
+		data-state={menuState && "active"}
 		class={cn(
-			'fixed z-20 w-full transition-all duration-300',
-			isScrolled && 'border-b border-black/5 bg-background/75 backdrop-blur-lg'
+			"fixed z-20 w-full transition-all duration-300",
+			isScrolled && "border-b border-black/5 bg-background/75 backdrop-blur-lg"
 		)}
 	>
 		<div class="mx-auto max-w-5xl px-6">
@@ -67,7 +67,7 @@
 
 					<button
 						onclick={() => (menuState = !menuState)}
-						aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+						aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 						class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 					>
 						<Menu
@@ -110,11 +110,13 @@
 							{/each}
 						</ul>
 					</div>
-					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+					<div
+						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+					>
 						<Button
 							variant="ghost"
 							size="sm"
-							class={cn(isScrolled && 'lg:hidden', 'rounded-full')}
+							class={cn(isScrolled && "lg:hidden", "rounded-full")}
 							href="#"
 						>
 							Login
@@ -123,11 +125,15 @@
 							href="#"
 							size="sm"
 							variant="mdefault"
-							class={cn(isScrolled && 'lg:hidden', 'rounded-full')}
+							class={cn(isScrolled && "lg:hidden", "rounded-full")}
 						>
 							Sign Up
 						</Button>
-						<Button size="sm" class={cn(isScrolled ? 'lg:inline-flex' : 'hidden')} href="#">
+						<Button
+							size="sm"
+							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+							href="#"
+						>
 							<span>Get Started</span>
 						</Button>
 					</div>

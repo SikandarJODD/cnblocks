@@ -1,25 +1,25 @@
 <script>
 	const members = [
 		{
-			name: 'Méschac Irung',
-			role: 'Creator',
-			avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4'
+			name: "Méschac Irung",
+			role: "Creator",
+			avatar: "https://avatars.githubusercontent.com/u/47919550?v=4",
 		},
 		{
-			name: 'Théo Balick',
-			role: 'Frontend Dev',
-			avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4'
+			name: "Théo Balick",
+			role: "Frontend Dev",
+			avatar: "https://avatars.githubusercontent.com/u/68236786?v=4",
 		},
 		{
-			name: 'Glodie Lukose',
-			role: 'Frontend Dev',
-			avatar: 'https://avatars.githubusercontent.com/u/99137927?v=4'
+			name: "Glodie Lukose",
+			role: "Frontend Dev",
+			avatar: "https://avatars.githubusercontent.com/u/99137927?v=4",
 		},
 		{
-			name: 'Bernard Ngandu',
-			role: 'Backend Dev',
-			avatar: 'https://avatars.githubusercontent.com/u/31113941?v=4'
-		}
+			name: "Bernard Ngandu",
+			role: "Backend Dev",
+			avatar: "https://avatars.githubusercontent.com/u/31113941?v=4",
+		},
 	];
 </script>
 
@@ -32,7 +32,9 @@
 			<div class="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
 				{#each members as member, index}
 					<div>
-						<div class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5">
+						<div
+							class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+						>
 							<img
 								class="aspect-square rounded-full object-cover"
 								src={member.avatar}
@@ -54,7 +56,9 @@
 			<div data-rounded="full" class="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
 				{#each members as member, index}
 					<div>
-						<div class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5">
+						<div
+							class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+						>
 							<img
 								class="aspect-square rounded-full object-cover"
 								src={member.avatar}
@@ -76,7 +80,9 @@
 			<div data-rounded="full" class="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
 				{#each members as member, index}
 					<div>
-						<div class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5">
+						<div
+							class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+						>
 							<img
 								class="aspect-square rounded-full object-cover"
 								src={member.avatar}

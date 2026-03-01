@@ -1,22 +1,22 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 	export let width = 40;
 	export let height = 40;
 	export let x = -1;
 	export let y = -1;
-	export let strokeDashArray: string = '';
+	export let strokeDashArray: string = "";
 	export let squares: Array<[x: number, y: number]> = [[0, 0]];
-	let className: any = '';
+	let className: any = "";
 	export { className as class };
 	let id = crypto.randomUUID().toString().slice(0, 8);
-	export let fillColor = 'rgb(156 163 175 / 0.3)';
+	export let fillColor = "rgb(156 163 175 / 0.3)";
 	// : rgb(156 163 175 / 0.3)
 	export let strokeWidth = 1;
 </script>
 
 <svg
 	aria-hidden="true"
-	class={cn('pointer-events-none absolute inset-0 h-full w-full', className)}
+	class={cn("pointer-events-none absolute inset-0 h-full w-full", className)}
 	{...$$restProps}
 	stroke={fillColor}
 	stroke-width={strokeWidth}

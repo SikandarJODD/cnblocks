@@ -1,21 +1,21 @@
 <script lang="ts">
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import type { ComponentProps } from 'svelte';
-	import { useAddDropdownCopyInit } from './add.svelte.js';
-	import { mergeProps } from 'bits-ui';
-	import { cn } from '$lib/utils';
+	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import type { ComponentProps } from "svelte";
+	import { useAddDropdownCopyInit } from "./add.svelte.js";
+	import { mergeProps } from "bits-ui";
+	import { cn } from "$lib/utils";
 
 	let {
 		class: className,
 		...rest
-	}: Omit<ComponentProps<typeof DropdownMenu.Item>, 'onSelect'> = $props();
+	}: Omit<ComponentProps<typeof DropdownMenu.Item>, "onSelect"> = $props();
 
 	const dropdownCopyInitState = useAddDropdownCopyInit();
 
 	const mergedProps = $derived(mergeProps(rest, dropdownCopyInitState.props));
 </script>
 
-<DropdownMenu.Item class={cn('flex flex-col place-items-start! gap-1', className)} {...mergedProps}>
+<DropdownMenu.Item class={cn("flex flex-col place-items-start! gap-1", className)} {...mergedProps}>
 	<span class="text-xs">
 		{dropdownCopyInitState.root.initCommand}
 	</span>

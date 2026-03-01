@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 
 	type Props = {
 		class?: string;
@@ -11,7 +11,7 @@
 </script>
 
 <svg
-	class={cn('size-4', className)}
+	class={cn("size-4", className)}
 	viewBox="0 0 32 32"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"

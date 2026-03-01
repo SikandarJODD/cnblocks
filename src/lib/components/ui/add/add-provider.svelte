@@ -1,7 +1,7 @@
 <script lang="ts" generics="RegistryOptions extends readonly string[]">
-	import { useAddProvider, type Agent } from './add.svelte.js';
-	import { box } from 'svelte-toolbelt';
-	import type { Snippet } from 'svelte';
+	import { useAddProvider, type Agent } from "./add.svelte.js";
+	import { box } from "svelte-toolbelt";
+	import type { Snippet } from "svelte";
 
 	type Props<RegistryOptions extends readonly string[]> = {
 		agent: Agent;
@@ -14,7 +14,7 @@
 		agent = $bindable(),
 		registry = $bindable(),
 		registryOptions,
-		children
+		children,
 	}: Props<RegistryOptions> = $props();
 
 	useAddProvider({
@@ -26,7 +26,7 @@
 		agent: box.with(
 			() => agent,
 			(v) => (agent = v)
-		)
+		),
 	});
 </script>
 

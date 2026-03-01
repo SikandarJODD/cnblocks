@@ -1,24 +1,24 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import * as Command from '$lib/components/ui/command/index';
-	import { search_comp } from '$lib/config/search_comp';
-	import { cn } from '$lib/utils';
-	import Circle from '@lucide/svelte/icons/circle';
-	import { onMount } from 'svelte';
+	import { goto } from "$app/navigation";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import * as Command from "$lib/components/ui/command/index";
+	import { search_comp } from "$lib/config/search_comp";
+	import { cn } from "$lib/utils";
+	import Circle from "@lucide/svelte/icons/circle";
+	import { onMount } from "svelte";
 	let open = $state(false);
 
 	onMount(() => {
 		function handleKeydown(e: KeyboardEvent) {
-			if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+			if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
 				e.preventDefault();
 				open = true;
 			}
 		}
-		document.addEventListener('keydown', handleKeydown);
+		document.addEventListener("keydown", handleKeydown);
 
 		return () => {
-			document.removeEventListener('keydown', handleKeydown);
+			document.removeEventListener("keydown", handleKeydown);
 		};
 	});
 
@@ -30,7 +30,7 @@
 
 <Button
 	variant="outline"
-	class={cn('rounded-full text-muted-foreground md:w-40 lg:w-40')}
+	class={cn("rounded-full text-muted-foreground md:w-40 lg:w-40")}
 	onclick={() => (open = true)}
 	size="sm"
 >

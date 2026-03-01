@@ -1,9 +1,9 @@
-import { UseClipboard } from '$lib/hooks/use-clipboard.svelte';
-import { resolveCommand } from 'package-manager-detector/commands';
-import { Context } from 'runed';
-import type { ReadableBoxedValues, WritableBoxedValues } from 'svelte-toolbelt';
+import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+import { resolveCommand } from "package-manager-detector/commands";
+import { Context } from "runed";
+import type { ReadableBoxedValues, WritableBoxedValues } from "svelte-toolbelt";
 
-export const AGENTS = ['pnpm', 'npm', 'yarn', 'bun'] as const;
+export const AGENTS = ["pnpm", "npm", "yarn", "bun"] as const;
 export type Agent = (typeof AGENTS)[number];
 
 export type ProviderProps<RegistryOptions extends readonly string[]> = WritableBoxedValues<{
@@ -18,7 +18,7 @@ class AddProviderState<RegistryOptions extends readonly string[]> {
 	constructor(readonly opts: ProviderProps<RegistryOptions>) {}
 }
 
-const ProviderCtx = new Context<AddProviderState<readonly string[]>>('add-provider-ctx');
+const ProviderCtx = new Context<AddProviderState<readonly string[]>>("add-provider-ctx");
 
 export function useAddProvider<RegistryOptions extends readonly string[]>(
 	opts: ProviderProps<RegistryOptions>
@@ -49,43 +49,43 @@ class AddRootState {
 
 	addCommand: string = $derived.by(() => {
 		if (this.isUrlInstall) {
-			const command = resolveCommand(this.agent, 'execute', [
-				'shadcn-svelte@latest',
-				'add',
-				this.opts.item.current
+			const command = resolveCommand(this.agent, "execute", [
+				"shadcn-svelte@latest",
+				"add",
+				this.opts.item.current,
 			]);
 
 			return command
-				? `${command.command} ${command.args.join(' ')}`
+				? `${command.command} ${command.args.join(" ")}`
 				: `npx shadcn-svelte@latest add ${this.opts.item.current}`;
 		}
 
-		const command = resolveCommand(this.agent, 'execute', [
-			'jsrepo',
-			'add',
+		const command = resolveCommand(this.agent, "execute", [
+			"jsrepo",
+			"add",
 			this.opts.withoutRegistry.current
 				? this.opts.item.current
-				: `${this.registry}/${this.opts.item.current}`
+				: `${this.registry}/${this.opts.item.current}`,
 		]);
 
 		return command
-			? `${command.command} ${command.args.join(' ')}`
+			? `${command.command} ${command.args.join(" ")}`
 			: `npx jsrepo add ${this.opts.withoutRegistry.current ? this.opts.item.current : `${this.registry}/${this.opts.item.current}`}`;
 	});
 
 	initCommand: string = $derived.by(() => {
 		if (this.isUrlInstall) {
-			const command = resolveCommand(this.agent, 'execute', ['shadcn-svelte@latest', 'init']);
+			const command = resolveCommand(this.agent, "execute", ["shadcn-svelte@latest", "init"]);
 
 			return command
-				? `${command.command} ${command.args.join(' ')}`
-				: 'npx shadcn-svelte@latest init';
+				? `${command.command} ${command.args.join(" ")}`
+				: "npx shadcn-svelte@latest init";
 		}
 
-		const command = resolveCommand(this.agent, 'execute', ['jsrepo', 'init', this.registry]);
+		const command = resolveCommand(this.agent, "execute", ["jsrepo", "init", this.registry]);
 
 		return command
-			? `${command.command} ${command.args.join(' ')}`
+			? `${command.command} ${command.args.join(" ")}`
 			: `npx jsrepo init ${this.registry}`;
 	});
 
@@ -106,13 +106,13 @@ class AddRootState {
 	}
 }
 
-const AddCtx = new Context<AddRootState>('add-ctx');
+const AddCtx = new Context<AddRootState>("add-ctx");
 
 class AddButtonState {
 	constructor(readonly root: AddRootState) {}
 
 	props = $derived.by(() => ({
-		onclick: () => this.root.clipboard.copy(this.root.addCommand)
+		onclick: () => this.root.clipboard.copy(this.root.addCommand),
 	}));
 }
 
@@ -130,7 +130,7 @@ class AddDropdownAgentOptionState {
 		onSelect: () => {
 			this.root.agent = this.opts.agent.current;
 			this.root.clipboard.copy(this.root.addCommand);
-		}
+		},
 	}));
 }
 
@@ -148,7 +148,7 @@ class AddDropdownRegistryOptionState {
 		onSelect: () => {
 			this.root.registry = this.opts.registry.current;
 			this.root.clipboard.copy(this.root.addCommand);
-		}
+		},
 	}));
 }
 
@@ -156,7 +156,7 @@ class AddDropdownCopyInitState {
 	constructor(readonly root: AddRootState) {}
 
 	props = $derived.by(() => ({
-		onSelect: () => this.root.clipboard.copy(this.root.initCommand)
+		onSelect: () => this.root.clipboard.copy(this.root.initCommand),
 	}));
 }
 

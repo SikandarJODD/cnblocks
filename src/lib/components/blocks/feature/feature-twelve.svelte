@@ -1,32 +1,34 @@
 <script lang="ts">
-	import DatabaseZap from '@lucide/svelte/icons/database-zap';
-	import Link from '@lucide/svelte/icons/link';
-	import Plug from '@lucide/svelte/icons/plug';
-	import Shield from '@lucide/svelte/icons/shield';
+	import DatabaseZap from "@lucide/svelte/icons/database-zap";
+	import Link from "@lucide/svelte/icons/link";
+	import Plug from "@lucide/svelte/icons/plug";
+	import Shield from "@lucide/svelte/icons/shield";
 
 	const features = [
 		{
-			name: 'Use Database with your stack',
-			description: 'We offer client and server libraries in everything from React and Ruby to iOS.',
-			icon: DatabaseZap
-		},
-		{
-			name: 'Try plug & play options',
-			description: 'Customize and deploy data infrastructure directly from the Database Dashboard.',
-			icon: Plug
-		},
-		{
-			name: 'Explore pre-built integrations',
+			name: "Use Database with your stack",
 			description:
-				'Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.',
-			icon: Link
+				"We offer client and server libraries in everything from React and Ruby to iOS.",
+			icon: DatabaseZap,
 		},
 		{
-			name: 'Security & privacy',
+			name: "Try plug & play options",
 			description:
-				'Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.',
-			icon: Shield
-		}
+				"Customize and deploy data infrastructure directly from the Database Dashboard.",
+			icon: Plug,
+		},
+		{
+			name: "Explore pre-built integrations",
+			description:
+				"Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.",
+			icon: Link,
+		},
+		{
+			name: "Security & privacy",
+			description:
+				"Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.",
+			icon: Shield,
+		},
 	];
 </script>
 

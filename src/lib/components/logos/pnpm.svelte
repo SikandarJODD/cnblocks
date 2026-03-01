@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 
 	type Props = {
 		class?: string;
@@ -13,7 +13,7 @@
 <!-- Dark mode -->
 <svg
 	{...restProps}
-	class={cn('hidden dark:inline', className)}
+	class={cn("hidden dark:inline", className)}
 	viewBox="76.58987244897958 44 164.00775510204068 164"
 	preserveAspectRatio="xMidYMid meet"
 	xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@
 <!-- Light mode -->
 <svg
 	{...restProps}
-	class={cn('inline dark:hidden', className)}
+	class={cn("inline dark:hidden", className)}
 	viewBox="76.58987244897958 44 164.00775510204068 164"
 	preserveAspectRatio="xMidYMid meet"
 	xmlns="http://www.w3.org/2000/svg"

@@ -1,9 +1,9 @@
 <script lang="ts">
 	// Scroll below for the IntegrationCardv4 component code
-	import IntegrationCardv4 from './card/integration-cardv4.svelte';
-	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from '../logos/logos';
+	import IntegrationCardv4 from "./card/integration-cardv4.svelte";
+	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
 <section>

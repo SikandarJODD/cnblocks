@@ -1,17 +1,17 @@
 <script lang="ts">
 	const stats = [
 		{
-			name: 'Bandwidth increase',
-			value: '+162%'
+			name: "Bandwidth increase",
+			value: "+162%",
 		},
 		{
-			name: 'Better storage efficiency',
-			value: '2-3x'
+			name: "Better storage efficiency",
+			value: "2-3x",
 		},
 		{
-			name: 'Rows ingested / second',
-			value: 'Up to 9M'
-		}
+			name: "Rows ingested / second",
+			value: "Up to 9M",
+		},
 	];
 </script>
 
@@ -33,9 +33,9 @@
 		Architected for speed and reliability
 	</h2>
 	<p class="mt-6 max-w-3xl text-lg leading-7 text-gray-600 dark:text-gray-400">
-		Database&rsquo; innovative architecture avoids the central bottlenecks of traditional systems,
-		enhancing system reliability. This design ensures high productivity and security, minimizing the
-		risk of service disruptions and outages.
+		Database&rsquo; innovative architecture avoids the central bottlenecks of traditional
+		systems, enhancing system reliability. This design ensures high productivity and security,
+		minimizing the risk of service disruptions and outages.
 	</p>
 	<dl
 		class="mt-12 grid grid-cols-1 gap-y-8 md:grid-cols-3 md:border-y md:border-gray-200 md:py-14 dark:border-gray-800"

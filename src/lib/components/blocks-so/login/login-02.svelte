@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { Separator } from '$lib/components/ui/separator';
-	import GoogleIcon from './google-icon.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { Separator } from "$lib/components/ui/separator";
+	import GoogleIcon from "./google-icon.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center">
 	<div class="flex flex-1 flex-col justify-center px-4 py-10 lg:px-6">
 		<div class="sm:mx-auto sm:w-full sm:max-w-sm">
-			<h2 class="text-center text-xl font-semibold text-foreground">Log in or create account</h2>
+			<h2 class="text-center text-xl font-semibold text-foreground">
+				Log in or create account
+			</h2>
 			<form action="#" method="post" class="mt-6 space-y-4">
 				<div>
 					<Label
@@ -65,9 +67,9 @@
 			</Button>
 
 			<p class="mt-4 text-xs text-muted-foreground dark:text-muted-foreground">
-				By signing in, you agree to our{' '}
-				<a href="#" class="underline underline-offset-4"> terms of service </a>{' '}
-				and{' '}
+				By signing in, you agree to our{" "}
+				<a href="#" class="underline underline-offset-4"> terms of service </a>{" "}
+				and{" "}
 				<a href="#" class="underline underline-offset-4"> privacy policy </a>
 				.
 			</p>

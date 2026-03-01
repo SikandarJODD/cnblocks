@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Card } from '$lib/components/ui/card';
-	import FeatureTable from './feature-table.svelte';
+	import { Card } from "$lib/components/ui/card";
+	import FeatureTable from "./feature-table.svelte";
 </script>
 
 <!-- Card Variant : soft  -->
@@ -12,8 +12,9 @@
 			<div>
 				<h2 class="text-4xl font-semibold text-foreground">Effortless Task Management</h2>
 				<p class="mt-4 mb-12 text-lg text-balance text-muted-foreground">
-					Automate your tasks and workflows by connecting your favorite tools like Notion, Todoist,
-					and more. AI-powered scheduling helps you stay on track and adapt to changing priorities.
+					Automate your tasks and workflows by connecting your favorite tools like Notion,
+					Todoist, and more. AI-powered scheduling helps you stay on track and adapt to
+					changing priorities.
 				</p>
 				<div class="rounded-3xl bg-foreground/5 p-6">
 					<FeatureTable />
@@ -48,8 +49,8 @@
 				class="relative mt-12 max-w-xl pl-6 before:absolute before:inset-y-0 before:left-0 before:w-1 before:rounded-full before:bg-primary"
 			>
 				<p class="text-lg text-foreground">
-					Wow, auto-generated pages are the kind of thing that you don't even know you need until
-					you see it. It's like an AI-native CRM.
+					Wow, auto-generated pages are the kind of thing that you don't even know you
+					need until you see it. It's like an AI-native CRM.
 				</p>
 				<footer class="mt-4 flex items-center gap-2">
 					<cite>Méschac Irung</cite>

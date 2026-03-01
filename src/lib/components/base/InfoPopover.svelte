@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { scale } from 'svelte/transition';
-	import { onMount, tick } from 'svelte';
+	import { scale } from "svelte/transition";
+	import { onMount, tick } from "svelte";
 
 	let { description }: { description: string } = $props();
 
@@ -8,7 +8,7 @@
 	let popoverRef: HTMLDivElement | undefined = $state();
 	let triggerRef: HTMLButtonElement | undefined = $state();
 	let coords = $state({ top: 0, left: 0 });
-	let transform = $state('translate(-50%, -100%)');
+	let transform = $state("translate(-50%, -100%)");
 
 	function toggle() {
 		isOpen = !isOpen;
@@ -39,11 +39,11 @@
 		const spaceBelow = window.innerHeight - (triggerRect.bottom + gap + padding);
 
 		let top = triggerRect.top - gap;
-		let trans = 'translate(-50%, -100%)';
+		let trans = "translate(-50%, -100%)";
 
 		if (spaceAbove < popoverRect.height && spaceBelow > spaceAbove) {
 			top = triggerRect.bottom + gap;
-			trans = 'translate(-50%, 0)';
+			trans = "translate(-50%, 0)";
 		}
 
 		coords.top = top;
@@ -65,19 +65,19 @@
 	$effect(() => {
 		if (isOpen) {
 			updatePosition();
-			window.addEventListener('scroll', updatePosition, true);
-			window.addEventListener('resize', updatePosition);
+			window.addEventListener("scroll", updatePosition, true);
+			window.addEventListener("resize", updatePosition);
 			return () => {
-				window.removeEventListener('scroll', updatePosition, true);
-				window.removeEventListener('resize', updatePosition);
+				window.removeEventListener("scroll", updatePosition, true);
+				window.removeEventListener("resize", updatePosition);
 			};
 		}
 	});
 
 	onMount(() => {
-		document.addEventListener('click', handleClickOutside);
+		document.addEventListener("click", handleClickOutside);
 		return () => {
-			document.removeEventListener('click', handleClickOutside);
+			document.removeEventListener("click", handleClickOutside);
 		};
 	});
 </script>

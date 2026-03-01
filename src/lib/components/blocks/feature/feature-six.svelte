@@ -1,8 +1,8 @@
 <script>
-	import Cpu from '@lucide/svelte/icons/cpu';
-	import Lock from '@lucide/svelte/icons/lock';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
-	import Zap from '@lucide/svelte/icons/zap';
+	import Cpu from "@lucide/svelte/icons/cpu";
+	import Lock from "@lucide/svelte/icons/lock";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
+	import Zap from "@lucide/svelte/icons/zap";
 </script>
 
 <section class="py-16 md:py-32">
@@ -16,7 +16,9 @@
 		</div>
 		<div class="relative rounded-3xl p-3 md:-mx-8 lg:col-span-3">
 			<div class="relative aspect-88/36">
-				<div class="absolute inset-0 z-1 bg-linear-to-t from-background to-transparent"></div>
+				<div
+					class="absolute inset-0 z-1 bg-linear-to-t from-background to-transparent"
+				></div>
 				<img
 					src="/mail-upper.png"
 					class="absolute inset-0 z-10"

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import { type Icon } from '@lucide/svelte';
-	import Calendar from '@lucide/svelte/icons/calendar';
-	import MapIcon from '@lucide/svelte/icons/map';
+	import { cn } from "$lib/utils";
+	import { type Icon } from "@lucide/svelte";
+	import Calendar from "@lucide/svelte/icons/calendar";
+	import MapIcon from "@lucide/svelte/icons/map";
 
-	import FeatureCard from './feature-card.svelte';
-	import * as Card from '$lib/components/ui/card/index.js';
+	import FeatureCard from "./feature-card.svelte";
+	import * as Card from "$lib/components/ui/card/index.js";
 
 	interface CircleConfig {
-		pattern: 'none' | 'border' | 'primary' | 'blue';
+		pattern: "none" | "border" | "primary" | "blue";
 	}
 
 	interface CircularUIProps {
@@ -40,8 +40,8 @@
 				<Card.Header class="pb-3">
 					{@render cardHeading({
 						icon: MapIcon,
-						title: 'Real time location tracking',
-						description: 'Advanced tracking system, Instantly locate all your assets.'
+						title: "Real time location tracking",
+						description: "Advanced tracking system, Instantly locate all your assets.",
 					})}
 				</Card.Header>
 
@@ -51,11 +51,11 @@
 					></div>
 					<div class="aspect-76/59 p-1 px-6">
 						{@render dualModeImg({
-							darkSrc: '/payments.png',
-							lightSrc: '/payments-light.png',
-							alt: 'payments illustration',
+							darkSrc: "/payments.png",
+							lightSrc: "/payments-light.png",
+							alt: "payments illustration",
 							width: 1207,
-							height: 929
+							height: 929,
 						})}
 					</div>
 				</div>
@@ -65,8 +65,8 @@
 				<Card.Header class="pb-3">
 					{@render cardHeading({
 						icon: Calendar,
-						title: 'Advanced Scheduling',
-						description: 'Scheduling system, Instantly locate all your assets.'
+						title: "Advanced Scheduling",
+						description: "Scheduling system, Instantly locate all your assets.",
 					})}
 				</Card.Header>
 
@@ -77,11 +77,11 @@
 						></div>
 						<div class="aspect-76/59 border">
 							{@render dualModeImg({
-								darkSrc: '/origin-cal-dark.png',
-								lightSrc: '/origin-cal.png',
-								alt: 'calendar illustration',
+								darkSrc: "/origin-cal-dark.png",
+								lightSrc: "/origin-cal.png",
+								alt: "calendar illustration",
 								width: 1207,
-								height: 929
+								height: 929,
 							})}
 						</div>
 					</div>
@@ -95,24 +95,24 @@
 
 				<div class="flex justify-center gap-6 overflow-hidden">
 					{@render circularUI({
-						label: 'Union',
-						circles: [{ pattern: 'border' }, { pattern: 'border' }],
-						_class: ''
+						label: "Union",
+						circles: [{ pattern: "border" }, { pattern: "border" }],
+						_class: "",
 					})}
 					{@render circularUI({
-						label: 'Inclusion',
-						circles: [{ pattern: 'none' }, { pattern: 'primary' }],
-						_class: ''
+						label: "Inclusion",
+						circles: [{ pattern: "none" }, { pattern: "primary" }],
+						_class: "",
 					})}
 					{@render circularUI({
-						label: 'Join',
-						circles: [{ pattern: 'blue' }, { pattern: 'none' }],
-						_class: ''
+						label: "Join",
+						circles: [{ pattern: "blue" }, { pattern: "none" }],
+						_class: "",
 					})}
 					{@render circularUI({
-						label: 'Exclusion',
-						circles: [{ pattern: 'primary' }, { pattern: 'none' }],
-						_class: 'hidden sm:block'
+						label: "Exclusion",
+						circles: [{ pattern: "primary" }, { pattern: "none" }],
+						_class: "hidden sm:block",
 					})}
 				</div>
 			</FeatureCard>
@@ -131,10 +131,16 @@
 {/snippet}
 
 {#snippet dualModeImg({ darkSrc, lightSrc, alt, width, height, _class }: DualModeImageProps)}
-	<img src={darkSrc} class={cn('hidden dark:block', _class)} alt={`${alt} dark`} {width} {height} />
+	<img
+		src={darkSrc}
+		class={cn("hidden dark:block", _class)}
+		alt={`${alt} dark`}
+		{width}
+		{height}
+	/>
 	<img
 		src={lightSrc}
-		class={cn('shadow dark:hidden', _class)}
+		class={cn("shadow dark:hidden", _class)}
 		alt={`${alt} light`}
 		{width}
 		{height}
@@ -149,14 +155,14 @@
 			>
 				{#each circles as circle, i}
 					<div
-						class={cn('size-7 rounded-full border sm:size-8', {
-							'border-primary': circle.pattern === 'none',
-							'border-primary bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_4px)]':
-								circle.pattern === 'border',
-							'border-primary bg-background bg-[repeating-linear-gradient(-45deg,var(--color-primary),var(--color-primary)_1px,transparent_1px,transparent_4px)]':
-								circle.pattern === 'primary',
-							'z-1 border-blue-500 bg-background bg-[repeating-linear-gradient(-45deg,var(--color-blue-500),var(--color-blue-500)_1px,transparent_1px,transparent_4px)]':
-								circle.pattern === 'blue'
+						class={cn("size-7 rounded-full border sm:size-8", {
+							"border-primary": circle.pattern === "none",
+							"border-primary bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_4px)]":
+								circle.pattern === "border",
+							"border-primary bg-background bg-[repeating-linear-gradient(-45deg,var(--color-primary),var(--color-primary)_1px,transparent_1px,transparent_4px)]":
+								circle.pattern === "primary",
+							"z-1 border-blue-500 bg-background bg-[repeating-linear-gradient(-45deg,var(--color-blue-500),var(--color-blue-500)_1px,transparent_1px,transparent_4px)]":
+								circle.pattern === "blue",
 						})}
 					></div>
 				{/each}

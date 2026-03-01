@@ -1,39 +1,39 @@
 <script lang="ts">
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
-	import { cn } from '$lib/utils';
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
+	import { cn } from "$lib/utils";
 
 	const tiers = [
 		{
-			name: 'Hobby',
-			description: 'For personal projects',
-			price: '$0',
-			period: '/month',
-			limit: '1,000 requests/month'
+			name: "Hobby",
+			description: "For personal projects",
+			price: "$0",
+			period: "/month",
+			limit: "1,000 requests/month",
 		},
 		{
-			name: 'Pro',
-			description: 'For professional use',
-			price: '$20',
-			period: '/month',
-			limit: '50,000 requests/month',
-			highlighted: true
+			name: "Pro",
+			description: "For professional use",
+			price: "$20",
+			period: "/month",
+			limit: "50,000 requests/month",
+			highlighted: true,
 		},
 		{
-			name: 'Scale',
-			description: 'For high-volume apps',
-			price: '$100',
-			period: '/month',
-			limit: '500,000 requests/month'
+			name: "Scale",
+			description: "For high-volume apps",
+			price: "$100",
+			period: "/month",
+			limit: "500,000 requests/month",
 		},
 		{
-			name: 'Enterprise',
-			description: 'For large organizations',
-			price: 'Custom',
-			period: '',
-			limit: 'Unlimited requests'
-		}
+			name: "Enterprise",
+			description: "For large organizations",
+			price: "Custom",
+			period: "",
+			limit: "Unlimited requests",
+		},
 	];
 </script>
 
@@ -50,8 +50,8 @@
 				<Card
 					variant="outline"
 					class={cn(
-						'flex flex-col gap-4 p-4 @2xl:flex-row @2xl:items-center @2xl:justify-between',
-						tier.highlighted && 'ring-primary'
+						"flex flex-col gap-4 p-4 @2xl:flex-row @2xl:items-center @2xl:justify-between",
+						tier.highlighted && "ring-primary"
 					)}
 				>
 					<div class="flex flex-col gap-2 @2xl:flex-row @2xl:items-center @2xl:gap-6">
@@ -72,11 +72,11 @@
 						</div>
 						<Button
 							href="#link"
-							variant={tier.highlighted ? 'default' : 'outline'}
+							variant={tier.highlighted ? "default" : "outline"}
 							size="sm"
 							class="gap-1"
 						>
-							{tier.price === 'Custom' ? 'Contact Us' : 'Get Started'}
+							{tier.price === "Custom" ? "Contact Us" : "Get Started"}
 							<ArrowRight class="size-3.5" />
 						</Button>
 					</div>

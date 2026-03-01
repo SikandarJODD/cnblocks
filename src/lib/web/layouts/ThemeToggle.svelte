@@ -1,11 +1,11 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { mode, toggleMode } from 'mode-watcher';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { mode, toggleMode } from "mode-watcher";
 </script>
 
 <Button onclick={toggleMode} class="rounded-full" variant="ghost" size="icon">
 	<!-- Sun Icon -->
-	{#if mode.current === 'light'}
+	{#if mode.current === "light"}
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="24"

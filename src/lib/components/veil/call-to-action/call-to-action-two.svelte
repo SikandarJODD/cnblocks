@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
-	import { ArrowRight } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
+	import { ArrowRight } from "@lucide/svelte";
 
 	type Props = {
 		eyebrow?: string;
@@ -12,11 +12,11 @@
 	};
 
 	let {
-		eyebrow = 'Limited Time Offer',
-		title = 'Start Building Today',
-		description = 'Get 3 months free when you sign up for an annual plan. No credit card required to start.',
-		ctaLabel = 'Claim Your Offer',
-		ctaHref = '#link'
+		eyebrow = "Limited Time Offer",
+		title = "Start Building Today",
+		description = "Get 3 months free when you sign up for an annual plan. No credit card required to start.",
+		ctaLabel = "Claim Your Offer",
+		ctaHref = "#link",
 	}: Props = $props();
 </script>
 

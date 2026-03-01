@@ -1,24 +1,24 @@
 <script lang="ts">
-	import { Badge } from '$lib/components/ui/badge';
-	import { Card, CardContent } from '$lib/components/ui/card';
+	import { Badge } from "$lib/components/ui/badge";
+	import { Card, CardContent } from "$lib/components/ui/card";
 
 	interface UsageItem {
 		label: string;
 		amount: number;
 		percentage: number;
-		color: 'emerald' | 'amber' | 'rose';
+		color: "emerald" | "amber" | "rose";
 	}
 
 	const data: UsageItem[] = [
-		{ label: 'Compute', amount: 450, percentage: 52.3, color: 'emerald' },
-		{ label: 'Storage', amount: 285, percentage: 33.1, color: 'amber' },
-		{ label: 'Bandwidth', amount: 125, percentage: 14.6, color: 'rose' }
+		{ label: "Compute", amount: 450, percentage: 52.3, color: "emerald" },
+		{ label: "Storage", amount: 285, percentage: 33.1, color: "amber" },
+		{ label: "Bandwidth", amount: 125, percentage: 14.6, color: "rose" },
 	];
 
 	const colorClasses = {
-		emerald: 'bg-emerald-500 dark:bg-emerald-400',
-		amber: 'bg-amber-500 dark:bg-amber-400',
-		rose: 'bg-rose-500 dark:bg-rose-400'
+		emerald: "bg-emerald-500 dark:bg-emerald-400",
+		amber: "bg-amber-500 dark:bg-amber-400",
+		rose: "bg-rose-500 dark:bg-rose-400",
 	};
 </script>
 
@@ -55,7 +55,10 @@
 			<ul role="list" class="mt-5 space-y-2">
 				{#each data as item, index (index)}
 					<li class="flex items-center gap-2 text-xs">
-						<span class="{colorClasses[item.color]} size-2.5 rounded-xs" aria-hidden="true" />
+						<span
+							class="{colorClasses[item.color]} size-2.5 rounded-xs"
+							aria-hidden="true"
+						/>
 						<span class="text-foreground">{item.label}</span>
 						<span class="text-muted-foreground">
 							(${item.amount} / {item.percentage}%)
@@ -66,7 +69,7 @@
 		</div>
 
 		<p class="mt-6 text-xs text-muted-foreground">
-			Configure limits in{' '}
+			Configure limits in{" "}
 			<a href="#" class="text-emerald-600 hover:underline dark:text-emerald-400">
 				resource settings.
 			</a>

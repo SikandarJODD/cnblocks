@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Bolt as Logo } from '$lib/svgs/index';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Input } from '$lib/components/ui/veil/input';
-	import { Label } from '$lib/components/ui/label';
+	import { Bolt as Logo } from "$lib/svgs/index";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Input } from "$lib/components/ui/veil/input";
+	import { Label } from "$lib/components/ui/label";
 </script>
 
 <section class="flex min-h-screen bg-background px-4 py-16 md:py-24">
@@ -23,7 +23,13 @@
 		<form action="" class="mt-12 space-y-4">
 			<div class="space-y-2">
 				<Label for="email" class="text-sm">Email</Label>
-				<Input type="email" id="email" name="email" placeholder="you@example.com" required />
+				<Input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="you@example.com"
+					required
+				/>
 			</div>
 
 			<div class="space-y-2">
@@ -75,7 +81,9 @@
 
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			New here?
-			<Button href="#" variant="link" class="px-1 font-medium text-primary">Create account</Button>
+			<Button href="#" variant="link" class="px-1 font-medium text-primary"
+				>Create account</Button
+			>
 		</p>
 	</div>
 </section>

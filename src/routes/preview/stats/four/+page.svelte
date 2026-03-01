@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { stats } from '$lib/all_blocks/stats';
+	import { stats } from "$lib/all_blocks/stats";
 
-	const block = stats.find((item) => item.title === 'four');
+	const block = stats.find((item) => item.title === "four");
 
 	if (!block) {
-		throw new Error('Missing preview block for four in stats');
+		throw new Error("Missing preview block for four in stats");
 	}
 
 	const PreviewComponent = block.component;

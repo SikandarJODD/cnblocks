@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { changelog } from '$lib/data';
-	import Calendar from '@lucide/svelte/icons/calendar';
+	import { changelog } from "$lib/data";
+	import Calendar from "@lucide/svelte/icons/calendar";
 	let changelog_data = changelog.toSorted((a, b) => {
 		return new Date(b.date).getTime() - new Date(a.date).getTime();
 	});
@@ -12,10 +12,10 @@
 			<div class="h-full md:col-span-2">
 				<div class="sticky top-20 flex items-center gap-2">
 					<Calendar strokeWidth={1.4} size={20} />
-					{new Date(item.date).toLocaleDateString('en-US', {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric'
+					{new Date(item.date).toLocaleDateString("en-US", {
+						year: "numeric",
+						month: "long",
+						day: "numeric",
 					})}
 				</div>
 			</div>

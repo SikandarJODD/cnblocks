@@ -1,33 +1,33 @@
 <script>
-	import RainbowButton from '$lib/components/magic/RainbowButton.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Separator from '$lib/components/ui/separator/separator.svelte';
-	import GridPattern from '$lib/components/magic/GridPattern.svelte';
-	import { cn } from '$lib/utils';
+	import RainbowButton from "$lib/components/magic/RainbowButton.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Separator from "$lib/components/ui/separator/separator.svelte";
+	import GridPattern from "$lib/components/magic/GridPattern.svelte";
+	import { cn } from "$lib/utils";
 	let features = [
-		'Save 100+ hours of work',
-		'1x Landing Page with 10+ sections',
-		'Dark mode support',
-		'100% Mobile responsive',
-		'SEO Optimized',
-		'Scroll Animations & Micro Interactions',
-		'Global config for text, images and more',
-		'Get Github Repo Access',
-		'Deploy live to vercel'
+		"Save 100+ hours of work",
+		"1x Landing Page with 10+ sections",
+		"Dark mode support",
+		"100% Mobile responsive",
+		"SEO Optimized",
+		"Scroll Animations & Micro Interactions",
+		"Global config for text, images and more",
+		"Get Github Repo Access",
+		"Deploy live to vercel",
 	];
 
 	let sections = [
-		'Header',
-		'Hero',
-		'Logos',
-		'Problem',
-		'Bento Features',
-		'Features',
-		'Testimonial',
-		'Pricing',
-		'Faq',
-		'CTA',
-		'Footer'
+		"Header",
+		"Hero",
+		"Logos",
+		"Problem",
+		"Bento Features",
+		"Features",
+		"Testimonial",
+		"Pricing",
+		"Faq",
+		"CTA",
+		"Footer",
 	];
 </script>
 
@@ -46,7 +46,10 @@
 		height={30}
 		strokeDashArray="4 2"
 		x={-10}
-		class={cn('[mask-image:radial-gradient(800px_circle_at_top_right,white,transparent)]', '-z-40')}
+		class={cn(
+			"[mask-image:radial-gradient(800px_circle_at_top_right,white,transparent)]",
+			"-z-40"
+		)}
 	/>
 	<h1 class="mt-4 mb-2 text-3xl font-bold capitalize">Startup Template</h1>
 	<p class="text-md text-muted-foreground md:text-lg">
@@ -77,8 +80,8 @@
 			</div>
 			<div class="col-span-6">
 				<p class="text-md text-muted-foreground sm:text-lg">
-					This is a landing page template for a SaaS product. The template is built with Svelte 5,
-					TailwindCSS V4, and Shadcn Svelte.
+					This is a landing page template for a SaaS product. The template is built with
+					Svelte 5, TailwindCSS V4, and Shadcn Svelte.
 				</p>
 			</div>
 		</div>
@@ -89,8 +92,8 @@
 			</div>
 			<div class="col-span-6">
 				<p class="text-md text-muted-foreground sm:text-lg">
-					This template is perfect for startups, small businesses, and entrepreneurs looking to
-					create a professional landing page for their SaaS product.
+					This template is perfect for startups, small businesses, and entrepreneurs
+					looking to create a professional landing page for their SaaS product.
 				</p>
 			</div>
 		</div>
@@ -101,10 +104,10 @@
 			</div>
 			<div class="col-span-6">
 				<p class="text-md text-muted-foreground sm:text-lg">
-					This template is specifically designed for landing pages, packed with essential features
-					and components to streamline your development process. It helps you create stunning,
-					high-converting landing page in a fraction of the time, allowing you to focus on what
-					matters most - your product.
+					This template is specifically designed for landing pages, packed with essential
+					features and components to streamline your development process. It helps you
+					create stunning, high-converting landing page in a fraction of the time,
+					allowing you to focus on what matters most - your product.
 				</p>
 				<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 					<div>
@@ -165,10 +168,10 @@
 			</div>
 			<div class="col-span-6">
 				<p class="text-md text-muted-foreground sm:text-lg">
-					To get started, simply click the "Get Access" button above to purchase the template. Once
-					you've purchased the template, you'll receive an email with a link to the Github
-					repository. You can then clone the repository and start customizing the template to fit
-					your needs.
+					To get started, simply click the "Get Access" button above to purchase the
+					template. Once you've purchased the template, you'll receive an email with a
+					link to the Github repository. You can then clone the repository and start
+					customizing the template to fit your needs.
 				</p>
 			</div>
 		</div>
@@ -246,10 +249,14 @@
 		</div>
 	</div>
 	<section class="pb-10">
-		<div class="mx-auto max-w-5xl rounded-3xl border bg-background px-6 py-12 md:py-20 lg:py-20">
+		<div
+			class="mx-auto max-w-5xl rounded-3xl border bg-background px-6 py-12 md:py-20 lg:py-20"
+		>
 			<div class="text-center">
 				<h2 class="text-4xl font-semibold text-balance lg:text-5xl">Startup Template</h2>
-				<p class="mt-4 text-muted-foreground">The Ultimate Landing Page for your Startup.</p>
+				<p class="mt-4 text-muted-foreground">
+					The Ultimate Landing Page for your Startup.
+				</p>
 
 				<div class="mt-12 flex flex-wrap justify-center gap-4">
 					<Button

@@ -1,17 +1,17 @@
-@import 'tailwindcss';
-@source '../../../packages/core';
-@source '../../../packages/dusk-kit';
-@source '../../../packages/mist-kit';
-@source '../../../packages/veil-kit';
+@import "tailwindcss";
+@source "../../../packages/core";
+@source "../../../packages/dusk-kit";
+@source "../../../packages/mist-kit";
+@source "../../../packages/veil-kit";
 
-@plugin 'tailwindcss-animate';
+@plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-	--font-mono: 'Geist Mono', 'Fira Code', monospace;
-	--font-sans: 'Geist', sans-serif;
-	--font-serif: 'Asar', serif;
+	--font-mono: "Geist Mono", "Fira Code", monospace;
+	--font-sans: "Geist", sans-serif;
+	--font-serif: "Asar", serif;
 
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
@@ -153,7 +153,7 @@
 	}
 }
 
-[data-theme='mist'] {
+[data-theme="mist"] {
 	--radius: 0.625rem;
 	--background: var(--color-white);
 	--foreground: var(--color-zinc-950);
@@ -199,7 +199,7 @@
 	@apply *:text-foreground;
 }
 
-[data-theme='veil'] {
+[data-theme="veil"] {
 	--radius: 0.625rem;
 	--background: oklch(0.9779 0.0042 56.38);
 	--foreground: oklch(0.3421 0.0379 61.15);
@@ -247,7 +247,7 @@
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
 	--background: var(--color-zinc-950);
 	--foreground: var(--color-white);
 	--card: color-mix(in oklab, var(--color-zinc-800) 55%, #000);

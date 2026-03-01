@@ -13,8 +13,8 @@
 		<div class="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
 			<div>
 				<p>
-					It supports an entire ecosystem — from products to the APIs and platforms helping
-					developers and businesses innovate
+					It supports an entire ecosystem — from products to the APIs and platforms
+					helping developers and businesses innovate
 				</p>
 				<div class="mt-12 mb-12 grid grid-cols-2 gap-2 md:mb-0">
 					<div class="space-y-4">
@@ -38,9 +38,9 @@
 			<div class="relative">
 				<blockquote class="border-l-4 pl-4">
 					<p>
-						Using TailsUI has been like unlocking a secret design superpower. It's the perfect
-						fusion of simplicity and versatility, enabling us to create UIs that are as stunning as
-						they are user-friendly.
+						Using TailsUI has been like unlocking a secret design superpower. It's the
+						perfect fusion of simplicity and versatility, enabling us to create UIs that
+						are as stunning as they are user-friendly.
 					</p>
 
 					<div class="mt-6 space-y-3">

@@ -1,5 +1,5 @@
 <script>
-	import Card from '$lib/components/ui/card/card.svelte';
+	import Card from "$lib/components/ui/card/card.svelte";
 </script>
 
 <section class="bg-muted py-12 md:py-20 dark:[--color-muted:var(--color-zinc-900)]">

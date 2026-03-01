@@ -1,10 +1,10 @@
 <script>
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	let stats = [
-		{ value: '90+', label: 'Integrations' },
-		{ value: '56%', label: 'Productivity Boost' },
-		{ value: '24/7', label: 'Customer Support' },
-		{ value: '10k+', label: 'Active Users' }
+		{ value: "90+", label: "Integrations" },
+		{ value: "56%", label: "Productivity Boost" },
+		{ value: "24/7", label: "Customer Support" },
+		{ value: "10k+", label: "Active Users" },
 	];
 </script>
 
@@ -14,8 +14,8 @@
 			<div>
 				<h2 class="text-2xl font-semibold">Tailark in numbers</h2>
 				<p class="mt-4 text-lg text-balance text-muted-foreground">
-					Our platform continues to grow with developers and businesses using our tools to create
-					innovative solutions and enhance productivity.
+					Our platform continues to grow with developers and businesses using our tools to
+					create innovative solutions and enhance productivity.
 				</p>
 			</div>
 			<ul role="list" class="mt-8 space-y-2 text-muted-foreground">

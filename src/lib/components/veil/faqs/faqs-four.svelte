@@ -3,9 +3,9 @@
 		Accordion,
 		AccordionContent,
 		AccordionItem,
-		AccordionTrigger
-	} from '$lib/components/ui/accordion';
-	import { Card } from '$lib/components/ui/veil/card';
+		AccordionTrigger,
+	} from "$lib/components/ui/accordion";
+	import { Card } from "$lib/components/ui/veil/card";
 
 	type FAQItem = {
 		id: string;
@@ -15,39 +15,35 @@
 
 	const faqItems: FAQItem[] = [
 		{
-			id: 'item-1',
-			question: 'How does the free trial work?',
-			answer:
-				'Start with a 14-day free trial with full access to all features. No credit card required.'
+			id: "item-1",
+			question: "How does the free trial work?",
+			answer: "Start with a 14-day free trial with full access to all features. No credit card required.",
 		},
 		{
-			id: 'item-2',
-			question: 'Can I change my plan later?',
-			answer:
-				'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.'
+			id: "item-2",
+			question: "Can I change my plan later?",
+			answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.",
 		},
 		{
-			id: 'item-3',
-			question: 'What payment methods do you accept?',
-			answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'
+			id: "item-3",
+			question: "What payment methods do you accept?",
+			answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans.",
 		},
 		{
-			id: 'item-4',
-			question: 'Is there a setup fee?',
-			answer:
-				'No, there are no setup fees or hidden costs. You only pay for your subscription plan.'
+			id: "item-4",
+			question: "Is there a setup fee?",
+			answer: "No, there are no setup fees or hidden costs. You only pay for your subscription plan.",
 		},
 		{
-			id: 'item-5',
-			question: 'Do you offer refunds?',
-			answer: 'We offer a 30-day money-back guarantee. Contact us within 30 days for a full refund.'
+			id: "item-5",
+			question: "Do you offer refunds?",
+			answer: "We offer a 30-day money-back guarantee. Contact us within 30 days for a full refund.",
 		},
 		{
-			id: 'item-6',
-			question: 'How do I cancel my subscription?',
-			answer:
-				'You can cancel anytime from your account settings. Your access continues until the billing period ends.'
-		}
+			id: "item-6",
+			question: "How do I cancel my subscription?",
+			answer: "You can cancel anytime from your account settings. Your access continues until the billing period ends.",
+		},
 	];
 </script>
 
@@ -64,7 +60,9 @@
 			<Accordion type="single" collapsible>
 				{#each faqItems as item (item.id)}
 					<AccordionItem value={item.id} class="border-b-0 px-4">
-						<AccordionTrigger class="cursor-pointer py-4 text-sm font-medium hover:no-underline">
+						<AccordionTrigger
+							class="cursor-pointer py-4 text-sm font-medium hover:no-underline"
+						>
 							{item.question}
 						</AccordionTrigger>
 						<AccordionContent>

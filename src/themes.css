@@ -1,4 +1,4 @@
-[data-theme='mist'] {
+[data-theme="mist"] {
 	--radius: 0.625rem;
 	--background: var(--color-white);
 	--foreground: var(--color-zinc-950);
@@ -44,7 +44,7 @@
 	@apply *:text-foreground;
 }
 
-[data-theme='veil'] {
+[data-theme="veil"] {
 	--radius: 0.625rem;
 	--background: oklch(0.9779 0.0042 56.38);
 	--foreground: oklch(0.3421 0.0379 61.15);
@@ -65,10 +65,10 @@
 	--border: --alpha(var(--foreground)/7.5%);
 	--input: --alpha(var(--foreground)/20%);
 	--ring: var(--primary);
-	--font-family: 'Geist', sans-serif;
+	--font-family: "Geist", sans-serif;
 
 	@variant dark {
-		--font-family: 'Geist', sans-serif;
+		--font-family: "Geist", sans-serif;
 		--background: oklch(0.1448 0 0);
 		--foreground: oklch(0.9027 0.0137 60.56);
 
@@ -94,7 +94,7 @@
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
 }
 
-[data-theme='default'],
-[data-theme='dark'] {
+[data-theme="default"],
+[data-theme="dark"] {
 	@apply *:text-foreground;
 }

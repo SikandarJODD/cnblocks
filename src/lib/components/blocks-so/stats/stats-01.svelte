@@ -1,32 +1,32 @@
 <script lang="ts">
-	import { Card, CardContent } from '$lib/components/ui/card';
-	import { cn } from '$lib/utils';
+	import { Card, CardContent } from "$lib/components/ui/card";
+	import { cn } from "$lib/utils";
 
 	const data = [
 		{
-			name: 'Profit',
-			value: '$287,654.00',
-			change: '+8.32%',
-			changeType: 'positive'
+			name: "Profit",
+			value: "$287,654.00",
+			change: "+8.32%",
+			changeType: "positive",
 		},
 		{
-			name: 'Late payments',
-			value: '$9,435.00',
-			change: '-12.64%',
-			changeType: 'negative'
+			name: "Late payments",
+			value: "$9,435.00",
+			change: "-12.64%",
+			changeType: "negative",
 		},
 		{
-			name: 'Pending orders',
-			value: '$173,229.00',
-			change: '+2.87%',
-			changeType: 'positive'
+			name: "Pending orders",
+			value: "$173,229.00",
+			change: "+2.87%",
+			changeType: "positive",
 		},
 		{
-			name: 'Operating costs',
-			value: '$52,891.00',
-			change: '-5.73%',
-			changeType: 'negative'
-		}
+			name: "Operating costs",
+			value: "$52,891.00",
+			change: "-5.73%",
+			changeType: "negative",
+		},
 	];
 </script>
 
@@ -35,9 +35,9 @@
 		{#each data as stat, index}
 			<Card
 				class={cn(
-					'rounded-none border-0 py-0 shadow-none',
-					index === 0 && 'rounded-l-xl',
-					index === data.length - 1 && 'rounded-r-xl'
+					"rounded-none border-0 py-0 shadow-none",
+					index === 0 && "rounded-l-xl",
+					index === data.length - 1 && "rounded-r-xl"
 				)}
 			>
 				<CardContent
@@ -48,15 +48,17 @@
 					</div>
 					<div
 						class={cn(
-							'text-xs font-medium',
-							stat.changeType === 'positive'
-								? 'text-green-800 dark:text-green-400'
-								: 'text-red-800 dark:text-red-400'
+							"text-xs font-medium",
+							stat.changeType === "positive"
+								? "text-green-800 dark:text-green-400"
+								: "text-red-800 dark:text-red-400"
 						)}
 					>
 						{stat.change}
 					</div>
-					<div class="w-full flex-none text-3xl font-medium tracking-tight text-foreground">
+					<div
+						class="w-full flex-none text-3xl font-medium tracking-tight text-foreground"
+					>
 						{stat.value}
 					</div>
 				</CardContent>

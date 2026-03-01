@@ -28,20 +28,21 @@
 			<div class="relative space-y-4">
 				<p class="text-muted-foreground">
 					Gemini is evolving to be more than just the models. <span
-						class="font-bold text-accent-foreground">It supports an entire ecosystem</span
+						class="font-bold text-accent-foreground"
+						>It supports an entire ecosystem</span
 					> — from products innovate.
 				</p>
 				<p class="text-muted-foreground">
-					It supports an entire ecosystem — from products to the APIs and platforms helping
-					developers and businesses innovate
+					It supports an entire ecosystem — from products to the APIs and platforms
+					helping developers and businesses innovate
 				</p>
 
 				<div class="pt-6">
 					<blockquote class="border-l-4 pl-4">
 						<p>
-							Using TailsUI has been like unlocking a secret design superpower. It's the perfect
-							fusion of simplicity and versatility, enabling us to create UIs that are as stunning
-							as they are user-friendly.
+							Using TailsUI has been like unlocking a secret design superpower. It's
+							the perfect fusion of simplicity and versatility, enabling us to create
+							UIs that are as stunning as they are user-friendly.
 						</p>
 
 						<div class="mt-6 space-y-3">

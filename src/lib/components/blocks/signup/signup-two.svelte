@@ -1,7 +1,7 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
 </script>
 
 <section class="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
@@ -44,7 +44,9 @@
 						></path>
 					</svg>
 				</a>
-				<h1 class="text-title mt-4 mb-1 text-xl font-semibold">Create a Tailus UI Account</h1>
+				<h1 class="text-title mt-4 mb-1 text-xl font-semibold">
+					Create a Tailus UI Account
+				</h1>
 				<p class="text-sm">Welcome! Create an account to get started</p>
 			</div>
 
@@ -68,11 +70,21 @@
 				<div class="space-y-0.5">
 					<div class="flex items-center justify-between">
 						<Label for="pwd" class="text-title text-sm">Password</Label>
-						<Button variant="link" size="sm" class="link intent-info variant-ghost text-sm">
+						<Button
+							variant="link"
+							size="sm"
+							class="link intent-info variant-ghost text-sm"
+						>
 							Forgot your Password ?
 						</Button>
 					</div>
-					<Input type="password" required name="pwd" id="pwd" class="input sz-md variant-mixed" />
+					<Input
+						type="password"
+						required
+						name="pwd"
+						id="pwd"
+						class="input sz-md variant-mixed"
+					/>
 				</div>
 
 				<Button class="w-full">Sign In</Button>
@@ -86,7 +98,12 @@
 
 			<div class="grid grid-cols-2 gap-3">
 				<Button type="button" variant="outline">
-					<svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="0.98em"
+						height="1em"
+						viewBox="0 0 256 262"
+					>
 						<path
 							fill="#4285f4"
 							d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
@@ -107,7 +124,12 @@
 					<span>Google</span>
 				</Button>
 				<Button type="button" variant="outline">
-					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="1em"
+						height="1em"
+						viewBox="0 0 256 256"
+					>
 						<path fill="#f1511b" d="M121.666 121.666H0V0h121.666z"></path>
 						<path fill="#80cc28" d="M256 121.666H134.335V0H256z"></path>
 						<path fill="#00adef" d="M121.663 256.002H0V134.336h121.663z"></path>

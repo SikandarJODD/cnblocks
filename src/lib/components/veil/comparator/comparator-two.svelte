@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Check, Minus } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
+	import { Check, Minus } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
 
 	type FeatureRow = {
 		name: string;
@@ -10,14 +10,14 @@
 	};
 
 	const features: FeatureRow[] = [
-		{ name: 'Integrations', free: '5', pro: 'Unlimited' },
-		{ name: 'API Calls', free: '10K/mo', pro: '500K/mo' },
-		{ name: 'Team Members', free: '2', pro: '20' },
-		{ name: 'Support', free: 'Email', pro: 'Priority' },
-		{ name: 'Analytics Dashboard', free: false, pro: true },
-		{ name: 'Custom Webhooks', free: false, pro: true },
-		{ name: 'Advanced Security', free: false, pro: true },
-		{ name: 'API Access', free: false, pro: true }
+		{ name: "Integrations", free: "5", pro: "Unlimited" },
+		{ name: "API Calls", free: "10K/mo", pro: "500K/mo" },
+		{ name: "Team Members", free: "2", pro: "20" },
+		{ name: "Support", free: "Email", pro: "Priority" },
+		{ name: "Analytics Dashboard", free: false, pro: true },
+		{ name: "Custom Webhooks", free: false, pro: true },
+		{ name: "Advanced Security", free: false, pro: true },
+		{ name: "API Access", free: false, pro: true },
 	];
 </script>
 
@@ -46,7 +46,7 @@
 				<div class="grid grid-cols-3 border-t">
 					<div class="p-4 text-sm text-muted-foreground">{feature.name}</div>
 					<div class="flex min-w-32 items-center justify-center border-l p-4 text-sm">
-						{#if typeof feature.free === 'boolean'}
+						{#if typeof feature.free === "boolean"}
 							{#if feature.free}
 								<Check class="size-4 text-primary" />
 							{:else}
@@ -56,8 +56,10 @@
 							<span class="text-foreground">{feature.free}</span>
 						{/if}
 					</div>
-					<div class="flex min-w-32 items-center justify-center border-l bg-primary/5 p-4 text-sm">
-						{#if typeof feature.pro === 'boolean'}
+					<div
+						class="flex min-w-32 items-center justify-center border-l bg-primary/5 p-4 text-sm"
+					>
+						{#if typeof feature.pro === "boolean"}
 							{#if feature.pro}
 								<Check class="size-4 text-primary" />
 							{:else}
@@ -73,7 +75,9 @@
 			<div class="grid grid-cols-3 border-t">
 				<div class="p-4"></div>
 				<div class="min-w-32 border-l p-4">
-					<Button href="#link" variant="outline" size="sm" class="w-full">Get Started</Button>
+					<Button href="#link" variant="outline" size="sm" class="w-full"
+						>Get Started</Button
+					>
 				</div>
 				<div class="min-w-32 border-l bg-primary/5 p-4">
 					<Button href="#link" size="sm" class="w-full">Upgrade</Button>

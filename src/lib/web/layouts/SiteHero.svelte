@@ -1,8 +1,8 @@
 <script>
-	import GridPattern from '$lib/components/magic/GridPattern.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { cn } from '$lib/utils';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import GridPattern from "$lib/components/magic/GridPattern.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { cn } from "$lib/utils";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 </script>
 
 <div>
@@ -11,7 +11,7 @@
 			width={45}
 			height={45}
 			strokeDashArray="4 2"
-			class={cn('[mask-image:radial-gradient(800px_circle_at_top_center,white,transparent)]')}
+			class={cn("[mask-image:radial-gradient(800px_circle_at_top_center,white,transparent)]")}
 		/>
 		<section>
 			<div class="relative pt-6 md:pt-10">
@@ -129,7 +129,8 @@
 									stroke-linecap="round"
 									stroke-linejoin="round"
 									class="lucide lucide-circle-check h-auto w-3"
-									><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+									><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"
+									></path></svg
 								>
 							</div>
 							Svelte Shadcn Blocks<br />
@@ -138,11 +139,13 @@
 						<p
 							class="mx-auto mt-6 max-w-3xl text-sm text-balance text-muted-foreground md:mt-10 md:text-lg"
 						>
-							Speed up your workflow with responsive,<br /> Pre-built UI blocks designed for marketing
-							websites.
+							Speed up your workflow with responsive,<br /> Pre-built UI blocks designed
+							for marketing websites.
 						</p>
 
-						<div class="mt-9 flex flex-col items-center justify-center gap-4 md:flex-row">
+						<div
+							class="mt-9 flex flex-col items-center justify-center gap-4 md:flex-row"
+						>
 							<!-- <div
                 class="bg-foreground border p-0.5"
                 style="border-radius: calc(0.5rem + 0.125rem + 4px);"
@@ -200,14 +203,19 @@
 									d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
 									clip-rule="evenodd"
 								/></g
-							><defs><clipPath id="a"><path fill="#fff" d="M0 0h54v32.4H0z" /></clipPath></defs
+							><defs
+								><clipPath id="a"><path fill="#fff" d="M0 0h54v32.4H0z" /></clipPath
+								></defs
 							></svg
 						>
 					</div>
 					<div
 						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
 					>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="mx-autp h-10 w-10"
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 256 256"
+							class="mx-autp h-10 w-10"
 							><path fill="none" d="M0 0h256v256H0z" /><path
 								fill="none"
 								class="stroke-[#EB4F27]"

@@ -1,40 +1,42 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 	import {
 		Card,
 		CardContent,
 		CardDescription,
 		CardHeader,
 		CardTitle,
-		CardFooter
-	} from '$lib/components/ui/card';
-	import Check from '@lucide/svelte/icons/check';
+		CardFooter,
+	} from "$lib/components/ui/card";
+	import Check from "@lucide/svelte/icons/check";
 
 	let pricingList = {
-		free: ['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'],
-		startup: ['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'],
+		free: ["Basic Analytics Dashboard", "5GB Cloud Storage", "Email and Chat Support"],
+		startup: ["Everything in Pro Plan", "5GB Cloud Storage", "Email and Chat Support"],
 		pro: [
-			'Everything in Free Plan',
-			'5GB Cloud Storage',
-			'Email and Chat Support',
-			'Access to Community Forum',
-			'Single User Access',
-			'Access to Basic Templates',
-			'Mobile App Access',
-			'1 Custom Report Per Month',
-			'Monthly Product Updates',
-			'Standard Security Features'
-		]
+			"Everything in Free Plan",
+			"5GB Cloud Storage",
+			"Email and Chat Support",
+			"Access to Community Forum",
+			"Single User Access",
+			"Access to Basic Templates",
+			"Mobile App Access",
+			"1 Custom Report Per Month",
+			"Monthly Product Updates",
+			"Standard Security Features",
+		],
 	};
 </script>
 
 <section class="py-16 md:py-32">
 	<div class="mx-auto max-w-6xl px-6">
 		<div class="mx-auto max-w-2xl space-y-6 text-center">
-			<h1 class="text-center text-4xl font-semibold lg:text-5xl">Pricing that Scales with You</h1>
+			<h1 class="text-center text-4xl font-semibold lg:text-5xl">
+				Pricing that Scales with You
+			</h1>
 			<p>
-				Gemini is evolving to be more than just the models. It supports an entire to the APIs and
-				platforms helping developers and businesses innovate.
+				Gemini is evolving to be more than just the models. It supports an entire to the
+				APIs and platforms helping developers and businesses innovate.
 			</p>
 		</div>
 

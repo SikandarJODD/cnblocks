@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { category_blocks } from '$lib/all_blocks/category_block';
-	import { Button } from '$lib/components/ui/button';
+	import { category_blocks } from "$lib/all_blocks/category_block";
+	import { Button } from "$lib/components/ui/button";
 </script>
 
 <div>

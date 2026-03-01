@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import Logo from '$lib/components/web/Logo.svelte';
-	import { ChevronRight } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import Logo from "$lib/components/web/Logo.svelte";
+	import { ChevronRight } from "@lucide/svelte";
 </script>
 
 <header class="fixed inset-x-0 top-4 z-50 mx-auto w-fit">

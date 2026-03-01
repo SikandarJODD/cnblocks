@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { ToggleGroup, ToggleGroupItem } from '$lib/components/ui/toggle-group';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Card from '$lib/components/ui/card/card.svelte';
-	import { cn } from '$lib/utils';
+	import { ToggleGroup, ToggleGroupItem } from "$lib/components/ui/toggle-group";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Card from "$lib/components/ui/card/card.svelte";
+	import { cn } from "$lib/utils";
 
 	// Lucide Icons
-	import BoldIcon from '@lucide/svelte/icons/bold';
-	import Calendar1 from '@lucide/svelte/icons/calendar-1';
-	import Ellipsis from '@lucide/svelte/icons/ellipsis';
-	import Italic from '@lucide/svelte/icons/italic';
-	import Strikethrough from '@lucide/svelte/icons/strikethrough';
-	import Underline from '@lucide/svelte/icons/underline';
+	import BoldIcon from "@lucide/svelte/icons/bold";
+	import Calendar1 from "@lucide/svelte/icons/calendar-1";
+	import Ellipsis from "@lucide/svelte/icons/ellipsis";
+	import Italic from "@lucide/svelte/icons/italic";
+	import Strikethrough from "@lucide/svelte/icons/strikethrough";
+	import Underline from "@lucide/svelte/icons/underline";
 
 	type IllustrationProps = {
 		_class?: string;
-		variant?: 'elevated' | 'outlined' | 'mixed';
+		variant?: "elevated" | "outlined" | "mixed";
 	};
 </script>
 
@@ -24,11 +24,13 @@
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div>
-				<h2 class="mt-4 text-4xl font-semibold text-foreground">Personal AI, with you Anywhere</h2>
+				<h2 class="mt-4 text-4xl font-semibold text-foreground">
+					Personal AI, with you Anywhere
+				</h2>
 				<p class="mt-4 mb-12 text-lg text-balance text-muted-foreground">
-					Quick AI lives a single hotkey away - ready to quickly appear as a floating window above
-					your other apps. Get instant assistance whether you're browsing, coding, or writing
-					documents.
+					Quick AI lives a single hotkey away - ready to quickly appear as a floating
+					window above your other apps. Get instant assistance whether you're browsing,
+					coding, or writing documents.
 				</p>
 			</div>
 
@@ -36,7 +38,7 @@
 				<Card variant="soft" class="p-6">
 					<div class="flex aspect-video items-center justify-center">
 						{@render CodeIllustration({
-							_class: 'w-full'
+							_class: "w-full",
 						})}
 					</div>
 					<div class="text-center">
@@ -50,13 +52,14 @@
 					<div class="flex aspect-video items-center justify-center">
 						<!-- <ScheduleIllustation class="border" /> -->
 						{@render ScheduleIllustation({
-							_class: 'border'
+							_class: "border",
 						})}
 					</div>
 					<div class="text-center">
 						<h3 class="text-xl font-semibold text-foreground">AI Meeting Scheduler</h3>
 						<p class="mt-4 text-lg text-balance text-muted-foreground">
-							Effortlessly book and manage your meetings. Stay on top of your schedule.
+							Effortlessly book and manage your meetings. Stay on top of your
+							schedule.
 						</p>
 					</div>
 				</Card>
@@ -65,15 +68,15 @@
 	</div>
 </section>
 
-{#snippet ScheduleIllustation({ _class = '', variant = 'elevated' }: IllustrationProps)}
-	<div class={cn('relative', _class)}>
+{#snippet ScheduleIllustation({ _class = "", variant = "elevated" }: IllustrationProps)}
+	<div class={cn("relative", _class)}>
 		<div
 			class={cn(
-				'absolute flex -translate-x-1/8 -translate-y-[110%] items-center gap-2 rounded-lg bg-background p-1',
+				"absolute flex -translate-x-1/8 -translate-y-[110%] items-center gap-2 rounded-lg bg-background p-1",
 				{
-					'shadow-black-950/10 shadow-lg': variant === 'elevated',
-					'border border-foreground/10': variant === 'outlined',
-					'border border-foreground/10 shadow-md shadow-black/5': variant === 'mixed'
+					"shadow-black-950/10 shadow-lg": variant === "elevated",
+					"border border-foreground/10": variant === "outlined",
+					"border border-foreground/10 shadow-md shadow-black/5": variant === "mixed",
 				}
 			)}
 		>
@@ -109,15 +112,15 @@
 	</div>
 {/snippet}
 
-{#snippet CodeIllustration({ _class = '' }: { _class?: string })}
+{#snippet CodeIllustration({ _class = "" }: { _class?: string })}
 	<div
 		class={cn(
-			'[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]',
+			"[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]",
 			_class
 		)}
 	>
 		<ul class="mx-auto w-fit font-mono text-2xl font-medium text-muted-foreground">
-			{#each ['Images', 'Variables', 'Pages', 'Components', 'Styles'] as item, index}
+			{#each ["Images", "Variables", "Pages", "Components", "Styles"] as item, index}
 				<li
 					class={cn(
 						index == 2 &&

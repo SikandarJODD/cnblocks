@@ -1,24 +1,24 @@
 <script>
-	import Marquee from '$lib/components/magic/Marquee.svelte';
-	import ProgressiveBlur from '$lib/components/magic/ProgressiveBlur.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Marquee from "$lib/components/magic/Marquee.svelte";
+	import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability
 
 	// Hero Header Component
 
-	import { cn } from '$lib/utils';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import { scrollY } from 'svelte/reactivity/window';
+	import { cn } from "$lib/utils";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import { scrollY } from "svelte/reactivity/window";
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 
 	let menuState = $state(false);
@@ -38,12 +38,14 @@
 		<div class="py-24 md:pb-32 lg:pt-72 lg:pb-36">
 			<div class="relative mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12">
 				<div class="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left">
-					<h1 class="mt-8 max-w-2xl text-5xl text-balance md:text-6xl lg:mt-16 xl:text-7xl">
+					<h1
+						class="mt-8 max-w-2xl text-5xl text-balance md:text-6xl lg:mt-16 xl:text-7xl"
+					>
 						Build 10x Faster with NS
 					</h1>
 					<p class="mt-8 max-w-2xl text-lg text-balance">
-						Highly customizable components for building modern websites and applications you mean
-						it.
+						Highly customizable components for building modern websites and applications
+						you mean it.
 					</p>
 
 					<div
@@ -161,8 +163,12 @@
 						</div>
 					</Marquee>
 
-					<div class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"></div>
-					<div class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"></div>
+					<div
+						class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"
+					></div>
+					<div
+						class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"
+					></div>
 					<ProgressiveBlur
 						class="pointer-events-none absolute top-0 left-0 z-50 h-full w-20"
 						direction="left"
@@ -184,14 +190,14 @@
 		<nav class="fixed z-20 w-full px-2">
 			<div
 				class={[
-					'mx-auto max-w-7xl rounded-3xl px-6 transition-all duration-300 lg:px-12',
-					isScrolled && 'bg-background/50 backdrop-blur-2xl'
+					"mx-auto max-w-7xl rounded-3xl px-6 transition-all duration-300 lg:px-12",
+					isScrolled && "bg-background/50 backdrop-blur-2xl",
 				]}
 			>
 				<div
 					class={[
-						'relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4',
-						isScrolled && 'lg:py-4'
+						"relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4",
+						isScrolled && "lg:py-4",
 					]}
 				>
 					<div class="flex w-full items-center justify-between gap-12 lg:w-auto">
@@ -231,16 +237,19 @@
 
 						<button
 							onclick={() => (menuState = !menuState)}
-							aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+							aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 							class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 						>
 							<Menu
-								class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+								class={[
+									"m-auto size-6 duration-200",
+									menuState && "scale-0 rotate-180 opacity-0",
+								]}
 							/>
 							<X
 								class={[
-									'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-									menuState && 'scale-100 rotate-0 opacity-100'
+									"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+									menuState && "scale-100 rotate-0 opacity-100",
 								]}
 							/>
 						</button>
@@ -262,8 +271,8 @@
 					</div>
 					<div
 						class={[
-							'mb-6 w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-							menuState ? 'block lg:flex' : 'hidden lg:flex'
+							"mb-6 w-full  flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+							menuState ? "block lg:flex" : "hidden lg:flex",
 						]}
 					>
 						<div class="lg:hidden">
@@ -280,12 +289,25 @@
 								{/each}
 							</ul>
 						</div>
-						<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-							<Button variant="outline" size="sm" class={cn(isScrolled && 'lg:hidden')} href="#">
+						<div
+							class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+						>
+							<Button
+								variant="outline"
+								size="sm"
+								class={cn(isScrolled && "lg:hidden")}
+								href="#"
+							>
 								Login
 							</Button>
-							<Button href="#" size="sm" class={cn(isScrolled && 'lg:hidden')}>Sign Up</Button>
-							<Button size="sm" href="#" class={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
+							<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+								>Sign Up</Button
+							>
+							<Button
+								size="sm"
+								href="#"
+								class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+							>
 								Get Strated
 							</Button>
 						</div>

@@ -17,9 +17,9 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let count = 0;
-	$: doubled = count * 2;
-	$: quadrupled = doubled * 2;
+  let count = 0;
+  $: doubled = count * 2;
+  $: quadrupled = doubled * 2;
 </script>
 ```
 
@@ -27,9 +27,9 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let count = $state(0);
-	let doubled = $derived(count * 2);
-	let quadrupled = $derived(doubled * 2);
+  let count = $state(0);
+  let doubled = $derived(count * 2);
+  let quadrupled = $derived(doubled * 2);
 </script>
 ```
 
@@ -54,14 +54,14 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let items = $state([]);
-	let filter = $state('all');
+  let items = $state([]);
+  let filter = $state("all");
 
-	let filteredItems = $derived.by(() => {
-		if (filter === 'all') return items;
-		if (filter === 'active') return items.filter((i) => !i.done);
-		return items.filter((i) => i.done);
-	});
+  let filteredItems = $derived.by(() => {
+    if (filter === "all") return items;
+    if (filter === "active") return items.filter((i) => !i.done);
+    return items.filter((i) => i.done);
+  });
 </script>
 ```
 
@@ -71,9 +71,9 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let count = 0;
-	$: console.log('Count changed:', count);
-	$: document.title = `Count: ${count}`;
+  let count = 0;
+  $: console.log("Count changed:", count);
+  $: document.title = `Count: ${count}`;
 </script>
 ```
 
@@ -81,14 +81,14 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let count = $state(0);
+  let count = $state(0);
 
-	$effect(() => {
-		console.log('Count changed:', count);
-	});
-	$effect(() => {
-		document.title = `Count: ${count}`;
-	});
+  $effect(() => {
+    console.log("Count changed:", count);
+  });
+  $effect(() => {
+    document.title = `Count: ${count}`;
+  });
 </script>
 ```
 
@@ -98,10 +98,10 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let value;
-	$: if (value > 100) {
-		alert('Value too high!');
-	}
+  let value;
+  $: if (value > 100) {
+    alert("Value too high!");
+  }
 </script>
 ```
 
@@ -109,13 +109,13 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let value = $state(0);
+  let value = $state(0);
 
-	$effect(() => {
-		if (value > 100) {
-			alert('Value too high!');
-		}
-	});
+  $effect(() => {
+    if (value > 100) {
+      alert("Value too high!");
+    }
+  });
 </script>
 ```
 
@@ -125,9 +125,9 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	export let name;
-	export let count = 0;
-	$: greeting = `Hello, ${name}!`;
+  export let name;
+  export let count = 0;
+  $: greeting = `Hello, ${name}!`;
 </script>
 ```
 
@@ -135,8 +135,8 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let { name, count = 0 } = $props();
-	let greeting = $derived(`Hello, ${name}!`);
+  let { name, count = 0 } = $props();
+  let greeting = $derived(`Hello, ${name}!`);
 </script>
 ```
 
@@ -146,17 +146,17 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	import { onDestroy } from 'svelte';
+  import { onDestroy } from "svelte";
 
-	let count = 0;
-	let interval;
+  let count = 0;
+  let interval;
 
-	$: {
-		clearInterval(interval);
-		interval = setInterval(() => console.log(count), 1000);
-	}
+  $: {
+    clearInterval(interval);
+    interval = setInterval(() => console.log(count), 1000);
+  }
 
-	onDestroy(() => clearInterval(interval));
+  onDestroy(() => clearInterval(interval));
 </script>
 ```
 
@@ -164,12 +164,12 @@ Svelte 5 replaces `$:` with `$derived` (for values) and `$effect` (for side effe
 
 ```svelte
 <script>
-	let count = $state(0);
+  let count = $state(0);
 
-	$effect(() => {
-		const interval = setInterval(() => console.log(count), 1000);
-		return () => clearInterval(interval); // Cleanup built-in
-	});
+  $effect(() => {
+    const interval = setInterval(() => console.log(count), 1000);
+    return () => clearInterval(interval); // Cleanup built-in
+  });
 </script>
 ```
 
@@ -203,12 +203,12 @@ Svelte 5 runes can replace most store use cases with simpler, more direct reacti
 
 ```svelte
 <script>
-	import { writable } from 'svelte/store';
+  import { writable } from "svelte/store";
 
-	const count = writable(0);
-	function increment() {
-		count.update((n) => n + 1);
-	}
+  const count = writable(0);
+  function increment() {
+    count.update((n) => n + 1);
+  }
 </script>
 
 <button on:click={increment}>Count: {$count}</button>
@@ -218,10 +218,10 @@ Svelte 5 runes can replace most store use cases with simpler, more direct reacti
 
 ```svelte
 <script>
-	let count = $state(0);
-	function increment() {
-		count++;
-	}
+  let count = $state(0);
+  function increment() {
+    count++;
+  }
 </script>
 
 <button onclick={increment}>Count: {count}</button>
@@ -232,29 +232,29 @@ Svelte 5 runes can replace most store use cases with simpler, more direct reacti
 **Svelte 4 (stores.ts):**
 
 ```ts
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 export const user = writable(null);
-export const theme = writable('light');
+export const theme = writable("light");
 ```
 
 **Svelte 5 (state.svelte.ts):**
 
 ```ts
 export const user = $state<User | null>(null);
-export const theme = $state({ current: 'light' as 'light' | 'dark' });
+export const theme = $state({ current: "light" as "light" | "dark" });
 
-export function setTheme(newTheme: 'light' | 'dark') {
-	theme.current = newTheme;
+export function setTheme(newTheme: "light" | "dark") {
+  theme.current = newTheme;
 }
 ```
 
 ```svelte
 <script>
-	import { theme, setTheme } from './state.svelte';
+  import { theme, setTheme } from "./state.svelte";
 </script>
 
 <p>Theme: {theme.current}</p>
-<button onclick={() => setTheme('dark')}>Dark Mode</button>
+<button onclick={() => setTheme("dark")}>Dark Mode</button>
 ```
 
 ### Derived Store to $derived
@@ -262,9 +262,12 @@ export function setTheme(newTheme: 'light' | 'dark') {
 **Svelte 4:**
 
 ```ts
-import { writable, derived } from 'svelte/store';
+import { writable, derived } from "svelte/store";
 export const items = writable([]);
-export const completedCount = derived(items, ($items) => $items.filter((i) => i.done).length);
+export const completedCount = derived(
+  items,
+  ($items) => $items.filter((i) => i.done).length
+);
 ```
 
 **Svelte 5:**
@@ -274,14 +277,14 @@ export const completedCount = derived(items, ($items) => $items.filter((i) => i.
 export const items = $state<Item[]>([]);
 
 export function getCompletedCount() {
-	return items.filter((i) => i.done).length;
+  return items.filter((i) => i.done).length;
 }
 ```
 
 ```svelte
 <script>
-	import { items } from './state.svelte';
-	let completedCount = $derived(items.filter((i) => i.done).length);
+  import { items } from "./state.svelte";
+  let completedCount = $derived(items.filter((i) => i.done).length);
 </script>
 ```
 
@@ -291,13 +294,13 @@ export function getCompletedCount() {
 
 ```ts
 function createCounter() {
-	const { subscribe, set, update } = writable(0);
-	return {
-		subscribe,
-		increment: () => update((n) => n + 1),
-		decrement: () => update((n) => n - 1),
-		reset: () => set(0)
-	};
+  const { subscribe, set, update } = writable(0);
+  return {
+    subscribe,
+    increment: () => update((n) => n + 1),
+    decrement: () => update((n) => n - 1),
+    reset: () => set(0),
+  };
 }
 export const counter = createCounter();
 ```
@@ -307,16 +310,16 @@ export const counter = createCounter();
 ```ts
 // counter.svelte.ts
 class Counter {
-	value = $state(0);
-	increment() {
-		this.value++;
-	}
-	decrement() {
-		this.value--;
-	}
-	reset() {
-		this.value = 0;
-	}
+  value = $state(0);
+  increment() {
+    this.value++;
+  }
+  decrement() {
+    this.value--;
+  }
+  reset() {
+    this.value = 0;
+  }
 }
 
 export const counter = new Counter();
@@ -324,7 +327,7 @@ export const counter = new Counter();
 
 ```svelte
 <script>
-	import { counter } from './counter.svelte';
+  import { counter } from "./counter.svelte";
 </script>
 
 <p>{counter.value}</p>
@@ -338,23 +341,23 @@ export const counter = new Counter();
 ```ts
 // api.svelte.ts
 export const state = $state({
-	data: null as Data | null,
-	loading: false,
-	error: null as Error | null
+  data: null as Data | null,
+  loading: false,
+  error: null as Error | null,
 });
 
 export async function fetchData() {
-	state.loading = true;
-	state.error = null;
+  state.loading = true;
+  state.error = null;
 
-	try {
-		const res = await fetch('/api/data');
-		state.data = await res.json();
-	} catch (e) {
-		state.error = e as Error;
-	} finally {
-		state.loading = false;
-	}
+  try {
+    const res = await fetch("/api/data");
+    state.data = await res.json();
+  } catch (e) {
+    state.error = e as Error;
+  } finally {
+    state.loading = false;
+  }
 }
 ```
 

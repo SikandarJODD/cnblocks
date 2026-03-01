@@ -8,8 +8,8 @@
 			<div>
 				<h2 class="text-4xl font-semibold lg:text-5xl">Tailark in numbers</h2>
 				<p class="mt-4 text-lg text-balance text-muted-foreground">
-					Our platform continues to grow with developers and businesses using our tools to create
-					innovative solutions and enhance productivity.
+					Our platform continues to grow with developers and businesses using our tools to
+					create innovative solutions and enhance productivity.
 				</p>
 			</div>
 			<div class="mt-8 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4">

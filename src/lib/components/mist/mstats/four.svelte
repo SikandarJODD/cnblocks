@@ -13,7 +13,8 @@
 				</div>
 				<div class="col-span-2 border-t pt-4 md:border-t-0 md:border-l md:pt-0 md:pl-12">
 					<p class="text-lg text-balance text-muted-foreground">
-						Our platform continues to grow with developers and businesses using productivity.
+						Our platform continues to grow with developers and businesses using
+						productivity.
 					</p>
 				</div>
 			</div>

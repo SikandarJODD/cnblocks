@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
+	import { Button } from "$lib/components/ui/button";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
 </script>
 
 <div class="flex min-h-screen items-center justify-center">
@@ -49,7 +49,7 @@
 				<Button type="submit" class="mt-4 w-full py-2 font-medium">Sign in</Button>
 			</form>
 			<p class="mt-6 text-sm text-muted-foreground dark:text-muted-foreground">
-				Forgot your password?{' '}
+				Forgot your password?{" "}
 				<a
 					href="#"
 					class="font-medium text-primary hover:text-primary/90 dark:text-primary dark:hover:text-primary/90"

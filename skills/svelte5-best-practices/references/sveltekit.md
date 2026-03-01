@@ -29,10 +29,10 @@ SvelteKit has two load function types: universal (`+page.js`) and server-only (`
 ```ts
 // +page.js - DANGEROUS: runs in browser!
 export const load = async ({ fetch }) => {
-	const response = await fetch('https://api.stripe.com/charges', {
-		headers: { Authorization: `Bearer ${STRIPE_SECRET_KEY}` } // EXPOSED!
-	});
-	return { charges: await response.json() };
+  const response = await fetch("https://api.stripe.com/charges", {
+    headers: { Authorization: `Bearer ${STRIPE_SECRET_KEY}` }, // EXPOSED!
+  });
+  return { charges: await response.json() };
 };
 ```
 
@@ -40,13 +40,13 @@ export const load = async ({ fetch }) => {
 
 ```ts
 // +page.server.ts - only runs on server
-import { STRIPE_SECRET_KEY } from '$env/static/private';
+import { STRIPE_SECRET_KEY } from "$env/static/private";
 
 export const load = async ({ fetch }) => {
-	const response = await fetch('https://api.stripe.com/charges', {
-		headers: { Authorization: `Bearer ${STRIPE_SECRET_KEY}` }
-	});
-	return { charges: await response.json() };
+  const response = await fetch("https://api.stripe.com/charges", {
+    headers: { Authorization: `Bearer ${STRIPE_SECRET_KEY}` },
+  });
+  return { charges: await response.json() };
 };
 ```
 
@@ -57,10 +57,10 @@ export const load = async ({ fetch }) => {
 ```ts
 // +page.server.ts
 export const load = async () => {
-	return {
-		formatDate: (date: Date) => date.toLocaleDateString(), // ERROR
-		parser: new DOMParser() // ERROR
-	};
+  return {
+    formatDate: (date: Date) => date.toLocaleDateString(), // ERROR
+    parser: new DOMParser(), // ERROR
+  };
 };
 ```
 
@@ -69,10 +69,10 @@ export const load = async () => {
 ```ts
 // +page.js
 export const load = async () => {
-	return {
-		formatDate: (date: Date) => date.toLocaleDateString(), // OK
-		parser: typeof window !== 'undefined' ? new DOMParser() : null
-	};
+  return {
+    formatDate: (date: Date) => date.toLocaleDateString(), // OK
+    parser: typeof window !== "undefined" ? new DOMParser() : null,
+  };
 };
 ```
 
@@ -80,11 +80,11 @@ export const load = async () => {
 
 ```ts
 // +page.server.ts - CORRECT
-import { db } from '$lib/server/database';
+import { db } from "$lib/server/database";
 
 export const load = async () => {
-	const users = await db.query('SELECT * FROM users');
-	return { users };
+  const users = await db.query("SELECT * FROM users");
+  return { users };
 };
 ```
 
@@ -92,10 +92,10 @@ export const load = async () => {
 
 ```ts
 // +page.server.ts - Private env vars
-import { DATABASE_URL, API_SECRET } from '$env/static/private';
+import { DATABASE_URL, API_SECRET } from "$env/static/private";
 
 // +page.js - Only public env vars
-import { PUBLIC_API_URL } from '$env/static/public';
+import { PUBLIC_API_URL } from "$env/static/public";
 ```
 
 ---
@@ -109,9 +109,9 @@ SvelteKit generates types in `./$types` for full type safety with `$props()`.
 ```svelte
 <!-- +page.svelte -->
 <script lang="ts">
-	import type { PageProps } from './$types';
+  import type { PageProps } from "./$types";
 
-	let { data }: PageProps = $props();
+  let { data }: PageProps = $props();
 </script>
 
 <h1>{data.title}</h1>
@@ -121,17 +121,17 @@ SvelteKit generates types in `./$types` for full type safety with `$props()`.
 
 ```svelte
 <script lang="ts">
-	import type { PageProps } from './$types';
+  import type { PageProps } from "./$types";
 
-	let { data, form }: PageProps = $props();
+  let { data, form }: PageProps = $props();
 </script>
 
 {#if form?.success}
-	<p class="success">{form.message}</p>
+  <p class="success">{form.message}</p>
 {/if}
 
 {#if form?.error}
-	<p class="error">{form.error}</p>
+  <p class="error">{form.error}</p>
 {/if}
 ```
 
@@ -140,13 +140,13 @@ SvelteKit generates types in `./$types` for full type safety with `$props()`.
 ```svelte
 <!-- +layout.svelte -->
 <script lang="ts">
-	import type { LayoutProps } from './$types';
+  import type { LayoutProps } from "./$types";
 
-	let { data, children }: LayoutProps = $props();
+  let { data, children }: LayoutProps = $props();
 </script>
 
 <nav>
-	{#if data.user}<span>Welcome, {data.user.name}</span>{/if}
+  {#if data.user}<span>Welcome, {data.user.name}</span>{/if}
 </nav>
 
 {@render children()}
@@ -156,19 +156,19 @@ SvelteKit generates types in `./$types` for full type safety with `$props()`.
 
 ```ts
 // +page.server.ts
-import type { PageServerLoad, Actions } from './$types';
+import type { PageServerLoad, Actions } from "./$types";
 
 export const load: PageServerLoad = async () => {
-	return {
-		title: 'My Page',
-		items: await fetchItems()
-	};
+  return {
+    title: "My Page",
+    items: await fetchItems(),
+  };
 };
 
 export const actions: Actions = {
-	default: async ({ request }) => {
-		return { success: true, message: 'Saved successfully' };
-	}
+  default: async ({ request }) => {
+    return { success: true, message: "Saved successfully" };
+  },
 };
 ```
 
@@ -177,7 +177,7 @@ export const actions: Actions = {
 ```svelte
 <!-- +error.svelte -->
 <script lang="ts">
-	import { page } from '$app/state';
+  import { page } from "$app/state";
 </script>
 
 <h1>{page.status}: {page.error?.message}</h1>
@@ -194,61 +194,61 @@ SvelteKit distinguishes between validation errors (`fail()`) and unexpected erro
 **WRONG:**
 
 ```ts
-import { error } from '@sveltejs/kit';
+import { error } from "@sveltejs/kit";
 
 export const actions = {
-	default: async ({ request }) => {
-		if (!email?.toString().includes('@')) {
-			throw error(400, 'Invalid email'); // Shows error page!
-		}
-	}
+  default: async ({ request }) => {
+    if (!email?.toString().includes("@")) {
+      throw error(400, "Invalid email"); // Shows error page!
+    }
+  },
 };
 ```
 
 **CORRECT:**
 
 ```ts
-import { fail } from '@sveltejs/kit';
+import { fail } from "@sveltejs/kit";
 
 export const actions = {
-	default: async ({ request }) => {
-		const data = await request.formData();
-		const email = data.get('email')?.toString() ?? '';
+  default: async ({ request }) => {
+    const data = await request.formData();
+    const email = data.get("email")?.toString() ?? "";
 
-		if (!email.includes('@')) {
-			return fail(400, {
-				error: 'Invalid email address',
-				email // Return for repopulation
-			});
-		}
+    if (!email.includes("@")) {
+      return fail(400, {
+        error: "Invalid email address",
+        email, // Return for repopulation
+      });
+    }
 
-		return { success: true };
-	}
+    return { success: true };
+  },
 };
 ```
 
 ### Use throw error() for Unexpected Errors
 
 ```ts
-import { fail, error } from '@sveltejs/kit';
+import { fail, error } from "@sveltejs/kit";
 
 export const actions = {
-	default: async ({ request }) => {
-		const data = await request.formData();
+  default: async ({ request }) => {
+    const data = await request.formData();
 
-		// Validation - use fail()
-		if (!data.get('title')) {
-			return fail(400, { error: 'Title is required' });
-		}
+    // Validation - use fail()
+    if (!data.get("title")) {
+      return fail(400, { error: "Title is required" });
+    }
 
-		try {
-			await database.save(data);
-			return { success: true };
-		} catch (e) {
-			// Unexpected error - use throw
-			throw error(500, 'Unable to save. Please try again later.');
-		}
-	}
+    try {
+      await database.save(data);
+      return { success: true };
+    } catch (e) {
+      // Unexpected error - use throw
+      throw error(500, "Unable to save. Please try again later.");
+    }
+  },
 };
 ```
 
@@ -256,24 +256,25 @@ export const actions = {
 
 ```ts
 interface FormErrors {
-	email?: string;
-	password?: string;
+  email?: string;
+  password?: string;
 }
 
 export const actions = {
-	register: async ({ request }) => {
-		const data = await request.formData();
-		const errors: FormErrors = {};
+  register: async ({ request }) => {
+    const data = await request.formData();
+    const errors: FormErrors = {};
 
-		if (!email) errors.email = 'Email is required';
-		if (password.length < 8) errors.password = 'Password must be at least 8 characters';
+    if (!email) errors.email = "Email is required";
+    if (password.length < 8)
+      errors.password = "Password must be at least 8 characters";
 
-		if (Object.keys(errors).length > 0) {
-			return fail(400, { errors, values: { email } });
-		}
+    if (Object.keys(errors).length > 0) {
+      return fail(400, { errors, values: { email } });
+    }
 
-		return { success: true };
-	}
+    return { success: true };
+  },
 };
 ```
 
@@ -281,21 +282,21 @@ export const actions = {
 
 ```svelte
 <script lang="ts">
-	import type { PageProps } from './$types';
-	import { enhance } from '$app/forms';
+  import type { PageProps } from "./$types";
+  import { enhance } from "$app/forms";
 
-	let { form }: PageProps = $props();
+  let { form }: PageProps = $props();
 </script>
 
 <form method="POST" action="?/register" use:enhance>
-	<label>
-		Email
-		<input name="email" value={form?.values?.email ?? ''} />
-		{#if form?.errors?.email}
-			<span class="error">{form.errors.email}</span>
-		{/if}
-	</label>
-	<button type="submit">Register</button>
+  <label>
+    Email
+    <input name="email" value={form?.values?.email ?? ""} />
+    {#if form?.errors?.email}
+      <span class="error">{form.errors.email}</span>
+    {/if}
+  </label>
+  <button type="submit">Register</button>
 </form>
 ```
 
@@ -324,8 +325,8 @@ Shared server state persists across requests, potentially leaking data between u
 let currentUser = null; // SHARED ACROSS ALL REQUESTS!
 
 export const load = async ({ locals }) => {
-	currentUser = locals.user; // User B overwrites User A
-	return { user: currentUser };
+  currentUser = locals.user; // User B overwrites User A
+  return { user: currentUser };
 };
 ```
 
@@ -333,7 +334,7 @@ export const load = async ({ locals }) => {
 
 ```ts
 export const load = async ({ locals }) => {
-	return { user: locals.user }; // Each request gets its own locals
+  return { user: locals.user }; // Each request gets its own locals
 };
 ```
 
@@ -351,7 +352,7 @@ export const user = $state<User | null>(null); // Server-side singleton!
 ```ts
 // +layout.server.ts
 export const load = async ({ locals }) => {
-	return { user: locals.user };
+  return { user: locals.user };
 };
 ```
 
@@ -362,14 +363,14 @@ export const load = async ({ locals }) => {
 ```ts
 // hooks.server.ts
 export const handle = async ({ event, resolve }) => {
-	event.locals.user = await authenticate(event);
-	event.locals.requestId = crypto.randomUUID();
-	return resolve(event);
+  event.locals.user = await authenticate(event);
+  event.locals.requestId = crypto.randomUUID();
+  return resolve(event);
 };
 
 // +page.server.ts
 export const load = async ({ locals }) => {
-	return { user: locals.user };
+  return { user: locals.user };
 };
 ```
 
@@ -378,16 +379,16 @@ export const load = async ({ locals }) => {
 ```svelte
 <!-- +layout.svelte -->
 <script lang="ts">
-	import { setContext } from 'svelte';
-	import type { LayoutProps } from './$types';
+  import { setContext } from "svelte";
+  import type { LayoutProps } from "./$types";
 
-	let { data, children }: LayoutProps = $props();
+  let { data, children }: LayoutProps = $props();
 
-	setContext('user', {
-		get current() {
-			return data.user;
-		}
-	});
+  setContext("user", {
+    get current() {
+      return data.user;
+    },
+  });
 </script>
 
 {@render children()}
@@ -397,12 +398,12 @@ export const load = async ({ locals }) => {
 
 ```ts
 // stores.svelte.ts
-import { browser } from '$app/environment';
+import { browser } from "$app/environment";
 
 function createClientStore() {
-	if (!browser) return { value: null };
-	const state = $state({ value: null });
-	return state;
+  if (!browser) return { value: null };
+  const state = $state({ value: null });
+  return state;
 }
 
 export const clientState = createClientStore();

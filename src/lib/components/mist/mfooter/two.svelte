@@ -1,84 +1,84 @@
 <script lang="ts">
 	let links = [
 		{
-			group: 'Product',
+			group: "Product",
 			items: [
 				{
-					title: 'Features',
-					href: '#'
+					title: "Features",
+					href: "#",
 				},
 				{
-					title: 'Solution',
-					href: '#'
+					title: "Solution",
+					href: "#",
 				},
 				{
-					title: 'Customers',
-					href: '#'
+					title: "Customers",
+					href: "#",
 				},
 				{
-					title: 'Pricing',
-					href: '#'
+					title: "Pricing",
+					href: "#",
 				},
 				{
-					title: 'Help',
-					href: '#'
+					title: "Help",
+					href: "#",
 				},
 				{
-					title: 'About',
-					href: '#'
-				}
-			]
+					title: "About",
+					href: "#",
+				},
+			],
 		},
 		{
-			group: 'Company',
+			group: "Company",
 			items: [
 				{
-					title: 'About',
-					href: '#'
+					title: "About",
+					href: "#",
 				},
 				{
-					title: 'Careers',
-					href: '#'
+					title: "Careers",
+					href: "#",
 				},
 				{
-					title: 'Blog',
-					href: '#'
+					title: "Blog",
+					href: "#",
 				},
 				{
-					title: 'Press',
-					href: '#'
+					title: "Press",
+					href: "#",
 				},
 				{
-					title: 'Contact',
-					href: '#'
+					title: "Contact",
+					href: "#",
 				},
 				{
-					title: 'Help',
-					href: '#'
-				}
-			]
+					title: "Help",
+					href: "#",
+				},
+			],
 		},
 		{
-			group: 'Legal',
+			group: "Legal",
 			items: [
 				{
-					title: 'Licence',
-					href: '#'
+					title: "Licence",
+					href: "#",
 				},
 				{
-					title: 'Privacy',
-					href: '#'
+					title: "Privacy",
+					href: "#",
 				},
 				{
-					title: 'Cookies',
-					href: '#'
+					title: "Cookies",
+					href: "#",
 				},
 				{
-					title: 'Security',
-					href: '#'
-				}
-			]
-		}
+					title: "Security",
+					href: "#",
+				},
+			],
+		},
 	];
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
 </script>
 
 <section class="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
@@ -51,14 +51,22 @@
 			<div class="mt-6 space-y-6">
 				<div class="space-y-2">
 					<Label for="email" class="block text-sm">Email</Label>
-					<Input type="email" required name="email" id="email" placeholder="name@example.com" />
+					<Input
+						type="email"
+						required
+						name="email"
+						id="email"
+						placeholder="name@example.com"
+					/>
 				</div>
 
 				<Button class="w-full">Send Reset Link</Button>
 			</div>
 
 			<div class="mt-6 text-center">
-				<p class="text-sm text-muted-foreground">We'll send you a link to reset your password.</p>
+				<p class="text-sm text-muted-foreground">
+					We'll send you a link to reset your password.
+				</p>
 			</div>
 		</div>
 

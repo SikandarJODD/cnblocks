@@ -1,17 +1,17 @@
 <script lang="ts">
 	const members = [
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
-			name: 'Meschac Irung',
-			role: 'Frontend Engineer at Acme',
-			bio: 'Passionate about intuitive UIs and web performance. Specializes in React and TypeScript with 5+ years of experience.'
+			avatar: "https://avatars.githubusercontent.com/u/47919550?v=4",
+			name: "Meschac Irung",
+			role: "Frontend Engineer at Acme",
+			bio: "Passionate about intuitive UIs and web performance. Specializes in React and TypeScript with 5+ years of experience.",
 		},
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
-			name: 'Theo Balick',
-			role: 'Founder, CEO - Acme',
-			bio: 'Serial entrepreneur transforming team collaboration. Previously led product at two successful startups.'
-		}
+			avatar: "https://avatars.githubusercontent.com/u/68236786?v=4",
+			name: "Theo Balick",
+			role: "Founder, CEO - Acme",
+			bio: "Serial entrepreneur transforming team collaboration. Previously led product at two successful startups.",
+		},
 	];
 </script>
 
@@ -20,7 +20,8 @@
 		<div class="space-y-4">
 			<h2 class="font-serif text-4xl font-medium text-balance">Meet Our Founders</h2>
 			<p class="text-balance text-muted-foreground">
-				The visionary leaders behind our mission to transform how teams work and collaborate.
+				The visionary leaders behind our mission to transform how teams work and
+				collaborate.
 			</p>
 		</div>
 		<div class="mt-12 grid gap-12 text-sm">

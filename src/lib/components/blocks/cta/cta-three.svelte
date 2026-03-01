@@ -1,6 +1,6 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Mail from '@lucide/svelte/icons/mail';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Mail from "@lucide/svelte/icons/mail";
 </script>
 
 <section class="py-16 md:py-32">
@@ -13,7 +13,9 @@
 				<div
 					class="relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border bg-background pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2 has-[input:focus]:ring-muted"
 				>
-					<Mail class="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
+					<Mail
+						class="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5"
+					/>
 
 					<input
 						placeholder="Your mail address"

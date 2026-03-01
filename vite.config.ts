@@ -1,6 +1,6 @@
-import tailwindcss from '@tailwindcss/vite';
-import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import tailwindcss from "@tailwindcss/vite";
+import { sveltekit } from "@sveltejs/kit/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
@@ -19,6 +19,6 @@ export default defineConfig({
 			// "tabbale",
 			// "@floating-ui/dom",
 			// "@internationalized/date",
-		] // Avoid pre-bundling large deps that break HMR
-	}
+		], // Avoid pre-bundling large deps that break HMR
+	},
 });

@@ -3,8 +3,8 @@
 		<div class="relative z-10 mx-auto max-w-xl space-y-6 text-center">
 			<h2 class="text-4xl font-medium lg:text-5xl">Tailus UI in numbers</h2>
 			<p>
-				Gemini is evolving to be more than just the models. It supports an entire to the APIs and
-				platforms helping developers and businesses innovate.
+				Gemini is evolving to be more than just the models. It supports an entire to the
+				APIs and platforms helping developers and businesses innovate.
 			</p>
 		</div>
 

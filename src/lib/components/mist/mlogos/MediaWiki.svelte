@@ -12,7 +12,14 @@
 	{...rest}
 >
 	<defs id="defs11">
-		<linearGradient id="gradient" x1={0} x2={100} y1={100} y2={0} gradientUnits="userSpaceOnUse">
+		<linearGradient
+			id="gradient"
+			x1={0}
+			x2={100}
+			y1={100}
+			y2={0}
+			gradientUnits="userSpaceOnUse"
+		>
 			<stop id="stop2" offset="0%" stop-color="#0a00b2" />
 			<stop id="stop4" offset="50%" stop-color="red" />
 			<stop id="stop6" offset="100%" stop-color="#fffc00" />

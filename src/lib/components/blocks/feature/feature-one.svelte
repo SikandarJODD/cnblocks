@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { Card, CardContent, CardHeader } from '$lib/components/ui/card';
-	import CardDecorator from './card-decorator.svelte';
-	import Zap from '@lucide/svelte/icons/zap';
-	import Settings2 from '@lucide/svelte/icons/settings-2';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
+	import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
+	import CardDecorator from "./card-decorator.svelte";
+	import Zap from "@lucide/svelte/icons/zap";
+	import Settings2 from "@lucide/svelte/icons/settings-2";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
 </script>
 
 <section class="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
 	<div class="@container mx-auto max-w-5xl px-6">
 		<div class="text-center">
-			<h2 class="text-4xl font-semibold text-balance lg:text-5xl">Built to cover your needs</h2>
+			<h2 class="text-4xl font-semibold text-balance lg:text-5xl">
+				Built to cover your needs
+			</h2>
 			<p class="mt-4">
 				Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.
 			</p>
@@ -28,8 +30,8 @@
 
 				<CardContent>
 					<p class="text-sm">
-						Extensive customization options, allowing you to tailor every aspect to meet your
-						specific needs.
+						Extensive customization options, allowing you to tailor every aspect to meet
+						your specific needs.
 					</p>
 				</CardContent>
 			</Card>
@@ -45,8 +47,8 @@
 
 				<CardContent>
 					<p class="mt-3 text-sm">
-						From design elements to functionality, you have complete control to create a unique and
-						personalized experience.
+						From design elements to functionality, you have complete control to create a
+						unique and personalized experience.
 					</p>
 				</CardContent>
 			</Card>
@@ -62,7 +64,8 @@
 
 				<CardContent>
 					<p class="mt-3 text-sm">
-						Elements to functionality, you have complete control to create a unique experience.
+						Elements to functionality, you have complete control to create a unique
+						experience.
 					</p>
 				</CardContent>
 			</Card>

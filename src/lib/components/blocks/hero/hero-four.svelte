@@ -1,18 +1,18 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 	// Hero Header Component
 
-	import { cn } from '$lib/utils';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
-	import { scrollY } from 'svelte/reactivity/window';
-	import Marquee from '$lib/components/magic/Marquee.svelte';
+	import { cn } from "$lib/utils";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
+	import { scrollY } from "svelte/reactivity/window";
+	import Marquee from "$lib/components/magic/Marquee.svelte";
 
 	let menuItems = [
-		{ name: 'Features', href: '#a' },
-		{ name: 'Solution', href: '#a' },
-		{ name: 'Pricing', href: '#a' },
-		{ name: 'About', href: '#a' }
+		{ name: "Features", href: "#a" },
+		{ name: "Solution", href: "#a" },
+		{ name: "Pricing", href: "#a" },
+		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
 	let isScrolled = $derived.by(() => {
@@ -26,7 +26,7 @@
 		top: 0,
 		right: 90,
 		bottom: 180,
-		left: 270
+		left: 270,
 	};
 
 	type ProgressiveBlurProps = {
@@ -49,8 +49,8 @@
 						Ship 10x Faster with NS
 					</h1>
 					<p class="mt-8 max-w-2xl text-lg text-pretty">
-						Highly customizable components for building modern websites and applications that look
-						and feel the way you mean it.
+						Highly customizable components for building modern websites and applications
+						that look and feel the way you mean it.
 					</p>
 
 					<div
@@ -158,8 +158,12 @@
 						</div>
 					</Marquee>
 
-					<div class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"></div>
-					<div class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"></div>
+					<div
+						class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"
+					></div>
+					<div
+						class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"
+					></div>
 					<!-- <ProgressiveBlur
               class="pointer-events-none absolute left-0 top-0 h-full w-20"
               direction="left"
@@ -171,14 +175,14 @@
               blurIntensity={1}
             /> -->
 					{@render progressiveBlur({
-						direction: 'left',
+						direction: "left",
 						blurIntensity: 1,
-						class: 'pointer-events-none absolute left-0 top-0 h-full w-20'
+						class: "pointer-events-none absolute left-0 top-0 h-full w-20",
 					})}
 					{@render progressiveBlur({
-						direction: 'right',
+						direction: "right",
 						blurIntensity: 1,
-						class: 'pointer-events-none absolute right-0 top-0 h-full w-20'
+						class: "pointer-events-none absolute right-0 top-0 h-full w-20",
 					})}
 				</div>
 			</div>
@@ -230,16 +234,19 @@
 
 						<button
 							onclick={() => (menuState = !menuState)}
-							aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+							aria-label={menuState == true ? "Close Menu" : "Open Menu"}
 							class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 						>
 							<Menu
-								class={['m-auto size-6 duration-200', menuState && 'scale-0 rotate-180 opacity-0']}
+								class={[
+									"m-auto size-6 duration-200",
+									menuState && "scale-0 rotate-180 opacity-0",
+								]}
 							/>
 							<X
 								class={[
-									'absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200',
-									menuState && 'scale-100 rotate-0 opacity-100'
+									"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+									menuState && "scale-100 rotate-0 opacity-100",
 								]}
 							/>
 						</button>
@@ -247,12 +254,14 @@
 
 					<div
 						class={[
-							'mb-6 w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 sm:justify-between md:flex-nowrap lg:m-0 lg:flex  lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent',
-							menuState ? 'block lg:flex' : 'hidden'
+							"mb-6 w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 sm:justify-between md:flex-nowrap lg:m-0 lg:flex  lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent",
+							menuState ? "block lg:flex" : "hidden",
 						]}
 					>
 						<div class="lg:pr-4">
-							<ul class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
+							<ul
+								class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm"
+							>
 								{#each menuItems as item, index}
 									<li>
 										<a
@@ -266,7 +275,9 @@
 							</ul>
 						</div>
 
-						<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+						<div
+							class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+						>
 							<Button variant="outline" size="sm">Login</Button>
 							<Button size="sm">Sign Up</Button>
 						</div>
@@ -278,26 +289,26 @@
 {/snippet}
 
 {#snippet progressiveBlur({
-	direction = 'bottom',
+	direction = "bottom",
 	blurLayers = 8,
-	class: _class = '',
-	blurIntensity = 0.25
+	class: _class = "",
+	blurIntensity = 0.25,
 }: ProgressiveBlurProps)}
 	{@const layers = Math.max(blurLayers, 2)}
 	{@const segmentSize = 1 / (blurLayers + 1)}
-	<div class={cn('relative', _class)}>
+	<div class={cn("relative", _class)}>
 		{#each { length: layers } as _, index}
 			{@const angle = GRADIENT_ANGLES[direction]}
 			{@const gradientStops = [
 				index * segmentSize,
 				(index + 1) * segmentSize,
 				(index + 2) * segmentSize,
-				(index + 3) * segmentSize
+				(index + 3) * segmentSize,
 			].map(
 				(pos, posIndex) =>
 					`rgba(255, 255, 255, ${posIndex === 1 || posIndex === 2 ? 1 : 0}) ${pos * 100}%`
 			)}
-			{@const gradient = `linear-gradient(${angle}deg, ${gradientStops.join(', ')})`}
+			{@const gradient = `linear-gradient(${angle}deg, ${gradientStops.join(", ")})`}
 
 			<div
 				class="pointer-events-none absolute inset-0 rounded-[inherit]"

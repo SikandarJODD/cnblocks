@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DocsCodeBlock from '$lib/web/docs/DocsCodeBlock.svelte';
-	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index';
+	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
+	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
 </script>
 
 <svelte:head>
@@ -112,7 +112,8 @@
 					<h2 class="font-medium text-primary">Add Cursor Rules</h2>
 					<p class="text-sm text-muted-foreground">
 						Create new file in <code
-							class="rounded-sm bg-secondary px-1 py-0.5 font-mono text-primary">.cursor/rules</code
+							class="rounded-sm bg-secondary px-1 py-0.5 font-mono text-primary"
+							>.cursor/rules</code
 						>
 						folder and create new file
 						<code class="rounded-sm bg-secondary px-1 py-0.5 font-mono text-primary"
@@ -201,7 +202,8 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
 					<h2 class="font-medium text-primary">Create jsrepo.json</h2>
 					<p class="text-sm text-muted-foreground">
 						Create a new file in the root of your project named <code
-							class="rounded-sm bg-secondary px-1 py-0.5 font-mono text-primary">jsrepo.json</code
+							class="rounded-sm bg-secondary px-1 py-0.5 font-mono text-primary"
+							>jsrepo.json</code
 						>
 						and add the following code:
 					</p>

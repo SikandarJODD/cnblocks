@@ -1,8 +1,8 @@
 <script>
-	import HeroOne from '$lib/components/mist/mhero/one/hero-one.svelte';
-	import MContentOne from '$lib/components/mist/mcontent/one.svelte';
-	import MFeatureOne from '$lib/components/mist/mfeature/one.svelte';
-	import MCtaOne from '$lib/components/mist/mcta/one.svelte';
+	import HeroOne from "$lib/components/mist/mhero/one/hero-one.svelte";
+	import MContentOne from "$lib/components/mist/mcontent/one.svelte";
+	import MFeatureOne from "$lib/components/mist/mfeature/one.svelte";
+	import MCtaOne from "$lib/components/mist/mcta/one.svelte";
 </script>
 
 <div class="min-h-screen bg-white dark:bg-gray-900">

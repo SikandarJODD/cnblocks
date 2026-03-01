@@ -1,11 +1,11 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Check from '@lucide/svelte/icons/check';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Check from "@lucide/svelte/icons/check";
 	let list = [
-		'First premium advantage',
-		'Second advantage weekly',
-		'Third advantage donate to project',
-		'Fourth, access to all components weekly'
+		"First premium advantage",
+		"Second advantage weekly",
+		"Third advantage donate to project",
+		"Fourth, access to all components weekly",
 	];
 </script>
 
@@ -33,7 +33,8 @@
 						</div>
 
 						<p class="mt-12 text-sm text-muted-foreground">
-							Includes : Security, Unlimited Storage, Payment, Search engine, and all features
+							Includes : Security, Unlimited Storage, Payment, Search engine, and all
+							features
 						</p>
 					</div>
 					<div class="relative">
@@ -46,8 +47,8 @@
 							{/each}
 						</ul>
 						<p class="mt-6 text-sm text-muted-foreground">
-							Team can be any size, and you can add or switch members as needed. Companies using our
-							platform include:
+							Team can be any size, and you can add or switch members as needed.
+							Companies using our platform include:
 						</p>
 						<div class="mt-12 flex flex-wrap items-center justify-between gap-6">
 							<img

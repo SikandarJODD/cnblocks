@@ -1,22 +1,22 @@
 <script module lang="ts">
-	import type { WithElementRef } from 'bits-ui';
-	import { type VariantProps, tv } from 'tailwind-variants';
+	import type { WithElementRef } from "bits-ui";
+	import { type VariantProps, tv } from "tailwind-variants";
 
 	export const cardVariants = tv({
-		base: 'bg-card text-card-foreground rounded-xl border',
+		base: "rounded-xl border bg-card text-card-foreground",
 		variants: {
 			variant: {
-				default: 'bg-card text-card-foreground rounded-xl border shadow-sm',
-				soft: 'bg-foreground/5 dark:bg-foreground/5 border-none',
-				mixed: 'bg-foreground/5 border border-foreground.5'
-			}
+				default: "rounded-xl border bg-card text-card-foreground shadow-sm",
+				soft: "border-none bg-foreground/5 dark:bg-foreground/5",
+				mixed: "border-foreground.5 border bg-foreground/5",
+			},
 		},
 		defaultVariants: {
-			variant: 'default'
-		}
+			variant: "default",
+		},
 	});
 
-	export type CardVariant = VariantProps<typeof cardVariants>['variant'];
+	export type CardVariant = VariantProps<typeof cardVariants>["variant"];
 
 	export type CardProps = WithElementRef<HTMLAttributes<HTMLDivElement>> & {
 		variant?: CardVariant;
@@ -24,14 +24,14 @@
 </script>
 
 <script lang="ts">
-	import type { HTMLAttributes } from 'svelte/elements';
-	import { cn } from '$lib/utils.js';
+	import type { HTMLAttributes } from "svelte/elements";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),
 		class: className,
 		children,
-		variant = 'default',
+		variant = "default",
 		...restProps
 	}: CardProps = $props();
 </script>

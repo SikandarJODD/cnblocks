@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Linkedin, Twitter, Youtube } from '@lucide/svelte';
-	import type { Component } from 'svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Linkedin, Twitter, Youtube } from "@lucide/svelte";
+	import type { Component } from "svelte";
 
-	type SocialMedia = 'twitter' | 'linkedin' | 'youtube';
+	type SocialMedia = "twitter" | "linkedin" | "youtube";
 
 	type SocialItem = {
 		id: SocialMedia;
@@ -13,23 +13,23 @@
 	};
 
 	const socials: SocialItem[] = [
-		{ id: 'twitter', label: 'Twitter', href: '#', icon: Twitter },
-		{ id: 'linkedin', label: 'LinkedIn', href: '#', icon: Linkedin },
-		{ id: 'youtube', label: 'YouTube', href: '#', icon: Youtube }
+		{ id: "twitter", label: "Twitter", href: "#", icon: Twitter },
+		{ id: "linkedin", label: "LinkedIn", href: "#", icon: Linkedin },
+		{ id: "youtube", label: "YouTube", href: "#", icon: Youtube },
 	];
 
 	let hoveredSocialMedia = $state<SocialMedia | null>(null);
 
 	const tooltipLabel = $derived.by(() => {
-		switch (hoveredSocialMedia ?? 'twitter') {
-			case 'twitter':
-				return 'Follow us on Twitter';
-			case 'linkedin':
-				return 'Follow us on LinkedIn';
-			case 'youtube':
-				return 'Follow us on YouTube';
+		switch (hoveredSocialMedia ?? "twitter") {
+			case "twitter":
+				return "Follow us on Twitter";
+			case "linkedin":
+				return "Follow us on LinkedIn";
+			case "youtube":
+				return "Follow us on YouTube";
 			default:
-				return 'Follow us';
+				return "Follow us";
 		}
 	});
 </script>
@@ -44,9 +44,9 @@
 				referrerpolicy="no-referrer"
 				size="icon"
 				variant="ghost"
-				aria-label={'Follow us on ' + item.label}
+				aria-label={"Follow us on " + item.label}
 				aria-pressed={hoveredSocialMedia === item.id}
-				class={hoveredSocialMedia === item.id ? 'text-foreground' : ''}
+				class={hoveredSocialMedia === item.id ? "text-foreground" : ""}
 				onmouseenter={() => (hoveredSocialMedia = item.id)}
 				onmouseleave={() => (hoveredSocialMedia = null)}
 				onfocus={() => (hoveredSocialMedia = item.id)}

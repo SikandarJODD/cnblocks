@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { ChevronRight, Mail } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { ChevronRight, Mail } from "@lucide/svelte";
 
 	type Props = {
 		title?: string;
@@ -11,11 +11,11 @@
 	};
 
 	let {
-		title = 'Stay in the Loop',
-		description = 'Get the latest updates, tips, and exclusive offers delivered straight to your inbox.',
-		emailPlaceholder = 'Enter your email',
-		subscribeLabel = 'Subscribe',
-		subscribeHref = '#link'
+		title = "Stay in the Loop",
+		description = "Get the latest updates, tips, and exclusive offers delivered straight to your inbox.",
+		emailPlaceholder = "Enter your email",
+		subscribeLabel = "Subscribe",
+		subscribeHref = "#link",
 	}: Props = $props();
 </script>
 
@@ -31,7 +31,9 @@
 				<div
 					class="relative flex flex-1 items-center overflow-hidden rounded-md border border-transparent ring ring-input not-dark:bg-card focus-within:border-primary focus-within:ring-[3px] focus-within:ring-ring/15"
 				>
-					<Mail class="pointer-events-none absolute left-2.5 size-3.5 text-muted-foreground" />
+					<Mail
+						class="pointer-events-none absolute left-2.5 size-3.5 text-muted-foreground"
+					/>
 					<input
 						type="email"
 						placeholder={emailPlaceholder}

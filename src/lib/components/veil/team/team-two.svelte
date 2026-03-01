@@ -1,20 +1,20 @@
 <script lang="ts">
 	const members = [
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
-			name: 'Meschac Irung',
-			role: 'Frontend Engineer at Acme'
+			avatar: "https://avatars.githubusercontent.com/u/47919550?v=4",
+			name: "Meschac Irung",
+			role: "Frontend Engineer at Acme",
 		},
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
-			name: 'Theo Balick',
-			role: 'Founder, CEO - Acme'
+			avatar: "https://avatars.githubusercontent.com/u/68236786?v=4",
+			name: "Theo Balick",
+			role: "Founder, CEO - Acme",
 		},
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/12345678?v=4',
-			name: 'Sarah Johnson',
-			role: 'DevOps Engineer'
-		}
+			avatar: "https://avatars.githubusercontent.com/u/12345678?v=4",
+			name: "Sarah Johnson",
+			role: "DevOps Engineer",
+		},
 	];
 </script>
 
@@ -23,10 +23,13 @@
 		<div class="space-y-4">
 			<h2 class="font-serif text-4xl font-medium text-balance">Meet Our Founders</h2>
 			<p class="text-balance text-muted-foreground">
-				The visionary leaders behind our mission to transform how teams work and collaborate.
+				The visionary leaders behind our mission to transform how teams work and
+				collaborate.
 			</p>
 		</div>
-		<div class="mt-12 grid grid-cols-2 gap-3 gap-y-6 text-sm @xl:grid-cols-3 @xl:gap-6 @xl:gap-12">
+		<div
+			class="mt-12 grid grid-cols-2 gap-3 gap-y-6 text-sm @xl:grid-cols-3 @xl:gap-6 @xl:gap-12"
+		>
 			{#each members as member, index}
 				<div class="flex flex-col gap-4">
 					<div

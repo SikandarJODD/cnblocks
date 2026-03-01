@@ -13,53 +13,53 @@
 				<div class="pb-6">
 					<h3 class="font-medium">What is the refund policy?</h3>
 					<p class="mt-4 text-muted-foreground">
-						We offer a 30-day money back guarantee. If you are not satisfied with our product, you
-						can request a refund within 30 days of your purchase.
+						We offer a 30-day money back guarantee. If you are not satisfied with our
+						product, you can request a refund within 30 days of your purchase.
 					</p>
 
 					<ol class="list-outside list-decimal space-y-2 pl-4">
 						<li class="mt-4 text-muted-foreground">
-							To request a refund, please contact our support team with your order number and reason
-							for the refund.
+							To request a refund, please contact our support team with your order
+							number and reason for the refund.
 						</li>
 						<li class="mt-4 text-muted-foreground">
 							Refunds will be processed within 3-5 business days.
 						</li>
 						<li class="mt-4 text-muted-foreground">
-							Please note that refunds are only available for new customers and are limited to one
-							per customer.
+							Please note that refunds are only available for new customers and are
+							limited to one per customer.
 						</li>
 					</ol>
 				</div>
 				<div class="py-6">
 					<h3 class="font-medium">How do I cancel my subscription?</h3>
 					<p class="mt-4 text-muted-foreground">
-						You can cancel your subscription at any time by logging into your account and clicking
-						on the cancel button.
+						You can cancel your subscription at any time by logging into your account
+						and clicking on the cancel button.
 					</p>
 				</div>
 				<div class="py-6">
 					<h3 class="font-medium">Can I upgrade my plan?</h3>
 					<p class="my-4 text-muted-foreground">
-						Yes, you can upgrade your plan at any time by logging into your account and selecting
-						the plan you want to upgrade to.
+						Yes, you can upgrade your plan at any time by logging into your account and
+						selecting the plan you want to upgrade to.
 					</p>
 					<ul class="list-outside list-disc space-y-2 pl-4">
 						<li class="text-muted-foreground">
-							You will be charged the difference in price between your current plan and the plan you
-							are upgrading to.
+							You will be charged the difference in price between your current plan
+							and the plan you are upgrading to.
 						</li>
 						<li class="text-muted-foreground">
-							Your new plan will take effect immediately and you will be billed at the new rate on
-							your next billing cycle.
+							Your new plan will take effect immediately and you will be billed at the
+							new rate on your next billing cycle.
 						</li>
 					</ul>
 				</div>
 				<div class="py-6">
 					<h3 class="font-medium">Do you offer phone support?</h3>
 					<p class="mt-4 text-muted-foreground">
-						We do not offer phone support at this time. However, you can contact us via email or
-						live chat for any questions or concerns you may have.
+						We do not offer phone support at this time. However, you can contact us via
+						email or live chat for any questions or concerns you may have.
 					</p>
 				</div>
 			</div>

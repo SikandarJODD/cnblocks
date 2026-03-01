@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import * as ScrollArea from '$lib/components/ui/scroll-area';
-	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
-	import { veilSidebarConfig } from '$lib/config/veil-sidebar';
-	import { cn } from '$lib/utils.js';
-	import type { ComponentProps } from 'svelte';
+	import { page } from "$app/state";
+	import * as ScrollArea from "$lib/components/ui/scroll-area";
+	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import { veilSidebarConfig } from "$lib/config/veil-sidebar";
+	import { cn } from "$lib/utils.js";
+	import type { ComponentProps } from "svelte";
 
 	let {
 		ref = $bindable(null),
@@ -16,10 +16,10 @@
 	const hash = $derived(page.url.hash);
 
 	const splitHref = (href: string) => {
-		const [path, rawHash] = href.split('#');
+		const [path, rawHash] = href.split("#");
 		return {
-			path: path || '/',
-			hash: rawHash ? `#${rawHash}` : ''
+			path: path || "/",
+			hash: rawHash ? `#${rawHash}` : "",
 		};
 	};
 
@@ -34,7 +34,7 @@
 	};
 </script>
 
-<Sidebar.Root {...restProps} bind:ref class={cn('top-16', className)}>
+<Sidebar.Root {...restProps} bind:ref class={cn("top-16", className)}>
 	<Sidebar.Content class="overflow-hidden">
 		<ScrollArea.Root class="h-full" scrollbarYClasses="hidden">
 			<div class="space-y-3">

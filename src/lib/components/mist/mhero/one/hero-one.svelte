@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import CirclePlay from '@lucide/svelte/icons/circle-play';
-	import Header from './header.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import CirclePlay from "@lucide/svelte/icons/circle-play";
+	import Header from "./header.svelte";
 </script>
 
 <Header />
@@ -16,7 +16,8 @@
 							Simple payments for startups
 						</h1>
 						<p class="my-8 max-w-2xl text-xl text-balance text-muted-foreground">
-							One tool that does it all. Search, generate, analyze, and chat—right inside Tailark.
+							One tool that does it all. Search, generate, analyze, and chat—right
+							inside Tailark.
 						</p>
 
 						<div class="flex items-center gap-3">

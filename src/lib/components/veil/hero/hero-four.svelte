@@ -1,6 +1,6 @@
 <script lang="ts">
-	import HeaderFour from '$lib/components/veil/header/header-four.svelte';
-	import { Button } from '$lib/components/ui/veil/button';
+	import HeaderFour from "$lib/components/veil/header/header-four.svelte";
+	import { Button } from "$lib/components/ui/veil/button";
 	import {
 		AudioLines,
 		ChevronRight,
@@ -11,8 +11,8 @@
 		Paperclip,
 		Plus,
 		ShoppingBag,
-		Telescope
-	} from '@lucide/svelte';
+		Telescope,
+	} from "@lucide/svelte";
 </script>
 
 <HeaderFour />
@@ -86,7 +86,9 @@
 							class="mt-auto flex h-fit justify-between gap-3 rounded-full bg-card p-2 shadow-xs shadow-foreground/6.5 ring-1 ring-border dark:shadow-black/6.5"
 						>
 							<div class="flex items-center gap-2">
-								<div class="flex size-9 cursor-pointer rounded-full bg-muted *:m-auto *:size-4">
+								<div
+									class="flex size-9 cursor-pointer rounded-full bg-muted *:m-auto *:size-4"
+								>
 									<Plus />
 								</div>
 								<div class="text-sm text-muted-foreground">Ask anything...</div>

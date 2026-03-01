@@ -2,10 +2,12 @@
 	<div class="mx-auto grid max-w-2xl px-6 @2xl:grid-cols-2">
 		<div>
 			<div class="space-y-4">
-				<h2 class="font-serif text-4xl font-medium text-balance">Trusted by Teams Worldwide</h2>
+				<h2 class="font-serif text-4xl font-medium text-balance">
+					Trusted by Teams Worldwide
+				</h2>
 				<p class="text-balance text-muted-foreground">
-					Our platform delivers measurable results that help businesses scale faster and work
-					smarter.
+					Our platform delivers measurable results that help businesses scale faster and
+					work smarter.
 				</p>
 			</div>
 			<div class="mt-12 grid text-sm">

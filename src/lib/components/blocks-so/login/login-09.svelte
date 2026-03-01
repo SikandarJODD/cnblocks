@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Card, CardContent, CardFooter, CardHeader } from '$lib/components/ui/card';
-	import { Checkbox } from '$lib/components/ui/checkbox';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { Select, SelectContent, SelectItem, SelectTrigger } from '$lib/components/ui/select';
-	import { BarChart, Code, Eye, EyeOff, User } from '@lucide/svelte';
-	import LogoIcon from './logo-icon.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Card, CardContent, CardFooter, CardHeader } from "$lib/components/ui/card";
+	import { Checkbox } from "$lib/components/ui/checkbox";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { Select, SelectContent, SelectItem, SelectTrigger } from "$lib/components/ui/select";
+	import { BarChart, Code, Eye, EyeOff, User } from "@lucide/svelte";
+	import LogoIcon from "./logo-icon.svelte";
 
 	let showPassword = $state(false);
 </script>
@@ -74,7 +74,11 @@
 				<div class="space-y-2">
 					<Label for="password">Password</Label>
 					<div class="relative">
-						<Input id="password" type={showPassword ? 'text' : 'password'} class="pr-10" />
+						<Input
+							id="password"
+							type={showPassword ? "text" : "password"}
+							class="pr-10"
+						/>
 						<Button
 							type="button"
 							variant="ghost"
@@ -94,18 +98,20 @@
 				<div class="flex items-center space-x-2">
 					<Checkbox id="terms" />
 					<label for="terms" class="text-sm text-muted-foreground">
-						I agree to the{' '}
-						<a href="#" class="text-primary hover:underline"> Terms </a>{' '}
-						and{' '}
+						I agree to the{" "}
+						<a href="#" class="text-primary hover:underline"> Terms </a>{" "}
+						and{" "}
 						<a href="#" class="text-primary hover:underline"> Conditions </a>
 					</label>
 				</div>
 
-				<Button class="w-full bg-primary text-primary-foreground">Create free account</Button>
+				<Button class="w-full bg-primary text-primary-foreground"
+					>Create free account</Button
+				>
 			</CardContent>
 			<CardFooter class="flex justify-center border-t py-4!">
 				<p class="text-center text-sm text-muted-foreground">
-					Already have an account?{' '}
+					Already have an account?{" "}
 					<a href="#" class="text-primary hover:underline"> Sign in </a>
 				</p>
 			</CardFooter>

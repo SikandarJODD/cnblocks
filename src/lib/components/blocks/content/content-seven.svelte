@@ -1,6 +1,6 @@
 <script>
-	import Zap from '@lucide/svelte/icons/zap';
-	import Cpu from '@lucide/svelte/icons/cpu';
+	import Zap from "@lucide/svelte/icons/zap";
+	import Cpu from "@lucide/svelte/icons/cpu";
 </script>
 
 <section class="py-16 md:py-32">
@@ -12,12 +12,13 @@
 			<div class="relative space-y-4">
 				<p class="text-muted-foreground">
 					Gemini is evolving to be more than just the models. <span
-						class="font-bold text-accent-foreground">It supports an entire ecosystem</span
+						class="font-bold text-accent-foreground"
+						>It supports an entire ecosystem</span
 					> — from products innovate.
 				</p>
 				<p class="text-muted-foreground">
-					It supports an entire ecosystem — from products to the APIs and platforms helping
-					developers and businesses innovate
+					It supports an entire ecosystem — from products to the APIs and platforms
+					helping developers and businesses innovate
 				</p>
 
 				<div class="grid grid-cols-2 gap-3 pt-6 sm:gap-4">

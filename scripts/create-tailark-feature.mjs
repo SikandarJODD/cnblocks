@@ -1,34 +1,34 @@
-import { mkdir, writeFile } from 'node:fs/promises';
-import path from 'node:path';
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
 
 const [, , rawName, rawCount] = process.argv;
 const MAX_COMPONENT_COUNT = 10;
 const NUMBER_WORDS = [
-	'one',
-	'two',
-	'three',
-	'four',
-	'five',
-	'six',
-	'seven',
-	'eight',
-	'nine',
-	'ten'
+	"one",
+	"two",
+	"three",
+	"four",
+	"five",
+	"six",
+	"seven",
+	"eight",
+	"nine",
+	"ten",
 ];
 
 function usage() {
-	console.error('Usage: npm run create:veil -- <name> <count>');
-	console.error('Example: npm run create:veil -- feature 30');
+	console.error("Usage: npm run create:veil -- <name> <count>");
+	console.error("Example: npm run create:veil -- feature 30");
 }
 
 function normalizeName(input) {
 	return input
 		.trim()
 		.toLowerCase()
-		.replace(/[\s_]+/g, '-')
-		.replace(/[^a-z0-9-]/g, '')
-		.replace(/-+/g, '-')
-		.replace(/^-+|-+$/g, '');
+		.replace(/[\s_]+/g, "-")
+		.replace(/[^a-z0-9-]/g, "")
+		.replace(/-+/g, "-")
+		.replace(/^-+|-+$/g, "");
 }
 
 function parseCount(input) {
@@ -53,7 +53,7 @@ async function main() {
 
 	const normalizedName = normalizeName(rawName);
 	if (!normalizedName) {
-		console.error('Error: name is invalid after normalization.');
+		console.error("Error: name is invalid after normalization.");
 		usage();
 		process.exitCode = 1;
 		return;
@@ -61,7 +61,7 @@ async function main() {
 
 	const count = parseCount(rawCount);
 	if (count === null) {
-		console.error('Error: count must be a positive integer.');
+		console.error("Error: count must be a positive integer.");
 		usage();
 		process.exitCode = 1;
 		return;
@@ -73,7 +73,7 @@ async function main() {
 		);
 	}
 
-	const tailarkBaseDir = path.join('src', 'lib', 'components', 'veil');
+	const tailarkBaseDir = path.join("src", "lib", "components", "veil");
 	const targetDir = path.join(tailarkBaseDir, normalizedName);
 	await mkdir(targetDir, { recursive: true });
 
@@ -85,10 +85,10 @@ async function main() {
 		const filePath = path.join(targetDir, fileName);
 
 		try {
-			await writeFile(filePath, '', { flag: 'wx' });
+			await writeFile(filePath, "", { flag: "wx" });
 			created += 1;
 		} catch (error) {
-			if (error && typeof error === 'object' && 'code' in error && error.code === 'EEXIST') {
+			if (error && typeof error === "object" && "code" in error && error.code === "EEXIST") {
 				skipped += 1;
 				continue;
 			}
@@ -96,7 +96,7 @@ async function main() {
 		}
 	}
 
-	console.log('Tailark feature generation complete.');
+	console.log("Tailark feature generation complete.");
 	console.log(`Requested name: ${rawName}`);
 	console.log(`Normalized name: ${normalizedName}`);
 	console.log(`Target folder: ${targetDir}`);
@@ -107,7 +107,7 @@ async function main() {
 }
 
 main().catch((error) => {
-	console.error('Generation failed.');
+	console.error("Generation failed.");
 	console.error(error instanceof Error ? error.message : String(error));
 	process.exitCode = 1;
 });

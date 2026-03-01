@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Bolt as Logo } from '$lib/svgs/index';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
-	import { Input } from '$lib/components/ui/veil/input';
-	import { Label } from '$lib/components/ui/label';
+	import { Bolt as Logo } from "$lib/svgs/index";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
+	import { Input } from "$lib/components/ui/veil/input";
+	import { Label } from "$lib/components/ui/label";
 </script>
 
 <section class="flex grid min-h-screen grid-rows-[auto_1fr] bg-background px-4">
@@ -28,7 +28,13 @@
 			<form action="" class="space-y-5">
 				<div class="space-y-3">
 					<Label for="email" class="text-sm">Email</Label>
-					<Input type="email" id="email" name="email" placeholder="you@example.com" required />
+					<Input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="you@example.com"
+						required
+					/>
 				</div>
 
 				<div class="space-y-3">

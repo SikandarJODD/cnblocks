@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
-	import Quote from '@lucide/svelte/icons/quote';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import Quote from "@lucide/svelte/icons/quote";
 </script>
 
 <section>
@@ -10,9 +10,9 @@
 				<Quote class="mx-auto size-8 fill-background stroke-background drop-shadow-sm" />
 				<blockquote class="mt-6">
 					<p class="text-xl text-foreground">
-						Using Tailark has been like unlocking a secret design superpower. It's the perfect
-						fusion of simplicity and versatility, enabling us to create UIs that are as stunning as
-						they are user-friendly.
+						Using Tailark has been like unlocking a secret design superpower. It's the
+						perfect fusion of simplicity and versatility, enabling us to create UIs that
+						are as stunning as they are user-friendly.
 					</p>
 					<footer class="mt-6 flex flex-col items-center justify-center">
 						<Avatar class=" size-12 border border-transparent shadow ring-1">

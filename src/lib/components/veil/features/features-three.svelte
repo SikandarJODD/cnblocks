@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { ChevronRight, Cloud, Cpu, Shield } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { cn } from '$lib/utils';
-	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from '$lib/svgs/index';
+	import { ChevronRight, Cloud, Cpu, Shield } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { cn } from "$lib/utils";
+	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "$lib/svgs/index";
 
 	type Feature =
-		| 'seamless-integrations'
-		| 'real-time-sync'
-		| 'developer-first'
-		| 'enterprise-ready';
+		| "seamless-integrations"
+		| "real-time-sync"
+		| "developer-first"
+		| "enterprise-ready";
 
-	let feature = $state<Feature>('seamless-integrations');
+	let feature = $state<Feature>("seamless-integrations");
 </script>
 
 <section class="@container bg-background py-24">
@@ -31,8 +31,8 @@
 			<div class="mt-16 *:w-full *:cursor-pointer">
 				<button
 					type="button"
-					onclick={() => (feature = 'seamless-integrations')}
-					data-selected={feature === 'seamless-integrations'}
+					onclick={() => (feature = "seamless-integrations")}
+					data-selected={feature === "seamless-integrations"}
 					class="flex items-center gap-3 py-2 text-sm not-data-[selected=true]:text-muted-foreground not-data-[selected=true]:hover:text-foreground"
 				>
 					<div class="flex size-4 items-center -space-x-2">
@@ -45,8 +45,8 @@
 				</button>
 				<button
 					type="button"
-					onclick={() => (feature = 'real-time-sync')}
-					data-selected={feature === 'real-time-sync'}
+					onclick={() => (feature = "real-time-sync")}
+					data-selected={feature === "real-time-sync"}
 					class="flex items-center gap-3 py-2 text-sm not-data-[selected=true]:text-muted-foreground not-data-[selected=true]:hover:text-foreground"
 				>
 					<Cloud class="size-4" />
@@ -56,8 +56,8 @@
 				</button>
 				<button
 					type="button"
-					onclick={() => (feature = 'developer-first')}
-					data-selected={feature === 'developer-first'}
+					onclick={() => (feature = "developer-first")}
+					data-selected={feature === "developer-first"}
 					class="flex items-center gap-3 py-2 text-sm not-data-[selected=true]:text-muted-foreground not-data-[selected=true]:hover:text-foreground"
 				>
 					<Cpu class="size-4" />
@@ -67,8 +67,8 @@
 				</button>
 				<button
 					type="button"
-					onclick={() => (feature = 'enterprise-ready')}
-					data-selected={feature === 'enterprise-ready'}
+					onclick={() => (feature = "enterprise-ready")}
+					data-selected={feature === "enterprise-ready"}
 					class="flex items-center gap-3 py-2 text-sm not-data-[selected=true]:text-muted-foreground not-data-[selected=true]:hover:text-foreground"
 				>
 					<Shield class="size-4" />
@@ -84,10 +84,11 @@
 			<div
 				aria-hidden
 				class={cn(
-					'absolute inset-0 grid grid-cols-4 mask-y-from-65% duration-300 *:bg-linear-to-r *:to-muted not-dark:opacity-50 dark:*:to-foreground/2',
-					feature === 'seamless-integrations' && 'grid-cols-1 grid-rows-12 *:bg-linear-to-t',
-					feature === 'developer-first' && 'grid-cols-2 *:bg-linear-to-l dark:opacity-50',
-					feature === 'real-time-sync' && '*:opacity-35'
+					"absolute inset-0 grid grid-cols-4 mask-y-from-65% duration-300 *:bg-linear-to-r *:to-muted not-dark:opacity-50 dark:*:to-foreground/2",
+					feature === "seamless-integrations" &&
+						"grid-cols-1 grid-rows-12 *:bg-linear-to-t",
+					feature === "developer-first" && "grid-cols-2 *:bg-linear-to-l dark:opacity-50",
+					feature === "real-time-sync" && "*:opacity-35"
 				)}
 			>
 				<div></div>
@@ -95,11 +96,11 @@
 				<div></div>
 				<div></div>
 			</div>
-			{#if feature === 'seamless-integrations'}
+			{#if feature === "seamless-integrations"}
 				{@render IntegrationsIllustration()}
-			{:else if feature === 'real-time-sync'}
+			{:else if feature === "real-time-sync"}
 				{@render RealTimeIllustration()}
-			{:else if feature === 'developer-first'}
+			{:else if feature === "developer-first"}
 				{@render DeveloperIllustration()}
 			{:else}
 				{@render EnterpriseIllustration()}
@@ -179,7 +180,10 @@
 {/snippet}
 
 {#snippet DeveloperIllustration()}
-	<div aria-hidden class="flex h-44 justify-between pt-12 pb-6 *:h-full *:w-px *:bg-foreground/15">
+	<div
+		aria-hidden
+		class="flex h-44 justify-between pt-12 pb-6 *:h-full *:w-px *:bg-foreground/15"
+	>
 		<div></div>
 		<div></div>
 		<div></div>

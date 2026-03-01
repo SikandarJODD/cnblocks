@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { SVGAttributes } from 'svelte/elements';
+	import type { SVGAttributes } from "svelte/elements";
 
-	type ClerkVariant = 'dark' | 'light';
+	type ClerkVariant = "dark" | "light";
 
-	let { variant = 'dark', ...props }: { variant?: ClerkVariant } & SVGAttributes<SVGSVGElement> =
+	let { variant = "dark", ...props }: { variant?: ClerkVariant } & SVGAttributes<SVGSVGElement> =
 		$props();
 </script>
 
 <svg {...props} fill="none" viewBox="0 0 128 128">
-	{#if variant === 'dark'}
+	{#if variant === "dark"}
 		<circle cx="64" cy="64" r="20" fill="#fff" />
 		<path
 			fill="#fff"

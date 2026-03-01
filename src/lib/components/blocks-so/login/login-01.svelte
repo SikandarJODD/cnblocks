@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { Separator } from '$lib/components/ui/separator';
-	import GoogleIcon from './google-icon.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { Separator } from "$lib/components/ui/separator";
+	import GoogleIcon from "./google-icon.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center">
 	<div class="flex flex-1 flex-col justify-center px-4 py-10 lg:px-6">
 		<div class="sm:mx-auto sm:w-full sm:max-w-sm">
-			<h2 class="text-center text-xl font-semibold text-foreground">Log in or create account</h2>
+			<h2 class="text-center text-xl font-semibold text-foreground">
+				Log in or create account
+			</h2>
 			<form action="#" method="post" class="mt-6">
 				<Label for="email" class="font-medium text-foreground">Email</Label>
 				<Input
@@ -32,7 +34,10 @@
 				</div>
 			</div>
 
-			<Button variant="outline" class="inline-flex w-full items-center justify-center space-x-2">
+			<Button
+				variant="outline"
+				class="inline-flex w-full items-center justify-center space-x-2"
+			>
 				<a href="#">
 					<GoogleIcon class="size-5" aria-hidden={true} />
 					<span class="text-sm font-medium">Sign in with Google</span>
@@ -40,9 +45,9 @@
 			</Button>
 
 			<p class="mt-4 text-xs text-muted-foreground">
-				By signing in, you agree to our{' '}
-				<a href="#" class="underline underline-offset-4"> terms of service </a>{' '}
-				and{' '}
+				By signing in, you agree to our{" "}
+				<a href="#" class="underline underline-offset-4"> terms of service </a>{" "}
+				and{" "}
 				<a href="#" class="underline underline-offset-4"> privacy policy </a>
 				.
 			</p>

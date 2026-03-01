@@ -1,29 +1,31 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { mode, resetMode, setMode } from 'mode-watcher';
-	import { Monitor, Moon, Sun } from '@lucide/svelte';
-	import { fade, fly, scale } from 'svelte/transition';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { mode, resetMode, setMode } from "mode-watcher";
+	import { Monitor, Moon, Sun } from "@lucide/svelte";
+	import { fade, fly, scale } from "svelte/transition";
 
-	type ThemeOption = 'system' | 'light' | 'dark';
+	type ThemeOption = "system" | "light" | "dark";
 
 	let hoveredTheme = $state<ThemeOption | null>(null);
 
 	const selectedTheme = $derived.by<ThemeOption>(() => {
 		const current = mode.current;
-		return current === 'light' || current === 'dark' || current === 'system' ? current : 'system';
+		return current === "light" || current === "dark" || current === "system"
+			? current
+			: "system";
 	});
 
 	const activeTheme = $derived(hoveredTheme ?? selectedTheme);
 
 	const tooltipLabel = $derived.by(() => {
 		switch (activeTheme) {
-			case 'light':
-				return 'Switch to light theme';
-			case 'dark':
-				return 'Switch to dark theme';
-			case 'system':
+			case "light":
+				return "Switch to light theme";
+			case "dark":
+				return "Switch to dark theme";
+			case "system":
 			default:
-				return 'Switch to system theme';
+				return "Switch to system theme";
 		}
 	});
 
@@ -43,17 +45,17 @@
 				size="icon"
 				variant="ghost"
 				aria-label="switch to system theme"
-				aria-pressed={isSelected('system')}
-				class={isSelected('system') ? 'text-foreground' : ''}
-				onmouseenter={() => (hoveredTheme = 'system')}
+				aria-pressed={isSelected("system")}
+				class={isSelected("system") ? "text-foreground" : ""}
+				onmouseenter={() => (hoveredTheme = "system")}
 				onmouseleave={() => (hoveredTheme = null)}
-				onfocus={() => (hoveredTheme = 'system')}
+				onfocus={() => (hoveredTheme = "system")}
 				onblur={() => (hoveredTheme = null)}
 				onclick={resetMode}
 			>
 				<Monitor />
 			</Button>
-			{#if isActive('system')}
+			{#if isActive("system")}
 				<span
 					in:scale={{ start: 0.8, duration: 120 }}
 					out:scale={{ start: 1, duration: 120 }}
@@ -67,17 +69,17 @@
 				size="icon"
 				variant="ghost"
 				aria-label="switch to light theme"
-				aria-pressed={isSelected('light')}
-				class={isSelected('light') ? 'text-foreground' : ''}
-				onmouseenter={() => (hoveredTheme = 'light')}
+				aria-pressed={isSelected("light")}
+				class={isSelected("light") ? "text-foreground" : ""}
+				onmouseenter={() => (hoveredTheme = "light")}
 				onmouseleave={() => (hoveredTheme = null)}
-				onfocus={() => (hoveredTheme = 'light')}
+				onfocus={() => (hoveredTheme = "light")}
 				onblur={() => (hoveredTheme = null)}
-				onclick={() => setMode('light')}
+				onclick={() => setMode("light")}
 			>
 				<Sun />
 			</Button>
-			{#if isActive('light')}
+			{#if isActive("light")}
 				<span
 					in:scale={{ start: 0.8, duration: 120 }}
 					out:scale={{ start: 1, duration: 120 }}
@@ -91,17 +93,17 @@
 				size="icon"
 				variant="ghost"
 				aria-label="switch to dark theme"
-				aria-pressed={isSelected('dark')}
-				class={isSelected('dark') ? 'text-foreground' : ''}
-				onmouseenter={() => (hoveredTheme = 'dark')}
+				aria-pressed={isSelected("dark")}
+				class={isSelected("dark") ? "text-foreground" : ""}
+				onmouseenter={() => (hoveredTheme = "dark")}
 				onmouseleave={() => (hoveredTheme = null)}
-				onfocus={() => (hoveredTheme = 'dark')}
+				onfocus={() => (hoveredTheme = "dark")}
 				onblur={() => (hoveredTheme = null)}
-				onclick={() => setMode('dark')}
+				onclick={() => setMode("dark")}
 			>
 				<Moon />
 			</Button>
-			{#if isActive('dark')}
+			{#if isActive("dark")}
 				<span
 					in:scale={{ start: 0.8, duration: 120 }}
 					out:scale={{ start: 1, duration: 120 }}

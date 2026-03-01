@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Card from '$lib/components/ui/card/card.svelte';
+	import Card from "$lib/components/ui/card/card.svelte";
 
-	import Layout from '@lucide/svelte/icons/layout';
-	import Target from '@lucide/svelte/icons/target';
-	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
-	import CompareImgBlock from '$lib/components/magic/CompareImgBlock.svelte';
+	import Layout from "@lucide/svelte/icons/layout";
+	import Target from "@lucide/svelte/icons/target";
+	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
+	import CompareImgBlock from "$lib/components/magic/CompareImgBlock.svelte";
 </script>
 
 <section
@@ -19,7 +19,10 @@
 					variant="soft"
 					class="col-span-full overflow-hidden border-b border-secondary pt-6 pl-6 dark:bg-muted/80"
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 text-primary"
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="size-6 text-primary"
 						><g fill="none"
 							><path
 								fill="currentColor"
@@ -51,9 +54,18 @@
 					</div>
 				</Card>
 				<Card variant="soft" class="p-6 dark:bg-muted/80">
-					<svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-primary" viewBox="0 0 24 24"
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="size-6 text-primary"
+						viewBox="0 0 24 24"
 						><g fill="none"
-							><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" /><path
+							><circle
+								cx="12"
+								cy="12"
+								r="10"
+								stroke="currentColor"
+								stroke-width="1.5"
+							/><path
 								stroke="currentColor"
 								stroke-linecap="round"
 								stroke-width="1.5"
@@ -71,7 +83,10 @@
 				</Card>
 
 				<Card variant="soft" class="p-6 dark:bg-muted/80">
-					<svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-primary" viewBox="0 0 24 24"
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="size-6 text-primary"
+						viewBox="0 0 24 24"
 						><g fill="none" stroke="currentColor" stroke-width="1.5"
 							><path
 								d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Z"
@@ -102,7 +117,9 @@
 							d="M9 10v10M20.5 9.5h-17M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"
 						/></svg
 					>
-					<h3 class="mt-4 text-lg font-semibold text-foreground">MCP Server Integration</h3>
+					<h3 class="mt-4 text-lg font-semibold text-foreground">
+						MCP Server Integration
+					</h3>
 					<p class="mt-3 text-base/normal text-muted-foreground">
 						Seamlessly integrate with Cursor and Windsurf via MCP Server.
 					</p>

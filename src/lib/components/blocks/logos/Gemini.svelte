@@ -10,7 +10,7 @@
 	width="1em"
 	{...rest}
 >
-	<title>{'Gemini'}</title>
+	<title>{"Gemini"}</title>
 	<defs>
 		<linearGradient id="lobe-icons-gemini-fill" x1="0%" x2="68.73%" y1="100%" y2="30.395%">
 			<stop offset="0%" stop-color="#1C7DFF" />

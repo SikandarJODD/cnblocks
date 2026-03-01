@@ -1,19 +1,19 @@
 <script lang="ts">
-	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index';
-	import { marked } from 'marked';
+	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
+	import { marked } from "marked";
 	const members = [
 		{
-			name: 'Bhide Svelte',
-			role: 'Svelte Developer',
-			avatar: 'https://avatars.githubusercontent.com/u/93428946?v=4',
-			href: 'https://github.com/SikandarJODD'
+			name: "Bhide Svelte",
+			role: "Svelte Developer",
+			avatar: "https://avatars.githubusercontent.com/u/93428946?v=4",
+			href: "https://github.com/SikandarJODD",
 		},
 		{
-			name: 'Aidan Bleser',
-			role: 'Creator of JSrepo',
-			avatar: 'https://avatars.githubusercontent.com/u/117548273?v=4',
-			href: 'https://github.com/ieedan'
-		}
+			name: "Aidan Bleser",
+			role: "Creator of JSrepo",
+			avatar: "https://avatars.githubusercontent.com/u/117548273?v=4",
+			href: "https://github.com/ieedan",
+		},
 	];
 
 	let overview_content = `## Overview
@@ -52,18 +52,24 @@ You can use these blocks to build landing pages, marketing sites, dashboards, an
 		</Breadcrumb.Root>
 		<div class="space-y-3.5">
 			<h1 class="text-3xl font-bold -tracking-wide text-primary">Introduction</h1>
-			<p class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground">
+			<p
+				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
+			>
 				Welcome to Shadcn Marketing Blocks!
 				<br />
-				This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and Shadcn Svelte.
+				This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and
+				Shadcn Svelte.
 			</p>
-			<p class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground">
+			<p
+				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
+			>
 				This project is inspired by <a
 					href="https://tailark.com"
 					class="text-primary underline"
 					target="_blank">Tailark</a
-				>, this project is designed to bring a similarly smooth and efficient experience to Svelte
-				developers, with a focus on building landing and marketing pages effortlessly.
+				>, this project is designed to bring a similarly smooth and efficient experience to
+				Svelte developers, with a focus on building landing and marketing pages
+				effortlessly.
 			</p>
 		</div>
 		<div class="prose dark:prose-invert prose-p:my-1 prose-li:my-1 prose-h2:my-3.5 max-w-none">
@@ -73,7 +79,9 @@ You can use these blocks to build landing pages, marketing sites, dashboards, an
 	<div class="grid grid-cols-2 gap-4 border-t py-4 md:grid-cols-6">
 		{#each members as member}
 			<a href={member.href} target="_blank" class="group">
-				<div class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5">
+				<div
+					class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+				>
 					<img
 						class="aspect-square rounded-full object-cover"
 						src={member.avatar}

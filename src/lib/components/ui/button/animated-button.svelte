@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { ButtonProps } from './button.svelte';
+	import { cn } from "$lib/utils";
+	import type { ButtonProps } from "./button.svelte";
 
 	let {
 		class: _class,
-		variant = 'default',
-		size = 'default',
+		variant = "default",
+		size = "default",
 		ref = $bindable(null),
 		href = undefined,
-		type = 'button',
+		type = "button",
 		children,
 		...restProps
 	}: ButtonProps = $props();
@@ -18,7 +18,7 @@
 	<a
 		{href}
 		class={cn(
-			'group relative grid overflow-hidden rounded-md px-4 py-2 transition-colors duration-200 dark:shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset]',
+			"group relative grid overflow-hidden rounded-md px-4 py-2 transition-colors duration-200 dark:shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset]",
 			_class
 		)}
 	>
@@ -39,7 +39,7 @@
 {:else}
 	<button
 		class={cn(
-			'group relative grid overflow-hidden rounded-md px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200',
+			"group relative grid overflow-hidden rounded-md px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200",
 			_class
 		)}
 	>

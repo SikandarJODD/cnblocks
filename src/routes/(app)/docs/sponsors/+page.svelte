@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 
 	let sponsors = [
 		{
-			name: 'Yashash Pugalia',
-			avatar: 'https://avatars.githubusercontent.com/u/89068816?v=4',
-			href: 'https://github.com/yashash-pugalia'
-		}
+			name: "Yashash Pugalia",
+			avatar: "https://avatars.githubusercontent.com/u/89068816?v=4",
+			href: "https://github.com/yashash-pugalia",
+		},
 	];
 </script>
 
@@ -29,7 +29,9 @@
 					target="_blank"
 					class="flex flex-col items-center justify-center space-y-1 rounded-xl"
 				>
-					<div class="size-20 rounded-full border bg-secondary p-0.5 shadow shadow-zinc-950/5">
+					<div
+						class="size-20 rounded-full border bg-secondary p-0.5 shadow shadow-zinc-950/5"
+					>
 						<img
 							class="aspect-square rounded-full object-cover"
 							src={member.avatar}
@@ -47,7 +49,9 @@
 			<a href="#sponsor" id="sponsor" class="text-xl font-medium -tracking-wide text-primary">
 				Become a Sponsor | Share it on Social Media 😊
 			</a>
-			<p class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground">
+			<p
+				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
+			>
 				Your support helps us to continue improving and maintaining the project.
 			</p>
 			<div class="space-x-2">

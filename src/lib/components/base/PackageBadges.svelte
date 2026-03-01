@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Badge } from '$lib/components/ui/badge';
-	import { cn } from '$lib/utils';
+	import { Badge } from "$lib/components/ui/badge";
+	import { cn } from "$lib/utils";
 
 	type PackageBadgesProps = {
 		packages?: string[];
@@ -11,7 +11,7 @@
 </script>
 
 {#if packages.length > 0}
-	<div class={cn('mt-2 flex flex-wrap gap-2', className)} data-toc-ignore="true">
+	<div class={cn("mt-2 flex flex-wrap gap-2", className)} data-toc-ignore="true">
 		{#each packages as pkg (pkg)}
 			<Badge
 				variant="secondary"

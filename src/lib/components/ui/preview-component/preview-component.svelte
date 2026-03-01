@@ -1,13 +1,13 @@
 <script lang="ts">
-	import * as Tabs from '$lib/components/ui/tabs/index.js';
-	import * as Frame from '$lib/components/ui/frame/index.js';
-	import type { Snippet } from 'svelte';
-	import type { SupportedLanguage } from '$lib/components/ui/code/shiki';
-	import type { CodeBlock as MagicCode } from '$lib/components/ui/code/index';
-	import MultipleCode from '$lib/components/ui/code/multiple-code.svelte';
-	import SingleCodeFilename from '../code/single-code-filename.svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { cn } from '$lib/utils';
+	import * as Tabs from "$lib/components/ui/tabs/index.js";
+	import * as Frame from "$lib/components/ui/frame/index.js";
+	import type { Snippet } from "svelte";
+	import type { SupportedLanguage } from "$lib/components/ui/code/shiki";
+	import type { CodeBlock as MagicCode } from "$lib/components/ui/code/index";
+	import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
+	import SingleCodeFilename from "../code/single-code-filename.svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { cn } from "$lib/utils";
 
 	interface PreviewComponentProps {
 		children: Snippet;
@@ -21,14 +21,14 @@
 	let {
 		code,
 		children,
-		lang = 'svelte',
+		lang = "svelte",
 		showRetry = true,
 		isCentered = true,
-		class: className = ''
+		class: className = "",
 	}: PreviewComponentProps = $props();
 
-	type TabValue = 'preview' | 'code';
-	let value: TabValue = $state('preview');
+	type TabValue = "preview" | "code";
+	let value: TabValue = $state("preview");
 	let retryKey = $state(0);
 
 	function handleRetry() {
@@ -45,15 +45,18 @@
 			>
 				Preview
 			</Tabs.Trigger>
-			<Tabs.Trigger value="code" class="group border-none bg-transparent! text-base shadow-none! ">
+			<Tabs.Trigger
+				value="code"
+				class="group border-none bg-transparent! text-base shadow-none! "
+			>
 				Code
 			</Tabs.Trigger>
 		</Tabs.List>
 	</Tabs.Root>
 	<div class="mt-1" data-toc-ignore>
-		{#if value === 'preview'}
+		{#if value === "preview"}
 			<Frame.Root>
-				<Frame.Panel class={cn('relative min-h-64 w-full overflow-hidden p-6', className)}>
+				<Frame.Panel class={cn("relative min-h-64 w-full overflow-hidden p-6", className)}>
 					{#if showRetry}
 						<Button
 							variant="secondary"
@@ -89,7 +92,7 @@
 					{/key}
 				</Frame.Panel>
 			</Frame.Root>
-		{:else if value === 'code'}
+		{:else if value === "code"}
 			<div>
 				{#if Array.isArray(code)}
 					<MultipleCode {code} />

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import { cn } from '$lib/utils';
+	import type { Snippet } from "svelte";
+	import { cn } from "$lib/utils";
 
 	type ComponentProps = {
 		class?: string;
@@ -8,13 +8,13 @@
 		[prop: string]: unknown;
 	};
 
-	const { children, class: className = '', ...restProps }: ComponentProps = $props();
+	const { children, class: className = "", ...restProps }: ComponentProps = $props();
 </script>
 
 <ul
 	{...restProps}
 	class={cn(
-		'mt-6 list-disc space-y-2 pl-6 text-base leading-relaxed text-foreground/70 [&>li]:pl-1',
+		"mt-6 list-disc space-y-2 pl-6 text-base leading-relaxed text-foreground/70 [&>li]:pl-1",
 		className
 	)}
 >

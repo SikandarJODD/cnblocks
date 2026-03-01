@@ -21,19 +21,19 @@ Svelte 5 allows runes in `.svelte.js` or `.svelte.ts` files for shared state out
 export const counter = $state({ count: 0 });
 
 export function increment() {
-	counter.count++;
+  counter.count++;
 }
 export function decrement() {
-	counter.count--;
+  counter.count--;
 }
 export function reset() {
-	counter.count = 0;
+  counter.count = 0;
 }
 ```
 
 ```svelte
 <script>
-	import { counter, increment } from './counter.svelte';
+  import { counter, increment } from "./counter.svelte";
 </script>
 
 <p>Count: {counter.count}</p>
@@ -44,21 +44,21 @@ export function reset() {
 
 ```ts
 // user.svelte.ts
-const state = $state<User>({ firstName: '', lastName: '', email: '' });
+const state = $state<User>({ firstName: "", lastName: "", email: "" });
 
 export const user = {
-	get firstName() {
-		return state.firstName;
-	},
-	set firstName(v: string) {
-		state.firstName = v;
-	},
-	get fullName() {
-		return `${state.firstName} ${state.lastName}`;
-	},
-	get isValid() {
-		return state.firstName && state.email.includes('@');
-	}
+  get firstName() {
+    return state.firstName;
+  },
+  set firstName(v: string) {
+    state.firstName = v;
+  },
+  get fullName() {
+    return `${state.firstName} ${state.lastName}`;
+  },
+  get isValid() {
+    return state.firstName && state.email.includes("@");
+  },
 };
 ```
 
@@ -67,23 +67,23 @@ export const user = {
 ```ts
 // todo.svelte.ts
 class TodoStore {
-	items = $state<Todo[]>([]);
-	filter = $state<'all' | 'active' | 'completed'>('all');
+  items = $state<Todo[]>([]);
+  filter = $state<"all" | "active" | "completed">("all");
 
-	get filtered() {
-		switch (this.filter) {
-			case 'active':
-				return this.items.filter((t) => !t.done);
-			case 'completed':
-				return this.items.filter((t) => t.done);
-			default:
-				return this.items;
-		}
-	}
+  get filtered() {
+    switch (this.filter) {
+      case "active":
+        return this.items.filter((t) => !t.done);
+      case "completed":
+        return this.items.filter((t) => t.done);
+      default:
+        return this.items;
+    }
+  }
 
-	add(text: string) {
-		this.items.push({ id: Date.now(), text, done: false });
-	}
+  add(text: string) {
+    this.items.push({ id: Date.now(), text, done: false });
+  }
 }
 
 export const todos = new TodoStore();
@@ -107,11 +107,11 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let count = $state(0);
-	let doubled = $state(0);
-	$effect(() => {
-		doubled = count * 2;
-	}); // Anti-pattern!
+  let count = $state(0);
+  let doubled = $state(0);
+  $effect(() => {
+    doubled = count * 2;
+  }); // Anti-pattern!
 </script>
 ```
 
@@ -119,8 +119,8 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let count = $state(0);
-	let doubled = $derived(count * 2);
+  let count = $state(0);
+  let doubled = $derived(count * 2);
 </script>
 ```
 
@@ -130,13 +130,13 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let a = $state(1);
-	let b = $state(2);
+  let a = $state(1);
+  let b = $state(2);
 
-	$effect(() => {
-		if (a > 10) b = 0;
-		if (b > 10) a = 0; // Triggers the effect again!
-	});
+  $effect(() => {
+    if (a > 10) b = 0;
+    if (b > 10) a = 0; // Triggers the effect again!
+  });
 </script>
 ```
 
@@ -148,12 +148,12 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let count = $state(0);
-	let log = $state([]);
+  let count = $state(0);
+  let log = $state([]);
 
-	$effect(() => {
-		log.push(`Count is ${count}`); // log change triggers re-run!
-	});
+  $effect(() => {
+    log.push(`Count is ${count}`); // log change triggers re-run!
+  });
 </script>
 ```
 
@@ -161,16 +161,16 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	import { untrack } from 'svelte';
+  import { untrack } from "svelte";
 
-	let count = $state(0);
-	let log = $state([]);
+  let count = $state(0);
+  let log = $state([]);
 
-	$effect(() => {
-		untrack(() => {
-			log.push(`Count is ${count}`);
-		});
-	});
+  $effect(() => {
+    untrack(() => {
+      log.push(`Count is ${count}`);
+    });
+  });
 </script>
 ```
 
@@ -180,12 +180,14 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let items = $state([
-		/* thousands */
-	]);
-	let filter = $state('');
+  let items = $state([
+    /* thousands */
+  ]);
+  let filter = $state("");
 
-	let filtered = $derived(items.filter((item) => JSON.stringify(item).includes(filter)));
+  let filtered = $derived(
+    items.filter((item) => JSON.stringify(item).includes(filter))
+  );
 </script>
 ```
 
@@ -193,17 +195,19 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let filter = $state('');
-	let debouncedFilter = $state('');
+  let filter = $state("");
+  let debouncedFilter = $state("");
 
-	$effect(() => {
-		const timeout = setTimeout(() => {
-			debouncedFilter = filter;
-		}, 300);
-		return () => clearTimeout(timeout);
-	});
+  $effect(() => {
+    const timeout = setTimeout(() => {
+      debouncedFilter = filter;
+    }, 300);
+    return () => clearTimeout(timeout);
+  });
 
-	let filtered = $derived(items.filter((item) => item.name.includes(debouncedFilter)));
+  let filtered = $derived(
+    items.filter((item) => item.name.includes(debouncedFilter))
+  );
 </script>
 ```
 
@@ -213,12 +217,12 @@ Common mistakes with runes can cause unnecessary re-renders, infinite loops, or 
 
 ```svelte
 <script>
-	let visible = $state(false);
-	let element;
+  let visible = $state(false);
+  let element;
 
-	$effect(() => {
-		if (element) element.style.display = visible ? 'block' : 'none';
-	});
+  $effect(() => {
+    if (element) element.style.display = visible ? "block" : "none";
+  });
 </script>
 ```
 
@@ -250,10 +254,12 @@ Sequential API calls multiply latency. Use parallel requests and streaming.
 
 ```ts
 export const load = async ({ fetch }) => {
-	const user = await fetch('/api/user').then((r) => r.json()); // 1s
-	const posts = await fetch(`/api/users/${user.id}/posts`).then((r) => r.json()); // 1s
-	const comments = await fetch('/api/comments').then((r) => r.json()); // 1s
-	return { user, posts, comments };
+  const user = await fetch("/api/user").then((r) => r.json()); // 1s
+  const posts = await fetch(`/api/users/${user.id}/posts`).then((r) =>
+    r.json()
+  ); // 1s
+  const comments = await fetch("/api/comments").then((r) => r.json()); // 1s
+  return { user, posts, comments };
 };
 ```
 
@@ -263,12 +269,12 @@ export const load = async ({ fetch }) => {
 
 ```ts
 export const load = async ({ fetch }) => {
-	const [user, posts, comments] = await Promise.all([
-		fetch('/api/user').then((r) => r.json()),
-		fetch('/api/posts').then((r) => r.json()),
-		fetch('/api/comments').then((r) => r.json())
-	]);
-	return { user, posts, comments };
+  const [user, posts, comments] = await Promise.all([
+    fetch("/api/user").then((r) => r.json()),
+    fetch("/api/posts").then((r) => r.json()),
+    fetch("/api/comments").then((r) => r.json()),
+  ]);
+  return { user, posts, comments };
 };
 ```
 
@@ -276,14 +282,14 @@ export const load = async ({ fetch }) => {
 
 ```ts
 export const load = async ({ fetch }) => {
-	const user = await fetch('/api/user').then((r) => r.json());
+  const user = await fetch("/api/user").then((r) => r.json());
 
-	const [posts, followers] = await Promise.all([
-		fetch(`/api/users/${user.id}/posts`).then((r) => r.json()),
-		fetch(`/api/users/${user.id}/followers`).then((r) => r.json())
-	]);
+  const [posts, followers] = await Promise.all([
+    fetch(`/api/users/${user.id}/posts`).then((r) => r.json()),
+    fetch(`/api/users/${user.id}/followers`).then((r) => r.json()),
+  ]);
 
-	return { user, posts, followers };
+  return { user, posts, followers };
 };
 ```
 
@@ -291,13 +297,13 @@ export const load = async ({ fetch }) => {
 
 ```ts
 export const load = async ({ fetch }) => {
-	const user = await fetch('/api/user').then((r) => r.json());
+  const user = await fetch("/api/user").then((r) => r.json());
 
-	return {
-		user,
-		recommendations: fetch('/api/recommendations').then((r) => r.json()),
-		analytics: fetch('/api/analytics').then((r) => r.json())
-	};
+  return {
+    user,
+    recommendations: fetch("/api/recommendations").then((r) => r.json()),
+    analytics: fetch("/api/analytics").then((r) => r.json()),
+  };
 };
 ```
 
@@ -321,9 +327,9 @@ Return promises from load functions to stream non-essential data after initial p
 
 ```ts
 export const load = async ({ fetch }) => {
-	const user = await fetch('/api/user').then((r) => r.json()); // 100ms
-	const analytics = await fetch('/api/analytics').then((r) => r.json()); // 2000ms
-	return { user, analytics }; // Page blocked for 2.1 seconds
+  const user = await fetch("/api/user").then((r) => r.json()); // 100ms
+  const analytics = await fetch("/api/analytics").then((r) => r.json()); // 2000ms
+  return { user, analytics }; // Page blocked for 2.1 seconds
 };
 ```
 
@@ -331,13 +337,13 @@ export const load = async ({ fetch }) => {
 
 ```ts
 export const load = async ({ fetch }) => {
-	const user = await fetch('/api/user').then((r) => r.json());
-	const analytics = fetch('/api/analytics').then((r) => r.json()); // Don't await
+  const user = await fetch("/api/user").then((r) => r.json());
+  const analytics = fetch("/api/analytics").then((r) => r.json()); // Don't await
 
-	return {
-		user, // Available in 100ms
-		analytics // Streams when ready
-	};
+  return {
+    user, // Available in 100ms
+    analytics, // Streams when ready
+  };
 };
 ```
 
@@ -345,22 +351,22 @@ export const load = async ({ fetch }) => {
 
 ```svelte
 <script lang="ts">
-	import type { PageProps } from './$types';
-	let { data }: PageProps = $props();
+  import type { PageProps } from "./$types";
+  let { data }: PageProps = $props();
 </script>
 
 <header><h1>Welcome, {data.user.name}</h1></header>
 
 <aside>
-	{#await data.analytics}
-		<div class="skeleton">Loading analytics...</div>
-	{:then analytics}
-		<div class="analytics">
-			<p>Page views: {analytics.views}</p>
-		</div>
-	{:catch}
-		<div class="error">Failed to load analytics</div>
-	{/await}
+  {#await data.analytics}
+    <div class="skeleton">Loading analytics...</div>
+  {:then analytics}
+    <div class="analytics">
+      <p>Page views: {analytics.views}</p>
+    </div>
+  {:catch}
+    <div class="error">Failed to load analytics</div>
+  {/await}
 </aside>
 ```
 
@@ -384,18 +390,18 @@ Svelte 5 components with runes require proper Vitest configuration.
 
 ```ts
 // vitest.config.ts
-import { defineConfig } from 'vitest/config';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { defineConfig } from "vitest/config";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
-	plugins: [svelte()],
-	test: {
-		browser: {
-			enabled: true,
-			provider: 'playwright',
-			name: 'chromium'
-		}
-	}
+  plugins: [svelte()],
+  test: {
+    browser: {
+      enabled: true,
+      provider: "playwright",
+      name: "chromium",
+    },
+  },
 });
 ```
 
@@ -403,76 +409,76 @@ export default defineConfig({
 
 ```ts
 // vitest.config.ts
-import { defineConfig } from 'vitest/config';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { defineConfig } from "vitest/config";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
-	plugins: [svelte({ hot: !process.env.VITEST })],
-	test: {
-		environment: 'jsdom',
-		include: ['src/**/*.{test,spec}.{js,ts}'],
-		globals: true
-	}
+  plugins: [svelte({ hot: !process.env.VITEST })],
+  test: {
+    environment: "jsdom",
+    include: ["src/**/*.{test,spec}.{js,ts}"],
+    globals: true,
+  },
 });
 ```
 
 ### Basic Component Test
 
 ```ts
-import { render, screen, fireEvent } from '@testing-library/svelte';
-import { expect, test } from 'vitest';
-import Counter from './Counter.svelte';
+import { render, screen, fireEvent } from "@testing-library/svelte";
+import { expect, test } from "vitest";
+import Counter from "./Counter.svelte";
 
-test('increments count when clicked', async () => {
-	render(Counter);
+test("increments count when clicked", async () => {
+  render(Counter);
 
-	const button = screen.getByRole('button');
-	expect(button).toHaveTextContent('Count: 0');
+  const button = screen.getByRole("button");
+  expect(button).toHaveTextContent("Count: 0");
 
-	await fireEvent.click(button);
-	expect(button).toHaveTextContent('Count: 1');
+  await fireEvent.click(button);
+  expect(button).toHaveTextContent("Count: 1");
 });
 ```
 
 ### Testing Props
 
 ```ts
-test('renders with custom name', () => {
-	render(Greeting, { props: { name: 'Alice' } });
-	expect(screen.getByText('Hello, Alice!')).toBeInTheDocument();
+test("renders with custom name", () => {
+  render(Greeting, { props: { name: "Alice" } });
+  expect(screen.getByText("Hello, Alice!")).toBeInTheDocument();
 });
 ```
 
 ### Testing Callbacks
 
 ```ts
-import { vi } from 'vitest';
+import { vi } from "vitest";
 
-test('calls onclick callback when clicked', async () => {
-	const handleClick = vi.fn();
-	render(Button, { props: { onclick: handleClick } });
+test("calls onclick callback when clicked", async () => {
+  const handleClick = vi.fn();
+  render(Button, { props: { onclick: handleClick } });
 
-	await fireEvent.click(screen.getByRole('button'));
-	expect(handleClick).toHaveBeenCalledTimes(1);
+  await fireEvent.click(screen.getByRole("button"));
+  expect(handleClick).toHaveBeenCalledTimes(1);
 });
 ```
 
 ### Testing Async Components
 
 ```ts
-import { waitFor } from '@testing-library/svelte';
+import { waitFor } from "@testing-library/svelte";
 
-test('loads and displays user data', async () => {
-	global.fetch = vi.fn().mockResolvedValue({
-		ok: true,
-		json: () => Promise.resolve({ name: 'Alice' })
-	});
+test("loads and displays user data", async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    json: () => Promise.resolve({ name: "Alice" }),
+  });
 
-	render(UserProfile, { props: { userId: '123' } });
-	expect(screen.getByText('Loading...')).toBeInTheDocument();
+  render(UserProfile, { props: { userId: "123" } });
+  expect(screen.getByText("Loading...")).toBeInTheDocument();
 
-	await waitFor(() => {
-		expect(screen.getByText('Alice')).toBeInTheDocument();
-	});
+  await waitFor(() => {
+    expect(screen.getByText("Alice")).toBeInTheDocument();
+  });
 });
 ```

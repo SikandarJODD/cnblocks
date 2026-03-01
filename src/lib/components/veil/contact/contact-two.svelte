@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
-	import { Input } from '$lib/components/ui/veil/input';
-	import { Label } from '$lib/components/ui/label';
-	import * as Select from '$lib/components/ui/select';
-	import { Textarea } from '$lib/components/ui/veil/textarea';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
+	import { Input } from "$lib/components/ui/veil/input";
+	import { Label } from "$lib/components/ui/label";
+	import * as Select from "$lib/components/ui/select";
+	import { Textarea } from "$lib/components/ui/veil/textarea";
 </script>
 
 <section class="@container bg-background py-24">
@@ -48,7 +48,9 @@
 							>
 								Select
 							</Select.Trigger>
-							<Select.Content class="rounded-xl border-transparent ring-1 ring-border">
+							<Select.Content
+								class="rounded-xl border-transparent ring-1 ring-border"
+							>
 								<Select.Item value="1-10">1-10 employees</Select.Item>
 								<Select.Item value="11-50">11-50 employees</Select.Item>
 								<Select.Item value="51-200">51-200 employees</Select.Item>
@@ -66,7 +68,9 @@
 							>
 								Select
 							</Select.Trigger>
-							<Select.Content class="rounded-xl border-transparent ring-1 ring-border">
+							<Select.Content
+								class="rounded-xl border-transparent ring-1 ring-border"
+							>
 								<Select.Item value="pricing">Pricing</Select.Item>
 								<Select.Item value="demo">Product demo</Select.Item>
 								<Select.Item value="partnership">Partnership</Select.Item>

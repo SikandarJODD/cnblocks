@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Gemini, GooglePaLM, Replit } from '../logos/logos';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { type Icon } from '@lucide/svelte';
-	import Plus from '@lucide/svelte/icons/plus';
+	import { Gemini, GooglePaLM, Replit } from "../logos/logos";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { type Icon } from "@lucide/svelte";
+	import Plus from "@lucide/svelte/icons/plus";
 </script>
 
 <section>
@@ -11,23 +11,25 @@
 			<div
 				class="mx-auto max-w-md [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6"
 			>
-				<div class="rounded-xl border bg-background px-6 pt-3 pb-12 shadow-xl dark:bg-muted/50">
+				<div
+					class="rounded-xl border bg-background px-6 pt-3 pb-12 shadow-xl dark:bg-muted/50"
+				>
 					{@render IntegrationCardv6({
 						icon: Gemini,
-						name: 'Gemini',
-						description: "The AI model that powers Google's search engine."
+						name: "Gemini",
+						description: "The AI model that powers Google's search engine.",
 					})}
 
 					{@render IntegrationCardv6({
 						icon: Replit,
-						name: 'Replit',
-						description: "The AI model that powers Google's search engine."
+						name: "Replit",
+						description: "The AI model that powers Google's search engine.",
 					})}
 
 					{@render IntegrationCardv6({
 						icon: GooglePaLM,
-						name: 'GooglePaLM',
-						description: "The AI model that powers Google's search engine."
+						name: "GooglePaLM",
+						description: "The AI model that powers Google's search engine.",
 					})}
 				</div>
 			</div>
@@ -48,7 +50,7 @@
 {#snippet IntegrationCardv6({
 	icon,
 	name,
-	description
+	description,
 }: {
 	icon: typeof Icon;
 	name: string;

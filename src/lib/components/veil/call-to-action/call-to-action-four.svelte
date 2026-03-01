@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
-	import { ArrowRight, Check } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
+	import { ArrowRight, Check } from "@lucide/svelte";
 
 	type Props = {
 		title?: string;
@@ -15,14 +15,19 @@
 	};
 
 	let {
-		title = 'Transform Your Workflow',
-		description = 'Experience the power of seamless integrations and watch your productivity soar.',
-		benefits = ['14-day free trial', 'No credit card required', 'Cancel anytime', '24/7 support'],
-		price = '$0',
-		priceSuffix = '/month',
-		priceNote = 'Free forever for individuals',
-		ctaLabel = 'Get Started Free',
-		ctaHref = '#link'
+		title = "Transform Your Workflow",
+		description = "Experience the power of seamless integrations and watch your productivity soar.",
+		benefits = [
+			"14-day free trial",
+			"No credit card required",
+			"Cancel anytime",
+			"24/7 support",
+		],
+		price = "$0",
+		priceSuffix = "/month",
+		priceNote = "Free forever for individuals",
+		ctaLabel = "Get Started Free",
+		ctaHref = "#link",
 	}: Props = $props();
 </script>
 
@@ -44,7 +49,9 @@
 			<div class="flex flex-col justify-center rounded-xl border bg-muted/50 p-6">
 				<p class="text-sm text-muted-foreground">Starting at</p>
 				<p class="mt-1 font-serif text-4xl font-medium">
-					{price}<span class="text-lg font-normal text-muted-foreground">{priceSuffix}</span>
+					{price}<span class="text-lg font-normal text-muted-foreground"
+						>{priceSuffix}</span
+					>
 				</p>
 				<p class="mt-1 text-sm text-muted-foreground">{priceNote}</p>
 				<Button href={ctaHref} class="mt-6 gap-2">

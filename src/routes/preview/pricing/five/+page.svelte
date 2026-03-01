@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { pricing } from '$lib/all_blocks/pricing';
+	import { pricing } from "$lib/all_blocks/pricing";
 
-	const block = pricing.find((item) => item.title === 'five');
+	const block = pricing.find((item) => item.title === "five");
 
 	if (!block) {
-		throw new Error('Missing preview block for five in pricing');
+		throw new Error("Missing preview block for five in pricing");
 	}
 
 	const PreviewComponent = block.component;

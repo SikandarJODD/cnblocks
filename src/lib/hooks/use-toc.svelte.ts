@@ -1,6 +1,6 @@
-import { SvelteMap } from 'svelte/reactivity';
+import { SvelteMap } from "svelte/reactivity";
 
-export type HeadingKind = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type HeadingKind = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export type Heading = {
 	index: number;
@@ -13,8 +13,8 @@ export type Heading = {
 	children: Heading[];
 };
 
-export const INDEX_ATTRIBUTE = 'data-toc-index';
-export const TOC_IGNORE_ATTRIBUTE = 'data-toc-ignore';
+export const INDEX_ATTRIBUTE = "data-toc-index";
+export const TOC_IGNORE_ATTRIBUTE = "data-toc-ignore";
 
 export class UseToc {
 	#ref = $state<HTMLElement>();
@@ -61,13 +61,17 @@ export class UseToc {
 			const sectionVisibility = new SvelteMap<Element, number>();
 
 			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => sectionVisibility.set(entry.target, entry.intersectionRatio));
+				entries.forEach((entry) =>
+					sectionVisibility.set(entry.target, entry.intersectionRatio)
+				);
 
 				// headings that are (partly) visible
 				const visible = [...sectionVisibility.entries()]
 					.filter(([, ratio]) => ratio > 0)
 					// sort by distance from viewport top
-					.sort(([a], [b]) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+					.sort(
+						([a], [b]) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
+					);
 
 				if (visible.length === 0) return;
 
@@ -111,9 +115,9 @@ function createHeading(element: HTMLHeadingElement, index: number): Heading {
 		kind,
 		id: element.id,
 		level: parseInt(kind[1]),
-		label: element.innerText ?? '',
+		label: element.innerText ?? "",
 		active: false,
-		children: []
+		children: [],
 	};
 }
 
@@ -123,7 +127,7 @@ function createHeading(element: HTMLHeadingElement, index: number): Heading {
  * @returns
  */
 function getToc(el: HTMLElement): Heading[] {
-	const headings = Array.from(el.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+	const headings = Array.from(el.querySelectorAll("h1, h2, h3, h4, h5, h6"))
 		.map((h, i) => createHeading(h as HTMLHeadingElement, i))
 		.filter((h) => h.ref.closest(`[${TOC_IGNORE_ATTRIBUTE}]`) === null);
 	if (headings.length === 0) return [];

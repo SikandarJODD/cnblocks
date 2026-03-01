@@ -1,52 +1,52 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Check from '@lucide/svelte/icons/check';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
-	import Star from '@lucide/svelte/icons/star';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Check from "@lucide/svelte/icons/check";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
+	import Star from "@lucide/svelte/icons/star";
 
 	const tableData = [
 		{
-			feature: 'Feature 1',
+			feature: "Feature 1",
 			free: true,
 			pro: true,
-			startup: true
+			startup: true,
 		},
 		{
-			feature: 'Feature 2',
+			feature: "Feature 2",
 			free: true,
 			pro: true,
-			startup: true
+			startup: true,
 		},
 		{
-			feature: 'Feature 3',
+			feature: "Feature 3",
 			free: false,
 			pro: true,
-			startup: true
+			startup: true,
 		},
 		{
-			feature: 'Tokens',
-			free: '',
-			pro: '20 Users',
-			startup: 'Unlimited'
+			feature: "Tokens",
+			free: "",
+			pro: "20 Users",
+			startup: "Unlimited",
 		},
 		{
-			feature: 'Video calls',
-			free: '',
-			pro: '12 Weeks',
-			startup: '56'
+			feature: "Video calls",
+			free: "",
+			pro: "12 Weeks",
+			startup: "56",
 		},
 		{
-			feature: 'Support',
-			free: '',
-			pro: 'Secondes',
-			startup: 'Unlimited'
+			feature: "Support",
+			free: "",
+			pro: "Secondes",
+			startup: "Unlimited",
 		},
 		{
-			feature: 'Security',
-			free: '',
-			pro: '20 Users',
-			startup: 'Unlimited'
-		}
+			feature: "Security",
+			free: "",
+			pro: "20 Users",
+			startup: "Unlimited",
+		},
 	];
 </script>
 

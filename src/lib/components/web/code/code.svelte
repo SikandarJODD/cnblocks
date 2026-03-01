@@ -1,24 +1,24 @@
 <script lang="ts">
-	import { tv, type VariantProps } from 'tailwind-variants';
-	import { highlighter, type SupportedLanguage } from './shiki';
-	import DOMPurify from 'dompurify';
-	import { onMount } from 'svelte';
-	import type { HighlighterCore } from 'shiki';
-	import { CopyButton } from '$lib/components/ui/copy-button';
-	import { cn } from '$lib/utils';
-	import { browser } from '$app/environment';
+	import { tv, type VariantProps } from "tailwind-variants";
+	import { highlighter, type SupportedLanguage } from "./shiki";
+	import DOMPurify from "dompurify";
+	import { onMount } from "svelte";
+	import type { HighlighterCore } from "shiki";
+	import { CopyButton } from "$lib/components/ui/copy-button";
+	import { cn } from "$lib/utils";
+	import { browser } from "$app/environment";
 
 	const style = tv({
-		base: 'not-prose relative h-full max-h-[650px] overflow-auto rounded-none border-l',
+		base: "not-prose relative h-full max-h-[650px] overflow-auto rounded-none border-l",
 		variants: {
 			variant: {
-				default: 'border-border bg-secondary/10',
-				secondary: 'bg-secondary/50 border-transparent'
-			}
-		}
+				default: "border-border bg-secondary/10",
+				secondary: "border-transparent bg-secondary/50",
+			},
+		},
 	});
 
-	type Variant = VariantProps<typeof style>['variant'];
+	type Variant = VariantProps<typeof style>["variant"];
 
 	type Props = {
 		variant?: Variant;
@@ -31,13 +31,13 @@
 		highlight?: (number | [number, number])[];
 	};
 
-	let within = (num: number, range: Props['highlight']) => {
+	let within = (num: number, range: Props["highlight"]) => {
 		if (!range) return false;
 
 		let within = false;
 
 		for (const r of range) {
-			if (typeof r === 'number') {
+			if (typeof r === "number") {
 				if (num === r) {
 					within = true;
 					break;
@@ -55,14 +55,14 @@
 	};
 
 	let {
-		variant = 'default',
-		lang = 'svelte',
+		variant = "default",
+		lang = "svelte",
 		code,
 		copyButtonContainerClass = undefined,
 		class: className = undefined,
 		hideLines = false,
 		hideCopy = true,
-		highlight = []
+		highlight = [],
 	}: Props = $props();
 
 	let hl = $state<HighlighterCore>();
@@ -72,29 +72,30 @@
 			hl?.codeToHtml(code, {
 				lang: lang,
 				themes: {
-					dark: 'github-dark',
-					light: 'github-light'
+					dark: "github-dark",
+					light: "github-light",
 				},
 				transformers: [
 					{
 						pre: (el) => {
-							el.properties.style = '';
+							el.properties.style = "";
 
 							if (!hideLines) {
-								el.properties.class += ' line-numbers';
+								el.properties.class += " line-numbers";
 							}
 
 							return el;
 						},
 						line: (node, line) => {
 							if (within(line, highlight)) {
-								node.properties.class = node.properties.class + ' line--highlighted';
+								node.properties.class =
+									node.properties.class + " line--highlighted";
 							}
 
 							return node;
-						}
-					}
-				]
+						},
+					},
+				],
 			}) ?? code;
 
 		// Only sanitize in browser - DOMPurify requires DOM APIs
@@ -114,7 +115,7 @@
 	{#if !hideCopy}
 		<div
 			class={cn(
-				'absolute top-2 right-2 flex place-items-center justify-center',
+				"absolute top-2 right-2 flex place-items-center justify-center",
 				copyButtonContainerClass
 			)}
 		>

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { Props } from './index';
-	import { cn } from '$lib/utils';
+	import type { Props } from "./index";
+	import { cn } from "$lib/utils";
 
 	let { class: className, ...rest }: Props = $props();
 </script>
 
 <svg
-	class={cn('size-4 fill-current', className)}
+	class={cn("size-4 fill-current", className)}
 	viewBox="0 0 256 250"
 	xmlns="http://www.w3.org/2000/svg"
 	preserveAspectRatio="xMidYMid"

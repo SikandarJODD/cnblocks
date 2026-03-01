@@ -1,32 +1,32 @@
 <script lang="ts">
-	import { Card, CardContent } from '$lib/components/ui/card';
-	import { Progress } from '$lib/components/ui/progress/index.js';
+	import { Card, CardContent } from "$lib/components/ui/card";
+	import { Progress } from "$lib/components/ui/progress/index.js";
 
 	const data = [
 		{
-			name: 'Requests',
-			stat: '996',
-			limit: '10,000',
-			percentage: 9.96
+			name: "Requests",
+			stat: "996",
+			limit: "10,000",
+			percentage: 9.96,
 		},
 		{
-			name: 'Credits',
-			stat: '$672',
-			limit: '$1,000',
-			percentage: 67.2
+			name: "Credits",
+			stat: "$672",
+			limit: "$1,000",
+			percentage: 67.2,
 		},
 		{
-			name: 'Storage',
-			stat: '1.85',
-			limit: '10GB',
-			percentage: 18.5
+			name: "Storage",
+			stat: "1.85",
+			limit: "10GB",
+			percentage: 18.5,
 		},
 		{
-			name: 'API Calls',
-			stat: '4,328',
-			limit: '5,000',
-			percentage: 86.56
-		}
+			name: "API Calls",
+			stat: "4,328",
+			limit: "5,000",
+			percentage: 86.56,
+		},
 	];
 </script>
 

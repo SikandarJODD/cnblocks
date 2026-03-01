@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
 <section class="py-16">

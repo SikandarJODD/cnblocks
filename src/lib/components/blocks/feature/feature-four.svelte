@@ -1,10 +1,10 @@
 <script>
-	import Cpu from '@lucide/svelte/icons/cpu';
-	import Fingerprint from '@lucide/svelte/icons/fingerprint';
-	import Pencil from '@lucide/svelte/icons/pencil';
-	import Settings2 from '@lucide/svelte/icons/settings-2';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
-	import Zap from '@lucide/svelte/icons/zap';
+	import Cpu from "@lucide/svelte/icons/cpu";
+	import Fingerprint from "@lucide/svelte/icons/fingerprint";
+	import Pencil from "@lucide/svelte/icons/pencil";
+	import Settings2 from "@lucide/svelte/icons/settings-2";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
+	import Zap from "@lucide/svelte/icons/zap";
 </script>
 
 <section class="py-12 md:py-20">
@@ -14,8 +14,8 @@
 				The foundation for creative teams management
 			</h2>
 			<p>
-				Lyra is evolving to be more than just the models. It supports an entire to the APIs and
-				platforms helping developers and businesses innovate.
+				Lyra is evolving to be more than just the models. It supports an entire to the APIs
+				and platforms helping developers and businesses innovate.
 			</p>
 		</div>
 

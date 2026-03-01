@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Card from '$lib/components/ui/card/card.svelte';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Card from "$lib/components/ui/card/card.svelte";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
 
-	import { Select, SelectContent, SelectItem, SelectTrigger } from '$lib/components/ui/select';
-	import Textarea from '$lib/components/ui/textarea/textarea.svelte';
+	import { Select, SelectContent, SelectItem, SelectTrigger } from "$lib/components/ui/select";
+	import Textarea from "$lib/components/ui/textarea/textarea.svelte";
 </script>
 
 <section
@@ -21,7 +21,10 @@
 				<div class="flex flex-col justify-between space-y-6">
 					<div>
 						<h2 class="mb-3 text-lg font-semibold">Collaborate</h2>
-						<a href="mailto:hello@tailus.com" class="text-lg text-primary hover:underline">
+						<a
+							href="mailto:hello@tailus.com"
+							class="text-lg text-primary hover:underline"
+						>
 							hello@tailark.com
 						</a>
 						<p class="mt-3 text-sm">+243 000 000 000</p>
@@ -30,7 +33,10 @@
 				<div class="flex flex-col justify-between space-y-6">
 					<div>
 						<h3 class="mb-3 text-lg font-semibold">Press</h3>
-						<a href="mailto:press@tailark.com" class="text-lg text-primary hover:underline">
+						<a
+							href="mailto:press@tailark.com"
+							class="text-lg text-primary hover:underline"
+						>
 							press@tailark.com
 						</a>
 						<p class="mt-3 text-sm">+243 000 000 000</p>
@@ -42,8 +48,8 @@
 				<Card class="p-8 sm:p-12">
 					<h3 class="text-xl font-semibold">Let's get you to the right place</h3>
 					<p class="mt-4 text-sm">
-						Reach out to our sales team! We’re eager to learn more about how you plan to use our
-						application.
+						Reach out to our sales team! We’re eager to learn more about how you plan to
+						use our application.
 					</p>
 
 					<div class="mt-12 space-y-6 *:space-y-3 **:[&>label]:block">

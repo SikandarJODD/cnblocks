@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Card from '$lib/components/ui/card/card.svelte';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import type { Snippet } from 'svelte';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Card from "$lib/components/ui/card/card.svelte";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import type { Snippet } from "svelte";
 
 	type IntegrationCardProps = {
 		title: string;

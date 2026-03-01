@@ -1,5 +1,13 @@
 <script>
-	import { Bolt as Logo, Clerk, Firebase, Linear, Slack, Supabase, Vercel } from '$lib/svgs/index';
+	import {
+		Bolt as Logo,
+		Clerk,
+		Firebase,
+		Linear,
+		Slack,
+		Supabase,
+		Vercel,
+	} from "$lib/svgs/index";
 </script>
 
 <div aria-hidden class="mx-auto flex h-44 max-w-lg flex-col justify-between **:fill-foreground">

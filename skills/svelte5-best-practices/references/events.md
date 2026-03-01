@@ -45,15 +45,15 @@ Event modifiers no longer exist. Use wrapper functions:
 
 ```svelte
 <script>
-	function handleSubmit(event) {
-		event.preventDefault();
-		// ... handle form
-	}
+  function handleSubmit(event) {
+    event.preventDefault();
+    // ... handle form
+  }
 
-	function handleClick(event) {
-		event.stopPropagation();
-		// ... handle click
-	}
+  function handleClick(event) {
+    event.stopPropagation();
+    // ... handle click
+  }
 </script>
 
 <form onsubmit={handleSubmit}>...</form>
@@ -65,7 +65,7 @@ Event modifiers no longer exist. Use wrapper functions:
 ```svelte
 <!-- Capture phase -->
 <div onclickcapture={handleCapture}>
-	<button onclick={handleClick}>Click</button>
+  <button onclick={handleClick}>Click</button>
 </div>
 
 <!-- Passive listener -->
@@ -86,9 +86,9 @@ Event modifiers no longer exist. Use wrapper functions:
 
 ```svelte
 <script>
-	function onclick(event) {
-		console.log('Clicked!', event);
-	}
+  function onclick(event) {
+    console.log("Clicked!", event);
+  }
 </script>
 
 <button {onclick}>Click</button>
@@ -98,11 +98,11 @@ Event modifiers no longer exist. Use wrapper functions:
 
 ```svelte
 <script>
-	let handlers = {
-		onclick: () => console.log('clicked'),
-		onmouseenter: () => console.log('entered'),
-		onmouseleave: () => console.log('left')
-	};
+  let handlers = {
+    onclick: () => console.log("clicked"),
+    onmouseenter: () => console.log("entered"),
+    onmouseleave: () => console.log("left"),
+  };
 </script>
 
 <button {...handlers}>Hover or Click</button>
@@ -114,10 +114,10 @@ In Svelte 5, combine logic into one handler:
 
 ```svelte
 <script>
-	function handleClick(event) {
-		handler1(event);
-		handler2(event);
-	}
+  function handleClick(event) {
+    handler1(event);
+    handler2(event);
+  }
 </script>
 
 <button onclick={handleClick}>...</button>
@@ -127,19 +127,19 @@ In Svelte 5, combine logic into one handler:
 
 ```svelte
 <script lang="ts">
-	function handleClick(event: MouseEvent) {
-		console.log(event.clientX, event.clientY);
-	}
+  function handleClick(event: MouseEvent) {
+    console.log(event.clientX, event.clientY);
+  }
 
-	function handleInput(event: Event) {
-		const target = event.target as HTMLInputElement;
-		console.log(target.value);
-	}
+  function handleInput(event: Event) {
+    const target = event.target as HTMLInputElement;
+    console.log(target.value);
+  }
 
-	function handleSubmit(event: SubmitEvent) {
-		event.preventDefault();
-		const formData = new FormData(event.currentTarget as HTMLFormElement);
-	}
+  function handleSubmit(event: SubmitEvent) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget as HTMLFormElement);
+  }
 </script>
 ```
 
@@ -156,11 +156,13 @@ Svelte 5 deprecates `createEventDispatcher` in favor of callback props for compo
 ```svelte
 <!-- Button.svelte -->
 <script>
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
 </script>
 
-<button on:click={() => dispatch('click', { timestamp: Date.now() })}>Click</button>
+<button on:click={() => dispatch("click", { timestamp: Date.now() })}
+  >Click</button
+>
 
 <!-- Parent.svelte -->
 <Button on:click={(e) => console.log(e.detail)} />
@@ -171,7 +173,7 @@ Svelte 5 deprecates `createEventDispatcher` in favor of callback props for compo
 ```svelte
 <!-- Button.svelte -->
 <script>
-	let { onclick } = $props();
+  let { onclick } = $props();
 </script>
 
 <button onclick={() => onclick?.({ timestamp: Date.now() })}>Click</button>
@@ -185,37 +187,41 @@ Svelte 5 deprecates `createEventDispatcher` in favor of callback props for compo
 ```svelte
 <!-- Dialog.svelte -->
 <script>
-	let { onconfirm, oncancel, onclose } = $props();
+  let { onconfirm, oncancel, onclose } = $props();
 </script>
 
 <dialog>
-	<button onclick={() => onconfirm?.()}>Confirm</button>
-	<button onclick={() => oncancel?.()}>Cancel</button>
-	<button onclick={() => onclose?.()}>X</button>
+  <button onclick={() => onconfirm?.()}>Confirm</button>
+  <button onclick={() => oncancel?.()}>Cancel</button>
+  <button onclick={() => onclose?.()}>X</button>
 </dialog>
 
 <!-- Parent.svelte -->
-<Dialog onconfirm={() => save()} oncancel={() => reset()} onclose={() => (visible = false)} />
+<Dialog
+  onconfirm={() => save()}
+  oncancel={() => reset()}
+  onclose={() => (visible = false)}
+/>
 ```
 
 ### Typed Callbacks with TypeScript
 
 ```svelte
 <script lang="ts">
-	interface Props {
-		value?: string;
-		onsearch?: (query: string) => void;
-		onchange?: (value: string) => void;
-		onclear?: () => void;
-	}
+  interface Props {
+    value?: string;
+    onsearch?: (query: string) => void;
+    onchange?: (value: string) => void;
+    onclear?: () => void;
+  }
 
-	let { value = '', onsearch, onchange, onclear }: Props = $props();
+  let { value = "", onsearch, onchange, onclear }: Props = $props();
 
-	function handleInput(e: Event) {
-		const newValue = (e.target as HTMLInputElement).value;
-		value = newValue;
-		onchange?.(newValue);
-	}
+  function handleInput(e: Event) {
+    const newValue = (e.target as HTMLInputElement).value;
+    value = newValue;
+    onchange?.(newValue);
+  }
 </script>
 ```
 
@@ -223,14 +229,14 @@ Svelte 5 deprecates `createEventDispatcher` in favor of callback props for compo
 
 ```svelte
 <script lang="ts">
-	import type { MouseEventHandler } from 'svelte/elements';
+  import type { MouseEventHandler } from "svelte/elements";
 
-	interface Props {
-		onclick?: MouseEventHandler<HTMLButtonElement>;
-		children: import('svelte').Snippet;
-	}
+  interface Props {
+    onclick?: MouseEventHandler<HTMLButtonElement>;
+    children: import("svelte").Snippet;
+  }
 
-	let { onclick, children, ...rest }: Props = $props();
+  let { onclick, children, ...rest }: Props = $props();
 </script>
 
 <button {onclick} {...rest}>{@render children()}</button>
@@ -246,14 +252,14 @@ Context functions must be called synchronously during component initialization.
 
 ```svelte
 <script>
-	import { setContext, getContext } from 'svelte';
+  import { setContext, getContext } from "svelte";
 
-	// These run during initialization - CORRECT
-	setContext('theme', 'dark');
-	const theme = getContext('theme');
+  // These run during initialization - CORRECT
+  setContext("theme", "dark");
+  const theme = getContext("theme");
 
-	// INCORRECT - in $effect or callback
-	// $effect(() => { setContext('theme', 'dark'); }); // ERROR
+  // INCORRECT - in $effect or callback
+  // $effect(() => { setContext('theme', 'dark'); }); // ERROR
 </script>
 ```
 
@@ -292,23 +298,23 @@ Pass `$state` objects for reactive context:
 
 ```ts
 // context.ts
-import { setContext, getContext } from 'svelte';
+import { setContext, getContext } from "svelte";
 
-const THEME_KEY = Symbol('theme');
+const THEME_KEY = Symbol("theme");
 
 interface ThemeContext {
-	current: 'light' | 'dark';
-	toggle: () => void;
+  current: "light" | "dark";
+  toggle: () => void;
 }
 
 export function setThemeContext(context: ThemeContext) {
-	setContext(THEME_KEY, context);
+  setContext(THEME_KEY, context);
 }
 
 export function getThemeContext(): ThemeContext {
-	const context = getContext<ThemeContext>(THEME_KEY);
-	if (!context) throw new Error('Theme context not found');
-	return context;
+  const context = getContext<ThemeContext>(THEME_KEY);
+  if (!context) throw new Error("Theme context not found");
+  return context;
 }
 ```
 
@@ -316,16 +322,16 @@ export function getThemeContext(): ThemeContext {
 
 ```svelte
 <script>
-	// Option 1: Symbol
-	const USER_KEY = Symbol('user');
-	setContext(USER_KEY, userData);
+  // Option 1: Symbol
+  const USER_KEY = Symbol("user");
+  setContext(USER_KEY, userData);
 
-	// Option 2: Unique string
-	setContext('myapp:user', userData);
+  // Option 2: Unique string
+  setContext("myapp:user", userData);
 
-	// Option 3: Object key
-	const userKey = {};
-	setContext(userKey, userData);
+  // Option 3: Object key
+  const userKey = {};
+  setContext(userKey, userData);
 </script>
 ```
 
@@ -333,10 +339,10 @@ export function getThemeContext(): ThemeContext {
 
 ```svelte
 <script>
-	import { hasContext, getContext } from 'svelte';
+  import { hasContext, getContext } from "svelte";
 
-	const hasTheme = hasContext('theme');
-	const theme = hasTheme ? getContext('theme') : { current: 'light' };
+  const hasTheme = hasContext("theme");
+  const theme = hasTheme ? getContext("theme") : { current: "light" };
 </script>
 ```
 
@@ -347,9 +353,9 @@ Context flows down the component tree:
 ```svelte
 <!-- Parent.svelte -->
 <script>
-	import { getContext, setContext } from 'svelte';
-	const level = getContext('level'); // 0
-	setContext('level', level + 1); // Override for children
+  import { getContext, setContext } from "svelte";
+  const level = getContext("level"); // 0
+  setContext("level", level + 1); // Override for children
 </script>
 
 <Child /> <!-- Will see level = 1 -->

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { Button } from '$lib/components/ui/veil/button';
-	import Logo from '$lib/components/web/Logo.svelte';
-	import { cn } from '$lib/utils';
-	import { Menu, X } from '@lucide/svelte';
+	import { onMount } from "svelte";
+	import { Button } from "$lib/components/ui/veil/button";
+	import Logo from "$lib/components/web/Logo.svelte";
+	import { cn } from "$lib/utils";
+	import { Menu, X } from "@lucide/svelte";
 
 	const menuItems = [
-		{ name: 'Features', href: '#link' },
-		{ name: 'Pricing', href: '#link' },
-		{ name: 'Company', href: '#link' }
+		{ name: "Features", href: "#link" },
+		{ name: "Pricing", href: "#link" },
+		{ name: "Company", href: "#link" },
 	];
 
 	let menuState = false;
@@ -20,17 +20,17 @@
 		};
 
 		handleScroll();
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
 	});
 </script>
 
 <header>
 	<nav
-		data-state={menuState ? 'active' : undefined}
+		data-state={menuState ? "active" : undefined}
 		class={cn(
-			'fixed z-20 w-full transition-all duration-300',
-			isScrolled && 'border-b border-black/5 bg-background/75 backdrop-blur-lg'
+			"fixed z-20 w-full transition-all duration-300",
+			isScrolled && "border-b border-black/5 bg-background/75 backdrop-blur-lg"
 		)}
 	>
 		<div class="mx-auto max-w-5xl px-6">
@@ -42,7 +42,7 @@
 
 					<button
 						onclick={() => (menuState = !menuState)}
-						aria-label={menuState ? 'Close Menu' : 'Open Menu'}
+						aria-label={menuState ? "Close Menu" : "Open Menu"}
 						class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 					>
 						<Menu
@@ -58,7 +58,12 @@
 					<ul class="flex gap-1">
 						{#each menuItems as item}
 							<li>
-								<Button variant="ghost" size="sm" href={item.href} class="text-base">
+								<Button
+									variant="ghost"
+									size="sm"
+									href={item.href}
+									class="text-base"
+								>
 									<span>{item.name}</span>
 								</Button>
 							</li>
@@ -83,14 +88,25 @@
 							{/each}
 						</ul>
 					</div>
-					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-						<Button variant="ghost" size="sm" class={cn(isScrolled && 'lg:hidden')} href="#">
+					<div
+						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+					>
+						<Button
+							variant="ghost"
+							size="sm"
+							class={cn(isScrolled && "lg:hidden")}
+							href="#"
+						>
 							<span>Login</span>
 						</Button>
-						<Button size="sm" class={cn(isScrolled && 'lg:hidden')} href="#">
+						<Button size="sm" class={cn(isScrolled && "lg:hidden")} href="#">
 							<span>Sign Up</span>
 						</Button>
-						<Button size="sm" class={cn(isScrolled ? 'lg:inline-flex' : 'hidden')} href="#">
+						<Button
+							size="sm"
+							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+							href="#"
+						>
 							<span>Get Started</span>
 						</Button>
 					</div>

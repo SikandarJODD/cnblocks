@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { Snippet } from 'svelte';
+	import { cn } from "$lib/utils";
+	import type { Snippet } from "svelte";
 
 	type MarqueeProps = {
 		pauseOnHover?: boolean;
@@ -15,27 +15,27 @@
 		vertical = false,
 		repeat = 4,
 		reverse = false,
-		class: _class = '',
-		children
+		class: _class = "",
+		children,
 	}: MarqueeProps = $props();
 </script>
 
 <div
 	class={cn(
-		'group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:16s] [--gap:3rem]',
+		"group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:16s] [--gap:3rem]",
 		{
-			'flex-row': !vertical,
-			'flex-col': vertical
+			"flex-row": !vertical,
+			"flex-col": vertical,
 		},
 		_class
 	)}
 >
 	{#each { length: repeat } as _, i (i)}
 		<div
-			class={cn('flex shrink-0 justify-around [gap:var(--gap)]', {
-				'animate-marquee flex-row': !vertical,
-				'animate-marquee-vertical flex-col': vertical,
-				'group-hover:[animation-play-state:paused]': pauseOnHover
+			class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
+				"animate-marquee flex-row": !vertical,
+				"animate-marquee-vertical flex-col": vertical,
+				"group-hover:[animation-play-state:paused]": pauseOnHover,
 			})}
 			style="animation-direction:{reverse ? 'reverse' : 'normal'};
       "

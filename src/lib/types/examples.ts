@@ -1,5 +1,5 @@
-import type { CodeBlock } from '$lib/components/ui/code';
-import type { Component } from 'svelte';
+import type { CodeBlock } from "$lib/components/ui/code";
+import type { Component } from "svelte";
 
 /**
  * Represents a usage example for component documentation

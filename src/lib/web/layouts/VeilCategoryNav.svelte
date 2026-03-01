@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import { all_veils_category_block } from '$lib/all_blocks/category_block';
-	import ScrollArea from '$lib/components/ui/scroll-area/scroll-area.svelte';
-	import { cn } from '$lib/utils';
+	import { page } from "$app/state";
+	import { all_veils_category_block } from "$lib/all_blocks/category_block";
+	import ScrollArea from "$lib/components/ui/scroll-area/scroll-area.svelte";
+	import { cn } from "$lib/utils";
 
 	let isActive = (href: string) => {
 		return page.url.pathname === href;
@@ -19,18 +19,20 @@
 					{#each all_veils_category_block as category}
 						<li
 							class={cn(
-								'flex h-full snap-start items-center border-b border-b-transparent',
-								isActive(category.href) && 'border-primary'
+								"flex h-full snap-start items-center border-b border-b-transparent",
+								isActive(category.href) && "border-primary"
 							)}
 						>
 							<a
 								href={category.href}
 								class={cn(
-									isActive(category.href) && 'text-primary!',
-									'flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 transition-all duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground'
+									isActive(category.href) && "text-primary!",
+									"flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 transition-all duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground"
 								)}
 							>
-								<span class="block w-max text-nowrap capitalize">{category.title}</span>
+								<span class="block w-max text-nowrap capitalize"
+									>{category.title}</span
+								>
 							</a>
 						</li>
 					{/each}

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { cn } from '$lib/utils';
-	import BookOpen from '@lucide/svelte/icons/book-open';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { cn } from "$lib/utils";
+	import BookOpen from "@lucide/svelte/icons/book-open";
 </script>
 
 <section class="py-20 [--color-primary:theme(colors.indigo.500)]">
 	<div class="relative z-10 mx-auto w-full max-w-2xl px-6 lg:px-0">
 		<div class="relative text-center">
 			<!-- <MistKitLogo class="mx-auto" /> -->
-			{@render MistKitLogo({ _class: 'mx-auto' })}
+			{@render MistKitLogo({ _class: "mx-auto" })}
 			<h1 class="mx-auto mt-16 max-w-xl text-5xl font-medium text-balance">The Note App</h1>
 
 			<p class="mx-auto mt-4 mb-6 text-xl text-balance text-muted-foreground">
@@ -96,7 +96,7 @@
 	<div
 		aria-hidden="true"
 		class={cn(
-			'relative flex size-9 translate-y-0.5 items-center justify-center rounded-(--radius) border border-background bg-linear-to-b from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ',
+			"relative flex size-9 translate-y-0.5 items-center justify-center rounded-(--radius) border border-background bg-linear-to-b from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ",
 			_class
 		)}
 	>

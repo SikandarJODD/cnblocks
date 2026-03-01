@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Cpu from '@lucide/svelte/icons/cpu';
-	import Sparkles from '@lucide/svelte/icons/sparkles';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Cpu from "@lucide/svelte/icons/cpu";
+	import Sparkles from "@lucide/svelte/icons/sparkles";
 
 	type TableData = {
 		feature: string;
@@ -12,47 +12,47 @@
 
 	let tableData: TableData[] = [
 		{
-			feature: 'Feature 1',
+			feature: "Feature 1",
 			free: true,
 			pro: true,
-			startup: true
+			startup: true,
 		},
 		{
-			feature: 'Feature 2',
+			feature: "Feature 2",
 			free: true,
 			pro: true,
-			startup: true
+			startup: true,
 		},
 		{
-			feature: 'Feature 3',
+			feature: "Feature 3",
 			free: false,
 			pro: true,
-			startup: true
+			startup: true,
 		},
 		{
-			feature: 'Tokens',
-			free: '',
-			pro: '20 Users',
-			startup: 'Unlimited'
+			feature: "Tokens",
+			free: "",
+			pro: "20 Users",
+			startup: "Unlimited",
 		},
 		{
-			feature: 'Video calls',
-			free: '',
-			pro: '12 Weeks',
-			startup: '56'
+			feature: "Video calls",
+			free: "",
+			pro: "12 Weeks",
+			startup: "56",
 		},
 		{
-			feature: 'Support',
-			free: '',
-			pro: 'Secondes',
-			startup: 'Unlimited'
+			feature: "Support",
+			free: "",
+			pro: "Secondes",
+			startup: "Unlimited",
 		},
 		{
-			feature: 'Security',
-			free: '',
-			pro: '20 Users',
-			startup: 'Unlimited'
-		}
+			feature: "Security",
+			free: "",
+			pro: "20 Users",
+			startup: "Unlimited",
+		},
 	];
 </script>
 
@@ -107,7 +107,7 @@
 						<tr class="*:border-b *:py-3">
 							<td class="text-muted-foreground">{row.feature}</td>
 							<td>
-								{#if typeof row.free === 'boolean' && row.free}
+								{#if typeof row.free === "boolean" && row.free}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -126,7 +126,7 @@
 							</td>
 							<td class="border-none bg-muted px-4">
 								<div class="-mb-3 border-b py-3">
-									{#if typeof row.pro === 'boolean' && row.pro}
+									{#if typeof row.pro === "boolean" && row.pro}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 24 24"
@@ -145,7 +145,7 @@
 								</div>
 							</td>
 							<td>
-								{#if typeof row.startup === 'boolean' && row.startup}
+								{#if typeof row.startup === "boolean" && row.startup}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -177,7 +177,7 @@
 						<tr class="*:border-b *:py-3">
 							<td class="text-muted-foreground">{row.feature}</td>
 							<td>
-								{#if typeof row.free === 'boolean' && row.free}
+								{#if typeof row.free === "boolean" && row.free}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -194,7 +194,7 @@
 							</td>
 							<td class="border-none bg-muted px-4">
 								<div class="-mb-3 border-b py-3">
-									{#if typeof row.pro === 'boolean' && row.pro}
+									{#if typeof row.pro === "boolean" && row.pro}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 24 24"
@@ -213,7 +213,7 @@
 								</div>
 							</td>
 							<td>
-								{#if typeof row.startup === 'boolean' && row.startup}
+								{#if typeof row.startup === "boolean" && row.startup}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"

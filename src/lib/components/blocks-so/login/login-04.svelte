@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { Separator } from '$lib/components/ui/separator';
-	import GitHubIcon from './github-icon.svelte';
-	import GoogleIcon from './google-icon.svelte';
-	import LogoIcon from './logo-icon.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { Separator } from "$lib/components/ui/separator";
+	import GitHubIcon from "./github-icon.svelte";
+	import GoogleIcon from "./google-icon.svelte";
+	import LogoIcon from "./logo-icon.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center">
@@ -19,7 +19,7 @@
 				Sign in to your account
 			</h3>
 			<p class="mt-2 text-sm text-muted-foreground dark:text-muted-foreground">
-				Don&apos;t have an account?{' '}
+				Don&apos;t have an account?{" "}
 				<a
 					href="#"
 					class="font-medium text-primary hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"
@@ -27,7 +27,9 @@
 					Sign up
 				</a>
 			</p>
-			<div class="mt-8 flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+			<div
+				class="mt-8 flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4"
+			>
 				<Button
 					variant="outline"
 					class="flex-1 items-center justify-center space-x-2 py-2"
@@ -91,7 +93,7 @@
 				<Button type="submit" class="mt-4 w-full py-2 font-medium">Sign in</Button>
 			</form>
 			<p class="mt-6 text-sm text-muted-foreground dark:text-muted-foreground">
-				Forgot your password?{' '}
+				Forgot your password?{" "}
 				<a
 					href="#"
 					class="font-medium text-primary hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"

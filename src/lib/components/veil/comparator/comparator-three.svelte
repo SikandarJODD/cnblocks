@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Check, Minus } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/veil/button';
-	import { Card } from '$lib/components/ui/veil/card';
+	import { Check, Minus } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/veil/button";
+	import { Card } from "$lib/components/ui/veil/card";
 
-	type FeatureKey = 'integrations' | 'apiCalls' | 'support' | 'analytics' | 'webhooks' | 'sso';
+	type FeatureKey = "integrations" | "apiCalls" | "support" | "analytics" | "webhooks" | "sso";
 
 	type PlanFeatureValues = Record<FeatureKey, boolean | string>;
 
@@ -19,69 +19,69 @@
 
 	const plans: Plan[] = [
 		{
-			name: 'Starter',
-			price: '$0',
-			period: '/month',
-			description: 'For individuals and small projects',
-			cta: 'Get Started',
+			name: "Starter",
+			price: "$0",
+			period: "/month",
+			description: "For individuals and small projects",
+			cta: "Get Started",
 			features: {
-				integrations: '3',
-				apiCalls: '1,000/mo',
-				support: 'Community',
+				integrations: "3",
+				apiCalls: "1,000/mo",
+				support: "Community",
 				analytics: false,
 				webhooks: false,
-				sso: false
-			}
+				sso: false,
+			},
 		},
 		{
-			name: 'Pro',
-			price: '$29',
-			period: '/month',
-			description: 'For growing teams',
-			cta: 'Start Free Trial',
+			name: "Pro",
+			price: "$29",
+			period: "/month",
+			description: "For growing teams",
+			cta: "Start Free Trial",
 			highlighted: true,
 			features: {
-				integrations: 'Unlimited',
-				apiCalls: '100,000/mo',
-				support: 'Priority',
+				integrations: "Unlimited",
+				apiCalls: "100,000/mo",
+				support: "Priority",
 				analytics: true,
 				webhooks: true,
-				sso: false
-			}
+				sso: false,
+			},
 		},
 		{
-			name: 'Enterprise',
-			price: 'Custom',
-			period: '',
-			description: 'For large organizations',
-			cta: 'Contact Sales',
+			name: "Enterprise",
+			price: "Custom",
+			period: "",
+			description: "For large organizations",
+			cta: "Contact Sales",
 			features: {
-				integrations: 'Unlimited',
-				apiCalls: 'Unlimited',
-				support: 'Dedicated',
+				integrations: "Unlimited",
+				apiCalls: "Unlimited",
+				support: "Dedicated",
 				analytics: true,
 				webhooks: true,
-				sso: true
-			}
-		}
+				sso: true,
+			},
+		},
 	];
 
 	const featureLabels: Record<FeatureKey, string> = {
-		integrations: 'Integrations',
-		apiCalls: 'API Calls',
-		support: 'Support',
-		analytics: 'Analytics',
-		webhooks: 'Custom Webhooks',
-		sso: 'SSO / SAML'
+		integrations: "Integrations",
+		apiCalls: "API Calls",
+		support: "Support",
+		analytics: "Analytics",
+		webhooks: "Custom Webhooks",
+		sso: "SSO / SAML",
 	};
 
 	const featureKeys: FeatureKey[] = [
-		'integrations',
-		'apiCalls',
-		'support',
-		'analytics',
-		'webhooks',
-		'sso'
+		"integrations",
+		"apiCalls",
+		"support",
+		"analytics",
+		"webhooks",
+		"sso",
 	];
 </script>
 
@@ -96,10 +96,12 @@
 		<div class="mt-12 space-y-4">
 			{#each plans as plan (plan.name)}
 				<Card
-					variant={plan.highlighted ? 'default' : 'mixed'}
-					class={`p-6 ${plan.highlighted ? 'ring-primary' : ''}`}
+					variant={plan.highlighted ? "default" : "mixed"}
+					class={`p-6 ${plan.highlighted ? "ring-primary" : ""}`}
 				>
-					<div class="flex flex-col gap-6 @lg:flex-row @lg:items-start @lg:justify-between">
+					<div
+						class="flex flex-col gap-6 @lg:flex-row @lg:items-start @lg:justify-between"
+					>
 						<div class="@lg:max-w-xs">
 							<h3 class="font-medium text-foreground">{plan.name}</h3>
 							<p class="mt-1 text-sm text-muted-foreground">{plan.description}</p>
@@ -111,7 +113,7 @@
 							</div>
 							<Button
 								href="#link"
-								variant={plan.highlighted ? 'default' : 'outline'}
+								variant={plan.highlighted ? "default" : "outline"}
 								size="sm"
 								class="mt-4"
 							>
@@ -124,8 +126,10 @@
 								<div
 									class="flex items-center justify-between border-b py-3 text-sm last:border-b-0"
 								>
-									<span class="text-muted-foreground">{featureLabels[featureKey]}</span>
-									{#if typeof value === 'boolean'}
+									<span class="text-muted-foreground"
+										>{featureLabels[featureKey]}</span
+									>
+									{#if typeof value === "boolean"}
 										{#if value}
 											<Check class="size-4 text-primary" />
 										{:else}

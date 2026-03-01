@@ -1,33 +1,33 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
-	import { cn } from '$lib/utils';
-	import Star from '@lucide/svelte/icons/star';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import { cn } from "$lib/utils";
+	import Star from "@lucide/svelte/icons/star";
 
 	const testimonials = [
 		{
-			name: 'Méschac Irung',
-			role: 'Creator',
-			avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
+			name: "Méschac Irung",
+			role: "Creator",
+			avatar: "https://avatars.githubusercontent.com/u/47919550?v=4",
 			content:
 				"Using Tailark has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility.",
-			stars: 5
+			stars: 5,
 		},
 		{
-			name: 'Théo Balick',
-			role: 'Frontend Dev',
-			avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
+			name: "Théo Balick",
+			role: "Frontend Dev",
+			avatar: "https://avatars.githubusercontent.com/u/68236786?v=4",
 			content:
-				'Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.',
-			stars: 4
+				"Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.",
+			stars: 4,
 		},
 		{
-			name: 'Glodie Lukose',
-			role: 'Frontend Dev',
-			avatar: 'https://avatars.githubusercontent.com/u/99137927?v=4',
+			name: "Glodie Lukose",
+			role: "Frontend Dev",
+			avatar: "https://avatars.githubusercontent.com/u/99137927?v=4",
 			content:
-				'The extensive collection of UI components has significantly accelerated my workflow. Tailark is a game-changer.',
-			stars: 5
-		}
+				"The extensive collection of UI components has significantly accelerated my workflow. Tailark is a game-changer.",
+			stars: 5,
+		},
 	];
 </script>
 
@@ -41,10 +41,10 @@
 							{#each Array.from({ length: 5 }) as _, i}
 								<Star
 									class={cn(
-										'size-4',
+										"size-4",
 										i < testimonial.stars
-											? 'fill-primary stroke-primary'
-											: 'fill-foreground/15 stroke-transparent'
+											? "fill-primary stroke-primary"
+											: "fill-foreground/15 stroke-transparent"
 									)}
 								/>
 							{/each}
@@ -58,7 +58,8 @@
 							<div class="text-sm font-medium text-foreground">
 								{testimonial.name}
 							</div>
-							<span aria-hidden="true" class="size-1 rounded-full bg-foreground/25"></span>
+							<span aria-hidden="true" class="size-1 rounded-full bg-foreground/25"
+							></span>
 							<span class="text-sm text-muted-foreground">{testimonial.role}</span>
 						</div>
 					</div>

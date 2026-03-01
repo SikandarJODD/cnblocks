@@ -11,8 +11,8 @@
 						Create Content with AI Assistance
 					</h2>
 					<p class="mt-4 mb-12 text-xl text-muted-foreground">
-						Our AI assistant helps you create better content faster. Generate ideas, improve your
-						writing, and design layouts with simple prompts.
+						Our AI assistant helps you create better content faster. Generate ideas,
+						improve your writing, and design layouts with simple prompts.
 					</p>
 				</div>
 

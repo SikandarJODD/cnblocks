@@ -1,10 +1,10 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { Card } from '$lib/components/ui/card';
-	import Input from '$lib/components/ui/input/input.svelte';
-	import Label from '$lib/components/ui/label/label.svelte';
-	import * as Select from '$lib/components/ui/select/index.js';
-	import { Textarea } from '$lib/components/ui/textarea';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { Card } from "$lib/components/ui/card";
+	import Input from "$lib/components/ui/input/input.svelte";
+	import Label from "$lib/components/ui/label/label.svelte";
+	import * as Select from "$lib/components/ui/select/index.js";
+	import { Textarea } from "$lib/components/ui/textarea";
 </script>
 
 <!--
@@ -31,8 +31,8 @@
 			<div>
 				<h2 class="text-xl font-semibold">Let's get you to the right place</h2>
 				<p class="mt-4 text-sm">
-					Reach out to our sales team! We're eager to learn more about how you plan to use our
-					application.
+					Reach out to our sales team! We're eager to learn more about how you plan to use
+					our application.
 				</p>
 			</div>
 
@@ -62,7 +62,9 @@
 				<div>
 					<Label for="website">Company Website</Label>
 					<Input type="url" id="website" />
-					<span class="inline-block text-sm text-muted-foreground">Must start with 'https'</span>
+					<span class="inline-block text-sm text-muted-foreground"
+						>Must start with 'https'</span
+					>
 				</div>
 
 				<div>

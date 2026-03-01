@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Scroll below for the component code
-	import IntegrationCard from './card/integration-card.svelte';
-	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from '../logos/logos';
+	import IntegrationCard from "./card/integration-card.svelte";
+	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 </script>
 
 <section>

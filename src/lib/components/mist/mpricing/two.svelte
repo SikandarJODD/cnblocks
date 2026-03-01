@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Card, CardHeader, CardTitle, CardDescription } from '$lib/components/ui/card';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Check from '@lucide/svelte/icons/check';
+	import { Card, CardHeader, CardTitle, CardDescription } from "$lib/components/ui/card";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Check from "@lucide/svelte/icons/check";
 </script>
 
 <div
@@ -30,7 +30,7 @@
 						</div>
 
 						<ul role="list" class="space-y-3 p-8">
-							{#each ['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'] as item}
+							{#each ["Basic Analytics Dashboard", "5GB Cloud Storage", "Email and Chat Support"] as item}
 								<li class="flex items-center gap-2">
 									<Check class="size-3 text-primary" strokeWidth={3.5} />
 									{item}
@@ -44,7 +44,9 @@
 						<div class="relative px-1 @3xl:px-0 @3xl:py-3">
 							<CardHeader class="p-8">
 								<CardTitle class="font-medium">Pro</CardTitle>
-								<span class="mt-2 mb-0.5 block text-2xl font-semibold">$19 / mo</span>
+								<span class="mt-2 mb-0.5 block text-2xl font-semibold"
+									>$19 / mo</span
+								>
 								<CardDescription class="text-sm">Per editor</CardDescription>
 							</CardHeader>
 							<div class="-mx-1 border-y px-8 py-4 @3xl:mx-0">
@@ -52,7 +54,7 @@
 							</div>
 
 							<ul role="list" class="space-y-3 p-8">
-								{#each ['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'] as item}
+								{#each ["Everything in Free Plan", "5GB Cloud Storage", "Email and Chat Support", "Access to Community Forum", "Single User Access", "Access to Basic Templates", "Mobile App Access", "1 Custom Report Per Month", "Monthly Product Updates", "Standard Security Features"] as item}
 									<li class="flex items-center gap-2">
 										<Check class="size-3 text-primary" strokeWidth={3.5} />
 										{item}
@@ -72,7 +74,7 @@
 						</div>
 
 						<ul role="list" class="space-y-3 p-8">
-							{#each ['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'] as item}
+							{#each ["Everything in Pro Plan", "5GB Cloud Storage", "Email and Chat Support"] as item}
 								<li class="flex items-center gap-2">
 									<Check class="size-3 text-primary" strokeWidth={3.5} />
 									{item}

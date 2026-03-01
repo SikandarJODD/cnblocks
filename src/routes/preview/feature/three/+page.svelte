@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { feature } from '$lib/all_blocks/features';
+	import { feature } from "$lib/all_blocks/features";
 
-	const block = feature.find((item) => item.title === 'three');
+	const block = feature.find((item) => item.title === "three");
 
 	if (!block) {
-		throw new Error('Missing preview block for three in feature');
+		throw new Error("Missing preview block for three in feature");
 	}
 
 	const PreviewComponent = block.component;

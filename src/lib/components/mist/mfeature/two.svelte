@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card } from '$lib/components/ui/card';
+	import { Card } from "$lib/components/ui/card";
 </script>
 
 <section>
@@ -8,8 +8,9 @@
 			<div>
 				<h2 class="text-4xl font-semibold text-foreground">Effortless Task Management</h2>
 				<p class="mt-4 mb-12 text-lg text-balance text-muted-foreground">
-					Automate your tasks and workflows by connecting your favorite tools like Notion, Todoist,
-					and more. AI-powered scheduling helps you stay on track and adapt to changing priorities.
+					Automate your tasks and workflows by connecting your favorite tools like Notion,
+					Todoist, and more. AI-powered scheduling helps you stay on track and adapt to
+					changing priorities.
 				</p>
 			</div>
 			<div class="mt-8 grid gap-4 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
@@ -20,7 +21,8 @@
 					<div class="sm:max-w-sm">
 						<h3 class="text-xl font-semibold text-foreground">Marketing Campaigns</h3>
 						<p class="my-4 text-lg text-muted-foreground">
-							Effortlessly book and manage your meetings. Stay on top of your schedule.
+							Effortlessly book and manage your meetings. Stay on top of your
+							schedule.
 						</p>
 					</div>
 				</div>
@@ -31,7 +33,8 @@
 					<div class="sm:max-w-sm">
 						<h3 class="text-xl font-semibold text-foreground">AI Meeting Scheduler</h3>
 						<p class="my-4 text-lg text-muted-foreground">
-							Effortlessly book and manage your meetings. Stay on top of your schedule.
+							Effortlessly book and manage your meetings. Stay on top of your
+							schedule.
 						</p>
 					</div>
 				</div>
@@ -42,7 +45,8 @@
 					<div class="sm:max-w-sm">
 						<h3 class="text-xl font-semibold text-foreground">AI Meeting Scheduler</h3>
 						<p class="my-4 text-lg text-muted-foreground">
-							Effortlessly book and manage your meetings. Stay on top of your schedule.
+							Effortlessly book and manage your meetings. Stay on top of your
+							schedule.
 						</p>
 					</div>
 				</div>

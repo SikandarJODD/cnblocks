@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from '../logos/logos';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { type Icon } from '@lucide/svelte';
+	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { type Icon } from "@lucide/svelte";
 </script>
 
 <section>
@@ -13,17 +13,22 @@
 						Integrate with your favorite LLMs
 					</h2>
 					<p class="text-muted-foreground">
-						Connect seamlessly with popular platforms and services to enhance your workflow.
+						Connect seamlessly with popular platforms and services to enhance your
+						workflow.
 					</p>
 					<Button variant="outline" size="sm">Get started</Button>
 				</div>
 
 				<div class="mt-auto grid grid-cols-[auto_1fr] gap-3">
-					<div class="flex aspect-square items-center justify-center border bg-background">
+					<div
+						class="flex aspect-square items-center justify-center border bg-background"
+					>
 						<MediaWiki class="size-9" />
 					</div>
 					<blockquote>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+						</p>
 						<div class="mt-2 flex gap-2 text-sm">
 							<cite>John Doe</cite>
 							<p class="text-muted-foreground">Founder, MediaWiki</p>
@@ -35,37 +40,39 @@
 			<div
 				class="-mx-6 [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:mr-0 md:ml-auto"
 			>
-				<div class="rounded-2xl border bg-background p-3 shadow-lg md:pb-12 dark:bg-muted/50">
+				<div
+					class="rounded-2xl border bg-background p-3 shadow-lg md:pb-12 dark:bg-muted/50"
+				>
 					<div class="grid grid-cols-2 gap-2">
 						{@render IntergrationCardv8({
 							icon: Gemini,
-							name: 'Gemini',
-							description: "The AI model that powers Google's search engine."
+							name: "Gemini",
+							description: "The AI model that powers Google's search engine.",
 						})}
 						{@render IntergrationCardv8({
 							icon: Replit,
-							name: 'Replit',
-							description: "The AI model that powers Google's search engine."
+							name: "Replit",
+							description: "The AI model that powers Google's search engine.",
 						})}
 						{@render IntergrationCardv8({
 							icon: GooglePaLM,
-							name: 'GooglePaLM',
-							description: "The AI model that powers Google's search engine."
+							name: "GooglePaLM",
+							description: "The AI model that powers Google's search engine.",
 						})}
 						{@render IntergrationCardv8({
 							icon: MagicUI,
-							name: 'MagicUI',
-							description: "The AI model that powers Google's search engine."
+							name: "MagicUI",
+							description: "The AI model that powers Google's search engine.",
 						})}
 						{@render IntergrationCardv8({
 							icon: VSCodium,
-							name: 'VSCodium',
-							description: "The AI model that powers Google's search engine."
+							name: "VSCodium",
+							description: "The AI model that powers Google's search engine.",
 						})}
 						{@render IntergrationCardv8({
 							icon: MediaWiki,
-							name: 'MediaWiki',
-							description: "The AI model that powers Google's search engine."
+							name: "MediaWiki",
+							description: "The AI model that powers Google's search engine.",
 						})}
 					</div>
 				</div>
@@ -77,7 +84,7 @@
 {#snippet IntergrationCardv8({
 	icon,
 	name,
-	description
+	description,
 }: {
 	icon: typeof Icon;
 	name: string;

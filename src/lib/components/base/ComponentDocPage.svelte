@@ -1,7 +1,7 @@
 <script lang="ts" module>
-	import type { Component } from 'svelte';
-	import type { SEO } from '$lib/types/seo';
-	import type { CodeBlock } from '$lib/components/ui/code';
+	import type { Component } from "svelte";
+	import type { SEO } from "$lib/types/seo";
+	import type { CodeBlock } from "$lib/components/ui/code";
 
 	export type ComponentDocPageProps = {
 		id: string;
@@ -21,12 +21,12 @@
 </script>
 
 <script lang="ts">
-	import { page } from '$app/state';
-	import { H1, H2, Paragraph, H3 } from '$lib/components/markdown/index';
-	import { PreviewFrame } from '$lib/components/ui/preview-component';
-	import SEOComponent from '$lib/seo/SEO.svelte';
-	import { getRegistryItemUrl } from '$lib/utils/registry-url';
-	import InstallComponent from './InstallComponent.svelte';
+	import { page } from "$app/state";
+	import { H1, H2, Paragraph, H3 } from "$lib/components/markdown/index";
+	import { PreviewFrame } from "$lib/components/ui/preview-component";
+	import SEOComponent from "$lib/seo/SEO.svelte";
+	import { getRegistryItemUrl } from "$lib/utils/registry-url";
+	import InstallComponent from "./InstallComponent.svelte";
 
 	let {
 		id,
@@ -37,11 +37,11 @@
 		previewCode,
 		previewAddItem,
 		previewInstallCommand,
-		previewRegistryOptions = ['@sv/cnblocks'],
+		previewRegistryOptions = ["@sv/cnblocks"],
 		previewRegistry,
 		previewHref,
-		previewThemeSetupHref = '/docs/installation',
-		descriptionClass = ''
+		previewThemeSetupHref = "/docs/installation",
+		descriptionClass = "",
 	}: ComponentDocPageProps = $props();
 
 	let PreviewComp = $derived(preview);
@@ -49,12 +49,12 @@
 	let installUrl = $derived(getRegistryItemUrl(page.url.origin, resolvedPreviewAddItem));
 	let previewInstallCmd = $derived(previewInstallCommand ?? `npx jsrepo add @sv/cnblocks/${id}`);
 	let resolvedPreviewRegistry = $derived(
-		previewRegistry ?? previewRegistryOptions[0] ?? '@sv/cnblocks'
+		previewRegistry ?? previewRegistryOptions[0] ?? "@sv/cnblocks"
 	);
 
 	let getURLPath = (url: string) => {
 		// clean url by removing query params and hash
-		let cleanUrl = url.split('?')[0].split('#')[0];
+		let cleanUrl = url.split("?")[0].split("#")[0];
 		return cleanUrl;
 	};
 

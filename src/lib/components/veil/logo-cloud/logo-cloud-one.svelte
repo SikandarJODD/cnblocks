@@ -1,5 +1,5 @@
 <script>
-	import { Spotify, Supabase, Bolt, Hulu, Linear, Cisco, Vercel, Beacon } from '$lib/svgs';
+	import { Spotify, Supabase, Bolt, Hulu, Linear, Cisco, Vercel, Beacon } from "$lib/svgs";
 </script>
 
 <section class="@container bg-background py-12">

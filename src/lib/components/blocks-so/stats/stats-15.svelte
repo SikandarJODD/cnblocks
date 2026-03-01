@@ -1,22 +1,22 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 
 	const data = [
 		{
-			label: 'After 1 year',
-			value: '$2,400',
-			percentage: '+8.2%'
+			label: "After 1 year",
+			value: "$2,400",
+			percentage: "+8.2%",
 		},
 		{
-			label: 'After 5 years',
-			value: '$14,800',
-			percentage: '+24.6%'
+			label: "After 5 years",
+			value: "$14,800",
+			percentage: "+24.6%",
 		},
 		{
-			label: 'After 10 years',
-			value: '$38,500',
-			percentage: '+52.1%'
-		}
+			label: "After 10 years",
+			value: "$38,500",
+			percentage: "+52.1%",
+		},
 	];
 </script>
 
@@ -33,8 +33,8 @@
 					<span class="h-5 w-px bg-border" aria-hidden="true" />
 					<span
 						class={cn(
-							'w-15 rounded px-1.5 py-1 text-center text-xs font-semibold',
-							'bg-emerald-50 text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-400'
+							"w-15 rounded px-1.5 py-1 text-center text-xs font-semibold",
+							"bg-emerald-50 text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-400"
 						)}
 					>
 						{item.percentage}

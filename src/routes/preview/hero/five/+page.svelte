@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { hero } from '$lib/all_blocks/hero';
+	import { hero } from "$lib/all_blocks/hero";
 
-	const block = hero.find((item) => item.title === 'five');
+	const block = hero.find((item) => item.title === "five");
 
 	if (!block) {
-		throw new Error('Missing preview block for five in hero');
+		throw new Error("Missing preview block for five in hero");
 	}
 
 	const PreviewComponent = block.component;

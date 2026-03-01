@@ -1,54 +1,54 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	const AIDEN_BLESER = 'https://avatars.githubusercontent.com/u/117548273?v=4';
-	const BHIDE_SVELTE = 'https://avatars.githubusercontent.com/u/93428946?v=4';
-	const RICH_HARRIS = 'https://avatars.githubusercontent.com/u/1162160?v=4';
-	const HUNTER_JOHNSTON = 'https://avatars.githubusercontent.com/u/64506580?v=4';
+	import { cn } from "$lib/utils";
+	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";
+	const BHIDE_SVELTE = "https://avatars.githubusercontent.com/u/93428946?v=4";
+	const RICH_HARRIS = "https://avatars.githubusercontent.com/u/1162160?v=4";
+	const HUNTER_JOHNSTON = "https://avatars.githubusercontent.com/u/64506580?v=4";
 
 	const customers = [
 		{
 			id: 1,
-			date: '10/31/2023',
-			status: 'Paid',
-			statusVariant: 'success',
-			name: 'Aiden Blesser',
+			date: "10/31/2023",
+			status: "Paid",
+			statusVariant: "success",
+			name: "Aiden Blesser",
 			avatar: AIDEN_BLESER,
-			revenue: '$410'
+			revenue: "$410",
 		},
 		{
 			id: 2,
-			date: '10/21/2023',
-			status: 'Ref',
-			statusVariant: 'warning',
-			name: 'Rich Harris',
+			date: "10/21/2023",
+			status: "Ref",
+			statusVariant: "warning",
+			name: "Rich Harris",
 			avatar: RICH_HARRIS,
-			revenue: '$5173'
+			revenue: "$5173",
 		},
 		{
 			id: 3,
-			date: '10/15/2023',
-			status: 'Paid',
-			statusVariant: 'success',
-			name: 'Hunter Johnston',
+			date: "10/15/2023",
+			status: "Paid",
+			statusVariant: "success",
+			name: "Hunter Johnston",
 			avatar: HUNTER_JOHNSTON,
-			revenue: '$450'
+			revenue: "$450",
 		},
 		{
 			id: 4,
-			date: '10/12/2023',
-			status: 'Cancelled',
-			statusVariant: 'danger',
-			name: 'Bhide Svelte',
+			date: "10/12/2023",
+			status: "Cancelled",
+			statusVariant: "danger",
+			name: "Bhide Svelte",
 			avatar: BHIDE_SVELTE,
-			revenue: '$916'
-		}
+			revenue: "$916",
+		},
 	];
-	let { class: _class = '' } = $props();
+	let { class: _class = "" } = $props();
 </script>
 
 <div
 	class={cn(
-		'relative w-full overflow-hidden rounded-xl border border-transparent bg-background p-6 shadow-md shadow-foreground/5 ring-1 inset-ring-1',
+		"relative w-full overflow-hidden rounded-xl border border-transparent bg-background p-6 shadow-md shadow-foreground/5 ring-1 inset-ring-1",
 		_class
 	)}
 >
@@ -81,10 +81,12 @@
 					<td>
 						<span
 							class={cn(
-								'rounded-full px-2 py-1 text-xs',
-								customer.statusVariant == 'success' && 'bg-lime-500/15 text-lime-800',
-								customer.statusVariant == 'danger' && 'bg-red-500/15 text-red-800',
-								customer.statusVariant == 'warning' && 'bg-yellow-500/15 text-yellow-800'
+								"rounded-full px-2 py-1 text-xs",
+								customer.statusVariant == "success" &&
+									"bg-lime-500/15 text-lime-800",
+								customer.statusVariant == "danger" && "bg-red-500/15 text-red-800",
+								customer.statusVariant == "warning" &&
+									"bg-yellow-500/15 text-yellow-800"
 							)}>{customer.status}</span
 						>
 					</td>

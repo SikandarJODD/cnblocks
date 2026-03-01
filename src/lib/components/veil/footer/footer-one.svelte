@@ -1,32 +1,32 @@
 <script lang="ts">
-	import Logo from '$lib/components/web/Logo.svelte';
+	import Logo from "$lib/components/web/Logo.svelte";
 
 	type LinkItem = { label: string; href: string };
 
-	const links: Record<'product' | 'company' | 'resources' | 'legal', LinkItem[]> = {
+	const links: Record<"product" | "company" | "resources" | "legal", LinkItem[]> = {
 		product: [
-			{ label: 'Features', href: '#' },
-			{ label: 'Integrations', href: '#' },
-			{ label: 'Pricing', href: '#' },
-			{ label: 'Changelog', href: '#' }
+			{ label: "Features", href: "#" },
+			{ label: "Integrations", href: "#" },
+			{ label: "Pricing", href: "#" },
+			{ label: "Changelog", href: "#" },
 		],
 		company: [
-			{ label: 'About', href: '#' },
-			{ label: 'Blog', href: '#' },
-			{ label: 'Careers', href: '#' },
-			{ label: 'Contact', href: '#' }
+			{ label: "About", href: "#" },
+			{ label: "Blog", href: "#" },
+			{ label: "Careers", href: "#" },
+			{ label: "Contact", href: "#" },
 		],
 		resources: [
-			{ label: 'Documentation', href: '#' },
-			{ label: 'Help Center', href: '#' },
-			{ label: 'Community', href: '#' },
-			{ label: 'Templates', href: '#' }
+			{ label: "Documentation", href: "#" },
+			{ label: "Help Center", href: "#" },
+			{ label: "Community", href: "#" },
+			{ label: "Templates", href: "#" },
 		],
 		legal: [
-			{ label: 'Privacy', href: '#' },
-			{ label: 'Terms', href: '#' },
-			{ label: 'Cookie Policy', href: '#' }
-		]
+			{ label: "Privacy", href: "#" },
+			{ label: "Terms", href: "#" },
+			{ label: "Cookie Policy", href: "#" },
+		],
 	};
 
 	const year = new Date().getFullYear();

@@ -1,3 +1,3 @@
-import PMCommand from './pm-command.svelte';
+import PMCommand from "./pm-command.svelte";
 
 export { PMCommand };

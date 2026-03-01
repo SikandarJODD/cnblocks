@@ -1,65 +1,65 @@
-import type { MistBlock } from '$lib/types/mists';
-import StatsOne from '$lib/components/mist/mstats/one.svelte';
-import StatsTwo from '$lib/components/mist/mstats/two.svelte';
-import StatsThree from '$lib/components/mist/mstats/three.svelte';
-import StatsFour from '$lib/components/mist/mstats/four.svelte';
+import type { MistBlock } from "$lib/types/mists";
+import StatsOne from "$lib/components/mist/mstats/one.svelte";
+import StatsTwo from "$lib/components/mist/mstats/two.svelte";
+import StatsThree from "$lib/components/mist/mstats/three.svelte";
+import StatsFour from "$lib/components/mist/mstats/four.svelte";
 
-import StatsOneCode from '$lib/components/mist/mstats/one.svelte?raw';
-import StatsTwoCode from '$lib/components/mist/mstats/two.svelte?raw';
-import StatsThreeCode from '$lib/components/mist/mstats/three.svelte?raw';
-import StatsFourCode from '$lib/components/mist/mstats/four.svelte?raw';
+import StatsOneCode from "$lib/components/mist/mstats/one.svelte?raw";
+import StatsTwoCode from "$lib/components/mist/mstats/two.svelte?raw";
+import StatsThreeCode from "$lib/components/mist/mstats/three.svelte?raw";
+import StatsFourCode from "$lib/components/mist/mstats/four.svelte?raw";
 
 export const all_mists_stats: MistBlock[] = [
 	{
-		slug: 'one',
-		title: 'Stats One',
-		category: 'stats',
-		preview: '/preview/mist/stats/one',
+		slug: "one",
+		title: "Stats One",
+		category: "stats",
+		preview: "/preview/mist/stats/one",
 
-		itemId: 'mist-stats-one',
+		itemId: "mist-stats-one",
 		code: {
 			code: StatsOneCode,
-			lang: 'svelte'
+			lang: "svelte",
 		},
-		component: StatsOne
+		component: StatsOne,
 	},
 	{
-		slug: 'two',
-		title: 'Stats Two',
-		category: 'stats',
-		preview: '/preview/mist/stats/two',
+		slug: "two",
+		title: "Stats Two",
+		category: "stats",
+		preview: "/preview/mist/stats/two",
 
-		itemId: 'mist-stats-two',
+		itemId: "mist-stats-two",
 		code: {
 			code: StatsTwoCode,
-			lang: 'svelte'
+			lang: "svelte",
 		},
-		component: StatsTwo
+		component: StatsTwo,
 	},
 	{
-		slug: 'three',
-		title: 'Stats Three',
-		category: 'stats',
-		preview: '/preview/mist/stats/three',
+		slug: "three",
+		title: "Stats Three",
+		category: "stats",
+		preview: "/preview/mist/stats/three",
 
-		itemId: 'mist-stats-three',
+		itemId: "mist-stats-three",
 		code: {
 			code: StatsThreeCode,
-			lang: 'svelte'
+			lang: "svelte",
 		},
-		component: StatsThree
+		component: StatsThree,
 	},
 	{
-		slug: 'four',
-		title: 'Stats Four',
-		category: 'stats',
-		preview: '/preview/mist/stats/four',
+		slug: "four",
+		title: "Stats Four",
+		category: "stats",
+		preview: "/preview/mist/stats/four",
 
-		itemId: 'mist-stats-four',
+		itemId: "mist-stats-four",
 		code: {
 			code: StatsFourCode,
-			lang: 'svelte'
+			lang: "svelte",
 		},
-		component: StatsFour
-	}
+		component: StatsFour,
+	},
 ];

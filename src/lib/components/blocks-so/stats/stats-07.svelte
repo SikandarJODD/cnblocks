@@ -1,36 +1,36 @@
 <script lang="ts">
-	import { Card, CardContent } from '$lib/components/ui/card';
-	import { ExternalLink } from '@lucide/svelte';
+	import { Card, CardContent } from "$lib/components/ui/card";
+	import { ExternalLink } from "@lucide/svelte";
 
 	const data = [
 		{
-			name: 'Workspaces',
+			name: "Workspaces",
 			capacity: 20,
 			current: 1,
 			allowed: 5,
-			fill: 'var(--chart-1)'
+			fill: "var(--chart-1)",
 		},
 		{
-			name: 'Dashboards',
+			name: "Dashboards",
 			capacity: 10,
 			current: 2,
 			allowed: 20,
-			fill: 'var(--chart-2)'
+			fill: "var(--chart-2)",
 		},
 		{
-			name: 'Chart widgets',
+			name: "Chart widgets",
 			capacity: 30,
 			current: 15,
 			allowed: 50,
-			fill: 'var(--chart-3)'
+			fill: "var(--chart-3)",
 		},
 		{
-			name: 'Storage',
+			name: "Storage",
 			capacity: 50,
 			current: 25,
 			allowed: 100,
-			fill: 'var(--chart-4)'
-		}
+			fill: "var(--chart-4)",
+		},
 	];
 
 	function createRadialPath(percentage: number): string {
@@ -47,8 +47,8 @@
 	<div class="w-full">
 		<h2 class="text-xl font-medium text-foreground">Plan overview</h2>
 		<p class="mt-1 text-sm leading-6 text-muted-foreground">
-			You are currently on the{' '}
-			<span class="font-medium text-foreground">starter plan</span>.{' '}
+			You are currently on the{" "}
+			<span class="font-medium text-foreground">starter plan</span>.{" "}
 			<a
 				href="#"
 				class="inline-flex items-center gap-1 text-primary hover:underline hover:underline-offset-4"

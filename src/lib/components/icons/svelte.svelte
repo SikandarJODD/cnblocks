@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { Props } from '.';
-	import { cn } from '$lib/utils';
+	import type { Props } from ".";
+	import { cn } from "$lib/utils";
 
 	let { class: className, ...rest }: Props = $props();
 </script>
 
-<svg viewBox="0 0 256 308" preserveAspectRatio="xMidYMid" class={cn('size-4', className)} {...rest}
+<svg viewBox="0 0 256 308" preserveAspectRatio="xMidYMid" class={cn("size-4", className)} {...rest}
 	><path
 		d="M239.682 40.707C211.113-.182 154.69-12.301 113.895 13.69L42.247 59.356a82.198 82.198 0 0 0-37.135 55.056 86.566 86.566 0 0 0 8.536 55.576 82.425 82.425 0 0 0-12.296 30.719 87.596 87.596 0 0 0 14.964 66.244c28.574 40.893 84.997 53.007 125.787 27.016l71.648-45.664a82.182 82.182 0 0 0 37.135-55.057 86.601 86.601 0 0 0-8.53-55.577 82.409 82.409 0 0 0 12.29-30.718 87.573 87.573 0 0 0-14.963-66.244"
 		fill="#FF3E00"

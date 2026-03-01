@@ -1,4 +1,4 @@
-import type { Component } from 'svelte';
+import type { Component } from "svelte";
 
 export interface Block {
 	itemId?: string;

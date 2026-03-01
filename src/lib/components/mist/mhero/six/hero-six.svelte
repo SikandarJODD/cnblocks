@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { cn } from '$lib/utils';
-	import BookOpen from '@lucide/svelte/icons/book-open';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { cn } from "$lib/utils";
+	import BookOpen from "@lucide/svelte/icons/book-open";
 </script>
 
 <section class="py-20 [--color-primary:theme(colors.indigo.500)]">
@@ -91,11 +91,11 @@
 </section>
 
 <!-- ring-black/10 === ring-1 -->
-{#snippet MistKitLogo(_class = '')}
+{#snippet MistKitLogo(_class = "")}
 	<div
 		aria-hidden="true"
 		class={cn(
-			'relative flex size-9 translate-y-0.5 items-center justify-center rounded-(--radius) border border-background bg-linear-to-b from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ',
+			"relative flex size-9 translate-y-0.5 items-center justify-center rounded-(--radius) border border-background bg-linear-to-b from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ",
 			_class
 		)}
 	>

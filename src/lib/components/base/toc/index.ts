@@ -1,3 +1,3 @@
-import Root from './toc.svelte';
+import Root from "./toc.svelte";
 
 export { Root };

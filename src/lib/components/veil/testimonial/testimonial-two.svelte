@@ -1,35 +1,31 @@
 <script lang="ts">
-	import { Card } from '$lib/components/ui/veil/card';
+	import { Card } from "$lib/components/ui/veil/card";
 
 	const testimonials = [
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
-			name: 'Meschac Irung',
-			role: 'Frontend Engineer at Acme',
-			quote:
-				'Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.'
+			avatar: "https://avatars.githubusercontent.com/u/47919550?v=4",
+			name: "Meschac Irung",
+			role: "Frontend Engineer at Acme",
+			quote: "Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.",
 		},
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
-			name: 'Theo Balick',
-			role: 'Founder, CEO - Acme',
-			quote:
-				'Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.'
+			avatar: "https://avatars.githubusercontent.com/u/68236786?v=4",
+			name: "Theo Balick",
+			role: "Founder, CEO - Acme",
+			quote: "Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.",
 		},
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/12345678?v=4',
-			name: 'Sarah Johnson',
-			role: 'DevOps Engineer',
-			quote:
-				'Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.'
+			avatar: "https://avatars.githubusercontent.com/u/12345678?v=4",
+			name: "Sarah Johnson",
+			role: "DevOps Engineer",
+			quote: "Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.",
 		},
 		{
-			avatar: 'https://avatars.githubusercontent.com/u/34567890?v=4',
-			name: 'Aisha Patel',
-			role: 'Data Scientist',
-			quote:
-				'Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.'
-		}
+			avatar: "https://avatars.githubusercontent.com/u/34567890?v=4",
+			name: "Aisha Patel",
+			role: "Data Scientist",
+			quote: "Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.",
+		},
 	];
 </script>
 
@@ -38,7 +34,8 @@
 		<div class="space-y-4">
 			<h2 class="font-serif text-4xl font-medium text-balance">What Our Customers Say</h2>
 			<p class="text-balance text-muted-foreground">
-				Hear from the teams and individuals who have transformed their workflow with our platform.
+				Hear from the teams and individuals who have transformed their workflow with our
+				platform.
 			</p>
 		</div>
 		<div class="mt-12 grid gap-3 @xl:grid-cols-2">

@@ -1,19 +1,19 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import * as Frame from '$lib/components/ui/frame/index.js';
-	import { Button } from '$lib/components/ui/button';
-	import * as Add from '$lib/components/ui/add';
-	import { AGENTS, type Agent } from '$lib/components/ui/add';
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import type { CodeBlock } from '$lib/components/ui/code';
-	import MultipleCode from '$lib/components/ui/code/multiple-code.svelte';
-	import SingleCodeFilename from '$lib/components/ui/code/single-code-filename.svelte';
-	import { resolveCommand } from 'package-manager-detector/commands';
-	import { getRegistryItemUrl } from '$lib/utils/registry-url';
-	import { cn } from '$lib/utils';
-	import Eye from '@lucide/svelte/icons/eye';
-	import CodeXml from '@lucide/svelte/icons/code-xml';
-	import Maximize from '@lucide/svelte/icons/maximize';
+	import type { Snippet } from "svelte";
+	import * as Frame from "$lib/components/ui/frame/index.js";
+	import { Button } from "$lib/components/ui/button";
+	import * as Add from "$lib/components/ui/add";
+	import { AGENTS, type Agent } from "$lib/components/ui/add";
+	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import type { CodeBlock } from "$lib/components/ui/code";
+	import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
+	import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
+	import { resolveCommand } from "package-manager-detector/commands";
+	import { getRegistryItemUrl } from "$lib/utils/registry-url";
+	import { cn } from "$lib/utils";
+	import Eye from "@lucide/svelte/icons/eye";
+	import CodeXml from "@lucide/svelte/icons/code-xml";
+	import Maximize from "@lucide/svelte/icons/maximize";
 
 	interface PreviewFrameProps {
 		children: Snippet;
@@ -40,62 +40,64 @@
 		componentName,
 		addItem,
 		installUrl,
-		installUrlBase = 'https://sv-blocks.vercel.app',
+		installUrlBase = "https://sv-blocks.vercel.app",
 		installCommand,
-		registryOptions = ['@sv/cnblocks'],
+		registryOptions = ["@sv/cnblocks"],
 		registry,
-		agent = 'pnpm',
+		agent = "pnpm",
 		code,
 		previewHref,
 		openPreviewInNewTab = true,
 		showFullscreenButton = Boolean(previewHref),
-		themeSetupHref = '/docs/installation',
-		themeSetupText = 'Need theme tweaks? Follow the theme setup guide.',
-		class: className = '',
-		panelClass = ''
+		themeSetupHref = "/docs/installation",
+		themeSetupText = "Need theme tweaks? Follow the theme setup guide.",
+		class: className = "",
+		panelClass = "",
 	}: PreviewFrameProps = $props();
 
-	type PreviewMode = 'preview' | 'code';
-	let mode: PreviewMode = $state('preview');
+	type PreviewMode = "preview" | "code";
+	let mode: PreviewMode = $state("preview");
 	let hasCode = $derived(Boolean(code));
 	let currentAgent: Agent = $derived(agent);
-	let currentRegistry: string = $derived(registry ?? registryOptions[0] ?? '@sv/cnblocks');
+	let currentRegistry: string = $derived(registry ?? registryOptions[0] ?? "@sv/cnblocks");
 
 	const getLegacyItemFromCommand = (command?: string) => {
-		if (!command) return '';
+		if (!command) return "";
 		const tokens = command.trim().split(/\s+/);
-		const target = tokens[tokens.length - 1] ?? '';
-		if (target.startsWith('http')) {
-			const file = target.split('/').pop() ?? target;
-			return file.replace(/\.json$/, '');
+		const target = tokens[tokens.length - 1] ?? "";
+		if (target.startsWith("http")) {
+			const file = target.split("/").pop() ?? target;
+			return file.replace(/\.json$/, "");
 		}
-		if (target.includes('/')) {
-			return target.split('/').pop() ?? target;
+		if (target.includes("/")) {
+			return target.split("/").pop() ?? target;
 		}
 		return target;
 	};
 
 	let resolvedAddItem = $derived(addItem ?? getLegacyItemFromCommand(installCommand));
-	const getInstallBase = (base: string) => base.replace(/\/+$/, '').replace(/\/(r|v|m)$/i, '');
+	const getInstallBase = (base: string) => base.replace(/\/+$/, "").replace(/\/(r|v|m)$/i, "");
 	let resolvedInstallUrl = $derived(
 		installUrl ??
-			(resolvedAddItem ? getRegistryItemUrl(getInstallBase(installUrlBase), resolvedAddItem) : '')
+			(resolvedAddItem
+				? getRegistryItemUrl(getInstallBase(installUrlBase), resolvedAddItem)
+				: "")
 	);
 	let fullInstallCommand = $derived.by(() => {
-		if (!resolvedInstallUrl) return '';
-		const command = resolveCommand(currentAgent, 'execute', [
-			'shadcn-svelte@latest',
-			'add',
-			resolvedInstallUrl
+		if (!resolvedInstallUrl) return "";
+		const command = resolveCommand(currentAgent, "execute", [
+			"shadcn-svelte@latest",
+			"add",
+			resolvedInstallUrl,
 		]);
 		return command
-			? `${command.command} ${command.args.join(' ')}`
+			? `${command.command} ${command.args.join(" ")}`
 			: `npx shadcn-svelte@latest add ${resolvedInstallUrl}`;
 	});
 	let showRegistryOptions = $derived(registryOptions.length > 1);
 </script>
 
-<div class={cn('mt-2 w-full', className)} data-toc-ignore>
+<div class={cn("mt-2 w-full", className)} data-toc-ignore>
 	<Frame.Root class="overflow-hidden">
 		<Frame.Header class="px-3 py-1.5 sm:px-4">
 			<div class="flex flex-wrap items-center justify-between gap-2.5">
@@ -104,21 +106,23 @@
 				</Frame.Title>
 				<div class="flex items-center gap-1.5">
 					{#if hasCode}
-						<div class="inline-flex items-center gap-0.5 rounded-md border bg-muted/60 p-0.5">
+						<div
+							class="inline-flex items-center gap-0.5 rounded-md border bg-muted/60 p-0.5"
+						>
 							<Button
-								variant={mode === 'preview' ? 'secondary' : 'ghost'}
+								variant={mode === "preview" ? "secondary" : "ghost"}
 								size="sm"
 								class="h-7 px-2.5"
-								onclick={() => (mode = 'preview')}
+								onclick={() => (mode = "preview")}
 								aria-label="Show preview"
 							>
 								<Eye class="size-3.5" />
 							</Button>
 							<Button
-								variant={mode === 'code' ? 'secondary' : 'ghost'}
+								variant={mode === "code" ? "secondary" : "ghost"}
 								size="sm"
 								class="h-7 px-2.5"
-								onclick={() => (mode = 'code')}
+								onclick={() => (mode = "code")}
 								aria-label="Show code"
 							>
 								<CodeXml class="size-3.5" />
@@ -134,7 +138,9 @@
 						>
 							<Add.Root item={resolvedInstallUrl} withoutRegistry>
 								<Add.Group class="h-8 w-88 max-w-full">
-									<Add.Button class="h-8 min-w-0 md:pr-2 md:pl-2 [&>div]:size-8" />
+									<Add.Button
+										class="h-8 min-w-0 md:pr-2 md:pl-2 [&>div]:size-8"
+									/>
 									<Add.GroupSeparator class="h-4" />
 									<Add.Dropdown class="size-8">
 										<Add.DropdownContent>
@@ -176,8 +182,8 @@
 							size="sm"
 							class="h-7 w-7 p-0"
 							href={previewHref}
-							target={openPreviewInNewTab ? '_blank' : undefined}
-							rel={openPreviewInNewTab ? 'noopener noreferrer' : undefined}
+							target={openPreviewInNewTab ? "_blank" : undefined}
+							rel={openPreviewInNewTab ? "noopener noreferrer" : undefined}
 							aria-label="Open fullscreen preview"
 						>
 							<Maximize class="size-3.5" />
@@ -188,8 +194,8 @@
 		</Frame.Header>
 
 		<Frame.Panel>
-			{#if mode === 'preview' || !hasCode}
-				<div class={cn('min-h-64 w-full bg-background p-3 sm:p-4', panelClass)}>
+			{#if mode === "preview" || !hasCode}
+				<div class={cn("min-h-64 w-full bg-background p-3 sm:p-4", panelClass)}>
 					{#if children}
 						{@render children?.()}
 					{:else}

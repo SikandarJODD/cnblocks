@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import { category_blocks } from '$lib/all_blocks/category_block';
-	import { cn } from '$lib/utils';
-	let pathname = $derived('/' + page.url.pathname.split('/').filter(Boolean)[0] || '/');
+	import { page } from "$app/state";
+	import { category_blocks } from "$lib/all_blocks/category_block";
+	import { cn } from "$lib/utils";
+	let pathname = $derived("/" + page.url.pathname.split("/").filter(Boolean)[0] || "/");
 </script>
 
 <div class="relative z-40 border-b dark:border-border/50">
@@ -14,15 +14,15 @@
 				{#each category_blocks as category}
 					<li
 						class={cn(
-							'flex h-full snap-start items-center border-b border-b-transparent',
-							pathname === category.href && 'border-primary'
+							"flex h-full snap-start items-center border-b border-b-transparent",
+							pathname === category.href && "border-primary"
 						)}
 					>
 						<a
 							href={category.href}
 							class={cn(
-								pathname === category.href && 'text-foreground!',
-								'flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground'
+								pathname === category.href && "text-foreground!",
+								"flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground"
 							)}
 						>
 							<span class="block w-max text-nowrap capitalize">{category.title}</span>

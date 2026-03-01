@@ -1,7 +1,7 @@
 ﻿<script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { seoMetaTags } from '$lib/config/seo';
-	import { MetaTags } from 'svelte-meta-tags';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { seoMetaTags } from "$lib/config/seo";
+	import { MetaTags } from "svelte-meta-tags";
 </script>
 
 <MetaTags {...seoMetaTags} title="Veil Blocks" />
