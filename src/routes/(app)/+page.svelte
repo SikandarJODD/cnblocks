@@ -2,12 +2,6 @@
   import FeatureSection from "$lib/web/layouts/FeatureSection.svelte";
   import FeatureSectionTwo from "$lib/web/layouts/FeatureSectionTwo.svelte";
   import SiteHero from "$lib/web/layouts/SiteHero.svelte";
-  import { setTheme } from "mode-watcher";
-
-  import { onMount } from "svelte";
-  onMount(() => {
-    setTheme("light");
-  });
 </script>
 
 <svelte:head>

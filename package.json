@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"links:generate": "node scripts/generate-install-links.mjs",
 		"routes:generate:preview": "node scripts/generate-static-preview-routes.mjs",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -13,7 +14,9 @@
 		"build:registry:core": "jsrepo build",
 		"build:registry": "pnpm build:registry:core && node tools/build-namespaced-registry.mjs && node tools/verify-registry-namespaces.mjs",
 		"ci:release": "jsrepo publish --verbose && changeset tag",
-		"create:veil": "node scripts/create-tailark-feature.mjs"
+		"create:veil": "node scripts/create-tailark-feature.mjs",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.10.1",
@@ -30,6 +33,9 @@
 		"jsrepo": "^3.0.5",
 		"mode-watcher": "^1.0.6",
 		"paneforge": "^0.0.6",
+		"prettier": "^3.8.1",
+		"prettier-plugin-svelte": "^3.4.1",
+		"prettier-plugin-tailwindcss": "^0.7.2",
 		"shiki": "^3.2.1",
 		"svelte": "^5.23.0",
 		"svelte-check": "^4.2.1",

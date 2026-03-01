@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui/veil/button";
-  import { mode, setTheme } from "mode-watcher";
+  import { mode, resetMode, setMode } from "mode-watcher";
   import { Monitor, Moon, Sun } from "@lucide/svelte";
   import { fade, fly, scale } from "svelte/transition";
 
@@ -51,7 +51,7 @@
         onmouseleave={() => (hoveredTheme = null)}
         onfocus={() => (hoveredTheme = "system")}
         onblur={() => (hoveredTheme = null)}
-        onclick={() => setTheme("system")}
+        onclick={resetMode}
       >
         <Monitor />
       </Button>
@@ -75,7 +75,7 @@
         onmouseleave={() => (hoveredTheme = null)}
         onfocus={() => (hoveredTheme = "light")}
         onblur={() => (hoveredTheme = null)}
-        onclick={() => setTheme("light")}
+        onclick={() => setMode("light")}
       >
         <Sun />
       </Button>
@@ -99,7 +99,7 @@
         onmouseleave={() => (hoveredTheme = null)}
         onfocus={() => (hoveredTheme = "dark")}
         onblur={() => (hoveredTheme = null)}
-        onclick={() => setTheme("dark")}
+        onclick={() => setMode("dark")}
       >
         <Moon />
       </Button>

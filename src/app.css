@@ -1,12 +1,14 @@
+
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
-@import "./animate.css";
+@import "tw-animate-css";
+
 @import "./themes.css";
+
 
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+@theme inline {
   --font-sans: Inter, sans-serif;
   --font-display: Sora, sans-serif;
 
@@ -80,7 +82,6 @@
   }
 }
 
-@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -137,7 +138,6 @@
     --chart-5: 340 75% 55%;
     --speed: 2s;
   }
-}
 
 @layer base {
   * {
@@ -429,4 +429,13 @@ html.dark .shiki span {
     0 var(--scroll-buffer),
     calc(100% - var(--scroll-buffer)) 100%;
   animation-fill-mode: both;
+}
+
+@utility no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
