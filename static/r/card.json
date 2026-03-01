@@ -1,0 +1,92 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "card",
+  "type": "ui",
+  "description": "Card container with header and footer",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    },
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    },
+    {
+      "ecosystem": "js",
+      "name": "tailwind-variants",
+      "version": "^3.2.2"
+    }
+  ],
+  "files": [
+    {
+      "path": "card/card-content.svelte",
+      "type": "ui",
+      "target": "card/card-content.svelte",
+      "content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"$lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"p-6\", className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "card/card-description.svelte",
+      "type": "ui",
+      "target": "card/card-description.svelte",
+      "content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"$lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLParagraphElement>> = $props();\n</script>\n\n<p bind:this={ref} class={cn(\"text-muted-foreground text-sm\", className)} {...restProps}>\n\t{@render children?.()}\n</p>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "card/card-footer.svelte",
+      "type": "ui",
+      "target": "card/card-footer.svelte",
+      "content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"$lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"flex items-center p-6 pt-0\", className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "card/card-header.svelte",
+      "type": "ui",
+      "target": "card/card-header.svelte",
+      "content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"$lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"flex flex-col space-y-1.5 p-6 pb-0\", className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "card/card-title.svelte",
+      "type": "ui",
+      "target": "card/card-title.svelte",
+      "content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"$lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tlevel = 3,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> & {\n\t\tlevel?: 1 | 2 | 3 | 4 | 5 | 6;\n\t} = $props();\n</script>\n\n<div\n\trole=\"heading\"\n\taria-level={level}\n\tbind:this={ref}\n\tclass={cn(\"font-semibold leading-none tracking-tight\", className)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</div>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "card/card.svelte",
+      "type": "ui",
+      "target": "card/card.svelte",
+      "content": "<script module lang=\"ts\">\r\n  import type { WithElementRef } from \"bits-ui\";\r\n  import { type VariantProps, tv } from \"tailwind-variants\";\r\n\r\n  export const cardVariants = tv({\r\n    base: \"bg-card text-card-foreground rounded-xl border\",\r\n    variants: {\r\n      variant: {\r\n        default: \"bg-card text-card-foreground rounded-xl border shadow-sm\",\r\n        soft: \"bg-foreground/5 dark:bg-foreground/5 border-none\",\r\n        mixed: \"bg-foreground/5 border border-foreground.5\",\r\n      },\r\n    },\r\n    defaultVariants: {\r\n      variant: \"default\",\r\n    },\r\n  });\r\n\r\n  export type CardVariant = VariantProps<typeof cardVariants>[\"variant\"];\r\n\r\n  export type CardProps = WithElementRef<HTMLAttributes<HTMLDivElement>> & {\r\n    variant?: CardVariant;\r\n  };\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n  import type { HTMLAttributes } from \"svelte/elements\";\r\n  import { cn } from \"$lib/utils.js\";\r\n\r\n  let {\r\n    ref = $bindable(null),\r\n    class: className,\r\n    children,\r\n    variant = \"default\",\r\n    ...restProps\r\n  }: CardProps = $props();\r\n</script>\r\n\r\n<div\r\n  bind:this={ref}\r\n  class={cn(cardVariants({ variant }), className)}\r\n  {...restProps}\r\n>\r\n  {@render children?.()}\r\n</div>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "card/index.ts",
+      "type": "ui",
+      "target": "card/index.ts",
+      "content": "import Root from \"./card.svelte\";\nimport Content from \"./card-content.svelte\";\nimport Description from \"./card-description.svelte\";\nimport Footer from \"./card-footer.svelte\";\nimport Header from \"./card-header.svelte\";\nimport Title from \"./card-title.svelte\";\n\nexport {\n\tRoot,\n\tContent,\n\tDescription,\n\tFooter,\n\tHeader,\n\tTitle,\n\t//\n\tRoot as Card,\n\tContent as CardContent,\n\tDescription as CardDescription,\n\tFooter as CardFooter,\n\tHeader as CardHeader,\n\tTitle as CardTitle,\n};\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "contact-one",
+  "type": "contact",
+  "description": "Contact form with input fields and submit button",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "select",
+    "textarea"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "contact-one.svelte",
+      "type": "contact",
+      "target": "contact-one.svelte",
+      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import { Card } from \"$lib/components/ui/card\";\r\n  import Input from \"$lib/components/ui/input/input.svelte\";\r\n  import Label from \"$lib/components/ui/label/label.svelte\";\r\n  import * as Select from \"$lib/components/ui/select/index.js\";\r\n  import { Textarea } from \"$lib/components/ui/textarea\";\r\n</script>\r\n\r\n<!--\r\n@component\r\n\r\n- A component that displays a contact form.\r\n\r\n@example\r\n```svelte\r\n<ContactOne />\r\n```\r\n\r\n\r\n -->\r\n\r\n<section class=\"py-32\">\r\n  <div class=\"mx-auto max-w-3xl px-8 lg:px-0\">\r\n    <h1 class=\"text-center text-4xl font-semibold lg:text-5xl\">\r\n      Contact Sales\r\n    </h1>\r\n    <p class=\"mt-4 text-center\">\r\n      We'll help you find the right plan and pricing for your business.\r\n    </p>\r\n\r\n    <Card class=\"mx-auto mt-12 max-w-lg p-8 shadow-md sm:p-16\">\r\n      <div>\r\n        <h2 class=\"text-xl font-semibold\">Let's get you to the right place</h2>\r\n        <p class=\"mt-4 text-sm\">\r\n          Reach out to our sales team! We're eager to learn more about how you\r\n          plan to use our application.\r\n        </p>\r\n      </div>\r\n\r\n      <form action=\"\" class=\"**:[&>label]:block mt-12 space-y-6 *:space-y-3\">\r\n        <div>\r\n          <Label for=\"name\">Full name</Label>\r\n          <Input type=\"text\" id=\"name\" required />\r\n        </div>\r\n\r\n        <div>\r\n          <Label for=\"email\">Work Email</Label>\r\n          <Input type=\"email\" id=\"email\" required />\r\n        </div>\r\n\r\n        <div>\r\n          <Label for=\"country\">Country/Region</Label>\r\n          <Select.Root type=\"single\">\r\n            <Select.Trigger>Select Country/Region</Select.Trigger>\r\n            <Select.Content>\r\n              <Select.Item value=\"1\">DR Congo</Select.Item>\r\n              <Select.Item value=\"2\">United States</Select.Item>\r\n              <Select.Item value=\"3\">France</Select.Item>\r\n            </Select.Content>\r\n          </Select.Root>\r\n        </div>\r\n\r\n        <div>\r\n          <Label for=\"website\">Company Website</Label>\r\n          <Input type=\"url\" id=\"website\" />\r\n          <span class=\"text-muted-foreground inline-block text-sm\"\r\n            >Must start with 'https'</span\r\n          >\r\n        </div>\r\n\r\n        <div>\r\n          <Label for=\"job\">Job function</Label>\r\n          <Select.Root type=\"single\">\r\n            <Select.Trigger>Select Job Function</Select.Trigger>\r\n            <Select.Content>\r\n              <Select.Item value=\"1\">Finance</Select.Item>\r\n              <Select.Item value=\"2\">Education</Select.Item>\r\n              <Select.Item value=\"3\">Legal</Select.Item>\r\n              <Select.Item value=\"4\">More</Select.Item>\r\n            </Select.Content>\r\n          </Select.Root>\r\n        </div>\r\n\r\n        <div>\r\n          <Label for=\"msg\">Message</Label>\r\n          <Textarea id=\"msg\" rows={3} />\r\n        </div>\r\n\r\n        <Button>Submit</Button>\r\n      </form>\r\n    </Card>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

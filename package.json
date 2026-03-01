@@ -9,7 +9,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"build:registry": "jsrepo build",
+		"build:registry:core": "jsrepo build",
+		"build:registry": "pnpm build:registry:core && node tools/build-namespaced-registry.mjs && node tools/verify-registry-namespaces.mjs",
 		"ci:release": "jsrepo publish --verbose && changeset tag",
 		"create:veil": "node scripts/create-tailark-feature.mjs"
 	},

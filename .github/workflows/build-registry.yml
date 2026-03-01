@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build registry.json
-        run: jsrepo build
+        run: pnpm build:registry
       - name: Create pull request with changes
         uses: peter-evans/create-pull-request@v7
         with:

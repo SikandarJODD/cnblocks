@@ -8,6 +8,8 @@ export const all_mists_comparator: MistBlock[] = [
     title: "Basic Comparison Table",
     category: "comparator",
     preview: "/preview/mist/comparator/one",
+
+    itemId: "mist-comparator-one",
     code: [
       {
         code: ComparatorOneCode,

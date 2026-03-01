@@ -22,6 +22,7 @@ export default defineConfig({
 		defaultPaths: {
 	"blocks": "$lib/components/blocks",
 	"mist": "$lib/components/mist",
+	"veil": "$lib/components/veil",
 	"web": "$lib/components/web",
 	"magic": "$lib/components/magic",
 	"ui": "$lib/components/ui",
@@ -1069,7 +1070,767 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcomparator-one",
+		"name": "veil-hero-one",
+		"description": "Veil Hero component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vhero",
+		"registryDependencies": [
+			"veil-header-one"
+		],
+		"files": [
+			{
+				"path": "src/lib/components/veil/hero/hero-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-hero-two",
+		"description": "Veil Hero component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vhero",
+		"registryDependencies": [
+			"veil-header-two"
+		],
+		"files": [
+			{
+				"path": "src/lib/components/veil/hero/hero-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-hero-three",
+		"description": "Veil Hero component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vhero",
+		"registryDependencies": [
+			"veil-header-three"
+		],
+		"files": [
+			{
+				"path": "src/lib/components/veil/hero/hero-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-hero-four",
+		"description": "Veil Hero component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vhero",
+		"registryDependencies": [
+			"veil-header-four"
+		],
+		"files": [
+			{
+				"path": "src/lib/components/veil/hero/hero-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-hero-five",
+		"description": "Veil Hero component, variant Five.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vhero",
+		"files": [
+			{
+				"path": "src/lib/components/veil/hero/hero-five.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-header-one",
+		"description": "Veil Header component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vheader",
+		"files": [
+			{
+				"path": "src/lib/components/veil/header/header-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-header-two",
+		"description": "Veil Header component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vheader",
+		"files": [
+			{
+				"path": "src/lib/components/veil/header/header-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-header-three",
+		"description": "Veil Header component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vheader",
+		"files": [
+			{
+				"path": "src/lib/components/veil/header/header-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-header-four",
+		"description": "Veil Header component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vheader",
+		"files": [
+			{
+				"path": "src/lib/components/veil/header/header-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-features-one",
+		"description": "Veil Features component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfeature",
+		"files": [
+			{
+				"path": "src/lib/components/veil/features/features-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-features-two",
+		"description": "Veil Features component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfeature",
+		"files": [
+			{
+				"path": "src/lib/components/veil/features/features-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-features-three",
+		"description": "Veil Features component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfeature",
+		"files": [
+			{
+				"path": "src/lib/components/veil/features/features-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-content-one",
+		"description": "Veil Content component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcontent",
+		"files": [
+			{
+				"path": "src/lib/components/veil/content/content-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-content-two",
+		"description": "Veil Content component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcontent",
+		"files": [
+			{
+				"path": "src/lib/components/veil/content/content-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-content-three",
+		"description": "Veil Content component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcontent",
+		"files": [
+			{
+				"path": "src/lib/components/veil/content/content-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-integration-one",
+		"description": "Veil Integration component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vintegration",
+		"files": [
+			{
+				"path": "src/lib/components/veil/integration/integration-one.svelte"
+			},
+			{
+				"path": "src/lib/components/veil/integration/integration-illustration.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-integration-two",
+		"description": "Veil Integration component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vintegration",
+		"files": [
+			{
+				"path": "src/lib/components/veil/integration/integration-two.svelte"
+			},
+			{
+				"path": "src/lib/components/veil/integration/integration-illustration-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-call-to-action-one",
+		"description": "Veil Call To Action component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcta",
+		"files": [
+			{
+				"path": "src/lib/components/veil/call-to-action/call-to-action-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-call-to-action-two",
+		"description": "Veil Call To Action component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcta",
+		"files": [
+			{
+				"path": "src/lib/components/veil/call-to-action/call-to-action-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-call-to-action-three",
+		"description": "Veil Call To Action component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcta",
+		"files": [
+			{
+				"path": "src/lib/components/veil/call-to-action/call-to-action-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-call-to-action-four",
+		"description": "Veil Call To Action component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcta",
+		"files": [
+			{
+				"path": "src/lib/components/veil/call-to-action/call-to-action-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-stats-one",
+		"description": "Veil Stats component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vstats",
+		"files": [
+			{
+				"path": "src/lib/components/veil/stats/stats-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-stats-two",
+		"description": "Veil Stats component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vstats",
+		"files": [
+			{
+				"path": "src/lib/components/veil/stats/stats-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-stats-three",
+		"description": "Veil Stats component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vstats",
+		"files": [
+			{
+				"path": "src/lib/components/veil/stats/stats-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-stats-four",
+		"description": "Veil Stats component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vstats",
+		"files": [
+			{
+				"path": "src/lib/components/veil/stats/stats-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-pricing-one",
+		"description": "Veil Pricing component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vpricing",
+		"files": [
+			{
+				"path": "src/lib/components/veil/pricing/pricing-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-pricing-two",
+		"description": "Veil Pricing component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vpricing",
+		"files": [
+			{
+				"path": "src/lib/components/veil/pricing/pricing-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-pricing-three",
+		"description": "Veil Pricing component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vpricing",
+		"files": [
+			{
+				"path": "src/lib/components/veil/pricing/pricing-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-testimonial-one",
+		"description": "Veil Testimonial component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vtestimonial",
+		"files": [
+			{
+				"path": "src/lib/components/veil/testimonial/testimonial-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-testimonial-two",
+		"description": "Veil Testimonial component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vtestimonial",
+		"files": [
+			{
+				"path": "src/lib/components/veil/testimonial/testimonial-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-testimonial-three",
+		"description": "Veil Testimonial component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vtestimonial",
+		"files": [
+			{
+				"path": "src/lib/components/veil/testimonial/testimonial-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-testimonial-four",
+		"description": "Veil Testimonial component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vtestimonial",
+		"files": [
+			{
+				"path": "src/lib/components/veil/testimonial/testimonial-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-team-one",
+		"description": "Veil Team component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vteam",
+		"files": [
+			{
+				"path": "src/lib/components/veil/team/team-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-team-two",
+		"description": "Veil Team component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vteam",
+		"files": [
+			{
+				"path": "src/lib/components/veil/team/team-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-logo-cloud-one",
+		"description": "Veil Logo Cloud component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vlogocloud",
+		"files": [
+			{
+				"path": "src/lib/components/veil/logo-cloud/logo-cloud-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-logo-cloud-two",
+		"description": "Veil Logo Cloud component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vlogocloud",
+		"files": [
+			{
+				"path": "src/lib/components/veil/logo-cloud/logo-cloud-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-faqs-one",
+		"description": "Veil FAQs component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfaq",
+		"files": [
+			{
+				"path": "src/lib/components/veil/faqs/faqs-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-faqs-two",
+		"description": "Veil FAQs component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfaq",
+		"files": [
+			{
+				"path": "src/lib/components/veil/faqs/faqs-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-faqs-three",
+		"description": "Veil FAQs component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfaq",
+		"files": [
+			{
+				"path": "src/lib/components/veil/faqs/faqs-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-faqs-four",
+		"description": "Veil FAQs component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfaq",
+		"files": [
+			{
+				"path": "src/lib/components/veil/faqs/faqs-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-contact-one",
+		"description": "Veil Contact component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcontact",
+		"files": [
+			{
+				"path": "src/lib/components/veil/contact/contact-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-contact-two",
+		"description": "Veil Contact component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcontact",
+		"files": [
+			{
+				"path": "src/lib/components/veil/contact/contact-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-signup-one",
+		"description": "Veil Signup component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vsignup",
+		"files": [
+			{
+				"path": "src/lib/components/veil/signup/signup-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-signup-two",
+		"description": "Veil Signup component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vsignup",
+		"files": [
+			{
+				"path": "src/lib/components/veil/signup/signup-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-signup-three",
+		"description": "Veil Signup component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vsignup",
+		"files": [
+			{
+				"path": "src/lib/components/veil/signup/signup-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-login-one",
+		"description": "Veil Login component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vlogin",
+		"files": [
+			{
+				"path": "src/lib/components/veil/login/login-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-login-two",
+		"description": "Veil Login component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vlogin",
+		"files": [
+			{
+				"path": "src/lib/components/veil/login/login-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-login-three",
+		"description": "Veil Login component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vlogin",
+		"files": [
+			{
+				"path": "src/lib/components/veil/login/login-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-forgot-password-one",
+		"description": "Veil Forgot Password component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vforgot-password",
+		"files": [
+			{
+				"path": "src/lib/components/veil/forgot-password/forgot-password-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-forgot-password-two",
+		"description": "Veil Forgot Password component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vforgot-password",
+		"files": [
+			{
+				"path": "src/lib/components/veil/forgot-password/forgot-password-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-forgot-password-three",
+		"description": "Veil Forgot Password component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vforgot-password",
+		"files": [
+			{
+				"path": "src/lib/components/veil/forgot-password/forgot-password-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-comparator-one",
+		"description": "Veil Comparator component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcomparator",
+		"files": [
+			{
+				"path": "src/lib/components/veil/comparator/comparator-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-comparator-two",
+		"description": "Veil Comparator component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcomparator",
+		"files": [
+			{
+				"path": "src/lib/components/veil/comparator/comparator-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-comparator-three",
+		"description": "Veil Comparator component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vcomparator",
+		"files": [
+			{
+				"path": "src/lib/components/veil/comparator/comparator-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-footer-one",
+		"description": "Veil Footer component, variant One.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfooter",
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/footer-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-footer-two",
+		"description": "Veil Footer component, variant Two.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfooter",
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/footer-two.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-footer-three",
+		"description": "Veil Footer component, variant Three.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfooter",
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/footer-three.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-footer-four",
+		"description": "Veil Footer component, variant Four.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfooter",
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/footer-four.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-footer-five",
+		"description": "Veil Footer component, variant Five.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfooter",
+		"registryDependencies": [
+			"vhelper-theme-switcher"
+		],
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/footer-five.svelte"
+			}
+		]
+	},
+	{
+		"name": "veil-footer-six",
+		"description": "Veil Footer component, variant Six.",
+		"add": "when-added",
+		"strict": false,
+		"type": "vfooter",
+		"registryDependencies": [
+			"vhelper-theme-switcher"
+		],
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/footer-six.svelte"
+			},
+			{
+				"path": "src/lib/components/veil/footer/social-media-one.svelte"
+			}
+		]
+	},
+	{
+		"name": "vhelper-theme-switcher",
+		"description": "Internal Veil footer theme switcher helper.",
+		"add": "when-needed",
+		"strict": false,
+		"type": "vhelper",
+		"files": [
+			{
+				"path": "src/lib/components/veil/footer/theme-switcher.svelte"
+			}
+		]
+	},
+
+	{
+		"name": "mist-comparator-one",
 		"description": "Mist-style before/after image comparison",
 		"add": "when-added",
 		"type": "mcomparator",
@@ -1080,7 +1841,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcontact-one",
+		"name": "mist-contact-one",
 		"description": "Mist-style minimal contact form",
 		"add": "when-added",
 		"type": "mcontact",
@@ -1091,7 +1852,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcontent-four",
+		"name": "mist-content-four",
 		"description": "Mist-style content with feature grid",
 		"add": "when-added",
 		"type": "mcontent",
@@ -1102,7 +1863,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcontent-one",
+		"name": "mist-content-one",
 		"description": "Mist-style simple content block",
 		"add": "when-added",
 		"type": "mcontent",
@@ -1113,7 +1874,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcontent-three",
+		"name": "mist-content-three",
 		"description": "Mist-style content with side image",
 		"add": "when-added",
 		"type": "mcontent",
@@ -1124,7 +1885,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcontent-two",
+		"name": "mist-content-two",
 		"description": "Mist-style two-column content",
 		"add": "when-added",
 		"type": "mcontent",
@@ -1135,7 +1896,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcta-one",
+		"name": "mist-cta-one",
 		"description": "Mist-style centered CTA block",
 		"add": "when-added",
 		"type": "mcta",
@@ -1146,7 +1907,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcta-three",
+		"name": "mist-cta-three",
 		"description": "Mist-style CTA with background",
 		"add": "when-added",
 		"type": "mcta",
@@ -1157,7 +1918,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mcta-two",
+		"name": "mist-cta-two",
 		"description": "Mist-style two-column CTA",
 		"add": "when-added",
 		"type": "mcta",
@@ -1168,7 +1929,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-eight",
+		"name": "mist-feature-eight",
 		"description": "Mist-style feature with icon grid",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1179,7 +1940,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-eleven",
+		"name": "mist-feature-eleven",
 		"description": "Mist-style feature with alternating rows",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1190,7 +1951,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-table",
+		"name": "mist-feature-table",
 		"description": "Mist-style feature comparison table",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1201,7 +1962,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-five",
+		"name": "mist-feature-five",
 		"description": "Mist-style feature with bullet points",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1212,7 +1973,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-four",
+		"name": "mist-feature-four",
 		"description": "Mist-style four-column feature grid",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1223,7 +1984,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-nine",
+		"name": "mist-feature-nine",
 		"description": "Mist-style feature with checkmarks",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1234,7 +1995,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-one",
+		"name": "mist-feature-one",
 		"description": "Mist-style simple feature grid",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1245,7 +2006,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-seven",
+		"name": "mist-feature-seven",
 		"description": "Mist-style feature with tabs",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1256,7 +2017,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-six",
+		"name": "mist-feature-six",
 		"description": "Mist-style six-column feature grid",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1267,7 +2028,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-ten",
+		"name": "mist-feature-ten",
 		"description": "Mist-style feature with centered image",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1278,7 +2039,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-three",
+		"name": "mist-feature-three",
 		"description": "Mist-style three-column feature cards",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1289,7 +2050,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfeature-two",
+		"name": "mist-feature-two",
 		"description": "Mist-style feature with side image",
 		"add": "when-added",
 		"type": "mfeature",
@@ -1300,7 +2061,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfooter-four",
+		"name": "mist-footer-four",
 		"description": "Mist-style multi-column footer",
 		"add": "when-added",
 		"type": "mfooter",
@@ -1311,7 +2072,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfooter-one",
+		"name": "mist-footer-one",
 		"description": "Mist-style simple centered footer",
 		"add": "when-added",
 		"type": "mfooter",
@@ -1322,7 +2083,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfooter-three",
+		"name": "mist-footer-three",
 		"description": "Mist-style footer with contact info",
 		"add": "when-added",
 		"type": "mfooter",
@@ -1333,7 +2094,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mfooter-two",
+		"name": "mist-footer-two",
 		"description": "Mist-style two-row footer",
 		"add": "when-added",
 		"type": "mfooter",
@@ -1344,7 +2105,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mforgot-password-one",
+		"name": "mist-forgot-password-one",
 		"description": "Mist-style password reset form",
 		"add": "when-added",
 		"type": "mforgot-password",
@@ -1355,7 +2116,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mhero-five",
+		"name": "mist-hero-five",
 		"description": "Mist-style hero with app mockup",
 		"add": "when-added",
 		"type": "mhero",
@@ -1371,7 +2132,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mhero-four",
+		"name": "mist-hero-four",
 		"description": "Mist-style split hero with image",
 		"add": "when-added",
 		"type": "mhero",
@@ -1390,7 +2151,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mhero-one",
+		"name": "mist-hero-one",
 		"description": "Mist-style centered hero with CTA",
 		"add": "when-added",
 		"type": "mhero",
@@ -1409,7 +2170,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mhero-six",
+		"name": "mist-hero-six",
 		"description": "Mist-style hero with logo cloud",
 		"add": "when-added",
 		"type": "mhero",
@@ -1425,7 +2186,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mhero-three",
+		"name": "mist-hero-three",
 		"description": "Mist-style hero with background",
 		"add": "when-added",
 		"type": "mhero",
@@ -1444,7 +2205,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mhero-two",
+		"name": "mist-hero-two",
 		"description": "Mist-style two-column hero",
 		"add": "when-added",
 		"type": "mhero",
@@ -1463,7 +2224,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mintegration-card",
+		"name": "mist-integration-card",
 		"description": "Mist-style integration logo card",
 		"add": "when-added",
 		"type": "mintegration",
@@ -1474,7 +2235,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mintegration-one",
+		"name": "mist-integration-one",
 		"description": "Mist-style integration grid",
 		"add": "when-added",
 		"type": "mintegration",
@@ -1485,7 +2246,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mintegration-three",
+		"name": "mist-integration-three",
 		"description": "Mist-style integration with icons",
 		"add": "when-added",
 		"type": "mintegration",
@@ -1496,7 +2257,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mintegration-two",
+		"name": "mist-integration-two",
 		"description": "Mist-style integration marquee",
 		"add": "when-added",
 		"type": "mintegration",
@@ -1507,7 +2268,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogin-one",
+		"name": "mist-login-one",
 		"description": "Mist-style minimal login form",
 		"add": "when-added",
 		"type": "mlogin",
@@ -1518,7 +2279,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogocloud-one",
+		"name": "mist-logocloud-one",
 		"description": "Mist-style grayscale logo cloud",
 		"add": "when-added",
 		"type": "mlogocloud",
@@ -1529,7 +2290,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogocloud-two",
+		"name": "mist-logocloud-two",
 		"description": "Mist-style logo cloud with hover",
 		"add": "when-added",
 		"type": "mlogocloud",
@@ -1540,7 +2301,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-gemini",
+		"name": "mist-logo-gemini",
 		"description": "Mist-style Gemini AI logo SVG",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1551,7 +2312,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-google-palm",
+		"name": "mist-logo-google-palm",
 		"description": "Mist-style Google PaLM logo SVG",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1562,7 +2323,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-collection",
+		"name": "mist-logo-collection",
 		"description": "Mist-style logo collection utilities",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1573,7 +2334,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-magic-ui",
+		"name": "mist-logo-magic-ui",
 		"description": "Mist-style Magic UI logo SVG",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1584,7 +2345,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-media-wiki",
+		"name": "mist-logo-media-wiki",
 		"description": "Mist-style MediaWiki logo SVG",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1595,7 +2356,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-replit",
+		"name": "mist-logo-replit",
 		"description": "Mist-style Replit logo SVG",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1606,7 +2367,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mlogo-vscodium",
+		"name": "mist-logo-vscodium",
 		"description": "Mist-style VSCodium logo SVG",
 		"add": "when-added",
 		"type": "mlogos",
@@ -1617,7 +2378,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mpricing-one",
+		"name": "mist-pricing-one",
 		"description": "Mist-style simple pricing cards",
 		"add": "when-added",
 		"type": "mpricing",
@@ -1628,7 +2389,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mpricing-two",
+		"name": "mist-pricing-two",
 		"description": "Mist-style pricing with toggle",
 		"add": "when-added",
 		"type": "mpricing",
@@ -1639,7 +2400,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "msignup-one",
+		"name": "mist-signup-one",
 		"description": "Mist-style minimal signup form",
 		"add": "when-added",
 		"type": "msignup",
@@ -1650,7 +2411,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mstats-four",
+		"name": "mist-stats-four",
 		"description": "Mist-style four-column stats",
 		"add": "when-added",
 		"type": "mstats",
@@ -1661,7 +2422,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mstats-one",
+		"name": "mist-stats-one",
 		"description": "Mist-style simple stats row",
 		"add": "when-added",
 		"type": "mstats",
@@ -1672,7 +2433,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mstats-three",
+		"name": "mist-stats-three",
 		"description": "Mist-style stats with descriptions",
 		"add": "when-added",
 		"type": "mstats",
@@ -1683,7 +2444,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mstats-two",
+		"name": "mist-stats-two",
 		"description": "Mist-style two-column stats",
 		"add": "when-added",
 		"type": "mstats",
@@ -1694,7 +2455,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mteam-one",
+		"name": "mist-team-one",
 		"description": "Mist-style team member grid",
 		"add": "when-added",
 		"type": "mteam",
@@ -1705,7 +2466,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mteam-two",
+		"name": "mist-team-two",
 		"description": "Mist-style team with social links",
 		"add": "when-added",
 		"type": "mteam",
@@ -1716,7 +2477,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mtestimonial-five",
+		"name": "mist-testimonial-five",
 		"description": "Mist-style testimonial carousel",
 		"add": "when-added",
 		"type": "mtestimonial",
@@ -1727,7 +2488,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mtestimonial-four",
+		"name": "mist-testimonial-four",
 		"description": "Mist-style four-column testimonials",
 		"add": "when-added",
 		"type": "mtestimonial",
@@ -1738,7 +2499,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mtestimonial-one",
+		"name": "mist-testimonial-one",
 		"description": "Mist-style centered testimonial",
 		"add": "when-added",
 		"type": "mtestimonial",
@@ -1749,7 +2510,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mtestimonial-three",
+		"name": "mist-testimonial-three",
 		"description": "Mist-style three-column testimonials",
 		"add": "when-added",
 		"type": "mtestimonial",
@@ -1760,7 +2521,7 @@ export default defineConfig({
 		]
 	},
 	{
-		"name": "mtestimonial-two",
+		"name": "mist-testimonial-two",
 		"description": "Mist-style two-column testimonials",
 		"add": "when-added",
 		"type": "mtestimonial",
@@ -2102,6 +2863,7 @@ export default defineConfig({
 ],
 	paths: {
 	"*": "$lib/components/blocks",
+	"veil": "$lib/components/veil",
 	"ui": "$lib/components/ui",
 	"hooks": "$lib/hooks",
 	"utils": "$lib/utils"

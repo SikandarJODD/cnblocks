@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "footer-four",
+  "type": "footer",
+  "description": "Multi-column footer with sitemap links",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "footer-four.svelte",
+      "type": "footer",
+      "target": "footer-four.svelte",
+      "content": "<script>\r\n  const links = [\r\n    {\r\n      title: \"Features\",\r\n      href: \"#\",\r\n    },\r\n    {\r\n      title: \"Solution\",\r\n      href: \"#\",\r\n    },\r\n    {\r\n      title: \"Customers\",\r\n      href: \"#\",\r\n    },\r\n    {\r\n      title: \"Pricing\",\r\n      href: \"#\",\r\n    },\r\n    {\r\n      title: \"Help\",\r\n      href: \"#\",\r\n    },\r\n    {\r\n      title: \"About\",\r\n      href: \"#\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<footer class=\"border-b bg-white py-12 dark:bg-transparent\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"flex flex-wrap justify-between gap-6\">\r\n      <span\r\n        class=\"text-muted-foreground order-last block text-center text-sm md:order-first\"\r\n        >© {new Date().getFullYear()} Tailus UI, All rights reserved</span\r\n      >\r\n      <div\r\n        class=\"order-first flex flex-wrap justify-center gap-6 text-sm md:order-last\"\r\n      >\r\n        {#each links as link, index}\r\n          <a\r\n            href={link.href}\r\n            class=\"text-muted-foreground hover:text-primary block duration-150\"\r\n          >\r\n            <span>{link.title}</span>\r\n          </a>\r\n        {/each}\r\n      </div>\r\n    </div>\r\n  </div>\r\n</footer>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

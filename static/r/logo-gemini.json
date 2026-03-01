@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "logo-gemini",
+  "type": "logos",
+  "description": "Google Gemini AI logo SVG component",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "Gemini.svelte",
+      "type": "logos",
+      "target": "Gemini.svelte",
+      "content": "<script lang=\"ts\">\r\n  let { ...rest } = $props();\r\n</script>\r\n\r\n<svg\r\n  height=\"1em\"\r\n  style=\"flex: none; line-height: 1;\"\r\n  viewBox=\"0 0 24 24\"\r\n  xmlns=\"http://www.w3.org/2000/svg\"\r\n  width=\"1em\"\r\n  {...rest}\r\n>\r\n  <title>{\"Gemini\"}</title>\r\n  <defs>\r\n    <linearGradient\r\n      id=\"lobe-icons-gemini-fill\"\r\n      x1=\"0%\"\r\n      x2=\"68.73%\"\r\n      y1=\"100%\"\r\n      y2=\"30.395%\"\r\n    >\r\n      <stop offset=\"0%\" stop-color=\"#1C7DFF\" />\r\n      <stop offset=\"52.021%\" stop-color=\"#1C69FF\" />\r\n      <stop offset=\"100%\" stop-color=\"#F0DCD6\" />\r\n    </linearGradient>\r\n  </defs>\r\n  <path\r\n    d=\"M12 24A14.304 14.304 0 000 12 14.304 14.304 0 0012 0a14.305 14.305 0 0012 12 14.305 14.305 0 00-12 12\"\r\n    fill=\"url(#lobe-icons-gemini-fill)\"\r\n    fill-rule=\"nonzero\"\r\n  />\r\n</svg>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

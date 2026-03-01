@@ -1,0 +1,27 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "logo-collection",
+  "type": "logos",
+  "description": "Logo collection utilities and exports",
+  "registryDependencies": [
+    "logo-gemini",
+    "logo-replit",
+    "logo-magic-ui",
+    "logo-vscodium",
+    "logo-media-wiki",
+    "logo-google-palm"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "logos.ts",
+      "type": "logos",
+      "target": "logos.ts",
+      "content": "export { default as Gemini } from \"./Gemini.svelte\";\r\nexport { default as Replit } from \"./Replit.svelte\";\r\nexport { default as MagicUI } from \"./MagicUI.svelte\";\r\nexport { default as VSCodium } from \"./VSCodium.svelte\";\r\nexport { default as MediaWiki } from \"./MediaWiki.svelte\";\r\nexport { default as GooglePaLM } from \"./GooglePaLM.svelte\";\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

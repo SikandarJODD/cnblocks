@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-integration-three",
+  "type": "mintegration",
+  "description": "Mist-style integration with icons",
+  "registryDependencies": [
+    "mist-logo-gemini",
+    "mist-logo-google-palm",
+    "mist-logo-replit",
+    "mist-logo-media-wiki",
+    "mist-logo-magic-ui",
+    "mist-logo-vscodium",
+    "mist-integration-card"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "three.svelte",
+      "type": "mintegration",
+      "target": "three.svelte",
+      "content": "<script lang=\"ts\">\r\n  import Gemini from \"../mlogos/Gemini.svelte\";\r\n  import GooglePaLM from \"../mlogos/GooglePaLM.svelte\";\r\n  import Replit from \"../mlogos/Replit.svelte\";\r\n  import MediaWiki from \"../mlogos/MediaWiki.svelte\";\r\n  import MagicUI from \"../mlogos/MagicUI.svelte\";\r\n  import VSCodium from \"../mlogos/VSCodium.svelte\";\r\n  import IntegrationCard from \"./integration-card.svelte\";\r\n</script>\r\n\r\n<section>\r\n  <div class=\"py-32\">\r\n    <div class=\"mx-auto max-w-5xl px-6\">\r\n      <div>\r\n        <h2 class=\"text-balance text-3xl font-semibold md:text-4xl\">\r\n          Integrate with your favorite tools\r\n        </h2>\r\n        <p class=\"text-muted-foreground mt-3 text-lg\">\r\n          Connect seamlessly with popular platforms and services to enhance your\r\n          workflow.\r\n        </p>\r\n      </div>\r\n\r\n      <div class=\"mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3\">\r\n        <IntegrationCard\r\n          title=\"Google Gemini\"\r\n          description=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n        >\r\n          <Gemini />\r\n        </IntegrationCard>\r\n\r\n        <IntegrationCard\r\n          title=\"Replit\"\r\n          description=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n        >\r\n          <Replit />\r\n        </IntegrationCard>\r\n\r\n        <IntegrationCard\r\n          title=\"Magic UI\"\r\n          description=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n        >\r\n          <MagicUI />\r\n        </IntegrationCard>\r\n\r\n        <IntegrationCard\r\n          title=\"VSCodium\"\r\n          description=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n        >\r\n          <VSCodium />\r\n        </IntegrationCard>\r\n\r\n        <IntegrationCard\r\n          title=\"MediaWiki\"\r\n          description=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n        >\r\n          <MediaWiki />\r\n        </IntegrationCard>\r\n\r\n        <IntegrationCard\r\n          title=\"Google PaLM\"\r\n          description=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n        >\r\n          <GooglePaLM />\r\n        </IntegrationCard>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

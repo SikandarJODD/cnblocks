@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-cta-three",
+  "type": "mcta",
+  "description": "Mist-style CTA with background",
+  "registryDependencies": [
+    "button"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "three.svelte",
+      "type": "mcta",
+      "target": "three.svelte",
+      "content": "<script lang=\"ts\">\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n  import Calendar from \"@lucide/svelte/icons/calendar\";\r\n</script>\r\n\r\n<section class='[--color-primary:var(--color-indigo-500)]'>\r\n  <div class=\"bg-muted/50 dark:bg-muted/30 py-12\">\r\n    <div class=\"mx-auto max-w-5xl px-6\">\r\n      <h2\r\n        class=\"text-foreground max-w-lg text-balance text-3xl font-semibold lg:text-4xl\"\r\n      >\r\n        <span class=\"text-muted-foreground\">Build Modern Websites.</span> Drive Results\r\n      </h2>\r\n      <p class=\"mt-4 text-lg\">\r\n        Libero sapiente aliquam quibusdam aspernatur, praesentium iusto\r\n        repellendus.\r\n      </p>\r\n      <div class=\"mt-8 flex gap-3\">\r\n        <Button variant='mdefault' href=\"#\" class=\"pr-2\">\r\n          Try Mist for Free\r\n          <ChevronRight strokeWidth={2.5} class=\"size-3.5! opacity-50\" />\r\n        </Button>\r\n        <Button href=\"#\" variant=\"outline\" class=\"pl-2.5\">\r\n          <Calendar class=\"!size-3.5 opacity-50\" strokeWidth={2.5} />\r\n          Request a Demo\r\n        </Button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

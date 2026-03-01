@@ -25,6 +25,8 @@ export const all_mists_heros: MistBlock[] = [
     title: "one",
     category: "hero",
     preview: "/preview/mist/hero/one",
+
+    itemId: "mist-hero-one",
     component: HeroOne,
     code: [
       {
@@ -44,6 +46,8 @@ export const all_mists_heros: MistBlock[] = [
     title: "Hero Two",
     category: "hero",
     preview: "/preview/mist/hero/two",
+
+    itemId: "mist-hero-two",
     component: HeroTwo,
     code: [
       {
@@ -63,6 +67,8 @@ export const all_mists_heros: MistBlock[] = [
     title: "Hero Three",
     category: "hero",
     preview: "/preview/mist/hero/three",
+
+    itemId: "mist-hero-three",
     component: HeroThree,
     code: [
       {
@@ -82,6 +88,8 @@ export const all_mists_heros: MistBlock[] = [
     title: "Hero Four",
     category: "hero",
     preview: "/preview/mist/hero/four",
+
+    itemId: "mist-hero-four",
     component: HeroFour,
     code: [
       {
@@ -101,6 +109,8 @@ export const all_mists_heros: MistBlock[] = [
     title: "Hero Five",
     category: "hero",
     preview: "/preview/mist/hero/five",
+
+    itemId: "mist-hero-five",
     component: HeroFive,
     code: {
       code: HeroFiveCode,
@@ -112,6 +122,8 @@ export const all_mists_heros: MistBlock[] = [
     title: "Hero Six",
     category: "hero",
     preview: "/preview/mist/hero/six",
+
+    itemId: "mist-hero-six",
     component: HeroSix,
     code: {
       code: HeroSixCode,

@@ -12,6 +12,8 @@ export const all_mists_integrations: MistBlock[] = [
     title: "Simple Integration List",
     category: "integration",
     preview: "/preview/mist/integration/one",
+
+    itemId: "mist-integration-one",
     code: {
       code: IntegrationOneCode,
       lang: "svelte",
@@ -23,6 +25,8 @@ export const all_mists_integrations: MistBlock[] = [
     title: "Centered Integration List",
     category: "integration",
     preview: "/preview/mist/integration/two",
+
+    itemId: "mist-integration-two",
     code: {
       code: IntegrationTwoCode,
       lang: "svelte",
@@ -34,6 +38,8 @@ export const all_mists_integrations: MistBlock[] = [
     title: "Integration Cards Grid",
     category: "integration",
     preview: "/preview/mist/integration/three",
+
+    itemId: "mist-integration-three",
     code: {
       code: IntegrationThreeCode,
       lang: "svelte",

@@ -25,6 +25,7 @@
   import { H1, H2, Paragraph, H3 } from "$lib/components/markdown/index";
   import { PreviewFrame } from "$lib/components/ui/preview-component";
   import SEOComponent from "$lib/seo/SEO.svelte";
+  import { getRegistryItemUrl } from "$lib/utils/registry-url";
   import InstallComponent from "./InstallComponent.svelte";
 
   let {
@@ -44,8 +45,10 @@
   }: ComponentDocPageProps = $props();
 
   let PreviewComp = $derived(preview);
-  let installUrl = $derived(`${page.url.origin}/r/${id}.json`);
   let resolvedPreviewAddItem = $derived(previewAddItem ?? id);
+  let installUrl = $derived(
+    getRegistryItemUrl(page.url.origin, resolvedPreviewAddItem),
+  );
   let previewInstallCmd = $derived(
     previewInstallCommand ?? `npx jsrepo add @sv/cnblocks/${id}`,
   );

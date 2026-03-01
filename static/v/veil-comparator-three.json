@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-comparator-three",
+  "type": "vcomparator",
+  "description": "Veil Comparator component, variant Three.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "comparator-three.svelte",
+      "type": "vcomparator",
+      "target": "comparator-three.svelte",
+      "content": "<script lang=\"ts\">\n  import { Check, Minus } from \"@lucide/svelte\";\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { Card } from \"$lib/components/ui/veil/card\";\n\n  type FeatureKey =\n    | \"integrations\"\n    | \"apiCalls\"\n    | \"support\"\n    | \"analytics\"\n    | \"webhooks\"\n    | \"sso\";\n\n  type PlanFeatureValues = Record<FeatureKey, boolean | string>;\n\n  type Plan = {\n    name: string;\n    price: string;\n    period: string;\n    description: string;\n    cta: string;\n    highlighted?: boolean;\n    features: PlanFeatureValues;\n  };\n\n  const plans: Plan[] = [\n    {\n      name: \"Starter\",\n      price: \"$0\",\n      period: \"/month\",\n      description: \"For individuals and small projects\",\n      cta: \"Get Started\",\n      features: {\n        integrations: \"3\",\n        apiCalls: \"1,000/mo\",\n        support: \"Community\",\n        analytics: false,\n        webhooks: false,\n        sso: false,\n      },\n    },\n    {\n      name: \"Pro\",\n      price: \"$29\",\n      period: \"/month\",\n      description: \"For growing teams\",\n      cta: \"Start Free Trial\",\n      highlighted: true,\n      features: {\n        integrations: \"Unlimited\",\n        apiCalls: \"100,000/mo\",\n        support: \"Priority\",\n        analytics: true,\n        webhooks: true,\n        sso: false,\n      },\n    },\n    {\n      name: \"Enterprise\",\n      price: \"Custom\",\n      period: \"\",\n      description: \"For large organizations\",\n      cta: \"Contact Sales\",\n      features: {\n        integrations: \"Unlimited\",\n        apiCalls: \"Unlimited\",\n        support: \"Dedicated\",\n        analytics: true,\n        webhooks: true,\n        sso: true,\n      },\n    },\n  ];\n\n  const featureLabels: Record<FeatureKey, string> = {\n    integrations: \"Integrations\",\n    apiCalls: \"API Calls\",\n    support: \"Support\",\n    analytics: \"Analytics\",\n    webhooks: \"Custom Webhooks\",\n    sso: \"SSO / SAML\",\n  };\n\n  const featureKeys: FeatureKey[] = [\n    \"integrations\",\n    \"apiCalls\",\n    \"support\",\n    \"analytics\",\n    \"webhooks\",\n    \"sso\",\n  ];\n</script>\n\n<section class=\"bg-background @container py-24\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"text-center\">\n      <h2 class=\"text-balance font-serif text-4xl font-medium\">Choose Your Plan</h2>\n      <p class=\"text-muted-foreground mx-auto mt-4 max-w-md text-balance\">\n        Start free and scale as you grow.\n      </p>\n    </div>\n    <div class=\"mt-12 space-y-4\">\n      {#each plans as plan (plan.name)}\n        <Card\n          variant={plan.highlighted ? \"default\" : \"mixed\"}\n          class={`p-6 ${plan.highlighted ? \"ring-primary\" : \"\"}`}\n        >\n          <div class=\"@lg:flex-row @lg:items-start @lg:justify-between flex flex-col gap-6\">\n            <div class=\"@lg:max-w-xs\">\n              <h3 class=\"text-foreground font-medium\">{plan.name}</h3>\n              <p class=\"text-muted-foreground mt-1 text-sm\">{plan.description}</p>\n              <div class=\"mt-4\">\n                <span class=\"font-serif text-3xl font-medium\">{plan.price}</span>\n                {#if plan.period}\n                  <span class=\"text-muted-foreground\">{plan.period}</span>\n                {/if}\n              </div>\n              <Button\n                href=\"#link\"\n                variant={plan.highlighted ? \"default\" : \"outline\"}\n                size=\"sm\"\n                class=\"mt-4\"\n              >\n                {plan.cta}\n              </Button>\n            </div>\n            <div class=\"@lg:w-64 w-full shrink-0\">\n              {#each featureKeys as featureKey (featureKey)}\n                {@const value = plan.features[featureKey]}\n                <div class=\"flex items-center justify-between border-b py-3 text-sm last:border-b-0\">\n                  <span class=\"text-muted-foreground\">{featureLabels[featureKey]}</span>\n                  {#if typeof value === \"boolean\"}\n                    {#if value}\n                      <Check class=\"text-primary size-4\" />\n                    {:else}\n                      <Minus class=\"text-muted-foreground/50 size-4\" />\n                    {/if}\n                  {:else}\n                    <span class=\"text-foreground font-medium\">{value}</span>\n                  {/if}\n                </div>\n              {/each}\n            </div>\n          </div>\n        </Card>\n      {/each}\n    </div>\n  </div>\n</section>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

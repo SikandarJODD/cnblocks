@@ -163,14 +163,14 @@
             <NavigationMenu.List
               class="group flex list-none items-center justify-center p-1"
             >
-              <!-- <NavigationMenu.Item id="home">
+              <NavigationMenu.Item id="home">
                 <NavigationMenu.Link
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                   href="/"
                 >
                   <span class="hidden sm:inline"> Home </span>
                 </NavigationMenu.Link>
-              </NavigationMenu.Item> -->
+              </NavigationMenu.Item>
 
               <NavigationMenu.Item id="veil">
                 <NavigationMenu.Link
@@ -181,7 +181,7 @@
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
-              <!-- <NavigationMenu.Item id="docs">
+               <NavigationMenu.Item id="docs">
                 <NavigationMenu.Link
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                   href="/docs"
@@ -215,8 +215,8 @@
                     </ul>
                   </div>
                 </NavigationMenu.Content>
-              </NavigationMenu.Item> -->
-              <!-- <NavigationMenu.Item id="mist">
+              </NavigationMenu.Item>
+              <NavigationMenu.Item id="mist">
                 <NavigationMenu.Trigger
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                 >
@@ -241,8 +241,8 @@
                     </ul>
                   </div>
                 </NavigationMenu.Content>
-              </NavigationMenu.Item> -->
-              <!-- <NavigationMenu.Item value="templates">
+              </NavigationMenu.Item>
+               <NavigationMenu.Item value="templates">
                 <NavigationMenu.Trigger
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                 >
@@ -288,15 +288,15 @@
                     })}
                   </ul>
                 </NavigationMenu.Content>
-              </NavigationMenu.Item> -->
-              <!-- <NavigationMenu.Item id="changelog">
+              </NavigationMenu.Item>
+              <NavigationMenu.Item id="changelog">
                 <NavigationMenu.Link
                   class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
                   href="/changelog"
                 >
                   <span class="hidden sm:inline"> Changelog </span>
                 </NavigationMenu.Link>
-              </NavigationMenu.Item> -->
+              </NavigationMenu.Item>
 
               <NavigationMenu.Indicator
                 class="data-[state=hidden]:animate-fade-out data-[state=visible]:animate-fade-in top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 transition-[all,transform_250ms_ease] duration-200 data-[state=hidden]:opacity-0"

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "pricing-two",
+  "type": "pricing",
+  "description": "Two-column pricing with monthly/yearly toggle",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "pricing-two.svelte",
+      "type": "pricing",
+      "target": "pricing-two.svelte",
+      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import {\r\n    Card,\r\n    CardContent,\r\n    CardDescription,\r\n    CardHeader,\r\n    CardTitle,\r\n    CardFooter,\r\n  } from \"$lib/components/ui/card\";\r\n  import Check from \"@lucide/svelte/icons/check\";\r\n\r\n  let pricingList = {\r\n    free: [\r\n      \"Basic Analytics Dashboard\",\r\n      \"5GB Cloud Storage\",\r\n      \"Email and Chat Support\",\r\n    ],\r\n    startup: [\r\n      \"Everything in Pro Plan\",\r\n      \"5GB Cloud Storage\",\r\n      \"Email and Chat Support\",\r\n    ],\r\n    pro: [\r\n      \"Everything in Free Plan\",\r\n      \"5GB Cloud Storage\",\r\n      \"Email and Chat Support\",\r\n      \"Access to Community Forum\",\r\n      \"Single User Access\",\r\n      \"Access to Basic Templates\",\r\n      \"Mobile App Access\",\r\n      \"1 Custom Report Per Month\",\r\n      \"Monthly Product Updates\",\r\n      \"Standard Security Features\",\r\n    ],\r\n  };\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-6xl px-6\">\r\n    <div class=\"mx-auto max-w-2xl space-y-6 text-center\">\r\n      <h1 class=\"text-center text-4xl font-semibold lg:text-5xl\">\r\n        Pricing that Scales with You\r\n      </h1>\r\n      <p>\r\n        Gemini is evolving to be more than just the models. It supports an\r\n        entire to the APIs and platforms helping developers and businesses\r\n        innovate.\r\n      </p>\r\n    </div>\r\n\r\n    <div\r\n      class=\"mt-8 grid gap-6 [--color-card:var(--color-muted)] *:border-none *:shadow-none md:mt-20 md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]\"\r\n    >\r\n      <Card class=\"flex flex-col\">\r\n        <CardHeader>\r\n          <CardTitle class=\"font-medium\">Free</CardTitle>\r\n          <span class=\"my-3 block text-2xl font-semibold\">$0 / mo</span>\r\n          <CardDescription class=\"text-sm\">Per editor</CardDescription>\r\n        </CardHeader>\r\n\r\n        <CardContent class=\"space-y-4\">\r\n          <hr class=\"border-dashed\" />\r\n\r\n          <ul class=\"list-outside space-y-3 text-sm\">\r\n            {#each pricingList.free as item}\r\n              <li class=\"flex items-center gap-2\">\r\n                <Check class=\"size-3\" />\r\n                {item}\r\n              </li>\r\n            {/each}\r\n          </ul>\r\n        </CardContent>\r\n\r\n        <CardFooter class=\"mt-auto\">\r\n          <Button variant=\"outline\" class=\"w-full\">\r\n            Get Started\r\n          </Button>\r\n        </CardFooter>\r\n      </Card>\r\n\r\n      <Card class=\"relative\">\r\n        <span\r\n          class=\"bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5\"\r\n          >Popular</span\r\n        >\r\n\r\n        <div class=\"flex flex-col\">\r\n          <CardHeader>\r\n            <CardTitle class=\"font-medium\">Pro</CardTitle>\r\n            <span class=\"my-3 block text-2xl font-semibold\">$19 / mo</span>\r\n            <CardDescription class=\"text-sm\">Per editor</CardDescription>\r\n          </CardHeader>\r\n\r\n          <CardContent class=\"space-y-4\">\r\n            <hr class=\"border-dashed\" />\r\n            <ul class=\"list-outside space-y-3 text-sm\">\r\n              {#each pricingList.pro as item}\r\n                <li class=\"flex items-center gap-2\">\r\n                  <Check class=\"size-3\" />\r\n                  {item}\r\n                </li>\r\n              {/each}\r\n            </ul>\r\n          </CardContent>\r\n\r\n          <CardFooter>\r\n            <Button class=\"w-full\">\r\n              Get Started\r\n            </Button>\r\n          </CardFooter>\r\n        </div>\r\n      </Card>\r\n\r\n      <Card class=\"flex flex-col\">\r\n        <CardHeader>\r\n          <CardTitle class=\"font-medium\">Startup</CardTitle>\r\n          <span class=\"my-3 block text-2xl font-semibold\">$29 / mo</span>\r\n          <CardDescription class=\"text-sm\">Per editor</CardDescription>\r\n        </CardHeader>\r\n\r\n        <CardContent class=\"space-y-4\">\r\n          <hr class=\"border-dashed\" />\r\n\r\n          <ul class=\"list-outside space-y-3 text-sm\">\r\n            {#each pricingList.startup as item}\r\n              <li class=\"flex items-center gap-2\">\r\n                <Check class=\"size-3\" />\r\n                {item}\r\n              </li>\r\n            {/each}\r\n          </ul>\r\n        </CardContent>\r\n\r\n        <CardFooter class=\"mt-auto\">\r\n          <Button variant=\"outline\" class=\"w-full\">\r\n            Get Started\r\n          </Button>\r\n        </CardFooter>\r\n      </Card>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

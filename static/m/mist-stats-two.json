@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-stats-two",
+  "type": "mstats",
+  "description": "Mist-style two-column stats",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "two.svelte",
+      "type": "mstats",
+      "target": "two.svelte",
+      "content": "<script>\r\n  // Component logic here\r\n</script>\r\n\r\n<section>\r\n  <div class=\"bg-muted/50 py-24\">\r\n      <div class=\"mx-auto max-w-5xl px-6\">\r\n          <div>\r\n              <h2 class=\"text-4xl font-semibold lg:text-5xl\">Tailark in numbers</h2>\r\n              <p class=\"text-muted-foreground mt-4 text-balance text-lg\">Our platform continues to grow with developers and businesses using our tools to create innovative solutions and enhance productivity.</p>\r\n          </div>\r\n          <div class=\"mt-8 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4\">\r\n              <div>\r\n                  <div class=\"text-foreground text-4xl font-bold\">90+</div>\r\n                  <p class=\"text-muted-foreground\">Integrations</p>\r\n              </div>\r\n              <div>\r\n                  <div class=\"text-foreground text-4xl font-bold\">56%</div>\r\n                  <p class=\"text-muted-foreground\">Productivity Boost</p>\r\n              </div>\r\n              <div>\r\n                  <div class=\"text-foreground text-4xl font-bold\">24/7</div>\r\n                  <p class=\"text-muted-foreground\">Customer Support</p>\r\n              </div>\r\n              <div>\r\n                  <div class=\"text-foreground text-4xl font-bold\">10k+</div>\r\n                  <p class=\"text-muted-foreground\">Active Users</p>\r\n              </div>\r\n          </div>\r\n      </div>\r\n  </div>\r\n</section>",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

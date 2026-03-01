@@ -1,0 +1,42 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "toggle",
+  "type": "ui",
+  "description": "Toggle button component",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "tailwind-variants",
+      "version": "^3.2.2"
+    },
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    }
+  ],
+  "files": [
+    {
+      "path": "toggle/index.ts",
+      "type": "ui",
+      "target": "toggle/index.ts",
+      "content": "import Root from \"./toggle.svelte\";\r\nexport {\r\n\ttoggleVariants,\r\n\ttype ToggleSize,\r\n\ttype ToggleVariant,\r\n\ttype ToggleVariants,\r\n} from \"./toggle.svelte\";\r\n\r\nexport {\r\n\tRoot,\r\n\t//\r\n\tRoot as Toggle,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "toggle/toggle.svelte",
+      "type": "ui",
+      "target": "toggle/toggle.svelte",
+      "content": "<script lang=\"ts\" module>\r\n\timport { type VariantProps, tv } from \"tailwind-variants\";\r\n\r\n\texport const toggleVariants = tv({\r\n\t\tbase: \"hover:bg-muted hover:text-muted-foreground focus-visible:ring-ring data-[state=on]:bg-accent data-[state=on]:text-accent-foreground inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\r\n\t\tvariants: {\r\n\t\t\tvariant: {\r\n\t\t\t\tdefault: \"bg-transparent\",\r\n\t\t\t\toutline:\r\n\t\t\t\t\t\"border-input hover:bg-accent hover:text-accent-foreground border bg-transparent shadow-sm\",\r\n\t\t\t},\r\n\t\t\tsize: {\r\n\t\t\t\tdefault: \"h-9 min-w-9 px-3\",\r\n\t\t\t\tsm: \"h-8 min-w-8 px-2\",\r\n\t\t\t\tlg: \"h-10 min-w-10 px-3\",\r\n\t\t\t},\r\n\t\t},\r\n\t\tdefaultVariants: {\r\n\t\t\tvariant: \"default\",\r\n\t\t\tsize: \"default\",\r\n\t\t},\r\n\t});\r\n\r\n\texport type ToggleVariant = VariantProps<typeof toggleVariants>[\"variant\"];\r\n\texport type ToggleSize = VariantProps<typeof toggleVariants>[\"size\"];\r\n\texport type ToggleVariants = VariantProps<typeof toggleVariants>;\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n\timport { Toggle as TogglePrimitive } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tpressed = $bindable(false),\r\n\t\tclass: className,\r\n\t\tsize = \"default\",\r\n\t\tvariant = \"default\",\r\n\t\t...restProps\r\n\t}: TogglePrimitive.RootProps & {\r\n\t\tvariant?: ToggleVariant;\r\n\t\tsize?: ToggleSize;\r\n\t} = $props();\r\n</script>\r\n\r\n<TogglePrimitive.Root\r\n\tbind:ref\r\n\tbind:pressed\r\n\tclass={cn(toggleVariants({ variant, size }), className)}\r\n\t{...restProps}\r\n/>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

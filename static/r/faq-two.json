@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "faq-two",
+  "type": "faq",
+  "description": "FAQ section with expandable items",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "faq-two.svelte",
+      "type": "faq",
+      "target": "faq-two.svelte",
+      "content": "<script lang=\"ts\">\r\n  import {\r\n    Accordion,\r\n    AccordionContent,\r\n    AccordionItem,\r\n    AccordionTrigger,\r\n  } from \"$lib/components/ui/accordion\";\r\n  let faqItems = [\r\n    {\r\n      id: \"item-1\",\r\n      question: \"How long does shipping take?\",\r\n      answer:\r\n        \"Standard shipping takes 3-5 business days, depending on your location. Express shipping options are available at checkout for 1-2 business day delivery.\",\r\n    },\r\n    {\r\n      id: \"item-2\",\r\n      question: \"What payment methods do you accept?\",\r\n      answer:\r\n        \"We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. For enterprise customers, we also offer invoicing options.\",\r\n    },\r\n    {\r\n      id: \"item-3\",\r\n      question: \"Can I change or cancel my order?\",\r\n      answer:\r\n        \"You can modify or cancel your order within 1 hour of placing it. After this window, please contact our customer support team who will assist you with any changes.\",\r\n    },\r\n    {\r\n      id: \"item-4\",\r\n      question: \"Do you ship internationally?\",\r\n      answer:\r\n        \"Yes, we ship to over 50 countries worldwide. International shipping typically takes 7-14 business days. Additional customs fees may apply depending on your country's import regulations.\",\r\n    },\r\n    {\r\n      id: \"item-5\",\r\n      question: \"What is your return policy?\",\r\n      answer:\r\n        \"We offer a 30-day return policy for most items. Products must be in original condition with tags attached. Some specialty items may have different return terms, which will be noted on the product page.\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<section class=\"py-16 md:py-24\">\r\n  <div class=\"mx-auto max-w-5xl px-4 md:px-6\">\r\n    <div class=\"mx-auto max-w-xl text-center\">\r\n      <h2 class=\"text-balance text-3xl font-bold md:text-4xl lg:text-5xl\">\r\n        Frequently Asked Questions\r\n      </h2>\r\n      <p class=\"text-muted-foreground mt-4 text-balance\">\r\n        Discover quick and comprehensive answers to common questions about our\r\n        platform, services, and features.\r\n      </p>\r\n    </div>\r\n\r\n    <div class=\"mx-auto mt-12 max-w-xl\">\r\n      <Accordion\r\n        type=\"single\"\r\n        class=\"bg-card ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0\"\r\n      >\r\n        {#each faqItems as item, index}\r\n          <AccordionItem\r\n            value={item.id}\r\n            class={[\r\n              faqItems.length - 1 !== index ? \"border-dashed\" : \"border-none\",\r\n            ]}\r\n          >\r\n            <AccordionTrigger\r\n              class=\"cursor-pointer text-base hover:no-underline\"\r\n              >{item.question}</AccordionTrigger\r\n            >\r\n            <AccordionContent>\r\n              <p class=\"text-base\">{item.answer}</p>\r\n            </AccordionContent>\r\n          </AccordionItem>\r\n        {/each}\r\n      </Accordion>\r\n\r\n      <p class=\"text-muted-foreground mt-6 px-4\">\r\n        Can't find what you're looking for? Contact our{\" \"}\r\n        <a href=\"/\" class=\"text-primary font-medium hover:underline\">\r\n          customer support team\r\n        </a>\r\n      </p>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

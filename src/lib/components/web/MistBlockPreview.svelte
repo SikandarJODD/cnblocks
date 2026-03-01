@@ -5,14 +5,13 @@
   import Separator from "../ui/separator/separator.svelte";
   import Button from "../ui/button/button.svelte";
   import Maximize from "@lucide/svelte/icons/maximize";
-  import Terminal from "@lucide/svelte/icons/terminal";
-  import Check from "@lucide/svelte/icons/check";
+  import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
   import { CopyButton } from "../ui/copy-button";
   import { scale } from "svelte/transition";
-  import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
   import type { Component } from "svelte";
 
   interface BlockPreviewProps {
+    itemId?: string;
     code: MistCode | MistCode[];
     preview: string;
     title: string;
@@ -30,6 +29,7 @@
   }
 
   let {
+    itemId,
     code,
     preview,
     title = "Hero Section",
@@ -51,8 +51,6 @@
   let mode = $state("preview");
   let iframeHeight = $state(0);
   let isLoading = $state(true);
-
-  const clipboard = new UseClipboard({ delay: 2000 });
 
   let ref: PaneAPI | undefined = $state(undefined);
 
@@ -399,48 +397,15 @@
             >
           </Tooltip>
         </TooltipProvider>
-        {#key code}
-          {#if code}
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Button
-                    onclick={() =>
-                      clipboard.copy(
-                        `npx jsrepo add @sv/cnblocks/m${category}-${slug}`
-                      )}
-                    size="sm"
-                    class="size-8 shadow-none md:w-fit relative"
-                    variant="outline"
-                    aria-label="copy code"
-                  >
-                    {#if clipboard.status === "success"}
-                      <div in:scale>
-                        <Check class="!size-3.5 text-[#10B981]" />
-                      </div>
-                    {:else}
-                      <div in:scale>
-                        <Terminal class="!size-3.5" />
-                      </div>
-                    {/if}
-                    <span class="hidden font-mono text-xs md:block">
-                      npx jsrepo add @sv/cnblocks/m{category}-{slug}
-                    </span>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent align="start" class="px-2 py-1 text-[10px]"
-                  >Copy CLI Command</TooltipContent
-                >
-              </Tooltip>
-            </TooltipProvider>
+        {#if code}
+          <PreviewInstallAdd {itemId} />
 
-            {#if !Array.isArray(code)}
-              <Separator class="!h-4" orientation="vertical" />
+          {#if !Array.isArray(code)}
+            <Separator class="!h-4" orientation="vertical" />
 
-              <CopyButton text={code.code} />
-            {/if}
+            <CopyButton text={code.code} />
           {/if}
-        {/key}
+        {/if}
       </div>
     </div>
   </div>

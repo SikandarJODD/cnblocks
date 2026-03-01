@@ -42,6 +42,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature One",
     category: "feature",
     preview: "/preview/mist/feature/one",
+
+    itemId: "mist-feature-one",
     component: FeatureOne,
     code: [
       {
@@ -67,6 +69,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Two",
     category: "feature",
     preview: "/preview/mist/feature/two",
+
+    itemId: "mist-feature-two",
     component: FeatureTwo,
     code: [
       {
@@ -87,6 +91,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Three",
     category: "feature",
     preview: "/preview/mist/feature/three",
+
+    itemId: "mist-feature-three",
     component: FeatureThree,
     code: [
       {
@@ -107,6 +113,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Four",
     category: "feature",
     preview: "/preview/mist/feature/four",
+
+    itemId: "mist-feature-four",
     component: FeatureFour,
     code: [
       {
@@ -127,6 +135,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Five",
     category: "feature",
     preview: "/preview/mist/feature/five",
+
+    itemId: "mist-feature-five",
     component: FeatureFive,
     code: [
       {
@@ -147,6 +157,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Six",
     category: "feature",
     preview: "/preview/mist/feature/six",
+
+    itemId: "mist-feature-six",
     component: FeatureSix,
     code: [
       {
@@ -167,6 +179,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Seven",
     category: "feature",
     preview: "/preview/mist/feature/seven",
+
+    itemId: "mist-feature-seven",
     component: FeatureSeven,
     code: [
       {
@@ -187,6 +201,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Eight",
     category: "feature",
     preview: "/preview/mist/feature/eight",
+
+    itemId: "mist-feature-eight",
     component: FeatureEight,
     code: [
       {
@@ -207,6 +223,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Nine",
     category: "feature",
     preview: "/preview/mist/feature/nine",
+
+    itemId: "mist-feature-nine",
     component: FeatureNine,
     code: [
       {
@@ -227,6 +245,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Ten",
     category: "feature",
     preview: "/preview/mist/feature/ten",
+
+    itemId: "mist-feature-ten",
     component: FeatureTen,
     code: [
       {
@@ -247,6 +267,8 @@ export const all_mists_features: MistBlock[] = [
     title: "Feature Eleven",
     category: "feature",
     preview: "/preview/mist/feature/eleven",
+
+    itemId: "mist-feature-eleven",
     component: FeatureEleven,
     code: [
       {

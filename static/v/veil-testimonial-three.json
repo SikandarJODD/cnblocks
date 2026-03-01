@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-testimonial-three",
+  "type": "vtestimonial",
+  "description": "Veil Testimonial component, variant Three.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "testimonial-three.svelte",
+      "type": "vtestimonial",
+      "target": "testimonial-three.svelte",
+      "content": "<section class=\"bg-background @container py-24\">\r\n  <div class=\"mx-auto max-w-2xl px-6\">\r\n    <div class=\"relative pl-6\">\r\n      <div class=\"bg-primary absolute inset-0 w-0.5 rounded-full\"></div>\r\n      <p class=\"text-foreground text-balance text-xl\">\r\n        Tailark has been a game-changer for our team. It has helped us to build\r\n        a modern and scalable web application.\r\n      </p>\r\n\r\n      <div class=\"mt-8 flex items-center gap-3\">\r\n        <div\r\n          class=\"before:border-foreground/10 relative size-10 shrink-0 rounded-full before:absolute before:inset-0 before:rounded-full before:border\"\r\n        >\r\n          <img\r\n            src=\"https://avatars.githubusercontent.com/u/68236786?v=4\"\r\n            alt=\"Theo Balick\"\r\n            class=\"rounded-full object-cover\"\r\n            width={40}\r\n            height={40}\r\n          />\r\n        </div>\r\n        <div class=\"space-y-0.5\">\r\n          <p class=\"text-muted-foreground text-sm font-medium\">Théo Balick</p>\r\n          <p class=\"text-muted-foreground text-xs\">Founder, CEO - Acme</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

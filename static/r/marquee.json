@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "marquee",
+  "type": "magic",
+  "description": "Animated horizontal scrolling marquee",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "Marquee.svelte",
+      "type": "magic",
+      "target": "Marquee.svelte",
+      "content": "<script lang=\"ts\">\r\n  import { cn } from \"$lib/utils\";\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  type MarqueeProps = {\r\n    pauseOnHover?: boolean;\r\n    vertical?: boolean;\r\n    repeat?: number;\r\n    reverse?: boolean;\r\n    class?: string;\r\n    children?: Snippet;\r\n  };\r\n  let {\r\n    pauseOnHover = false,\r\n    vertical = false,\r\n    repeat = 4,\r\n    reverse = false,\r\n    class: _class = \"\",\r\n    children,\r\n  }: MarqueeProps = $props();\r\n</script>\r\n\r\n<div\r\n  class={cn(\r\n    \"group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]\",\r\n    {\r\n      \"flex-row\": !vertical,\r\n      \"flex-col\": vertical,\r\n    },\r\n    _class\r\n  )}\r\n>\r\n  {#each { length: repeat } as _, i (i)}\r\n    <div\r\n      class={cn(\"flex shrink-0 justify-around [gap:var(--gap)]\", {\r\n        \"animate-marquee flex-row\": !vertical,\r\n        \"animate-marquee-vertical flex-col\": vertical,\r\n        \"group-hover:[animation-play-state:paused]\": pauseOnHover,\r\n      })}\r\n      style=\"animation-direction:{reverse ? 'reverse':'normal'};\r\n      \"\r\n    >\r\n      {@render children?.()}\r\n    </div>\r\n  {/each}\r\n</div>\r\n\r\n<style>\r\n  @keyframes marquee {\r\n    0% {\r\n      transform: translateX(0%);\r\n    }\r\n    100% {\r\n      transform: translateX(-100%);\r\n    }\r\n  }\r\n\r\n  @keyframes marquee-vertical {\r\n    0% {\r\n      transform: translateY(0%);\r\n    }\r\n    100% {\r\n      transform: translateY(-100%);\r\n    }\r\n  }\r\n\r\n  .animate-marquee {\r\n    animation: marquee var(--duration) linear infinite;\r\n  }\r\n\r\n  .animate-marquee-vertical {\r\n    animation: marquee-vertical var(--duration) linear infinite;\r\n  }\r\n</style>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-integration-one",
+  "type": "mintegration",
+  "description": "Mist-style integration grid",
+  "registryDependencies": [
+    "mist-logo-gemini",
+    "mist-logo-google-palm",
+    "mist-logo-replit",
+    "mist-logo-media-wiki",
+    "mist-logo-magic-ui",
+    "mist-logo-vscodium"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "one.svelte",
+      "type": "mintegration",
+      "target": "one.svelte",
+      "content": "<script lang=\"ts\">\r\n  import Gemini from \"../mlogos/Gemini.svelte\";\r\n  import GooglePaLM from \"../mlogos/GooglePaLM.svelte\";\r\n  import Replit from \"../mlogos/Replit.svelte\";\r\n  import MediaWiki from \"../mlogos/MediaWiki.svelte\";\r\n  import MagicUI from \"../mlogos/MagicUI.svelte\";\r\n  import VSCodium from \"../mlogos/VSCodium.svelte\";\r\n</script>\r\n\r\n<section>\r\n  <div class=\"mx-auto max-w-5xl px-6 py-8\">\r\n    <div class=\"flex flex-wrap items-center gap-4\">\r\n      <p class=\"text-muted-foreground font-medium\">Integrate with :</p>\r\n      <div class=\"max-w-2xs flex flex-wrap gap-3 divide-x *:pr-3\">\r\n        <div>\r\n          <Gemini class=\"m-auto size-5\" />\r\n        </div>\r\n        <div>\r\n          <GooglePaLM class=\"m-auto size-5\" />\r\n        </div>\r\n        <div>\r\n          <Replit class=\"m-auto size-5\" />\r\n        </div>\r\n        <div>\r\n          <MediaWiki class=\"m-auto size-5\" />\r\n        </div>\r\n        <div>\r\n          <MagicUI class=\"m-auto size-5\" />\r\n        </div>\r\n        <div>\r\n          <VSCodium class=\"m-auto size-5\" />\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

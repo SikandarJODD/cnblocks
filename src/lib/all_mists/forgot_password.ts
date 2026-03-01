@@ -7,6 +7,8 @@ export const all_mists_forgot_password: MistBlock[] = [
     title: "Forgot Password One",
     category: "forgot-password",
     preview: "/preview/mist/forgot-password/one",
+
+    itemId: "mist-forgot-password-one",
     code: {
       code: ForgotPasswordOneCode,
       lang: "svelte",

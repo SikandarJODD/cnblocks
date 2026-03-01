@@ -11,6 +11,8 @@ export const all_mists_pricing: MistBlock[] = [
     title: "Pricing One",
     category: "pricing",
     preview: "/preview/mist/pricing/one",
+
+    itemId: "mist-pricing-one",
     code: {
       code: PricingOneCode,
       lang: "svelte",
@@ -22,6 +24,8 @@ export const all_mists_pricing: MistBlock[] = [
     title: 'Pricing Two',
     category: 'pricing',
     preview: '/preview/mist/pricing/two',
+
+    itemId: 'mist-pricing-two',
     code: {
       code: PricingTwoCode,
       lang: "svelte",

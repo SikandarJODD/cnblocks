@@ -1,0 +1,29 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "integration-six",
+  "type": "integration",
+  "description": "Integration cards with descriptions",
+  "registryDependencies": [
+    "logo-collection",
+    "button"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "integration-six.svelte",
+      "type": "integration",
+      "target": "integration-six.svelte",
+      "content": "<script lang=\"ts\">\r\n  import { Gemini, GooglePaLM, Replit } from \"../logos/logos\";\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import { type Icon } from \"@lucide/svelte\";\r\n  import Plus from \"@lucide/svelte/icons/plus\";\r\n</script>\r\n\r\n<section>\r\n  <div class=\"bg-muted dark:bg-background py-24 md:py-32\">\r\n    <div class=\"mx-auto max-w-5xl px-6\">\r\n      <div\r\n        class=\"mx-auto max-w-md px-6 [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)]\"\r\n      >\r\n        <div\r\n          class=\"bg-background dark:bg-muted/50 rounded-xl border px-6 pb-12 pt-3 shadow-xl\"\r\n        >\r\n          {@render IntegrationCardv6({\r\n            icon: Gemini,\r\n            name: \"Gemini\",\r\n            description: \"The AI model that powers Google's search engine.\",\r\n          })}\r\n\r\n          {@render IntegrationCardv6({\r\n            icon: Replit,\r\n            name: \"Replit\",\r\n            description: \"The AI model that powers Google's search engine.\",\r\n          })}\r\n\r\n          {@render IntegrationCardv6({\r\n            icon: GooglePaLM,\r\n            name: \"GooglePaLM\",\r\n            description: \"The AI model that powers Google's search engine.\",\r\n          })}\r\n        </div>\r\n      </div>\r\n      <div class=\"mx-auto mt-6 max-w-lg space-y-6 text-center\">\r\n        <h2 class=\"text-balance text-3xl font-semibold md:text-4xl lg:text-5xl\">\r\n          Integrate with your favorite LLMs\r\n        </h2>\r\n        <p class=\"text-muted-foreground\">\r\n          Connect seamlessly with popular platforms and services to enhance your\r\n          workflow.\r\n        </p>\r\n\r\n        <Button variant=\"outline\" size=\"sm\">Get started</Button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n{#snippet IntegrationCardv6({\r\n  icon,\r\n  name,\r\n  description,\r\n}: {\r\n  icon: typeof Icon;\r\n  name: string;\r\n  description: string;\r\n})}\r\n  {@const Icon = icon}\r\n  <div\r\n    class=\"grid grid-cols-[auto_1fr_auto] items-center gap-3 border-b border-dashed py-3 last:border-b-0\"\r\n  >\r\n    <div\r\n      class=\"bg-muted border-foreground/5 flex size-12 items-center justify-center rounded-lg border\"\r\n    >\r\n      <Icon />\r\n    </div>\r\n    <div class=\"space-y-0.5\">\r\n      <h3 class=\"text-sm font-medium\">{name}</h3>\r\n      <p class=\"text-muted-foreground line-clamp-1 text-sm\">{description}</p>\r\n    </div>\r\n    <Button variant=\"outline\" size=\"icon\" aria-label=\"Add integration\">\r\n      <Plus class=\"size-4\" />\r\n    </Button>\r\n  </div>\r\n{/snippet}\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

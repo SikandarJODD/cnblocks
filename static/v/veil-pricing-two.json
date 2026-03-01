@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-pricing-two",
+  "type": "vpricing",
+  "description": "Veil Pricing component, variant Two.",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "pricing-two.svelte",
+      "type": "vpricing",
+      "target": "pricing-two.svelte",
+      "content": "<script lang=\"ts\">\n  import ArrowRight from \"@lucide/svelte/icons/arrow-right\";\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { Card } from \"$lib/components/ui/veil/card\";\n  import { cn } from \"$lib/utils\";\n\n  const tiers = [\n    {\n      name: \"Hobby\",\n      description: \"For personal projects\",\n      price: \"$0\",\n      period: \"/month\",\n      limit: \"1,000 requests/month\",\n    },\n    {\n      name: \"Pro\",\n      description: \"For professional use\",\n      price: \"$20\",\n      period: \"/month\",\n      limit: \"50,000 requests/month\",\n      highlighted: true,\n    },\n    {\n      name: \"Scale\",\n      description: \"For high-volume apps\",\n      price: \"$100\",\n      period: \"/month\",\n      limit: \"500,000 requests/month\",\n    },\n    {\n      name: \"Enterprise\",\n      description: \"For large organizations\",\n      price: \"Custom\",\n      period: \"\",\n      limit: \"Unlimited requests\",\n    },\n  ];\n</script>\n\n<section class=\"bg-background @container py-24\">\n  <div class=\"mx-auto max-w-3xl px-6\">\n    <div class=\"text-center\">\n      <h2 class=\"text-balance font-serif text-4xl font-medium\">\n        Usage-Based Pricing\n      </h2>\n      <p class=\"text-muted-foreground mx-auto mt-4 max-w-md text-balance\">\n        Pay only for what you use. All plans include the same features.\n      </p>\n    </div>\n    <div class=\"mt-12 space-y-3\">\n      {#each tiers as tier (tier.name)}\n        <Card\n          variant=\"outline\"\n          class={cn(\n            \"@2xl:flex-row @2xl:items-center @2xl:justify-between flex flex-col gap-4 p-4\",\n            tier.highlighted && \"ring-primary\",\n          )}\n        >\n          <div class=\"@2xl:flex-row @2xl:items-center @2xl:gap-6 flex flex-col gap-2\">\n            <div class=\"@2xl:w-44 shrink-0\">\n              <h3 class=\"text-foreground font-medium\">{tier.name}</h3>\n              <p class=\"text-muted-foreground text-sm\">{tier.description}</p>\n            </div>\n            <div class=\"@2xl:border-l @2xl:pl-6\">\n              <p class=\"text-muted-foreground text-sm\">{tier.limit}</p>\n            </div>\n          </div>\n          <div class=\"@2xl:flex-row @2xl:items-center flex flex-col gap-4\">\n            <div class=\"@2xl:text-right\">\n              <span class=\"font-serif text-2xl font-medium\">{tier.price}</span>\n              {#if tier.period}\n                <span class=\"text-muted-foreground text-sm\">{tier.period}</span>\n              {/if}\n            </div>\n            <Button\n              href=\"#link\"\n              variant={tier.highlighted ? \"default\" : \"outline\"}\n              size=\"sm\"\n              class=\"gap-1\"\n            >\n              {tier.price === \"Custom\" ? \"Contact Us\" : \"Get Started\"}\n              <ArrowRight class=\"size-3.5\" />\n            </Button>\n          </div>\n        </Card>\n      {/each}\n    </div>\n    <div class=\"bg-muted mt-8 rounded-xl p-6 text-center\">\n      <p class=\"text-foreground font-medium\">Need more requests?</p>\n      <p class=\"text-muted-foreground mt-1 text-sm\">\n        Additional requests are billed at $0.001 per request after your plan\n        limit.\n      </p>\n    </div>\n  </div>\n</section>\n\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

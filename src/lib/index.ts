@@ -43,6 +43,7 @@ export function getBlock(
   let temp = [];
   for (let i = 1; i < totalBlocks + 1; i++) {
     temp.push({
+      itemId: `${category}-${numToString(i)}`,
       slug: category,
       title: numToString(i),
       category: category,

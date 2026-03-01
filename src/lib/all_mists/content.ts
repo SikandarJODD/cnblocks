@@ -14,6 +14,8 @@ export const all_mists_content: MistBlock[] = [
     title: "Content One",
     category: "content",
     preview: "/preview/mist/content/one",
+
+    itemId: "mist-content-one",
     code: {
       code: ContentOneCode,
       lang: "svelte"
@@ -25,6 +27,8 @@ export const all_mists_content: MistBlock[] = [
     title: "Content Two",
     category: "content",
     preview: "/preview/mist/content/two",
+
+    itemId: "mist-content-two",
     code: {
       code: ContentTwoCode,
       lang: "svelte"
@@ -36,6 +40,8 @@ export const all_mists_content: MistBlock[] = [
     title: "Content Three",
     category: "content",
     preview: "/preview/mist/content/three",
+
+    itemId: "mist-content-three",
     code: {
       code: ContentThreeCode,
       lang: "svelte"
@@ -47,6 +53,8 @@ export const all_mists_content: MistBlock[] = [
     title: "Content Four",
     category: "content",
     preview: "/preview/mist/content/four",
+
+    itemId: "mist-content-four",
     code: {
       code: ContentFourCode,
       lang: "svelte"

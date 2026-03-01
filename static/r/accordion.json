@@ -1,0 +1,60 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "accordion",
+  "type": "ui",
+  "description": "Collapsible accordion component",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    },
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "accordion/accordion-content.svelte",
+      "type": "ui",
+      "target": "accordion/accordion-content.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport { Accordion as AccordionPrimitive, type WithoutChild } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tclass: className,\r\n\t\tchildren,\r\n\t\t...restProps\r\n\t}: WithoutChild<AccordionPrimitive.ContentProps> = $props();\r\n</script>\r\n\r\n<AccordionPrimitive.Content\r\n\tbind:ref\r\n\tclass={cn(\r\n\t\t\"data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm\",\r\n\t\tclassName\r\n\t)}\r\n\t{...restProps}\r\n>\r\n\t<div class=\"pb-4 pt-0\">\r\n\t\t{@render children?.()}\r\n\t</div>\r\n</AccordionPrimitive.Content>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "accordion/accordion-item.svelte",
+      "type": "ui",
+      "target": "accordion/accordion-item.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport { Accordion as AccordionPrimitive } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tclass: className,\r\n\t\t...restProps\r\n\t}: AccordionPrimitive.ItemProps = $props();\r\n</script>\r\n\r\n<AccordionPrimitive.Item bind:ref class={cn(\"border-b\", className)} {...restProps} />\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "accordion/accordion-trigger.svelte",
+      "type": "ui",
+      "target": "accordion/accordion-trigger.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport { Accordion as AccordionPrimitive, type WithoutChild } from \"bits-ui\";\r\n\timport ChevronDown from \"@lucide/svelte/icons/chevron-down\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tclass: className,\r\n\t\tlevel = 3,\r\n\t\tchildren,\r\n\t\t...restProps\r\n\t}: WithoutChild<AccordionPrimitive.TriggerProps> & {\r\n\t\tlevel?: AccordionPrimitive.HeaderProps[\"level\"];\r\n\t} = $props();\r\n</script>\r\n\r\n<AccordionPrimitive.Header {level} class=\"flex\">\r\n\t<AccordionPrimitive.Trigger\r\n\t\tbind:ref\r\n\t\tclass={cn(\r\n\t\t\t\"flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180\",\r\n\t\t\tclassName\r\n\t\t)}\r\n\t\t{...restProps}\r\n\t>\r\n\t\t{@render children?.()}\r\n\t\t<ChevronDown\r\n\t\t\tclass=\"text-muted-foreground size-4 shrink-0 transition-transform duration-200\"\r\n\t\t/>\r\n\t</AccordionPrimitive.Trigger>\r\n</AccordionPrimitive.Header>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "accordion/index.ts",
+      "type": "ui",
+      "target": "accordion/index.ts",
+      "content": "import { Accordion as AccordionPrimitive } from \"bits-ui\";\r\nimport Content from \"./accordion-content.svelte\";\r\nimport Item from \"./accordion-item.svelte\";\r\nimport Trigger from \"./accordion-trigger.svelte\";\r\n\r\nconst Root = AccordionPrimitive.Root;\r\nexport {\r\n\tRoot,\r\n\tContent,\r\n\tItem,\r\n\tTrigger,\r\n\t//\r\n\tRoot as Accordion,\r\n\tContent as AccordionContent,\r\n\tItem as AccordionItem,\r\n\tTrigger as AccordionTrigger,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-pricing-two",
+  "type": "mpricing",
+  "description": "Mist-style pricing with toggle",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "two.svelte",
+      "type": "mpricing",
+      "target": "two.svelte",
+      "content": "<script lang=\"ts\">\r\n  import {\r\n    Card,\r\n    CardHeader,\r\n    CardTitle,\r\n    CardDescription,\r\n  } from \"$lib/components/ui/card\";\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import Check from \"@lucide/svelte/icons/check\";\r\n</script>\r\n\r\n<div\r\n  class=\"bg-muted dark:bg-muted/30 relative py-16 md:py-32 [--color-primary:var(--color-indigo-500)]\"\r\n>\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"mx-auto max-w-2xl text-center\">\r\n      <h2 class=\"text-balance text-3xl font-bold md:text-4xl lg:text-5xl\">\r\n        Pricing that scale with your business\r\n      </h2>\r\n      <p\r\n        class=\"text-muted-foreground mx-auto mt-4 max-w-xl text-balance text-lg\"\r\n      >\r\n        Choose the perfect plan for your needs and start optimizing your\r\n        workflow today\r\n      </p>\r\n    </div>\r\n    <div class=\"@container relative mt-12 md:mt-20\">\r\n      <Card class=\"@4xl:max-w-full relative mx-auto max-w-sm\">\r\n        <div class=\"@4xl:grid-cols-3 grid\">\r\n          <div>\r\n            <CardHeader class=\"p-8\">\r\n              <CardTitle class=\"font-medium\">Free</CardTitle>\r\n              <span class=\"mb-0.5 mt-2 block text-2xl font-semibold\"\r\n                >$0 / mo</span\r\n              >\r\n              <CardDescription class=\"text-sm\">Per editor</CardDescription>\r\n            </CardHeader>\r\n            <div class=\"border-y px-8 py-4\">\r\n              <Button class=\"w-full\" variant=\"neutral\">Get Started</Button>\r\n            </div>\r\n\r\n            <ul role=\"list\" class=\"space-y-3 p-8\">\r\n              {#each [\"Basic Analytics Dashboard\", \"5GB Cloud Storage\", \"Email and Chat Support\"] as item}\r\n                <li class=\"flex items-center gap-2\">\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                  {item}\r\n                </li>\r\n              {/each}\r\n            </ul>\r\n          </div>\r\n          <div\r\n            class=\" bg-background rounded-(--radius) @3xl:mx-0 @3xl:-my-3 -mx-1 dark:border-x shadow ring-1\"\r\n          >\r\n            <div class=\"@3xl:py-3  @3xl:px-0 relative px-1\">\r\n              <CardHeader class=\"p-8\">\r\n                <CardTitle class=\"font-medium\">Pro</CardTitle>\r\n                <span class=\"mb-0.5 mt-2 block text-2xl font-semibold\"\r\n                  >$19 / mo</span\r\n                >\r\n                <CardDescription class=\"text-sm\">Per editor</CardDescription>\r\n              </CardHeader>\r\n              <div class=\"@3xl:mx-0 -mx-1 border-y px-8 py-4\">\r\n                <Button variant=\"mdefault\" class=\"w-full\">Get Started</Button>\r\n              </div>\r\n\r\n              <ul role=\"list\" class=\"space-y-3 p-8\">\r\n                {#each [\"Everything in Free Plan\", \"5GB Cloud Storage\", \"Email and Chat Support\", \"Access to Community Forum\", \"Single User Access\", \"Access to Basic Templates\", \"Mobile App Access\", \"1 Custom Report Per Month\", \"Monthly Product Updates\", \"Standard Security Features\"] as item}\r\n                  <li class=\"flex items-center gap-2\">\r\n                    <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                    {item}\r\n                  </li>\r\n                {/each}\r\n              </ul>\r\n            </div>\r\n          </div>\r\n          <div>\r\n            <CardHeader class=\"p-8\">\r\n              <CardTitle class=\"font-medium\">Pro Plus</CardTitle>\r\n              <span class=\"mb-0.5 mt-2 block text-2xl font-semibold\"\r\n                >$49 / mo</span\r\n              >\r\n              <CardDescription class=\"text-sm\">Per editor</CardDescription>\r\n            </CardHeader>\r\n            <div class=\"border-y px-8 py-4\">\r\n              <Button class=\"w-full\" variant=\"neutral\">Get Started</Button>\r\n            </div>\r\n\r\n            <ul role=\"list\" class=\"space-y-3 p-8\">\r\n              {#each [\"Everything in Pro Plan\", \"5GB Cloud Storage\", \"Email and Chat Support\"] as item}\r\n                <li class=\"flex items-center gap-2\">\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                  {item}\r\n                </li>\r\n              {/each}\r\n            </ul>\r\n          </div>\r\n        </div>\r\n      </Card>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import type { Component } from "svelte";
 import type { CodeBlock } from "$lib/components/ui/code";
 import type { SEO } from "$lib/types/seo";
 import type { ComponentDoc } from "$lib/types/structure";
+import { getRegistryItemUrl } from "$lib/utils/registry-url";
 
 import StatsOne from "$lib/components/veil/stats/stats-one.svelte";
 import StatsTwo from "$lib/components/veil/stats/stats-two.svelte";
@@ -31,6 +32,9 @@ const statsOverviewSEO: SEO = {
 	description: "Explore all Veil stats components and open dedicated docs for each variant.",
 	keywords: ["svelte", "veil", "stats", "components", "ui"],
 };
+
+const registryBaseUrl = "https://sv-blocks.vercel.app";
+const getInstallUrl = (itemId: string) => getRegistryItemUrl(registryBaseUrl, itemId);
 
 const toCodeBlock = (filename: string, filecode: string): CodeBlock => ({
 	filename,
@@ -124,7 +128,7 @@ export const statsOverview: {
 			href: "/veil/stats/stats-one",
 			previewHref: "/preview/veil/stats/stats-one",
 			addItem: "veil-stats-one",
-			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-one.json",
+			installUrl: getInstallUrl("veil-stats-one"),
 			preview: StatsOne,
 		},
 		{
@@ -134,7 +138,7 @@ export const statsOverview: {
 			href: "/veil/stats/stats-two",
 			previewHref: "/preview/veil/stats/stats-two",
 			addItem: "veil-stats-two",
-			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-two.json",
+			installUrl: getInstallUrl("veil-stats-two"),
 			preview: StatsTwo,
 		},
 		{
@@ -144,7 +148,7 @@ export const statsOverview: {
 			href: "/veil/stats/stats-three",
 			previewHref: "/preview/veil/stats/stats-three",
 			addItem: "veil-stats-three",
-			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-three.json",
+			installUrl: getInstallUrl("veil-stats-three"),
 			preview: StatsThree,
 		},
 		{
@@ -154,7 +158,7 @@ export const statsOverview: {
 			href: "/veil/stats/stats-four",
 			previewHref: "/preview/veil/stats/stats-four",
 			addItem: "veil-stats-four",
-			installUrl: "https://sv-blocks.vercel.app/r/veil-stats-four.json",
+			installUrl: getInstallUrl("veil-stats-four"),
 			preview: StatsFour,
 		},
 	],

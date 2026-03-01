@@ -1,0 +1,29 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "integration-eight",
+  "type": "integration",
+  "description": "Integration grid with animated connections",
+  "registryDependencies": [
+    "logo-collection",
+    "button"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "integration-eight.svelte",
+      "type": "integration",
+      "target": "integration-eight.svelte",
+      "content": "<script lang=\"ts\">\r\n  import {\r\n    Gemini,\r\n    GooglePaLM,\r\n    MagicUI,\r\n    VSCodium,\r\n    Replit,\r\n    MediaWiki,\r\n  } from \"../logos/logos\";\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import { type Icon } from \"@lucide/svelte\";\r\n</script>\r\n\r\n<section>\r\n  <div class=\"bg-muted dark:bg-background py-24 md:py-32\">\r\n    <div\r\n      class=\"mx-auto flex flex-col px-6 md:grid md:max-w-5xl md:grid-cols-2 md:gap-12\"\r\n    >\r\n      <div class=\"order-last mt-6 flex flex-col gap-12 md:order-first\">\r\n        <div class=\"space-y-6\">\r\n          <h2\r\n            class=\"text-balance text-3xl font-semibold md:text-4xl lg:text-5xl\"\r\n          >\r\n            Integrate with your favorite LLMs\r\n          </h2>\r\n          <p class=\"text-muted-foreground\">\r\n            Connect seamlessly with popular platforms and services to enhance\r\n            your workflow.\r\n          </p>\r\n          <Button variant=\"outline\" size=\"sm\">Get started</Button>\r\n        </div>\r\n\r\n        <div class=\"mt-auto grid grid-cols-[auto_1fr] gap-3\">\r\n          <div\r\n            class=\"bg-background flex aspect-square items-center justify-center border\"\r\n          >\r\n            <MediaWiki class=\"size-9\" />\r\n          </div>\r\n          <blockquote>\r\n            <p>\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,\r\n              quos.\r\n            </p>\r\n            <div class=\"mt-2 flex gap-2 text-sm\">\r\n              <cite>John Doe</cite>\r\n              <p class=\"text-muted-foreground\">Founder, MediaWiki</p>\r\n            </div>\r\n          </blockquote>\r\n        </div>\r\n      </div>\r\n\r\n      <div\r\n        class=\"-mx-6 px-6 [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] sm:mx-auto sm:max-w-md md:-mx-6 md:ml-auto md:mr-0\"\r\n      >\r\n        <div\r\n          class=\"bg-background dark:bg-muted/50 rounded-2xl border p-3 shadow-lg md:pb-12\"\r\n        >\r\n          <div class=\"grid grid-cols-2 gap-2\">\r\n            {@render IntergrationCardv8({\r\n              icon: Gemini,\r\n              name: \"Gemini\",\r\n              description: \"The AI model that powers Google's search engine.\",\r\n            })}\r\n            {@render IntergrationCardv8({\r\n              icon: Replit,\r\n              name: \"Replit\",\r\n              description: \"The AI model that powers Google's search engine.\",\r\n            })}\r\n            {@render IntergrationCardv8({\r\n              icon: GooglePaLM,\r\n              name: \"GooglePaLM\",\r\n              description: \"The AI model that powers Google's search engine.\",\r\n            })}\r\n            {@render IntergrationCardv8({\r\n              icon: MagicUI,\r\n              name: \"MagicUI\",\r\n              description: \"The AI model that powers Google's search engine.\",\r\n            })}\r\n            {@render IntergrationCardv8({\r\n              icon: VSCodium,\r\n              name: \"VSCodium\",\r\n              description: \"The AI model that powers Google's search engine.\",\r\n            })}\r\n            {@render IntergrationCardv8({\r\n              icon: MediaWiki,\r\n              name: \"MediaWiki\",\r\n              description: \"The AI model that powers Google's search engine.\",\r\n            })}\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n{#snippet IntergrationCardv8({\r\n  icon,\r\n  name,\r\n  description,\r\n}: {\r\n  icon: typeof Icon;\r\n  name: string;\r\n  description: string;\r\n})}\r\n  {@const Icon = icon}\r\n  <div\r\n    class=\"hover:bg-muted dark:hover:bg-muted/50 space-y-4 rounded-lg border p-4 transition-colors\"\r\n  >\r\n    <div class=\"flex size-fit items-center justify-center\">\r\n      <Icon />\r\n    </div>\r\n    <div class=\"space-y-1\">\r\n      <h3 class=\"text-sm font-medium\">{name}</h3>\r\n      <p class=\"text-muted-foreground line-clamp-1 text-sm md:line-clamp-2\">\r\n        {description}\r\n      </p>\r\n    </div>\r\n  </div>\r\n{/snippet}\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

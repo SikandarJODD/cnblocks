@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-testimonial-two",
+  "type": "vtestimonial",
+  "description": "Veil Testimonial component, variant Two.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "testimonial-two.svelte",
+      "type": "vtestimonial",
+      "target": "testimonial-two.svelte",
+      "content": "<script lang=\"ts\">\r\n  import { Card } from \"$lib/components/ui/veil/card\";\r\n\r\n  const testimonials = [\r\n    {\r\n      avatar: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\r\n      name: \"Meschac Irung\",\r\n      role: \"Frontend Engineer at Acme\",\r\n      quote:\r\n        \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n    },\r\n    {\r\n      avatar: \"https://avatars.githubusercontent.com/u/68236786?v=4\",\r\n      name: \"Theo Balick\",\r\n      role: \"Founder, CEO - Acme\",\r\n      quote:\r\n        \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n    },\r\n    {\r\n      avatar: \"https://avatars.githubusercontent.com/u/12345678?v=4\",\r\n      name: \"Sarah Johnson\",\r\n      role: \"DevOps Engineer\",\r\n      quote:\r\n        \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n    },\r\n    {\r\n      avatar: \"https://avatars.githubusercontent.com/u/34567890?v=4\",\r\n      name: \"Aisha Patel\",\r\n      role: \"Data Scientist\",\r\n      quote:\r\n        \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<section class=\"bg-background @container py-24\">\r\n  <div class=\"mx-auto max-w-2xl px-6\">\r\n    <div class=\"space-y-4\">\r\n      <h2 class=\"text-balance font-serif text-4xl font-medium\">\r\n        What Our Customers Say\r\n      </h2>\r\n      <p class=\"text-muted-foreground text-balance\">\r\n        Hear from the teams and individuals who have transformed their workflow\r\n        with our platform.\r\n      </p>\r\n    </div>\r\n    <div class=\"@xl:grid-cols-2 mt-12 grid gap-3\">\r\n      {#each testimonials as testimonial, index}\r\n        <Card\r\n          variant=\"outline\"\r\n          class=\"text-foreground flex items-end gap-3 rounded-2xl p-4 text-sm\"\r\n        >\r\n          <div\r\n            class=\"before:border-foreground/10 relative size-5 shrink-0 rounded-full before:absolute before:inset-0 before:rounded-full before:border\"\r\n          >\r\n            <img\r\n              src={testimonial.avatar}\r\n              alt={testimonial.name}\r\n              class=\"rounded-full object-cover\"\r\n              width={40}\r\n              height={40}\r\n            />\r\n          </div>\r\n          <div class=\"space-y-6\">\r\n            <p class=\"text-foreground text-lg\">{testimonial.quote}</p>\r\n\r\n            <div class=\"space-y-1\">\r\n              <p class=\"text-muted-foreground text-sm font-medium\">\r\n                {testimonial.name}\r\n              </p>\r\n              <p class=\"text-muted-foreground text-xs\">{testimonial.role}</p>\r\n            </div>\r\n          </div>\r\n        </Card>\r\n      {/each}\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "feature-fourteen",
+  "type": "feature",
+  "description": "Feature section with numbered steps",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "feature-fourteen.svelte",
+      "type": "feature",
+      "target": "feature-fourteen.svelte",
+      "content": "<script lang=\"ts\">\r\n  let benefits = [\r\n    {\r\n      title: \"Work in Zurich\",\r\n      description:\r\n        \"We are in-person first and have a fantastic office in Zurich.\",\r\n    },\r\n    {\r\n      title: \"Competitive salary & equity\",\r\n      description:\r\n        \"We pay competitive salary and option packages to attract the very best talent.\",\r\n    },\r\n    {\r\n      title: \"Health, dental, vision\",\r\n      description:\r\n        \"Database pays all of your health, dental, and vision insurance.\",\r\n    },\r\n    {\r\n      title: \"Yearly off-sites\",\r\n      description:\r\n        \"We bring everyone together at an interesting location to discuss the big picture.\",\r\n    },\r\n    {\r\n      title: \"Book budget\",\r\n      description:\r\n        \"We provide every employee with a 350 dollar budget for books.\",\r\n    },\r\n    {\r\n      title: \"Tasty snacks\",\r\n      description:\r\n        \"The fridge and pantry are stocked + free dinner catered every night (incl. weekends).\",\r\n    },\r\n    {\r\n      title: \"20 PTO days per year\",\r\n      description: \"Take time off to recharge and come back refreshed.\",\r\n    },\r\n    {\r\n      title: \"Spotify Premium\",\r\n      description:\r\n        \"We really have the best fringe benefits, even a Spotify subscription is included.\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<div class=\"mx-auto px-4 py-20\">\r\n  <h2\r\n    id=\"benefits-title\"\r\n    class=\"inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-3xl font-bold tracking-tighter text-transparent dark:from-gray-50 dark:to-gray-300 md:text-5xl\"\r\n  >\r\n    What&rsquo;s in for you\r\n  </h2>\r\n  <dl class=\"mt-8 grid grid-cols-4 gap-x-10 gap-y-8 sm:mt-12 sm:gap-y-10\">\r\n    {#each benefits as benefit,index}\r\n      <div class=\"col-span-4 sm:col-span-2 lg:col-span-1\">\r\n        <dt class=\"relative font-semibold text-gray-900 dark:text-gray-50\">\r\n          {benefit.title}\r\n          <div class=\"absolute -left-2 top-1 h-4 w-0.5 rounded-full bg-blue-500\" ></div>\r\n        </dt>\r\n        <dd class=\"mt-2 leading-7 text-gray-600 dark:text-gray-400\">\r\n          {benefit.description}\r\n        </dd>\r\n      </div>\r\n      {/each}\r\n  </dl>\r\n</div>\r\n\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

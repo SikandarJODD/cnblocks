@@ -8,6 +8,8 @@ export const all_mists_login: MistBlock[] = [
     title: 'Login One',
     category: 'login',
     preview: '/preview/mist/login/one',
+
+    itemId: 'mist-login-one',
     code: {
       code: LoginOneCode,
       lang: 'svelte'

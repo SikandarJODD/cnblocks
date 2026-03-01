@@ -14,6 +14,8 @@ export const all_mists_footer: MistBlock[] = [
     title: 'Footer One',
     category: 'footer',
     preview: '/preview/mist/footer/one',
+
+    itemId: 'mist-footer-one',
     code: {
       code: FooterOneCode,
       lang: 'svelte',
@@ -25,6 +27,8 @@ export const all_mists_footer: MistBlock[] = [
     title: 'Footer Two',
     category: 'footer',
     preview: '/preview/mist/footer/two',
+
+    itemId: 'mist-footer-two',
     code: {
       code: FooterTwoCode,
       lang: 'svelte',
@@ -36,6 +40,8 @@ export const all_mists_footer: MistBlock[] = [
     title: 'Footer Three',
     category: 'footer',
     preview: '/preview/mist/footer/three',
+
+    itemId: 'mist-footer-three',
     code: {
       code: FooterThreeCode,
       lang: 'svelte',
@@ -47,6 +53,8 @@ export const all_mists_footer: MistBlock[] = [
     title: 'Footer Four',
     category: 'footer',
     preview: '/preview/mist/footer/four',
+
+    itemId: 'mist-footer-four',
     code: {
       code: FooterFourCode,
       lang: 'svelte',

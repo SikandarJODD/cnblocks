@@ -1,0 +1,27 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "contact-two",
+  "type": "contact",
+  "description": "Two-column contact section with form and info",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "select",
+    "textarea"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "contact-two.svelte",
+      "type": "contact",
+      "target": "contact-two.svelte",
+      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import { Card } from \"$lib/components/ui/card\";\r\n  import Input from \"$lib/components/ui/input/input.svelte\";\r\n  import Label from \"$lib/components/ui/label/label.svelte\";\r\n  import * as Select from \"$lib/components/ui/select/index.js\";\r\n  import { Textarea } from \"$lib/components/ui/textarea\";\r\n</script>\r\n\r\n<section class=\"py-32\">\r\n  <div class=\"mx-auto max-w-4xl px-4 lg:px-0\">\r\n    <h1 class=\"mb-12 text-center text-4xl font-semibold lg:text-5xl\">\r\n      Help us route your inquiry\r\n    </h1>\r\n\r\n    <div\r\n      class=\"grid divide-y border md:grid-cols-2 md:gap-4 md:divide-x md:divide-y-0\"\r\n    >\r\n      <div class=\"flex flex-col justify-between space-y-8 p-6 sm:p-12\">\r\n        <div>\r\n          <h2 class=\"mb-3 text-lg font-semibold\">Collaborate</h2>\r\n          <a\r\n            href=\"mailto:hello@tailus.io\"\r\n            class=\"text-lg text-blue-600 hover:underline dark:text-blue-400\"\r\n          >\r\n            hello@tailus.io\r\n          </a>\r\n          <p class=\"mt-3 text-sm\">+243 000 000 000</p>\r\n        </div>\r\n      </div>\r\n      <div class=\"flex flex-col justify-between space-y-8 p-6 sm:p-12\">\r\n        <div>\r\n          <h3 class=\"mb-3 text-lg font-semibold\">Press</h3>\r\n          <a\r\n            href=\"mailto:press@tailus.io\"\r\n            class=\"text-lg text-blue-600 hover:underline dark:text-blue-400\"\r\n          >\r\n            press@tailus.io\r\n          </a>\r\n          <p class=\"mt-3 text-sm\">+243 000 000 000</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div\r\n      class=\"h-3 border-x bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)]\"\r\n    ></div>\r\n    <form action=\"\" class=\"border px-4 py-12 lg:px-0 lg:py-24\">\r\n      <Card class=\"mx-auto max-w-lg p-8 sm:p-16\">\r\n        <h3 class=\"text-xl font-semibold\">Let's get you to the right place</h3>\r\n        <p class=\"mt-4 text-sm\">\r\n          Reach out to our sales team! We’re eager to learn more about how you\r\n          plan to use our application.\r\n        </p>\r\n\r\n        <div class=\"**:[&>label]:block mt-12 space-y-6 *:space-y-3\">\r\n          <div>\r\n            <Label for=\"name\" class=\"space-y-2\">Full name</Label>\r\n            <Input type=\"text\" id=\"name\" required />\r\n          </div>\r\n          <div>\r\n            <Label for=\"email\" class=\"space-y-2\">Work Email</Label>\r\n            <Input type=\"email\" id=\"email\" required />\r\n          </div>\r\n          <div>\r\n            <Label for=\"country\" class=\"space-y-2\">Country/Region</Label>\r\n            <Select.Root type=\"single\">\r\n              <Select.Trigger>Select a country</Select.Trigger>\r\n              <Select.Content>\r\n                <Select.Item value=\"1\">DR Congo</Select.Item>\r\n                <Select.Item value=\"2\">United States</Select.Item>\r\n                <Select.Item value=\"3\">France</Select.Item>\r\n              </Select.Content>\r\n            </Select.Root>\r\n          </div>\r\n          <div>\r\n            <Label for=\"website\" class=\"space-y-2\">Company Website</Label>\r\n            <Input type=\"url\" id=\"website\" />\r\n          </div>\r\n          <div>\r\n            <Label for=\"job\" class=\"space-y-2\">Job function</Label>\r\n            <Select.Root type=\"single\">\r\n              <Select.Trigger>Select job function</Select.Trigger>\r\n              <Select.Content>\r\n                <Select.Item value=\"1\">Finance</Select.Item>\r\n                <Select.Item value=\"2\">Education</Select.Item>\r\n                <Select.Item value=\"3\">Legal</Select.Item>\r\n                <Select.Item value=\"4\">More</Select.Item>\r\n              </Select.Content>\r\n            </Select.Root>\r\n          </div>\r\n          <div>\r\n            <Label for=\"msg\" class=\"space-y-2\">Message</Label>\r\n            <Textarea id=\"msg\" rows={3} />\r\n          </div>\r\n          <Button>Submit</Button>\r\n        </div>\r\n      </Card>\r\n    </form>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -8,6 +8,8 @@ export const all_mists_contact: MistBlock[] = [
     title: 'Contact Form One',
     category: 'contact',
     preview: '/preview/mist/contact/one',
+
+    itemId: 'mist-contact-one',
     code: {
       code: ContactOneCode,
       lang: 'svelte'

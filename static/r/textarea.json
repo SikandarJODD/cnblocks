@@ -1,0 +1,42 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "textarea",
+  "type": "ui",
+  "description": "Multi-line text input component",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    },
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "textarea/index.ts",
+      "type": "ui",
+      "target": "textarea/index.ts",
+      "content": "import Root from \"./textarea.svelte\";\r\n\r\nexport {\r\n\tRoot,\r\n\t//\r\n\tRoot as Textarea,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "textarea/textarea.svelte",
+      "type": "ui",
+      "target": "textarea/textarea.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport type { WithElementRef, WithoutChildren } from \"bits-ui\";\r\n\timport type { HTMLTextareaAttributes } from \"svelte/elements\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tvalue = $bindable(),\r\n\t\tclass: className,\r\n\t\t...restProps\r\n\t}: WithoutChildren<WithElementRef<HTMLTextareaAttributes>> = $props();\r\n</script>\r\n\r\n<textarea\r\n\tbind:this={ref}\r\n\tbind:value\r\n\tclass={cn(\r\n\t\t\"border-input placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[60px] w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-sm focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\r\n\t\tclassName\r\n\t)}\r\n\t{...restProps}\r\n></textarea>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

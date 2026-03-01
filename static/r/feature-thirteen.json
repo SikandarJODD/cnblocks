@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "feature-thirteen",
+  "type": "feature",
+  "description": "Feature section with large hero image",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "feature-thirteen.svelte",
+      "type": "feature",
+      "target": "feature-thirteen.svelte",
+      "content": "<script lang=\"ts\">\r\n  const features = [\r\n    {\r\n      title: \"1. Prototype\",\r\n      subtitle: \"Build fast, test early\",\r\n      description:\r\n        \"Quickly spin up a working model with libraries for popular frameworks like React.\",\r\n    },\r\n    {\r\n      title: \"2. Present\",\r\n      subtitle: \"Showcase your vision\",\r\n      description:\r\n        \"Use intuitive plug & play features to prepare a live demo and deploy from our platform.\",\r\n    },\r\n    {\r\n      title: \"3. Iterate\",\r\n      subtitle: \"Refine and improve\",\r\n      description:\r\n        \"Continuously enhance your product by integrating with over a hundred tools.\",\r\n    },\r\n    {\r\n      title: \"4. Deploy\",\r\n      subtitle: \"Launch with confidence\",\r\n      description:\r\n        \"Deploy securely with encryption, ensuring data compliance and user consent.\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<div class=\"mx-auto w-full max-w-6xl px-3 py-20\">\r\n  <dl class=\"grid grid-cols-4 gap-10\">\r\n    {#each features as item}\r\n      <div class=\"col-span-full sm:col-span-2 lg:col-span-1\">\r\n        <span\r\n          class=\"rounded-lg bg-blue-50/50 px-3 py-1.5 font-semibold leading-4 tracking-tighter shadow-sm shadow-blue-500/20 ring-1 ring-blue-200/20 dark:bg-blue-900/20 dark:ring-blue-800/30 sm:text-sm\"\r\n        >\r\n          <span\r\n            class=\"bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400\"\r\n          >\r\n            {item.title}\r\n          </span>\r\n        </span>\r\n        <dt class=\"mt-6 font-semibold text-gray-900 dark:text-gray-50\">\r\n          {item.subtitle}\r\n        </dt>\r\n        <dd class=\"mt-2 leading-7 text-gray-600 dark:text-gray-400\">\r\n          {item.description}\r\n        </dd>\r\n      </div>\r\n    {/each}\r\n  </dl>\r\n</div>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

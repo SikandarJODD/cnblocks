@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-hero-three",
+  "type": "vhero",
+  "description": "Veil Hero component, variant Three.",
+  "registryDependencies": [
+    "veil-header-three"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "hero-three.svelte",
+      "type": "vhero",
+      "target": "hero-three.svelte",
+      "content": "<script lang=\"ts\">\n  import HeaderThree from \"$lib/components/veil/header/header-three.svelte\";\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { AudioLines, ChevronRight, MessageCircle, Mic2, Plus } from \"@lucide/svelte\";\n\n  const prompts = [\n    \"How do I integrate Supabase authentication?\",\n    \"Set up real-time subscriptions with Firebase\",\n    \"Connect Slack notifications to my app\",\n    \"Implement Twilio SMS verification\",\n    \"Add Linear issue tracking integration\",\n    \"Set up Figma design sync\",\n    \"Deploy to Vercel with environment variables\",\n    \"Configure Clerk user management\",\n    \"Build an AI assistant with Claude\",\n    \"Create a webhook endpoint for Stripe\",\n    \"Set up OAuth with multiple providers\",\n    \"Implement rate limiting for API endpoints\",\n  ];\n</script>\n\n<HeaderThree />\n<main class=\"overflow-hidden\">\n  <section class=\"bg-background\">\n    <div class=\"relative py-40\">\n      <div\n        class=\"mask-radial-from-45% mask-radial-to-75% mask-radial-at-top mask-radial-[75%_100%] aspect-2/3 absolute inset-0 opacity-75 blur-xl md:aspect-square lg:aspect-video dark:opacity-5\"\n      >\n        <img\n          src=\"https://images.unsplash.com/photo-1685013640715-8701bbaa2207?q=80&w=2198&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n          alt=\"hero background\"\n          width=\"2198\"\n          height=\"1685\"\n          class=\"h-full w-full object-cover object-top\"\n        />\n      </div>\n      <div class=\"relative z-10 mx-auto w-full max-w-5xl sm:pl-6\">\n        <div class=\"flex items-center justify-between max-md:flex-col\">\n          <div class=\"max-w-md max-sm:px-6\">\n            <h1 class=\"text-balance font-serif text-4xl font-medium sm:text-5xl\">\n              Ship faster. Integrate smarter.\n            </h1>\n            <p class=\"text-muted-foreground mt-4 text-balance\">\n              Veil is your all-in-one engine for adding seamless integrations to your app.\n            </p>\n\n            <Button class=\"mt-6 pr-1.5\" href=\"#link\">\n              <span class=\"text-nowrap\">Start Building</span>\n              <ChevronRight class=\"opacity-50\" />\n            </Button>\n          </div>\n          <div aria-hidden class=\"mask-y-from-50% relative max-md:mx-auto max-md:*:scale-90\">\n            {#each prompts as prompt}\n              <div class=\"text-muted-foreground flex items-center gap-2 px-14 py-2 text-sm\">\n                <MessageCircle class=\"size-3.5 opacity-50\" />\n                <span class=\"text-nowrap\">{prompt}</span>\n              </div>\n            {/each}\n            <div\n              class=\"bg-card min-w-sm ring-border shadow-foreground/6.5 dark:shadow-black/6.5 absolute inset-0 m-auto mt-auto flex h-fit justify-between gap-3 rounded-full p-2 shadow-xl ring-1 sm:inset-2\"\n            >\n              <div class=\"flex items-center gap-2\">\n                <div class=\"hover:bg-muted flex size-9 cursor-pointer rounded-full *:m-auto *:size-4\">\n                  <Plus />\n                </div>\n                <div class=\"text-muted-foreground text-sm\">Ask anything...</div>\n              </div>\n              <div class=\"flex items-center gap-0.5\">\n                <div class=\"hover:bg-muted flex size-9 cursor-pointer rounded-full *:m-auto *:size-4\">\n                  <Mic2 />\n                </div>\n                <div class=\"bg-foreground text-background flex size-9 cursor-pointer rounded-full *:m-auto *:size-4 hover:brightness-110\">\n                  <AudioLines />\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n</main>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

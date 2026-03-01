@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-content-three",
+  "type": "mcontent",
+  "description": "Mist-style content with side image",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "three.svelte",
+      "type": "mcontent",
+      "target": "three.svelte",
+      "content": "<script lang=\"ts\">\r\n</script>\r\n\r\n<section>\r\n  <div class=\"py-24\">\r\n    <div class=\"mx-auto w-full max-w-5xl px-6\">\r\n      <div class=\"mx-auto max-w-2xl\">\r\n        <div>\r\n          <span class=\"text-3xl\">🦊</span>\r\n          <h2 class=\"text-foreground mt-4 text-4xl font-semibold\">\r\n            Create Content with AI Assistance\r\n          </h2>\r\n          <p class=\"text-muted-foreground mb-12 mt-4 text-xl\">\r\n            Our AI assistant helps you create better content faster. Generate\r\n            ideas, improve your writing, and design layouts with simple prompts.\r\n          </p>\r\n        </div>\r\n\r\n        <div\r\n          class=\"relative mt-12 overflow-hidden rounded-3xl bg-black/10 md:mt-16\"\r\n        >\r\n          <img\r\n            src=\"https://images.unsplash.com/photo-1533119408463-b0f487583ff6?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\r\n            alt=\"\"\r\n            class=\"absolute inset-0 size-full object-cover\"\r\n          />\r\n\r\n          <div\r\n            class=\"bg-background rounded-(--radius) relative m-4 overflow-hidden border border-transparent shadow-xl shadow-black/15 ring-1  sm:m-8 md:m-12\"\r\n          >\r\n            <img\r\n              src=\"/mist/tailark-3.png\"\r\n              alt=\"app screen\"\r\n              width=\"2880\"\r\n              height=\"1842\"\r\n              class=\"object-top-left size-full object-cover\"\r\n            />\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

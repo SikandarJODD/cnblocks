@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-stats-three",
+  "type": "mstats",
+  "description": "Mist-style stats with descriptions",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "three.svelte",
+      "type": "mstats",
+      "target": "three.svelte",
+      "content": "<script>\r\n  import ArrowRight from \"@lucide/svelte/icons/arrow-right\";\r\n  let stats = [\r\n    { value: \"90+\", label: \"Integrations\" },\r\n    { value: \"56%\", label: \"Productivity Boost\" },\r\n    { value: \"24/7\", label: \"Customer Support\" },\r\n    { value: \"10k+\", label: \"Active Users\" },\r\n  ];\r\n</script>\r\n\r\n<section>\r\n  <div class=\"py-24\">\r\n    <div class=\"mx-auto max-w-5xl px-6\">\r\n      <div>\r\n        <h2 class=\"text-2xl font-semibold\">Tailark in numbers</h2>\r\n        <p class=\"text-muted-foreground mt-4 text-balance text-lg\">\r\n          Our platform continues to grow with developers and businesses using\r\n          our tools to create innovative solutions and enhance productivity.\r\n        </p>\r\n      </div>\r\n      <ul role=\"list\" class=\"text-muted-foreground mt-8 space-y-2\">\r\n        {#each stats as stat, index}\r\n          <li class=\"-ml-0.5 flex items-center gap-1.5\">\r\n            <ArrowRight class=\"size-4 opacity-50\" />\r\n            <span class=\"text-foreground font-medium\">{stat.value}</span>\r\n            {stat.label}\r\n          </li>\r\n        {/each}\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

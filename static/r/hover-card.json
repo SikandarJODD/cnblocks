@@ -1,0 +1,37 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "hover-card",
+  "type": "ui",
+  "description": "Card that appears on hover",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    }
+  ],
+  "files": [
+    {
+      "path": "hover-card/hover-card-content.svelte",
+      "type": "ui",
+      "target": "hover-card/hover-card-content.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport { LinkPreview as HoverCardPrimitive } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tclass: className,\r\n\t\talign = \"center\",\r\n\t\tsideOffset = 4,\r\n\t\tportalProps,\r\n\t\t...restProps\r\n\t}: HoverCardPrimitive.ContentProps & {\r\n\t\tportalProps?: HoverCardPrimitive.PortalProps;\r\n\t} = $props();\r\n</script>\r\n\r\n<HoverCardPrimitive.Portal {...portalProps}>\r\n\t<HoverCardPrimitive.Content\r\n\t\tbind:ref\r\n\t\t{sideOffset}\r\n\t\t{align}\r\n\t\tclass={cn(\r\n\t\t\t\"bg-popover text-popover-foreground z-50 w-64 rounded-md border p-4 shadow-md outline-none\",\r\n\t\t\tclassName\r\n\t\t)}\r\n\t\t{...restProps}\r\n\t/>\r\n</HoverCardPrimitive.Portal>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "hover-card/index.ts",
+      "type": "ui",
+      "target": "hover-card/index.ts",
+      "content": "import { LinkPreview as HoverCardPrimitive } from \"bits-ui\";\r\n\r\nimport Content from \"./hover-card-content.svelte\";\r\nconst Root = HoverCardPrimitive.Root;\r\nconst Trigger = HoverCardPrimitive.Trigger;\r\n\r\nexport {\r\n\tRoot,\r\n\tContent,\r\n\tTrigger,\r\n\tRoot as HoverCard,\r\n\tContent as HoverCardContent,\r\n\tTrigger as HoverCardTrigger,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

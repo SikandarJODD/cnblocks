@@ -9,6 +9,7 @@
   import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
   import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
   import { resolveCommand } from "package-manager-detector/commands";
+  import { getRegistryItemUrl } from "$lib/utils/registry-url";
   import { cn } from "$lib/utils";
   import Eye from "@lucide/svelte/icons/eye";
   import CodeXml from "@lucide/svelte/icons/code-xml";
@@ -39,7 +40,7 @@
     componentName,
     addItem,
     installUrl,
-    installUrlBase = "https://sv-blocks.vercel.app/r",
+    installUrlBase = "https://sv-blocks.vercel.app",
     installCommand,
     registryOptions = ["@sv/cnblocks"],
     registry,
@@ -79,10 +80,11 @@
   let resolvedAddItem = $derived(
     addItem ?? getLegacyItemFromCommand(installCommand),
   );
+  const getInstallBase = (base: string) => base.replace(/\/+$/, "").replace(/\/(r|v|m)$/i, "");
   let resolvedInstallUrl = $derived(
     installUrl ??
       (resolvedAddItem
-        ? `${installUrlBase.replace(/\/$/, "")}/${resolvedAddItem}.json`
+        ? getRegistryItemUrl(getInstallBase(installUrlBase), resolvedAddItem)
         : ""),
   );
   let fullInstallCommand = $derived.by(() => {

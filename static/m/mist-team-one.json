@@ -1,0 +1,29 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-team-one",
+  "type": "mteam",
+  "description": "Mist-style team member grid",
+  "registryDependencies": [
+    "button",
+    "avatar"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "one.svelte",
+      "type": "mteam",
+      "target": "one.svelte",
+      "content": "<script lang=\"ts\">\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n  import {\r\n    Avatar,\r\n    AvatarFallback,\r\n    AvatarImage,\r\n  } from \"$lib/components/ui/avatar\";\r\n\r\n  const members = [\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/93428946?v=4\",\r\n      name: \"Bhide Svelte\",\r\n      role: \"Svelte Developer\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/117548273?v=4\",\r\n      name: \"Aiden Bleser\",\r\n      role: \"Creator of jsrepo\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\r\n      name: \"Meschac Irung\",\r\n      role: \"Frontend Engineer\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/1162160?v=4\",\r\n      name: \"Rich Harris\",\r\n      role: \"Creator of Svelte\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/64506580?v=4\",\r\n      name: \"Hunter Johnson\",\r\n      role: \"Creator of Shadcn-Svelte\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/38083522?v=4\",\r\n      name: \"Matia\",\r\n      role: \"Joy of Code\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/23456789?v=4\",\r\n      name: \"Aditya Karle\",\r\n      role: \"UI/UX Designer\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/34567890?v=4\",\r\n      name: \"Saloni Maheshwari\",\r\n      role: \"Data Scientist\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/45678901?v=4\",\r\n      name: \"Carlos Rodriguez\",\r\n      role: \"Product Manager\",\r\n    },\r\n    {\r\n      src: \"https://avatars.githubusercontent.com/u/56789012?v=4\",\r\n      name: \"Emma Wilson\",\r\n      role: \"Content Strategist\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<section>\r\n  <div class=\"bg-muted/50 dark:bg-muted/30 py-24\">\r\n    <div class=\"@container mx-auto w-full max-w-5xl px-6\">\r\n      <div class=\"mb-12\">\r\n        <h2 class=\"text-foreground text-4xl font-semibold\">Meet Our Team</h2>\r\n        <p class=\"text-muted-foreground my-4 text-balance text-lg\">\r\n          Our talented professionals bring diverse expertise and passion to\r\n          every project. Together, we collaborate to deliver exceptional results\r\n          and innovative solutions for our clients.\r\n        </p>\r\n        <Button href=\"\" variant=\"outline\" class=\"pr-2\">\r\n          We're hiring\r\n          <ChevronRight class=\"opacity-50\" />\r\n        </Button>\r\n      </div>\r\n\r\n      <div class=\"@sm:grid-cols-2 @xl:grid-cols-3 grid gap-6 md:gap-y-10\">\r\n        {#each members as member, index}\r\n          <div class=\"grid grid-cols-[auto_1fr] items-center gap-3\">\r\n            <Avatar\r\n              class=\"rounded-(--radius)  size-10 border border-transparent shadow ring-1\"\r\n            >\r\n              <AvatarImage src={member.src} alt={member.name} />\r\n              <AvatarFallback class=\"rounded-(--radius)\"\r\n                >{member.name.charAt(0)}</AvatarFallback\r\n              >\r\n            </Avatar>\r\n\r\n            <div>\r\n              <span class=\"text-foreground font-medium\">{member.name}</span>\r\n              <div class=\"text-muted-foreground text-sm\">{member.role}</div>\r\n            </div>\r\n          </div>\r\n        {/each}\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "toggle-group",
+  "type": "ui",
+  "description": "Group of toggle buttons",
+  "registryDependencies": [
+    "utils",
+    "toggle"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    },
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "toggle-group/index.ts",
+      "type": "ui",
+      "target": "toggle-group/index.ts",
+      "content": "import Root from \"./toggle-group.svelte\";\r\nimport Item from \"./toggle-group-item.svelte\";\r\n\r\nexport {\r\n\tRoot,\r\n\tItem,\r\n\t//\r\n\tRoot as ToggleGroup,\r\n\tItem as ToggleGroupItem,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "toggle-group/toggle-group-item.svelte",
+      "type": "ui",
+      "target": "toggle-group/toggle-group-item.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport { ToggleGroup as ToggleGroupPrimitive } from \"bits-ui\";\r\n\timport { getToggleGroupCtx } from \"./toggle-group.svelte\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\timport { type ToggleVariants, toggleVariants } from \"$lib/components/ui/toggle/index.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tvalue = $bindable(),\r\n\t\tclass: className,\r\n\t\tsize,\r\n\t\tvariant,\r\n\t\t...restProps\r\n\t}: ToggleGroupPrimitive.ItemProps & ToggleVariants = $props();\r\n\r\n\tconst ctx = getToggleGroupCtx();\r\n</script>\r\n\r\n<ToggleGroupPrimitive.Item\r\n\tbind:ref\r\n\tclass={cn(\r\n\t\ttoggleVariants({\r\n\t\t\tvariant: ctx.variant || variant,\r\n\t\t\tsize: ctx.size || size,\r\n\t\t}),\r\n\t\tclassName\r\n\t)}\r\n\t{value}\r\n\t{...restProps}\r\n/>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "toggle-group/toggle-group.svelte",
+      "type": "ui",
+      "target": "toggle-group/toggle-group.svelte",
+      "content": "<script lang=\"ts\" module>\r\n\timport { getContext, setContext } from \"svelte\";\r\n\timport type { ToggleVariants } from \"$lib/components/ui/toggle/index.js\";\r\n\texport function setToggleGroupCtx(props: ToggleVariants) {\r\n\t\tsetContext(\"toggleGroup\", props);\r\n\t}\r\n\r\n\texport function getToggleGroupCtx() {\r\n\t\treturn getContext<ToggleVariants>(\"toggleGroup\");\r\n\t}\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n\timport { ToggleGroup as ToggleGroupPrimitive } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tvalue = $bindable(),\r\n\t\tclass: className,\r\n\t\tsize = \"default\",\r\n\t\tvariant = \"default\",\r\n\t\t...restProps\r\n\t}: ToggleGroupPrimitive.RootProps & ToggleVariants = $props();\r\n\r\n\tsetToggleGroupCtx({\r\n\t\tvariant,\r\n\t\tsize,\r\n\t});\r\n</script>\r\n\r\n<!--\r\nDiscriminated Unions + Destructing (required for bindable) do not\r\nget along, so we shut typescript up by casting `value` to `never`.\r\n-->\r\n<ToggleGroupPrimitive.Root\r\n\tbind:value={value as never}\r\n\tbind:ref\r\n\tclass={cn(\"flex items-center justify-center gap-1\", className)}\r\n\t{...restProps}\r\n/>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

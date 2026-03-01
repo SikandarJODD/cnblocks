@@ -7,6 +7,8 @@ export const all_mists_signup: MistBlock[] = [
     title: "Signup One",
     category: "signup",
     preview: "/preview/mist/signup/one",
+
+    itemId: "mist-signup-one",
     code: [
       {
         code: SignupOneCode,

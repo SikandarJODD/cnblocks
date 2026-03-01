@@ -1,0 +1,42 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-footer-six",
+  "type": "vfooter",
+  "description": "Veil Footer component, variant Six.",
+  "registryDependencies": [
+    "vhelper-theme-switcher"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    },
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "footer-six.svelte",
+      "type": "vfooter",
+      "target": "footer-six.svelte",
+      "content": "<script lang=\"ts\">\n  import Logo from \"$lib/components/web/Logo.svelte\";\n  import SocialMediaOne from \"./social-media-one.svelte\";\n  import ThemeSwitcher from \"./theme-switcher.svelte\";\n\n  type LinkItem = { label: string; href: string };\n\n  const links: LinkItem[] = [\n    { label: \"Features\", href: \"#\" },\n    { label: \"Pricing\", href: \"#\" },\n    { label: \"Blog\", href: \"#\" },\n  ];\n\n  const year = new Date().getFullYear();\n</script>\n\n<footer class=\"bg-background @container py-12\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"flex flex-col\">\n      <a\n        href=\"/\"\n        aria-label=\"go home\"\n        class=\"hover:bg-foreground/5 -ml-1.5 flex size-8 rounded-lg *:m-auto\"\n      >\n        <Logo class=\"size-5\" />\n      </a>\n      <nav class=\"my-8 flex flex-col gap-y-4\">\n        {#each links as link (link.label)}\n          <a\n            href={link.href}\n            class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n          >\n            {link.label}\n          </a>\n        {/each}\n      </nav>\n\n      <div class=\"flex justify-between\">\n        <ThemeSwitcher />\n        <SocialMediaOne />\n      </div>\n\n      <p class=\"text-muted-foreground border-foreground/10 mt-2 border-t border-dashed pt-6 text-sm\">\n        &copy; {year} Veil.\n      </p>\n    </div>\n  </div>\n</footer>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "social-media-one.svelte",
+      "type": "vfooter",
+      "target": "social-media-one.svelte",
+      "content": "<script lang=\"ts\">\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { Linkedin, Twitter, Youtube } from \"@lucide/svelte\";\n  import type { Component } from \"svelte\";\n\n  type SocialMedia = \"twitter\" | \"linkedin\" | \"youtube\";\n\n  type SocialItem = {\n    id: SocialMedia;\n    label: string;\n    href: string;\n    icon: Component;\n  };\n\n  const socials: SocialItem[] = [\n    { id: \"twitter\", label: \"Twitter\", href: \"#\", icon: Twitter },\n    { id: \"linkedin\", label: \"LinkedIn\", href: \"#\", icon: Linkedin },\n    { id: \"youtube\", label: \"YouTube\", href: \"#\", icon: Youtube },\n  ];\n\n  let hoveredSocialMedia = $state<SocialMedia | null>(null);\n\n  const tooltipLabel = $derived.by(() => {\n    switch (hoveredSocialMedia ?? \"twitter\") {\n      case \"twitter\":\n        return \"Follow us on Twitter\";\n      case \"linkedin\":\n        return \"Follow us on LinkedIn\";\n      case \"youtube\":\n        return \"Follow us on YouTube\";\n      default:\n        return \"Follow us\";\n    }\n  });\n</script>\n\n<div class=\"flex w-fit flex-col items-end\">\n  <div class=\"-mr-2 mb-2 flex\">\n    {#each socials as item (item.id)}\n      <Button\n        href={item.href}\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n        referrerpolicy=\"no-referrer\"\n        size=\"icon\"\n        variant=\"ghost\"\n        aria-label={\"Follow us on \" + item.label}\n        aria-pressed={hoveredSocialMedia === item.id}\n        class={hoveredSocialMedia === item.id ? \"text-foreground\" : \"\"}\n        onmouseenter={() => (hoveredSocialMedia = item.id)}\n        onmouseleave={() => (hoveredSocialMedia = null)}\n        onfocus={() => (hoveredSocialMedia = item.id)}\n        onblur={() => (hoveredSocialMedia = null)}\n      >\n        <item.icon />\n      </Button>\n    {/each}\n  </div>\n\n  <div\n    aria-live=\"polite\"\n    class=\"text-muted-foreground w-fit text-xs leading-none transition-opacity duration-200\"\n    class:opacity-100={hoveredSocialMedia !== null}\n    class:opacity-0={hoveredSocialMedia === null}\n  >\n    {tooltipLabel}\n  </div>\n</div>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

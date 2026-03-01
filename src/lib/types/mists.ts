@@ -1,4 +1,5 @@
 export interface MistBlock {
+  itemId?: string;
   slug: string;
   title: string;
   category: string;
