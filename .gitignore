@@ -26,4 +26,6 @@ vite.config.ts.timestamp-*
 
 .cursor/rules
 
-/scripts
+/scripts/*
+!/scripts/create-tailark-feature.mjs
+!/scripts/generate-static-preview-routes.mjs
