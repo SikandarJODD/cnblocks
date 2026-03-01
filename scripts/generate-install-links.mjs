@@ -1,236 +1,235 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const ROOT = process.cwd();
-const PREVIEW_ROOT = path.join(ROOT, "src", "routes", "preview");
-const STATIC_ROOT = path.join(ROOT, "static");
-const JSON_OUTPUT = path.join(ROOT, "shadcn-install-links.json");
-const README_OUTPUT = path.join(ROOT, "INSTALL_LINKS.md");
-const BASE_URL = "https://sv-blocks.vercel.app";
+const PREVIEW_ROOT = path.join(ROOT, 'src', 'routes', 'preview');
+const STATIC_ROOT = path.join(ROOT, 'static');
+const JSON_OUTPUT = path.join(ROOT, 'shadcn-install-links.json');
+const README_OUTPUT = path.join(ROOT, 'INSTALL_LINKS.md');
+const BASE_URL = 'https://sv-blocks.vercel.app';
 
-const FAMILY_ORDER = ["default", "mist", "veil"];
+const FAMILY_ORDER = ['default', 'mist', 'veil'];
 const NAMESPACE_BY_FAMILY = {
-  default: "r",
-  mist: "m",
-  veil: "v",
+	default: 'r',
+	mist: 'm',
+	veil: 'v'
 };
 
 const ITEM_ID_ALIASES = {
-  "default:logocloud:one": "logo-collection",
-  "default:logocloud:two": "logo-collection",
-  "default:logocloud:three": "logo-collection",
+	'default:logocloud:one': 'logo-collection',
+	'default:logocloud:two': 'logo-collection',
+	'default:logocloud:three': 'logo-collection'
 };
 
-const normalizePath = (value) => value.split(path.sep).join("/");
+const normalizePath = (value) => value.split(path.sep).join('/');
 
 async function walkFiles(dir) {
-  const entries = await fs.readdir(dir, { withFileTypes: true });
-  const files = [];
-  for (const entry of entries) {
-    const absolute = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...(await walkFiles(absolute)));
-      continue;
-    }
-    files.push(absolute);
-  }
-  return files;
+	const entries = await fs.readdir(dir, { withFileTypes: true });
+	const files = [];
+	for (const entry of entries) {
+		const absolute = path.join(dir, entry.name);
+		if (entry.isDirectory()) {
+			files.push(...(await walkFiles(absolute)));
+			continue;
+		}
+		files.push(absolute);
+	}
+	return files;
 }
 
 function toRouteRecord(relativeFilePath) {
-  const normalized = normalizePath(relativeFilePath);
-  if (!normalized.endsWith("/+page.svelte")) return null;
+	const normalized = normalizePath(relativeFilePath);
+	if (!normalized.endsWith('/+page.svelte')) return null;
 
-  const parts = normalized.split("/");
-  const routeParts = parts.slice(0, -1);
+	const parts = normalized.split('/');
+	const routeParts = parts.slice(0, -1);
 
-  let family;
-  let category;
-  let slug;
+	let family;
+	let category;
+	let slug;
 
-  if (routeParts.length === 2 && !["mist", "veil"].includes(routeParts[0])) {
-    family = "default";
-    [category, slug] = routeParts;
-  } else if (routeParts.length === 3 && routeParts[0] === "mist") {
-    family = "mist";
-    category = routeParts[1];
-    slug = routeParts[2];
-  } else if (routeParts.length === 3 && routeParts[0] === "veil") {
-    family = "veil";
-    category = routeParts[1];
-    slug = routeParts[2];
-  } else {
-    return null;
-  }
+	if (routeParts.length === 2 && !['mist', 'veil'].includes(routeParts[0])) {
+		family = 'default';
+		[category, slug] = routeParts;
+	} else if (routeParts.length === 3 && routeParts[0] === 'mist') {
+		family = 'mist';
+		category = routeParts[1];
+		slug = routeParts[2];
+	} else if (routeParts.length === 3 && routeParts[0] === 'veil') {
+		family = 'veil';
+		category = routeParts[1];
+		slug = routeParts[2];
+	} else {
+		return null;
+	}
 
-  const namespace = NAMESPACE_BY_FAMILY[family];
-  const normalizedCategory =
-    family === "default" && category === "logocloud" ? "logo-cloud" : category;
+	const namespace = NAMESPACE_BY_FAMILY[family];
+	const normalizedCategory =
+		family === 'default' && category === 'logocloud' ? 'logo-cloud' : category;
 
-  const aliasKey = `${family}:${category}:${slug}`;
+	const aliasKey = `${family}:${category}:${slug}`;
 
-  let itemId;
-  if (ITEM_ID_ALIASES[aliasKey]) {
-    itemId = ITEM_ID_ALIASES[aliasKey];
-  } else if (family === "default") {
-    itemId = `${normalizedCategory}-${slug}`;
-  } else if (family === "mist") {
-    itemId = `mist-${category}-${slug}`;
-  } else {
-    itemId = `veil-${slug}`;
-  }
+	let itemId;
+	if (ITEM_ID_ALIASES[aliasKey]) {
+		itemId = ITEM_ID_ALIASES[aliasKey];
+	} else if (family === 'default') {
+		itemId = `${normalizedCategory}-${slug}`;
+	} else if (family === 'mist') {
+		itemId = `mist-${category}-${slug}`;
+	} else {
+		itemId = `veil-${slug}`;
+	}
 
-  return {
-    family,
-    category,
-    slug,
-    itemId,
-    namespace,
-    installUrl: `${BASE_URL}/${namespace}/${itemId}.json`,
-    previewPath: `/preview/${routeParts.join("/")}`,
-  };
+	return {
+		family,
+		category,
+		slug,
+		itemId,
+		namespace,
+		installUrl: `${BASE_URL}/${namespace}/${itemId}.json`,
+		previewPath: `/preview/${routeParts.join('/')}`
+	};
 }
 
 function sortRecords(a, b) {
-  const familyDiff = FAMILY_ORDER.indexOf(a.family) - FAMILY_ORDER.indexOf(b.family);
-  if (familyDiff !== 0) return familyDiff;
-  const categoryDiff = a.category.localeCompare(b.category);
-  if (categoryDiff !== 0) return categoryDiff;
-  return a.slug.localeCompare(b.slug);
+	const familyDiff = FAMILY_ORDER.indexOf(a.family) - FAMILY_ORDER.indexOf(b.family);
+	if (familyDiff !== 0) return familyDiff;
+	const categoryDiff = a.category.localeCompare(b.category);
+	if (categoryDiff !== 0) return categoryDiff;
+	return a.slug.localeCompare(b.slug);
 }
 
 function toMarkdownTableRows(records) {
-  return records
-    .map(
-      (item) =>
-        `| \`${item.itemId}\` | \`${item.category}\` | \`${item.slug}\` | ${item.installUrl} | \`${item.previewPath}\` |`,
-    )
-    .join("\n");
+	return records
+		.map(
+			(item) =>
+				`| \`${item.itemId}\` | \`${item.category}\` | \`${item.slug}\` | ${item.installUrl} | \`${item.previewPath}\` |`
+		)
+		.join('\n');
 }
 
 function buildReadme(data) {
-  const intro = [
-    "# Shadcn Svelte Install Links",
-    "",
-    "This file is generated by `scripts/generate-install-links.mjs`.",
-    "",
-    "Adapter decision: keep `@sveltejs/adapter-vercel`. The app is already globally prerendered, so switching adapters is not required for static route output.",
-    "",
-    "Note: default `logocloud` preview routes map to the shared registry item `logo-collection` because dedicated `logocloud-*` manifests are not present in `static/r`.",
-    "",
-    `Generated at: \`${data.generatedAt}\``,
-    `Base URL: \`${data.baseUrl}\``,
-    "",
-    "Quick install command:",
-    "```bash",
-    "pnpm dlx shadcn-svelte@latest add <install-url>",
-    "```",
-    "",
-    "Regenerate this file and JSON catalog:",
-    "```bash",
-    "pnpm links:generate",
-    "```",
-    "",
-  ].join("\n");
+	const intro = [
+		'# Shadcn Svelte Install Links',
+		'',
+		'This file is generated by `scripts/generate-install-links.mjs`.',
+		'',
+		'Adapter decision: keep `@sveltejs/adapter-vercel`. The app is already globally prerendered, so switching adapters is not required for static route output.',
+		'',
+		'Note: default `logocloud` preview routes map to the shared registry item `logo-collection` because dedicated `logocloud-*` manifests are not present in `static/r`.',
+		'',
+		`Generated at: \`${data.generatedAt}\``,
+		`Base URL: \`${data.baseUrl}\``,
+		'',
+		'Quick install command:',
+		'```bash',
+		'pnpm dlx shadcn-svelte@latest add <install-url>',
+		'```',
+		'',
+		'Regenerate this file and JSON catalog:',
+		'```bash',
+		'pnpm links:generate',
+		'```',
+		''
+	].join('\n');
 
-  const sections = [
-    {
-      title: "## Default Blocks",
-      records: data.items.default,
-    },
-    {
-      title: "## Mist Blocks",
-      records: data.items.mist,
-    },
-    {
-      title: "## Veil Blocks",
-      records: data.items.veil,
-    },
-  ].map(
-    (section) =>
-      [
-        section.title,
-        "",
-        "| Item ID | Category | Slug | Install URL | Preview Path |",
-        "| --- | --- | --- | --- | --- |",
-        toMarkdownTableRows(section.records),
-        "",
-      ].join("\n"),
-  );
+	const sections = [
+		{
+			title: '## Default Blocks',
+			records: data.items.default
+		},
+		{
+			title: '## Mist Blocks',
+			records: data.items.mist
+		},
+		{
+			title: '## Veil Blocks',
+			records: data.items.veil
+		}
+	].map((section) =>
+		[
+			section.title,
+			'',
+			'| Item ID | Category | Slug | Install URL | Preview Path |',
+			'| --- | --- | --- | --- | --- |',
+			toMarkdownTableRows(section.records),
+			''
+		].join('\n')
+	);
 
-  return `${intro}${sections.join("\n")}`;
+	return `${intro}${sections.join('\n')}`;
 }
 
 async function main() {
-  const allFiles = await walkFiles(PREVIEW_ROOT);
-  const pageFiles = allFiles.filter((file) => file.endsWith(path.join("+page.svelte")));
+	const allFiles = await walkFiles(PREVIEW_ROOT);
+	const pageFiles = allFiles.filter((file) => file.endsWith(path.join('+page.svelte')));
 
-  const unique = new Map();
-  let maxMtimeMs = 0;
+	const unique = new Map();
+	let maxMtimeMs = 0;
 
-  for (const file of pageFiles) {
-    const relativeToPreview = path.relative(PREVIEW_ROOT, file);
-    const record = toRouteRecord(relativeToPreview);
-    if (!record) continue;
+	for (const file of pageFiles) {
+		const relativeToPreview = path.relative(PREVIEW_ROOT, file);
+		const record = toRouteRecord(relativeToPreview);
+		if (!record) continue;
 
-    const key = `${record.family}:${record.category}:${record.slug}`;
-    if (!unique.has(key)) {
-      unique.set(key, record);
-    }
+		const key = `${record.family}:${record.category}:${record.slug}`;
+		if (!unique.has(key)) {
+			unique.set(key, record);
+		}
 
-    const stat = await fs.stat(file);
-    if (stat.mtimeMs > maxMtimeMs) {
-      maxMtimeMs = stat.mtimeMs;
-    }
-  }
+		const stat = await fs.stat(file);
+		if (stat.mtimeMs > maxMtimeMs) {
+			maxMtimeMs = stat.mtimeMs;
+		}
+	}
 
-  const allRecords = [...unique.values()].sort(sortRecords);
-  if (allRecords.length === 0) {
-    throw new Error("No preview block routes found under src/routes/preview.");
-  }
+	const allRecords = [...unique.values()].sort(sortRecords);
+	if (allRecords.length === 0) {
+		throw new Error('No preview block routes found under src/routes/preview.');
+	}
 
-  const missingManifests = [];
-  for (const record of allRecords) {
-    const manifestPath = path.join(STATIC_ROOT, record.namespace, `${record.itemId}.json`);
-    try {
-      await fs.access(manifestPath);
-    } catch {
-      missingManifests.push(`${record.namespace}/${record.itemId}.json`);
-    }
-  }
+	const missingManifests = [];
+	for (const record of allRecords) {
+		const manifestPath = path.join(STATIC_ROOT, record.namespace, `${record.itemId}.json`);
+		try {
+			await fs.access(manifestPath);
+		} catch {
+			missingManifests.push(`${record.namespace}/${record.itemId}.json`);
+		}
+	}
 
-  if (missingManifests.length > 0) {
-    const lines = missingManifests.map((item) => `- ${item}`).join("\n");
-    throw new Error(`Missing registry manifests:\n${lines}`);
-  }
+	if (missingManifests.length > 0) {
+		const lines = missingManifests.map((item) => `- ${item}`).join('\n');
+		throw new Error(`Missing registry manifests:\n${lines}`);
+	}
 
-  const grouped = {
-    default: allRecords.filter((item) => item.family === "default"),
-    mist: allRecords.filter((item) => item.family === "mist"),
-    veil: allRecords.filter((item) => item.family === "veil"),
-  };
+	const grouped = {
+		default: allRecords.filter((item) => item.family === 'default'),
+		mist: allRecords.filter((item) => item.family === 'mist'),
+		veil: allRecords.filter((item) => item.family === 'veil')
+	};
 
-  const data = {
-    generatedAt: new Date(maxMtimeMs).toISOString(),
-    baseUrl: BASE_URL,
-    totals: {
-      default: grouped.default.length,
-      mist: grouped.mist.length,
-      veil: grouped.veil.length,
-      all: allRecords.length,
-    },
-    items: grouped,
-  };
+	const data = {
+		generatedAt: new Date(maxMtimeMs).toISOString(),
+		baseUrl: BASE_URL,
+		totals: {
+			default: grouped.default.length,
+			mist: grouped.mist.length,
+			veil: grouped.veil.length,
+			all: allRecords.length
+		},
+		items: grouped
+	};
 
-  await fs.writeFile(JSON_OUTPUT, `${JSON.stringify(data, null, 2)}\n`, "utf8");
-  await fs.writeFile(README_OUTPUT, `${buildReadme(data)}\n`, "utf8");
+	await fs.writeFile(JSON_OUTPUT, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+	await fs.writeFile(README_OUTPUT, `${buildReadme(data)}\n`, 'utf8');
 
-  console.log(
-    `Generated install links: default=${data.totals.default}, mist=${data.totals.mist}, veil=${data.totals.veil}, total=${data.totals.all}`,
-  );
+	console.log(
+		`Generated install links: default=${data.totals.default}, mist=${data.totals.mist}, veil=${data.totals.veil}, total=${data.totals.all}`
+	);
 }
 
 main().catch((error) => {
-  console.error(error.message || error);
-  process.exit(1);
+	console.error(error.message || error);
+	process.exit(1);
 });

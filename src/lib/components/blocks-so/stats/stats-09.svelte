@@ -1,37 +1,37 @@
 <script lang="ts">
-	import { Card, CardContent } from "$lib/components/ui/card";
-	 import { Progress } from "$lib/components/ui/progress/index.js";
+	import { Card, CardContent } from '$lib/components/ui/card';
+	import { Progress } from '$lib/components/ui/progress/index.js';
 
 	const data = [
 		{
-			name: "Requests",
-			stat: "996",
-			limit: "10,000",
+			name: 'Requests',
+			stat: '996',
+			limit: '10,000',
 			percentage: 9.96
 		},
 		{
-			name: "Credits",
-			stat: "$672",
-			limit: "$1,000",
+			name: 'Credits',
+			stat: '$672',
+			limit: '$1,000',
 			percentage: 67.2
 		},
 		{
-			name: "Storage",
-			stat: "1.85",
-			limit: "10GB",
+			name: 'Storage',
+			stat: '1.85',
+			limit: '10GB',
 			percentage: 18.5
 		},
 		{
-			name: "API Calls",
-			stat: "4,328",
-			limit: "5,000",
+			name: 'API Calls',
+			stat: '4,328',
+			limit: '5,000',
 			percentage: 86.56
 		}
 	];
 </script>
 
-<div class="flex items-center justify-center p-10 w-full">
-	<dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 w-full">
+<div class="flex w-full items-center justify-center p-10">
+	<dl class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 		{#each data as item (item.name)}
 			<Card class="py-4">
 				<CardContent class="">

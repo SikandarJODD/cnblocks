@@ -1,27 +1,27 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const ROOT = process.cwd();
-const REGISTRY_PATH = path.join(ROOT, "registry.json");
-const STATIC_DIR = path.join(ROOT, "static");
-const GENERATED_DIR = path.join(ROOT, "src", "lib", "generated");
-const GENERATED_MAP_PATH = path.join(GENERATED_DIR, "registry-namespaces.ts");
+const REGISTRY_PATH = path.join(ROOT, 'registry.json');
+const STATIC_DIR = path.join(ROOT, 'static');
+const GENERATED_DIR = path.join(ROOT, 'src', 'lib', 'generated');
+const GENERATED_MAP_PATH = path.join(GENERATED_DIR, 'registry-namespaces.ts');
 
-const REGISTRY_ITEM_SCHEMA = "https://shadcn-svelte.com/schema/registry-item.json";
-const NAMESPACES = ["r", "v", "m"];
-const LEGACY_NAMESPACES = ["mist"];
+const REGISTRY_ITEM_SCHEMA = 'https://shadcn-svelte.com/schema/registry-item.json';
+const NAMESPACES = ['r', 'v', 'm'];
+const LEGACY_NAMESPACES = ['mist'];
 const NAMESPACE_BY_PATH = [
-	{ namespace: "v", marker: "src/lib/components/veil/" },
-	{ namespace: "m", marker: "src/lib/components/mist/" },
+	{ namespace: 'v', marker: 'src/lib/components/veil/' },
+	{ namespace: 'm', marker: 'src/lib/components/mist/' }
 ];
 
 function normalizePath(value) {
-	return String(value).replace(/\\/g, "/");
+	return String(value).replace(/\\/g, '/');
 }
 
 function getClassifyPath(file) {
 	if (file?.relativePath) return normalizePath(file.relativePath);
-	return normalizePath(file?.path ?? "");
+	return normalizePath(file?.path ?? '');
 }
 
 function getSourcePath(file) {
@@ -39,13 +39,13 @@ function classifyNamespace(files) {
 
 	if (hasVeil && hasMist) {
 		throw new Error(
-			`Ambiguous namespace: item contains both Veil and Mist files (${normalized.join(", ")})`,
+			`Ambiguous namespace: item contains both Veil and Mist files (${normalized.join(', ')})`
 		);
 	}
 
-	if (hasVeil) return "v";
-	if (hasMist) return "m";
-	return "r";
+	if (hasVeil) return 'v';
+	if (hasMist) return 'm';
+	return 'r';
 }
 
 function toRegistryItem(item, filesWithContent) {
@@ -58,7 +58,7 @@ function toRegistryItem(item, filesWithContent) {
 		registryDependencies: item.registryDependencies ?? [],
 		dependencies: item.dependencies,
 		devDependencies: item.devDependencies,
-		files: filesWithContent,
+		files: filesWithContent
 	};
 }
 
@@ -67,7 +67,7 @@ function stringifyJson(value) {
 }
 
 async function readFileUtf8(filePath) {
-	return fs.readFile(filePath, "utf8");
+	return fs.readFile(filePath, 'utf8');
 }
 
 async function ensureCleanNamespaceDirs() {
@@ -87,7 +87,7 @@ async function ensureCleanNamespaceDirs() {
 async function clearJsonFiles(dir) {
 	const dirEntries = await fs.readdir(dir, { withFileTypes: true });
 	for (const entry of dirEntries) {
-		if (entry.isFile() && entry.name.endsWith(".json")) {
+		if (entry.isFile() && entry.name.endsWith('.json')) {
 			await fs.unlink(path.join(dir, entry.name));
 		}
 	}
@@ -103,17 +103,21 @@ async function main() {
 	const registryRaw = await readFileUtf8(REGISTRY_PATH);
 	const registry = JSON.parse(registryRaw);
 	if (!Array.isArray(registry.items)) {
-		throw new Error("registry.json is missing an items array");
+		throw new Error('registry.json is missing an items array');
 	}
 
 	await ensureCleanNamespaceDirs();
 
 	const namespaceMap = {};
-	const sortedItems = [...registry.items].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+	const sortedItems = [...registry.items].sort((a, b) =>
+		String(a.name).localeCompare(String(b.name))
+	);
 
 	for (const item of sortedItems) {
 		if (!item?.name || !Array.isArray(item.files) || item.files.length === 0) {
-			throw new Error(`Invalid registry item shape for ${JSON.stringify(item?.name ?? "<unknown>")}`);
+			throw new Error(
+				`Invalid registry item shape for ${JSON.stringify(item?.name ?? '<unknown>')}`
+			);
 		}
 
 		const namespace = classifyNamespace(item.files);
@@ -125,23 +129,23 @@ async function main() {
 			const content = await readFileUtf8(sourcePath);
 			filesWithContent.push({
 				path: normalizePath(file.path),
-				type: file.type ?? "registry:component",
+				type: file.type ?? 'registry:component',
 				target: normalizePath(file.target ?? file.path),
 				content,
 				registryDependencies: file.registryDependencies,
 				dependencies: file.dependencies,
-				devDependencies: file.devDependencies,
+				devDependencies: file.devDependencies
 			});
 		}
 
 		const manifest = toRegistryItem(item, filesWithContent);
 		const fileName = `${item.name}.json`;
 		const namespaceOutputPath = path.join(STATIC_DIR, namespace, fileName);
-		await fs.writeFile(namespaceOutputPath, stringifyJson(manifest), "utf8");
+		await fs.writeFile(namespaceOutputPath, stringifyJson(manifest), 'utf8');
 	}
 
 	await fs.mkdir(GENERATED_DIR, { recursive: true });
-	await fs.writeFile(GENERATED_MAP_PATH, buildNamespaceMapSource(namespaceMap), "utf8");
+	await fs.writeFile(GENERATED_MAP_PATH, buildNamespaceMapSource(namespaceMap), 'utf8');
 
 	const counts = { r: 0, v: 0, m: 0 };
 	for (const namespace of Object.values(namespaceMap)) {
@@ -149,7 +153,7 @@ async function main() {
 	}
 
 	console.log(
-		`Generated namespaced registry manifests: total=${sortedItems.length} (r=${counts.r}, v=${counts.v}, m=${counts.m})`,
+		`Generated namespaced registry manifests: total=${sortedItems.length} (r=${counts.r}, v=${counts.v}, m=${counts.m})`
 	);
 }
 

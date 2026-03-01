@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { all_mists_heros } from "$lib/all_mists/hero";
+	import { all_mists_heros } from '$lib/all_mists/hero';
 
-  const block = all_mists_heros.find((item) => item.slug === "four");
+	const block = all_mists_heros.find((item) => item.slug === 'four');
 
-  if (!block) {
-    throw new Error("Missing preview block for four in all_mists_heros");
-  }
+	if (!block) {
+		throw new Error('Missing preview block for four in all_mists_heros');
+	}
 
-  const PreviewComponent = block.component;
+	const PreviewComponent = block.component;
 </script>
 
 <PreviewComponent />

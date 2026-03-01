@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { Props } from "./index";
-	import { cn } from "$lib/utils";
+	import type { Props } from './index';
+	import { cn } from '$lib/utils';
 
 	let { class: className, ...rest }: Props = $props();
 </script>
 
 <svg
-	class={cn("size-4", className)}
+	class={cn('size-4', className)}
 	aria-labelledby="css-logo-title css-logo-description"
 	viewBox="0 0 1000 1000"
 	{...rest}

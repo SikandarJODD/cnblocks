@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { all_mists_integrations } from "$lib/all_mists/integrations";
+	import { all_mists_integrations } from '$lib/all_mists/integrations';
 
-  const block = all_mists_integrations.find((item) => item.slug === "two");
+	const block = all_mists_integrations.find((item) => item.slug === 'two');
 
-  if (!block) {
-    throw new Error("Missing preview block for two in all_mists_integrations");
-  }
+	if (!block) {
+		throw new Error('Missing preview block for two in all_mists_integrations');
+	}
 
-  const PreviewComponent = block.component;
+	const PreviewComponent = block.component;
 </script>
 
 <PreviewComponent />

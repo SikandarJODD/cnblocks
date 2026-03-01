@@ -13,7 +13,7 @@
 <button
 	type="button"
 	class={cn(
-		'flex min-w-0 flex-1 place-items-center rounded-l-md transition-colors hover:bg-accent md:pr-2 [&_svg]:size-3.5 gap-1',
+		'flex min-w-0 flex-1 place-items-center gap-1 rounded-l-md transition-colors hover:bg-accent md:pr-2 [&_svg]:size-3.5',
 		className
 	)}
 	{...rest}
@@ -34,7 +34,9 @@
 			)}
 		/>
 	</div>
-	<span class="hidden min-w-0 overflow-hidden text-ellipsis whitespace-nowrap font-mono text-xs select-text md:inline">
+	<span
+		class="hidden min-w-0 overflow-hidden font-mono text-xs text-ellipsis whitespace-nowrap select-text md:inline"
+	>
 		{buttonState.root.addCommand}
 	</span>
 </button>

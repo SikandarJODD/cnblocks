@@ -1,13 +1,13 @@
 <script lang="ts">
-	import Table from "../markdown/Table.svelte";
-	import Thead from "../markdown/Thead.svelte";
-	import Tbody from "../markdown/Tbody.svelte";
-	import Tr from "../markdown/Tr.svelte";
-	import Th from "../markdown/Th.svelte";
-	import Td from "../markdown/Td.svelte";
-	import InfoPopover from "./InfoPopover.svelte";
-	import { cn } from "$lib/utils";
-	import { H3 } from "../markdown";
+	import Table from '../markdown/Table.svelte';
+	import Thead from '../markdown/Thead.svelte';
+	import Tbody from '../markdown/Tbody.svelte';
+	import Tr from '../markdown/Tr.svelte';
+	import Th from '../markdown/Th.svelte';
+	import Td from '../markdown/Td.svelte';
+	import InfoPopover from './InfoPopover.svelte';
+	import { cn } from '$lib/utils';
+	import { H3 } from '../markdown';
 
 	type PropDef = {
 		name: string;
@@ -24,18 +24,18 @@
 	};
 
 	let {
-		data,
+		data
 	}: {
 		data: PropsTable | PropDef[];
 	} = $props();
 
 	const isPropsTable = (data: PropsTable | PropDef[]): data is PropsTable => {
-		return "props" in data;
+		return 'props' in data;
 	};
 
 	let tableData = $derived(isPropsTable(data) ? data.props : data);
-	let tableHeaders = ["Name", "Type", "Default", "Description"];
-	let tableKeys = ["name", "type", "default", "description"];
+	let tableHeaders = ['Name', 'Type', 'Default', 'Description'];
+	let tableKeys = ['name', 'type', 'default', 'description'];
 </script>
 
 {#if isPropsTable(data)}
@@ -44,7 +44,7 @@
 			{data.name}
 		</H3>
 		{#if data.desc}
-			<p class="text-muted-foreground m-0 leading-relaxed">
+			<p class="m-0 leading-relaxed text-muted-foreground">
 				{data.desc}
 			</p>
 		{/if}
@@ -67,12 +67,10 @@
 						<span class="inline-flex items-center">
 							<code
 								class={cn(
-									"bg-muted/40 text-foreground  rounded-sm border px-1.5 py-0.5 font-normal"
+									'rounded-sm border  bg-muted/40 px-1.5 py-0.5 font-normal text-foreground'
 								)}
 							>
-								{key === "default" && row.required
-									? "required"
-									: (row as any)[key] || ""}
+								{key === 'default' && row.required ? 'required' : (row as any)[key] || ''}
 							</code>
 							{#if index === 0 && row.description}
 								<InfoPopover description={row.description} />

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { Props } from ".";
-	import { cn } from "$lib/utils";
+	import type { Props } from '.';
+	import { cn } from '$lib/utils';
 
 	let { class: className, ...rest }: Props = $props();
 </script>
 
 <svg
-	class={cn("size-4", className)}
+	class={cn('size-4', className)}
 	fill="none"
 	viewBox="0 0 512 512"
 	xmlns="http://www.w3.org/2000/svg"

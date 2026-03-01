@@ -8,22 +8,22 @@
 </script>
 
 <script lang="ts">
-	import type { Heading } from "$lib/hooks/use-toc.svelte";
-	import { cn } from "$lib/utils.js";
-	import Self from "./toc.svelte";
+	import type { Heading } from '$lib/hooks/use-toc.svelte';
+	import { cn } from '$lib/utils.js';
+	import Self from './toc.svelte';
 
 	let { toc, isChild = false, class: className }: TocProps = $props();
 </script>
 
-<ul class={cn("m-0 list-none text-sm font-normal", { "pl-4": isChild })}>
+<ul class={cn('m-0 list-none text-sm font-normal', { 'pl-4': isChild })}>
 	{#each toc as heading, i (i)}
 		<li
-			class={cn("text-muted-foreground mt-0 pt-2 transition-all", {
-				"text-foreground": heading.active,
+			class={cn('mt-0 pt-2 text-muted-foreground transition-all', {
+				'text-foreground': heading.active
 			})}
 		>
 			{#if heading.id}
-				<a href="#{heading.id}" class="hover:text-foreground block">
+				<a href="#{heading.id}" class="block hover:text-foreground">
 					{heading.label}
 				</a>
 			{:else}

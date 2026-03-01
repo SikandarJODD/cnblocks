@@ -1,5 +1,5 @@
 ---
-"@sv/cnblocks": minor
+'@sv/cnblocks': minor
 ---
 
 - Upload 40+ Components to jsrepo

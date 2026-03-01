@@ -1,17 +1,17 @@
 <script lang="ts" module>
-	import { tv, type VariantProps } from "tailwind-variants";
+	import { tv, type VariantProps } from 'tailwind-variants';
 
 	const style = tv({
-		base: "border-border w-full rounded-lg border",
+		base: 'border-border w-full rounded-lg border',
 		variants: {
 			variant: {
-				default: "bg-card",
-				secondary: "bg-secondary/50 border-transparent",
-			},
-		},
+				default: 'bg-card',
+				secondary: 'bg-secondary/50 border-transparent'
+			}
+		}
 	});
 
-	type Variant = VariantProps<typeof style>["variant"];
+	type Variant = VariantProps<typeof style>['variant'];
 
 	export type PMCommandProps = {
 		variant?: Variant;
@@ -24,34 +24,34 @@
 </script>
 
 <script lang="ts">
-	import { cn } from "$lib/utils.js";
-	import type { Command, Agent } from "package-manager-detector";
-	import { resolveCommand } from "package-manager-detector/commands";
-	import CopyButton from "../copy-button/copy-button.svelte";
-	import ClipboardIcon from "@lucide/svelte/icons/clipboard";
-	import TerminalIcon from "@lucide/svelte/icons/terminal";
-	import * as Tooltip from "$lib/components/ui/tooltip";
-	import * as Tabs from "$lib/components/ui/tabs";
+	import { cn } from '$lib/utils.js';
+	import type { Command, Agent } from 'package-manager-detector';
+	import { resolveCommand } from 'package-manager-detector/commands';
+	import CopyButton from '../copy-button/copy-button.svelte';
+	import ClipboardIcon from '@lucide/svelte/icons/clipboard';
+	import TerminalIcon from '@lucide/svelte/icons/terminal';
+	import * as Tooltip from '$lib/components/ui/tooltip';
+	import * as Tabs from '$lib/components/ui/tabs';
 
 	let {
-		variant = "default",
+		variant = 'default',
 		class: className,
 		command,
-		agents = ["npm", "pnpm", "yarn", "bun"],
+		agents = ['npm', 'pnpm', 'yarn', 'bun'],
 		args,
-		agent = $bindable("pnpm"),
+		agent = $bindable('pnpm')
 	}: PMCommandProps = $props();
 
 	const cmd = $derived(resolveCommand(agent, command, args));
 
-	const commandText = $derived(`${cmd?.command} ${cmd?.args.join(" ")}`);
+	const commandText = $derived(`${cmd?.command} ${cmd?.args.join(' ')}`);
 </script>
 
 <div class={cn(style({ variant }), className)}>
-	<div class="border-border flex place-items-center justify-between gap-2 border-b py-1 pr-2">
+	<div class="flex place-items-center justify-between gap-2 border-b border-border py-1 pr-2">
 		<div class="flex place-items-center gap-2 px-2">
-			<div class="bg-foreground flex size-4 place-items-center justify-center opacity-50">
-				<TerminalIcon class="text-background size-3" />
+			<div class="flex size-4 place-items-center justify-center bg-foreground opacity-50">
+				<TerminalIcon class="size-3 text-background" />
 			</div>
 			<Tabs.Root bind:value={agent}>
 				<Tabs.List class="h-auto bg-transparent p-0">
@@ -79,7 +79,7 @@
 		</Tooltip.Provider>
 	</div>
 	<div class="no-scrollbar overflow-x-auto p-3">
-		<span class="text-muted-foreground font-mono text-sm leading-none font-light text-nowrap">
+		<span class="font-mono text-sm leading-none font-light text-nowrap text-muted-foreground">
 			{commandText}
 		</span>
 	</div>

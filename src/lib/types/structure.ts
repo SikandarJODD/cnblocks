@@ -1,8 +1,8 @@
-import type { Component } from "svelte";
-import type { SEO } from "./seo";
-import type { CodeBlock } from "$lib/components/ui/code";
+import type { Component } from 'svelte';
+import type { SEO } from './seo';
+import type { CodeBlock } from '$lib/components/ui/code';
 
-export type ComponentBadge = "new" | "beta" | "updated" | "deprecated";
+export type ComponentBadge = 'new' | 'beta' | 'updated' | 'deprecated';
 
 export type ComponentMeta = {
 	id: string;
@@ -11,7 +11,6 @@ export type ComponentMeta = {
 	category?: string;
 	badge?: ComponentBadge;
 };
-
 
 export type ComponentDoc = ComponentMeta & {
 	preview?: Component;

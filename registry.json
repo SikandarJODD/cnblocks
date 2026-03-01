@@ -1,20 +1,11 @@
 {
 	"name": "@sv/cnblocks",
-	"authors": [
-		"SikandarJODD"
-	],
+	"authors": ["SikandarJODD"],
 	"bugs": "https://github.com/SikandarJODD/cnblocks/issues",
 	"description": "Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages.",
 	"homepage": "https://sv-blocks.vercel.app",
 	"repository": "https://github.com/SikandarJODD/cnblocks",
-	"tags": [
-		"ui",
-		"components",
-		"marketing",
-		"blocks",
-		"shadcn",
-		"svelte"
-	],
+	"tags": ["ui", "components", "marketing", "blocks", "shadcn", "svelte"],
 	"version": "package",
 	"type": "repository",
 	"defaultPaths": {
@@ -35,9 +26,7 @@
 			"description": "Before/after image comparison slider block",
 			"type": "comparator",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -74,14 +63,7 @@
 			"description": "Contact form with input fields and submit button",
 			"type": "contact",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -157,14 +139,7 @@
 			"description": "Two-column contact section with form and info",
 			"type": "contact",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -267,9 +242,7 @@
 			"description": "Content section with feature highlights",
 			"type": "content",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -375,9 +348,7 @@
 			"description": "Two-column content with image sidebar",
 			"type": "content",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -441,9 +412,7 @@
 			"description": "Call-to-action block with centered heading and buttons",
 			"type": "cta",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -474,9 +443,7 @@
 			"description": "CTA section with background gradient",
 			"type": "cta",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -513,9 +480,7 @@
 			"description": "Two-column CTA with text and action buttons",
 			"type": "cta",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -546,9 +511,7 @@
 			"description": "FAQ section with search and categories",
 			"type": "faq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -600,9 +563,7 @@
 			"description": "FAQ with two-column layout",
 			"type": "faq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -639,9 +600,7 @@
 			"description": "FAQ section with expandable items",
 			"type": "faq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -699,10 +658,7 @@
 			"description": "Reusable feature card with icon and text",
 			"type": "feature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"utils"
-			],
+			"registryDependencies": ["card", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -748,9 +704,7 @@
 			"description": "Feature grid with icons in circular containers",
 			"type": "feature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -920,10 +874,7 @@
 			"description": "Simple three-column feature grid",
 			"type": "feature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"card-decorator"
-			],
+			"registryDependencies": ["card", "card-decorator"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1023,11 +974,7 @@
 			"description": "Feature block with centered image and cards",
 			"type": "feature",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"feature-card",
-				"card"
-			],
+			"registryDependencies": ["utils", "feature-card", "card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1103,10 +1050,7 @@
 			"description": "Three-column feature cards with borders",
 			"type": "feature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"card-decorator"
-			],
+			"registryDependencies": ["card", "card-decorator"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1179,10 +1123,7 @@
 			"description": "Two-column feature with image on side",
 			"type": "feature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"card-decorator"
-			],
+			"registryDependencies": ["card", "card-decorator"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1228,11 +1169,7 @@
 			"description": "Footer with newsletter signup and social links",
 			"type": "footer",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -1323,12 +1260,7 @@
 			"description": "Three-column footer with contact info",
 			"type": "footer",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"utils"
-			],
+			"registryDependencies": ["button", "input", "label", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1413,11 +1345,7 @@
 			"description": "Forgot password form with email input",
 			"type": "forgot-password",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -1466,11 +1394,7 @@
 			"description": "Password reset form with side illustration",
 			"type": "forgot-password",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -1519,9 +1443,7 @@
 			"description": "Navigation header with dropdown menus",
 			"type": "header",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1558,10 +1480,7 @@
 			"description": "Header with mega menu navigation",
 			"type": "header",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1612,10 +1531,7 @@
 			"description": "Transparent header with centered logo",
 			"type": "header",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1666,10 +1582,7 @@
 			"description": "Standard navigation header with logo and links",
 			"type": "header",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1720,9 +1633,7 @@
 			"description": "Hero with video background and overlay",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1759,12 +1670,7 @@
 			"description": "Hero section with app mockup image",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"marquee",
-				"progressive-blur",
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["marquee", "progressive-blur", "button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1833,11 +1739,7 @@
 			"description": "Split hero with image on right side",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils",
-				"marquee"
-			],
+			"registryDependencies": ["button", "utils", "marquee"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1897,9 +1799,7 @@
 			"description": "Hero with animated background elements",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1941,10 +1841,7 @@
 			"description": "Classic centered hero with headline and CTA",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -1995,10 +1892,7 @@
 			"description": "Hero with gradient background and stats",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2054,9 +1948,7 @@
 			"description": "Hero section with logo cloud below",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2098,10 +1990,7 @@
 			"description": "Hero with background image and overlay",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2152,10 +2041,7 @@
 			"description": "Two-column hero with image carousel",
 			"type": "hero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2206,11 +2092,7 @@
 			"description": "Collection of integration card variants for logos",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card",
-				"utils"
-			],
+			"registryDependencies": ["button", "card", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2331,10 +2213,7 @@
 			"description": "Integration grid with animated connections",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"logo-collection",
-				"button"
-			],
+			"registryDependencies": ["logo-collection", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2380,11 +2259,7 @@
 			"description": "Integration showcase with hover details",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection",
-				"button"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection", "button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2433,11 +2308,7 @@
 			"description": "Four-column integration logo grid",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection",
-				"button"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection", "button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2486,10 +2357,7 @@
 			"description": "Simple integration logos in grid layout",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2529,12 +2397,7 @@
 			"description": "Integration section with categories",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection",
-				"button",
-				"marquee"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection", "button", "marquee"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2592,10 +2455,7 @@
 			"description": "Integration cards with descriptions",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"logo-collection",
-				"button"
-			],
+			"registryDependencies": ["logo-collection", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -2641,11 +2501,7 @@
 			"description": "Three-column integration with icons",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection",
-				"button"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection", "button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2694,11 +2550,7 @@
 			"description": "Two-row integration logo marquee",
 			"type": "integration",
 			"add": "when-added",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection",
-				"button"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection", "button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2747,11 +2599,7 @@
 			"description": "Simple centered login form with inputs",
 			"type": "login",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2800,11 +2648,7 @@
 			"description": "Login form with social auth buttons",
 			"type": "login",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -2853,11 +2697,7 @@
 			"description": "Split login with side illustration",
 			"type": "login",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3115,9 +2955,7 @@
 			"description": "Pricing table with feature comparison",
 			"type": "pricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3154,9 +2992,7 @@
 			"description": "Four-tier pricing with toggle switch",
 			"type": "pricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3193,10 +3029,7 @@
 			"description": "Simple three-tier pricing cards",
 			"type": "pricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3242,10 +3075,7 @@
 			"description": "Pricing with highlighted popular plan",
 			"type": "pricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3291,10 +3121,7 @@
 			"description": "Two-column pricing with monthly/yearly toggle",
 			"type": "pricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3340,11 +3167,7 @@
 			"description": "Simple centered signup form",
 			"type": "signup",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3393,11 +3216,7 @@
 			"description": "Signup form with social auth options",
 			"type": "signup",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3446,11 +3265,7 @@
 			"description": "Split signup with side illustration",
 			"type": "signup",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3625,10 +3440,7 @@
 			"description": "Testimonial carousel with navigation",
 			"type": "testimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3668,9 +3480,7 @@
 			"description": "Four-column testimonial grid",
 			"type": "testimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3701,10 +3511,7 @@
 			"description": "Simple centered testimonial quote",
 			"type": "testimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3744,10 +3551,7 @@
 			"description": "Testimonial with video embed",
 			"type": "testimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3808,10 +3612,7 @@
 			"description": "Two-column testimonial with photos",
 			"type": "testimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -3851,9 +3652,7 @@
 			"description": "Veil Hero component, variant One.",
 			"type": "vhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"veil-header-one"
-			],
+			"registryDependencies": ["veil-header-one"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3890,9 +3689,7 @@
 			"description": "Veil Hero component, variant Two.",
 			"type": "vhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"veil-header-two"
-			],
+			"registryDependencies": ["veil-header-two"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3929,9 +3726,7 @@
 			"description": "Veil Hero component, variant Three.",
 			"type": "vhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"veil-header-three"
-			],
+			"registryDependencies": ["veil-header-three"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -3968,9 +3763,7 @@
 			"description": "Veil Hero component, variant Four.",
 			"type": "vhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"veil-header-four"
-			],
+			"registryDependencies": ["veil-header-four"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4034,9 +3827,7 @@
 			"description": "Veil Header component, variant One.",
 			"type": "vheader",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4078,9 +3869,7 @@
 			"description": "Veil Header component, variant Two.",
 			"type": "vheader",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4122,9 +3911,7 @@
 			"description": "Veil Header component, variant Three.",
 			"type": "vheader",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4166,9 +3953,7 @@
 			"description": "Veil Header component, variant Four.",
 			"type": "vheader",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4264,9 +4049,7 @@
 			"description": "Veil Features component, variant Three.",
 			"type": "vfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4658,9 +4441,7 @@
 			"description": "Veil Pricing component, variant One.",
 			"type": "vpricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4697,9 +4478,7 @@
 			"description": "Veil Pricing component, variant Two.",
 			"type": "vpricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4736,9 +4515,7 @@
 			"description": "Veil Pricing component, variant Three.",
 			"type": "vpricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -4949,9 +4726,7 @@
 			"description": "Veil FAQs component, variant One.",
 			"type": "vfaq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -4982,9 +4757,7 @@
 			"description": "Veil FAQs component, variant Two.",
 			"type": "vfaq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5015,9 +4788,7 @@
 			"description": "Veil FAQs component, variant Three.",
 			"type": "vfaq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5048,9 +4819,7 @@
 			"description": "Veil FAQs component, variant Four.",
 			"type": "vfaq",
 			"add": "when-added",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5081,9 +4850,7 @@
 			"description": "Veil Contact component, variant One.",
 			"type": "vcontact",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5114,10 +4881,7 @@
 			"description": "Veil Contact component, variant Two.",
 			"type": "vcontact",
 			"add": "when-added",
-			"registryDependencies": [
-				"label",
-				"select"
-			],
+			"registryDependencies": ["label", "select"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5157,9 +4921,7 @@
 			"description": "Veil Signup component, variant One.",
 			"type": "vsignup",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5190,9 +4952,7 @@
 			"description": "Veil Signup component, variant Two.",
 			"type": "vsignup",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5223,9 +4983,7 @@
 			"description": "Veil Signup component, variant Three.",
 			"type": "vsignup",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5256,9 +5014,7 @@
 			"description": "Veil Login component, variant One.",
 			"type": "vlogin",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5289,9 +5045,7 @@
 			"description": "Veil Login component, variant Two.",
 			"type": "vlogin",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5322,9 +5076,7 @@
 			"description": "Veil Login component, variant Three.",
 			"type": "vlogin",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5355,9 +5107,7 @@
 			"description": "Veil Forgot Password component, variant One.",
 			"type": "vforgot-password",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5388,9 +5138,7 @@
 			"description": "Veil Forgot Password component, variant Two.",
 			"type": "vforgot-password",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5421,9 +5169,7 @@
 			"description": "Veil Forgot Password component, variant Three.",
 			"type": "vforgot-password",
 			"add": "when-added",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5641,9 +5387,7 @@
 			"description": "Veil Footer component, variant Five.",
 			"type": "vfooter",
 			"add": "when-added",
-			"registryDependencies": [
-				"vhelper-theme-switcher"
-			],
+			"registryDependencies": ["vhelper-theme-switcher"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5674,9 +5418,7 @@
 			"description": "Veil Footer component, variant Six.",
 			"type": "vfooter",
 			"add": "when-added",
-			"registryDependencies": [
-				"vhelper-theme-switcher"
-			],
+			"registryDependencies": ["vhelper-theme-switcher"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -5774,9 +5516,7 @@
 			"description": "Mist-style before/after image comparison",
 			"type": "mcomparator",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -5813,14 +5553,7 @@
 			"description": "Mist-style minimal contact form",
 			"type": "mcontact",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -5923,11 +5656,7 @@
 			"description": "Mist-style simple content block",
 			"type": "mcontent",
 			"add": "when-added",
-			"registryDependencies": [
-				"toggle-group",
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["toggle-group", "button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6003,11 +5732,7 @@
 			"description": "Mist-style two-column content",
 			"type": "mcontent",
 			"add": "when-added",
-			"registryDependencies": [
-				"toggle-group",
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["toggle-group", "button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6062,9 +5787,7 @@
 			"description": "Mist-style centered CTA block",
 			"type": "mcta",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -6095,9 +5818,7 @@
 			"description": "Mist-style CTA with background",
 			"type": "mcta",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6134,9 +5855,7 @@
 			"description": "Mist-style two-column CTA",
 			"type": "mcta",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -6167,9 +5886,7 @@
 			"description": "Mist-style feature with icon grid",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6206,10 +5923,7 @@
 			"description": "Mist-style feature with alternating rows",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"button"
-			],
+			"registryDependencies": ["card", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6255,9 +5969,7 @@
 			"description": "Mist-style feature comparison table",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -6288,9 +6000,7 @@
 			"description": "Mist-style feature with bullet points",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6327,12 +6037,7 @@
 			"description": "Mist-style four-column feature grid",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"toggle-group",
-				"button",
-				"card",
-				"utils"
-			],
+			"registryDependencies": ["toggle-group", "button", "card", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6396,10 +6101,7 @@
 			"description": "Mist-style feature with checkmarks",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"button"
-			],
+			"registryDependencies": ["card", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6445,10 +6147,7 @@
 			"description": "Mist-style simple feature grid",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"mist-feature-table"
-			],
+			"registryDependencies": ["card", "mist-feature-table"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -6488,10 +6187,7 @@
 			"description": "Mist-style feature with tabs",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"button"
-			],
+			"registryDependencies": ["card", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6537,10 +6233,7 @@
 			"description": "Mist-style six-column feature grid",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6586,10 +6279,7 @@
 			"description": "Mist-style feature with centered image",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"button"
-			],
+			"registryDependencies": ["card", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6635,12 +6325,7 @@
 			"description": "Mist-style three-column feature cards",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"toggle-group",
-				"button",
-				"card",
-				"utils"
-			],
+			"registryDependencies": ["toggle-group", "button", "card", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6704,9 +6389,7 @@
 			"description": "Mist-style feature with side image",
 			"type": "mfeature",
 			"add": "when-added",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -6821,11 +6504,7 @@
 			"description": "Mist-style password reset form",
 			"type": "mforgot-password",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -6874,10 +6553,7 @@
 			"description": "Mist-style hero with app mockup",
 			"type": "mhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6923,10 +6599,7 @@
 			"description": "Mist-style split hero with image",
 			"type": "mhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -6997,10 +6670,7 @@
 			"description": "Mist-style centered hero with CTA",
 			"type": "mhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -7080,10 +6750,7 @@
 			"description": "Mist-style hero with logo cloud",
 			"type": "mhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -7129,10 +6796,7 @@
 			"description": "Mist-style hero with background",
 			"type": "mhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -7212,10 +6876,7 @@
 			"description": "Mist-style two-column hero",
 			"type": "mhero",
 			"add": "when-added",
-			"registryDependencies": [
-				"utils",
-				"button"
-			],
+			"registryDependencies": ["utils", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -7295,10 +6956,7 @@
 			"description": "Mist-style integration logo card",
 			"type": "mintegration",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -7618,11 +7276,7 @@
 			"description": "Mist-style minimal login form",
 			"type": "mlogin",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -7922,10 +7576,7 @@
 			"description": "Mist-style simple pricing cards",
 			"type": "mpricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"button"
-			],
+			"registryDependencies": ["card", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -7971,10 +7622,7 @@
 			"description": "Mist-style pricing with toggle",
 			"type": "mpricing",
 			"add": "when-added",
-			"registryDependencies": [
-				"card",
-				"button"
-			],
+			"registryDependencies": ["card", "button"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8020,11 +7668,7 @@
 			"description": "Mist-style minimal signup form",
 			"type": "msignup",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -8094,9 +7738,7 @@
 			"description": "Mist-style simple stats row",
 			"type": "mstats",
 			"add": "when-added",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -8175,10 +7817,7 @@
 			"description": "Mist-style team member grid",
 			"type": "mteam",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"avatar"
-			],
+			"registryDependencies": ["button", "avatar"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8224,11 +7863,7 @@
 			"description": "Mist-style team with social links",
 			"type": "mteam",
 			"add": "when-added",
-			"registryDependencies": [
-				"button",
-				"avatar",
-				"hover-card"
-			],
+			"registryDependencies": ["button", "avatar", "hover-card"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8283,9 +7918,7 @@
 			"description": "Mist-style testimonial carousel",
 			"type": "mtestimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8322,9 +7955,7 @@
 			"description": "Mist-style four-column testimonials",
 			"type": "mtestimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -8376,10 +8007,7 @@
 			"description": "Mist-style three-column testimonials",
 			"type": "mtestimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar",
-				"utils"
-			],
+			"registryDependencies": ["avatar", "utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8425,9 +8053,7 @@
 			"description": "Mist-style two-column testimonials",
 			"type": "mtestimonial",
 			"add": "when-added",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -8458,9 +8084,7 @@
 			"description": "Animated horizontal scrolling marquee",
 			"type": "magic",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8497,9 +8121,7 @@
 			"description": "Progressive blur effect component",
 			"type": "magic",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -8530,9 +8152,7 @@
 			"description": "Collapsible accordion component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8652,9 +8272,7 @@
 			"description": "User avatar with image and fallback",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8769,9 +8387,7 @@
 			"description": "Button component with variants",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -8867,9 +8483,7 @@
 			"description": "Card container with header and footer",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9081,9 +8695,7 @@
 			"description": "Card that appears on hover",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9140,9 +8752,7 @@
 			"description": "Text input field component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9204,9 +8814,7 @@
 			"description": "Form label component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9263,10 +8871,7 @@
 			"description": "Dropdown select component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils",
-				"separator"
-			],
+			"registryDependencies": ["utils", "separator"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9520,9 +9125,7 @@
 			"description": "Visual separator line component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9579,9 +9182,7 @@
 			"description": "Multi-line text input component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9643,9 +9244,7 @@
 			"description": "Toggle button component",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [
 				{
@@ -9707,10 +9306,7 @@
 			"description": "Group of toggle buttons",
 			"type": "ui",
 			"add": "when-needed",
-			"registryDependencies": [
-				"utils",
-				"toggle"
-			],
+			"registryDependencies": ["utils", "toggle"],
 			"dependencies": [],
 			"devDependencies": [
 				{

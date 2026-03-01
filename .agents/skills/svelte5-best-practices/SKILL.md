@@ -1,6 +1,6 @@
 ---
 name: svelte5-best-practices
-description: "Svelte 5 runes, snippets, SvelteKit patterns, and modern best practices for TypeScript and component development. Use when writing, reviewing, or refactoring Svelte 5 components and SvelteKit applications. Triggers on: Svelte components, runes ($state, $derived, $effect, $props, $bindable, $inspect), snippets ({#snippet}, {@render}), event handling, SvelteKit data loading, form actions, Svelte 4 to Svelte 5 migration, store to rune migration, slots to snippets migration, TypeScript props typing, generic components, SSR state isolation, performance optimization, or component testing."
+description: 'Svelte 5 runes, snippets, SvelteKit patterns, and modern best practices for TypeScript and component development. Use when writing, reviewing, or refactoring Svelte 5 components and SvelteKit applications. Triggers on: Svelte components, runes ($state, $derived, $effect, $props, $bindable, $inspect), snippets ({#snippet}, {@render}), event handling, SvelteKit data loading, form actions, Svelte 4 to Svelte 5 migration, store to rune migration, slots to snippets migration, TypeScript props typing, generic components, SSR state isolation, performance optimization, or component testing.'
 license: MIT
 metadata:
   author: ejirocodes
@@ -11,14 +11,14 @@ metadata:
 
 ## Quick Reference
 
-| Topic | When to Use | Reference |
-|-------|-------------|-----------|
-| **Runes** | $state, $derived, $effect, $props, $bindable, $inspect | [runes.md](references/runes.md) |
-| **Snippets** | Replacing slots, {#snippet}, {@render} | [snippets.md](references/snippets.md) |
-| **Events** | onclick handlers, callback props, context API | [events.md](references/events.md) |
-| **TypeScript** | Props typing, generic components | [typescript.md](references/typescript.md) |
-| **Migration** | Svelte 4 to 5, stores to runes | [migration.md](references/migration.md) |
-| **SvelteKit** | Load functions, form actions, SSR, page typing | [sveltekit.md](references/sveltekit.md) |
+| Topic           | When to Use                                               | Reference                                   |
+| --------------- | --------------------------------------------------------- | ------------------------------------------- |
+| **Runes**       | $state, $derived, $effect, $props, $bindable, $inspect    | [runes.md](references/runes.md)             |
+| **Snippets**    | Replacing slots, {#snippet}, {@render}                    | [snippets.md](references/snippets.md)       |
+| **Events**      | onclick handlers, callback props, context API             | [events.md](references/events.md)           |
+| **TypeScript**  | Props typing, generic components                          | [typescript.md](references/typescript.md)   |
+| **Migration**   | Svelte 4 to 5, stores to runes                            | [migration.md](references/migration.md)     |
+| **SvelteKit**   | Load functions, form actions, SSR, page typing            | [sveltekit.md](references/sveltekit.md)     |
 | **Performance** | Universal reactivity, avoiding over-reactivity, streaming | [performance.md](references/performance.md) |
 
 ## Essential Patterns
@@ -27,8 +27,8 @@ metadata:
 
 ```svelte
 <script>
-  let count = $state(0);           // Reactive state
-  let doubled = $derived(count * 2); // Computed value
+	let count = $state(0); // Reactive state
+	let doubled = $derived(count * 2); // Computed value
 </script>
 ```
 
@@ -36,8 +36,8 @@ metadata:
 
 ```svelte
 <script>
-  let { name, count = 0 } = $props();
-  let { value = $bindable() } = $props(); // Two-way binding
+	let { name, count = 0 } = $props();
+	let { value = $bindable() } = $props(); // Two-way binding
 </script>
 ```
 
@@ -45,7 +45,7 @@ metadata:
 
 ```svelte
 <script>
-  let { children, header } = $props();
+	let { children, header } = $props();
 </script>
 
 {@render header?.()}
@@ -63,7 +63,7 @@ metadata:
 
 ```svelte
 <script>
-  let { onclick } = $props();
+	let { onclick } = $props();
 </script>
 
 <button onclick={() => onclick?.({ data })}>Click</button>

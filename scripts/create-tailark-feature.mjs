@@ -3,7 +3,18 @@ import path from 'node:path';
 
 const [, , rawName, rawCount] = process.argv;
 const MAX_COMPONENT_COUNT = 10;
-const NUMBER_WORDS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+const NUMBER_WORDS = [
+	'one',
+	'two',
+	'three',
+	'four',
+	'five',
+	'six',
+	'seven',
+	'eight',
+	'nine',
+	'ten'
+];
 
 function usage() {
 	console.error('Usage: npm run create:veil -- <name> <count>');

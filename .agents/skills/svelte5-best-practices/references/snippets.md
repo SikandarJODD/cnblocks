@@ -1,6 +1,7 @@
 # Svelte 5 Snippets Reference
 
 ## Table of Contents
+
 - [Replacing Slots with Snippets](#replacing-slots-with-snippets)
 - [Rendering with @render](#rendering-with-render)
 
@@ -13,14 +14,16 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 ### Default Content (children)
 
 **Svelte 4:**
+
 ```svelte
 <div class="card"><slot /></div>
 ```
 
 **Svelte 5:**
+
 ```svelte
 <script>
-  let { children } = $props();
+	let { children } = $props();
 </script>
 
 <div class="card">{@render children?.()}</div>
@@ -29,6 +32,7 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 ### Named Slots to Named Snippets
 
 **Svelte 4:**
+
 ```svelte
 <header><slot name="header" /></header>
 <main><slot /></main>
@@ -36,16 +40,17 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 
 <!-- Usage -->
 <Layout>
-  <h1 slot="header">Title</h1>
-  <p>Content</p>
-  <span slot="footer">Footer</span>
+	<h1 slot="header">Title</h1>
+	<p>Content</p>
+	<span slot="footer">Footer</span>
 </Layout>
 ```
 
 **Svelte 5:**
+
 ```svelte
 <script>
-  let { header, children, footer } = $props();
+	let { header, children, footer } = $props();
 </script>
 
 <header>{@render header?.()}</header>
@@ -54,43 +59,45 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 
 <!-- Usage -->
 <Layout>
-  {#snippet header()}<h1>Title</h1>{/snippet}
-  <p>Content</p>
-  {#snippet footer()}<span>Footer</span>{/snippet}
+	{#snippet header()}<h1>Title</h1>{/snippet}
+	<p>Content</p>
+	{#snippet footer()}<span>Footer</span>{/snippet}
 </Layout>
 ```
 
 ### Slot Props to Snippet Parameters
 
 **Svelte 4:**
+
 ```svelte
 <ul>
-  {#each items as item}
-    <li><slot {item} /></li>
-  {/each}
+	{#each items as item}
+		<li><slot {item} /></li>
+	{/each}
 </ul>
 
 <List {items} let:item>
-  <span>{item.name}</span>
+	<span>{item.name}</span>
 </List>
 ```
 
 **Svelte 5:**
+
 ```svelte
 <script>
-  let { items, children } = $props();
+	let { items, children } = $props();
 </script>
 
 <ul>
-  {#each items as item}
-    <li>{@render children?.(item)}</li>
-  {/each}
+	{#each items as item}
+		<li>{@render children?.(item)}</li>
+	{/each}
 </ul>
 
 <List {items}>
-  {#snippet children(item)}
-    <span>{item.name}</span>
-  {/snippet}
+	{#snippet children(item)}
+		<span>{item.name}</span>
+	{/snippet}
 </List>
 ```
 
@@ -98,13 +105,13 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 
 ```svelte
 <script>
-  let { children } = $props();
+	let { children } = $props();
 </script>
 
 {#if children}
-  {@render children()}
+	{@render children()}
 {:else}
-  <p>Default content</p>
+	<p>Default content</p>
 {/if}
 ```
 
@@ -112,28 +119,28 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 
 ```svelte
 <script>
-  let items = $state([
-    { id: 1, name: 'Item 1', type: 'normal' },
-    { id: 2, name: 'Item 2', type: 'featured' }
-  ]);
+	let items = $state([
+		{ id: 1, name: 'Item 1', type: 'normal' },
+		{ id: 2, name: 'Item 2', type: 'featured' }
+	]);
 </script>
 
 {#snippet normalItem(item)}
-  <li>{item.name}</li>
+	<li>{item.name}</li>
 {/snippet}
 
 {#snippet featuredItem(item)}
-  <li class="featured">*** {item.name} ***</li>
+	<li class="featured">*** {item.name} ***</li>
 {/snippet}
 
 <ul>
-  {#each items as item}
-    {#if item.type === 'featured'}
-      {@render featuredItem(item)}
-    {:else}
-      {@render normalItem(item)}
-    {/if}
-  {/each}
+	{#each items as item}
+		{#if item.type === 'featured'}
+			{@render featuredItem(item)}
+		{:else}
+			{@render normalItem(item)}
+		{/if}
+	{/each}
 </ul>
 ```
 
@@ -141,17 +148,20 @@ Svelte 5 replaces `<slot>` with snippets - a more powerful and type-safe composi
 
 ```svelte
 <script lang="ts">
-  import type { Snippet } from 'svelte';
+	import type { Snippet } from 'svelte';
 
-  interface Item { id: number; name: string; }
+	interface Item {
+		id: number;
+		name: string;
+	}
 
-  interface Props {
-    header?: Snippet;
-    children: Snippet<[item: Item]>;
-    footer?: Snippet;
-  }
+	interface Props {
+		header?: Snippet;
+		children: Snippet<[item: Item]>;
+		footer?: Snippet;
+	}
 
-  let { header, children, footer }: Props = $props();
+	let { header, children, footer }: Props = $props();
 </script>
 ```
 
@@ -165,7 +175,7 @@ Snippets must be rendered using `{@render}`. Optional snippets need null-safe ca
 
 ```svelte
 <script>
-  let { children } = $props();
+	let { children } = $props();
 </script>
 
 <div>{@render children()}</div>
@@ -177,7 +187,7 @@ Always use optional chaining for snippets that might not be provided:
 
 ```svelte
 <script>
-  let { children } = $props();
+	let { children } = $props();
 </script>
 
 {@render children?.()}
@@ -187,17 +197,17 @@ Always use optional chaining for snippets that might not be provided:
 
 ```svelte
 <script>
-  let { header, children, footer } = $props();
+	let { header, children, footer } = $props();
 </script>
 
 {#if header}
-  <header>{@render header()}</header>
+	<header>{@render header()}</header>
 {/if}
 
 <main>{@render children?.()}</main>
 
 {#if footer}
-  <footer>{@render footer()}</footer>
+	<footer>{@render footer()}</footer>
 {/if}
 ```
 
@@ -205,20 +215,20 @@ Always use optional chaining for snippets that might not be provided:
 
 ```svelte
 <script>
-  let { items, itemTemplate } = $props();
+	let { items, itemTemplate } = $props();
 </script>
 
 <ul>
-  {#each items as item, index}
-    <li>{@render itemTemplate(item, index)}</li>
-  {/each}
+	{#each items as item, index}
+		<li>{@render itemTemplate(item, index)}</li>
+	{/each}
 </ul>
 
 <!-- Usage -->
 <List {items}>
-  {#snippet itemTemplate(item, index)}
-    <span>{index + 1}. {item.name}</span>
-  {/snippet}
+	{#snippet itemTemplate(item, index)}
+		<span>{index + 1}. {item.name}</span>
+	{/snippet}
 </List>
 ```
 
@@ -228,13 +238,13 @@ Snippets can be rendered multiple times:
 
 ```svelte
 <script>
-  let { icon } = $props();
+	let { icon } = $props();
 </script>
 
 <button>
-  {@render icon?.()}
-  <span>Click me</span>
-  {@render icon?.()}
+	{@render icon?.()}
+	<span>Click me</span>
+	{@render icon?.()}
 </button>
 ```
 
@@ -242,8 +252,8 @@ Snippets can be rendered multiple times:
 
 ```svelte
 <script>
-  let { normalView, editView, isEditing } = $props();
-  let currentView = $derived(isEditing ? editView : normalView);
+	let { normalView, editView, isEditing } = $props();
+	let currentView = $derived(isEditing ? editView : normalView);
 </script>
 
 {@render currentView?.()}
@@ -253,15 +263,15 @@ Snippets can be rendered multiple times:
 
 ```svelte
 <script lang="ts">
-  import type { Snippet } from 'svelte';
+	import type { Snippet } from 'svelte';
 
-  interface Props {
-    children: Snippet;
-    header?: Snippet;
-    row: Snippet<[data: { id: number; name: string }]>;
-  }
+	interface Props {
+		children: Snippet;
+		header?: Snippet;
+		row: Snippet<[data: { id: number; name: string }]>;
+	}
 
-  let { children, header, row }: Props = $props();
+	let { children, header, row }: Props = $props();
 </script>
 
 {@render header?.()}

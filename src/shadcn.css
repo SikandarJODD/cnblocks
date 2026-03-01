@@ -1,12 +1,12 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "tw-animate-css";
-@import "./themes.css";
+@import 'tw-animate-css';
+@import './themes.css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-     --speed: 2s;
+	--speed: 2s;
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.145 0 0);
@@ -49,7 +49,7 @@
 }
 
 .dark {
-     --speed: 2s;
+	--speed: 2s;
 	--background: oklch(0.145 0 0);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.205 0 0);
@@ -146,31 +146,30 @@
 	--color-5: var(--color-5);
 
 	/* Font */
-	--font-sans: "Geist", sans-serif;
-     /* --font-sans: Inter, sans-serif; */
-  --font-display: Sora, sans-serif;
+	--font-sans: 'Geist', sans-serif;
+	/* --font-sans: Inter, sans-serif; */
+	--font-display: Sora, sans-serif;
 
-   --speed: 2s;
+	--speed: 2s;
 
-   /* Max Height of Code */
-  --pre-max-height: 500px;
+	/* Max Height of Code */
+	--pre-max-height: 500px;
 
-  /* Svelte Magic UI */
-  --animate-flip: flip 6s infinite steps(2, end);
-  --animate-kitrotate: kitrotate 3s linear infinite both;
-  --animate-rainbow: rainbow var(--speed, 2s) linear infinite;
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-  --animate-caret-blink: caret-blink 1s ease-out infinite;
-  --animate-scale-in: scale-in 0.2s ease;
-  --animate-scale-out: scale-out 0.15s ease;
-  --animate-fade-in: fade-in 0.2s ease;
-  --animate-fade-out: fade-out 0.15s ease;
-  --animate-enter-from-left: enter-from-left 0.2s ease;
-  --animate-enter-from-right: enter-from-right 0.2s ease;
-  --animate-exit-to-left: exit-to-left 0.2s ease;
-  --animate-exit-to-right: exit-to-right 0.2s ease;
-
+	/* Svelte Magic UI */
+	--animate-flip: flip 6s infinite steps(2, end);
+	--animate-kitrotate: kitrotate 3s linear infinite both;
+	--animate-rainbow: rainbow var(--speed, 2s) linear infinite;
+	--animate-accordion-down: accordion-down 0.2s ease-out;
+	--animate-accordion-up: accordion-up 0.2s ease-out;
+	--animate-caret-blink: caret-blink 1s ease-out infinite;
+	--animate-scale-in: scale-in 0.2s ease;
+	--animate-scale-out: scale-out 0.15s ease;
+	--animate-fade-in: fade-in 0.2s ease;
+	--animate-fade-out: fade-out 0.15s ease;
+	--animate-enter-from-left: enter-from-left 0.2s ease;
+	--animate-enter-from-right: enter-from-right 0.2s ease;
+	--animate-exit-to-left: exit-to-left 0.2s ease;
+	--animate-exit-to-right: exit-to-right 0.2s ease;
 }
 
 ::view-transition-old(root),
@@ -190,7 +189,6 @@
 		@apply bg-background text-foreground;
 	}
 }
-
 
 /* Scroll Fade Effect  */
 @layer base {
@@ -228,25 +226,25 @@
 }
 
 @property --top-mask-height {
-	syntax: "<length>";
+	syntax: '<length>';
 	inherits: true;
 	initial-value: 0px;
 }
 
 @property --bottom-mask-height {
-	syntax: "<length>";
+	syntax: '<length>';
 	inherits: true;
 	initial-value: 64px;
 }
 
 @property --left-mask-width {
-	syntax: "<length>";
+	syntax: '<length>';
 	inherits: true;
 	initial-value: 0px;
 }
 
 @property --right-mask-width {
-	syntax: "<length>";
+	syntax: '<length>';
 	inherits: true;
 	initial-value: 64px;
 }
@@ -313,158 +311,157 @@
 
 /* Svelte Magic UI Keyframes */
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-100% - var(--gap)));
+	}
 }
 
 @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-  }
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(calc(-100% - var(--gap)));
+	}
 }
 
- /* Animations */
+/* Animations */
 
-  @keyframes flip {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+@keyframes flip {
+	to {
+		transform: rotate(360deg);
+	}
+}
 
-  @keyframes kitrotate {
-    to {
-      transform: rotate(160deg);
-    }
-  }
+@keyframes kitrotate {
+	to {
+		transform: rotate(160deg);
+	}
+}
 
-  /* Rainbow animation */
-  @keyframes rainbow {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 200%;
-    }
-  }
-
+/* Rainbow animation */
+@keyframes rainbow {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 200%;
+	}
+}
 
 @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--bits-accordion-content-height);
-    }
-  }
+	from {
+		height: 0;
+	}
+	to {
+		height: var(--bits-accordion-content-height);
+	}
+}
 
-  @keyframes accordion-up {
-    from {
-      height: var(--bits-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
+@keyframes accordion-up {
+	from {
+		height: var(--bits-accordion-content-height);
+	}
+	to {
+		height: 0;
+	}
+}
 
-  @keyframes caret-blink {
-    0%,
-    70%,
-    100% {
-      opacity: 1;
-    }
-    20%,
-    50% {
-      opacity: 0;
-    }
-  }
+@keyframes caret-blink {
+	0%,
+	70%,
+	100% {
+		opacity: 1;
+	}
+	20%,
+	50% {
+		opacity: 0;
+	}
+}
 
-  @keyframes enter-from-right {
-    from {
-      opacity: 0;
-      transform: translateX(200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+@keyframes enter-from-right {
+	from {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 
-  @keyframes enter-from-left {
-    from {
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+@keyframes enter-from-left {
+	from {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 
-  @keyframes exit-to-right {
-    from {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateX(200px);
-    }
-  }
+@keyframes exit-to-right {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+}
 
-  @keyframes exit-to-left {
-    from {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-  }
+@keyframes exit-to-left {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+}
 
-  @keyframes scale-in {
-    from {
-      opacity: 0;
-      transform: rotateX(-10deg) scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: rotateX(0deg) scale(1);
-    }
-  }
+@keyframes scale-in {
+	from {
+		opacity: 0;
+		transform: rotateX(-10deg) scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: rotateX(0deg) scale(1);
+	}
+}
 
-  @keyframes scale-out {
-    from {
-      opacity: 1;
-      transform: rotateX(0deg) scale(1);
-    }
-    to {
-      opacity: 0;
-      transform: rotateX(-10deg) scale(0.95);
-    }
-  }
+@keyframes scale-out {
+	from {
+		opacity: 1;
+		transform: rotateX(0deg) scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: rotateX(-10deg) scale(0.95);
+	}
+}
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

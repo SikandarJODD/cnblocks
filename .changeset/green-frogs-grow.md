@@ -1,5 +1,5 @@
 ---
-"@sv/cnblocks": minor
+'@sv/cnblocks': minor
 ---
 
 Improved Dark mode func in Mist Blocks

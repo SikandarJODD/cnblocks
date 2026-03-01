@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
-	import type { Snippet } from "svelte";
+	import { cn } from '$lib/utils';
+	import type { Snippet } from 'svelte';
 
 	let {
 		class: className,
 		children,
 		title,
-		titleBaseClass,
+		titleBaseClass
 	} = $props<{
 		class?: string;
 		children?: Snippet;
@@ -15,11 +15,11 @@
 	}>();
 </script>
 
-<div class={cn("relative pb-10 pl-8", className)}>
+<div class={cn('relative pb-10 pl-8', className)}>
 	{#if title}
-		<div class={cn("mb-2 flex h-8 items-center", titleBaseClass)}>
+		<div class={cn('mb-2 flex h-8 items-center', titleBaseClass)}>
 			<span
-				class="border-border bg-card text-foreground absolute -left-4 flex size-8 items-center justify-center rounded-full border text-xs font-medium shadow-sm [counter-increment:step] before:content-[counter(step)]"
+				class="absolute -left-4 flex size-8 items-center justify-center rounded-full border border-border bg-card text-xs font-medium text-foreground shadow-sm [counter-increment:step] before:content-[counter(step)]"
 			></span>
 			<h3 class="text-base leading-none font-medium">
 				{title}
@@ -27,10 +27,10 @@
 		</div>
 	{:else}
 		<span
-			class="border-border bg-card text-foreground absolute top-1 -left-4 flex size-8 items-center justify-center rounded-full border text-xs font-medium [counter-increment:step] before:content-[counter(step)]"
+			class="absolute top-1 -left-4 flex size-8 items-center justify-center rounded-full border border-border bg-card text-xs font-medium text-foreground [counter-increment:step] before:content-[counter(step)]"
 		></span>
 	{/if}
-	<div class="text-foreground/70 text-base leading-relaxed">
+	<div class="text-base leading-relaxed text-foreground/70">
 		{@render children?.()}
 	</div>
 </div>

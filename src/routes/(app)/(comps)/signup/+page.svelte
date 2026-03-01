@@ -1,12 +1,12 @@
 <script>
-  import { signup } from "$lib/all_blocks/signup";
-  import BlockPreview from "$lib/components/web/BlockPreview.svelte";
-  import { seoMetaTags } from "$lib/config/seo";
-  import { MetaTags } from "svelte-meta-tags";
+	import { signup } from '$lib/all_blocks/signup';
+	import BlockPreview from '$lib/components/web/BlockPreview.svelte';
+	import { seoMetaTags } from '$lib/config/seo';
+	import { MetaTags } from 'svelte-meta-tags';
 </script>
 
-<MetaTags {...seoMetaTags} title="Sign Up"  />
+<MetaTags {...seoMetaTags} title="Sign Up" />
 
 {#each signup as block}
-  <BlockPreview {...block} />
+	<BlockPreview {...block} />
 {/each}

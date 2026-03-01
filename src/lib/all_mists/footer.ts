@@ -9,56 +9,56 @@ import FooterFour from '$lib/components/mist/mfooter/four.svelte';
 import FooterFourCode from '$lib/components/mist/mfooter/four.svelte?raw';
 
 export const all_mists_footer: MistBlock[] = [
-  {
-    slug: 'one',
-    title: 'Footer One',
-    category: 'footer',
-    preview: '/preview/mist/footer/one',
+	{
+		slug: 'one',
+		title: 'Footer One',
+		category: 'footer',
+		preview: '/preview/mist/footer/one',
 
-    itemId: 'mist-footer-one',
-    code: {
-      code: FooterOneCode,
-      lang: 'svelte',
-    },
-    component: FooterOne
-  },
-  {
-    slug: 'two',
-    title: 'Footer Two',
-    category: 'footer',
-    preview: '/preview/mist/footer/two',
+		itemId: 'mist-footer-one',
+		code: {
+			code: FooterOneCode,
+			lang: 'svelte'
+		},
+		component: FooterOne
+	},
+	{
+		slug: 'two',
+		title: 'Footer Two',
+		category: 'footer',
+		preview: '/preview/mist/footer/two',
 
-    itemId: 'mist-footer-two',
-    code: {
-      code: FooterTwoCode,
-      lang: 'svelte',
-    },
-    component: FooterTwo
-  },
-  {
-    slug: 'three',
-    title: 'Footer Three',
-    category: 'footer',
-    preview: '/preview/mist/footer/three',
+		itemId: 'mist-footer-two',
+		code: {
+			code: FooterTwoCode,
+			lang: 'svelte'
+		},
+		component: FooterTwo
+	},
+	{
+		slug: 'three',
+		title: 'Footer Three',
+		category: 'footer',
+		preview: '/preview/mist/footer/three',
 
-    itemId: 'mist-footer-three',
-    code: {
-      code: FooterThreeCode,
-      lang: 'svelte',
-    },
-    component: FooterThree
-  },
-  {
-    slug: 'four',
-    title: 'Footer Four',
-    category: 'footer',
-    preview: '/preview/mist/footer/four',
+		itemId: 'mist-footer-three',
+		code: {
+			code: FooterThreeCode,
+			lang: 'svelte'
+		},
+		component: FooterThree
+	},
+	{
+		slug: 'four',
+		title: 'Footer Four',
+		category: 'footer',
+		preview: '/preview/mist/footer/four',
 
-    itemId: 'mist-footer-four',
-    code: {
-      code: FooterFourCode,
-      lang: 'svelte',
-    },
-    component: FooterFour
-  }
+		itemId: 'mist-footer-four',
+		code: {
+			code: FooterFourCode,
+			lang: 'svelte'
+		},
+		component: FooterFour
+	}
 ];

@@ -53,12 +53,14 @@ The goal is to provide a similar experience for Svelte developers.
 If you like this project, please consider supporting me on [GitHub Sponsors](https://github.com/sponsors/SikandarJODD).
 
 ## Contributing
+
 Contributions are welcome! 💛
 If you have ideas for new blocks, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
 
 If you have any feedback, please reach out to me on [Twitter](https://x.com/Sikandar_Bhide) or create an issue on GitHub.
 
 ## Project Structure
+
 if you want to add new blocks follow the structure below:
 
 ```mermaid
@@ -86,7 +88,6 @@ flowchart TD
     linkStyle 4 stroke:#424242,fill:none
     linkStyle 7 stroke:#424242,fill:none
 ```
-
 
 ## License
 

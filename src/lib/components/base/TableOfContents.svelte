@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { SvelteMap } from "svelte/reactivity";
-	import { cn } from "$lib/utils";
-	import { page } from "$app/state";
+	import { SvelteMap } from 'svelte/reactivity';
+	import { cn } from '$lib/utils';
+	import { page } from '$app/state';
 
 	type TocItem = {
 		id: string;
@@ -26,16 +26,16 @@
 
 	const props = $props();
 	const selector = $derived(
-		(props as Props).selector ?? "[data-doc-content] h2, [data-doc-content] h3"
+		(props as Props).selector ?? '[data-doc-content] h2, [data-doc-content] h3'
 	);
 
-	let headings = $state<Omit<TocItem, "element">[]>([]);
-	let activeId = $state("");
+	let headings = $state<Omit<TocItem, 'element'>[]>([]);
+	let activeId = $state('');
 	let indicatorTop = $state(0);
 	let indicatorHeight = $state(0);
 	let indicatorBottom = $state(0);
 	let lineHeight = $state(0);
-	let svgPath = $state("");
+	let svgPath = $state('');
 	let svgWidth = $state(40);
 	let indicatorRange = $state<IndicatorRange | null>(null);
 	let pendingIndicatorFrame: number | null = null;
@@ -52,15 +52,15 @@
 
 	const slugify = (value: string) =>
 		value
-			.normalize("NFD")
-			.replace(/[\u0300-\u036f]/g, "")
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
 			.toLowerCase()
 			.trim()
-			.replace(/[^a-z0-9]+/g, "-")
-			.replace(/^-+|-+$/g, "");
+			.replace(/[^a-z0-9]+/g, '-')
+			.replace(/^-+|-+$/g, '');
 
 	function registerLink(node: HTMLElement, id?: string) {
-		let currentId = id ?? "";
+		let currentId = id ?? '';
 
 		const assign = () => {
 			if (!currentId) return;
@@ -76,7 +76,7 @@
 					linkRefs.delete(currentId);
 					linkPositions.delete(currentId);
 				}
-				currentId = newId ?? "";
+				currentId = newId ?? '';
 				assign();
 			},
 			destroy() {
@@ -84,12 +84,12 @@
 					linkRefs.delete(currentId);
 					linkPositions.delete(currentId);
 				}
-			},
+			}
 		};
 	}
 
 	function buildRoundedPath(points: PathPoint[], radius: number) {
-		if (points.length === 0) return "";
+		if (points.length === 0) return '';
 		if (points.length === 1) {
 			const [point] = points;
 			return `M ${point.x} ${point.y}`;
@@ -141,7 +141,7 @@
 			commands.push(` Q ${point.x} ${point.y} ${exitX} ${exitY}`);
 		}
 
-		return commands.join("");
+		return commands.join('');
 	}
 
 	function updateLayout() {
@@ -170,7 +170,7 @@
 
 			linkPositions.set(heading.id, {
 				top: positionTop,
-				height: positionHeight,
+				height: positionHeight
 			});
 
 			const x = (heading.level - 2) * indentStep + halfStroke;
@@ -225,7 +225,7 @@
 	}
 
 	function scheduleIndicatorUpdate(range?: IndicatorRange | null) {
-		if (typeof window === "undefined") {
+		if (typeof window === 'undefined') {
 			if (range) {
 				updateIndicator(range);
 			} else {
@@ -249,9 +249,9 @@
 	}
 
 	function collectHeadings() {
-		if (typeof document === "undefined") {
+		if (typeof document === 'undefined') {
 			headings = [];
-			activeId = "";
+			activeId = '';
 			lineHeight = 0;
 			indicatorTop = 0;
 			indicatorHeight = 0;
@@ -269,7 +269,7 @@
 		const parsed: TocItem[] = [];
 
 		for (const node of nodeList) {
-			const text = node.textContent?.trim() ?? "";
+			const text = node.textContent?.trim() ?? '';
 			if (!text) continue;
 
 			let id = node.id;
@@ -279,7 +279,7 @@
 					baseSlug = `section-${parsed.length + 1}`;
 				}
 				const count = slugCounts.get(baseSlug);
-				if (typeof count === "number") {
+				if (typeof count === 'number') {
 					const nextCount = count + 1;
 					slugCounts.set(baseSlug, nextCount);
 					baseSlug = `${baseSlug}-${nextCount}`;
@@ -290,12 +290,12 @@
 				node.id = id;
 			}
 
-			const level = Number(node.tagName.replace("H", "")) || 2;
+			const level = Number(node.tagName.replace('H', '')) || 2;
 			parsed.push({
 				id,
 				text,
 				level,
-				element: node,
+				element: node
 			});
 		}
 
@@ -305,7 +305,7 @@
 		});
 
 		headings = parsed.map(({ element: _element, ...rest }) => rest);
-		activeId = parsed[0]?.id ?? "";
+		activeId = parsed[0]?.id ?? '';
 
 		lineHeight = 0;
 		indicatorTop = 0;
@@ -320,8 +320,8 @@
 		}
 
 		const updateActive = () => {
-			let current = parsed[0]?.id ?? "";
-			const container = document.getElementById("docs-content-container") ?? window;
+			let current = parsed[0]?.id ?? '';
+			const container = document.getElementById('docs-content-container') ?? window;
 			const isWindow = container === window;
 			const scrollY = isWindow ? window.scrollY : (container as HTMLElement).scrollTop;
 			const viewportHeight = isWindow
@@ -360,7 +360,7 @@
 				visibleIds.length > 0
 					? {
 							startId: visibleIds[0],
-							endId: visibleIds[visibleIds.length - 1],
+							endId: visibleIds[visibleIds.length - 1]
 						}
 					: current
 						? { startId: current, endId: current }
@@ -369,7 +369,7 @@
 			scheduleIndicatorUpdate(range);
 		};
 
-		const container = document.getElementById("docs-content-container") ?? window;
+		const container = document.getElementById('docs-content-container') ?? window;
 
 		if (parsed.length > 0) {
 			const isWindow = container === window;
@@ -379,7 +379,7 @@
 				activeId = parsed[0].id;
 				const initialRange: IndicatorRange = {
 					startId: activeId,
-					endId: activeId,
+					endId: activeId
 				};
 				scheduleIndicatorUpdate(initialRange);
 			} else {
@@ -392,12 +392,12 @@
 			updateLayout();
 		};
 
-		container.addEventListener("scroll", updateActive, { passive: true });
-		window.addEventListener("resize", handleResize);
+		container.addEventListener('scroll', updateActive, { passive: true });
+		window.addEventListener('resize', handleResize);
 
 		return () => {
-			container.removeEventListener("scroll", updateActive);
-			window.removeEventListener("resize", handleResize);
+			container.removeEventListener('scroll', updateActive);
+			window.removeEventListener('resize', handleResize);
 			if (pendingIndicatorFrame !== null) {
 				window.cancelAnimationFrame(pendingIndicatorFrame);
 				pendingIndicatorFrame = null;
@@ -440,7 +440,7 @@
 	});
 
 	$effect(() => {
-		if (typeof window === "undefined" || !linksWrapper) return;
+		if (typeof window === 'undefined' || !linksWrapper) return;
 
 		const observer = new ResizeObserver(() => {
 			updateLayout();
@@ -458,7 +458,7 @@
 {#if headings.length > 0}
 	<nav class="sticky top-12 hidden px-3 lg:block">
 		<div
-			class="text-foreground/45 mb-2 flex items-center gap-2 text-xs font-medium tracking-wide uppercase"
+			class="mb-2 flex items-center gap-2 text-xs font-medium tracking-wide text-foreground/45 uppercase"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -487,11 +487,11 @@
                     -webkit-mask-size: 100% 100%;
                 `}
 			>
-				<div class="bg-border absolute inset-0 h-full w-full"></div>
+				<div class="absolute inset-0 h-full w-full bg-border"></div>
 
 				{#if indicatorHeight > 0}
 					<div
-						class="bg-accent absolute left-0 w-full transition-all duration-450 ease-out"
+						class="absolute left-0 w-full bg-accent transition-all duration-450 ease-out"
 						style={`
                             top: ${indicatorTop}px;
                             bottom: ${Math.max(0, lineHeight - indicatorBottom)}px;
@@ -509,10 +509,10 @@
 						<a
 							href={`#${heading.id}`}
 							class={cn(
-								"block py-1.5 transition-[color] duration-150 ease-out",
+								'block py-1.5 transition-[color] duration-150 ease-out',
 								isLinkHighlighted(heading.id)
-									? "text-accent"
-									: "text-foreground/70 hover:text-foreground"
+									? 'text-accent'
+									: 'text-foreground/70 hover:text-foreground'
 							)}
 							use:registerLink={heading.id}
 						>
@@ -524,5 +524,5 @@
 		</div>
 	</nav>
 {:else}
-	<div class="text-foreground/45 hidden text-sm lg:block">No headings</div>
+	<div class="hidden text-sm text-foreground/45 lg:block">No headings</div>
 {/if}

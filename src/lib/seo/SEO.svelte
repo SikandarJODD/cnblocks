@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { page } from "$app/state";
-	import { MetaTags } from "svelte-meta-tags";
+	import { page } from '$app/state';
+	import { MetaTags } from 'svelte-meta-tags';
 	type Props = {
 		title: string;
 		description: string;
@@ -46,15 +46,15 @@
 		title: title,
 		description: description,
 		images: images,
-		siteName: "Svelte Marketing Blocks",
+		siteName: 'Svelte Marketing Blocks'
 	}}
 	twitter={{
-		creator: "@Sikandar_Bhide",
-		site: "@Sikandar_Bhide",
-		cardType: "summary_large_image",
+		creator: '@Sikandar_Bhide',
+		site: '@Sikandar_Bhide',
+		cardType: 'summary_large_image',
 		title: title,
 		description: description,
 		// image: images && images[0] ? images[0].url : "https://sv-animations.vercel.app/svelte.svg",
-		imageAlt: images && images[0] ? images[0].alt : "Svelte Marketing Blocks",
+		imageAlt: images && images[0] ? images[0].alt : 'Svelte Marketing Blocks'
 	}}
 />

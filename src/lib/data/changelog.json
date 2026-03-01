@@ -1,32 +1,32 @@
 [
-  {
-    "title": "New Blocks - April 15, 2025",
-    "desc": "Added 10 new blocks",
-    "date": "2025-04-15T00:00:00.000Z",
-    "content": "<p>Added 8 Integration Blocks</p>\n<p><a href=\"/integration#integration-one\">Integration One</a>\r\n<a href=\"/integration#integration-two\">Integration Two</a>\r\n<a href=\"/integration#integration-three\">Integration Three</a>\r\n<a href=\"/integration#integration-four\">Integration Four</a>\r\n<a href=\"/integration#integration-five\">Integration Five</a>\r\n<a href=\"/integration#integration-six\">Integration Six</a>\r\n<a href=\"/integration#integration-seven\">Integration Seven</a>\r\n<a href=\"/integration#integration-eight\">Integration Eight</a></p>\n<p>Added Forgot Password Blocks</p>\n<p><a href=\"/forgot-password#forgot-password-one\">Forgot Password One</a>\r\n<a href=\"/forgot-password#forgot-password-two\">Forgot Password Two</a></p>"
-  },
-  {
-    "title": "New Blocks - April 24, 2025",
-    "desc": "Added 20 new blocks",
-    "date": "2025-04-24T00:00:00.000Z",
-    "content": "<p>Added 9 Hero Blocks</p>\n<p><a href=\"/hero#hero-one\">Hero One</a>\r\n<a href=\"/hero#hero-two\">Hero Two</a>\r\n<a href=\"/hero#hero-three\">Hero Three</a>\r\n<a href=\"/hero#hero-four\">Hero Four</a>\r\n<a href=\"/hero#hero-five\">Hero Five</a>\r\n<a href=\"/hero#hero-six\">Hero Six</a>\r\n<a href=\"/hero#hero-seven\">Hero Seven</a>\r\n<a href=\"/hero#hero-eight\">Hero Eight</a>\r\n<a href=\"/hero#hero-nine\">Hero Nine</a></p>\n<p>Added 8 Feature Blocks</p>\n<p><a href=\"/feature#feature-eight\">Feature Eight</a>\r\n<a href=\"/feature#feature-nine\">Feature Nine</a>\r\n<a href=\"/feature#feature-ten\">Feature Ten</a>\r\n<a href=\"/feature#feature-eleven\">Feature Eleven</a>\r\n<a href=\"/feature#feature-twelve\">Feature Twelve</a>\r\n<a href=\"/feature#feature-thirteen\">Feature Thirteen</a>\r\n<a href=\"/feature#feature-fourteen\">Feature Fourteen</a></p>\n<p>Added 4 Faq Blocks</p>\n<p><a href=\"/faq#faq-one\">FAQ One</a>\r\n<a href=\"/faq#faq-two\">FAQ Two</a>\r\n<a href=\"/faq#faq-three\">FAQ Three</a>\r\n<a href=\"/faq#faq-four\">FAQ Four</a></p>"
-  },
-  {
-    "title": "Package Manager & Analytics Update",
-    "desc": "Migrated to pnpm, added web analytics, and upgraded jsrepo to v3",
-    "date": "2025-12-01T00:00:00.000Z",
-    "content": "<h2>What's New</h2>\n<h3>📦 npm → pnpm Migration</h3>\n<p>Switched from npm to pnpm for faster installs and better disk space efficiency.</p>\n<h3>📊 Web Analytics</h3>\n<p>Added web analytics using <a href=\"https://onedollarstats.com\">One Dollar Stats</a> for lightweight, privacy-friendly tracking.</p>\n<h3>🚀 jsrepo v2 → v3</h3>\n<p>Upgraded to jsrepo v3 for improved MCP server integration and better component registry support.</p>\n<p>Visit the <a href=\"/docs/mcp\">MCP Docs</a> for updated integration instructions.</p>"
-  },
-  {
-    "title": "MCP Server Integration",
-    "desc": "MCP Server Integration using jsrepo",
-    "date": "2025-05-31T00:00:00.000Z",
-    "content": "<p>Docs: <a href=\"/docs/mcp\">Visit</a> for more information.</p>\n<p>Integrated MCP Server for Cursor &#x26; Windsurf using <a href=\"https://jsrepo.dev/docs/registry/mcp\">jsrepo</a></p>\n<p>Added Example Prompts for Creating Landing pages, Marketing Pages, and more.</p>"
-  },
-  {
-    "title": "50 New Blocks",
-    "desc": "Inspired by Notion, built on top of Svelte 5, Shadcn Svelte and Tailwind V4",
-    "date": "2025-05-18T00:00:00.000Z",
-    "content": "<p>Added 50 New Blocks - MIST Blocks</p>\n<p>Visit the <a href=\"/mist/hero\">Blocks</a> page to see the new blocks.</p>\n<p>Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Svelte 5, Shadcn Svelte and Tailwind V4.</p>"
-  }
+	{
+		"title": "New Blocks - April 15, 2025",
+		"desc": "Added 10 new blocks",
+		"date": "2025-04-15T00:00:00.000Z",
+		"content": "<p>Added 8 Integration Blocks</p>\n<p><a href=\"/integration#integration-one\">Integration One</a>\r\n<a href=\"/integration#integration-two\">Integration Two</a>\r\n<a href=\"/integration#integration-three\">Integration Three</a>\r\n<a href=\"/integration#integration-four\">Integration Four</a>\r\n<a href=\"/integration#integration-five\">Integration Five</a>\r\n<a href=\"/integration#integration-six\">Integration Six</a>\r\n<a href=\"/integration#integration-seven\">Integration Seven</a>\r\n<a href=\"/integration#integration-eight\">Integration Eight</a></p>\n<p>Added Forgot Password Blocks</p>\n<p><a href=\"/forgot-password#forgot-password-one\">Forgot Password One</a>\r\n<a href=\"/forgot-password#forgot-password-two\">Forgot Password Two</a></p>"
+	},
+	{
+		"title": "New Blocks - April 24, 2025",
+		"desc": "Added 20 new blocks",
+		"date": "2025-04-24T00:00:00.000Z",
+		"content": "<p>Added 9 Hero Blocks</p>\n<p><a href=\"/hero#hero-one\">Hero One</a>\r\n<a href=\"/hero#hero-two\">Hero Two</a>\r\n<a href=\"/hero#hero-three\">Hero Three</a>\r\n<a href=\"/hero#hero-four\">Hero Four</a>\r\n<a href=\"/hero#hero-five\">Hero Five</a>\r\n<a href=\"/hero#hero-six\">Hero Six</a>\r\n<a href=\"/hero#hero-seven\">Hero Seven</a>\r\n<a href=\"/hero#hero-eight\">Hero Eight</a>\r\n<a href=\"/hero#hero-nine\">Hero Nine</a></p>\n<p>Added 8 Feature Blocks</p>\n<p><a href=\"/feature#feature-eight\">Feature Eight</a>\r\n<a href=\"/feature#feature-nine\">Feature Nine</a>\r\n<a href=\"/feature#feature-ten\">Feature Ten</a>\r\n<a href=\"/feature#feature-eleven\">Feature Eleven</a>\r\n<a href=\"/feature#feature-twelve\">Feature Twelve</a>\r\n<a href=\"/feature#feature-thirteen\">Feature Thirteen</a>\r\n<a href=\"/feature#feature-fourteen\">Feature Fourteen</a></p>\n<p>Added 4 Faq Blocks</p>\n<p><a href=\"/faq#faq-one\">FAQ One</a>\r\n<a href=\"/faq#faq-two\">FAQ Two</a>\r\n<a href=\"/faq#faq-three\">FAQ Three</a>\r\n<a href=\"/faq#faq-four\">FAQ Four</a></p>"
+	},
+	{
+		"title": "Package Manager & Analytics Update",
+		"desc": "Migrated to pnpm, added web analytics, and upgraded jsrepo to v3",
+		"date": "2025-12-01T00:00:00.000Z",
+		"content": "<h2>What's New</h2>\n<h3>📦 npm → pnpm Migration</h3>\n<p>Switched from npm to pnpm for faster installs and better disk space efficiency.</p>\n<h3>📊 Web Analytics</h3>\n<p>Added web analytics using <a href=\"https://onedollarstats.com\">One Dollar Stats</a> for lightweight, privacy-friendly tracking.</p>\n<h3>🚀 jsrepo v2 → v3</h3>\n<p>Upgraded to jsrepo v3 for improved MCP server integration and better component registry support.</p>\n<p>Visit the <a href=\"/docs/mcp\">MCP Docs</a> for updated integration instructions.</p>"
+	},
+	{
+		"title": "MCP Server Integration",
+		"desc": "MCP Server Integration using jsrepo",
+		"date": "2025-05-31T00:00:00.000Z",
+		"content": "<p>Docs: <a href=\"/docs/mcp\">Visit</a> for more information.</p>\n<p>Integrated MCP Server for Cursor &#x26; Windsurf using <a href=\"https://jsrepo.dev/docs/registry/mcp\">jsrepo</a></p>\n<p>Added Example Prompts for Creating Landing pages, Marketing Pages, and more.</p>"
+	},
+	{
+		"title": "50 New Blocks",
+		"desc": "Inspired by Notion, built on top of Svelte 5, Shadcn Svelte and Tailwind V4",
+		"date": "2025-05-18T00:00:00.000Z",
+		"content": "<p>Added 50 New Blocks - MIST Blocks</p>\n<p>Visit the <a href=\"/mist/hero\">Blocks</a> page to see the new blocks.</p>\n<p>Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Svelte 5, Shadcn Svelte and Tailwind V4.</p>"
+	}
 ]
