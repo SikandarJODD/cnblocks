@@ -70,7 +70,7 @@ const corePreviewConfig = [
 		category: "testimonial",
 		modulePath: "$lib/all_blocks/testimonial",
 		exportName: "testimonials",
-		count: 4,
+		count: 6,
 	},
 ];
 

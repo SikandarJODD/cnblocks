@@ -7,6 +7,12 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		prerender: {
+			handleMissingId: ({ id }) => {
+				// Many gallery blocks intentionally use "#a" placeholder anchors.
+				if (id === "a") return;
+			},
+		},
 	},
 	// vitePlugin: {
 	//   inspector: {
