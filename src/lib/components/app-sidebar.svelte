@@ -1,164 +1,179 @@
 <script lang="ts" module>
-	// sample data
+	import BookOpenIcon from "@lucide/svelte/icons/book-open";
+	import BotIcon from "@lucide/svelte/icons/bot";
+	import ChartPieIcon from "@lucide/svelte/icons/chart-pie";
+	import FrameIcon from "@lucide/svelte/icons/frame";
+	import LifeBuoyIcon from "@lucide/svelte/icons/life-buoy";
+	import MapIcon from "@lucide/svelte/icons/map";
+	import SendIcon from "@lucide/svelte/icons/send";
+	import Settings2Icon from "@lucide/svelte/icons/settings-2";
+	import SquareTerminalIcon from "@lucide/svelte/icons/square-terminal";
+
 	const data = {
-		versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
+		user: {
+			name: "shadcn",
+			email: "m@example.com",
+			avatar: "/avatars/shadcn.jpg",
+		},
 		navMain: [
 			{
-				title: "Getting Started",
+				title: "Playground",
 				url: "#",
+				icon: SquareTerminalIcon,
+				isActive: true,
 				items: [
 					{
-						title: "Installation",
+						title: "History",
 						url: "#",
 					},
 					{
-						title: "Project Structure",
+						title: "Starred",
+						url: "#",
+					},
+					{
+						title: "Settings",
 						url: "#",
 					},
 				],
 			},
 			{
-				title: "Building Your Application",
+				title: "Models",
 				url: "#",
+				icon: BotIcon,
 				items: [
 					{
-						title: "Routing",
+						title: "Genesis",
 						url: "#",
 					},
 					{
-						title: "Data Fetching",
-						url: "#",
-						isActive: true,
-					},
-					{
-						title: "Rendering",
+						title: "Explorer",
 						url: "#",
 					},
 					{
-						title: "Caching",
-						url: "#",
-					},
-					{
-						title: "Styling",
-						url: "#",
-					},
-					{
-						title: "Optimizing",
-						url: "#",
-					},
-					{
-						title: "Configuring",
-						url: "#",
-					},
-					{
-						title: "Testing",
-						url: "#",
-					},
-					{
-						title: "Authentication",
-						url: "#",
-					},
-					{
-						title: "Deploying",
-						url: "#",
-					},
-					{
-						title: "Upgrading",
-						url: "#",
-					},
-					{
-						title: "Examples",
+						title: "Quantum",
 						url: "#",
 					},
 				],
 			},
 			{
-				title: "API Reference",
+				title: "Documentation",
 				url: "#",
+				icon: BookOpenIcon,
 				items: [
 					{
-						title: "Components",
+						title: "Introduction",
 						url: "#",
 					},
 					{
-						title: "File Conventions",
+						title: "Get Started",
 						url: "#",
 					},
 					{
-						title: "Functions",
+						title: "Tutorials",
 						url: "#",
 					},
 					{
-						title: "next.config.js Options",
-						url: "#",
-					},
-					{
-						title: "CLI",
-						url: "#",
-					},
-					{
-						title: "Edge Runtime",
+						title: "Changelog",
 						url: "#",
 					},
 				],
 			},
 			{
-				title: "Architecture",
+				title: "Settings",
 				url: "#",
+				icon: Settings2Icon,
 				items: [
 					{
-						title: "Accessibility",
+						title: "General",
 						url: "#",
 					},
 					{
-						title: "Fast Refresh",
+						title: "Team",
 						url: "#",
 					},
 					{
-						title: "Svelte Compiler",
+						title: "Billing",
 						url: "#",
 					},
 					{
-						title: "Supported Browsers",
-						url: "#",
-					},
-					{
-						title: "Rollup",
+						title: "Limits",
 						url: "#",
 					},
 				],
+			},
+		],
+		navSecondary: [
+			{
+				title: "Support",
+				url: "#",
+				icon: LifeBuoyIcon,
+			},
+			{
+				title: "Feedback",
+				url: "#",
+				icon: SendIcon,
+			},
+		],
+		projects: [
+			{
+				name: "Design Engineering",
+				url: "#",
+				icon: FrameIcon,
+			},
+			{
+				name: "Sales & Marketing",
+				url: "#",
+				icon: ChartPieIcon,
+			},
+			{
+				name: "Travel",
+				url: "#",
+				icon: MapIcon,
 			},
 		],
 	};
 </script>
 
 <script lang="ts">
+	import NavMain from "./nav-main.svelte";
+	import NavProjects from "./nav-projects.svelte";
+	import NavSecondary from "./nav-secondary.svelte";
+	import NavUser from "./nav-user.svelte";
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import CommandIcon from "@lucide/svelte/icons/command";
 	import type { ComponentProps } from "svelte";
+
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 </script>
 
-<Sidebar.Root {...restProps} bind:ref>
+<Sidebar.Root bind:ref variant="inset" {...restProps}>
+	<Sidebar.Header>
+		<Sidebar.Menu>
+			<Sidebar.MenuItem>
+				<Sidebar.MenuButton size="lg">
+					{#snippet child({ props })}
+						<a href="##" {...props}>
+							<div
+								class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg"
+							>
+								<CommandIcon class="size-4" />
+							</div>
+							<div class="grid flex-1 text-start text-sm leading-tight">
+								<span class="truncate font-medium">Acme Inc</span>
+								<span class="truncate text-xs">Enterprise</span>
+							</div>
+						</a>
+					{/snippet}
+				</Sidebar.MenuButton>
+			</Sidebar.MenuItem>
+		</Sidebar.Menu>
+	</Sidebar.Header>
 	<Sidebar.Content>
-		<!-- We create a Sidebar.Group for each parent. -->
-		{#each data.navMain as group (group.title)}
-			<Sidebar.Group>
-				<Sidebar.GroupLabel>{group.title}</Sidebar.GroupLabel>
-				<Sidebar.GroupContent>
-					<Sidebar.Menu>
-						{#each group.items as item (item.title)}
-							<Sidebar.MenuItem>
-								<Sidebar.MenuButton isActive={item.isActive}>
-									{#snippet child({ props })}
-										<a href={item.url} {...props}>{item.title}</a>
-									{/snippet}
-								</Sidebar.MenuButton>
-							</Sidebar.MenuItem>
-						{/each}
-					</Sidebar.Menu>
-				</Sidebar.GroupContent>
-			</Sidebar.Group>
-		{/each}
+		<NavMain items={data.navMain} />
+		<NavProjects projects={data.projects} />
+		<NavSecondary items={data.navSecondary} class="mt-auto" />
 	</Sidebar.Content>
-	<Sidebar.Rail />
+	<Sidebar.Footer>
+		<NavUser user={data.user} />
+	</Sidebar.Footer>
 </Sidebar.Root>
