@@ -11,124 +11,60 @@
 
 	const data = {
 		user: {
-			name: "shadcn",
-			email: "m@example.com",
-			avatar: "/avatars/shadcn.jpg",
+			name: "Bhide Svelte",
+			desc: "I Love Svelte",
+			avatar: "https://pbs.twimg.com/profile_images/1734257897247514625/IaW4s_ba_400x400.jpg",
+			visit: "https://github.com/SikandarJODD/cnblocks"
 		},
-		navMain: [
+		guide: [
 			{
-				title: "Playground",
+				title: "Introduction",
 				url: "#",
-				icon: SquareTerminalIcon,
-				isActive: true,
-				items: [
-					{
-						title: "History",
-						url: "#",
-					},
-					{
-						title: "Starred",
-						url: "#",
-					},
-					{
-						title: "Settings",
-						url: "#",
-					},
-				],
 			},
 			{
-				title: "Models",
+				title: "Installation",
 				url: "#",
-				icon: BotIcon,
-				items: [
-					{
-						title: "Genesis",
-						url: "#",
-					},
-					{
-						title: "Explorer",
-						url: "#",
-					},
-					{
-						title: "Quantum",
-						url: "#",
-					},
-				],
 			},
 			{
-				title: "Documentation",
+				title: "Mist Theme Setup",
 				url: "#",
-				icon: BookOpenIcon,
-				items: [
-					{
-						title: "Introduction",
-						url: "#",
-					},
-					{
-						title: "Get Started",
-						url: "#",
-					},
-					{
-						title: "Tutorials",
-						url: "#",
-					},
-					{
-						title: "Changelog",
-						url: "#",
-					},
-				],
 			},
 			{
-				title: "Settings",
+				title: "Veil Theme Setup",
 				url: "#",
-				icon: Settings2Icon,
-				items: [
-					{
-						title: "General",
-						url: "#",
-					},
-					{
-						title: "Team",
-						url: "#",
-					},
-					{
-						title: "Billing",
-						url: "#",
-					},
-					{
-						title: "Limits",
-						url: "#",
-					},
-				],
+			},
+			{
+				title: "MCP Server Setup",
+				url: "#",
 			},
 		],
-		navSecondary: [
+		footer: [
 			{
-				title: "Support",
+				title: "Send Feedback",
 				url: "#",
-				icon: LifeBuoyIcon,
+				icon: SendFeedback,
 			},
 			{
-				title: "Feedback",
+				title: "Sponsor Project",
 				url: "#",
-				icon: SendIcon,
+				icon: SponsorProject,
 			},
 		],
-		projects: [
+		templates: [
 			{
-				name: "Design Engineering",
+				name: "Startup Template",
 				url: "#",
-				icon: FrameIcon,
+				badge: "basic",
 			},
 			{
-				name: "Sales & Marketing",
+				name: "Startup Template Veil Theme",
 				url: "#",
-				icon: ChartPieIcon,
+				badge: "veil",
 			},
 			{
-				name: "Travel",
+				name: "Mist Variant",
 				url: "#",
-				icon: MapIcon,
+				badge: "mist",
 			},
 		],
 	};
@@ -142,36 +78,17 @@
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
 	import CommandIcon from "@lucide/svelte/icons/command";
 	import type { ComponentProps } from "svelte";
+	import SendFeedback from "$lib/svgs/send-feedback.svelte";
+	import SponsorProject from "$lib/svgs/sponsor-project.svelte";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 </script>
 
 <Sidebar.Root bind:ref variant="inset" {...restProps}>
-	<Sidebar.Header>
-		<Sidebar.Menu>
-			<Sidebar.MenuItem>
-				<Sidebar.MenuButton size="lg">
-					{#snippet child({ props })}
-						<a href="##" {...props}>
-							<div
-								class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg"
-							>
-								<CommandIcon class="size-4" />
-							</div>
-							<div class="grid flex-1 text-start text-sm leading-tight">
-								<span class="truncate font-medium">Acme Inc</span>
-								<span class="truncate text-xs">Enterprise</span>
-							</div>
-						</a>
-					{/snippet}
-				</Sidebar.MenuButton>
-			</Sidebar.MenuItem>
-		</Sidebar.Menu>
-	</Sidebar.Header>
 	<Sidebar.Content>
-		<NavMain items={data.navMain} />
-		<NavProjects projects={data.projects} />
-		<NavSecondary items={data.navSecondary} class="mt-auto" />
+		<NavMain items={data.guide} />
+		<NavProjects projects={data.templates} />
+		<NavSecondary items={data.footer} class="mt-auto" />
 	</Sidebar.Content>
 	<Sidebar.Footer>
 		<NavUser user={data.user} />
