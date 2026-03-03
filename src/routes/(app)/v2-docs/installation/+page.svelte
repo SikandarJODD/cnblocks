@@ -15,11 +15,42 @@
 		Tr,
 		Th,
 		Td,
+		Link,
 	} from "$lib/components/markdown/index";
 	import { docsV2PageMap } from "$lib/config/docs-v2";
 	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
 
 	const pageMeta = docsV2PageMap.installation;
+
+	const variantCards = [
+		{
+			label: "Default",
+			title: "50+ Components - Default Variant",
+			description:
+				"Balanced, production-ready UI blocks for general SaaS and marketing pages.",
+			linkText: "Browse default previews",
+			href: "/preview/hero/one",
+			accent: "from-emerald-500/20 via-emerald-500/5 to-transparent",
+		},
+		{
+			label: "Mist",
+			title: "50+ Components - Mist Variant",
+			description:
+				"Minimal, content-first sections for documentation-heavy pages and clean layouts.",
+			linkText: "Open Mist setup guide",
+			href: "/v2-docs/mist-theme",
+			accent: "from-sky-500/20 via-sky-500/5 to-transparent",
+		},
+		{
+			label: "Veil",
+			title: "50+ Components - Veil Variant",
+			description:
+				"Modern, high-contrast blocks tailored for product storytelling and launch pages.",
+			linkText: "Open Veil setup guide",
+			href: "/v2-docs/veil-theme",
+			accent: "from-amber-500/20 via-amber-500/5 to-transparent",
+		},
+	];
 </script>
 
 <SEOComponent
@@ -74,14 +105,60 @@
 			<Step title="Initialize shadcn-svelte">
 				<DocsCodeBlock fileName="Terminal" code="npx shadcn-svelte@next init" lang="bash" />
 			</Step>
-			<Step title="Install a block with jsrepo">
+			<Step title="Install block using shadcn-svelte CLI">
 				<DocsCodeBlock
 					fileName="Terminal"
-					code="npx jsrepo add @sv/cnblocks/hero-one"
+					code={`pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/r/hero-one.json
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/mist-hero-one.json
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.json`}
 					lang="bash"
 				/>
 			</Step>
+			<Step title="Or simply copy and paste components">
+				<Paragraph class="mt-0">
+					Open any preview route, copy the component markup, and paste it into your app.
+					Start with <Link href="/preview/hero/one">Default</Link>, <Link href="/preview/mist/hero/one"
+						>Mist</Link
+					>, or <Link href="/preview/veil/hero/hero-one">Veil</Link>.
+				</Paragraph>
+			</Step>
 		</Steps>
+	</section>
+
+	<section class="space-y-4">
+		<H2 id="variants">Variant Packs</H2>
+		<Paragraph>
+			Each pack includes 50+ ready-to-use components. Choose one style direction or mix them
+			based on your page needs.
+		</Paragraph>
+		<div class="grid gap-4 md:grid-cols-3">
+			{#each variantCards as card}
+				<article
+					class="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+				>
+					<div class={`pointer-events-none absolute inset-0 bg-gradient-to-br ${card.accent}`} />
+					<div class="relative z-10 space-y-4">
+						<span
+							class="inline-flex rounded-full border border-border/80 bg-background/80 px-2.5 py-1 text-xs font-medium text-muted-foreground"
+						>
+							{card.label}
+						</span>
+						<div class="space-y-2">
+							<h3 class="text-base font-semibold leading-snug tracking-tight text-foreground">
+								{card.title}
+							</h3>
+							<p class="text-sm leading-relaxed text-muted-foreground">{card.description}</p>
+						</div>
+						<a
+							href={card.href}
+							class="inline-flex text-sm font-medium text-primary underline-offset-4 transition-colors hover:underline"
+						>
+							{card.linkText}
+						</a>
+					</div>
+				</article>
+			{/each}
+		</div>
 	</section>
 
 	<section class="space-y-4">

@@ -31,6 +31,14 @@
 		highlight?: (number | [number, number])[];
 	};
 
+	const escapeHtml = (value: string) =>
+		value
+			.replaceAll("&", "&amp;")
+			.replaceAll("<", "&lt;")
+			.replaceAll(">", "&gt;")
+			.replaceAll('"', "&quot;")
+			.replaceAll("'", "&#39;");
+
 	let within = (num: number, range: Props["highlight"]) => {
 		if (!range) return false;
 
@@ -68,35 +76,39 @@
 	let hl = $state<HighlighterCore>();
 
 	let highlighted = $derived.by(() => {
-		const html =
-			hl?.codeToHtml(code, {
-				lang: lang,
-				themes: {
-					dark: "github-dark",
-					light: "github-light",
-				},
-				transformers: [
-					{
-						pre: (el) => {
-							el.properties.style = "";
+		if (!hl) {
+			const cls = hideLines ? "shiki" : "shiki line-numbers";
+			return `<pre class="${cls}"><code>${escapeHtml(code)}</code></pre>`;
+		}
 
-							if (!hideLines) {
-								el.properties.class += " line-numbers";
-							}
+		const html = hl.codeToHtml(code, {
+			lang: lang,
+			themes: {
+				dark: "github-dark",
+				light: "github-light",
+			},
+			transformers: [
+				{
+					pre: (el) => {
+						el.properties.style = "";
 
-							return el;
-						},
-						line: (node, line) => {
-							if (within(line, highlight)) {
-								node.properties.class =
-									node.properties.class + " line--highlighted";
-							}
+						if (!hideLines) {
+							el.properties.class += " line-numbers";
+						}
 
-							return node;
-						},
+						return el;
 					},
-				],
-			}) ?? code;
+					line: (node, line) => {
+						if (within(line, highlight)) {
+							node.properties.class =
+								node.properties.class + " line--highlighted";
+						}
+
+						return node;
+					},
+				},
+			],
+		});
 
 		// Only sanitize in browser - DOMPurify requires DOM APIs
 		return browser ? DOMPurify.sanitize(html) : html;

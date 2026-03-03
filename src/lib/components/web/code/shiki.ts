@@ -4,9 +4,12 @@ import { createHighlighterCore } from "shiki/core";
 
 const bundledLanguages = {
 	bash: () => import("@shikijs/langs/bash"),
+	css: () => import("@shikijs/langs/css"),
 	diff: () => import("@shikijs/langs/diff"),
+	html: () => import("@shikijs/langs/html"),
 	javascript: () => import("@shikijs/langs/javascript"),
 	json: () => import("@shikijs/langs/json"),
+	markdown: () => import("@shikijs/langs/markdown"),
 	svelte: () => import("@shikijs/langs/svelte"),
 	typescript: () => import("@shikijs/langs/typescript"),
 };
@@ -24,3 +27,4 @@ export const highlighter = createHighlighterCore({
 	langs: Object.entries(bundledLanguages).map(([_, lang]) => lang),
 	engine: createJavaScriptRegexEngine(),
 });
+

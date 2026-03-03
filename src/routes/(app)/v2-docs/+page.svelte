@@ -87,7 +87,7 @@
 		</Paragraph>
 	</section>
 
-	<section class="space-y-4">
+	<!-- <section class="space-y-4">
 		<H2 id="documentation-map">Documentation Map</H2>
 		<H3 id="guide">Guide</H3>
 		<Paragraph>Introduction and installation paths for first-time setup.</Paragraph>
@@ -95,5 +95,5 @@
 		<Paragraph>Dedicated setup pages for Mist and Veil themes.</Paragraph>
 		<H3 id="resources">Resources</H3>
 		<Paragraph>Reference pages like MCP integration and sponsor/community links.</Paragraph>
-	</section>
+	</section> -->
 </DocsPageShell>

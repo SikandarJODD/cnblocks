@@ -77,23 +77,32 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		group: "theme",
 		toc: true,
 		seo: {
-			title: "Mist Theme Setup",
+			title: "Shadcn Blocks for Wiki-Style Websites",
 			description:
-				"Set up and use the Mist theme for clean, documentation-focused Svelte pages.",
+				"Craft sleek, Notion-inspired marketing pages. Built on top of Shadcn Svelte UI.",
 			keywords: [...docsKeywords, "mist", "theme setup"],
 		},
 	},
 	veilTheme: {
 		key: "veilTheme",
 		path: "/v2-docs/veil-theme",
-		navTitle: "Veil Theme Setup",
+		navTitle: "Veil Theme Guide",
 		group: "theme",
 		toc: true,
 		seo: {
-			title: "Veil Theme Setup",
+			title: "Veil Theme Setup and Component Overrides",
 			description:
-				"Set up and use the Veil theme for modern marketing pages with Svelte Shadcn Blocks.",
-			keywords: [...docsKeywords, "veil", "theme setup"],
+				"Apply Veil theme tokens and update button, card, input, and textarea primitives for consistent UI styling.",
+			keywords: [
+				...docsKeywords,
+				"veil",
+				"theme setup",
+				"button",
+				"card",
+				"input",
+				"textarea",
+				"theme variables",
+			],
 		},
 	},
 	mcp: {
@@ -148,16 +157,16 @@ export const docsV2ResourceItems: DocsV2NavItem[] = [
 			url: item.path,
 			badge: item.key === "mcp" ? "New" : undefined,
 		})),
-	{
-		title: "Static Docs (Normal)",
-		url: "/static/docs/normal/hero-one.txt",
-		badge: "TXT",
-	},
-	{
-		title: "Static Docs (Mist)",
-		url: "/static/docs/mist/hero-one.txt",
-		badge: "TXT",
-	},
+	// {
+	// 	title: "Static Docs (Normal)",
+	// 	url: "/static/docs/normal/hero-one.txt",
+	// 	badge: "TXT",
+	// },
+	// {
+	// 	title: "Static Docs (Mist)",
+	// 	url: "/static/docs/mist/hero-one.txt",
+	// 	badge: "TXT",
+	// },
 ];
 
 export const docsV2TemplateItems: DocsV2NavItem[] = [

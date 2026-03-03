@@ -20,6 +20,11 @@
 			avatar: "https://avatars.githubusercontent.com/u/89068816?v=4",
 			href: "https://github.com/yashash-pugalia",
 		},
+		{
+			name: "Ever",
+			avatar: "https://avatars.githubusercontent.com/u/29817086?v=4",
+			href: "https://github.com/ruizdiazever",
+		},
 	];
 </script>
 

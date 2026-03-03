@@ -9,10 +9,18 @@
 	type CodeBlockProps = {
 		code: string;
 		fileName?: string;
-		lang?: SupportedLanguage;
+		lang?: SupportedLanguage | "ts" | "js" | "md";
 		class?: string;
 	};
 	let { code = "", fileName = "", lang = "bash", class: _class = "" }: CodeBlockProps = $props();
+	const normalizedLang: SupportedLanguage =
+		lang === "ts"
+			? "typescript"
+			: lang === "js"
+				? "javascript"
+				: lang === "md"
+					? "markdown"
+					: lang;
 	let copyCode = new UseClipboard({ delay: 1000 });
 	let handleCopy = async () => {
 		await copyCode.copy(code);
@@ -80,6 +88,6 @@
     {@html htmlCode}
   </div> -->
 	<div>
-		<Code class="border-none" {code} {lang} hideLines={true} />
+		<Code class="border-none" {code} lang={normalizedLang} hideLines={true} />
 	</div>
 </div>
