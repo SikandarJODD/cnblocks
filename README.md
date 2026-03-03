@@ -1,99 +1,90 @@
 # Svelte Shadcn Blocks
 
 [![jsrepo](https://jsrepo.com/badges/@sv/cnblocks)](https://jsrepo.com/@sv/cnblocks)
-[![jsrepo](https://jsrepo.com/badges/@sv/cnblocks/dm)](https://jsrepo.com/@sv/cnblocks)
+[![jsrepo downloads](https://jsrepo.com/badges/@sv/cnblocks/dm)](https://jsrepo.com/@sv/cnblocks)
 
-A collection of beautifully designed, ready-to-use UI blocks for Svelte 5, built with Tailwind CSS v4 and shadcn-svelte.
+Production-ready UI and marketing blocks for **Svelte 5**, built with **shadcn-svelte** and **Tailwind CSS v4**.
 
-![image](https://sv-blocks.vercel.app/og.png)
+![Svelte Shadcn Blocks](https://sv-blocks.vercel.app/og.png)
 
-## Overview
+## What's New
 
-Visit to Preview the blocks: [Svelte Shadcn Blocks](https://sv-blocks.vercel.app/)
-Svelte Shadcn Blocks consists of 2 main variants:
+### 60 New Blocks - Veil Variant
 
-1. **Normal** - A vibrant, bold design with a focus on marketing and UI components.
-2. **Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
+The new **Veil** collection is now live with **60 production-ready blocks** for modern SaaS and product websites.
 
-Each variant include **50+ blocks** that can be used in your projects.
-These blocks are designed to be easily customizable and integrate seamlessly with your Svelte applications.
 
-You can use these blocks to build landing pages, marketing sites, dashboards, and more.
+Explore Veil: [https://sv-blocks.vercel.app/veil](https://sv-blocks.vercel.app/veil)
+
+## Variants
+
+Svelte Shadcn Blocks now includes 3 variants:
+
+| Variant | Style | Block Count |
+| --- | --- | --- |
+| Normal | Bold marketing visuals | 50+ |
+| Mist | Minimal, documentation-friendly style | 50+ |
+| Veil | Polished modern SaaS style | 60 new |
+
+That is **160+ blocks** across the library.
 
 ## Features
 
-- **100+ Ready-to-use UI & Marketing Blocks**
-- **Free & Open Source** - Licensed under MIT
-- **Fully Responsive** – Works seamlessly across all screen sizes
-- **Light & Dark Mode Support**
-- **Easy to Customize** – Modify styles and components effortlessly
-- **CLI Support** – jsrepo CLI for easy installation and updates
+- 160+ ready-to-use blocks across Normal, Mist, and Veil
+- Svelte 5 + SvelteKit-friendly structure
+- Tailwind CSS v4 and shadcn-svelte based
+- Responsive and theme-aware components
+- CLI install flow via shadcn-svelte and jsrepo
+- MIT licensed and open source
 
-## Documentation
+## Preview and Docs
 
-LLM-friendly documentation is in `/static/docs`, with `normal/` for bold, vibrant blocks and `/static/docs/mist` for clean, Notion-inspired blocks. Each file provides usage examples and Tailwind styles for AI code generation.
+- Website: [https://sv-blocks.vercel.app](https://sv-blocks.vercel.app)
+- Docs v2: [https://sv-blocks.vercel.app/v2-docs](https://sv-blocks.vercel.app/v2-docs)
+- Installation guide: [https://sv-blocks.vercel.app/v2-docs/installation](https://sv-blocks.vercel.app/v2-docs/installation)
+- Mist theme setup: [https://sv-blocks.vercel.app/v2-docs/mist-theme](https://sv-blocks.vercel.app/v2-docs/mist-theme)
+- Veil theme setup: [https://sv-blocks.vercel.app/v2-docs/veil-theme](https://sv-blocks.vercel.app/v2-docs/veil-theme)
+- MCP docs: [https://sv-blocks.vercel.app/v2-docs/mcp](https://sv-blocks.vercel.app/v2-docs/mcp)
 
-Docs for Mist Variant : [Visit](/static/docs/mist)
+## Quick Start
 
-Docs for Normal Variant : [Visit](/static/docs/normal)
+```bash
+npx sv create my-app
+npx sv add tailwindcss
+npx shadcn-svelte@next init
+```
 
-Docs for MCP Server Integration : [Visit](https://sv-blocks.vercel.app/docs/mcp)
+Install a block from any variant:
 
-## Installation & Usage
+```bash
+# Normal
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/r/hero-one.json
 
-Visit the [installation guide](https://sv-blocks.vercel.app/docs/installation) for detailed instructions on how to set up and use Svelte Shadcn Blocks in your project.
+# Mist
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/mist-hero-one.json
+
+# Veil
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.json
+```
+
 
 ## Inspiration
 
-This project is inspired from [Tailark](https://tailark.com/).
-The goal is to provide a similar experience for Svelte developers.
+Inspired by [Tailark](https://tailark.com/), adapted for Svelte developers.
 
 ## Sponsor
 
-If you like this project, please consider supporting me on [GitHub Sponsors](https://github.com/sponsors/SikandarJODD).
+Support the project on GitHub Sponsors: [SikandarJODD](https://github.com/sponsors/SikandarJODD)
 
 ## Contributing
 
-Contributions are welcome! 💛
-If you have ideas for new blocks, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
+Issues and pull requests are welcome.
 
-If you have any feedback, please reach out to me on [Twitter](https://x.com/Sikandar_Bhide) or create an issue on GitHub.
-
-## Project Structure
-
-if you want to add new blocks follow the structure below:
-
-```mermaid
----
-config:
-  layout: dagre
----
-flowchart TD
-    A["cnblocks repository"] --> B["lib"]
-    B --> C["components"]
-    C --> Z["ui"] & X["50+ Blocks"] & Y["50+ Mist Blocks"]
-    Z --> ZA["Shadcn Svelte"]
-    X --> D["UI & Marketing Blocks"]
-    Y --> E["Notion Style, Clean Minimal Blocks"]
-    A@{ shape: rounded}
-    B@{ shape: rounded}
-    C@{ shape: rounded}
-    Z@{ shape: rounded}
-    X@{ shape: rounded}
-    Y@{ shape: rounded}
-    ZA@{ shape: rounded}
-    D@{ shape: rounded}
-    E@{ shape: rounded}
-    linkStyle 3 stroke:#424242,fill:none
-    linkStyle 4 stroke:#424242,fill:none
-    linkStyle 7 stroke:#424242,fill:none
-```
+- Report bugs or request features: [https://github.com/SikandarJODD/cnblocks/issues](https://github.com/SikandarJODD/cnblocks/issues)
+- Discuss updates: [https://x.com/Sikandar_Bhide](https://x.com/Sikandar_Bhide)
 
 ## License
 
-Published under the [MIT](https://github.com/SikandarJODD/cnblocks/blob/master/LICENSE) license.
-Built by [@Sikandar Bhide](https://github.com/SikandarJODD), [@Aidan Bleser](https://github.com/ieedan) 💛
-<br><br>
-<a href="https://github.com/SikandarJODD/cnblocks/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=SikandarJODD/cnblocks" />
-</a>
+Published under the [MIT License](LICENSE).
+
+Built by [@Sikandar Bhide](https://github.com/SikandarJODD) and [@Aidan Bleser](https://github.com/ieedan).
