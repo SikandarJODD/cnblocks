@@ -53,7 +53,7 @@
 	};
 </script>
 
-<Sidebar.Root bind:ref variant="inset" class="pt-20" {...restProps}>
+<Sidebar.Root bind:ref variant="inset" class="pt-16" {...restProps}>
 	<Sidebar.Content class="overflow-hidden">
 		<ScrollArea class="h-full pr-1" orientation="vertical" scrollbarYClasses="hidden">
 			<div class="space-y-2 pb-3">

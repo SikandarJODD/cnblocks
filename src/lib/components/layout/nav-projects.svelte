@@ -71,7 +71,7 @@
 			<Sidebar.MenuItem>
 				<Sidebar.MenuButton
 					class={cn({
-						"bg-sidebar-accent text-sidebar-accent-foreground": isActive(
+						"bg-sidebar-accent text-xs text-sidebar-accent-foreground": isActive(
 							item.url,
 							item.external
 						),
@@ -82,11 +82,12 @@
 							href={item.url}
 							target={item.external ? "_blank" : undefined}
 							rel={item.external ? "noopener noreferrer" : undefined}
+							class='text-xs'
 							{...props}
 						>
 							<!-- <item.icon /> -->
 							<span>{item.name}</span>
-							{#if item.badge}
+							<!-- {#if item.badge}
 								<Badge
 									variant="outline"
 									class={cn(
@@ -96,7 +97,7 @@
 								>
 									{item.badge}
 								</Badge>
-							{/if}
+							{/if} -->
 						</a>
 					{/snippet}
 				</Sidebar.MenuButton>
