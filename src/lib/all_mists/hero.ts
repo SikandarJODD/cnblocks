@@ -20,102 +20,114 @@ import type { MistBlock } from "$lib/types/mists";
 import Header from "$lib/components/mist/mhero/one/header.svelte?raw";
 
 export const all_mists_heros: MistBlock[] = [
-  {
-    slug: "one",
-    title: "one",
-    category: "hero",
-    preview: "/preview/mist/hero/one",
-    component: HeroOne,
-    code: [
-      {
-        code: HeroOneCode,
-        lang: "svelte",
-        name: "hero.svelte",
-      },
-      {
-        code: Header,
-        lang: "svelte",
-        name: "header.svelte",
-      },
-    ],
-  },
-  {
-    slug: "two",
-    title: "Hero Two",
-    category: "hero",
-    preview: "/preview/mist/hero/two",
-    component: HeroTwo,
-    code: [
-      {
-        code: HeroTwoCode,
-        lang: "svelte",
-        name: "hero.svelte",
-      },
-      {
-        code: Header,
-        lang: "svelte",
-        name: "header.svelte",
-      },
-    ],
-  },
-  {
-    slug: "three",
-    title: "Hero Three",
-    category: "hero",
-    preview: "/preview/mist/hero/three",
-    component: HeroThree,
-    code: [
-      {
-        code: HeroThreeCode,
-        lang: "svelte",
-        name: "hero.svelte",
-      },
-      {
-        code: Header,
-        lang: "svelte",
-        name: "header.svelte",
-      },
-    ],
-  },
-  {
-    slug: "four",
-    title: "Hero Four",
-    category: "hero",
-    preview: "/preview/mist/hero/four",
-    component: HeroFour,
-    code: [
-      {
-        code: HeroFourCode,
-        lang: "svelte",
-        name: "hero.svelte",
-      },
-      {
-        code: Header,
-        lang: "svelte",
-        name: "header.svelte",
-      },
-    ],
-  },
-  {
-    slug: "five",
-    title: "Hero Five",
-    category: "hero",
-    preview: "/preview/mist/hero/five",
-    component: HeroFive,
-    code: {
-      code: HeroFiveCode,
-      lang: "svelte",
-    },
-  },
-  {
-    slug: "six",
-    title: "Hero Six",
-    category: "hero",
-    preview: "/preview/mist/hero/six",
-    component: HeroSix,
-    code: {
-      code: HeroSixCode,
-      lang: "svelte",
-    },
-  },
+	{
+		slug: "one",
+		title: "one",
+		category: "hero",
+		preview: "/preview/mist/hero/one",
+
+		itemId: "mist-hero-one",
+		component: HeroOne,
+		code: [
+			{
+				code: HeroOneCode,
+				lang: "svelte",
+				name: "hero.svelte",
+			},
+			{
+				code: Header,
+				lang: "svelte",
+				name: "header.svelte",
+			},
+		],
+	},
+	{
+		slug: "two",
+		title: "Hero Two",
+		category: "hero",
+		preview: "/preview/mist/hero/two",
+
+		itemId: "mist-hero-two",
+		component: HeroTwo,
+		code: [
+			{
+				code: HeroTwoCode,
+				lang: "svelte",
+				name: "hero.svelte",
+			},
+			{
+				code: Header,
+				lang: "svelte",
+				name: "header.svelte",
+			},
+		],
+	},
+	{
+		slug: "three",
+		title: "Hero Three",
+		category: "hero",
+		preview: "/preview/mist/hero/three",
+
+		itemId: "mist-hero-three",
+		component: HeroThree,
+		code: [
+			{
+				code: HeroThreeCode,
+				lang: "svelte",
+				name: "hero.svelte",
+			},
+			{
+				code: Header,
+				lang: "svelte",
+				name: "header.svelte",
+			},
+		],
+	},
+	{
+		slug: "four",
+		title: "Hero Four",
+		category: "hero",
+		preview: "/preview/mist/hero/four",
+
+		itemId: "mist-hero-four",
+		component: HeroFour,
+		code: [
+			{
+				code: HeroFourCode,
+				lang: "svelte",
+				name: "hero.svelte",
+			},
+			{
+				code: Header,
+				lang: "svelte",
+				name: "header.svelte",
+			},
+		],
+	},
+	{
+		slug: "five",
+		title: "Hero Five",
+		category: "hero",
+		preview: "/preview/mist/hero/five",
+
+		itemId: "mist-hero-five",
+		component: HeroFive,
+		code: {
+			code: HeroFiveCode,
+			lang: "svelte",
+		},
+	},
+	{
+		slug: "six",
+		title: "Hero Six",
+		category: "hero",
+		preview: "/preview/mist/hero/six",
+
+		itemId: "mist-hero-six",
+		component: HeroSix,
+		code: {
+			code: HeroSixCode,
+			lang: "svelte",
+		},
+	},
 ];

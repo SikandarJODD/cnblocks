@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-pricing-one",
+  "type": "vpricing",
+  "description": "Veil Pricing component, variant One.",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "pricing-one.svelte",
+      "type": "vpricing",
+      "target": "pricing-one.svelte",
+      "content": "<script lang=\"ts\">\n  import Check from \"@lucide/svelte/icons/check\";\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { Card } from \"$lib/components/ui/veil/card\";\n  import { cn } from \"$lib/utils\";\n\n  const plans = [\n    {\n      name: \"Starter\",\n      description: \"Perfect for individuals and small projects.\",\n      price: \"$0\",\n      period: \"/month\",\n      features: [\n        \"Up to 3 integrations\",\n        \"1,000 API calls/month\",\n        \"Community support\",\n        \"Basic analytics\",\n      ],\n      cta: \"Get Started\",\n      highlighted: false,\n    },\n    {\n      name: \"Pro\",\n      description: \"For growing teams that need more power.\",\n      price: \"$29\",\n      period: \"/month\",\n      features: [\n        \"Unlimited integrations\",\n        \"100,000 API calls/month\",\n        \"Priority support\",\n        \"Advanced analytics\",\n        \"Custom webhooks\",\n        \"Team collaboration\",\n      ],\n      cta: \"Start Free Trial\",\n      highlighted: true,\n    },\n    {\n      name: \"Enterprise\",\n      description: \"For organizations with advanced needs.\",\n      price: \"Custom\",\n      period: \"\",\n      features: [\n        \"Everything in Pro\",\n        \"Unlimited API calls\",\n        \"Dedicated support\",\n        \"SLA guarantee\",\n        \"Custom contracts\",\n        \"On-premise option\",\n      ],\n      cta: \"Contact Sales\",\n      highlighted: false,\n    },\n  ];\n</script>\n\n<section class=\"bg-background @container py-24\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"text-center\">\n      <h2 class=\"text-balance font-serif text-4xl font-medium\">\n        Simple, Transparent Pricing\n      </h2>\n      <p class=\"text-muted-foreground mx-auto mt-4 max-w-md text-balance\">\n        Choose the plan that fits your needs. All plans include a 14-day free\n        trial.\n      </p>\n    </div>\n    <div class=\"@3xl:grid-cols-2 mt-12 grid gap-3\">\n      {#each plans as plan (plan.name)}\n        <Card\n          variant={plan.highlighted ? \"default\" : \"mixed\"}\n          class={cn(\n            \"relative flex flex-col p-6 last:col-span-full\",\n            plan.highlighted && \"ring-primary\",\n          )}\n        >\n          <div>\n            <h3 class=\"text-foreground font-medium\">{plan.name}</h3>\n            <p class=\"text-muted-foreground mt-1 text-sm\">{plan.description}</p>\n          </div>\n          <div class=\"mt-6\">\n            <span class=\"font-serif text-4xl font-medium\">{plan.price}</span>\n            <span class=\"text-muted-foreground\">{plan.period}</span>\n          </div>\n          <ul class=\"mt-6 flex-1 space-y-3\">\n            {#each plan.features as feature (feature)}\n              <li class=\"text-muted-foreground flex items-start gap-2 text-sm\">\n                <Check class=\"text-primary mt-0.5 size-4 shrink-0\" />\n                {feature}\n              </li>\n            {/each}\n          </ul>\n          <Button\n            href=\"#link\"\n            variant={plan.highlighted ? \"default\" : \"outline\"}\n            class=\"mt-8 w-full\"\n          >\n            {plan.cta}\n          </Button>\n        </Card>\n      {/each}\n    </div>\n  </div>\n</section>\n\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

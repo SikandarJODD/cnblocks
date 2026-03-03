@@ -8,14 +8,11 @@ import { stats } from "./stats";
 import { team } from "./team";
 
 export let all_blocks: Record<string, Block[]> = {
-  content,
-  stats,
-  cta,
-  pricing,
-  team,
-  comparator,
-  logocloud,
+	content,
+	stats,
+	cta,
+	pricing,
+	team,
+	comparator,
+	logocloud,
 };
-
-
-

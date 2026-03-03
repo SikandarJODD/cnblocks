@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-comparator-one",
+  "type": "mcomparator",
+  "description": "Mist-style before/after image comparison",
+  "registryDependencies": [
+    "button"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "one.svelte",
+      "type": "mcomparator",
+      "target": "one.svelte",
+      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import Check from \"@lucide/svelte/icons/check\";\r\n  import Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n  import Star from \"@lucide/svelte/icons/star\";\r\n\r\n  const tableData = [\r\n    {\r\n      feature: \"Feature 1\",\r\n      free: true,\r\n      pro: true,\r\n      startup: true,\r\n    },\r\n    {\r\n      feature: \"Feature 2\",\r\n      free: true,\r\n      pro: true,\r\n      startup: true,\r\n    },\r\n    {\r\n      feature: \"Feature 3\",\r\n      free: false,\r\n      pro: true,\r\n      startup: true,\r\n    },\r\n    {\r\n      feature: \"Tokens\",\r\n      free: \"\",\r\n      pro: \"20 Users\",\r\n      startup: \"Unlimited\",\r\n    },\r\n    {\r\n      feature: \"Video calls\",\r\n      free: \"\",\r\n      pro: \"12 Weeks\",\r\n      startup: \"56\",\r\n    },\r\n    {\r\n      feature: \"Support\",\r\n      free: \"\",\r\n      pro: \"Secondes\",\r\n      startup: \"Unlimited\",\r\n    },\r\n    {\r\n      feature: \"Security\",\r\n      free: \"\",\r\n      pro: \"20 Users\",\r\n      startup: \"Unlimited\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<section class=\"bg-muted dark:bg-muted/20 py-16 md:py-32 [--color-primary:var(--color-indigo-500)]\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"w-full overflow-auto lg:overflow-visible\">\r\n      <table\r\n        class=\"w-[200vw] border-separate border-spacing-x-3 md:w-full \"\r\n      >\r\n        <thead class=\"bg-muted/95 dark:bg-transparent sticky top-0\">\r\n          <tr class=\"*:py-4 *:text-left *:font-medium\">\r\n            <th class=\"lg:w-2/5\"></th>\r\n            <th class=\"space-y-3\">\r\n              <span class=\"block\">Free</span>\r\n\r\n              <Button variant=\"neutral\">Get Started</Button>\r\n            </th>\r\n            <th class=\"space-y-3\">\r\n              <span class=\"block\">Pro</span>\r\n              <Button variant='mdefault'>Get Started</Button>\r\n            </th>\r\n            <th class=\"space-y-3\">\r\n              <span class=\"block\">Startup</span>\r\n              <Button variant=\"neutral\">Get Started</Button>\r\n            </th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr class=\"*:py-4\">\r\n            <td class=\"flex items-center gap-2 font-medium\">\r\n              <Star class=\"size-4\" />\r\n              <span>Features</span>\r\n            </td>\r\n            <td></td>\r\n            <td class=\"border-none px-4\"></td>\r\n            <td></td>\r\n          </tr>\r\n          {#each tableData.slice(-4) as row}\r\n            <tr class=\"*:border-b *:py-4\">\r\n              <td class=\"text-muted-foreground\">{row.feature}</td>\r\n              <td>\r\n                {#if row.free === true}\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                {:else}\r\n                  {row.free}\r\n                {/if}\r\n              </td>\r\n              <td>\r\n                {#if row.pro === true}\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                {:else}\r\n                  {row.pro}\r\n                {/if}\r\n              </td>\r\n              <td>\r\n                {#if row.startup === true}\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                {:else}\r\n                  {row.startup}\r\n                {/if}\r\n              </td>\r\n            </tr>\r\n          {/each}\r\n          <tr class=\"*:pb-4 *:pt-8\">\r\n            <td class=\"flex items-center gap-2 font-medium\">\r\n              <Sparkles class=\"size-4\" />\r\n              <span>AI Models</span>\r\n            </td>\r\n            <td></td>\r\n            <td class=\"bg-muted dark:bg-transparent border-none px-4\"></td>\r\n            <td></td>\r\n          </tr>\r\n          {#each tableData as row}\r\n            <tr class=\"*:border-b *:py-4\">\r\n              <td class=\"text-muted-foreground\">{row.feature}</td>\r\n              <td>\r\n                {#if row.free === true}\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                {/if}\r\n              </td>\r\n              <td>\r\n                {#if row.pro === true}\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                {:else}\r\n                  {row.pro}\r\n                {/if}\r\n              </td>\r\n              <td>\r\n                {#if row.startup === true}\r\n                  <Check class=\"text-primary size-3\" strokeWidth={3.5} />\r\n                {:else}\r\n                  {row.startup}\r\n                {/if}\r\n              </td>\r\n            </tr>\r\n          {/each}\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

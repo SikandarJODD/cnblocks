@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-footer-three",
+  "type": "vfooter",
+  "description": "Veil Footer component, variant Three.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "footer-three.svelte",
+      "type": "vfooter",
+      "target": "footer-three.svelte",
+      "content": "<script lang=\"ts\">\n  import Logo from \"$lib/components/web/Logo.svelte\";\n\n  type LinkItem = { label: string; href: string };\n\n  const links: LinkItem[] = [\n    { label: \"Home\", href: \"#\" },\n    { label: \"Features\", href: \"#\" },\n    { label: \"Pricing\", href: \"#\" },\n    { label: \"About\", href: \"#\" },\n    { label: \"Blog\", href: \"#\" },\n    { label: \"Contact\", href: \"#\" },\n  ];\n\n  const year = new Date().getFullYear();\n</script>\n\n<footer class=\"bg-background @container py-12\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"border-y py-8\">\n      <div class=\"@xl:flex-row @xl:items-center flex flex-col gap-6\">\n        <a href=\"/\" aria-label=\"home\">\n          <Logo class=\"h-5 w-fit\" />\n        </a>\n        <nav class=\"@xl:ml-auto flex flex-wrap gap-x-6 gap-y-2\">\n          {#each links as link (link.label)}\n            <a\n              href={link.href}\n              class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n            >\n              {link.label}\n            </a>\n          {/each}\n        </nav>\n      </div>\n    </div>\n    <div class=\"@xl:flex-row @xl:justify-between flex flex-col-reverse gap-4 pt-8\">\n      <p class=\"text-muted-foreground text-sm\">&copy; {year} Veil.</p>\n      <div class=\"flex flex-wrap gap-4\">\n        <a\n          href=\"#\"\n          class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n        >\n          Privacy Policy\n        </a>\n        <a\n          href=\"#\"\n          class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n        >\n          Terms of Service\n        </a>\n        <a\n          href=\"#\"\n          class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n        >\n          Cookies\n        </a>\n      </div>\n    </div>\n  </div>\n</footer>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

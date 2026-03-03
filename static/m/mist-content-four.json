@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-content-four",
+  "type": "mcontent",
+  "description": "Mist-style content with feature grid",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "four.svelte",
+      "type": "mcontent",
+      "target": "four.svelte",
+      "content": "<script lang=\"ts\">\r\n  import ArrowRight from \"@lucide/svelte/icons/arrow-right\";\r\n  let content = [\r\n    { value: \"90+\", label: \"Integrations\" },\r\n    { value: \"56%\", label: \"Productivity Boost\" },\r\n    { value: \"24/7\", label: \"Customer Support\" },\r\n    { value: \"10k+\", label: \"Active Users\" },\r\n  ];\r\n</script>\r\n\r\n<section>\r\n  <div class=\"py-24\">\r\n    <div class=\"mx-auto w-full max-w-5xl px-6\">\r\n      <div class=\"@container mx-auto max-w-2xl\">\r\n        <div>\r\n          <h2 class=\"text-foreground text-4xl font-semibold\">\r\n            Create Content with AI Assistance\r\n          </h2>\r\n          <p class=\"text-muted-foreground mb-12 mt-4 text-xl\">\r\n            Our AI assistant helps you create better content faster. Generate\r\n            ideas, improve your writing, and design layouts with simple prompts.\r\n          </p>\r\n        </div>\r\n\r\n        <div class=\"@sm:grid-cols-2 @2xl:grid-cols-3 my-12 grid gap-6\">\r\n          <div class=\"space-y-2\">\r\n            <span class=\"mb-4 block text-3xl\">💡</span>\r\n            <h3 class=\"text-xl font-medium\">Generate Ideas</h3>\r\n            <p class=\"text-muted-foreground\">\r\n              Spark creativity with AI-powered content suggestions and\r\n              inspiration.\r\n            </p>\r\n          </div>\r\n          <div class=\"space-y-2\">\r\n            <span class=\"mb-4 block text-3xl\">✏️</span>\r\n            <h3 class=\"text-xl font-medium\">Improve Writing</h3>\r\n            <p class=\"text-muted-foreground\">\r\n              Enhance your text with smart editing suggestions and style\r\n              refinements.\r\n            </p>\r\n          </div>\r\n          <div class=\"space-y-2\">\r\n            <span class=\"mb-4 block text-3xl\">🎨</span>\r\n            <h3 class=\"text-xl font-medium\">Design Layouts</h3>\r\n            <p class=\"text-muted-foreground\">\r\n              Create visually appealing layouts that capture your audience's\r\n              attention.\r\n            </p>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"border-t\">\r\n          <ul role=\"list\" class=\"text-muted-foreground mt-8 space-y-2\">\r\n            {#each content as stat, index}\r\n              <li class=\"-ml-0.5 flex items-center gap-1.5\">\r\n                <ArrowRight class=\"size-4 opacity-50\" />\r\n                <span class=\"text-foreground font-medium\">{stat.value}</span>\r\n                {stat.label}\r\n              </li>\r\n            {/each}\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

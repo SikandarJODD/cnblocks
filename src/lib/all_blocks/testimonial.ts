@@ -17,19 +17,7 @@ import TestFourCode from "$lib/components/blocks/testimonial/testimonial-four.sv
 import TestFiveCode from "$lib/components/blocks/testimonial/testimonial-five.svelte?raw";
 import TestSixCode from "$lib/components/blocks/testimonial/testimonial-six.svelte?raw";
 
-let codes = [
-  TestOneCode,
-  TestTwoCode,
-  TestThreeCode,
-  TestFourCode,
-  TestFiveCode,
-  TestSixCode,
-];
+let codes = [TestOneCode, TestTwoCode, TestThreeCode, TestFourCode, TestFiveCode, TestSixCode];
 let components = [TestOne, TestTwo, TestThree, TestFour, TestFive, TestSix];
 
-export let testimonials: Block[] = getBlock(
-  components.length,
-  "testimonial",
-  codes,
-  components
-);
+export let testimonials: Block[] = getBlock(components.length, "testimonial", codes, components);

@@ -15,24 +15,7 @@ import PricingThreeCode from "$lib/components/blocks/pricing/pricing-three.svelt
 import PricingFourCode from "$lib/components/blocks/pricing/pricing-four.svelte?raw";
 import PricingFiveCode from "$lib/components/blocks/pricing/pricing-five.svelte?raw";
 
-let codes = [
-  PricingOneCode,
-  PricingTwoCode,
-  PricingThreeCode,
-  PricingFourCode,
-  PricingFiveCode,
-];
-let components = [
-  PricingOne,
-  PricingTwo,
-  PricingThree,
-  PricingFour,
-  PricingFive,
-];
+let codes = [PricingOneCode, PricingTwoCode, PricingThreeCode, PricingFourCode, PricingFiveCode];
+let components = [PricingOne, PricingTwo, PricingThree, PricingFour, PricingFive];
 
-export let pricing: Block[] = getBlock(
-  components.length,
-  "pricing",
-  codes,
-  components
-);
+export let pricing: Block[] = getBlock(components.length, "pricing", codes, components);

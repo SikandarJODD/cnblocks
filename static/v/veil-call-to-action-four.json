@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-call-to-action-four",
+  "type": "vcta",
+  "description": "Veil Call To Action component, variant Four.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "call-to-action-four.svelte",
+      "type": "vcta",
+      "target": "call-to-action-four.svelte",
+      "content": "<script lang=\"ts\">\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { Card } from \"$lib/components/ui/veil/card\";\n  import { ArrowRight, Check } from \"@lucide/svelte\";\n\n  type Props = {\n    title?: string;\n    description?: string;\n    benefits?: string[];\n    price?: string;\n    priceSuffix?: string;\n    priceNote?: string;\n    ctaLabel?: string;\n    ctaHref?: string;\n  };\n\n  let {\n    title = \"Transform Your Workflow\",\n    description = \"Experience the power of seamless integrations and watch your productivity soar.\",\n    benefits = [\n      \"14-day free trial\",\n      \"No credit card required\",\n      \"Cancel anytime\",\n      \"24/7 support\",\n    ],\n    price = \"$0\",\n    priceSuffix = \"/month\",\n    priceNote = \"Free forever for individuals\",\n    ctaLabel = \"Get Started Free\",\n    ctaHref = \"#link\",\n  }: Props = $props();\n</script>\n\n<section class=\"bg-background @container py-24\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <Card variant=\"outline\" class=\"@xl:grid-cols-2 grid gap-8 p-6 md:p-8\">\n      <div>\n        <h2 class=\"text-balance font-serif text-3xl font-medium\">{title}</h2>\n        <p class=\"text-muted-foreground mt-3 text-balance\">{description}</p>\n        <ul class=\"mt-6 space-y-2\">\n          {#each benefits as benefit, index (`${index}-${benefit}`)}\n            <li class=\"text-muted-foreground flex items-center gap-2 text-sm\">\n              <Check class=\"text-primary size-4\" />\n              {benefit}\n            </li>\n          {/each}\n        </ul>\n      </div>\n      <div class=\"bg-muted/50 flex flex-col justify-center rounded-xl border p-6\">\n        <p class=\"text-muted-foreground text-sm\">Starting at</p>\n        <p class=\"mt-1 font-serif text-4xl font-medium\">\n          {price}<span class=\"text-muted-foreground text-lg font-normal\">{priceSuffix}</span>\n        </p>\n        <p class=\"text-muted-foreground mt-1 text-sm\">{priceNote}</p>\n        <Button href={ctaHref} class=\"mt-6 gap-2\">\n          {ctaLabel}\n          <ArrowRight class=\"size-4\" />\n        </Button>\n      </div>\n    </Card>\n  </div>\n</section>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

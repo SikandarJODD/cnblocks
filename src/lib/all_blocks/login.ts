@@ -14,9 +14,4 @@ import LoginThreeCode from "$lib/components/blocks/login/login-three.svelte?raw"
 let codes = [LoginOneCode, LoginTwoCode, LoginThreeCode];
 let components = [LoginOne, LoginTwo, LoginThree];
 
-export let login: Block[] = getBlock(
-  components.length,
-  "login",
-  codes,
-  components
-);
+export let login: Block[] = getBlock(components.length, "login", codes, components);

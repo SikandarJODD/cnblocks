@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "cta-two",
+  "type": "cta",
+  "description": "Two-column CTA with text and action buttons",
+  "registryDependencies": [
+    "button"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "cta-two.svelte",
+      "type": "cta",
+      "target": "cta-two.svelte",
+      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n</script>\r\n\r\n<section class=\"py-16\">\r\n  <div\r\n    class=\"mx-auto max-w-5xl rounded-3xl border px-6 py-12 md:py-20 lg:py-32\"\r\n  >\r\n    <div class=\"text-center\">\r\n      <h2 class=\"text-balance text-4xl font-semibold lg:text-5xl\">\r\n        Start Building\r\n      </h2>\r\n      <p class=\"mt-4\">Libero sapiente aliquam quibusdam aspernatur.</p>\r\n\r\n      <div class=\"mt-12 flex flex-wrap justify-center gap-4\">\r\n        <Button size=\"lg\">Get Started</Button>\r\n        <Button size=\"lg\" variant=\"outline\">Book Demo</Button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

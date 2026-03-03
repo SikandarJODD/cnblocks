@@ -6,9 +6,4 @@ import Comparator from "$lib/components/blocks/comparator/comparator-one.svelte"
 let code = [ComparatorCode];
 let comps = [Comparator];
 
-export let comparator: Block[] = getBlock(
-  comps.length,
-  "comparator",
-  code,
-  comps
-);
+export let comparator: Block[] = getBlock(comps.length, "comparator", code, comps);

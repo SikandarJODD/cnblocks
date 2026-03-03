@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "testimonial-four",
+  "type": "testimonial",
+  "description": "Four-column testimonial grid",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "testimonial-four.svelte",
+      "type": "testimonial",
+      "target": "testimonial-four.svelte",
+      "content": "<script>\r\n  import {\r\n    Avatar,\r\n    AvatarImage,\r\n    AvatarFallback,\r\n  } from \"$lib/components/ui/avatar\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"mx-auto max-w-2xl text-center\">\r\n      <blockquote>\r\n        <p class=\"text-lg font-medium sm:text-xl md:text-3xl\">\r\n          Using TailsUI has been like unlocking a secret design superpower. It's\r\n          the perfect fusion of simplicity and versatility, enabling us to\r\n          create UIs that are as stunning as they are user-friendly.\r\n        </p>\r\n\r\n        <div class=\"mt-12 flex items-center justify-center gap-6\">\r\n          <Avatar class=\"size-12\">\r\n            <AvatarImage\r\n              src=\"https://tailus.io/images/reviews/shekinah.webp\"\r\n              alt=\"Shekinah Tshiokufila\"\r\n              height=\"400\"\r\n              width=\"400\"\r\n              loading=\"lazy\"\r\n            />\r\n            <AvatarFallback>ST</AvatarFallback>\r\n          </Avatar>\r\n\r\n          <div class=\"space-y-1 border-l pl-6\">\r\n            <cite class=\"font-medium\">John Doe</cite>\r\n            <span class=\"text-muted-foreground block text-sm\"\r\n              >CEO, Nvidia</span\r\n            >\r\n          </div>\r\n        </div>\r\n      </blockquote>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -14,13 +14,7 @@ import FooterThreeCode from "$lib/components/blocks/footer/footer-three.svelte?r
 import FooterFourCode from "$lib/components/blocks/footer/footer-four.svelte?raw";
 import FooterFiveCode from "$lib/components/blocks/footer/footer-five.svelte?raw";
 
-let codes = [
-  FooterOneCode,
-  FooterTwoCode,
-  FooterThreeCode,
-  FooterFourCode,
-  FooterFiveCode,
-];
+let codes = [FooterOneCode, FooterTwoCode, FooterThreeCode, FooterFourCode, FooterFiveCode];
 let comps = [FooterOne, FooterTwo, FooterThree, FooterFour, FooterFive];
 
 export let footer: Block[] = getBlock(comps.length, "footer", codes, comps);

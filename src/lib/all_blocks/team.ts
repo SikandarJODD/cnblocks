@@ -12,9 +12,4 @@ import TeamTwoCode from "$lib/components/blocks/team/team-two.svelte?raw";
 let codes = [TeamOneCode, TeamTwoCode];
 let components = [TeamOne, TeamTwo];
 
-export let team: Block[] = getBlock(
-  components.length,
-  "team",
-  codes,
-  components
-);
+export let team: Block[] = getBlock(components.length, "team", codes, components);

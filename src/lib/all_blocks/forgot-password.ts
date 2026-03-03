@@ -10,9 +10,4 @@ import ForgotPasswordTwoCode from "$lib/components/blocks/forgot-password/forgot
 let comps = [ForgotPasswordOne, ForgotPasswordTwo];
 let code = [ForgotPasswordOneCode, ForgotPasswordTwoCode];
 
-export let forgot_password: Block[] = getBlock(
-  comps.length,
-  "forgot-password",
-  code,
-  comps
-);
+export let forgot_password: Block[] = getBlock(comps.length, "forgot-password", code, comps);

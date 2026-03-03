@@ -20,27 +20,22 @@ import ContentSixCode from "$lib/components/blocks/content/content-six.svelte?ra
 import ContentSevenCode from "$lib/components/blocks/content/content-seven.svelte?raw";
 
 let codes = [
-  ContentOneCode,
-  ContentTwoCode,
-  ContentThreeCode,
-  ContentFourCode,
-  ContentFiveCode,
-  ContentSixCode,
-  ContentSevenCode,
+	ContentOneCode,
+	ContentTwoCode,
+	ContentThreeCode,
+	ContentFourCode,
+	ContentFiveCode,
+	ContentSixCode,
+	ContentSevenCode,
 ];
 let components = [
-  ContentOne,
-  ContentTwo,
-  ContentThree,
-  ContentFour,
-  ContentFive,
-  ContentSix,
-  ContentSeven,
+	ContentOne,
+	ContentTwo,
+	ContentThree,
+	ContentFour,
+	ContentFive,
+	ContentSix,
+	ContentSeven,
 ];
 
-export let content: Block[] = getBlock(
-  components.length,
-  "content",
-  codes,
-  components
-);
+export let content: Block[] = getBlock(components.length, "content", codes, components);

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "input",
+  "type": "ui",
+  "description": "Text input field component",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    },
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    }
+  ],
+  "files": [
+    {
+      "path": "input/index.ts",
+      "type": "ui",
+      "target": "input/index.ts",
+      "content": "import Root from \"./input.svelte\";\r\n\r\nexport {\r\n\tRoot,\r\n\t//\r\n\tRoot as Input,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "input/input.svelte",
+      "type": "ui",
+      "target": "input/input.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport type { HTMLInputAttributes, HTMLInputTypeAttribute } from \"svelte/elements\";\r\n\timport type { WithElementRef } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\ttype InputType = Exclude<HTMLInputTypeAttribute, \"file\">;\r\n\r\n\ttype Props = WithElementRef<\r\n\t\tOmit<HTMLInputAttributes, \"type\"> &\r\n\t\t\t({ type: \"file\"; files?: FileList } | { type?: InputType; files?: undefined })\r\n\t>;\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tvalue = $bindable(),\r\n\t\ttype,\r\n\t\tfiles = $bindable(),\r\n\t\tclass: className,\r\n\t\t...restProps\r\n\t}: Props = $props();\r\n</script>\r\n\r\n{#if type === \"file\"}\r\n\t<input\r\n\t\tbind:this={ref}\r\n\t\tclass={cn(\r\n\t\t\t\"border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\r\n\t\t\tclassName\r\n\t\t)}\r\n\t\ttype=\"file\"\r\n\t\tbind:files\r\n\t\tbind:value\r\n\t\t{...restProps}\r\n\t/>\r\n{:else}\r\n\t<input\r\n\t\tbind:this={ref}\r\n\t\tclass={cn(\r\n\t\t\t\"border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\r\n\t\t\tclassName\r\n\t\t)}\r\n\t\t{type}\r\n\t\tbind:value\r\n\t\t{...restProps}\r\n\t/>\r\n{/if}\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

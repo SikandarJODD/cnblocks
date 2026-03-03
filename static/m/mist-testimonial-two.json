@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-testimonial-two",
+  "type": "mtestimonial",
+  "description": "Mist-style two-column testimonials",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "two.svelte",
+      "type": "mtestimonial",
+      "target": "two.svelte",
+      "content": "<script lang=\"ts\">\r\n  import {\r\n    Avatar,\r\n    AvatarFallback,\r\n    AvatarImage,\r\n  } from \"$lib/components/ui/avatar\";\r\n\r\n  const testimonials = [\r\n    {\r\n      name: \"Méschac Irung\",\r\n      role: \"Creator\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\r\n      content:\r\n        \"Using Tailark has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility.\",\r\n    },\r\n    {\r\n      name: \"Théo Balick\",\r\n      role: \"Frontend Dev\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/68236786?v=4\",\r\n      content:\r\n        \"Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.\",\r\n    },\r\n    {\r\n      name: \"Glodie Lukose\",\r\n      role: \"Frontend Dev\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/99137927?v=4\",\r\n      content:\r\n        \"The extensive collection of UI components has significantly accelerated my workflow. Tailark is a game-changer.\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<section >\r\n  <div class=\"bg-muted py-24\">\r\n    <div class=\"@container mx-auto w-full max-w-5xl px-6\">\r\n      <div class=\"mb-12\">\r\n        <h2 class=\"text-foreground text-4xl font-semibold\">\r\n          What Our Clients Say\r\n        </h2>\r\n        <p class=\"text-muted-foreground my-4 text-balance text-lg\">\r\n          Discover why our clients love working with us. Read their testimonials\r\n          about our dedication to excellence, innovative solutions, and\r\n          exceptional customer service.\r\n        </p>\r\n      </div>\r\n      <div class=\"@lg:grid-cols-2 @3xl:grid-cols-3 grid gap-6\">\r\n        {#each testimonials as testimonial}\r\n          <div>\r\n            <div\r\n              class=\"bg-background rounded-2xl rounded-bl border border-transparent px-4 py-3 ring-1\"\r\n            >\r\n              <p class=\"text-foreground\">{testimonial.content}</p>\r\n            </div>\r\n            <div class=\"mt-4 flex items-center gap-2\">\r\n              <Avatar class=\" size-6 border border-transparent shadow ring-1\">\r\n                <AvatarImage src={testimonial.avatar} alt={testimonial.name} />\r\n                <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>\r\n              </Avatar>\r\n              <div class=\"text-foreground text-sm font-medium\">\r\n                {testimonial.name}\r\n              </div>\r\n              <span\r\n                aria-hidden=\"true\"\r\n                class=\"bg-foreground/25 size-1 rounded-full\"\r\n              ></span>\r\n              <span class=\"text-muted-foreground text-sm\"\r\n                >{testimonial.role}</span\r\n              >\r\n            </div>\r\n          </div>\r\n        {/each}\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "feature-six",
+  "type": "feature",
+  "description": "Six-column feature grid with hover effects",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "feature-six.svelte",
+      "type": "feature",
+      "target": "feature-six.svelte",
+      "content": "<script>\r\n  import Cpu from \"@lucide/svelte/icons/cpu\";\r\n  import Lock from \"@lucide/svelte/icons/lock\";\r\n  import Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n  import Zap from \"@lucide/svelte/icons/zap\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl space-y-12 px-6\">\r\n    <div\r\n      class=\"relative z-10 grid items-center gap-4 md:grid-cols-2 md:gap-12\"\r\n    >\r\n      <h2 class=\"text-4xl font-semibold\">\r\n        The Lyra ecosystem brings together our models\r\n      </h2>\r\n      <p class=\"max-w-sm sm:ml-auto\">\r\n        Empower your team with workflows that adapt to your needs, whether you\r\n        prefer git synchronization or a AI Agents interface.\r\n      </p>\r\n    </div>\r\n    <div class=\"relative rounded-3xl p-3 md:-mx-8 lg:col-span-3\">\r\n      <div class=\"aspect-88/36 relative\">\r\n        <div\r\n          class=\"bg-linear-to-t z-1 from-background absolute inset-0 to-transparent\"\r\n        ></div>\r\n        <img\r\n          src=\"/mail-upper.png\"\r\n          class=\"absolute inset-0 z-10\"\r\n          alt=\"payments illustration dark\"\r\n          width={2797}\r\n          height={1137}\r\n        />\r\n        <img\r\n          src=\"/mail-back.png\"\r\n          class=\"hidden dark:block\"\r\n          alt=\"payments illustration dark\"\r\n          width={2797}\r\n          height={1137}\r\n        />\r\n        <img\r\n          src=\"/mail-back-light.png\"\r\n          class=\"dark:hidden\"\r\n          alt=\"payments illustration light\"\r\n          width={2797}\r\n          height={1137}\r\n        />\r\n      </div>\r\n    </div>\r\n    <div\r\n      class=\"relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4\"\r\n    >\r\n      <div class=\"space-y-3\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Zap class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Faaast</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an entire helping developers and innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Cpu class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Powerful</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an entire helping developers and businesses.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Lock class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Security</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an helping developers businesses innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Sparkles class=\"size-4\" />\r\n\r\n          <h3 class=\"text-sm font-medium\">AI Powered</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an helping developers businesses innovate.\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+[data-theme="mist"] .theme-container {
+	--radius: 0.625rem;
+	--background: var(--color-white);
+	--foreground: var(--color-zinc-950);
+	--card: var(--color-white);
+	--card-foreground: var(--color-zinc-950);
+	--popover: var(--color-white);
+	--popover-foreground: var(--color-zinc-950);
+	--primary: var(--color-indigo-500);
+	--primary-foreground: var(--color-white);
+	--secondary: var(--color-indigo-100);
+	--secondary-foreground: var(--color-indigo-600);
+	--muted: var(--color-zinc-100);
+	--muted-foreground: var(--color-zinc-600);
+	--accent: var(--color-zinc-700);
+	--accent-foreground: var(--color-white);
+	--destructive: var(--color-red-600);
+	--border: var(--color-zinc-200);
+	--input: var(--color-zinc-200);
+	--ring: var(--color-indigo-500);
+
+	@variant dark {
+		--radius: 0.625rem;
+		--background: var(--color-white);
+		--foreground: var(--color-zinc-950);
+		--card: var(--color-white);
+		--card-foreground: black;
+		--popover: var(--color-white);
+		--popover-foreground: var(--color-zinc-950);
+		--primary: var(--color-indigo-500);
+		--primary-foreground: var(--color-white);
+		--secondary: var(--color-indigo-100);
+		--secondary-foreground: var(--color-indigo-600);
+		--muted: var(--color-zinc-100);
+		--muted-foreground: var(--color-zinc-600);
+		--accent: var(--color-zinc-700);
+		--accent-foreground: var(--color-white);
+		--destructive: var(--color-red-600);
+		--border: var(--color-zinc-200);
+		--input: var(--color-zinc-200);
+		--ring: var(--color-indigo-500);
+	}
+
+	@apply *:text-foreground;
+}
+
+[data-theme="veil"] .theme-container {
+	--radius: 0.625rem;
+
+	--background: oklch(0.9779 0.0042 56.38);
+	--foreground: oklch(0.3421 0.0379 61.15);
+
+	--card: var(--color-white);
+	--card-foreground: oklch(0.3421 0.0379 61.15);
+
+	--popover: var(--color-white);
+	--popover-foreground: oklch(0.3421 0.0379 61.15);
+
+	--primary: oklch(0.5967 0.0558 61.59);
+	--primary-foreground: oklch(0.1448 0 0);
+
+	--secondary: --alpha(var(--primary)/15%);
+	--secondary-foreground: oklch(0.3421 0.0379 61.15);
+
+	--muted: --alpha(var(--foreground)/5%);
+	--muted-foreground: oklch(0.4563 0.0061 48.59);
+
+	--accent: oklch(0.9068 0.0112 89.73);
+	--accent-foreground: oklch(0.3467 0.0231 86.12);
+
+	--destructive: var(--color-red-600);
+	--destructive-foreground: var(--color-white);
+
+	--border: --alpha(var(--foreground)/7.5%);
+	--input: --alpha(var(--foreground)/20%);
+	--ring: var(--primary);
+
+	--font-family: "Geist", sans-serif;
+
+	@variant dark {
+		--font-family: "Geist", sans-serif;
+		--background: oklch(0.1448 0 0);
+		--foreground: oklch(0.9027 0.0137 60.56);
+
+		--card: oklch(0.1924 0.0016 17.3);
+		--card-foreground: oklch(0.9027 0.0137 60.56);
+
+		--popover: var(--color-white);
+		--popover-foreground: oklch(0.9027 0.0137 60.56);
+
+		--primary-foreground: var(--color-white);
+		--secondary: --alpha(var(--primary)/10%);
+		--secondary-foreground: oklch(0.9027 0.0137 60.56);
+
+		--muted: var(--background);
+		--muted-foreground: oklch(0.7262 0.0037 67.77);
+
+		--accent: var(--color-zinc-700);
+		--accent-foreground: var(--color-white);
+
+		--input: --alpha(var(--foreground)/15%);
+	}
+
+	@apply *:text-foreground selection:bg-muted selection:text-primary;
+}
+
+[data-theme="default"],
+[data-theme="dark"] {
+	@apply *:text-foreground;
+}

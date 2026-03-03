@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-pricing-three",
+  "type": "vpricing",
+  "description": "Veil Pricing component, variant Three.",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "pricing-three.svelte",
+      "type": "vpricing",
+      "target": "pricing-three.svelte",
+      "content": "<script lang=\"ts\">\n  import ArrowRight from \"@lucide/svelte/icons/arrow-right\";\n  import Check from \"@lucide/svelte/icons/check\";\n  import { Button } from \"$lib/components/ui/veil/button\";\n  import { Card } from \"$lib/components/ui/veil/card\";\n  import { cn } from \"$lib/utils\";\n\n  const plans = [\n    {\n      name: \"Monthly\",\n      price: \"$29\",\n      period: \"/month\",\n      description: \"Flexible month-to-month billing\",\n      features: [\n        \"All features included\",\n        \"Cancel anytime\",\n        \"No long-term commitment\",\n      ],\n    },\n    {\n      name: \"Annual\",\n      price: \"$19\",\n      period: \"/month\",\n      description: \"Save 35% with annual billing\",\n      features: [\"All features included\", \"2 months free\", \"Priority onboarding\"],\n      highlighted: true,\n      badge: \"Best Value\",\n    },\n  ];\n</script>\n\n<section class=\"bg-background @container py-24\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"text-center\">\n      <h2 class=\"text-balance font-serif text-4xl font-medium\">\n        One Plan, Simple Pricing\n      </h2>\n      <p class=\"text-muted-foreground mx-auto mt-4 max-w-md text-balance\">\n        Everything you need to build powerful integrations. Choose your billing\n        cycle.\n      </p>\n    </div>\n    <div class=\"@xl:grid-cols-2 @xl:gap-3 mt-12 grid gap-6\">\n      {#each plans as plan (plan.name)}\n        <Card\n          variant={plan.highlighted ? \"default\" : \"mixed\"}\n          class={cn(\"relative p-6\", plan.highlighted && \"ring-primary\")}\n        >\n          <div class=\"mb-6\">\n            <h3 class=\"text-foreground font-medium\">{plan.name}</h3>\n            <p class=\"text-muted-foreground mt-1 text-sm\">{plan.description}</p>\n          </div>\n          <div>\n            <span class=\"font-serif text-5xl font-medium\">{plan.price}</span>\n            <span class=\"text-muted-foreground\">{plan.period}</span>\n          </div>\n          <ul class=\"mt-6 space-y-3\">\n            {#each plan.features as feature (feature)}\n              <li class=\"text-muted-foreground flex items-center gap-2 text-sm\">\n                <Check class=\"text-primary size-4\" />\n                {feature}\n              </li>\n            {/each}\n          </ul>\n          <Button\n            href=\"#link\"\n            variant={plan.highlighted ? \"default\" : \"outline\"}\n            class=\"mt-8 w-full gap-2\"\n          >\n            Get Started\n            <ArrowRight class=\"size-4\" />\n          </Button>\n        </Card>\n      {/each}\n    </div>\n    <p class=\"text-muted-foreground mt-8 text-center text-sm\">\n      All plans include a 14-day free trial. No credit card required.\n    </p>\n  </div>\n</section>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

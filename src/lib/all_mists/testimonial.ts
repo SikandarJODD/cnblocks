@@ -10,59 +10,69 @@ import TestimonialThreeCode from "$lib/components/mist/mtestimonial/three.svelte
 import TestimonialFourCode from "$lib/components/mist/mtestimonial/four.svelte?raw";
 import TestimonialFiveCode from "$lib/components/mist/mtestimonial/five.svelte?raw";
 export const all_mists_testimonial: MistBlock[] = [
-  {
-    slug: "one",
-    title: "Simple Testimonial",
-    category: "testimonial",
-    preview: "/preview/mist/testimonial/one",
-    code: {
-      code: TestimonialOneCode,
-      lang: "svelte",
-    },
-    component: TestimonialOne,
-  },
-  {
-    slug: "two",
-    title: "Grid Testimonials",
-    category: "testimonial",
-    preview: "/preview/mist/testimonial/two",
-    code: {
-      code: TestimonialTwoCode,
-      lang: "svelte",
-    },
-    component: TestimonialTwo,
-  },
-  {
-    slug: "three",
-    title: "Star Rating Testimonials",
-    category: "testimonial",
-    preview: "/preview/mist/testimonial/three",
-    code: {
-      code: TestimonialThreeCode,
-      lang: "svelte",
-    },
-    component: TestimonialThree,
-  },
-  {
-    slug: "four",
-    title: "Avatar Testimonial",
-    category: "testimonial",
-    preview: "/preview/mist/testimonial/four",
-    code: {
-      code: TestimonialFourCode,
-      lang: "svelte",
-    },
-    component: TestimonialFour,
-  },
-  {
-    slug: "five",
-    title: "Centered Quote Testimonial",
-    category: "testimonial",
-    preview: "/preview/mist/testimonial/five",
-    code: {
-      code: TestimonialFiveCode,
-      lang: "svelte",
-    },
-    component: TestimonialFive,
-  },
+	{
+		slug: "one",
+		title: "Simple Testimonial",
+		category: "testimonial",
+		preview: "/preview/mist/testimonial/one",
+
+		itemId: "mist-testimonial-one",
+		code: {
+			code: TestimonialOneCode,
+			lang: "svelte",
+		},
+		component: TestimonialOne,
+	},
+	{
+		slug: "two",
+		title: "Grid Testimonials",
+		category: "testimonial",
+		preview: "/preview/mist/testimonial/two",
+
+		itemId: "mist-testimonial-two",
+		code: {
+			code: TestimonialTwoCode,
+			lang: "svelte",
+		},
+		component: TestimonialTwo,
+	},
+	{
+		slug: "three",
+		title: "Star Rating Testimonials",
+		category: "testimonial",
+		preview: "/preview/mist/testimonial/three",
+
+		itemId: "mist-testimonial-three",
+		code: {
+			code: TestimonialThreeCode,
+			lang: "svelte",
+		},
+		component: TestimonialThree,
+	},
+	{
+		slug: "four",
+		title: "Avatar Testimonial",
+		category: "testimonial",
+		preview: "/preview/mist/testimonial/four",
+
+		itemId: "mist-testimonial-four",
+		code: {
+			code: TestimonialFourCode,
+			lang: "svelte",
+		},
+		component: TestimonialFour,
+	},
+	{
+		slug: "five",
+		title: "Centered Quote Testimonial",
+		category: "testimonial",
+		preview: "/preview/mist/testimonial/five",
+
+		itemId: "mist-testimonial-five",
+		code: {
+			code: TestimonialFiveCode,
+			lang: "svelte",
+		},
+		component: TestimonialFive,
+	},
 ];

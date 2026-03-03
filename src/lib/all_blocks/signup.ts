@@ -14,9 +14,4 @@ import SignupThreeCode from "$lib/components/blocks/signup/signup-three.svelte?r
 let codes = [SignupOneCode, SignupTwoCode, SignupThreeCode];
 let components = [SignupOne, SignupTwo, SignupThree];
 
-export let signup: Block[] = getBlock(
-  components.length,
-  "signup",
-  codes,
-  components
-);
+export let signup: Block[] = getBlock(components.length, "signup", codes, components);

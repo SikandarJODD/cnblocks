@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-footer-five",
+  "type": "vfooter",
+  "description": "Veil Footer component, variant Five.",
+  "registryDependencies": [
+    "vhelper-theme-switcher"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "footer-five.svelte",
+      "type": "vfooter",
+      "target": "footer-five.svelte",
+      "content": "<script lang=\"ts\">\n  import Logo from \"$lib/components/web/Logo.svelte\";\n  import ThemeSwitcher from \"./theme-switcher.svelte\";\n\n  type LinkItem = { label: string; href: string };\n\n  const links: LinkItem[] = [\n    { label: \"Features\", href: \"#\" },\n    { label: \"Pricing\", href: \"#\" },\n    { label: \"About\", href: \"#\" },\n    { label: \"Blog\", href: \"#\" },\n    { label: \"Contact\", href: \"#\" },\n  ];\n\n  const year = new Date().getFullYear();\n</script>\n\n<footer class=\"bg-background @container py-12\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"flex flex-col\">\n      <a\n        href=\"/\"\n        aria-label=\"go home\"\n        class=\"hover:bg-foreground/5 -ml-1.5 flex size-8 rounded-lg *:m-auto\"\n      >\n        <Logo class=\"w-fit\" />\n      </a>\n      <nav class=\"my-8 flex flex-wrap gap-x-8 gap-y-2\">\n        {#each links as link (link.label)}\n          <a\n            href={link.href}\n            class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n          >\n            {link.label}\n          </a>\n        {/each}\n      </nav>\n\n      <ThemeSwitcher />\n\n      <p class=\"text-muted-foreground mt-2 border-t pt-6 text-sm\">&copy; {year} Veil.</p>\n    </div>\n  </div>\n</footer>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

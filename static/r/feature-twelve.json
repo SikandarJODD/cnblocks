@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "feature-twelve",
+  "type": "feature",
+  "description": "Feature grid with gradient backgrounds",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "feature-twelve.svelte",
+      "type": "feature",
+      "target": "feature-twelve.svelte",
+      "content": "<script lang=\"ts\">\r\n  import DatabaseZap from \"@lucide/svelte/icons/database-zap\";\r\n  import Link from \"@lucide/svelte/icons/link\";\r\n  import Plug from \"@lucide/svelte/icons/plug\";\r\n  import Shield from \"@lucide/svelte/icons/shield\";\r\n\r\n  const features = [\r\n    {\r\n      name: \"Use Database with your stack\",\r\n      description:\r\n        \"We offer client and server libraries in everything from React and Ruby to iOS.\",\r\n      icon: DatabaseZap,\r\n    },\r\n    {\r\n      name: \"Try plug & play options\",\r\n      description:\r\n        \"Customize and deploy data infrastructure directly from the Database Dashboard.\",\r\n      icon: Plug,\r\n    },\r\n    {\r\n      name: \"Explore pre-built integrations\",\r\n      description:\r\n        \"Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.\",\r\n      icon: Link,\r\n    },\r\n    {\r\n      name: \"Security & privacy\",\r\n      description:\r\n        \"Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.\",\r\n      icon: Shield,\r\n    },\r\n  ];\r\n</script>\r\n\r\n<div class=\"mx-auto w-full max-w-6xl px-3 py-20\">\r\n  <dl class=\"grid grid-cols-4 gap-10\">\r\n    {#each features as item}\r\n      {@const Icon = item.icon}\r\n      <div class=\"col-span-full sm:col-span-2 lg:col-span-1\">\r\n        <div\r\n          class=\"w-fit rounded-lg p-2 shadow-md shadow-blue-400/30 ring-1 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5\"\r\n        >\r\n          <Icon\r\n            aria-hidden=\"true\"\r\n            class=\"size-6 text-blue-600 dark:text-blue-400\"\r\n          />\r\n        </div>\r\n        <dt class=\"mt-6 font-semibold text-gray-900 dark:text-gray-50\">\r\n          {item.name}\r\n        </dt>\r\n        <dd class=\"mt-2 leading-7 text-gray-600 dark:text-gray-400\">\r\n          {item.description}\r\n        </dd>\r\n      </div>\r\n    {/each}\r\n  </dl>\r\n</div>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

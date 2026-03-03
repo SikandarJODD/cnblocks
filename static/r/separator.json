@@ -1,0 +1,37 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "separator",
+  "type": "ui",
+  "description": "Visual separator line component",
+  "registryDependencies": [
+    "utils"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "bits-ui",
+      "version": "^2.15.4"
+    }
+  ],
+  "files": [
+    {
+      "path": "separator/index.ts",
+      "type": "ui",
+      "target": "separator/index.ts",
+      "content": "import Root from \"./separator.svelte\";\r\n\r\nexport {\r\n\tRoot,\r\n\t//\r\n\tRoot as Separator,\r\n};\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "separator/separator.svelte",
+      "type": "ui",
+      "target": "separator/separator.svelte",
+      "content": "<script lang=\"ts\">\r\n\timport { Separator as SeparatorPrimitive } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tclass: className,\r\n\t\torientation = \"horizontal\",\r\n\t\t...restProps\r\n\t}: SeparatorPrimitive.RootProps = $props();\r\n</script>\r\n\r\n<SeparatorPrimitive.Root\r\n\tbind:ref\r\n\tclass={cn(\r\n\t\t\"bg-border shrink-0\",\r\n\t\torientation === \"horizontal\" ? \"h-[1px] w-full\" : \"min-h-full w-[1px]\",\r\n\t\tclassName\r\n\t)}\r\n\t{orientation}\r\n\t{...restProps}\r\n/>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

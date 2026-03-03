@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "content-seven",
+  "type": "content",
+  "description": "Content block with alternating layout",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "content-seven.svelte",
+      "type": "content",
+      "target": "content-seven.svelte",
+      "content": "<script>\r\n  import Zap from \"@lucide/svelte/icons/zap\";\r\n  import Cpu from \"@lucide/svelte/icons/cpu\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n    <h2 class=\"relative z-10 max-w-xl text-4xl font-medium lg:text-5xl\">\r\n      The Lyra ecosystem brings together our models.\r\n    </h2>\r\n    <div class=\"grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24\">\r\n      <div class=\"relative space-y-4\">\r\n        <p class=\"text-muted-foreground\">\r\n          Gemini is evolving to be more than just the models. <span\r\n            class=\"text-accent-foreground font-bold\"\r\n            >It supports an entire ecosystem</span\r\n          > — from products innovate.\r\n        </p>\r\n        <p class=\"text-muted-foreground\">\r\n          It supports an entire ecosystem — from products to the APIs and\r\n          platforms helping developers and businesses innovate\r\n        </p>\r\n\r\n        <div class=\"grid grid-cols-2 gap-3 pt-6 sm:gap-4\">\r\n          <div class=\"space-y-3\">\r\n            <div class=\"flex items-center gap-2\">\r\n              <Zap class=\"size-4\" />\r\n              <h3 class=\"text-sm font-medium\">Faaast</h3>\r\n            </div>\r\n            <p class=\"text-muted-foreground text-sm\">\r\n              It supports an entire helping developers and innovate.\r\n            </p>\r\n          </div>\r\n          <div class=\"space-y-2\">\r\n            <div class=\"flex items-center gap-2\">\r\n              <Cpu class=\"size-4\" />\r\n              <h3 class=\"text-sm font-medium\">Powerful</h3>\r\n            </div>\r\n            <p class=\"text-muted-foreground text-sm\">\r\n              It supports an entire helping developers and businesses.\r\n            </p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"relative mt-6 sm:mt-0\">\r\n        <div\r\n          class=\"bg-linear-to-b aspect-67/34 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700\"\r\n        >\r\n          <img\r\n            src=\"/exercice-dark.png\"\r\n            class=\"hidden rounded-[15px] dark:block\"\r\n            alt=\"payments illustration dark\"\r\n            width={1206}\r\n            height={612}\r\n          />\r\n          <img\r\n            src=\"/exercice.png\"\r\n            class=\"rounded-[15px] shadow dark:hidden\"\r\n            alt=\"payments illustration light\"\r\n            width={1206}\r\n            height={612}\r\n          />\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

@@ -14,9 +14,4 @@ import LogoThreeCode from "$lib/components/blocks/logocloud/logocloud-three.svel
 let codes = [LogoOneCode, LogoTwoCode, LogoThreeCode];
 let components = [LogoOne, LogoTwo, LogoThree];
 
-export let logocloud: Block[] = getBlock(
-  components.length,
-  "logocloud",
-  codes,
-  components
-);
+export let logocloud: Block[] = getBlock(components.length, "logocloud", codes, components);

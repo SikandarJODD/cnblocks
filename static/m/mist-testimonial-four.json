@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-testimonial-four",
+  "type": "mtestimonial",
+  "description": "Mist-style four-column testimonials",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "four.svelte",
+      "type": "mtestimonial",
+      "target": "four.svelte",
+      "content": "<script lang=\"ts\">\r\n  import {\r\n    Avatar,\r\n    AvatarFallback,\r\n    AvatarImage,\r\n  } from \"$lib/components/ui/avatar\";\r\n</script>\r\n\r\n<section class='[--color-primary:var(--color-indigo-500)]'>\r\n  <div class=\"py-24\">\r\n    <div class=\"mx-auto w-full max-w-5xl px-6\">\r\n      <blockquote\r\n        class=\"before:bg-primary relative max-w-xl pl-6 before:absolute before:inset-y-0 before:left-0 before:w-1 before:rounded-full\"\r\n      >\r\n        <p class=\"text-foreground text-lg\">\r\n          Using Tailark has been like unlocking a secret design superpower. It's\r\n          the perfect fusion of simplicity and versatility, enabling us to\r\n          create UIs that are as stunning as they are user-friendly.\r\n        </p>\r\n        <footer class=\"mt-4 flex items-center gap-2\">\r\n          <Avatar class=\" size-6 border border-transparent shadow ring-1\">\r\n            <AvatarImage\r\n              src=\"https://avatars.githubusercontent.com/u/68236786?v=4\"\r\n              alt=\"Théo Balick\"\r\n            />\r\n            <AvatarFallback>T</AvatarFallback>\r\n          </Avatar>\r\n          <cite>Théo Balick</cite>\r\n          <span aria-hidden=\"true\" class=\"bg-foreground/15 size-1 rounded-full\"\r\n          ></span>\r\n          <span class=\"text-muted-foreground\">Product Designer</span>\r\n        </footer>\r\n      </blockquote>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

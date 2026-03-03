@@ -1,0 +1,31 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-footer-two",
+  "type": "vfooter",
+  "description": "Veil Footer component, variant Two.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    },
+    {
+      "ecosystem": "js",
+      "name": "svelte",
+      "version": "^5.23.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "footer-two.svelte",
+      "type": "vfooter",
+      "target": "footer-two.svelte",
+      "content": "<script lang=\"ts\">\n  import Logo from \"$lib/components/web/Logo.svelte\";\n  import { Github, Linkedin, Twitter } from \"@lucide/svelte\";\n  import type { Component } from \"svelte\";\n\n  type LinkItem = { label: string; href: string };\n  type SocialItem = { icon: Component; href: string; label: string };\n\n  const links: LinkItem[] = [\n    { label: \"Features\", href: \"#\" },\n    { label: \"Pricing\", href: \"#\" },\n    { label: \"About\", href: \"#\" },\n    { label: \"Blog\", href: \"#\" },\n    { label: \"Contact\", href: \"#\" },\n  ];\n\n  const social: SocialItem[] = [\n    { icon: Twitter, href: \"#\", label: \"Twitter\" },\n    { icon: Github, href: \"#\", label: \"GitHub\" },\n    { icon: Linkedin, href: \"#\", label: \"LinkedIn\" },\n  ];\n\n  const year = new Date().getFullYear();\n</script>\n\n<footer class=\"bg-background @container border-t py-12\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"flex flex-col items-center text-center\">\n      <a href=\"/\" class=\"flex items-center gap-2\">\n        <Logo class=\"h-5\" />\n      </a>\n      <nav class=\"mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2\">\n        {#each links as link (link.label)}\n          <a\n            href={link.href}\n            class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n          >\n            {link.label}\n          </a>\n        {/each}\n      </nav>\n      <div class=\"mt-8 flex gap-4\">\n        {#each social as item (item.label)}\n          <a\n            href={item.href}\n            class=\"text-muted-foreground hover:text-foreground size-8 rounded-full transition-colors\"\n            aria-label={item.label}\n          >\n            <item.icon class=\"size-4\" />\n          </a>\n        {/each}\n      </div>\n      <p class=\"text-muted-foreground mt-8 text-sm\">&copy; {year} Veil.</p>\n    </div>\n  </div>\n</footer>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

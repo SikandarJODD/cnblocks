@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-footer-one",
+  "type": "vfooter",
+  "description": "Veil Footer component, variant One.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "footer-one.svelte",
+      "type": "vfooter",
+      "target": "footer-one.svelte",
+      "content": "<script lang=\"ts\">\n  import Logo from \"$lib/components/web/Logo.svelte\";\n\n  type LinkItem = { label: string; href: string };\n\n  const links: Record<\"product\" | \"company\" | \"resources\" | \"legal\", LinkItem[]> = {\n    product: [\n      { label: \"Features\", href: \"#\" },\n      { label: \"Integrations\", href: \"#\" },\n      { label: \"Pricing\", href: \"#\" },\n      { label: \"Changelog\", href: \"#\" },\n    ],\n    company: [\n      { label: \"About\", href: \"#\" },\n      { label: \"Blog\", href: \"#\" },\n      { label: \"Careers\", href: \"#\" },\n      { label: \"Contact\", href: \"#\" },\n    ],\n    resources: [\n      { label: \"Documentation\", href: \"#\" },\n      { label: \"Help Center\", href: \"#\" },\n      { label: \"Community\", href: \"#\" },\n      { label: \"Templates\", href: \"#\" },\n    ],\n    legal: [\n      { label: \"Privacy\", href: \"#\" },\n      { label: \"Terms\", href: \"#\" },\n      { label: \"Cookie Policy\", href: \"#\" },\n    ],\n  };\n\n  const year = new Date().getFullYear();\n</script>\n\n<footer class=\"bg-background @container border-t py-12\">\n  <div class=\"mx-auto max-w-2xl px-6\">\n    <div class=\"@sm:grid-cols-3 grid grid-cols-2 gap-8\">\n      <div class=\"col-span-full\">\n        <a href=\"/\" class=\"flex items-center gap-2\">\n          <Logo class=\"h-5 w-fit\" />\n        </a>\n        <p class=\"text-muted-foreground mt-4 max-w-xs text-sm\">\n          Building the future of integrations. Connect your tools, automate your\n          workflow.\n        </p>\n      </div>\n      <div>\n        <h3 class=\"text-foreground mb-3 text-sm font-medium\">Product</h3>\n        <ul class=\"space-y-2\">\n          {#each links.product as link (link.label)}\n            <li>\n              <a\n                href={link.href}\n                class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n              >\n                {link.label}\n              </a>\n            </li>\n          {/each}\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"text-foreground mb-3 text-sm font-medium\">Company</h3>\n        <ul class=\"space-y-2\">\n          {#each links.company as link (link.label)}\n            <li>\n              <a\n                href={link.href}\n                class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n              >\n                {link.label}\n              </a>\n            </li>\n          {/each}\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"text-foreground mb-3 text-sm font-medium\">Resources</h3>\n        <ul class=\"space-y-2\">\n          {#each links.resources as link (link.label)}\n            <li>\n              <a\n                href={link.href}\n                class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n              >\n                {link.label}\n              </a>\n            </li>\n          {/each}\n        </ul>\n      </div>\n    </div>\n    <div class=\"mt-12 flex flex-wrap items-center justify-between gap-4 border-t pt-8\">\n      <p class=\"text-muted-foreground text-sm\">&copy; {year} Veil. All rights reserved.</p>\n      <div class=\"flex gap-4\">\n        {#each links.legal as link (link.label)}\n          <a\n            href={link.href}\n            class=\"text-muted-foreground hover:text-foreground text-sm transition-colors\"\n          >\n            {link.label}\n          </a>\n        {/each}\n      </div>\n    </div>\n  </div>\n</footer>\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

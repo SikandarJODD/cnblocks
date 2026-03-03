@@ -23,33 +23,27 @@ import HeroSevenCode from "$lib/components/blocks/hero/hero-seven.svelte?raw";
 import HeroEightCode from "$lib/components/blocks/hero/hero-eight.svelte?raw";
 import HeroNineCode from "$lib/components/blocks/hero/hero-nine.svelte?raw";
 
-
 let codes = [
-  HeroOneCode,
-  HeroTwoCode,
-  HeroThreeCode,
-  HeroFourCode,
-  HeroFiveCode,
-  HeroSixCode,
-  HeroSevenCode,
-  HeroEightCode,
-  HeroNineCode
+	HeroOneCode,
+	HeroTwoCode,
+	HeroThreeCode,
+	HeroFourCode,
+	HeroFiveCode,
+	HeroSixCode,
+	HeroSevenCode,
+	HeroEightCode,
+	HeroNineCode,
 ];
 let components = [
-  HeroOne,
-  HeroTwo,
-  HeroThree,
-  HeroFour,
-  HeroFive,
-  HeroSix,
-  HeroSeven,
-  HeroEight,
-  HeroNine,
+	HeroOne,
+	HeroTwo,
+	HeroThree,
+	HeroFour,
+	HeroFive,
+	HeroSix,
+	HeroSeven,
+	HeroEight,
+	HeroNine,
 ];
 
-export let hero: Block[] = getBlock(
-  components.length,
-  "hero",
-  codes,
-  components
-);
+export let hero: Block[] = getBlock(components.length, "hero", codes, components);

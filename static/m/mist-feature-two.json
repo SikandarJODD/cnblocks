@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-feature-two",
+  "type": "mfeature",
+  "description": "Mist-style feature with side image",
+  "registryDependencies": [
+    "card"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "two.svelte",
+      "type": "mfeature",
+      "target": "two.svelte",
+      "content": "<script lang=\"ts\">\r\n  import { Card } from \"$lib/components/ui/card\";\r\n</script>\r\n\r\n<section>\r\n  <div class=\"bg-muted/50 py-24\">\r\n    <div class=\"mx-auto max-w-5xl px-6\">\r\n      <div>\r\n        <h2 class=\"text-foreground text-4xl font-semibold\">\r\n          Effortless Task Management\r\n        </h2>\r\n        <p class=\"text-muted-foreground mb-12 mt-4 text-balance text-lg\">\r\n          Automate your tasks and workflows by connecting your favorite tools\r\n          like Notion, Todoist, and more. AI-powered scheduling helps you stay\r\n          on track and adapt to changing priorities.\r\n        </p>\r\n      </div>\r\n      <div class=\"mt-8 grid gap-4 sm:grid-cols-2 md:mt-16 md:grid-cols-3\">\r\n        <div class=\"space-y-4\">\r\n          <Card variant=\"soft\" class=\"aspect-video overflow-hidden px-6\">\r\n            <Card  class=\"h-full translate-y-6\" />\r\n          </Card>\r\n          <div class=\"sm:max-w-sm\">\r\n            <h3 class=\"text-foreground text-xl font-semibold\">\r\n              Marketing Campaigns\r\n            </h3>\r\n            <p class=\"text-muted-foreground my-4 text-lg\">\r\n              Effortlessly book and manage your meetings. Stay on top of your\r\n              schedule.\r\n            </p>\r\n          </div>\r\n        </div>\r\n        <div class=\"space-y-4\">\r\n          <Card variant=\"soft\" class=\"aspect-video overflow-hidden p-6\">\r\n            <Card class=\"h-full\" />\r\n          </Card>\r\n          <div class=\"sm:max-w-sm\">\r\n            <h3 class=\"text-foreground text-xl font-semibold\">\r\n              AI Meeting Scheduler\r\n            </h3>\r\n            <p class=\"text-muted-foreground my-4 text-lg\">\r\n              Effortlessly book and manage your meetings. Stay on top of your\r\n              schedule.\r\n            </p>\r\n          </div>\r\n        </div>\r\n        <div class=\"space-y-4\">\r\n          <Card variant=\"soft\" class=\"aspect-video overflow-hidden\">\r\n            <Card class=\"translate-6 h-full\" />\r\n          </Card>\r\n          <div class=\"sm:max-w-sm\">\r\n            <h3 class=\"text-foreground text-xl font-semibold\">\r\n              AI Meeting Scheduler\r\n            </h3>\r\n            <p class=\"text-muted-foreground my-4 text-lg\">\r\n              Effortlessly book and manage your meetings. Stay on top of your\r\n              schedule.\r\n            </p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

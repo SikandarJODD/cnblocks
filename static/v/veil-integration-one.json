@@ -1,0 +1,35 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-integration-one",
+  "type": "vintegration",
+  "description": "Veil Integration component, variant One.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "integration-one.svelte",
+      "type": "vintegration",
+      "target": "integration-one.svelte",
+      "content": "<script>\r\n  import { Button } from \"$lib/components/ui/veil/button\";\r\n  import { ChevronRight } from \"@lucide/svelte\";\r\n  import IntegrationIllustration from \"./integration-illustration.svelte\";\r\n</script>\r\n\r\n<section class=\"bg-background @container py-24\">\r\n  <div class=\"mx-auto max-w-2xl px-6\">\r\n    <IntegrationIllustration />\r\n    <div class=\"mx-auto mt-12 max-w-md text-balance text-center\">\r\n      <h2 class=\"font-serif text-4xl font-medium\">\r\n        Connect Your Favorite Tools\r\n      </h2>\r\n      <p class=\"text-muted-foreground mb-6 mt-4\">\r\n        Seamlessly integrate with the services you already use. Set up in\r\n        minutes, not days.\r\n      </p>\r\n      <Button variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-1.5\">\r\n        Learn more\r\n        <ChevronRight />\r\n      </Button>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    {
+      "path": "integration-illustration.svelte",
+      "type": "vintegration",
+      "target": "integration-illustration.svelte",
+      "content": "<script>\r\n  import {\r\n    Bolt as Logo,\r\n    Clerk,\r\n    Firebase,\r\n    Linear,\r\n    Slack,\r\n    Supabase,\r\n    Vercel\r\n  } from \"$lib/svgs/index\";\r\n</script>\r\n\r\n<div\r\n  aria-hidden\r\n  class=\"**:fill-foreground mx-auto flex h-44 max-w-lg flex-col justify-between\"\r\n>\r\n  <div class=\"@lg:px-6 relative flex h-10 items-center justify-between gap-12\">\r\n    <div class=\"bg-border absolute inset-0 my-auto h-px\"></div>\r\n\r\n    <div\r\n      class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n    >\r\n      <Vercel class=\"size-3.5\" />\r\n    </div>\r\n    <div\r\n      class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n    >\r\n      <Slack class=\"size-3.5\" />\r\n    </div>\r\n  </div>\r\n  <div class=\"@lg:px-24 relative flex h-10 items-center justify-between px-12\">\r\n    <div class=\"bg-border absolute inset-0 my-auto h-px\"></div>\r\n    <div\r\n      class=\"bg-linear-to-r mask-l-from-15% mask-l-to-40% mask-r-from-75% mask-r-to-75% from-primary absolute inset-0 my-auto h-px w-1/2 via-amber-500 to-pink-400\"\r\n    ></div>\r\n    <div\r\n      class=\"bg-linear-to-r mask-r-from-15% mask-r-to-40% mask-l-from-75% mask-l-to-75% absolute inset-0 my-auto ml-auto h-px w-1/2 from-indigo-500 via-emerald-500 to-blue-400\"\r\n    ></div>\r\n\r\n    <div\r\n      class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n    >\r\n      <Clerk class=\"size-3.5\" />\r\n    </div>\r\n    <div class=\"border-foreground/15 rounded-full border border-dashed p-2\">\r\n      <div\r\n        class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n      >\r\n        <Logo class=\"h-4\" />\r\n      </div>\r\n    </div>\r\n    <div\r\n      class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n    >\r\n      <Linear class=\"size-3.5\" />\r\n    </div>\r\n  </div>\r\n  <div class=\"@lg:px-6 relative flex h-10 items-center justify-between gap-12\">\r\n    <div class=\"bg-border absolute inset-0 my-auto h-px\"></div>\r\n\r\n    <div\r\n      class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n    >\r\n      <Supabase class=\"size-3.5\" />\r\n    </div>\r\n    <div\r\n      class=\"bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring\"\r\n    >\r\n      <Firebase class=\"size-3.5\" />\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

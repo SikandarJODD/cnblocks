@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-feature-eight",
+  "type": "mfeature",
+  "description": "Mist-style feature with icon grid",
+  "registryDependencies": [
+    "card"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "eight.svelte",
+      "type": "mfeature",
+      "target": "eight.svelte",
+      "content": "<script lang=\"ts\">\r\n  import Card from \"$lib/components/ui/card/card.svelte\";\r\n\r\n  import Layout from \"@lucide/svelte/icons/layout\";\r\n  import Target from \"@lucide/svelte/icons/target\";\r\n  import CalendarCheck from \"@lucide/svelte/icons/calendar-check\";\r\n  import Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n</script>\r\n\r\n<section\r\n  class=\"[--color-primary:theme(color.indigo.500)] [--color-secondary:theme(color.indigo.100)] [--color-secondary-foreground:theme(color.indigo.600)]\"\r\n>\r\n  <div class=\"py-24\">\r\n    <div class=\"mx-auto w-full max-w-5xl px-6\">\r\n      <div class=\"grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3\">\r\n        <Card variant=\"soft\" class=\"col-span-full overflow-hidden pl-6 pt-6\">\r\n          <Layout class=\"text-primary size-5\" />\r\n          <h3 class=\"text-foreground mt-5 text-lg font-semibold\">\r\n            AI Code Generation\r\n          </h3>\r\n          <p class=\"text-muted-foreground mt-3 max-w-xl text-balance\">\r\n            Our advanced AI models transform natural language into\r\n            production-ready code, streamlining development workflows and\r\n            enabling faster iteration.\r\n          </p>\r\n          <div class=\"mask-b-from-95% -ml-2 -mt-2 mr-0.5 pl-2 pt-2\">\r\n            <div\r\n              class=\"bg-background rounded-tl-(--radius) relative mx-auto mt-8 h-96 overflow-hidden border border-transparent shadow ring-1\"\r\n            >\r\n              <img\r\n                src=\"/mist/tailark-3.png\"\r\n                alt=\"app screen\"\r\n                width=\"2880\"\r\n                height=\"1842\"\r\n                class=\"object-top-left h-full object-cover\"\r\n              />\r\n            </div>\r\n          </div>\r\n        </Card>\r\n        <Card variant=\"soft\" class=\"p-6\">\r\n          <Target class=\"text-primary size-5\" />\r\n          <h3 class=\"text-foreground mt-5 text-lg font-semibold\">\r\n            AI Code Generation\r\n          </h3>\r\n          <p class=\"text-muted-foreground mt-3 text-balance\">\r\n            Our advanced AI models transform natural language into\r\n            production-ready code.\r\n          </p>\r\n        </Card>\r\n\r\n        <Card variant=\"soft\" class=\"p-6\">\r\n          <CalendarCheck class=\"text-primary size-5\" />\r\n          <h3 class=\"text-foreground mt-5 text-lg font-semibold\">\r\n            Intelligent Code Review\r\n          </h3>\r\n          <p class=\"text-muted-foreground mt-3 text-balance\">\r\n            Our AI analyzes your code for bugs, security issues, and\r\n            optimization opportunities.\r\n          </p>\r\n        </Card>\r\n        <Card variant=\"soft\" class=\"p-6\">\r\n          <Sparkles class=\"text-primary size-5\" />\r\n          <h3 class=\"text-foreground mt-5 text-lg font-semibold\">\r\n            Contextual AI Assistant\r\n          </h3>\r\n          <p class=\"text-muted-foreground mt-3 text-balance\">\r\n            A personalized AI companion that understands your codebase and helps\r\n            solve complex...\r\n          </p>\r\n        </Card>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

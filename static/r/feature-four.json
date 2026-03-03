@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "feature-four",
+  "type": "feature",
+  "description": "Four-column feature grid with icons",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "feature-four.svelte",
+      "type": "feature",
+      "target": "feature-four.svelte",
+      "content": "<script>\r\n  import Cpu from \"@lucide/svelte/icons/cpu\";\r\n  import Fingerprint from \"@lucide/svelte/icons/fingerprint\";\r\n  import Pencil from \"@lucide/svelte/icons/pencil\";\r\n  import Settings2 from \"@lucide/svelte/icons/settings-2\";\r\n  import Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n  import Zap from \"@lucide/svelte/icons/zap\";\r\n</script>\r\n\r\n<section class=\"py-12 md:py-20\">\r\n  <div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n    <div\r\n      class=\"relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12\"\r\n    >\r\n      <h2 class=\"text-balance text-4xl font-medium lg:text-5xl\">\r\n        The foundation for creative teams management\r\n      </h2>\r\n      <p>\r\n        Lyra is evolving to be more than just the models. It supports an entire\r\n        to the APIs and platforms helping developers and businesses innovate.\r\n      </p>\r\n    </div>\r\n\r\n    <div\r\n      class=\"relative mx-auto grid max-w-4xl divide-x divide-y border *:p-12 sm:grid-cols-2 lg:grid-cols-3\"\r\n    >\r\n      <div class=\"space-y-3\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Zap class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Faaast</h3>\r\n        </div>\r\n        <p class=\"text-sm\">\r\n          It supports an entire helping developers and innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Cpu class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Powerful</h3>\r\n        </div>\r\n        <p class=\"text-sm\">\r\n          It supports an entire helping developers and businesses.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Fingerprint class=\"size-4\" />\r\n\r\n          <h3 class=\"text-sm font-medium\">Security</h3>\r\n        </div>\r\n        <p class=\"text-sm\">It supports an helping developers businesses.</p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Pencil class=\"size-4\" />\r\n\r\n          <h3 class=\"text-sm font-medium\">Customization</h3>\r\n        </div>\r\n        <p class=\"text-sm\">\r\n          It supports helping developers and businesses innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Settings2 class=\"size-4\" />\r\n\r\n          <h3 class=\"text-sm font-medium\">Control</h3>\r\n        </div>\r\n        <p class=\"text-sm\">\r\n          It supports helping developers and businesses innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Sparkles class=\"size-4\" />\r\n\r\n          <h3 class=\"text-sm font-medium\">Built for AI</h3>\r\n        </div>\r\n        <p class=\"text-sm\">\r\n          It supports helping developers and businesses innovate.\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

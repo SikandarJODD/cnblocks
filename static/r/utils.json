@@ -1,0 +1,31 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "utils",
+  "type": "lib",
+  "description": "Utility functions for styling",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "clsx",
+      "version": "^2.1.1"
+    },
+    {
+      "ecosystem": "js",
+      "name": "tailwind-merge",
+      "version": "^3.3.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "utils.ts",
+      "type": "lib",
+      "target": "utils.ts",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\r\nimport { twMerge } from \"tailwind-merge\";\r\n\r\nexport function cn(...inputs: ClassValue[]) {\r\n\treturn twMerge(clsx(inputs));\r\n}\r\n\r\n// eslint-disable-next-line @typescript-eslint/no-explicit-any\r\nexport type WithoutChild<T> = T extends { child?: any } ? Omit<T, \"child\"> : T;\r\n// eslint-disable-next-line @typescript-eslint/no-explicit-any\r\nexport type WithoutChildren<T> = T extends { children?: any } ? Omit<T, \"children\"> : T;\r\nexport type WithoutChildrenOrChild<T> = WithoutChildren<WithoutChild<T>>;\r\nexport type WithElementRef<T, U extends HTMLElement = HTMLElement> = T & {\r\n\tref?: U | null;\r\n};\r\n\r\n/*\r\n\tInstalled from @ieedan/std\r\n*/\r\n\r\n/** Allows you to have autocomplete on a string while still accepting any string value.\r\n *\r\n * ## Usage\r\n * ```ts\r\n * type Fruits = LooseAutocomplete<'apple' | 'orange' | 'pear'>;\r\n *\r\n * // you will still get autocomplete here\r\n * let fruit: Fruits = 'apple'; // valid\r\n * fruit = 'banana'; // valid\r\n * ```\r\n */\r\nexport type LooseAutocomplete<T> = T | (string & {});",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

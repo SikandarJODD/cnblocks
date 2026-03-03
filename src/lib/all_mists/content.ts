@@ -9,48 +9,56 @@ import ContentFour from "$lib/components/mist/mcontent/four.svelte";
 import ContentFourCode from "$lib/components/mist/mcontent/four.svelte?raw";
 
 export const all_mists_content: MistBlock[] = [
-  {
-    slug: "one",
-    title: "Content One",
-    category: "content",
-    preview: "/preview/mist/content/one",
-    code: {
-      code: ContentOneCode,
-      lang: "svelte"
-    },
-    component: ContentOne,
-  },
-  {
-    slug: "two",
-    title: "Content Two",
-    category: "content",
-    preview: "/preview/mist/content/two",
-    code: {
-      code: ContentTwoCode,
-      lang: "svelte"
-    },
-    component: ContentTwo,
-  },
-  {
-    slug: "three",
-    title: "Content Three",
-    category: "content",
-    preview: "/preview/mist/content/three",
-    code: {
-      code: ContentThreeCode,
-      lang: "svelte"
-    },
-    component: ContentThree,
-  },
-  {
-    slug: "four",
-    title: "Content Four",
-    category: "content",
-    preview: "/preview/mist/content/four",
-    code: {
-      code: ContentFourCode,
-      lang: "svelte"
-    },
-    component: ContentFour,
-  },
+	{
+		slug: "one",
+		title: "Content One",
+		category: "content",
+		preview: "/preview/mist/content/one",
+
+		itemId: "mist-content-one",
+		code: {
+			code: ContentOneCode,
+			lang: "svelte",
+		},
+		component: ContentOne,
+	},
+	{
+		slug: "two",
+		title: "Content Two",
+		category: "content",
+		preview: "/preview/mist/content/two",
+
+		itemId: "mist-content-two",
+		code: {
+			code: ContentTwoCode,
+			lang: "svelte",
+		},
+		component: ContentTwo,
+	},
+	{
+		slug: "three",
+		title: "Content Three",
+		category: "content",
+		preview: "/preview/mist/content/three",
+
+		itemId: "mist-content-three",
+		code: {
+			code: ContentThreeCode,
+			lang: "svelte",
+		},
+		component: ContentThree,
+	},
+	{
+		slug: "four",
+		title: "Content Four",
+		category: "content",
+		preview: "/preview/mist/content/four",
+
+		itemId: "mist-content-four",
+		code: {
+			code: ContentFourCode,
+			lang: "svelte",
+		},
+		component: ContentFour,
+	},
 ];

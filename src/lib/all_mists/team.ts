@@ -5,26 +5,30 @@ import TeamOneCode from "$lib/components/mist/mteam/one.svelte?raw";
 import TeamTwoCode from "$lib/components/mist/mteam/two.svelte?raw";
 
 export const all_mists_team: MistBlock[] = [
-  {
-    slug: "one",
-    title: "Team One",
-    category: "team",
-    preview: "/preview/mist/team/one",
-    code: {
-      code: TeamOneCode,
-      lang: "svelte",
-    },
-    component: TeamOne,
-  },
-  {
-    slug: 'two',
-    title: "Team Two",
-    category: "team",
-    preview: "/preview/mist/team/two",
-    code: {
-      code: TeamTwoCode,
-      lang: "svelte",
-    },
-    component: TeamTwo,
-  }
+	{
+		slug: "one",
+		title: "Team One",
+		category: "team",
+		preview: "/preview/mist/team/one",
+
+		itemId: "mist-team-one",
+		code: {
+			code: TeamOneCode,
+			lang: "svelte",
+		},
+		component: TeamOne,
+	},
+	{
+		slug: "two",
+		title: "Team Two",
+		category: "team",
+		preview: "/preview/mist/team/two",
+
+		itemId: "mist-team-two",
+		code: {
+			code: TeamTwoCode,
+			lang: "svelte",
+		},
+		component: TeamTwo,
+	},
 ];

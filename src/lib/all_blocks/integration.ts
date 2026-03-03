@@ -22,29 +22,24 @@ import IntegrationSevenCode from "$lib/components/blocks/integration/integration
 import IntegrationEightCode from "$lib/components/blocks/integration/integration-eight.svelte?raw";
 
 let codes = [
-  IntegrationOneCode,
-  IntegrationTwoCode,
-  IntegrationThreeCode,
-  IntegrationFourCode,
-  IntegrationFiveCode,
-  IntegrationSixCode,
-  IntegrationSevenCode,
-  IntegrationEightCode,
+	IntegrationOneCode,
+	IntegrationTwoCode,
+	IntegrationThreeCode,
+	IntegrationFourCode,
+	IntegrationFiveCode,
+	IntegrationSixCode,
+	IntegrationSevenCode,
+	IntegrationEightCode,
 ];
 let components = [
-  IntegrationOne,
-  IntegrationTwo,
-  IntegrationThree,
-  IntegrationFour,
-  IntegrationFive,
-  IntegrationSix,
-  IntegrationSeven,
-  IntegrationEight,
+	IntegrationOne,
+	IntegrationTwo,
+	IntegrationThree,
+	IntegrationFour,
+	IntegrationFive,
+	IntegrationSix,
+	IntegrationSeven,
+	IntegrationEight,
 ];
 
-export let integration: Block[] = getBlock(
-  components.length,
-  "integration",
-  codes,
-  components
-);
+export let integration: Block[] = getBlock(components.length, "integration", codes, components);

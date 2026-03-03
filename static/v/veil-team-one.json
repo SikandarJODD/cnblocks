@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-team-one",
+  "type": "vteam",
+  "description": "Veil Team component, variant One.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "team-one.svelte",
+      "type": "vteam",
+      "target": "team-one.svelte",
+      "content": "<script lang=\"ts\">\r\n  const members = [\r\n    {\r\n      avatar: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\r\n      name: \"Meschac Irung\",\r\n      role: \"Frontend Engineer at Acme\",\r\n      bio: \"Passionate about intuitive UIs and web performance. Specializes in React and TypeScript with 5+ years of experience.\",\r\n    },\r\n    {\r\n      avatar: \"https://avatars.githubusercontent.com/u/68236786?v=4\",\r\n      name: \"Theo Balick\",\r\n      role: \"Founder, CEO - Acme\",\r\n      bio: \"Serial entrepreneur transforming team collaboration. Previously led product at two successful startups.\",\r\n    },\r\n  ];\r\n</script>\r\n\r\n<section class=\"bg-background @container py-24\">\r\n  <div class=\"mx-auto max-w-2xl px-6\">\r\n    <div class=\"space-y-4\">\r\n      <h2 class=\"text-balance font-serif text-4xl font-medium\">\r\n        Meet Our Founders\r\n      </h2>\r\n      <p class=\"text-muted-foreground text-balance\">\r\n        The visionary leaders behind our mission to transform how teams work and\r\n        collaborate.\r\n      </p>\r\n    </div>\r\n    <div class=\"mt-12 grid gap-12 text-sm\">\r\n      {#each members as member, index}\r\n        <div class=\"relative grid grid-cols-[auto_1fr] gap-4\">\r\n          <div\r\n            aria-hidden\r\n            class=\"max-h-26 absolute -inset-x-6 inset-y-1 border-y\"\r\n          ></div>\r\n          <div\r\n            aria-hidden\r\n            class=\"w-26 absolute -inset-y-6 inset-x-1 border-x\"\r\n          ></div>\r\n          <div\r\n            class=\"before:border-foreground/10 shadow-foreground/6.5 dark:shadow-black/6.5 relative size-28 shrink-0 rounded-xl shadow-md before:absolute before:inset-0 before:rounded-xl before:border\"\r\n          >\r\n            <img\r\n              src={member.avatar}\r\n              alt={member.name}\r\n              class=\"rounded-xl object-cover\"\r\n              width={120}\r\n              height={120}\r\n            />\r\n          </div>\r\n\r\n          <div class=\"flex flex-col justify-between gap-6 py-1\">\r\n            <div class=\"space-y-0.5\">\r\n              <p class=\"text-foregroun text-base font-medium\">{member.name}</p>\r\n              <p class=\"text-muted-foreground text-sm\">{member.role}</p>\r\n            </div>\r\n\r\n            <p class=\"text-muted-foreground text-balance text-sm\">\r\n              {member.bio}\r\n            </p>\r\n          </div>\r\n        </div>\r\n      {/each}\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

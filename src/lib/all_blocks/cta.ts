@@ -14,9 +14,4 @@ import CtaThreeCode from "$lib/components/blocks/cta/cta-three.svelte?raw";
 let codes = [CtaOneCode, CtaTwoCode, CtaThreeCode];
 let components = [CtaOne, CtaTwo, CtaThree];
 
-export let cta: Block[] = getBlock(
-  components.length,
-  "cta",
-  codes,
-  components
-);
+export let cta: Block[] = getBlock(components.length, "cta", codes, components);

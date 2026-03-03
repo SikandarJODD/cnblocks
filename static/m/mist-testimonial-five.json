@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "mist-testimonial-five",
+  "type": "mtestimonial",
+  "description": "Mist-style testimonial carousel",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "dependencies": [],
+  "devDependencies": [
+    {
+      "ecosystem": "js",
+      "name": "@lucide/svelte",
+      "version": "^0.561.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "five.svelte",
+      "type": "mtestimonial",
+      "target": "five.svelte",
+      "content": "<script lang=\"ts\">\r\n  import {\r\n    Avatar,\r\n    AvatarFallback,\r\n    AvatarImage,\r\n  } from \"$lib/components/ui/avatar\";\r\n  import Quote from \"@lucide/svelte/icons/quote\";\r\n</script>\r\n\r\n<section>\r\n  <div class=\"bg-muted py-24\">\r\n    <div class=\"mx-auto w-full max-w-2xl px-6 text-center\">\r\n      <div class=\"max-w-xl\">\r\n        <Quote\r\n          class=\"fill-background stroke-background mx-auto size-8 drop-shadow-sm\"\r\n        />\r\n        <blockquote class=\"mt-6\">\r\n          <p class=\"text-foreground text-xl\">\r\n            Using Tailark has been like unlocking a secret design superpower.\r\n            It's the perfect fusion of simplicity and versatility, enabling us\r\n            to create UIs that are as stunning as they are user-friendly.\r\n          </p>\r\n          <footer class=\"mt-6 flex flex-col items-center justify-center\">\r\n            <Avatar class=\" size-12 border border-transparent shadow ring-1\">\r\n              <AvatarImage\r\n                src=\"https://avatars.githubusercontent.com/u/68236786?v=4\"\r\n                alt=\"Théo Balick\"\r\n              />\r\n              <AvatarFallback>T</AvatarFallback>\r\n            </Avatar>\r\n            <cite class=\"text-foreground mt-2 text-lg font-medium\"\r\n              >Théo Balick</cite\r\n            >\r\n            <span class=\"text-muted-foreground\">@theo_b</span>\r\n          </footer>\r\n        </blockquote>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}

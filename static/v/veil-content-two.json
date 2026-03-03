@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "veil-content-two",
+  "type": "vcontent",
+  "description": "Veil Content component, variant Two.",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "content-two.svelte",
+      "type": "vcontent",
+      "target": "content-two.svelte",
+      "content": "<section class=\"bg-background @container py-24\">\r\n  <div class=\"mx-auto max-w-2xl px-6\">\r\n    <h2 class=\"text-balance font-serif text-4xl font-medium\">\r\n      Create Content with AI Assistance\r\n    </h2>\r\n\r\n    <div class=\"@xl:gap-12 mt-12 grid grid-cols-2 gap-6\">\r\n      <p class=\"text-muted-foreground border-t pt-6\">\r\n        <span class=\"text-foreground font-medium\">Generate Ideas</span> Spark creativity\r\n        with AI-powered content suggestions and inspiration.\r\n      </p>\r\n\r\n      <p class=\"text-muted-foreground border-t pt-6\">\r\n        <span class=\"text-foreground font-medium\">Improve Writing</span> Enhance\r\n        your text with smart editing suggestions and style refinements.\r\n      </p>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  ]
+}
