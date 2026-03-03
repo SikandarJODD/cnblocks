@@ -1,23 +1,41 @@
 <script lang="ts">
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
+	import { page } from "$app/state";
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import { useSidebar } from "$lib/components/ui/sidebar/index.js";
-	import EllipsisIcon from "@lucide/svelte/icons/ellipsis";
-	import FolderIcon from "@lucide/svelte/icons/folder";
-	import ShareIcon from "@lucide/svelte/icons/share";
-	import Trash2Icon from "@lucide/svelte/icons/trash-2";
+	import Badge from "$lib/components/ui/badge/badge.svelte";
+	import { cn } from "$lib/utils";
 
 	let {
 		projects,
+		label = "Projects",
 	}: {
 		projects: {
 			name: string;
 			url: string;
-			badge: string;
+			badge?: string;
+			external?: boolean;
 		}[];
+		label?: string;
 	} = $props();
 
-	const sidebar = useSidebar();
+	const isActive = (url: string, external?: boolean) => {
+		if (external || !url.startsWith("/")) return false;
+		return page.url.pathname === url;
+	};
+
+	const getBadgeClass = (badge?: string) => {
+		switch (badge?.toLowerCase()) {
+			case "veil":
+				return "border-cyan-500/35 bg-cyan-500/15 text-cyan-700 dark:text-cyan-300";
+			case "mist":
+				return "border-emerald-500/35 bg-emerald-500/15 text-emerald-700 dark:text-emerald-300";
+			case "new":
+				return "border-violet-500/35 bg-violet-500/15 text-violet-700 dark:text-violet-300";
+			case "txt":
+				return "border-amber-500/35 bg-amber-500/15 text-amber-700 dark:text-amber-300";
+			default:
+				return "border-border bg-secondary text-secondary-foreground";
+		}
+	};
 </script>
 
 <Sidebar.Group class="group-data-[collapsible=icon]:hidden">
@@ -46,16 +64,39 @@
 				></path>
 			</svg>
 		</span>
-		Projects
+		{label}
 	</Sidebar.GroupLabel>
 	<Sidebar.Menu>
 		{#each projects as item (item.name)}
 			<Sidebar.MenuItem>
-				<Sidebar.MenuButton>
+				<Sidebar.MenuButton
+					class={cn({
+						"bg-sidebar-accent text-sidebar-accent-foreground": isActive(
+							item.url,
+							item.external
+						),
+					})}
+				>
 					{#snippet child({ props })}
-						<a href={item.url} {...props}>
+						<a
+							href={item.url}
+							target={item.external ? "_blank" : undefined}
+							rel={item.external ? "noopener noreferrer" : undefined}
+							{...props}
+						>
 							<!-- <item.icon /> -->
 							<span>{item.name}</span>
+							{#if item.badge}
+								<Badge
+									variant="outline"
+									class={cn(
+										"ml-2 rounded-full px-1.5 py-0 text-[10px] font-semibold uppercase",
+										getBadgeClass(item.badge)
+									)}
+								>
+									{item.badge}
+								</Badge>
+							{/if}
 						</a>
 					{/snippet}
 				</Sidebar.MenuButton>

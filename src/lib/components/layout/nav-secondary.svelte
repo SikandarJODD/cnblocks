@@ -11,6 +11,7 @@
 			title: string;
 			url: string;
 			icon: Component;
+			external?: boolean;
 		}[];
 	} & ComponentProps<typeof Sidebar.Group> = $props();
 </script>
@@ -22,7 +23,12 @@
 				<Sidebar.MenuItem>
 					<Sidebar.MenuButton size="sm">
 						{#snippet child({ props })}
-							<a href={item.url} {...props}>
+							<a
+								href={item.url}
+								target={item.external ? "_blank" : undefined}
+								rel={item.external ? "noopener noreferrer" : undefined}
+								{...props}
+							>
 								<item.icon class="size-4! text-emerald-600" />
 								<span>{item.title}</span>
 							</a>

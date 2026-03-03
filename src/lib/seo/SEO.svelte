@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import { MetaTags } from "svelte-meta-tags";
+
 	type Props = {
 		title: string;
 		description: string;
 		keywords?: string[];
+		canonical?: string;
+		noindex?: boolean;
 		images?: {
 			url: string;
 			width?: number;
@@ -12,40 +15,43 @@
 			alt?: string;
 		}[];
 	};
-	let { title, description, keywords, images }: Props = $props();
 
-	let canonical = $derived(page.url.origin);
-	// $inspect("Canonical URL:", canonical);
-	/*
-    [
-			{
-				url: "https://www.example.ie/og-image-01.jpg",
-				width: 800,
-				height: 600,
-				alt: "Og Image Alt",
-			},
-			{
-				url: "https://www.example.ie/og-image-02.jpg",
-				width: 900,
-				height: 800,
-				alt: "Og Image Alt Second",
-			},
-			{ url: "https://www.example.ie/og-image-03.jpg" },
-			{ url: "https://www.example.ie/og-image-04.jpg" },
-		]
-    */
+	let { title, description, keywords, canonical, noindex = false, images }: Props = $props();
+
+	let resolvedCanonical = $derived(canonical ?? `${page.url.origin}${page.url.pathname}`);
+	let resolvedImages = $derived(
+		images && images.length > 0
+			? images
+			: [
+					{
+						url: `${page.url.origin}/og.png`,
+						width: 1200,
+						height: 630,
+						alt: "Svelte Marketing Blocks",
+					},
+				]
+	);
 </script>
+
+<svelte:head>
+	{#if keywords?.length}
+		<meta name="keywords" content={keywords.join(", ")} />
+	{/if}
+	{#if noindex}
+		<meta name="robots" content="noindex, nofollow" />
+	{/if}
+</svelte:head>
 
 <MetaTags
 	{title}
 	titleTemplate="%s - Svelte Marketing Blocks"
 	{description}
-	{canonical}
+	canonical={resolvedCanonical}
 	openGraph={{
-		url: canonical,
+		url: resolvedCanonical,
 		title: title,
 		description: description,
-		images: images,
+		images: resolvedImages,
 		siteName: "Svelte Marketing Blocks",
 	}}
 	twitter={{
@@ -54,7 +60,7 @@
 		cardType: "summary_large_image",
 		title: title,
 		description: description,
-		// image: images && images[0] ? images[0].url : "https://sv-animations.vercel.app/svelte.svg",
-		imageAlt: images && images[0] ? images[0].alt : "Svelte Marketing Blocks",
+		image: resolvedImages[0]?.url,
+		imageAlt: resolvedImages[0]?.alt ?? "Svelte Marketing Blocks",
 	}}
 />

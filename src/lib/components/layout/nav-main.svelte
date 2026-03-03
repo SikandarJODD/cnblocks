@@ -1,14 +1,28 @@
 <script lang="ts">
-	import * as Collapsible from "$lib/components/ui/collapsible/index.js";
+	import { page } from "$app/state";
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
+	import Badge from "$lib/components/ui/badge/badge.svelte";
+	import { cn } from "$lib/utils";
 
 	type Item = {
 		title: string;
 		url: string;
+		badge?: string;
+		external?: boolean;
 	};
 
-	let { items }: { items: Item[] } = $props();
+	let {
+		items,
+		label = "Guide",
+	}: {
+		items: Item[];
+		label?: string;
+	} = $props();
+
+	const isActive = (item: Item) => {
+		if (item.external || !item.url.startsWith("/")) return false;
+		return page.url.pathname === item.url;
+	};
 </script>
 
 <Sidebar.Group>
@@ -38,15 +52,31 @@
 				></path>
 			</svg>
 		</span>
-		Guide
+		{label}
 	</Sidebar.GroupLabel>
 
 	<Sidebar.Menu>
 		{#each items as item}
 			<Sidebar.MenuItem>
-				<Sidebar.MenuButton class="text-sm">
+				<Sidebar.MenuButton
+					class={cn("text-sm", {
+						"bg-sidebar-accent text-sidebar-accent-foreground": isActive(item),
+					})}
+				>
 					{#snippet child({ props })}
-						<a href={item.url} {...props}>{item.title}</a>
+						<a
+							href={item.url}
+							target={item.external ? "_blank" : undefined}
+							rel={item.external ? "noopener noreferrer" : undefined}
+							{...props}
+						>
+							<span>{item.title}</span>
+							{#if item.badge}
+								<Badge variant="secondary" class="ml-2 rounded-full px-1.5 py-0 text-[10px]">
+									{item.badge}
+								</Badge>
+							{/if}
+						</a>
 					{/snippet}
 				</Sidebar.MenuButton>
 			</Sidebar.MenuItem>

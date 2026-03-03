@@ -24,6 +24,7 @@
 	import cn from "clsx";
 	import Badge from "$lib/components/ui/badge/badge.svelte";
 	import McpDialog from "./MCPDialog.svelte";
+	import { page } from "$app/state";
 
 	type ListItemProps = {
 		className?: string;
@@ -118,9 +119,19 @@
 			content: "3 blocks - team members.",
 		},
 	];
+
+	let isDocs = $derived.by(() => {
+		let path = page.url.pathname;
+		return path.includes("v2-docs");
+	});
 </script>
 
-<nav class="sticky top-0 z-1000 border-b bg-transparent backdrop-blur-2xl">
+<nav
+	class={cn(
+		"sticky top-0 z-1000 backdrop-blur-2xl transition-all border-b duration-200",
+		isDocs ? "bg-sidebar border-b-transparent" : "border-b bg-transparent"
+	)}
+>
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 items-center justify-between">
 			<div class="flex w-full items-center">
@@ -184,7 +195,7 @@
 							<NavigationMenu.Item id="docs">
 								<NavigationMenu.Link
 									class="data-[state=open]:shadow-mini group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted dark:hover:bg-muted dark:data-[state=open]:bg-muted"
-									href="/docs"
+									href="/v2-docs"
 								>
 									<span class="hidden sm:inline"> Docs </span>
 								</NavigationMenu.Link>
