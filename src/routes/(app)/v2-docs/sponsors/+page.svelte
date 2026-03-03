@@ -1,7 +1,14 @@
 <script lang="ts">
 	import SEOComponent from "$lib/seo/SEO.svelte";
 	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
-	import { H2, H3, Paragraph, Link, UnorderedList, ListItem } from "$lib/components/markdown/index";
+	import {
+		H2,
+		H3,
+		Paragraph,
+		Link,
+		UnorderedList,
+		ListItem,
+	} from "$lib/components/markdown/index";
 	import { docsV2PageMap } from "$lib/config/docs-v2";
 	import Button from "$lib/components/ui/button/button.svelte";
 
@@ -25,7 +32,6 @@
 <DocsPageShell
 	title="Sponsors"
 	description="Support development of Svelte Shadcn Blocks and help keep the project sustainable."
-	showToc={pageMeta.toc}
 >
 	<section class="space-y-4">
 		<H2 id="current-sponsors">Current Sponsors</H2>
@@ -74,7 +80,11 @@
 		<H3 id="feedback-and-requests">Feedback and Requests</H3>
 		<Paragraph>
 			For feature requests and sponsorship-related questions, open an issue or discussion on{" "}
-			<Link href="https://github.com/SikandarJODD/cnblocks" target="_blank" rel="noopener noreferrer">
+			<Link
+				href="https://github.com/SikandarJODD/cnblocks"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				GitHub
 			</Link>.
 		</Paragraph>

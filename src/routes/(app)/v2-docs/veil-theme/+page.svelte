@@ -30,13 +30,12 @@
 <DocsPageShell
 	title="Veil Theme Setup"
 	description="Configure the Veil variant for modern SaaS and startup landing pages."
-	showToc={pageMeta.toc}
 >
 	<section class="space-y-4">
 		<H2 id="when-to-use">When To Use Veil</H2>
 		<Paragraph>
-			Veil is designed for product positioning pages with stronger marketing sections and richer UI
-			composition.
+			Veil is designed for product positioning pages with stronger marketing sections and
+			richer UI composition.
 		</Paragraph>
 	</section>
 

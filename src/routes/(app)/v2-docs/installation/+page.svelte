@@ -31,7 +31,6 @@
 <DocsPageShell
 	title="Installation"
 	description="Install and configure Svelte Shadcn Blocks in a new or existing SvelteKit app."
-	showToc={pageMeta.toc}
 >
 	<section class="space-y-4">
 		<H2 id="requirements">Requirements</H2>
@@ -73,11 +72,7 @@
 				<DocsCodeBlock fileName="Terminal" code="npx sv add tailwindcss" lang="bash" />
 			</Step>
 			<Step title="Initialize shadcn-svelte">
-				<DocsCodeBlock
-					fileName="Terminal"
-					code="npx shadcn-svelte@next init"
-					lang="bash"
-				/>
+				<DocsCodeBlock fileName="Terminal" code="npx shadcn-svelte@next init" lang="bash" />
 			</Step>
 			<Step title="Install a block with jsrepo">
 				<DocsCodeBlock
@@ -93,15 +88,17 @@
 		<H2 id="verification">Verification</H2>
 		<H3 id="check-imports">Check Imports</H3>
 		<Paragraph>
-			After installation, import the generated component and ensure your app compiles without type
-			errors.
+			After installation, import the generated component and ensure your app compiles without
+			type errors.
 		</Paragraph>
 		<Blockquote>
-			If installation fails, verify your shadcn-svelte init completed first. Most issues come from
-			missing base UI setup.
+			If installation fails, verify your shadcn-svelte init completed first. Most issues come
+			from missing base UI setup.
 		</Blockquote>
 		<Paragraph>
-			Use this route as your baseline before following <Strong>Mist</Strong> or <Strong>Veil</Strong>{" "}
+			Use this route as your baseline before following <Strong>Mist</Strong> or <Strong
+				>Veil</Strong
+			>{" "}
 			theme-specific setup.
 		</Paragraph>
 	</section>

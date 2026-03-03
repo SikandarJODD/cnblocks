@@ -26,17 +26,20 @@
 <DocsPageShell
 	title="MCP Server"
 	description="Set up jsrepo MCP server for Cursor and Windsurf workflows."
-	showToc={pageMeta.toc}
 >
 	<section class="space-y-4">
 		<H2 id="overview">Overview</H2>
 		<Paragraph>
-			Use MCP with jsrepo to make block discovery and installation easier in AI IDEs like Cursor
-			and Windsurf.
+			Use MCP with jsrepo to make block discovery and installation easier in AI IDEs like
+			Cursor and Windsurf.
 		</Paragraph>
 		<Paragraph>
 			Reference:{" "}
-			<Link href="https://jsrepo.dev/docs/registry/mcp" target="_blank" rel="noopener noreferrer">
+			<Link
+				href="https://jsrepo.dev/docs/registry/mcp"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				jsrepo MCP docs
 			</Link>
 		</Paragraph>
@@ -98,7 +101,9 @@ jsrepo mcp`}
 			`@sv/cnblocks` entries.
 		</Blockquote>
 		<Paragraph>
-			Need the base setup first? Return to <Link href="/v2-docs/installation">Installation</Link>.
+			Need the base setup first? Return to <Link href="/v2-docs/installation"
+				>Installation</Link
+			>.
 		</Paragraph>
 	</section>
 </DocsPageShell>

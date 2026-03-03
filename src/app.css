@@ -141,6 +141,12 @@
 	--animate-exit-to-right: exit-to-right 0.2s ease;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+
 @layer base {
 	*,
 	::after,
@@ -154,6 +160,9 @@
 @layer base {
 	* {
 		@apply border-border outline-ring/50;
+	}
+	html {
+		scroll-behavior: smooth;
 	}
 	body {
 		@apply bg-background text-foreground;

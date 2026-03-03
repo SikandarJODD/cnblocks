@@ -53,9 +53,9 @@
 	};
 </script>
 
-<Sidebar.Root bind:ref variant="inset" class='pt-20' {...restProps}>
+<Sidebar.Root bind:ref variant="inset" class="pt-20" {...restProps}>
 	<Sidebar.Content class="overflow-hidden">
-		<ScrollArea class="h-full pr-1" orientation="vertical">
+		<ScrollArea class="h-full pr-1" orientation="vertical" scrollbarYClasses="hidden">
 			<div class="space-y-2 pb-3">
 				<NavMain label="Guide" items={data.guide} />
 				<NavMain label="Theme Setup" items={data.themeSetup} />

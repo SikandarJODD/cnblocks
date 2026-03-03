@@ -27,7 +27,6 @@
 <DocsPageShell
 	title="Mist Theme Setup"
 	description="Configure the Mist variant for minimal, content-focused documentation and marketing pages."
-	showToc={pageMeta.toc}
 >
 	<section class="space-y-4">
 		<H2 id="goal">Goal</H2>
@@ -75,8 +74,8 @@
 			<ListItem>Keep typography scale consistent across docs pages.</ListItem>
 		</UnorderedList>
 		<Paragraph>
-			For examples, inspect components under <Strong>`$lib/components/mist`</Strong> and static docs
-			text under <Strong>`/static/docs/mist`</Strong>.
+			For examples, inspect components under <Strong>`$lib/components/mist`</Strong> and static
+			docs text under <Strong>`/static/docs/mist`</Strong>.
 		</Paragraph>
 	</section>
 </DocsPageShell>

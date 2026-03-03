@@ -27,16 +27,20 @@
 	keywords={pageMeta.seo.keywords}
 />
 
-<DocsPageShell title="Introduction" description="Everything you need to start using Svelte Shadcn Blocks." showToc={pageMeta.toc}>
+<DocsPageShell
+	title="Introduction"
+	description="Everything you need to start using Svelte Shadcn Blocks."
+>
 	<section class="space-y-4">
 		<H2 id="overview">Overview</H2>
 		<Paragraph>
-			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong>Svelte 5</Strong>,
-			shadcn-svelte primitives, and Tailwind CSS v4.
+			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong
+				>Svelte 5</Strong
+			>, shadcn-svelte primitives, and Tailwind CSS v4.
 		</Paragraph>
 		<Paragraph>
-			The new docs v2 focuses on better navigation, predictable route structure, and consistent
-			content composition through markdown components.
+			The new docs v2 focuses on better navigation, predictable route structure, and
+			consistent content composition through markdown components.
 		</Paragraph>
 	</section>
 
@@ -78,8 +82,8 @@
 			<ListItem>Use MCP docs if you want AI-assisted block installation workflows.</ListItem>
 		</UnorderedList>
 		<Paragraph>
-			Start with <Link href="/v2-docs/installation">Installation</Link> and continue with the
-			theme setup that matches your project.
+			Start with <Link href="/v2-docs/installation">Installation</Link> and continue with the theme
+			setup that matches your project.
 		</Paragraph>
 	</section>
 
