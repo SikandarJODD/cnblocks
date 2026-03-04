@@ -85,6 +85,7 @@
 	--ring: var(--primary);
 
 	--font-family: "Geist", sans-serif;
+	--font-serif: "Asar", serif;
 
 	@variant dark {
 		--font-family: "Geist", sans-serif;
@@ -112,6 +113,12 @@
 
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
 }`} lang="css" />
+		<Paragraph>
+			Veil uses Asar as the serif accent font.
+			<Link href="https://fonts.google.com/specimen/Asar" target="_blank" rel="noreferrer">
+				Asar on Google Fonts
+			</Link>
+		</Paragraph>
 	</section>
 
 	<section class="space-y-4">
@@ -616,4 +623,3 @@ export {
 		</Paragraph>
 	</section> -->
 </DocsPageShell>
-
