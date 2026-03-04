@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-integration-two",
+	"type": "registry:block",
+	"description": "Mist-style integration marquee",
+	"registryDependencies": [
+		"button",
+		"mist-logo-gemini",
+		"mist-logo-google-palm",
+		"mist-logo-magic-ui",
+		"mist-logo-media-wiki",
+		"mist-logo-replit",
+		"mist-logo-vscodium"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport Gemini from \"../mlogos/Gemini.svelte\";\n\timport GooglePaLM from \"../mlogos/GooglePaLM.svelte\";\n\timport Replit from \"../mlogos/Replit.svelte\";\n\timport MediaWiki from \"../mlogos/MediaWiki.svelte\";\n\timport MagicUI from \"../mlogos/MagicUI.svelte\";\n\timport VSCodium from \"../mlogos/VSCodium.svelte\";\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n</script>\n\n<section>\n\t<div class=\"mx-auto max-w-5xl px-6 py-8\">\n\t\t<div class=\"space-y-6 text-center\">\n\t\t\t<h2 class=\"text-2xl font-semibold text-foreground\">\n\t\t\t\tIntegrate with your favorite tools :\n\t\t\t</h2>\n\t\t\t<div\n\t\t\t\tclass=\"mx-auto flex max-w-xl flex-wrap justify-center gap-0.5 *:rounded *:bg-foreground/5 *:p-6 *:first:rounded-l-xl *:last:rounded-r-xl\"\n\t\t\t>\n\t\t\t\t<div>\n\t\t\t\t\t<Gemini class=\"m-auto size-8\" />\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<GooglePaLM class=\"m-auto size-8\" />\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<Replit class=\"m-auto size-8\" />\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<MediaWiki class=\"m-auto size-8\" />\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<MagicUI class=\"m-auto size-8\" />\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<VSCodium class=\"m-auto size-8\" />\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<Button variant=\"outline\">More Integrations</Button>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "mist/mintegration/two.svelte"
+		}
+	]
+}

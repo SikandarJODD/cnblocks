@@ -28,21 +28,29 @@
 	<section class="space-y-4">
 		<H2 id="overview">Overview</H2>
 		<Paragraph>
-			Mist is the Notion-inspired variant designed for wiki-style and content-heavy websites. It
-			keeps the visual language minimal so product messaging and documentation stay readable.
+			Mist is the Notion-inspired variant designed for wiki-style and content-heavy websites.
+			It keeps the visual language minimal so product messaging and documentation stay
+			readable.
 		</Paragraph>
 		<UnorderedList>
-			<ListItem>Best for documentation hubs, changelogs, product guides, and lightweight marketing pages.</ListItem>
-			<ListItem>Includes Mist-specific UI primitives like neutral buttons and soft/mixed cards.</ListItem>
-			<ListItem>Works with the same Svelte 5 and shadcn-svelte foundations as other variants.</ListItem>
+			<ListItem
+				>Best for documentation hubs, changelogs, product guides, and lightweight marketing
+				pages.</ListItem
+			>
+			<ListItem
+				>Includes Mist-specific UI primitives like neutral buttons and soft/mixed cards.</ListItem
+			>
+			<ListItem
+				>Works with the same Svelte 5 and shadcn-svelte foundations as other variants.</ListItem
+			>
 		</UnorderedList>
 	</section>
 
 	<section class="space-y-4">
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
 		<Paragraph>
-			Add the Mist theme variables to your global stylesheet (for example `globals.css`) so Mist
-			components resolve colors, borders, and contrast correctly.
+			Add the Mist theme variables to your global stylesheet (for example `globals.css`) so
+			Mist components resolve colors, borders, and contrast correctly.
 		</Paragraph>
 		<DocsCodeBlock
 			fileName="globals.css"
@@ -98,8 +106,8 @@
 	<section class="space-y-4">
 		<H2 id="button-component">Button Component</H2>
 		<Paragraph>
-			Mist button adds a `neutral` variant for bold monochrome actions while keeping the standard
-			shadcn-like variants.
+			Mist button adds a `neutral` variant for bold monochrome actions while keeping the
+			standard shadcn-like variants.
 		</Paragraph>
 		<H3 id="button-usage">Usage</H3>
 		<DocsCodeBlock
@@ -218,8 +226,8 @@ export {
 	<section class="space-y-4">
 		<H2 id="card-component">Card Component</H2>
 		<Paragraph>
-			Mist card adds `soft` and `mixed` variants to support subtle sections commonly used across
-			documentation-style layouts.
+			Mist card adds `soft` and `mixed` variants to support subtle sections commonly used
+			across documentation-style layouts.
 		</Paragraph>
 		<H3 id="card-usage">Usage</H3>
 		<DocsCodeBlock
@@ -436,7 +444,9 @@ export {
 		</Paragraph>
 		<UnorderedList>
 			<ListItem>Use Mist sections from `/mist/*` routes as composition references.</ListItem>
-			<ListItem>Reuse Mist primitives from `$lib/components/ui/mist/*` for consistency.</ListItem>
+			<ListItem
+				>Reuse Mist primitives from `$lib/components/ui/mist/*` for consistency.</ListItem
+			>
 			<ListItem>Keep accents subtle and prioritize readable copy blocks.</ListItem>
 		</UnorderedList>
 	</section>

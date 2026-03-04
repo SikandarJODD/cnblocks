@@ -1,28 +1,19 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "pricing-four",
-  "type": "pricing",
-  "description": "Four-tier pricing with toggle switch",
-  "registryDependencies": [
-    "button"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "@lucide/svelte",
-      "version": "^0.561.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "pricing-four.svelte",
-      "type": "pricing",
-      "target": "pricing-four.svelte",
-      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import Check from \"@lucide/svelte/icons/check\";\r\n\r\n  let pricingList = {\r\n    free: [\r\n      \"Basic Analytics Dashboard\",\r\n      \"5GB Cloud Storage\",\r\n      \"Email and Chat Support\",\r\n    ],\r\n    startup: [\r\n      \"Everything in Pro Plan\",\r\n      \"5GB Cloud Storage\",\r\n      \"Email and Chat Support\",\r\n    ],\r\n    pro: [\r\n      \"Everything in Free Plan\",\r\n      \"5GB Cloud Storage\",\r\n      \"Email and Chat Support\",\r\n      \"Access to Community Forum\",\r\n      \"Single User Access\",\r\n      \"Access to Basic Templates\",\r\n      \"Mobile App Access\",\r\n      \"1 Custom Report Per Month\",\r\n      \"Monthly Product Updates\",\r\n      \"Standard Security Features\",\r\n    ],\r\n  };\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"mx-auto max-w-2xl space-y-6 text-center\">\r\n      <h1 class=\"text-center text-4xl font-semibold lg:text-5xl\">\r\n        Pricing that Scales with You\r\n      </h1>\r\n      <p>\r\n        Gemini is evolving to be more than just the models. It supports an\r\n        entire to the APIs and platforms helping developers and businesses\r\n        innovate.\r\n      </p>\r\n    </div>\r\n\r\n    <div class=\"mt-8 grid gap-6 md:mt-20 md:grid-cols-5 md:gap-0\">\r\n      <div\r\n        class=\"rounded-(--radius) flex flex-col justify-between space-y-8 border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10\"\r\n      >\r\n        <div class=\"space-y-4\">\r\n          <div>\r\n            <h2 class=\"font-medium\">Free</h2>\r\n            <span class=\"my-3 block text-2xl font-semibold\">$0 / mo</span>\r\n            <p class=\"text-muted-foreground text-sm\">Per editor</p>\r\n          </div>\r\n\r\n          <Button href=\"#\" variant=\"outline\" class=\"w-full\">Get Started</Button>\r\n\r\n          <hr class=\"border-dashed\" />\r\n\r\n          <ul class=\"list-outside space-y-3 text-sm\">\r\n            {#each pricingList.free as item}\r\n              <li class=\"flex items-center gap-2\">\r\n                <Check class=\"size-3\" />\r\n                {item}\r\n              </li>\r\n            {/each}\r\n          </ul>\r\n        </div>\r\n      </div>\r\n\r\n      <div\r\n        class=\"dark:bg-muted rounded-(--radius) border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:[--color-muted:var(--color-zinc-900)]\"\r\n      >\r\n        <div class=\"grid gap-6 sm:grid-cols-2\">\r\n          <div class=\"space-y-4\">\r\n            <div>\r\n              <h2 class=\"font-medium\">Pro</h2>\r\n              <span class=\"my-3 block text-2xl font-semibold\">$19 / mo</span>\r\n              <p class=\"text-muted-foreground text-sm\">Per editor</p>\r\n            </div>\r\n\r\n            <Button href=\"#\" class=\"w-full\">Get Started</Button>\r\n          </div>\r\n\r\n          <div>\r\n            <div class=\"text-sm font-medium\">Everything in free plus :</div>\r\n\r\n            <ul class=\"mt-4 list-outside space-y-3 text-sm\">\r\n              {#each pricingList.pro as item}\r\n                <li class=\"flex items-center gap-2\">\r\n                  <Check class=\"size-3\" />\r\n                  {item}\r\n                </li>\r\n              {/each}\r\n            </ul>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "pricing-four",
+	"type": "registry:block",
+	"description": "Four-tier pricing with toggle switch",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n\timport Check from \"@lucide/svelte/icons/check\";\n\n\tlet pricingList = {\n\t\tfree: [\"Basic Analytics Dashboard\", \"5GB Cloud Storage\", \"Email and Chat Support\"],\n\t\tstartup: [\"Everything in Pro Plan\", \"5GB Cloud Storage\", \"Email and Chat Support\"],\n\t\tpro: [\n\t\t\t\"Everything in Free Plan\",\n\t\t\t\"5GB Cloud Storage\",\n\t\t\t\"Email and Chat Support\",\n\t\t\t\"Access to Community Forum\",\n\t\t\t\"Single User Access\",\n\t\t\t\"Access to Basic Templates\",\n\t\t\t\"Mobile App Access\",\n\t\t\t\"1 Custom Report Per Month\",\n\t\t\t\"Monthly Product Updates\",\n\t\t\t\"Standard Security Features\",\n\t\t],\n\t};\n</script>\n\n<section class=\"py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t<div class=\"mx-auto max-w-2xl space-y-6 text-center\">\n\t\t\t<h1 class=\"text-center text-4xl font-semibold lg:text-5xl\">\n\t\t\t\tPricing that Scales with You\n\t\t\t</h1>\n\t\t\t<p>\n\t\t\t\tGemini is evolving to be more than just the models. It supports an entire to the\n\t\t\t\tAPIs and platforms helping developers and businesses innovate.\n\t\t\t</p>\n\t\t</div>\n\n\t\t<div class=\"mt-8 grid gap-6 md:mt-20 md:grid-cols-5 md:gap-0\">\n\t\t\t<div\n\t\t\t\tclass=\"flex flex-col justify-between space-y-8 rounded-(--radius) border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10\"\n\t\t\t>\n\t\t\t\t<div class=\"space-y-4\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<h2 class=\"font-medium\">Free</h2>\n\t\t\t\t\t\t<span class=\"my-3 block text-2xl font-semibold\">$0 / mo</span>\n\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">Per editor</p>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<Button href=\"#\" variant=\"outline\" class=\"w-full\">Get Started</Button>\n\n\t\t\t\t\t<hr class=\"border-dashed\" />\n\n\t\t\t\t\t<ul class=\"list-outside space-y-3 text-sm\">\n\t\t\t\t\t\t{#each pricingList.free as item}\n\t\t\t\t\t\t\t<li class=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t\t<Check class=\"size-3\" />\n\t\t\t\t\t\t\t\t{item}\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t{/each}\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div\n\t\t\t\tclass=\"rounded-(--radius) border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:bg-muted dark:[--color-muted:var(--color-zinc-900)]\"\n\t\t\t>\n\t\t\t\t<div class=\"grid gap-6 sm:grid-cols-2\">\n\t\t\t\t\t<div class=\"space-y-4\">\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h2 class=\"font-medium\">Pro</h2>\n\t\t\t\t\t\t\t<span class=\"my-3 block text-2xl font-semibold\">$19 / mo</span>\n\t\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">Per editor</p>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<Button href=\"#\" class=\"w-full\">Get Started</Button>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<div class=\"text-sm font-medium\">Everything in free plus :</div>\n\n\t\t\t\t\t\t<ul class=\"mt-4 list-outside space-y-3 text-sm\">\n\t\t\t\t\t\t\t{#each pricingList.pro as item}\n\t\t\t\t\t\t\t\t<li class=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t\t\t<Check class=\"size-3\" />\n\t\t\t\t\t\t\t\t\t{item}\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t{/each}\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/pricing/pricing-four.svelte"
+		}
+	]
 }

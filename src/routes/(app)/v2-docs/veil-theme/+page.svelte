@@ -53,7 +53,9 @@
 			<code>globals.css</code>) so all Veil primitives resolve color, border, focus ring, and
 			typography consistently.
 		</Paragraph>
-		<DocsCodeBlock fileName="globals.css" code={`[data-theme="veil"] .theme-container {
+		<DocsCodeBlock
+			fileName="globals.css"
+			code={`[data-theme="veil"] .theme-container {
 	--radius: 0.625rem;
 
 	--background: oklch(0.9779 0.0042 56.38);
@@ -112,7 +114,9 @@
 	}
 
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
-}`} lang="css" />
+}`}
+			lang="css"
+		/>
 		<Paragraph>
 			Veil uses Asar as the serif accent font.
 			<Link href="https://fonts.google.com/specimen/Asar" target="_blank" rel="noreferrer">
@@ -127,9 +131,13 @@
 			Ensure your root body includes <code>theme-container</code> so the selected theme scope is
 			applied across the application.
 		</Paragraph>
-		<DocsCodeBlock fileName="src/app.html" code={`<body class="theme-container">
+		<DocsCodeBlock
+			fileName="src/app.html"
+			code={`<body class="theme-container">
 	<!-- Your Application -->
-</body>`} lang="html" />
+</body>`}
+			lang="html"
+		/>
 	</section>
 
 	<section class="space-y-4">
@@ -176,15 +184,21 @@
 			Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
 		</Paragraph>
 		<H3 id="button-usage">Usage</H3>
-		<DocsCodeBlock fileName="button-usage.svelte" code={`\<\script lang="ts"\>
+		<DocsCodeBlock
+			fileName="button-usage.svelte"
+			code={`\<\script lang="ts"\>
 	import { Button } from "$lib/components/ui/veil/button";
 \<\/script\>
 
 <Button variant="default">Default Button</Button>
 <Button variant="outline">Outline Button</Button>
-<Button size="lg">Large Button</Button>`} lang="svelte" />
+<Button size="lg">Large Button</Button>`}
+			lang="svelte"
+		/>
 		<H3 id="button-source">Source</H3>
-		<DocsCodeBlock fileName="button.svelte" code={`\<\script lang="ts" module\>
+		<DocsCodeBlock
+			fileName="button.svelte"
+			code={`\<\script lang="ts" module\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
 	import { type VariantProps, tv } from "tailwind-variants";
@@ -259,10 +273,16 @@
 	>
 		{@render children?.()}
 	</button>
-{/if}`} lang="svelte" />
-		<DocsCodeBlock fileName="index.ts" code={`import Button from "./button.svelte";
+{/if}`}
+			lang="svelte"
+		/>
+		<DocsCodeBlock
+			fileName="index.ts"
+			code={`import Button from "./button.svelte";
 
-export { Button };`} lang="ts" />
+export { Button };`}
+			lang="ts"
+		/>
 	</section>
 
 	<section class="space-y-4">
@@ -274,7 +294,9 @@ export { Button };`} lang="ts" />
 		</Paragraph>
 		<H3 id="card-usage">Usage</H3>
 		<div>
-			<DocsCodeBlock fileName="card-usage.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="card-usage.svelte"
+				code={`\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/veil/card";
 \<\/script\>
 
@@ -290,11 +312,15 @@ export { Button };`} lang="ts" />
 		<CardTitle>Outline Card</CardTitle>
 	</CardHeader>
 	<CardContent>...</CardContent>
-</Card>`} lang="svelte" />
+</Card>`}
+				lang="svelte"
+			/>
 		</div>
 		<H3 id="card-source">Source</H3>
 		<div>
-			<DocsCodeBlock fileName="card.svelte" code={`\<\script module lang="ts"\>
+			<DocsCodeBlock
+				fileName="card.svelte"
+				code={`\<\script module lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import { type VariantProps, tv } from "tailwind-variants";
 
@@ -336,10 +362,14 @@ export { Button };`} lang="ts" />
 
 <div bind:this={ref} class={cn(cardVariants({ variant }), className)} {...restProps}>
 	{@render children?.()}
-</div>`} lang="svelte" />
+</div>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="card-header.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="card-header.svelte"
+				code={`\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { cn } from "$lib/utils.js";
@@ -355,10 +385,14 @@ export { Button };`} lang="ts" />
 <!--  pb-0 -->
 <div bind:this={ref} class={cn("flex flex-col space-y-1.5 p-6", className)} {...restProps}>
 	{@render children?.()}
-</div>`} lang="svelte" />
+</div>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="card-title.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="card-title.svelte"
+				code={`\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { cn } from "$lib/utils.js";
@@ -382,10 +416,14 @@ export { Button };`} lang="ts" />
 	{...restProps}
 >
 	{@render children?.()}
-</div>`} lang="svelte" />
+</div>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="card-description.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="card-description.svelte"
+				code={`\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { cn } from "$lib/utils.js";
@@ -400,10 +438,14 @@ export { Button };`} lang="ts" />
 
 <p bind:this={ref} class={cn("text-sm text-muted-foreground", className)} {...restProps}>
 	{@render children?.()}
-</p>`} lang="svelte" />
+</p>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="card-content.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="card-content.svelte"
+				code={`\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { cn } from "$lib/utils.js";
@@ -418,10 +460,14 @@ export { Button };`} lang="ts" />
 
 <div bind:this={ref} class={cn("p-6 pt-0", className)} {...restProps}>
 	{@render children?.()}
-</div>`} lang="svelte" />
+</div>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="card-footer.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="card-footer.svelte"
+				code={`\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { cn } from "$lib/utils.js";
@@ -436,10 +482,14 @@ export { Button };`} lang="ts" />
 
 <div bind:this={ref} class={cn("flex items-center p-6 pt-0", className)} {...restProps}>
 	{@render children?.()}
-</div>`} lang="svelte" />
+</div>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="index.ts" code={`import Root from "./card.svelte";
+			<DocsCodeBlock
+				fileName="index.ts"
+				code={`import Root from "./card.svelte";
 import Content from "./card-content.svelte";
 import Description from "./card-description.svelte";
 import Footer from "./card-footer.svelte";
@@ -460,7 +510,9 @@ export {
 	Footer as CardFooter,
 	Header as CardHeader,
 	Title as CardTitle,
-};`} lang="ts" />
+};`}
+				lang="ts"
+			/>
 		</div>
 	</section>
 
@@ -471,16 +523,22 @@ export {
 			states.
 		</Paragraph>
 		<H3 id="input-usage">Usage</H3>
-		<DocsCodeBlock fileName="input-usage.svelte" code={`\<\script lang="ts"\>
+		<DocsCodeBlock
+			fileName="input-usage.svelte"
+			code={`\<\script lang="ts"\>
 	import { Input } from "$lib/components/ui/veil/input";
 \<\/script\>
 
 <Input type="email" placeholder="you@example.com" />
 <Input aria-invalid="true" placeholder="Invalid state" />
-<Input type="file" />`} lang="svelte" />
+<Input type="file" />`}
+			lang="svelte"
+		/>
 		<H3 id="input-source">Source</H3>
 		<div>
-			<DocsCodeBlock fileName="input.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="input.svelte"
+				code={`\<\script lang="ts"\>
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from "svelte/elements";
 	import type { WithElementRef } from "bits-ui";
 	import { cn } from "$lib/utils.js";
@@ -529,16 +587,22 @@ export {
 		bind:value
 		{...restProps}
 	/>
-{/if}`} lang="svelte" />
+{/if}`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="index.ts" code={`import Root from "./input.svelte";
+			<DocsCodeBlock
+				fileName="index.ts"
+				code={`import Root from "./input.svelte";
 
 export {
 	Root,
 	//
 	Root as Input,
-};`} lang="ts" />
+};`}
+				lang="ts"
+			/>
 		</div>
 	</section>
 
@@ -550,16 +614,22 @@ export {
 		</Paragraph>
 		<H3 id="textarea-usage">Usage</H3>
 		<div>
-			<DocsCodeBlock fileName="textarea-usage.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="textarea-usage.svelte"
+				code={`\<\script lang="ts"\>
 	import { Textarea } from "$lib/components/ui/veil/textarea";
 \<\/script\>
 
 <Textarea placeholder="Enter details..." />
-<Textarea aria-invalid="true" placeholder="Invalid state" />`} lang="svelte" />
+<Textarea aria-invalid="true" placeholder="Invalid state" />`}
+				lang="svelte"
+			/>
 		</div>
 		<H3 id="textarea-source">Source</H3>
 		<div>
-			<DocsCodeBlock fileName="textarea.svelte" code={`\<\script lang="ts"\>
+			<DocsCodeBlock
+				fileName="textarea.svelte"
+				code={`\<\script lang="ts"\>
 	import type { WithElementRef, WithoutChildren } from "bits-ui";
 	import type { HTMLTextareaAttributes } from "svelte/elements";
 	import { cn } from "$lib/utils.js";
@@ -580,16 +650,22 @@ export {
 		className
 	)}
 	{...restProps}
-></textarea>`} lang="svelte" />
+></textarea>`}
+				lang="svelte"
+			/>
 		</div>
 		<div>
-			<DocsCodeBlock fileName="index.ts" code={`import Root from "./textarea.svelte";
+			<DocsCodeBlock
+				fileName="index.ts"
+				code={`import Root from "./textarea.svelte";
 
 export {
 	Root,
 	//
 	Root as Textarea,
-};`} lang="ts" />
+};`}
+				lang="ts"
+			/>
 		</div>
 	</section>
 

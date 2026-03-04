@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-content-three",
+	"type": "registry:block",
+	"description": "Mist-style content with side image",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n</script>\n\n<section>\n\t<div class=\"py-24\">\n\t\t<div class=\"mx-auto w-full max-w-5xl px-6\">\n\t\t\t<div class=\"mx-auto max-w-2xl\">\n\t\t\t\t<div>\n\t\t\t\t\t<span class=\"text-3xl\">🦊</span>\n\t\t\t\t\t<h2 class=\"mt-4 text-4xl font-semibold text-foreground\">\n\t\t\t\t\t\tCreate Content with AI Assistance\n\t\t\t\t\t</h2>\n\t\t\t\t\t<p class=\"mt-4 mb-12 text-xl text-muted-foreground\">\n\t\t\t\t\t\tOur AI assistant helps you create better content faster. Generate ideas,\n\t\t\t\t\t\timprove your writing, and design layouts with simple prompts.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"relative mt-12 overflow-hidden rounded-3xl bg-black/10 md:mt-16\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tsrc=\"https://images.unsplash.com/photo-1533119408463-b0f487583ff6?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n\t\t\t\t\t\talt=\"\"\n\t\t\t\t\t\tclass=\"absolute inset-0 size-full object-cover\"\n\t\t\t\t\t/>\n\n\t\t\t\t\t<div\n\t\t\t\t\t\tclass=\"relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl ring-1 shadow-black/15 sm:m-8 md:m-12\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\tsrc=\"/mist/tailark-3.png\"\n\t\t\t\t\t\t\talt=\"app screen\"\n\t\t\t\t\t\t\twidth=\"2880\"\n\t\t\t\t\t\t\theight=\"1842\"\n\t\t\t\t\t\t\tclass=\"size-full object-cover object-top-left\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "mist/mcontent/three.svelte"
+		}
+	]
+}

@@ -117,8 +117,8 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.j
 			<Step title="Or simply copy and paste components">
 				<Paragraph class="mt-0">
 					Open any preview route, copy the component markup, and paste it into your app.
-					Start with <Link href="/preview/hero/one">Default</Link>, <Link href="/preview/mist/hero/one"
-						>Mist</Link
+					Start with <Link href="/preview/hero/one">Default</Link>, <Link
+						href="/preview/mist/hero/one">Mist</Link
 					>, or <Link href="/preview/veil/hero/hero-one">Veil</Link>.
 				</Paragraph>
 			</Step>
@@ -136,7 +136,9 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.j
 				<article
 					class="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
 				>
-					<div class={`pointer-events-none absolute inset-0 bg-gradient-to-br ${card.accent}`} />
+					<div
+						class={`pointer-events-none absolute inset-0 bg-gradient-to-br ${card.accent}`}
+					/>
 					<div class="relative z-10 space-y-4">
 						<span
 							class="inline-flex rounded-full border border-border/80 bg-background/80 px-2.5 py-1 text-xs font-medium text-muted-foreground"
@@ -144,10 +146,14 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.j
 							{card.label}
 						</span>
 						<div class="space-y-2">
-							<h3 class="text-base font-semibold leading-snug tracking-tight text-foreground">
+							<h3
+								class="text-base leading-snug font-semibold tracking-tight text-foreground"
+							>
 								{card.title}
 							</h3>
-							<p class="text-sm leading-relaxed text-muted-foreground">{card.description}</p>
+							<p class="text-sm leading-relaxed text-muted-foreground">
+								{card.description}
+							</p>
 						</div>
 						<a
 							href={card.href}

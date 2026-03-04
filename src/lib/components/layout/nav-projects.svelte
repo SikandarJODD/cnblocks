@@ -82,7 +82,7 @@
 							href={item.url}
 							target={item.external ? "_blank" : undefined}
 							rel={item.external ? "noopener noreferrer" : undefined}
-							class='text-xs'
+							class="text-xs"
 							{...props}
 						>
 							<!-- <item.icon /> -->

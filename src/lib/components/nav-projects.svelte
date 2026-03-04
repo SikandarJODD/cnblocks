@@ -51,7 +51,7 @@
 	<Sidebar.Menu>
 		{#each projects as item (item.name)}
 			<Sidebar.MenuItem>
-				<Sidebar.MenuButton class='text-sm'>
+				<Sidebar.MenuButton class="text-sm">
 					{#snippet child({ props })}
 						<a href={item.url} {...props}>
 							<!-- <item.icon /> -->

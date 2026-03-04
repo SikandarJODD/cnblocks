@@ -14,7 +14,7 @@
 			name: "Bhide Svelte",
 			desc: "I Love Svelte",
 			avatar: "https://pbs.twimg.com/profile_images/1734257897247514625/IaW4s_ba_400x400.jpg",
-			visit: "https://github.com/SikandarJODD/cnblocks"
+			visit: "https://github.com/SikandarJODD/cnblocks",
 		},
 		guide: [
 			{

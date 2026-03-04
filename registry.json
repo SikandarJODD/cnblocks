@@ -16,14 +16,12 @@
 			"description": "Before/after image comparison slider block",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/comparator/comparator-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/comparator/comparator-one.svelte"
+					"target": "blocks/comparator/comparator-one.svelte"
 				}
 			]
 		},
@@ -31,21 +29,14 @@
 			"name": "contact-one",
 			"type": "registry:block",
 			"description": "Contact form with input fields and submit button",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/contact/contact-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/contact/contact-one.svelte"
+					"target": "blocks/contact/contact-one.svelte"
 				}
 			]
 		},
@@ -53,21 +44,14 @@
 			"name": "contact-two",
 			"type": "registry:block",
 			"description": "Two-column contact section with form and info",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/contact/contact-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/contact/contact-two.svelte"
+					"target": "blocks/contact/contact-two.svelte"
 				}
 			]
 		},
@@ -77,14 +61,12 @@
 			"description": "Content block with image and text in grid layout",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/content/content-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-five.svelte"
+					"target": "blocks/content/content-five.svelte"
 				}
 			]
 		},
@@ -92,18 +74,14 @@
 			"name": "content-four",
 			"type": "registry:block",
 			"description": "Content section with feature highlights",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/content/content-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-four.svelte"
+					"target": "blocks/content/content-four.svelte"
 				}
 			]
 		},
@@ -118,7 +96,7 @@
 				{
 					"path": "src/lib/components/blocks/content/content-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-one.svelte"
+					"target": "blocks/content/content-one.svelte"
 				}
 			]
 		},
@@ -128,14 +106,12 @@
 			"description": "Content block with alternating layout",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/content/content-seven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-seven.svelte"
+					"target": "blocks/content/content-seven.svelte"
 				}
 			]
 		},
@@ -150,7 +126,7 @@
 				{
 					"path": "src/lib/components/blocks/content/content-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-six.svelte"
+					"target": "blocks/content/content-six.svelte"
 				}
 			]
 		},
@@ -158,18 +134,14 @@
 			"name": "content-three",
 			"type": "registry:block",
 			"description": "Two-column content with image sidebar",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/content/content-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-three.svelte"
+					"target": "blocks/content/content-three.svelte"
 				}
 			]
 		},
@@ -179,14 +151,12 @@
 			"description": "Content block with centered text and CTA",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/content/content-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/content/content-two.svelte"
+					"target": "blocks/content/content-two.svelte"
 				}
 			]
 		},
@@ -194,16 +164,14 @@
 			"name": "cta-one",
 			"type": "registry:block",
 			"description": "Call-to-action block with centered heading and buttons",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/cta/cta-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/cta/cta-one.svelte"
+					"target": "blocks/cta/cta-one.svelte"
 				}
 			]
 		},
@@ -211,18 +179,14 @@
 			"name": "cta-three",
 			"type": "registry:block",
 			"description": "CTA section with background gradient",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/cta/cta-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/cta/cta-three.svelte"
+					"target": "blocks/cta/cta-three.svelte"
 				}
 			]
 		},
@@ -230,16 +194,14 @@
 			"name": "cta-two",
 			"type": "registry:block",
 			"description": "Two-column CTA with text and action buttons",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/cta/cta-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/cta/cta-two.svelte"
+					"target": "blocks/cta/cta-two.svelte"
 				}
 			]
 		},
@@ -247,16 +209,14 @@
 			"name": "faq-four",
 			"type": "registry:block",
 			"description": "FAQ section with search and categories",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/faq/faq-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/faq/faq-four.svelte"
+					"target": "blocks/faq/faq-four.svelte"
 				}
 			]
 		},
@@ -271,7 +231,7 @@
 				{
 					"path": "src/lib/components/blocks/faq/faq-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/faq/faq-one.svelte"
+					"target": "blocks/faq/faq-one.svelte"
 				}
 			]
 		},
@@ -279,18 +239,14 @@
 			"name": "faq-three",
 			"type": "registry:block",
 			"description": "FAQ with two-column layout",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/faq/faq-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/faq/faq-three.svelte"
+					"target": "blocks/faq/faq-three.svelte"
 				}
 			]
 		},
@@ -298,16 +254,14 @@
 			"name": "faq-two",
 			"type": "registry:block",
 			"description": "FAQ section with expandable items",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/faq/faq-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/faq/faq-two.svelte"
+					"target": "blocks/faq/faq-two.svelte"
 				}
 			]
 		},
@@ -317,14 +271,12 @@
 			"description": "Decorative card component with visual effects",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"svelte"
-			],
+			"devDependencies": ["svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/card-decorator.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/card-decorator.svelte"
+					"target": "blocks/feature/card-decorator.svelte"
 				}
 			]
 		},
@@ -332,19 +284,14 @@
 			"name": "feature-card",
 			"type": "registry:block",
 			"description": "Reusable feature card with icon and text",
-			"registryDependencies": [
-				"card",
-				"utils"
-			],
+			"registryDependencies": ["card", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"svelte"
-			],
+			"devDependencies": ["svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-card.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-card.svelte"
+					"target": "blocks/feature/feature-card.svelte"
 				}
 			]
 		},
@@ -352,18 +299,14 @@
 			"name": "feature-eight",
 			"type": "registry:block",
 			"description": "Feature grid with icons in circular containers",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-eight.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-eight.svelte"
+					"target": "blocks/feature/feature-eight.svelte"
 				}
 			]
 		},
@@ -378,7 +321,7 @@
 				{
 					"path": "src/lib/components/blocks/feature/feature-eleven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-eleven.svelte"
+					"target": "blocks/feature/feature-eleven.svelte"
 				}
 			]
 		},
@@ -388,14 +331,12 @@
 			"description": "Feature block with large image and bullet points",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-five.svelte"
+					"target": "blocks/feature/feature-five.svelte"
 				}
 			]
 		},
@@ -405,14 +346,12 @@
 			"description": "Four-column feature grid with icons",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-four.svelte"
+					"target": "blocks/feature/feature-four.svelte"
 				}
 			]
 		},
@@ -427,7 +366,7 @@
 				{
 					"path": "src/lib/components/blocks/feature/feature-fourteen.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-fourteen.svelte"
+					"target": "blocks/feature/feature-fourteen.svelte"
 				}
 			]
 		},
@@ -437,16 +376,12 @@
 			"description": "Feature list with checkmarks and descriptions",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"dotted-map",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "dotted-map", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-nine.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-nine.svelte"
+					"target": "blocks/feature/feature-nine.svelte"
 				}
 			]
 		},
@@ -454,19 +389,14 @@
 			"name": "feature-one",
 			"type": "registry:block",
 			"description": "Simple three-column feature grid",
-			"registryDependencies": [
-				"card",
-				"card-decorator"
-			],
+			"registryDependencies": ["card", "card-decorator"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-one.svelte"
+					"target": "blocks/feature/feature-one.svelte"
 				}
 			]
 		},
@@ -476,14 +406,12 @@
 			"description": "Feature section with tabs and content panels",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-seven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-seven.svelte"
+					"target": "blocks/feature/feature-seven.svelte"
 				}
 			]
 		},
@@ -493,14 +421,12 @@
 			"description": "Six-column feature grid with hover effects",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-six.svelte"
+					"target": "blocks/feature/feature-six.svelte"
 				}
 			]
 		},
@@ -508,20 +434,14 @@
 			"name": "feature-ten",
 			"type": "registry:block",
 			"description": "Feature block with centered image and cards",
-			"registryDependencies": [
-				"card",
-				"feature-card",
-				"utils"
-			],
+			"registryDependencies": ["card", "feature-card", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-ten.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-ten.svelte"
+					"target": "blocks/feature/feature-ten.svelte"
 				}
 			]
 		},
@@ -536,7 +456,7 @@
 				{
 					"path": "src/lib/components/blocks/feature/feature-thirteen.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-thirteen.svelte"
+					"target": "blocks/feature/feature-thirteen.svelte"
 				}
 			]
 		},
@@ -544,19 +464,14 @@
 			"name": "feature-three",
 			"type": "registry:block",
 			"description": "Three-column feature cards with borders",
-			"registryDependencies": [
-				"card",
-				"card-decorator"
-			],
+			"registryDependencies": ["card", "card-decorator"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-three.svelte"
+					"target": "blocks/feature/feature-three.svelte"
 				}
 			]
 		},
@@ -566,14 +481,12 @@
 			"description": "Feature grid with gradient backgrounds",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-twelve.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-twelve.svelte"
+					"target": "blocks/feature/feature-twelve.svelte"
 				}
 			]
 		},
@@ -581,19 +494,14 @@
 			"name": "feature-two",
 			"type": "registry:block",
 			"description": "Two-column feature with image on side",
-			"registryDependencies": [
-				"card",
-				"card-decorator"
-			],
+			"registryDependencies": ["card", "card-decorator"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/feature/feature-two.svelte"
+					"target": "blocks/feature/feature-two.svelte"
 				}
 			]
 		},
@@ -601,18 +509,14 @@
 			"name": "footer-five",
 			"type": "registry:block",
 			"description": "Footer with newsletter signup and social links",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/footer/footer-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/footer/footer-five.svelte"
+					"target": "blocks/footer/footer-five.svelte"
 				}
 			]
 		},
@@ -627,7 +531,7 @@
 				{
 					"path": "src/lib/components/blocks/footer/footer-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/footer/footer-four.svelte"
+					"target": "blocks/footer/footer-four.svelte"
 				}
 			]
 		},
@@ -642,7 +546,7 @@
 				{
 					"path": "src/lib/components/blocks/footer/footer-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/footer/footer-one.svelte"
+					"target": "blocks/footer/footer-one.svelte"
 				}
 			]
 		},
@@ -650,21 +554,14 @@
 			"name": "footer-three",
 			"type": "registry:block",
 			"description": "Three-column footer with contact info",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"utils"
-			],
+			"registryDependencies": ["button", "input", "label", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/footer/footer-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/footer/footer-three.svelte"
+					"target": "blocks/footer/footer-three.svelte"
 				}
 			]
 		},
@@ -679,7 +576,7 @@
 				{
 					"path": "src/lib/components/blocks/footer/footer-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/footer/footer-two.svelte"
+					"target": "blocks/footer/footer-two.svelte"
 				}
 			]
 		},
@@ -687,18 +584,14 @@
 			"name": "forgot-password-one",
 			"type": "registry:block",
 			"description": "Forgot password form with email input",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/forgot-password/forgot-password-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/forgot-password/forgot-password-one.svelte"
+					"target": "blocks/forgot-password/forgot-password-one.svelte"
 				}
 			]
 		},
@@ -706,18 +599,14 @@
 			"name": "forgot-password-two",
 			"type": "registry:block",
 			"description": "Password reset form with side illustration",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/forgot-password/forgot-password-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/forgot-password/forgot-password-two.svelte"
+					"target": "blocks/forgot-password/forgot-password-two.svelte"
 				}
 			]
 		},
@@ -725,18 +614,14 @@
 			"name": "hero-header-eight",
 			"type": "registry:block",
 			"description": "Navigation header with dropdown menus",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header-eight.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/header/hero-header-eight.svelte"
+					"target": "blocks/header/hero-header-eight.svelte"
 				}
 			]
 		},
@@ -744,20 +629,14 @@
 			"name": "hero-header-nine",
 			"type": "registry:block",
 			"description": "Header with mega menu navigation",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header-nine.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/header/hero-header-nine.svelte"
+					"target": "blocks/header/hero-header-nine.svelte"
 				}
 			]
 		},
@@ -765,20 +644,14 @@
 			"name": "hero-header-seven",
 			"type": "registry:block",
 			"description": "Transparent header with centered logo",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header-seven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/header/hero-header-seven.svelte"
+					"target": "blocks/header/hero-header-seven.svelte"
 				}
 			]
 		},
@@ -786,20 +659,14 @@
 			"name": "hero-header",
 			"type": "registry:block",
 			"description": "Standard navigation header with logo and links",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/header/hero-header.svelte"
+					"target": "blocks/header/hero-header.svelte"
 				}
 			]
 		},
@@ -807,18 +674,14 @@
 			"name": "hero-eight",
 			"type": "registry:block",
 			"description": "Hero with video background and overlay",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-eight.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-eight.svelte"
+					"target": "blocks/hero/hero-eight.svelte"
 				}
 			]
 		},
@@ -826,22 +689,14 @@
 			"name": "hero-five",
 			"type": "registry:block",
 			"description": "Hero section with app mockup image",
-			"registryDependencies": [
-				"button",
-				"marquee",
-				"progressive-blur",
-				"utils"
-			],
+			"registryDependencies": ["button", "marquee", "progressive-blur", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-five.svelte"
+					"target": "blocks/hero/hero-five.svelte"
 				}
 			]
 		},
@@ -849,21 +704,14 @@
 			"name": "hero-four",
 			"type": "registry:block",
 			"description": "Split hero with image on right side",
-			"registryDependencies": [
-				"button",
-				"marquee",
-				"utils"
-			],
+			"registryDependencies": ["button", "marquee", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-four.svelte"
+					"target": "blocks/hero/hero-four.svelte"
 				}
 			]
 		},
@@ -871,19 +719,14 @@
 			"name": "hero-nine",
 			"type": "registry:block",
 			"description": "Hero with animated background elements",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-nine.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-nine.svelte"
+					"target": "blocks/hero/hero-nine.svelte"
 				}
 			]
 		},
@@ -891,20 +734,14 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Classic centered hero with headline and CTA",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-one.svelte"
+					"target": "blocks/hero/hero-one.svelte"
 				}
 			]
 		},
@@ -912,21 +749,14 @@
 			"name": "hero-seven",
 			"type": "registry:block",
 			"description": "Hero with gradient background and stats",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte",
-				"swiper"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte", "swiper"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-seven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-seven.svelte"
+					"target": "blocks/hero/hero-seven.svelte"
 				}
 			]
 		},
@@ -934,19 +764,14 @@
 			"name": "hero-six",
 			"type": "registry:block",
 			"description": "Hero section with logo cloud below",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-six.svelte"
+					"target": "blocks/hero/hero-six.svelte"
 				}
 			]
 		},
@@ -954,20 +779,14 @@
 			"name": "hero-three",
 			"type": "registry:block",
 			"description": "Hero with background image and overlay",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-three.svelte"
+					"target": "blocks/hero/hero-three.svelte"
 				}
 			]
 		},
@@ -975,20 +794,14 @@
 			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Two-column hero with image carousel",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/hero/hero-two.svelte"
+					"target": "blocks/hero/hero-two.svelte"
 				}
 			]
 		},
@@ -996,51 +809,44 @@
 			"name": "integration-cards",
 			"type": "registry:block",
 			"description": "Collection of integration card variants for logos",
-			"registryDependencies": [
-				"button",
-				"card",
-				"utils"
-			],
+			"registryDependencies": ["button", "card", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-card.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-card.svelte"
+					"target": "blocks/integration/card/integration-card.svelte"
 				},
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-cardv2.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-cardv2.svelte"
+					"target": "blocks/integration/card/integration-cardv2.svelte"
 				},
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-cardv3.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-cardv3.svelte"
+					"target": "blocks/integration/card/integration-cardv3.svelte"
 				},
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-cardv4.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-cardv4.svelte"
+					"target": "blocks/integration/card/integration-cardv4.svelte"
 				},
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-cardv5.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-cardv5.svelte"
+					"target": "blocks/integration/card/integration-cardv5.svelte"
 				},
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-cardv7.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-cardv7.svelte"
+					"target": "blocks/integration/card/integration-cardv7.svelte"
 				},
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-cardv8.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/card/integration-cardv8.svelte"
+					"target": "blocks/integration/card/integration-cardv8.svelte"
 				}
 			]
 		},
@@ -1048,19 +854,14 @@
 			"name": "integration-eight",
 			"type": "registry:block",
 			"description": "Integration grid with animated connections",
-			"registryDependencies": [
-				"button",
-				"logo-collection"
-			],
+			"registryDependencies": ["button", "logo-collection"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-eight.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-eight.svelte"
+					"target": "blocks/integration/integration-eight.svelte"
 				}
 			]
 		},
@@ -1068,18 +869,14 @@
 			"name": "integration-five",
 			"type": "registry:block",
 			"description": "Integration showcase with hover details",
-			"registryDependencies": [
-				"button",
-				"integration-cards",
-				"logo-collection"
-			],
+			"registryDependencies": ["button", "integration-cards", "logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-five.svelte"
+					"target": "blocks/integration/integration-five.svelte"
 				}
 			]
 		},
@@ -1087,18 +884,14 @@
 			"name": "integration-four",
 			"type": "registry:block",
 			"description": "Four-column integration logo grid",
-			"registryDependencies": [
-				"button",
-				"integration-cards",
-				"logo-collection"
-			],
+			"registryDependencies": ["button", "integration-cards", "logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-four.svelte"
+					"target": "blocks/integration/integration-four.svelte"
 				}
 			]
 		},
@@ -1106,17 +899,14 @@
 			"name": "integration-one",
 			"type": "registry:block",
 			"description": "Simple integration logos in grid layout",
-			"registryDependencies": [
-				"integration-cards",
-				"logo-collection"
-			],
+			"registryDependencies": ["integration-cards", "logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-one.svelte"
+					"target": "blocks/integration/integration-one.svelte"
 				}
 			]
 		},
@@ -1124,19 +914,14 @@
 			"name": "integration-seven",
 			"type": "registry:block",
 			"description": "Integration section with categories",
-			"registryDependencies": [
-				"button",
-				"integration-cards",
-				"logo-collection",
-				"marquee"
-			],
+			"registryDependencies": ["button", "integration-cards", "logo-collection", "marquee"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-seven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-seven.svelte"
+					"target": "blocks/integration/integration-seven.svelte"
 				}
 			]
 		},
@@ -1144,19 +929,14 @@
 			"name": "integration-six",
 			"type": "registry:block",
 			"description": "Integration cards with descriptions",
-			"registryDependencies": [
-				"button",
-				"logo-collection"
-			],
+			"registryDependencies": ["button", "logo-collection"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-six.svelte"
+					"target": "blocks/integration/integration-six.svelte"
 				}
 			]
 		},
@@ -1164,18 +944,14 @@
 			"name": "integration-three",
 			"type": "registry:block",
 			"description": "Three-column integration with icons",
-			"registryDependencies": [
-				"button",
-				"integration-cards",
-				"logo-collection"
-			],
+			"registryDependencies": ["button", "integration-cards", "logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-three.svelte"
+					"target": "blocks/integration/integration-three.svelte"
 				}
 			]
 		},
@@ -1183,18 +959,14 @@
 			"name": "integration-two",
 			"type": "registry:block",
 			"description": "Two-row integration logo marquee",
-			"registryDependencies": [
-				"button",
-				"integration-cards",
-				"logo-collection"
-			],
+			"registryDependencies": ["button", "integration-cards", "logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/integration-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/integration/integration-two.svelte"
+					"target": "blocks/integration/integration-two.svelte"
 				}
 			]
 		},
@@ -1202,18 +974,14 @@
 			"name": "login-one",
 			"type": "registry:block",
 			"description": "Simple centered login form with inputs",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/login/login-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/login/login-one.svelte"
+					"target": "blocks/login/login-one.svelte"
 				}
 			]
 		},
@@ -1221,18 +989,14 @@
 			"name": "login-three",
 			"type": "registry:block",
 			"description": "Login form with social auth buttons",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/login/login-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/login/login-three.svelte"
+					"target": "blocks/login/login-three.svelte"
 				}
 			]
 		},
@@ -1240,18 +1004,14 @@
 			"name": "login-two",
 			"type": "registry:block",
 			"description": "Split login with side illustration",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/login/login-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/login/login-two.svelte"
+					"target": "blocks/login/login-two.svelte"
 				}
 			]
 		},
@@ -1266,7 +1026,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/Gemini.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/Gemini.svelte"
+					"target": "blocks/logos/Gemini.svelte"
 				}
 			]
 		},
@@ -1281,7 +1041,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/GooglePaLM.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/GooglePaLM.svelte"
+					"target": "blocks/logos/GooglePaLM.svelte"
 				}
 			]
 		},
@@ -1303,7 +1063,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/logos.ts",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/logos.ts"
+					"target": "blocks/logos/logos.ts"
 				}
 			]
 		},
@@ -1318,7 +1078,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/MagicUI.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/MagicUI.svelte"
+					"target": "blocks/logos/MagicUI.svelte"
 				}
 			]
 		},
@@ -1333,7 +1093,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/MediaWiki.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/MediaWiki.svelte"
+					"target": "blocks/logos/MediaWiki.svelte"
 				}
 			]
 		},
@@ -1348,7 +1108,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/Replit.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/Replit.svelte"
+					"target": "blocks/logos/Replit.svelte"
 				}
 			]
 		},
@@ -1363,7 +1123,7 @@
 				{
 					"path": "src/lib/components/blocks/logos/VSCodium.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/logos/VSCodium.svelte"
+					"target": "blocks/logos/VSCodium.svelte"
 				}
 			]
 		},
@@ -1371,18 +1131,14 @@
 			"name": "pricing-five",
 			"type": "registry:block",
 			"description": "Pricing table with feature comparison",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/pricing/pricing-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/pricing/pricing-five.svelte"
+					"target": "blocks/pricing/pricing-five.svelte"
 				}
 			]
 		},
@@ -1390,18 +1146,14 @@
 			"name": "pricing-four",
 			"type": "registry:block",
 			"description": "Four-tier pricing with toggle switch",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/pricing/pricing-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/pricing/pricing-four.svelte"
+					"target": "blocks/pricing/pricing-four.svelte"
 				}
 			]
 		},
@@ -1409,19 +1161,14 @@
 			"name": "pricing-one",
 			"type": "registry:block",
 			"description": "Simple three-tier pricing cards",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/pricing/pricing-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/pricing/pricing-one.svelte"
+					"target": "blocks/pricing/pricing-one.svelte"
 				}
 			]
 		},
@@ -1429,19 +1176,14 @@
 			"name": "pricing-three",
 			"type": "registry:block",
 			"description": "Pricing with highlighted popular plan",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/pricing/pricing-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/pricing/pricing-three.svelte"
+					"target": "blocks/pricing/pricing-three.svelte"
 				}
 			]
 		},
@@ -1449,19 +1191,14 @@
 			"name": "pricing-two",
 			"type": "registry:block",
 			"description": "Two-column pricing with monthly/yearly toggle",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/pricing/pricing-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/pricing/pricing-two.svelte"
+					"target": "blocks/pricing/pricing-two.svelte"
 				}
 			]
 		},
@@ -1469,18 +1206,14 @@
 			"name": "signup-one",
 			"type": "registry:block",
 			"description": "Simple centered signup form",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/signup/signup-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/signup/signup-one.svelte"
+					"target": "blocks/signup/signup-one.svelte"
 				}
 			]
 		},
@@ -1488,18 +1221,14 @@
 			"name": "signup-three",
 			"type": "registry:block",
 			"description": "Signup form with social auth options",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/signup/signup-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/signup/signup-three.svelte"
+					"target": "blocks/signup/signup-three.svelte"
 				}
 			]
 		},
@@ -1507,18 +1236,14 @@
 			"name": "signup-two",
 			"type": "registry:block",
 			"description": "Split signup with side illustration",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/signup/signup-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/signup/signup-two.svelte"
+					"target": "blocks/signup/signup-two.svelte"
 				}
 			]
 		},
@@ -1533,7 +1258,7 @@
 				{
 					"path": "src/lib/components/blocks/stats/stats-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/stats/stats-four.svelte"
+					"target": "blocks/stats/stats-four.svelte"
 				}
 			]
 		},
@@ -1548,7 +1273,7 @@
 				{
 					"path": "src/lib/components/blocks/stats/stats-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/stats/stats-one.svelte"
+					"target": "blocks/stats/stats-one.svelte"
 				}
 			]
 		},
@@ -1563,7 +1288,7 @@
 				{
 					"path": "src/lib/components/blocks/stats/stats-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/stats/stats-three.svelte"
+					"target": "blocks/stats/stats-three.svelte"
 				}
 			]
 		},
@@ -1578,7 +1303,7 @@
 				{
 					"path": "src/lib/components/blocks/stats/stats-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/stats/stats-two.svelte"
+					"target": "blocks/stats/stats-two.svelte"
 				}
 			]
 		},
@@ -1593,7 +1318,7 @@
 				{
 					"path": "src/lib/components/blocks/team/team-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/team/team-one.svelte"
+					"target": "blocks/team/team-one.svelte"
 				}
 			]
 		},
@@ -1608,7 +1333,7 @@
 				{
 					"path": "src/lib/components/blocks/team/team-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/team/team-two.svelte"
+					"target": "blocks/team/team-two.svelte"
 				}
 			]
 		},
@@ -1616,17 +1341,14 @@
 			"name": "testimonial-five",
 			"type": "registry:block",
 			"description": "Testimonial carousel with navigation",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/testimonial/testimonial-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/testimonial/testimonial-five.svelte"
+					"target": "blocks/testimonial/testimonial-five.svelte"
 				}
 			]
 		},
@@ -1634,16 +1356,14 @@
 			"name": "testimonial-four",
 			"type": "registry:block",
 			"description": "Four-column testimonial grid",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/testimonial/testimonial-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/testimonial/testimonial-four.svelte"
+					"target": "blocks/testimonial/testimonial-four.svelte"
 				}
 			]
 		},
@@ -1651,17 +1371,14 @@
 			"name": "testimonial-one",
 			"type": "registry:block",
 			"description": "Simple centered testimonial quote",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/testimonial/testimonial-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/testimonial/testimonial-one.svelte"
+					"target": "blocks/testimonial/testimonial-one.svelte"
 				}
 			]
 		},
@@ -1669,17 +1386,14 @@
 			"name": "testimonial-six",
 			"type": "registry:block",
 			"description": "Testimonial with video embed",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/testimonial/testimonial-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/testimonial/testimonial-six.svelte"
+					"target": "blocks/testimonial/testimonial-six.svelte"
 				}
 			]
 		},
@@ -1694,7 +1408,7 @@
 				{
 					"path": "src/lib/components/blocks/testimonial/testimonial-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/testimonial/testimonial-three.svelte"
+					"target": "blocks/testimonial/testimonial-three.svelte"
 				}
 			]
 		},
@@ -1702,17 +1416,14 @@
 			"name": "testimonial-two",
 			"type": "registry:block",
 			"description": "Two-column testimonial with photos",
-			"registryDependencies": [
-				"avatar",
-				"card"
-			],
+			"registryDependencies": ["avatar", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/testimonial/testimonial-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/blocks/testimonial/testimonial-two.svelte"
+					"target": "blocks/testimonial/testimonial-two.svelte"
 				}
 			]
 		},
@@ -1720,18 +1431,14 @@
 			"name": "veil-hero-one",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant One.",
-			"registryDependencies": [
-				"veil-header-one"
-			],
+			"registryDependencies": ["veil-header-one"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/hero/hero-one.svelte"
+					"target": "veil/hero/hero-one.svelte"
 				}
 			]
 		},
@@ -1739,18 +1446,14 @@
 			"name": "veil-hero-two",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Two.",
-			"registryDependencies": [
-				"veil-header-two"
-			],
+			"registryDependencies": ["veil-header-two"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/hero/hero-two.svelte"
+					"target": "veil/hero/hero-two.svelte"
 				}
 			]
 		},
@@ -1758,18 +1461,14 @@
 			"name": "veil-hero-three",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Three.",
-			"registryDependencies": [
-				"veil-header-three"
-			],
+			"registryDependencies": ["veil-header-three"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/hero/hero-three.svelte"
+					"target": "veil/hero/hero-three.svelte"
 				}
 			]
 		},
@@ -1777,18 +1476,14 @@
 			"name": "veil-hero-four",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Four.",
-			"registryDependencies": [
-				"veil-header-four"
-			],
+			"registryDependencies": ["veil-header-four"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/hero/hero-four.svelte"
+					"target": "veil/hero/hero-four.svelte"
 				}
 			]
 		},
@@ -1798,14 +1493,12 @@
 			"description": "Veil Hero component, variant Five.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/hero/hero-five.svelte"
+					"target": "veil/hero/hero-five.svelte"
 				}
 			]
 		},
@@ -1813,19 +1506,14 @@
 			"name": "veil-header-one",
 			"type": "registry:block",
 			"description": "Veil Header component, variant One.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/header/header-one.svelte"
+					"target": "veil/header/header-one.svelte"
 				}
 			]
 		},
@@ -1833,19 +1521,14 @@
 			"name": "veil-header-two",
 			"type": "registry:block",
 			"description": "Veil Header component, variant Two.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/header/header-two.svelte"
+					"target": "veil/header/header-two.svelte"
 				}
 			]
 		},
@@ -1853,19 +1536,14 @@
 			"name": "veil-header-three",
 			"type": "registry:block",
 			"description": "Veil Header component, variant Three.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/header/header-three.svelte"
+					"target": "veil/header/header-three.svelte"
 				}
 			]
 		},
@@ -1873,19 +1551,14 @@
 			"name": "veil-header-four",
 			"type": "registry:block",
 			"description": "Veil Header component, variant Four.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/header/header-four.svelte"
+					"target": "veil/header/header-four.svelte"
 				}
 			]
 		},
@@ -1895,14 +1568,12 @@
 			"description": "Veil Features component, variant One.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/features/features-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/features/features-one.svelte"
+					"target": "veil/features/features-one.svelte"
 				}
 			]
 		},
@@ -1912,14 +1583,12 @@
 			"description": "Veil Features component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/features/features-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/features/features-two.svelte"
+					"target": "veil/features/features-two.svelte"
 				}
 			]
 		},
@@ -1927,18 +1596,14 @@
 			"name": "veil-features-three",
 			"type": "registry:block",
 			"description": "Veil Features component, variant Three.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/features/features-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/features/features-three.svelte"
+					"target": "veil/features/features-three.svelte"
 				}
 			]
 		},
@@ -1953,7 +1618,7 @@
 				{
 					"path": "src/lib/components/veil/content/content-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/content/content-one.svelte"
+					"target": "veil/content/content-one.svelte"
 				}
 			]
 		},
@@ -1968,7 +1633,7 @@
 				{
 					"path": "src/lib/components/veil/content/content-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/content/content-two.svelte"
+					"target": "veil/content/content-two.svelte"
 				}
 			]
 		},
@@ -1978,14 +1643,12 @@
 			"description": "Veil Content component, variant Three.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/content/content-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/content/content-three.svelte"
+					"target": "veil/content/content-three.svelte"
 				}
 			]
 		},
@@ -1995,19 +1658,17 @@
 			"description": "Veil Integration component, variant One.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/integration/integration-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/integration/integration-one.svelte"
+					"target": "veil/integration/integration-one.svelte"
 				},
 				{
 					"path": "src/lib/components/veil/integration/integration-illustration.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/integration/integration-illustration.svelte"
+					"target": "veil/integration/integration-illustration.svelte"
 				}
 			]
 		},
@@ -2017,19 +1678,17 @@
 			"description": "Veil Integration component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/integration/integration-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/integration/integration-two.svelte"
+					"target": "veil/integration/integration-two.svelte"
 				},
 				{
 					"path": "src/lib/components/veil/integration/integration-illustration-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/integration/integration-illustration-two.svelte"
+					"target": "veil/integration/integration-illustration-two.svelte"
 				}
 			]
 		},
@@ -2039,14 +1698,12 @@
 			"description": "Veil Call To Action component, variant One.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/call-to-action/call-to-action-one.svelte"
+					"target": "veil/call-to-action/call-to-action-one.svelte"
 				}
 			]
 		},
@@ -2056,14 +1713,12 @@
 			"description": "Veil Call To Action component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/call-to-action/call-to-action-two.svelte"
+					"target": "veil/call-to-action/call-to-action-two.svelte"
 				}
 			]
 		},
@@ -2073,14 +1728,12 @@
 			"description": "Veil Call To Action component, variant Three.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/call-to-action/call-to-action-three.svelte"
+					"target": "veil/call-to-action/call-to-action-three.svelte"
 				}
 			]
 		},
@@ -2090,14 +1743,12 @@
 			"description": "Veil Call To Action component, variant Four.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/call-to-action/call-to-action-four.svelte"
+					"target": "veil/call-to-action/call-to-action-four.svelte"
 				}
 			]
 		},
@@ -2112,7 +1763,7 @@
 				{
 					"path": "src/lib/components/veil/stats/stats-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/stats/stats-one.svelte"
+					"target": "veil/stats/stats-one.svelte"
 				}
 			]
 		},
@@ -2127,7 +1778,7 @@
 				{
 					"path": "src/lib/components/veil/stats/stats-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/stats/stats-two.svelte"
+					"target": "veil/stats/stats-two.svelte"
 				}
 			]
 		},
@@ -2142,7 +1793,7 @@
 				{
 					"path": "src/lib/components/veil/stats/stats-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/stats/stats-three.svelte"
+					"target": "veil/stats/stats-three.svelte"
 				}
 			]
 		},
@@ -2157,7 +1808,7 @@
 				{
 					"path": "src/lib/components/veil/stats/stats-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/stats/stats-four.svelte"
+					"target": "veil/stats/stats-four.svelte"
 				}
 			]
 		},
@@ -2165,18 +1816,14 @@
 			"name": "veil-pricing-one",
 			"type": "registry:block",
 			"description": "Veil Pricing component, variant One.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/pricing/pricing-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/pricing/pricing-one.svelte"
+					"target": "veil/pricing/pricing-one.svelte"
 				}
 			]
 		},
@@ -2184,18 +1831,14 @@
 			"name": "veil-pricing-two",
 			"type": "registry:block",
 			"description": "Veil Pricing component, variant Two.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/pricing/pricing-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/pricing/pricing-two.svelte"
+					"target": "veil/pricing/pricing-two.svelte"
 				}
 			]
 		},
@@ -2203,18 +1846,14 @@
 			"name": "veil-pricing-three",
 			"type": "registry:block",
 			"description": "Veil Pricing component, variant Three.",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/pricing/pricing-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/pricing/pricing-three.svelte"
+					"target": "veil/pricing/pricing-three.svelte"
 				}
 			]
 		},
@@ -2229,7 +1868,7 @@
 				{
 					"path": "src/lib/components/veil/testimonial/testimonial-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/testimonial/testimonial-one.svelte"
+					"target": "veil/testimonial/testimonial-one.svelte"
 				}
 			]
 		},
@@ -2244,7 +1883,7 @@
 				{
 					"path": "src/lib/components/veil/testimonial/testimonial-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/testimonial/testimonial-two.svelte"
+					"target": "veil/testimonial/testimonial-two.svelte"
 				}
 			]
 		},
@@ -2259,7 +1898,7 @@
 				{
 					"path": "src/lib/components/veil/testimonial/testimonial-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/testimonial/testimonial-three.svelte"
+					"target": "veil/testimonial/testimonial-three.svelte"
 				}
 			]
 		},
@@ -2274,7 +1913,7 @@
 				{
 					"path": "src/lib/components/veil/testimonial/testimonial-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/testimonial/testimonial-four.svelte"
+					"target": "veil/testimonial/testimonial-four.svelte"
 				}
 			]
 		},
@@ -2289,7 +1928,7 @@
 				{
 					"path": "src/lib/components/veil/team/team-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/team/team-one.svelte"
+					"target": "veil/team/team-one.svelte"
 				}
 			]
 		},
@@ -2304,7 +1943,7 @@
 				{
 					"path": "src/lib/components/veil/team/team-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/team/team-two.svelte"
+					"target": "veil/team/team-two.svelte"
 				}
 			]
 		},
@@ -2319,7 +1958,7 @@
 				{
 					"path": "src/lib/components/veil/logo-cloud/logo-cloud-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/logo-cloud/logo-cloud-one.svelte"
+					"target": "veil/logo-cloud/logo-cloud-one.svelte"
 				}
 			]
 		},
@@ -2329,14 +1968,12 @@
 			"description": "Veil Logo Cloud component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"svelte"
-			],
+			"devDependencies": ["svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/logo-cloud/logo-cloud-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/logo-cloud/logo-cloud-two.svelte"
+					"target": "veil/logo-cloud/logo-cloud-two.svelte"
 				}
 			]
 		},
@@ -2344,16 +1981,14 @@
 			"name": "veil-faqs-one",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant One.",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/faqs/faqs-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/faqs/faqs-one.svelte"
+					"target": "veil/faqs/faqs-one.svelte"
 				}
 			]
 		},
@@ -2361,16 +1996,14 @@
 			"name": "veil-faqs-two",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant Two.",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/faqs/faqs-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/faqs/faqs-two.svelte"
+					"target": "veil/faqs/faqs-two.svelte"
 				}
 			]
 		},
@@ -2378,16 +2011,14 @@
 			"name": "veil-faqs-three",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant Three.",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/faqs/faqs-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/faqs/faqs-three.svelte"
+					"target": "veil/faqs/faqs-three.svelte"
 				}
 			]
 		},
@@ -2395,16 +2026,14 @@
 			"name": "veil-faqs-four",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant Four.",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/faqs/faqs-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/faqs/faqs-four.svelte"
+					"target": "veil/faqs/faqs-four.svelte"
 				}
 			]
 		},
@@ -2412,16 +2041,14 @@
 			"name": "veil-contact-one",
 			"type": "registry:block",
 			"description": "Veil Contact component, variant One.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/contact/contact-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/contact/contact-one.svelte"
+					"target": "veil/contact/contact-one.svelte"
 				}
 			]
 		},
@@ -2429,17 +2056,14 @@
 			"name": "veil-contact-two",
 			"type": "registry:block",
 			"description": "Veil Contact component, variant Two.",
-			"registryDependencies": [
-				"label",
-				"select"
-			],
+			"registryDependencies": ["label", "select"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/contact/contact-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/contact/contact-two.svelte"
+					"target": "veil/contact/contact-two.svelte"
 				}
 			]
 		},
@@ -2447,16 +2071,14 @@
 			"name": "veil-signup-one",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant One.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/signup/signup-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/signup/signup-one.svelte"
+					"target": "veil/signup/signup-one.svelte"
 				}
 			]
 		},
@@ -2464,16 +2086,14 @@
 			"name": "veil-signup-two",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant Two.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/signup/signup-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/signup/signup-two.svelte"
+					"target": "veil/signup/signup-two.svelte"
 				}
 			]
 		},
@@ -2481,16 +2101,14 @@
 			"name": "veil-signup-three",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant Three.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/signup/signup-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/signup/signup-three.svelte"
+					"target": "veil/signup/signup-three.svelte"
 				}
 			]
 		},
@@ -2498,16 +2116,14 @@
 			"name": "veil-login-one",
 			"type": "registry:block",
 			"description": "Veil Login component, variant One.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/login/login-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/login/login-one.svelte"
+					"target": "veil/login/login-one.svelte"
 				}
 			]
 		},
@@ -2515,16 +2131,14 @@
 			"name": "veil-login-two",
 			"type": "registry:block",
 			"description": "Veil Login component, variant Two.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/login/login-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/login/login-two.svelte"
+					"target": "veil/login/login-two.svelte"
 				}
 			]
 		},
@@ -2532,16 +2146,14 @@
 			"name": "veil-login-three",
 			"type": "registry:block",
 			"description": "Veil Login component, variant Three.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/login/login-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/login/login-three.svelte"
+					"target": "veil/login/login-three.svelte"
 				}
 			]
 		},
@@ -2549,16 +2161,14 @@
 			"name": "veil-forgot-password-one",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant One.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/forgot-password/forgot-password-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/forgot-password/forgot-password-one.svelte"
+					"target": "veil/forgot-password/forgot-password-one.svelte"
 				}
 			]
 		},
@@ -2566,16 +2176,14 @@
 			"name": "veil-forgot-password-two",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant Two.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/forgot-password/forgot-password-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/forgot-password/forgot-password-two.svelte"
+					"target": "veil/forgot-password/forgot-password-two.svelte"
 				}
 			]
 		},
@@ -2583,16 +2191,14 @@
 			"name": "veil-forgot-password-three",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant Three.",
-			"registryDependencies": [
-				"label"
-			],
+			"registryDependencies": ["label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/forgot-password/forgot-password-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/forgot-password/forgot-password-three.svelte"
+					"target": "veil/forgot-password/forgot-password-three.svelte"
 				}
 			]
 		},
@@ -2602,14 +2208,12 @@
 			"description": "Veil Comparator component, variant One.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/comparator/comparator-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/comparator/comparator-one.svelte"
+					"target": "veil/comparator/comparator-one.svelte"
 				}
 			]
 		},
@@ -2619,14 +2223,12 @@
 			"description": "Veil Comparator component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/comparator/comparator-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/comparator/comparator-two.svelte"
+					"target": "veil/comparator/comparator-two.svelte"
 				}
 			]
 		},
@@ -2636,14 +2238,12 @@
 			"description": "Veil Comparator component, variant Three.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/comparator/comparator-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/comparator/comparator-three.svelte"
+					"target": "veil/comparator/comparator-three.svelte"
 				}
 			]
 		},
@@ -2658,7 +2258,7 @@
 				{
 					"path": "src/lib/components/veil/footer/footer-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/footer-one.svelte"
+					"target": "veil/footer/footer-one.svelte"
 				}
 			]
 		},
@@ -2668,15 +2268,12 @@
 			"description": "Veil Footer component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/footer-two.svelte"
+					"target": "veil/footer/footer-two.svelte"
 				}
 			]
 		},
@@ -2691,7 +2288,7 @@
 				{
 					"path": "src/lib/components/veil/footer/footer-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/footer-three.svelte"
+					"target": "veil/footer/footer-three.svelte"
 				}
 			]
 		},
@@ -2701,15 +2298,12 @@
 			"description": "Veil Footer component, variant Four.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/footer-four.svelte"
+					"target": "veil/footer/footer-four.svelte"
 				}
 			]
 		},
@@ -2717,16 +2311,14 @@
 			"name": "veil-footer-five",
 			"type": "registry:block",
 			"description": "Veil Footer component, variant Five.",
-			"registryDependencies": [
-				"vhelper-theme-switcher"
-			],
+			"registryDependencies": ["vhelper-theme-switcher"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/footer-five.svelte"
+					"target": "veil/footer/footer-five.svelte"
 				}
 			]
 		},
@@ -2734,24 +2326,19 @@
 			"name": "veil-footer-six",
 			"type": "registry:block",
 			"description": "Veil Footer component, variant Six.",
-			"registryDependencies": [
-				"vhelper-theme-switcher"
-			],
+			"registryDependencies": ["vhelper-theme-switcher"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/footer-six.svelte"
+					"target": "veil/footer/footer-six.svelte"
 				},
 				{
 					"path": "src/lib/components/veil/footer/social-media-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/social-media-one.svelte"
+					"target": "veil/footer/social-media-one.svelte"
 				}
 			]
 		},
@@ -2761,16 +2348,12 @@
 			"description": "Internal Veil footer theme switcher helper.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"mode-watcher",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "mode-watcher", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/theme-switcher.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/veil/footer/theme-switcher.svelte"
+					"target": "veil/footer/theme-switcher.svelte"
 				}
 			]
 		},
@@ -2778,18 +2361,14 @@
 			"name": "mist-comparator-one",
 			"type": "registry:block",
 			"description": "Mist-style before/after image comparison",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcomparator/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcomparator/one.svelte"
+					"target": "mist/mcomparator/one.svelte"
 				}
 			]
 		},
@@ -2797,21 +2376,14 @@
 			"name": "mist-contact-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal contact form",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcontact/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcontact/one.svelte"
+					"target": "mist/mcontact/one.svelte"
 				}
 			]
 		},
@@ -2821,14 +2393,12 @@
 			"description": "Mist-style content with feature grid",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcontent/four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcontent/four.svelte"
+					"target": "mist/mcontent/four.svelte"
 				}
 			]
 		},
@@ -2836,20 +2406,14 @@
 			"name": "mist-content-one",
 			"type": "registry:block",
 			"description": "Mist-style simple content block",
-			"registryDependencies": [
-				"button",
-				"toggle-group",
-				"utils"
-			],
+			"registryDependencies": ["button", "toggle-group", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcontent/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcontent/one.svelte"
+					"target": "mist/mcontent/one.svelte"
 				}
 			]
 		},
@@ -2864,7 +2428,7 @@
 				{
 					"path": "src/lib/components/mist/mcontent/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcontent/three.svelte"
+					"target": "mist/mcontent/three.svelte"
 				}
 			]
 		},
@@ -2872,20 +2436,14 @@
 			"name": "mist-content-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column content",
-			"registryDependencies": [
-				"button",
-				"toggle-group",
-				"utils"
-			],
+			"registryDependencies": ["button", "toggle-group", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcontent/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcontent/two.svelte"
+					"target": "mist/mcontent/two.svelte"
 				}
 			]
 		},
@@ -2893,16 +2451,14 @@
 			"name": "mist-cta-one",
 			"type": "registry:block",
 			"description": "Mist-style centered CTA block",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcta/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcta/one.svelte"
+					"target": "mist/mcta/one.svelte"
 				}
 			]
 		},
@@ -2910,18 +2466,14 @@
 			"name": "mist-cta-three",
 			"type": "registry:block",
 			"description": "Mist-style CTA with background",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcta/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcta/three.svelte"
+					"target": "mist/mcta/three.svelte"
 				}
 			]
 		},
@@ -2929,16 +2481,14 @@
 			"name": "mist-cta-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column CTA",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mcta/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mcta/two.svelte"
+					"target": "mist/mcta/two.svelte"
 				}
 			]
 		},
@@ -2946,18 +2496,14 @@
 			"name": "mist-feature-eight",
 			"type": "registry:block",
 			"description": "Mist-style feature with icon grid",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/eight.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/eight.svelte"
+					"target": "mist/mfeature/eight.svelte"
 				}
 			]
 		},
@@ -2965,19 +2511,14 @@
 			"name": "mist-feature-eleven",
 			"type": "registry:block",
 			"description": "Mist-style feature with alternating rows",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/eleven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/eleven.svelte"
+					"target": "mist/mfeature/eleven.svelte"
 				}
 			]
 		},
@@ -2985,16 +2526,14 @@
 			"name": "mist-feature-table",
 			"type": "registry:block",
 			"description": "Mist-style feature comparison table",
-			"registryDependencies": [
-				"utils"
-			],
+			"registryDependencies": ["utils"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/feature-table.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/feature-table.svelte"
+					"target": "mist/mfeature/feature-table.svelte"
 				}
 			]
 		},
@@ -3002,18 +2541,14 @@
 			"name": "mist-feature-five",
 			"type": "registry:block",
 			"description": "Mist-style feature with bullet points",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/five.svelte"
+					"target": "mist/mfeature/five.svelte"
 				}
 			]
 		},
@@ -3021,21 +2556,14 @@
 			"name": "mist-feature-four",
 			"type": "registry:block",
 			"description": "Mist-style four-column feature grid",
-			"registryDependencies": [
-				"button",
-				"card",
-				"toggle-group",
-				"utils"
-			],
+			"registryDependencies": ["button", "card", "toggle-group", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/four.svelte"
+					"target": "mist/mfeature/four.svelte"
 				}
 			]
 		},
@@ -3043,19 +2571,14 @@
 			"name": "mist-feature-nine",
 			"type": "registry:block",
 			"description": "Mist-style feature with checkmarks",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/nine.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/nine.svelte"
+					"target": "mist/mfeature/nine.svelte"
 				}
 			]
 		},
@@ -3063,17 +2586,14 @@
 			"name": "mist-feature-one",
 			"type": "registry:block",
 			"description": "Mist-style simple feature grid",
-			"registryDependencies": [
-				"card",
-				"mist-feature-table"
-			],
+			"registryDependencies": ["card", "mist-feature-table"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/one.svelte"
+					"target": "mist/mfeature/one.svelte"
 				}
 			]
 		},
@@ -3081,19 +2601,14 @@
 			"name": "mist-feature-seven",
 			"type": "registry:block",
 			"description": "Mist-style feature with tabs",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/seven.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/seven.svelte"
+					"target": "mist/mfeature/seven.svelte"
 				}
 			]
 		},
@@ -3101,19 +2616,14 @@
 			"name": "mist-feature-six",
 			"type": "registry:block",
 			"description": "Mist-style six-column feature grid",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/six.svelte"
+					"target": "mist/mfeature/six.svelte"
 				}
 			]
 		},
@@ -3121,19 +2631,14 @@
 			"name": "mist-feature-ten",
 			"type": "registry:block",
 			"description": "Mist-style feature with centered image",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/ten.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/ten.svelte"
+					"target": "mist/mfeature/ten.svelte"
 				}
 			]
 		},
@@ -3141,21 +2646,14 @@
 			"name": "mist-feature-three",
 			"type": "registry:block",
 			"description": "Mist-style three-column feature cards",
-			"registryDependencies": [
-				"button",
-				"card",
-				"toggle-group",
-				"utils"
-			],
+			"registryDependencies": ["button", "card", "toggle-group", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/three.svelte"
+					"target": "mist/mfeature/three.svelte"
 				}
 			]
 		},
@@ -3163,16 +2661,14 @@
 			"name": "mist-feature-two",
 			"type": "registry:block",
 			"description": "Mist-style feature with side image",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mfeature/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfeature/two.svelte"
+					"target": "mist/mfeature/two.svelte"
 				}
 			]
 		},
@@ -3187,7 +2683,7 @@
 				{
 					"path": "src/lib/components/mist/mfooter/four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfooter/four.svelte"
+					"target": "mist/mfooter/four.svelte"
 				}
 			]
 		},
@@ -3202,7 +2698,7 @@
 				{
 					"path": "src/lib/components/mist/mfooter/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfooter/one.svelte"
+					"target": "mist/mfooter/one.svelte"
 				}
 			]
 		},
@@ -3217,7 +2713,7 @@
 				{
 					"path": "src/lib/components/mist/mfooter/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfooter/three.svelte"
+					"target": "mist/mfooter/three.svelte"
 				}
 			]
 		},
@@ -3232,7 +2728,7 @@
 				{
 					"path": "src/lib/components/mist/mfooter/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mfooter/two.svelte"
+					"target": "mist/mfooter/two.svelte"
 				}
 			]
 		},
@@ -3240,18 +2736,14 @@
 			"name": "mist-forgot-password-one",
 			"type": "registry:block",
 			"description": "Mist-style password reset form",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mforgot-password/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mforgot-password/one.svelte"
+					"target": "mist/mforgot-password/one.svelte"
 				}
 			]
 		},
@@ -3259,19 +2751,14 @@
 			"name": "mist-hero-five",
 			"type": "registry:block",
 			"description": "Mist-style hero with app mockup",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/five/hero-five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/five/hero-five.svelte"
+					"target": "mist/mhero/five/hero-five.svelte"
 				}
 			]
 		},
@@ -3279,25 +2766,19 @@
 			"name": "mist-hero-four",
 			"type": "registry:block",
 			"description": "Mist-style split hero with image",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/four/header.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/four/header.svelte"
+					"target": "mist/mhero/four/header.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/four/hero-four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/four/hero-four.svelte"
+					"target": "mist/mhero/four/hero-four.svelte"
 				}
 			]
 		},
@@ -3305,25 +2786,19 @@
 			"name": "mist-hero-one",
 			"type": "registry:block",
 			"description": "Mist-style centered hero with CTA",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/one/header.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/one/header.svelte"
+					"target": "mist/mhero/one/header.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/one/hero-one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/one/hero-one.svelte"
+					"target": "mist/mhero/one/hero-one.svelte"
 				}
 			]
 		},
@@ -3331,19 +2806,14 @@
 			"name": "mist-hero-six",
 			"type": "registry:block",
 			"description": "Mist-style hero with logo cloud",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/six/hero-six.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/six/hero-six.svelte"
+					"target": "mist/mhero/six/hero-six.svelte"
 				}
 			]
 		},
@@ -3351,25 +2821,19 @@
 			"name": "mist-hero-three",
 			"type": "registry:block",
 			"description": "Mist-style hero with background",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/three/header.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/three/header.svelte"
+					"target": "mist/mhero/three/header.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/three/hero-three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/three/hero-three.svelte"
+					"target": "mist/mhero/three/hero-three.svelte"
 				}
 			]
 		},
@@ -3377,25 +2841,19 @@
 			"name": "mist-hero-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column hero",
-			"registryDependencies": [
-				"button",
-				"utils"
-			],
+			"registryDependencies": ["button", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/two/header.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/two/header.svelte"
+					"target": "mist/mhero/two/header.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/two/hero-two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mhero/two/hero-two.svelte"
+					"target": "mist/mhero/two/hero-two.svelte"
 				}
 			]
 		},
@@ -3403,20 +2861,14 @@
 			"name": "mist-integration-card",
 			"type": "registry:block",
 			"description": "Mist-style integration logo card",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"svelte"
-			],
+			"devDependencies": ["@lucide/svelte", "svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mintegration/integration-card.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mintegration/integration-card.svelte"
+					"target": "mist/mintegration/integration-card.svelte"
 				}
 			]
 		},
@@ -3438,7 +2890,7 @@
 				{
 					"path": "src/lib/components/mist/mintegration/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mintegration/one.svelte"
+					"target": "mist/mintegration/one.svelte"
 				}
 			]
 		},
@@ -3461,7 +2913,7 @@
 				{
 					"path": "src/lib/components/mist/mintegration/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mintegration/three.svelte"
+					"target": "mist/mintegration/three.svelte"
 				}
 			]
 		},
@@ -3484,7 +2936,7 @@
 				{
 					"path": "src/lib/components/mist/mintegration/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mintegration/two.svelte"
+					"target": "mist/mintegration/two.svelte"
 				}
 			]
 		},
@@ -3492,18 +2944,14 @@
 			"name": "mist-login-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal login form",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mlogin/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogin/one.svelte"
+					"target": "mist/mlogin/one.svelte"
 				}
 			]
 		},
@@ -3518,7 +2966,7 @@
 				{
 					"path": "src/lib/components/mist/mlogocloud/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogocloud/one.svelte"
+					"target": "mist/mlogocloud/one.svelte"
 				}
 			]
 		},
@@ -3533,7 +2981,7 @@
 				{
 					"path": "src/lib/components/mist/mlogocloud/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogocloud/two.svelte"
+					"target": "mist/mlogocloud/two.svelte"
 				}
 			]
 		},
@@ -3548,7 +2996,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/Gemini.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/Gemini.svelte"
+					"target": "mist/mlogos/Gemini.svelte"
 				}
 			]
 		},
@@ -3563,7 +3011,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/GooglePaLM.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/GooglePaLM.svelte"
+					"target": "mist/mlogos/GooglePaLM.svelte"
 				}
 			]
 		},
@@ -3585,7 +3033,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/logos.ts",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/logos.ts"
+					"target": "mist/mlogos/logos.ts"
 				}
 			]
 		},
@@ -3600,7 +3048,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/MagicUI.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/MagicUI.svelte"
+					"target": "mist/mlogos/MagicUI.svelte"
 				}
 			]
 		},
@@ -3615,7 +3063,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/MediaWiki.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/MediaWiki.svelte"
+					"target": "mist/mlogos/MediaWiki.svelte"
 				}
 			]
 		},
@@ -3630,7 +3078,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/Replit.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/Replit.svelte"
+					"target": "mist/mlogos/Replit.svelte"
 				}
 			]
 		},
@@ -3645,7 +3093,7 @@
 				{
 					"path": "src/lib/components/mist/mlogos/VSCodium.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mlogos/VSCodium.svelte"
+					"target": "mist/mlogos/VSCodium.svelte"
 				}
 			]
 		},
@@ -3653,19 +3101,14 @@
 			"name": "mist-pricing-one",
 			"type": "registry:block",
 			"description": "Mist-style simple pricing cards",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mpricing/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mpricing/one.svelte"
+					"target": "mist/mpricing/one.svelte"
 				}
 			]
 		},
@@ -3673,19 +3116,14 @@
 			"name": "mist-pricing-two",
 			"type": "registry:block",
 			"description": "Mist-style pricing with toggle",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mpricing/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mpricing/two.svelte"
+					"target": "mist/mpricing/two.svelte"
 				}
 			]
 		},
@@ -3693,18 +3131,14 @@
 			"name": "mist-signup-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal signup form",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label"
-			],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/msignup/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/msignup/one.svelte"
+					"target": "mist/msignup/one.svelte"
 				}
 			]
 		},
@@ -3719,7 +3153,7 @@
 				{
 					"path": "src/lib/components/mist/mstats/four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mstats/four.svelte"
+					"target": "mist/mstats/four.svelte"
 				}
 			]
 		},
@@ -3727,16 +3161,14 @@
 			"name": "mist-stats-one",
 			"type": "registry:block",
 			"description": "Mist-style simple stats row",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mstats/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mstats/one.svelte"
+					"target": "mist/mstats/one.svelte"
 				}
 			]
 		},
@@ -3746,14 +3178,12 @@
 			"description": "Mist-style stats with descriptions",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mstats/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mstats/three.svelte"
+					"target": "mist/mstats/three.svelte"
 				}
 			]
 		},
@@ -3768,7 +3198,7 @@
 				{
 					"path": "src/lib/components/mist/mstats/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mstats/two.svelte"
+					"target": "mist/mstats/two.svelte"
 				}
 			]
 		},
@@ -3776,19 +3206,14 @@
 			"name": "mist-team-one",
 			"type": "registry:block",
 			"description": "Mist-style team member grid",
-			"registryDependencies": [
-				"avatar",
-				"button"
-			],
+			"registryDependencies": ["avatar", "button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mteam/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mteam/one.svelte"
+					"target": "mist/mteam/one.svelte"
 				}
 			]
 		},
@@ -3796,20 +3221,14 @@
 			"name": "mist-team-two",
 			"type": "registry:block",
 			"description": "Mist-style team with social links",
-			"registryDependencies": [
-				"avatar",
-				"button",
-				"hover-card"
-			],
+			"registryDependencies": ["avatar", "button", "hover-card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mteam/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mteam/two.svelte"
+					"target": "mist/mteam/two.svelte"
 				}
 			]
 		},
@@ -3817,18 +3236,14 @@
 			"name": "mist-testimonial-five",
 			"type": "registry:block",
 			"description": "Mist-style testimonial carousel",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mtestimonial/five.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mtestimonial/five.svelte"
+					"target": "mist/mtestimonial/five.svelte"
 				}
 			]
 		},
@@ -3836,16 +3251,14 @@
 			"name": "mist-testimonial-four",
 			"type": "registry:block",
 			"description": "Mist-style four-column testimonials",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mtestimonial/four.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mtestimonial/four.svelte"
+					"target": "mist/mtestimonial/four.svelte"
 				}
 			]
 		},
@@ -3860,7 +3273,7 @@
 				{
 					"path": "src/lib/components/mist/mtestimonial/one.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mtestimonial/one.svelte"
+					"target": "mist/mtestimonial/one.svelte"
 				}
 			]
 		},
@@ -3868,19 +3281,14 @@
 			"name": "mist-testimonial-three",
 			"type": "registry:block",
 			"description": "Mist-style three-column testimonials",
-			"registryDependencies": [
-				"avatar",
-				"utils"
-			],
+			"registryDependencies": ["avatar", "utils"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mtestimonial/three.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mtestimonial/three.svelte"
+					"target": "mist/mtestimonial/three.svelte"
 				}
 			]
 		},
@@ -3888,473 +3296,16 @@
 			"name": "mist-testimonial-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column testimonials",
-			"registryDependencies": [
-				"avatar"
-			],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mtestimonial/two.svelte",
 					"type": "registry:component",
-					"target": "src/lib/components/mist/mtestimonial/two.svelte"
+					"target": "mist/mtestimonial/two.svelte"
 				}
 			]
-		},
-		{
-			"name": "marquee",
-			"type": "registry:block",
-			"description": "Animated horizontal scrolling marquee",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"svelte"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/magic/Marquee.svelte",
-					"type": "registry:component",
-					"target": "src/lib/components/magic/Marquee.svelte"
-				}
-			]
-		},
-		{
-			"name": "progressive-blur",
-			"type": "registry:block",
-			"description": "Progressive blur effect component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/magic/ProgressiveBlur.svelte",
-					"type": "registry:component",
-					"target": "src/lib/components/magic/ProgressiveBlur.svelte"
-				}
-			]
-		},
-		{
-			"name": "accordion",
-			"type": "registry:ui",
-			"description": "Collapsible accordion component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"bits-ui"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/accordion/accordion-content.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/accordion/accordion-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/accordion-item.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/accordion/accordion-item.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/accordion-trigger.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/accordion/accordion-trigger.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/accordion/index.ts"
-				}
-			]
-		},
-		{
-			"name": "avatar",
-			"type": "registry:ui",
-			"description": "User avatar with image and fallback",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/avatar/avatar-fallback.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/avatar/avatar-fallback.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/avatar/avatar-image.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/avatar/avatar-image.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/avatar/avatar.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/avatar/avatar.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/avatar/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/avatar/index.ts"
-				}
-			]
-		},
-		{
-			"name": "button",
-			"type": "registry:ui",
-			"description": "Button component with variants",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui",
-				"svelte",
-				"tailwind-variants"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/button/animated-button.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/button/animated-button.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/button/button.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/button/button.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/button/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/button/index.ts"
-				}
-			]
-		},
-		{
-			"name": "card",
-			"type": "registry:ui",
-			"description": "Card container with header and footer",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui",
-				"svelte",
-				"tailwind-variants"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/card/card-content.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/card-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/card/card-description.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/card-description.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/card/card-footer.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/card-footer.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/card/card-header.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/card-header.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/card/card-title.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/card-title.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/card/card.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/card.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/card/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/card/index.ts"
-				}
-			]
-		},
-		{
-			"name": "hover-card",
-			"type": "registry:ui",
-			"description": "Card that appears on hover",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/hover-card/hover-card-content.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/hover-card/hover-card-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/hover-card/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/hover-card/index.ts"
-				}
-			]
-		},
-		{
-			"name": "input",
-			"type": "registry:ui",
-			"description": "Text input field component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui",
-				"svelte"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/input/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/input/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/input/input.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/input/input.svelte"
-				}
-			]
-		},
-		{
-			"name": "label",
-			"type": "registry:ui",
-			"description": "Form label component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/label/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/label/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/label/label.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/label/label.svelte"
-				}
-			]
-		},
-		{
-			"name": "select",
-			"type": "registry:ui",
-			"description": "Dropdown select component",
-			"registryDependencies": [
-				"separator",
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"bits-ui"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/select/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-content.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-group-heading.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-group-heading.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-item.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-item.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-scroll-down-button.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-scroll-down-button.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-scroll-up-button.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-scroll-up-button.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-separator.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-separator.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/select/select-trigger.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/select/select-trigger.svelte"
-				}
-			]
-		},
-		{
-			"name": "separator",
-			"type": "registry:ui",
-			"description": "Visual separator line component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/separator/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/separator/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/separator/separator.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/separator/separator.svelte"
-				}
-			]
-		},
-		{
-			"name": "textarea",
-			"type": "registry:ui",
-			"description": "Multi-line text input component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui",
-				"svelte"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/textarea/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/textarea/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/textarea/textarea.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/textarea/textarea.svelte"
-				}
-			]
-		},
-		{
-			"name": "toggle",
-			"type": "registry:ui",
-			"description": "Toggle button component",
-			"registryDependencies": [
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui",
-				"tailwind-variants"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/toggle/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/toggle/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/toggle/toggle.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/toggle/toggle.svelte"
-				}
-			]
-		},
-		{
-			"name": "toggle-group",
-			"type": "registry:ui",
-			"description": "Group of toggle buttons",
-			"registryDependencies": [
-				"toggle",
-				"utils"
-			],
-			"dependencies": [],
-			"devDependencies": [
-				"bits-ui",
-				"svelte"
-			],
-			"files": [
-				{
-					"path": "src/lib/components/ui/toggle-group/index.ts",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/toggle-group/index.ts"
-				},
-				{
-					"path": "src/lib/components/ui/toggle-group/toggle-group-item.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/toggle-group/toggle-group-item.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/toggle-group/toggle-group.svelte",
-					"type": "registry:ui",
-					"target": "src/lib/components/ui/toggle-group/toggle-group.svelte"
-				}
-			]
-		},
-		{
-			"name": "utils",
-			"type": "registry:lib",
-			"description": "Utility functions for styling",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [
-				"clsx",
-				"tailwind-merge"
-			],
-			"files": [
-				{
-					"path": "src/lib/utils.ts",
-					"type": "registry:lib",
-					"target": "src/lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "cursor-rules",
-			"type": "registry:block",
-			"description": "Cursor IDE rules for Svelte Shadcn Blocks",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": ".cursor/rules/svelte-blocks.mdc",
-					"type": "registry:file",
-					"target": ".cursor/rules/svelte-blocks.mdc"
-				}
-			],
-			"title": "Svelte Shadcn Blocks Cursor Rules"
 		}
 	]
 }

@@ -1,26 +1,16 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "feature-seven",
-  "type": "feature",
-  "description": "Feature section with tabs and content panels",
-  "registryDependencies": [],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "@lucide/svelte",
-      "version": "^0.561.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "feature-seven.svelte",
-      "type": "feature",
-      "target": "feature-seven.svelte",
-      "content": "<script>\r\n  import Cpu from \"@lucide/svelte/icons/cpu\";\r\n  import Lock from \"@lucide/svelte/icons/lock\";\r\n  import Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n  import Zap from \"@lucide/svelte/icons/zap\";\r\n\r\n</script>\r\n\r\n<section class=\"overflow-hidden py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-12\">\r\n    <div class=\"relative z-10 max-w-2xl\">\r\n      <h2 class=\"text-4xl font-semibold lg:text-5xl\">\r\n        Built for Scaling teams\r\n      </h2>\r\n      <p class=\"mt-6 text-lg\">\r\n        Empower your team with workflows that adapt to your needs, whether you\r\n        prefer git synchronization or a AI Agents interface.\r\n      </p>\r\n    </div>\r\n    <div class=\"relative -mx-4 rounded-3xl p-3 md:-mx-12 lg:col-span-3\">\r\n      <div class=\"perspective-midrange\">\r\n        <div class=\"rotate-x-6 -skew-2\">\r\n          <div class=\"aspect-88/36 relative\">\r\n            <div\r\n              class=\"bg-radial-[at_75%_25%] to-background z-1 -inset-17 absolute from-transparent to-75%\"\r\n            ></div>\r\n            <img\r\n              src=\"/mail-upper.png\"\r\n              class=\"absolute inset-0 z-10\"\r\n              alt=\"payments illustration dark\"\r\n              width={2797}\r\n              height={1137}\r\n            />\r\n            <img\r\n              src=\"/mail-back.png\"\r\n              class=\"hidden dark:block\"\r\n              alt=\"payments illustration dark\"\r\n              width={2797}\r\n              height={1137}\r\n            />\r\n            <img\r\n              src=\"/mail-back-light.png\"\r\n              class=\"dark:hidden\"\r\n              alt=\"payments illustration light\"\r\n              width={2797}\r\n              height={1137}\r\n            />\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div\r\n      class=\"relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4\"\r\n    >\r\n      <div class=\"space-y-3\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Zap class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Faaast</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an entire helping developers and innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Cpu class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Powerful</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an entire helping developers and businesses.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Lock class=\"size-4\" />\r\n          <h3 class=\"text-sm font-medium\">Security</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an helping developers businesses innovate.\r\n        </p>\r\n      </div>\r\n      <div class=\"space-y-2\">\r\n        <div class=\"flex items-center gap-2\">\r\n          <Sparkles class=\"size-4\" />\r\n\r\n          <h3 class=\"text-sm font-medium\">AI Powered</h3>\r\n        </div>\r\n        <p class=\"text-muted-foreground text-sm\">\r\n          It supports an helping developers businesses innovate.\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-seven",
+	"type": "registry:block",
+	"description": "Feature section with tabs and content panels",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\n\timport Lock from \"@lucide/svelte/icons/lock\";\n\timport Sparkles from \"@lucide/svelte/icons/sparkles\";\n\timport Zap from \"@lucide/svelte/icons/zap\";\n</script>\n\n<section class=\"overflow-hidden py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-12\">\n\t\t<div class=\"relative z-10 max-w-2xl\">\n\t\t\t<h2 class=\"text-4xl font-semibold lg:text-5xl\">Built for Scaling teams</h2>\n\t\t\t<p class=\"mt-6 text-lg\">\n\t\t\t\tEmpower your team with workflows that adapt to your needs, whether you prefer git\n\t\t\t\tsynchronization or a AI Agents interface.\n\t\t\t</p>\n\t\t</div>\n\t\t<div class=\"relative -mx-4 rounded-3xl p-3 md:-mx-12 lg:col-span-3\">\n\t\t\t<div class=\"perspective-midrange\">\n\t\t\t\t<div class=\"rotate-x-6 -skew-2\">\n\t\t\t\t\t<div class=\"relative aspect-88/36\">\n\t\t\t\t\t\t<div\n\t\t\t\t\t\t\tclass=\"absolute -inset-17 z-1 bg-radial-[at_75%_25%] from-transparent to-background to-75%\"\n\t\t\t\t\t\t></div>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\tsrc=\"/mail-upper.png\"\n\t\t\t\t\t\t\tclass=\"absolute inset-0 z-10\"\n\t\t\t\t\t\t\talt=\"payments illustration dark\"\n\t\t\t\t\t\t\twidth={2797}\n\t\t\t\t\t\t\theight={1137}\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\tsrc=\"/mail-back.png\"\n\t\t\t\t\t\t\tclass=\"hidden dark:block\"\n\t\t\t\t\t\t\talt=\"payments illustration dark\"\n\t\t\t\t\t\t\twidth={2797}\n\t\t\t\t\t\t\theight={1137}\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\tsrc=\"/mail-back-light.png\"\n\t\t\t\t\t\t\tclass=\"dark:hidden\"\n\t\t\t\t\t\t\talt=\"payments illustration light\"\n\t\t\t\t\t\t\twidth={2797}\n\t\t\t\t\t\t\theight={1137}\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4\">\n\t\t\t<div class=\"space-y-3\">\n\t\t\t\t<div class=\"flex items-center gap-2\">\n\t\t\t\t\t<Zap class=\"size-4\" />\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Faaast</h3>\n\t\t\t\t</div>\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\n\t\t\t\t\tIt supports an entire helping developers and innovate.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-2\">\n\t\t\t\t<div class=\"flex items-center gap-2\">\n\t\t\t\t\t<Cpu class=\"size-4\" />\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Powerful</h3>\n\t\t\t\t</div>\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\n\t\t\t\t\tIt supports an entire helping developers and businesses.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-2\">\n\t\t\t\t<div class=\"flex items-center gap-2\">\n\t\t\t\t\t<Lock class=\"size-4\" />\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Security</h3>\n\t\t\t\t</div>\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\n\t\t\t\t\tIt supports an helping developers businesses innovate.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-2\">\n\t\t\t\t<div class=\"flex items-center gap-2\">\n\t\t\t\t\t<Sparkles class=\"size-4\" />\n\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">AI Powered</h3>\n\t\t\t\t</div>\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\n\t\t\t\t\tIt supports an helping developers businesses innovate.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/feature/feature-seven.svelte"
+		}
+	]
 }

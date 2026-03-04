@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-call-to-action-three",
+	"type": "registry:block",
+	"description": "Veil Call To Action component, variant Three.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\n\timport { ChevronRight, Mail } from \"@lucide/svelte\";\n\n\ttype Props = {\n\t\ttitle?: string;\n\t\tdescription?: string;\n\t\temailPlaceholder?: string;\n\t\tsubscribeLabel?: string;\n\t\tsubscribeHref?: string;\n\t};\n\n\tlet {\n\t\ttitle = \"Stay in the Loop\",\n\t\tdescription = \"Get the latest updates, tips, and exclusive offers delivered straight to your inbox.\",\n\t\temailPlaceholder = \"Enter your email\",\n\t\tsubscribeLabel = \"Subscribe\",\n\t\tsubscribeHref = \"#link\",\n\t}: Props = $props();\n</script>\n\n<section class=\"@container bg-background py-24\">\n\t<div class=\"mx-auto max-w-2xl px-6\">\n\t\t<div class=\"grid items-center gap-8 text-center @xl:text-left\">\n\t\t\t<div>\n\t\t\t\t<h2 class=\"font-serif text-3xl font-medium text-balance md:text-4xl\">{title}</h2>\n\t\t\t\t<p class=\"mt-3 text-balance text-muted-foreground\">{description}</p>\n\t\t\t</div>\n\n\t\t\t<div class=\"flex w-full max-w-sm gap-2 @max-xl:mx-auto @max-md:flex-col\">\n\t\t\t\t<div\n\t\t\t\t\tclass=\"relative flex flex-1 items-center overflow-hidden rounded-md border border-transparent ring ring-input not-dark:bg-card focus-within:border-primary focus-within:ring-[3px] focus-within:ring-ring/15\"\n\t\t\t\t>\n\t\t\t\t\t<Mail\n\t\t\t\t\t\tclass=\"pointer-events-none absolute left-2.5 size-3.5 text-muted-foreground\"\n\t\t\t\t\t/>\n\t\t\t\t\t<input\n\t\t\t\t\t\ttype=\"email\"\n\t\t\t\t\t\tplaceholder={emailPlaceholder}\n\t\t\t\t\t\tautocomplete=\"email\"\n\t\t\t\t\t\tclass=\"h-8 w-full bg-transparent pr-2.5 pl-8 text-sm outline-none autofill:bg-primary\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t\t<Button href={subscribeHref} class=\"shrink-0 pr-1.5\">\n\t\t\t\t\t{subscribeLabel}\n\t\t\t\t\t<ChevronRight class=\"opacity-50\" />\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "veil/call-to-action/call-to-action-three.svelte"
+		}
+	]
+}

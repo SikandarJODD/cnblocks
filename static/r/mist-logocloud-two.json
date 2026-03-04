@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-logocloud-two",
+	"type": "registry:block",
+	"description": "Mist-style logo cloud with hover",
+	"files": [
+		{
+			"content": "<section>\n\t<div class=\"mx-auto max-w-5xl px-6 py-8\">\n\t\t<div class=\"flex flex-wrap items-center gap-4\">\n\t\t\t<p class=\"text-center text-muted-foreground\">Trusted by teams at :</p>\n\t\t\t<div class=\"flex items-center justify-center gap-8\">\n\t\t\t\t<div class=\"flex\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tclass=\"mx-auto h-4 w-fit dark:invert\"\n\t\t\t\t\t\tsrc=\"https://html.tailus.io/blocks/customers/nvidia.svg\"\n\t\t\t\t\t\talt=\"Nvidia Logo\"\n\t\t\t\t\t\theight=\"20\"\n\t\t\t\t\t\twidth=\"auto\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"flex\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tclass=\"mx-auto h-3 w-fit dark:invert\"\n\t\t\t\t\t\tsrc=\"https://html.tailus.io/blocks/customers/column.svg\"\n\t\t\t\t\t\talt=\"Column Logo\"\n\t\t\t\t\t\theight=\"16\"\n\t\t\t\t\t\twidth=\"auto\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"flex\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tclass=\"mx-auto h-3 w-fit dark:invert\"\n\t\t\t\t\t\tsrc=\"https://html.tailus.io/blocks/customers/github.svg\"\n\t\t\t\t\t\talt=\"GitHub Logo\"\n\t\t\t\t\t\theight=\"16\"\n\t\t\t\t\t\twidth=\"auto\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"flex\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tclass=\"mx-auto h-4 w-fit dark:invert\"\n\t\t\t\t\t\tsrc=\"https://html.tailus.io/blocks/customers/nike.svg\"\n\t\t\t\t\t\talt=\"Nike Logo\"\n\t\t\t\t\t\theight=\"20\"\n\t\t\t\t\t\twidth=\"auto\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "mist/mlogocloud/two.svelte"
+		}
+	]
+}

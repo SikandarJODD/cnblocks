@@ -1,20 +1,13 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "testimonial-three",
-  "type": "testimonial",
-  "description": "Three-column testimonial cards",
-  "registryDependencies": [],
-  "dependencies": [],
-  "devDependencies": [],
-  "files": [
-    {
-      "path": "testimonial-three.svelte",
-      "type": "testimonial",
-      "target": "testimonial-three.svelte",
-      "content": "<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"mx-auto max-w-2xl\">\r\n      <blockquote>\r\n        <p class=\"text-lg font-semibold sm:text-xl md:text-3xl\">\r\n          Using TailsUI has been like unlocking a secret design superpower. It's\r\n          the perfect fusion of simplicity and versatility, enabling us to\r\n          create UIs that are as stunning as they are user-friendly.\r\n        </p>\r\n\r\n        <div class=\"mt-12 flex items-center gap-6\">\r\n          <img\r\n            class=\"h-7 w-fit dark:invert\"\r\n            src=\"https://html.tailus.io/blocks/customers/nvidia.svg\"\r\n            alt=\"Nvidia Logo\"\r\n            height=\"20\"\r\n            width=\"auto\"\r\n          />\r\n          <div class=\"space-y-1 border-l pl-6\">\r\n            <cite class=\"font-medium\">John Doe</cite>\r\n            <span class=\"text-muted-foreground block text-sm\"\r\n              >CEO, Nvidia</span\r\n            >\r\n          </div>\r\n        </div>\r\n      </blockquote>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-three",
+	"type": "registry:block",
+	"description": "Three-column testimonial cards",
+	"files": [
+		{
+			"content": "<section class=\"py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t<div class=\"mx-auto max-w-2xl\">\n\t\t\t<blockquote>\n\t\t\t\t<p class=\"text-lg font-semibold sm:text-xl md:text-3xl\">\n\t\t\t\t\tUsing TailsUI has been like unlocking a secret design superpower. It's the\n\t\t\t\t\tperfect fusion of simplicity and versatility, enabling us to create UIs that are\n\t\t\t\t\tas stunning as they are user-friendly.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"mt-12 flex items-center gap-6\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tclass=\"h-7 w-fit dark:invert\"\n\t\t\t\t\t\tsrc=\"https://html.tailus.io/blocks/customers/nvidia.svg\"\n\t\t\t\t\t\talt=\"Nvidia Logo\"\n\t\t\t\t\t\theight=\"20\"\n\t\t\t\t\t\twidth=\"auto\"\n\t\t\t\t\t/>\n\t\t\t\t\t<div class=\"space-y-1 border-l pl-6\">\n\t\t\t\t\t\t<cite class=\"font-medium\">John Doe</cite>\n\t\t\t\t\t\t<span class=\"block text-sm text-muted-foreground\">CEO, Nvidia</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</blockquote>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/testimonial/testimonial-three.svelte"
+		}
+	]
 }

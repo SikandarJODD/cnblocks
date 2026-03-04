@@ -1,28 +1,19 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "cta-three",
-  "type": "cta",
-  "description": "CTA section with background gradient",
-  "registryDependencies": [
-    "button"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "@lucide/svelte",
-      "version": "^0.561.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "cta-three.svelte",
-      "type": "cta",
-      "target": "cta-three.svelte",
-      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import Mail from \"@lucide/svelte/icons/mail\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"text-center\">\r\n      <h2 class=\"text-balance text-4xl font-semibold lg:text-5xl\">\r\n        Start Building\r\n      </h2>\r\n      <p class=\"mt-4\">Libero sapiente aliquam quibusdam aspernatur.</p>\r\n\r\n      <form action=\"\" class=\"mx-auto mt-10 max-w-sm lg:mt-12\">\r\n        <div\r\n          class=\"bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2\"\r\n        >\r\n          <Mail\r\n            class=\"text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5\"\r\n          />\r\n\r\n          <input\r\n            placeholder=\"Your mail address\"\r\n            class=\"h-14 w-full bg-transparent pl-12 focus:outline-none\"\r\n            type=\"email\"\r\n          />\r\n\r\n          <div class=\"md:pr-1.5 lg:pr-0\">\r\n            <Button aria-label=\"submit\" class=\"rounded-(--radius)\">\r\n              <span class=\"hidden md:block\">Get Started</span>\r\n              <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width=\"24\"\r\n                height=\"24\"\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke=\"currentColor\"\r\n                stroke-width=\"2\"\r\n                stroke-linecap=\"round\"\r\n                stroke-linejoin=\"round\"\r\n                class=\"relative mx-auto size-5 md:hidden\"\r\n                ><path\r\n                  d=\"M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z\"\r\n                /><path d=\"M6 12h16\" /></svg\r\n              >\r\n            </Button>\r\n          </div>\r\n        </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "cta-three",
+	"type": "registry:block",
+	"description": "CTA section with background gradient",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n\timport Mail from \"@lucide/svelte/icons/mail\";\n</script>\n\n<section class=\"py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t<div class=\"text-center\">\n\t\t\t<h2 class=\"text-4xl font-semibold text-balance lg:text-5xl\">Start Building</h2>\n\t\t\t<p class=\"mt-4\">Libero sapiente aliquam quibusdam aspernatur.</p>\n\n\t\t\t<form action=\"\" class=\"mx-auto mt-10 max-w-sm lg:mt-12\">\n\t\t\t\t<div\n\t\t\t\t\tclass=\"relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border bg-background pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2 has-[input:focus]:ring-muted\"\n\t\t\t\t>\n\t\t\t\t\t<Mail\n\t\t\t\t\t\tclass=\"text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5\"\n\t\t\t\t\t/>\n\n\t\t\t\t\t<input\n\t\t\t\t\t\tplaceholder=\"Your mail address\"\n\t\t\t\t\t\tclass=\"h-14 w-full bg-transparent pl-12 focus:outline-none\"\n\t\t\t\t\t\ttype=\"email\"\n\t\t\t\t\t/>\n\n\t\t\t\t\t<div class=\"md:pr-1.5 lg:pr-0\">\n\t\t\t\t\t\t<Button aria-label=\"submit\" class=\"rounded-(--radius)\">\n\t\t\t\t\t\t\t<span class=\"hidden md:block\">Get Started</span>\n\t\t\t\t\t\t\t<svg\n\t\t\t\t\t\t\t\txmlns=\"http://www.w3.org/2000/svg\"\n\t\t\t\t\t\t\t\twidth=\"24\"\n\t\t\t\t\t\t\t\theight=\"24\"\n\t\t\t\t\t\t\t\tviewBox=\"0 0 24 24\"\n\t\t\t\t\t\t\t\tfill=\"none\"\n\t\t\t\t\t\t\t\tstroke=\"currentColor\"\n\t\t\t\t\t\t\t\tstroke-width=\"2\"\n\t\t\t\t\t\t\t\tstroke-linecap=\"round\"\n\t\t\t\t\t\t\t\tstroke-linejoin=\"round\"\n\t\t\t\t\t\t\t\tclass=\"relative mx-auto size-5 md:hidden\"\n\t\t\t\t\t\t\t\t><path\n\t\t\t\t\t\t\t\t\td=\"M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z\"\n\t\t\t\t\t\t\t\t/><path d=\"M6 12h16\" /></svg\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/cta/cta-three.svelte"
+		}
+	]
 }

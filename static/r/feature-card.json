@@ -1,29 +1,20 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "feature-card",
-  "type": "feature",
-  "description": "Reusable feature card with icon and text",
-  "registryDependencies": [
-    "card",
-    "utils"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "svelte",
-      "version": "^5.23.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "feature-card.svelte",
-      "type": "feature",
-      "target": "feature-card.svelte",
-      "content": "<script lang=\"ts\">\r\n  import Card from \"$lib/components/ui/card/card.svelte\";\r\n  import { cn } from \"$lib/utils\";\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  let { children, class: _class = \"\" }: { children: Snippet; class?: string } =\r\n    $props();\r\n</script>\r\n\r\n<Card class={cn(\"group relative rounded-none shadow-zinc-950/5\", _class)}>\r\n  {@render cardDecorator()}\r\n  {@render children()}\r\n</Card>\r\n\r\n{#snippet cardDecorator()}\r\n  <span\r\n    class=\"border-primary absolute -left-px -top-px block size-2\"\r\n    style=\"\r\n      border-top-width: 2px;\r\n      border-left-width: 2px;\"\r\n  ></span>\r\n  <span\r\n    class=\"border-primary absolute -right-px -top-px block size-2\"\r\n    style=\"\r\n      border-top-width: 2px;\r\n      border-right-width: 2px;\"\r\n  ></span>\r\n  <span\r\n    class=\"border-primary absolute -bottom-px -left-px block size-2\"\r\n    style=\"\r\n      border-bottom-width: 2px;\r\n      border-left-width: 2px;\"\r\n  ></span>\r\n  <span\r\n    class=\"border-primary absolute -bottom-px -right-px block size-2\"\r\n    style=\"\r\n      border-bottom-width: 2px;\r\n      border-right-width: 2px;\"\r\n  ></span>\r\n{/snippet}\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-card",
+	"type": "registry:block",
+	"description": "Reusable feature card with icon and text",
+	"devDependencies": [
+		"svelte"
+	],
+	"registryDependencies": [
+		"card",
+		"utils"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport Card from \"$COMPONENTS$/ui/card/card.svelte\";\n\timport { cn } from \"$UTILS$\";\n\timport type { Snippet } from \"svelte\";\n\n\tlet { children, class: _class = \"\" }: { children: Snippet; class?: string } = $props();\n</script>\n\n<Card class={cn(\"group relative rounded-none shadow-zinc-950/5\", _class)}>\n\t{@render cardDecorator()}\n\t{@render children()}\n</Card>\n\n{#snippet cardDecorator()}\n\t<span\n\t\tclass=\"absolute -top-px -left-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-top-width: 2px;\n      border-left-width: 2px;\"\n\t></span>\n\t<span\n\t\tclass=\"absolute -top-px -right-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-top-width: 2px;\n      border-right-width: 2px;\"\n\t></span>\n\t<span\n\t\tclass=\"absolute -bottom-px -left-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-bottom-width: 2px;\n      border-left-width: 2px;\"\n\t></span>\n\t<span\n\t\tclass=\"absolute -right-px -bottom-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-bottom-width: 2px;\n      border-right-width: 2px;\"\n\t></span>\n{/snippet}\n",
+			"type": "registry:component",
+			"target": "blocks/feature/feature-card.svelte"
+		}
+	]
 }

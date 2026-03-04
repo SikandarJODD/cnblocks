@@ -1,0 +1,21 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-integration-two",
+	"type": "registry:block",
+	"description": "Veil Integration component, variant Two.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\n\timport { ChevronRight } from \"@lucide/svelte\";\n\timport IntegrationIllustrationTwo from \"./integration-illustration-two.svelte\";\n</script>\n\n<section class=\"@container bg-background py-24\">\n\t<div class=\"mx-auto max-w-2xl\">\n\t\t<IntegrationIllustrationTwo />\n\t\t<div class=\"mx-auto mt-12 max-w-md px-6 text-center text-balance\">\n\t\t\t<h2 class=\"font-serif text-4xl font-medium\">Connect Your Favorite Tools</h2>\n\t\t\t<p class=\"mt-4 mb-6 text-muted-foreground\">\n\t\t\t\tSeamlessly integrate with the services you already use. Set up in minutes, not days.\n\t\t\t</p>\n\t\t\t<Button variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-1.5\">\n\t\t\t\tLearn more\n\t\t\t\t<ChevronRight />\n\t\t\t</Button>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "veil/integration/integration-two.svelte"
+		},
+		{
+			"content": "<script>\n\timport {\n\t\tBolt as Logo,\n\t\tClerk,\n\t\tFirebase,\n\t\tLinear,\n\t\tSlack,\n\t\tSupabase,\n\t\tVercel,\n\t} from \"$LIB$/svgs/index\";\n</script>\n\n<div aria-hidden class=\"relative mx-auto flex size-96 **:fill-foreground @max-md:scale-85\">\n\t<div\n\t\tclass=\"absolute relative inset-0 m-auto flex size-12 items-center rounded-full bg-card shadow-sm ring shadow-black/6.5 ring-border *:m-auto\"\n\t>\n\t\t<Logo class=\"size-5\" />\n\t</div>\n\t<div class=\"absolute inset-0 flex rotate-120 items-center justify-between gap-12 *:-rotate-120\">\n\t\t<div class=\"absolute inset-4 rounded-full border border-dashed border-foreground/10\" />\n\n\t\t<div\n\t\t\tclass=\"relative flex size-9 items-center rounded-full border bg-muted backdrop-blur *:m-auto\"\n\t\t>\n\t\t\t<Firebase class=\"size-3.5\" />\n\t\t</div>\n\t\t<div\n\t\t\tclass=\"relative flex size-9 items-center rounded-full bg-card shadow-sm ring shadow-black/6.5 ring-border *:m-auto\"\n\t\t>\n\t\t\t<Supabase class=\"size-3.5\" />\n\t\t</div>\n\t</div>\n\t<div class=\"absolute inset-12 flex items-center justify-between gap-12\">\n\t\t<div class=\"absolute inset-4 rounded-full border border-dashed border-foreground/10\" />\n\n\t\t<div\n\t\t\tclass=\"relative flex size-9 items-center rounded-full border bg-muted backdrop-blur *:m-auto\"\n\t\t>\n\t\t\t<Vercel class=\"size-3.5\" />\n\t\t</div>\n\t\t<div\n\t\t\tclass=\"relative flex size-9 items-center rounded-full bg-card shadow-sm ring shadow-black/6.5 ring-border *:m-auto\"\n\t\t>\n\t\t\t<Slack class=\"size-3.5\" />\n\t\t</div>\n\t</div>\n\t<div class=\"absolute inset-24 flex rotate-45 items-center justify-between gap-12 *:-rotate-45\">\n\t\t<div class=\"absolute inset-4 rounded-full border border-dashed border-foreground/10\" />\n\n\t\t<div\n\t\t\tclass=\"relative flex size-9 items-center rounded-full bg-card shadow-sm ring shadow-black/6.5 ring-border *:m-auto\"\n\t\t>\n\t\t\t<Clerk class=\"size-3.5\" />\n\t\t</div>\n\t\t<div\n\t\t\tclass=\"relative flex size-9 items-center rounded-full border bg-muted backdrop-blur *:m-auto\"\n\t\t>\n\t\t\t<Linear class=\"size-3.5\" />\n\t\t</div>\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "veil/integration/integration-illustration-two.svelte"
+		}
+	]
+}

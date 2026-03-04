@@ -13,18 +13,17 @@ Production-ready UI and marketing blocks for **Svelte 5**, built with **shadcn-s
 
 The new **Veil** collection is now live with **60 production-ready blocks** for modern SaaS and product websites.
 
-
 Explore Veil: [https://sv-blocks.vercel.app/veil](https://sv-blocks.vercel.app/veil)
 
 ## Variants
 
 Svelte Shadcn Blocks now includes 3 variants:
 
-| Variant | Style | Block Count |
-| --- | --- | --- |
-| Normal | Bold marketing visuals | 50+ |
-| Mist | Minimal, documentation-friendly style | 50+ |
-| Veil | Polished modern SaaS style | 60 new |
+| Variant | Style                                 | Block Count |
+| ------- | ------------------------------------- | ----------- |
+| Normal  | Bold marketing visuals                | 50+         |
+| Mist    | Minimal, documentation-friendly style | 50+         |
+| Veil    | Polished modern SaaS style            | 60 new      |
 
 That is **160+ blocks** across the library.
 
@@ -66,7 +65,6 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/mist-hero-one.j
 # Veil
 pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.json
 ```
-
 
 ## Inspiration
 

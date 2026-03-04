@@ -72,7 +72,10 @@
 						>
 							<span>{item.title}</span>
 							{#if item.badge}
-								<Badge variant="secondary" class="ml-2 rounded-full px-1.5 py-0 text-[10px]">
+								<Badge
+									variant="secondary"
+									class="ml-2 rounded-full px-1.5 py-0 text-[10px]"
+								>
 									{item.badge}
 								</Badge>
 							{/if}

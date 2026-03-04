@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-content-two",
+	"type": "registry:block",
+	"description": "Veil Content component, variant Two.",
+	"files": [
+		{
+			"content": "<section class=\"@container bg-background py-24\">\n\t<div class=\"mx-auto max-w-2xl px-6\">\n\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">\n\t\t\tCreate Content with AI Assistance\n\t\t</h2>\n\n\t\t<div class=\"mt-12 grid grid-cols-2 gap-6 @xl:gap-12\">\n\t\t\t<p class=\"border-t pt-6 text-muted-foreground\">\n\t\t\t\t<span class=\"font-medium text-foreground\">Generate Ideas</span> Spark creativity with\n\t\t\t\tAI-powered content suggestions and inspiration.\n\t\t\t</p>\n\n\t\t\t<p class=\"border-t pt-6 text-muted-foreground\">\n\t\t\t\t<span class=\"font-medium text-foreground\">Improve Writing</span> Enhance your text with\n\t\t\t\tsmart editing suggestions and style refinements.\n\t\t\t</p>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "veil/content/content-two.svelte"
+		}
+	]
+}
