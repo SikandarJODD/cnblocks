@@ -36,7 +36,7 @@
 
 <Sidebar.Provider>
 	<DocsSidebar />
-	<Sidebar.Inset class="min-h-[calc(100svh-4rem)] mr-5! border-r lg:h-[calc(100vh-10rem)]!">
+	<Sidebar.Inset class="mr-5! min-h-[calc(100svh-4rem)] border-r lg:h-[calc(100vh-10rem)]!">
 		<!-- <header class="flex h-14 items-center border-b px-4 lg:hidden">
 			<Sidebar.Trigger />
 			<span class="ml-3 text-sm font-medium text-muted-foreground">Documentation</span>
@@ -47,7 +47,7 @@
 			<ScrollArea
 				class="my-0 min-h-0 min-w-0 py-0 lg:h-full"
 				orientation="vertical"
-				scrollbarYClasses='hidden'
+				scrollbarYClasses="hidden"
 			>
 				<div id="docs-content-container" class="min-h-0 min-w-0">
 					{@render children()}
@@ -58,7 +58,7 @@
 	</Sidebar.Inset>
 
 	{#if showToc}
-		<aside class="hidden lg:block lg:min-w-68 mr-5">
+		<aside class="mr-5 hidden lg:block lg:min-w-68">
 			<div
 				class="sticky top-6 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur-sm"
 			>

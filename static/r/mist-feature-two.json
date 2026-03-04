@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-feature-two",
+	"type": "registry:block",
+	"description": "Mist-style feature with side image",
+	"registryDependencies": [
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Card } from \"$COMPONENTS$/ui/card\";\n</script>\n\n<section>\n\t<div class=\"bg-muted/50 py-24\">\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t\t<div>\n\t\t\t\t<h2 class=\"text-4xl font-semibold text-foreground\">Effortless Task Management</h2>\n\t\t\t\t<p class=\"mt-4 mb-12 text-lg text-balance text-muted-foreground\">\n\t\t\t\t\tAutomate your tasks and workflows by connecting your favorite tools like Notion,\n\t\t\t\t\tTodoist, and more. AI-powered scheduling helps you stay on track and adapt to\n\t\t\t\t\tchanging priorities.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"mt-8 grid gap-4 sm:grid-cols-2 md:mt-16 md:grid-cols-3\">\n\t\t\t\t<div class=\"space-y-4\">\n\t\t\t\t\t<Card variant=\"soft\" class=\"aspect-video overflow-hidden px-6\">\n\t\t\t\t\t\t<Card class=\"h-full translate-y-6\" />\n\t\t\t\t\t</Card>\n\t\t\t\t\t<div class=\"sm:max-w-sm\">\n\t\t\t\t\t\t<h3 class=\"text-xl font-semibold text-foreground\">Marketing Campaigns</h3>\n\t\t\t\t\t\t<p class=\"my-4 text-lg text-muted-foreground\">\n\t\t\t\t\t\t\tEffortlessly book and manage your meetings. Stay on top of your\n\t\t\t\t\t\t\tschedule.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"space-y-4\">\n\t\t\t\t\t<Card variant=\"soft\" class=\"aspect-video overflow-hidden p-6\">\n\t\t\t\t\t\t<Card class=\"h-full\" />\n\t\t\t\t\t</Card>\n\t\t\t\t\t<div class=\"sm:max-w-sm\">\n\t\t\t\t\t\t<h3 class=\"text-xl font-semibold text-foreground\">AI Meeting Scheduler</h3>\n\t\t\t\t\t\t<p class=\"my-4 text-lg text-muted-foreground\">\n\t\t\t\t\t\t\tEffortlessly book and manage your meetings. Stay on top of your\n\t\t\t\t\t\t\tschedule.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"space-y-4\">\n\t\t\t\t\t<Card variant=\"soft\" class=\"aspect-video overflow-hidden\">\n\t\t\t\t\t\t<Card class=\"h-full translate-6\" />\n\t\t\t\t\t</Card>\n\t\t\t\t\t<div class=\"sm:max-w-sm\">\n\t\t\t\t\t\t<h3 class=\"text-xl font-semibold text-foreground\">AI Meeting Scheduler</h3>\n\t\t\t\t\t\t<p class=\"my-4 text-lg text-muted-foreground\">\n\t\t\t\t\t\t\tEffortlessly book and manage your meetings. Stay on top of your\n\t\t\t\t\t\t\tschedule.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "mist/mfeature/two.svelte"
+		}
+	]
+}

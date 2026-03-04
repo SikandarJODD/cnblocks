@@ -1,26 +1,16 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "feature-five",
-  "type": "feature",
-  "description": "Feature block with large image and bullet points",
-  "registryDependencies": [],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "@lucide/svelte",
-      "version": "^0.561.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "feature-five.svelte",
-      "type": "feature",
-      "target": "feature-five.svelte",
-      "content": "<script>\r\n  import Zap from \"@lucide/svelte/icons/zap\";\r\n  import Activity from \"@lucide/svelte/icons/activity\";\r\n  import DraftingCompass from \"@lucide/svelte/icons/drafting-compass\";\r\n  import Mail from \"@lucide/svelte/icons/mail\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-6xl px-6\">\r\n    <div\r\n      class=\"grid items-center gap-12 md:grid-cols-2 md:gap-12 lg:grid-cols-5 lg:gap-24\"\r\n    >\r\n      <div class=\"lg:col-span-2\">\r\n        <div class=\"md:pr-6 lg:pr-0\">\r\n          <h2 class=\"text-4xl font-semibold lg:text-5xl\">\r\n            Built for Scaling teams\r\n          </h2>\r\n          <p class=\"mt-6\">\r\n            Orrupti aut temporibus assumenda atque ab, accusamus sit, molestiae\r\n            veniam laboriosam pariatur.\r\n          </p>\r\n        </div>\r\n        <ul class=\"mt-8 divide-y border-y *:flex *:items-center *:gap-3 *:py-3\">\r\n          <li>\r\n            <Mail class=\"size-5\" />\r\n            Email and web support\r\n          </li>\r\n          <li>\r\n            <Zap class=\"size-5\" />\r\n            Fast response time\r\n          </li>\r\n          <li>\r\n            <Activity class=\"size-5\" />\r\n            Menitoring and analytics\r\n          </li>\r\n          <li>\r\n            <DraftingCompass class=\"size-5\" />\r\n            Architectural review\r\n          </li>\r\n        </ul>\r\n      </div>\r\n      <div\r\n        class=\"border-border/50 relative rounded-3xl border p-3 lg:col-span-3\"\r\n      >\r\n        <div\r\n          class=\"bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700\"\r\n        >\r\n          <img\r\n            src=\"/payments.png\"\r\n            class=\"hidden rounded-[15px] dark:block\"\r\n            alt=\"payments illustration dark\"\r\n            width={1207}\r\n            height={929}\r\n          />\r\n          <img\r\n            src=\"/payments-light.png\"\r\n            class=\"rounded-[15px] shadow dark:hidden\"\r\n            alt=\"payments illustration light\"\r\n            width={1207}\r\n            height={929}\r\n          />\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-five",
+	"type": "registry:block",
+	"description": "Feature block with large image and bullet points",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport Zap from \"@lucide/svelte/icons/zap\";\n\timport Activity from \"@lucide/svelte/icons/activity\";\n\timport DraftingCompass from \"@lucide/svelte/icons/drafting-compass\";\n\timport Mail from \"@lucide/svelte/icons/mail\";\n</script>\n\n<section class=\"py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-6xl px-6\">\n\t\t<div class=\"grid items-center gap-12 md:grid-cols-2 md:gap-12 lg:grid-cols-5 lg:gap-24\">\n\t\t\t<div class=\"lg:col-span-2\">\n\t\t\t\t<div class=\"md:pr-6 lg:pr-0\">\n\t\t\t\t\t<h2 class=\"text-4xl font-semibold lg:text-5xl\">Built for Scaling teams</h2>\n\t\t\t\t\t<p class=\"mt-6\">\n\t\t\t\t\t\tOrrupti aut temporibus assumenda atque ab, accusamus sit, molestiae veniam\n\t\t\t\t\t\tlaboriosam pariatur.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t\t<ul class=\"mt-8 divide-y border-y *:flex *:items-center *:gap-3 *:py-3\">\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<Mail class=\"size-5\" />\n\t\t\t\t\t\tEmail and web support\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<Zap class=\"size-5\" />\n\t\t\t\t\t\tFast response time\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<Activity class=\"size-5\" />\n\t\t\t\t\t\tMenitoring and analytics\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<DraftingCompass class=\"size-5\" />\n\t\t\t\t\t\tArchitectural review\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"relative rounded-3xl border border-border/50 p-3 lg:col-span-3\">\n\t\t\t\t<div\n\t\t\t\t\tclass=\"relative aspect-76/59 rounded-2xl bg-linear-to-b from-zinc-300 to-transparent p-px dark:from-zinc-700\"\n\t\t\t\t>\n\t\t\t\t\t<img\n\t\t\t\t\t\tsrc=\"/payments.png\"\n\t\t\t\t\t\tclass=\"hidden rounded-[15px] dark:block\"\n\t\t\t\t\t\talt=\"payments illustration dark\"\n\t\t\t\t\t\twidth={1207}\n\t\t\t\t\t\theight={929}\n\t\t\t\t\t/>\n\t\t\t\t\t<img\n\t\t\t\t\t\tsrc=\"/payments-light.png\"\n\t\t\t\t\t\tclass=\"rounded-[15px] shadow dark:hidden\"\n\t\t\t\t\t\talt=\"payments illustration light\"\n\t\t\t\t\t\twidth={1207}\n\t\t\t\t\t\theight={929}\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/feature/feature-five.svelte"
+		}
+	]
 }

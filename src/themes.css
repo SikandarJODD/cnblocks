@@ -76,7 +76,7 @@
 	--ring: var(--primary);
 
 	--font-family: "Geist", sans-serif;
-	--font-serif : "Asar", serif;
+	--font-serif: "Asar", serif;
 
 	@variant dark {
 		--font-family: "Geist", sans-serif;

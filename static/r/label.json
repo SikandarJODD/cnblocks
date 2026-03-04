@@ -1,37 +1,24 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "label",
-  "type": "ui",
-  "description": "Form label component",
-  "registryDependencies": [
-    "utils"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "bits-ui",
-      "version": "^2.15.4"
-    }
-  ],
-  "files": [
-    {
-      "path": "label/index.ts",
-      "type": "ui",
-      "target": "label/index.ts",
-      "content": "import Root from \"./label.svelte\";\r\n\r\nexport {\r\n\tRoot,\r\n\t//\r\n\tRoot as Label,\r\n};\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "label/label.svelte",
-      "type": "ui",
-      "target": "label/label.svelte",
-      "content": "<script lang=\"ts\">\r\n\timport { Label as LabelPrimitive } from \"bits-ui\";\r\n\timport { cn } from \"$lib/utils.js\";\r\n\r\n\tlet {\r\n\t\tref = $bindable(null),\r\n\t\tclass: className,\r\n\t\t...restProps\r\n\t}: LabelPrimitive.RootProps = $props();\r\n</script>\r\n\r\n<LabelPrimitive.Root\r\n\tbind:ref\r\n\tclass={cn(\r\n\t\t\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\",\r\n\t\tclassName\r\n\t)}\r\n\t{...restProps}\r\n/>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "label",
+	"type": "registry:ui",
+	"description": "Form label component",
+	"devDependencies": [
+		"bits-ui"
+	],
+	"registryDependencies": [
+		"utils"
+	],
+	"files": [
+		{
+			"content": "import Root from \"./label.svelte\";\n\nexport {\n\tRoot,\n\t//\n\tRoot as Label,\n};\n",
+			"type": "registry:ui",
+			"target": "src/lib/components/ui/label/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Label as LabelPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t...restProps\n\t}: LabelPrimitive.RootProps = $props();\n</script>\n\n<LabelPrimitive.Root\n\tbind:ref\n\tclass={cn(\n\t\t\"text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70\",\n\t\tclassName\n\t)}\n\t{...restProps}\n/>\n",
+			"type": "registry:ui",
+			"target": "src/lib/components/ui/label/label.svelte"
+		}
+	]
 }

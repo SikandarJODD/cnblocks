@@ -100,8 +100,7 @@
 					},
 					line: (node, line) => {
 						if (within(line, highlight)) {
-							node.properties.class =
-								node.properties.class + " line--highlighted";
+							node.properties.class = node.properties.class + " line--highlighted";
 						}
 
 						return node;

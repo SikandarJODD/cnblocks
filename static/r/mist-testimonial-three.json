@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-testimonial-three",
+	"type": "registry:block",
+	"description": "Mist-style three-column testimonials",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"avatar",
+		"utils"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Avatar, AvatarFallback, AvatarImage } from \"$COMPONENTS$/ui/avatar\";\n\timport { cn } from \"$UTILS$\";\n\timport Star from \"@lucide/svelte/icons/star\";\n\n\tconst testimonials = [\n\t\t{\n\t\t\tname: \"Méschac Irung\",\n\t\t\trole: \"Creator\",\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\n\t\t\tcontent:\n\t\t\t\t\"Using Tailark has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility.\",\n\t\t\tstars: 5,\n\t\t},\n\t\t{\n\t\t\tname: \"Théo Balick\",\n\t\t\trole: \"Frontend Dev\",\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/68236786?v=4\",\n\t\t\tcontent:\n\t\t\t\t\"Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.\",\n\t\t\tstars: 4,\n\t\t},\n\t\t{\n\t\t\tname: \"Glodie Lukose\",\n\t\t\trole: \"Frontend Dev\",\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/99137927?v=4\",\n\t\t\tcontent:\n\t\t\t\t\"The extensive collection of UI components has significantly accelerated my workflow. Tailark is a game-changer.\",\n\t\t\tstars: 5,\n\t\t},\n\t];\n</script>\n\n<section class=\"[--color-primary:var(--color-indigo-500)]\">\n\t<div class=\"py-24\">\n\t\t<div class=\"@container mx-auto w-full max-w-5xl px-6\">\n\t\t\t<div class=\"grid gap-6 @lg:grid-cols-2 @3xl:grid-cols-3 @3xl:gap-12\">\n\t\t\t\t{#each testimonials as testimonial}\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<div class=\"flex gap-1\">\n\t\t\t\t\t\t\t{#each Array.from({ length: 5 }) as _, i}\n\t\t\t\t\t\t\t\t<Star\n\t\t\t\t\t\t\t\t\tclass={cn(\n\t\t\t\t\t\t\t\t\t\t\"size-4\",\n\t\t\t\t\t\t\t\t\t\ti < testimonial.stars\n\t\t\t\t\t\t\t\t\t\t\t? \"fill-primary stroke-primary\"\n\t\t\t\t\t\t\t\t\t\t\t: \"fill-foreground/15 stroke-transparent\"\n\t\t\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t{/each}\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"my-4 text-foreground\">{testimonial.content}</p>\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t<Avatar class=\"size-6 border border-transparent shadow ring-1\">\n\t\t\t\t\t\t\t\t<AvatarImage src={testimonial.avatar} alt={testimonial.name} />\n\t\t\t\t\t\t\t\t<AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>\n\t\t\t\t\t\t\t</Avatar>\n\t\t\t\t\t\t\t<div class=\"text-sm font-medium text-foreground\">\n\t\t\t\t\t\t\t\t{testimonial.name}\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<span aria-hidden=\"true\" class=\"size-1 rounded-full bg-foreground/25\"\n\t\t\t\t\t\t\t></span>\n\t\t\t\t\t\t\t<span class=\"text-sm text-muted-foreground\">{testimonial.role}</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t{/each}\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "mist/mtestimonial/three.svelte"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-cta-three",
+	"type": "registry:block",
+	"description": "Mist-style CTA with background",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\n\timport Calendar from \"@lucide/svelte/icons/calendar\";\n</script>\n\n<section class=\"[--color-primary:var(--color-indigo-500)]\">\n\t<div class=\"bg-muted/50 py-12 dark:bg-muted/30\">\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t\t<h2 class=\"max-w-lg text-3xl font-semibold text-balance text-foreground lg:text-4xl\">\n\t\t\t\t<span class=\"text-muted-foreground\">Build Modern Websites.</span> Drive Results\n\t\t\t</h2>\n\t\t\t<p class=\"mt-4 text-lg\">\n\t\t\t\tLibero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.\n\t\t\t</p>\n\t\t\t<div class=\"mt-8 flex gap-3\">\n\t\t\t\t<Button variant=\"mdefault\" href=\"#\" class=\"pr-2\">\n\t\t\t\t\tTry Mist for Free\n\t\t\t\t\t<ChevronRight strokeWidth={2.5} class=\"size-3.5! opacity-50\" />\n\t\t\t\t</Button>\n\t\t\t\t<Button href=\"#\" variant=\"outline\" class=\"pl-2.5\">\n\t\t\t\t\t<Calendar class=\"!size-3.5 opacity-50\" strokeWidth={2.5} />\n\t\t\t\t\tRequest a Demo\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "mist/mcta/three.svelte"
+		}
+	]
+}

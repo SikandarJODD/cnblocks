@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-call-to-action-one",
+	"type": "registry:block",
+	"description": "Veil Call To Action component, variant One.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\n\timport { ChevronRight } from \"@lucide/svelte\";\n\n\ttype Props = {\n\t\ttitle?: string;\n\t\tdescription?: string;\n\t\tprimaryLabel?: string;\n\t\tprimaryHref?: string;\n\t\tsecondaryLabel?: string;\n\t\tsecondaryHref?: string;\n\t};\n\n\tlet {\n\t\ttitle = \"Ready to Get Started?\",\n\t\tdescription = \"Join thousands of teams already using our platform to build better products faster.\",\n\t\tprimaryLabel = \"Start Free Trial\",\n\t\tprimaryHref = \"#link\",\n\t\tsecondaryLabel = \"Talk to Sales\",\n\t\tsecondaryHref = \"#link\",\n\t}: Props = $props();\n</script>\n\n<section class=\"@container bg-background py-24\">\n\t<div class=\"mx-auto max-w-2xl px-6\">\n\t\t<div class=\"text-center\">\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">{title}</h2>\n\t\t\t<p class=\"mx-auto mt-4 max-w-md text-balance text-muted-foreground\">\n\t\t\t\t{description}\n\t\t\t</p>\n\t\t\t<div class=\"mt-6 flex flex-wrap justify-center gap-3\">\n\t\t\t\t<Button href={primaryHref} class=\"pr-1.5\">\n\t\t\t\t\t<span>{primaryLabel}</span>\n\t\t\t\t\t<ChevronRight class=\"opacity-50\" />\n\t\t\t\t</Button>\n\t\t\t\t<Button variant=\"secondary\" href={secondaryHref}>\n\t\t\t\t\t{secondaryLabel}\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "veil/call-to-action/call-to-action-one.svelte"
+		}
+	]
+}

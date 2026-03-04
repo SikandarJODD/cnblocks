@@ -389,7 +389,7 @@
 					</Tooltip>
 				</TooltipProvider>
 				{#if code}
-					<PreviewInstallAdd {itemId} />
+					<PreviewInstallAdd {itemId} registryPath="r" />
 
 					{#if !Array.isArray(code)}
 						<Separator class="!h-4" orientation="vertical" />
@@ -469,7 +469,7 @@
 						{/if}
 					</PaneGroup>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class='theme-container'>
+					<div in:scale={{ start: 0.85 }} class="theme-container">
 						<BlockComponent></BlockComponent>
 					</div>
 				{/if}

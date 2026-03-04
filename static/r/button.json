@@ -1,56 +1,31 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "button",
-  "type": "ui",
-  "description": "Button component with variants",
-  "registryDependencies": [
-    "utils"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "bits-ui",
-      "version": "^2.15.4"
-    },
-    {
-      "ecosystem": "js",
-      "name": "svelte",
-      "version": "^5.23.0"
-    },
-    {
-      "ecosystem": "js",
-      "name": "tailwind-variants",
-      "version": "^3.2.2"
-    }
-  ],
-  "files": [
-    {
-      "path": "button/animated-button.svelte",
-      "type": "ui",
-      "target": "button/animated-button.svelte",
-      "content": "<script lang=\"ts\">\r\n  import { cn } from \"$lib/utils\";\r\n  import type { ButtonProps } from \"./button.svelte\";\r\n\r\n  let {\r\n    class: _class,\r\n    variant = \"default\",\r\n    size = \"default\",\r\n    ref = $bindable(null),\r\n    href = undefined,\r\n    type = \"button\",\r\n    children,\r\n    ...restProps\r\n  }: ButtonProps = $props();\r\n</script>\r\n\r\n{#if href}\r\n  <a\r\n    {href}\r\n    class={cn(\r\n      \"group relative grid overflow-hidden rounded-md px-4 py-2 dark:shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200\",\r\n      _class\r\n    )}\r\n  >\r\n    <span>\r\n      <span\r\n        class=\"spark mask-gradient animate-flip before:animate-kitrotate absolute inset-0 h-[100%] w-[100%] overflow-hidden rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] dark:before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)]\r\n        before:bg-[conic-gradient(from_0deg,transparent_0_330deg,blue_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]\"\r\n        >,</span\r\n      >\r\n    </span>\r\n    <span\r\n      class=\"backdrop absolute inset-[0.9px] rounded-md bg-secondary dark:bg-neutral-900 transition-colors duration-200 group-hover:bg-neutral-200 dark:group-hover:bg-neutral-900\"\r\n    ></span>\r\n    <span class=\"z-10 text-primary text-sm font-medium text-center\">\r\n      {@render children?.()}\r\n    </span>\r\n  </a>\r\n{:else}\r\n  <button\r\n    class={cn(\r\n      \"group relative grid overflow-hidden rounded-md px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200\",\r\n      _class\r\n    )}\r\n  >\r\n    <span>\r\n      <span\r\n        class=\"spark mask-gradient animate-flip before:animate-kitrotate absolute inset-0 h-[100%] w-[100%] overflow-hidden rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]\"\r\n      ></span>\r\n    </span>\r\n    <span\r\n      class=\"backdrop absolute inset-px rounded-[11px] bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900\"\r\n    ></span>\r\n    <span class=\"z-10 text-neutral-400 text-sm font-medium\">\r\n      {@render children?.()}\r\n    </span>\r\n  </button>\r\n{/if}\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "button/button.svelte",
-      "type": "ui",
-      "target": "button/button.svelte",
-      "content": "<script lang=\"ts\" module>\r\n  import type { WithElementRef } from \"bits-ui\";\r\n  import type {\r\n    HTMLAnchorAttributes,\r\n    HTMLButtonAttributes,\r\n  } from \"svelte/elements\";\r\n  import { type VariantProps, tv } from \"tailwind-variants\";\r\n\r\n  export const buttonVariants = tv({\r\n    base: \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\r\n    variants: {\r\n      variant: {\r\n        default:\r\n          \"bg-radial-[at_52%_-52%] **:[text-shadow:0_1px_0_var(--color-primary)] border-primary from-primary/70 to-primary/95 text-primary-foreground inset-shadow-2xs inset-shadow-white/25 dark:inset-shadow-white dark:from-primary dark:to-primary/70 dark:hover:to-primary border text-sm shadow-md shadow-zinc-950/30 ring-0 transition-[filter] duration-200  active:brightness-95 dark:border-0\",\r\n        destructive:\r\n          \"bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-xs\",\r\n        outline:\r\n          \"shadow-xs bg-linear-to-t hover:to-muted to-background from-muted dark:from-muted/50 dark:hover:to-muted/50 dark:border-border border border-zinc-300 shadow-zinc-950/10 duration-200\",\r\n        secondary:\r\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-xs\",\r\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\r\n        link: \"text-primary underline-offset-4 hover:underline\",\r\n        neutral: \"bg-foreground text-background hover:brightness-95\",\r\n        mdefault: 'bg-primary text-primary-foreground hover:brightness-95',\r\n      },\r\n      size: {\r\n        default: \"h-9 px-4 py-2\",\r\n        sm: \"h-8 rounded-md px-3 text-xs\",\r\n        lg: \"h-10 rounded-md px-8\",\r\n        extralg: \"h-10 md:h-12 rounded-md px-8\",\r\n        icon: \"h-9 w-9\",\r\n      },\r\n    },\r\n    defaultVariants: {\r\n      variant: \"default\",\r\n      size: \"default\",\r\n    },\r\n  });\r\n\r\n  export type ButtonVariant = VariantProps<typeof buttonVariants>[\"variant\"];\r\n  export type ButtonSize = VariantProps<typeof buttonVariants>[\"size\"];\r\n\r\n  export type ButtonProps = WithElementRef<HTMLButtonAttributes> &\r\n    WithElementRef<HTMLAnchorAttributes> & {\r\n      variant?: ButtonVariant;\r\n      size?: ButtonSize;\r\n    };\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n  import { cn } from \"$lib/utils.js\";\r\n\r\n  let {\r\n    class: className,\r\n    variant = \"default\",\r\n    size = \"default\",\r\n    ref = $bindable(null),\r\n    href = undefined,\r\n    type = \"button\",\r\n    children,\r\n    ...restProps\r\n  }: ButtonProps = $props();\r\n</script>\r\n\r\n{#if href}\r\n  <a\r\n    bind:this={ref}\r\n    class={cn(buttonVariants({ variant, size }), className)}\r\n    {href}\r\n    {...restProps}\r\n  >\r\n    {@render children?.()}\r\n  </a>\r\n{:else}\r\n  <button\r\n    bind:this={ref}\r\n    class={cn(buttonVariants({ variant, size }), className)}\r\n    {type}\r\n    {...restProps}\r\n  >\r\n    {@render children?.()}\r\n  </button>\r\n{/if}\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "button/index.ts",
-      "type": "ui",
-      "target": "button/index.ts",
-      "content": "import Root, {\r\n  type ButtonProps,\r\n  type ButtonSize,\r\n  type ButtonVariant,\r\n  buttonVariants,\r\n} from \"./button.svelte\";\r\n\r\n\r\n\r\nexport {\r\n  Root,\r\n  type ButtonProps as Props,\r\n  //\r\n  Root as Button,\r\n  buttonVariants,\r\n  type ButtonProps,\r\n  type ButtonSize,\r\n  type ButtonVariant,\r\n};\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "button",
+	"type": "registry:ui",
+	"description": "Button component with variants",
+	"devDependencies": [
+		"bits-ui",
+		"svelte",
+		"tailwind-variants"
+	],
+	"registryDependencies": [
+		"utils"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"$UTILS$\";\n\timport type { ButtonProps } from \"./button.svelte\";\n\n\tlet {\n\t\tclass: _class,\n\t\tvariant = \"default\",\n\t\tsize = \"default\",\n\t\tref = $bindable(null),\n\t\thref = undefined,\n\t\ttype = \"button\",\n\t\tchildren,\n\t\t...restProps\n\t}: ButtonProps = $props();\n</script>\n\n{#if href}\n\t<a\n\t\t{href}\n\t\tclass={cn(\n\t\t\t\"group relative grid overflow-hidden rounded-md px-4 py-2 transition-colors duration-200 dark:shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset]\",\n\t\t\t_class\n\t\t)}\n\t>\n\t\t<span>\n\t\t\t<span\n\t\t\t\tclass=\"spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:[inset:0_auto_auto_50%] before:aspect-square before:w-[200%] before:[translate:-50%_-15%] before:rotate-[-90deg]\n        before:animate-kitrotate before:bg-[conic-gradient(from_0deg,transparent_0_330deg,blue_360deg)] before:content-[''] dark:before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)]\"\n\t\t\t\t>,</span\n\t\t\t>\n\t\t</span>\n\t\t<span\n\t\t\tclass=\"backdrop absolute inset-[0.9px] rounded-md bg-secondary transition-colors duration-200 group-hover:bg-neutral-200 dark:bg-neutral-900 dark:group-hover:bg-neutral-900\"\n\t\t></span>\n\t\t<span class=\"z-10 text-center text-sm font-medium text-primary\">\n\t\t\t{@render children?.()}\n\t\t</span>\n\t</a>\n{:else}\n\t<button\n\t\tclass={cn(\n\t\t\t\"group relative grid overflow-hidden rounded-md px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200\",\n\t\t\t_class\n\t\t)}\n\t>\n\t\t<span>\n\t\t\t<span\n\t\t\t\tclass=\"spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:[inset:0_auto_auto_50%] before:aspect-square before:w-[200%] before:[translate:-50%_-15%] before:rotate-[-90deg] before:animate-kitrotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-['']\"\n\t\t\t></span>\n\t\t</span>\n\t\t<span\n\t\t\tclass=\"backdrop absolute inset-px rounded-[11px] bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900\"\n\t\t></span>\n\t\t<span class=\"z-10 text-sm font-medium text-neutral-400\">\n\t\t\t{@render children?.()}\n\t\t</span>\n\t</button>\n{/if}\n",
+			"type": "registry:ui",
+			"target": "src/lib/components/ui/button/animated-button.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\" module>\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAnchorAttributes, HTMLButtonAttributes } from \"svelte/elements\";\n\timport { type VariantProps, tv } from \"tailwind-variants\";\n\n\texport const buttonVariants = tv({\n\t\tbase: \"inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault:\n\t\t\t\t\t\"border border-primary bg-radial-[at_52%_-52%] from-primary/70 to-primary/95 text-sm text-primary-foreground shadow-md ring-0 inset-shadow-2xs shadow-zinc-950/30 inset-shadow-white/25 transition-[filter] duration-200 **:[text-shadow:0_1px_0_var(--color-primary)] active:brightness-95 dark:border-0 dark:from-primary dark:to-primary/70 dark:inset-shadow-white dark:hover:to-primary\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"text-destructive-foreground bg-destructive shadow-xs hover:bg-destructive/90\",\n\t\t\t\toutline:\n\t\t\t\t\t\"border border-zinc-300 bg-linear-to-t from-muted to-background shadow-xs shadow-zinc-950/10 duration-200 hover:to-muted dark:border-border dark:from-muted/50 dark:hover:to-muted/50\",\n\t\t\t\tsecondary: \"bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80\",\n\t\t\t\tghost: \"hover:bg-accent hover:text-accent-foreground\",\n\t\t\t\tlink: \"text-primary underline-offset-4 hover:underline\",\n\t\t\t\tneutral: \"bg-foreground text-background hover:brightness-95\",\n\t\t\t\tmdefault: \"bg-primary text-primary-foreground hover:brightness-95\",\n\t\t\t},\n\t\t\tsize: {\n\t\t\t\tdefault: \"h-9 px-4 py-2\",\n\t\t\t\tsm: \"h-8 rounded-md px-3 text-xs\",\n\t\t\t\tlg: \"h-10 rounded-md px-8\",\n\t\t\t\textralg: \"h-10 rounded-md px-8 md:h-12\",\n\t\t\t\ticon: \"h-9 w-9\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t\tsize: \"default\",\n\t\t},\n\t});\n\n\texport type ButtonVariant = VariantProps<typeof buttonVariants>[\"variant\"];\n\texport type ButtonSize = VariantProps<typeof buttonVariants>[\"size\"];\n\n\texport type ButtonProps = WithElementRef<HTMLButtonAttributes> &\n\t\tWithElementRef<HTMLAnchorAttributes> & {\n\t\t\tvariant?: ButtonVariant;\n\t\t\tsize?: ButtonSize;\n\t\t};\n</script>\n\n<script lang=\"ts\">\n\timport { cn } from \"$UTILS$.js\";\n\n\tlet {\n\t\tclass: className,\n\t\tvariant = \"default\",\n\t\tsize = \"default\",\n\t\tref = $bindable(null),\n\t\thref = undefined,\n\t\ttype = \"button\",\n\t\tchildren,\n\t\t...restProps\n\t}: ButtonProps = $props();\n</script>\n\n{#if href}\n\t<a\n\t\tbind:this={ref}\n\t\tclass={cn(buttonVariants({ variant, size }), className)}\n\t\t{href}\n\t\t{...restProps}\n\t>\n\t\t{@render children?.()}\n\t</a>\n{:else}\n\t<button\n\t\tbind:this={ref}\n\t\tclass={cn(buttonVariants({ variant, size }), className)}\n\t\t{type}\n\t\t{...restProps}\n\t>\n\t\t{@render children?.()}\n\t</button>\n{/if}\n",
+			"type": "registry:ui",
+			"target": "src/lib/components/ui/button/button.svelte"
+		},
+		{
+			"content": "import Root, {\n\ttype ButtonProps,\n\ttype ButtonSize,\n\ttype ButtonVariant,\n\tbuttonVariants,\n} from \"./button.svelte\";\n\nexport {\n\tRoot,\n\ttype ButtonProps as Props,\n\t//\n\tRoot as Button,\n\tbuttonVariants,\n\ttype ButtonProps,\n\ttype ButtonSize,\n\ttype ButtonVariant,\n};\n",
+			"type": "registry:ui",
+			"target": "src/lib/components/ui/button/index.ts"
+		}
+	]
 }

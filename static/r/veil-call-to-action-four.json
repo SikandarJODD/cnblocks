@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-call-to-action-four",
+	"type": "registry:block",
+	"description": "Veil Call To Action component, variant Four.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\n\timport { ArrowRight, Check } from \"@lucide/svelte\";\n\n\ttype Props = {\n\t\ttitle?: string;\n\t\tdescription?: string;\n\t\tbenefits?: string[];\n\t\tprice?: string;\n\t\tpriceSuffix?: string;\n\t\tpriceNote?: string;\n\t\tctaLabel?: string;\n\t\tctaHref?: string;\n\t};\n\n\tlet {\n\t\ttitle = \"Transform Your Workflow\",\n\t\tdescription = \"Experience the power of seamless integrations and watch your productivity soar.\",\n\t\tbenefits = [\n\t\t\t\"14-day free trial\",\n\t\t\t\"No credit card required\",\n\t\t\t\"Cancel anytime\",\n\t\t\t\"24/7 support\",\n\t\t],\n\t\tprice = \"$0\",\n\t\tpriceSuffix = \"/month\",\n\t\tpriceNote = \"Free forever for individuals\",\n\t\tctaLabel = \"Get Started Free\",\n\t\tctaHref = \"#link\",\n\t}: Props = $props();\n</script>\n\n<section class=\"@container bg-background py-24\">\n\t<div class=\"mx-auto max-w-2xl px-6\">\n\t\t<Card variant=\"outline\" class=\"grid gap-8 p-6 md:p-8 @xl:grid-cols-2\">\n\t\t\t<div>\n\t\t\t\t<h2 class=\"font-serif text-3xl font-medium text-balance\">{title}</h2>\n\t\t\t\t<p class=\"mt-3 text-balance text-muted-foreground\">{description}</p>\n\t\t\t\t<ul class=\"mt-6 space-y-2\">\n\t\t\t\t\t{#each benefits as benefit, index (`${index}-${benefit}`)}\n\t\t\t\t\t\t<li class=\"flex items-center gap-2 text-sm text-muted-foreground\">\n\t\t\t\t\t\t\t<Check class=\"size-4 text-primary\" />\n\t\t\t\t\t\t\t{benefit}\n\t\t\t\t\t\t</li>\n\t\t\t\t\t{/each}\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"flex flex-col justify-center rounded-xl border bg-muted/50 p-6\">\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">Starting at</p>\n\t\t\t\t<p class=\"mt-1 font-serif text-4xl font-medium\">\n\t\t\t\t\t{price}<span class=\"text-lg font-normal text-muted-foreground\"\n\t\t\t\t\t\t>{priceSuffix}</span\n\t\t\t\t\t>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"mt-1 text-sm text-muted-foreground\">{priceNote}</p>\n\t\t\t\t<Button href={ctaHref} class=\"mt-6 gap-2\">\n\t\t\t\t\t{ctaLabel}\n\t\t\t\t\t<ArrowRight class=\"size-4\" />\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</Card>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "veil/call-to-action/call-to-action-four.svelte"
+		}
+	]
+}

@@ -1,89 +1,52 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "integration-cards",
-  "type": "integration",
-  "description": "Collection of integration card variants for logos",
-  "registryDependencies": [
-    "button",
-    "card",
-    "utils"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "@lucide/svelte",
-      "version": "^0.561.0"
-    },
-    {
-      "ecosystem": "js",
-      "name": "svelte",
-      "version": "^5.23.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "card/integration-card.svelte",
-      "type": "integration",
-      "target": "card/integration-card.svelte",
-      "content": "<script lang=\"ts\">\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import Card from \"$lib/components/ui/card/card.svelte\";\r\n  import ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  type IntegrationCardProps = {\r\n    title: string;\r\n    description: string;\r\n    link?: string;\r\n    children?: Snippet;\r\n  };\r\n  let {\r\n    children,\r\n    title,\r\n    description,\r\n    link = \"https://github.com/SikandarJODD/cnblocks\",\r\n  }: IntegrationCardProps = $props();\r\n</script>\r\n\r\n<Card class=\"p-6\">\r\n  <div class=\"relative\">\r\n    <div class=\"*:size-10\">{@render children?.()}</div>\r\n    <div class=\"space-y-2 py-6\">\r\n      <h3 class=\"text-base font-medium\">{title}</h3>\r\n      <p class=\"text-muted-foreground line-clamp-2 text-sm\">{description}</p>\r\n    </div>\r\n\r\n    <div class=\"flex gap-3 border-t border-dashed pt-6\">\r\n      <Button\r\n        variant=\"secondary\"\r\n        size=\"sm\"\r\n        class=\"gap-1 pr-2 shadow-none\"\r\n        href={link}\r\n      >\r\n        Learn More\r\n        <ChevronRight class=\"ml-0 !size-3.5 opacity-50\" />\r\n      </Button>\r\n    </div>\r\n  </div>\r\n</Card>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "card/integration-cardv2.svelte",
-      "type": "integration",
-      "target": "card/integration-cardv2.svelte",
-      "content": "<script lang=\"ts\">\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  let {\r\n    children,\r\n    class: _class,\r\n    borderClassName,\r\n  }: {\r\n    children?: Snippet;\r\n    class?: string;\r\n    borderClassName?: string;\r\n  } = $props();\r\n</script>\r\n\r\n<div\r\n  class={[\r\n    \"bg-background relative flex size-20 rounded-xl dark:bg-transparent\",\r\n    _class,\r\n  ]}\r\n>\r\n  <div\r\n    role=\"presentation\"\r\n    class={[\r\n      \"absolute inset-0 rounded-xl border border-black/20 dark:border-white/25\",\r\n      borderClassName,\r\n    ]}\r\n  ></div>\r\n  <div class=\"relative z-20 m-auto size-fit *:size-8\">\r\n    {@render children?.()}\r\n  </div>\r\n</div>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "card/integration-cardv3.svelte",
-      "type": "integration",
-      "target": "card/integration-cardv3.svelte",
-      "content": "<script lang=\"ts\">\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  let {\r\n    children,\r\n    class: _class,\r\n    borderClassName,\r\n  }: {\r\n    children?: Snippet;\r\n    class?: string;\r\n    borderClassName?: string;\r\n  } = $props();\r\n</script>\r\n\r\n<div\r\n  class={[\r\n    \"bg-background relative flex size-20 rounded-xl dark:bg-transparent\",\r\n    _class,\r\n  ]}\r\n>\r\n  <div\r\n    role=\"presentation\"\r\n    class={[\r\n      \"absolute inset-0 rounded-xl border border-black/20 dark:border-white/25\",\r\n      borderClassName,\r\n    ]}\r\n  ></div>\r\n  <div class=\"relative z-20 m-auto size-fit *:size-8\">\r\n    {@render children?.()}\r\n  </div>\r\n</div>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "card/integration-cardv4.svelte",
-      "type": "integration",
-      "target": "card/integration-cardv4.svelte",
-      "content": "<script lang=\"ts\">\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  let {\r\n    children,\r\n    class: _class,\r\n    position,\r\n    isCenter,\r\n  }: {\r\n    children: Snippet;\r\n    class?: string;\r\n    position?: string;\r\n    isCenter?: boolean;\r\n  } = $props();\r\n</script>\r\n\r\n<div\r\n  class={[\r\n    \"bg-background relative flex size-12 rounded-xl border dark:bg-transparent\",\r\n    _class,\r\n  ]}\r\n>\r\n  <div\r\n    class={[\"relative z-20 m-auto size-fit *:size-6\", isCenter && \"*:size-8\"]}\r\n  >\r\n    {@render children()}\r\n  </div>\r\n  {#if position && !isCenter}\r\n    <div\r\n      class={[\r\n        \"bg-linear-to-r to-muted-foreground/25 absolute z-10 h-px\",\r\n        position === \"left-top\" &&\r\n          \"left-full top-1/2 w-[130px] origin-left rotate-[25deg]\",\r\n        position === \"left-middle\" && \"left-full top-1/2 w-[120px] origin-left\",\r\n        position === \"left-bottom\" &&\r\n          \"left-full top-1/2 w-[130px] origin-left rotate-[-25deg]\",\r\n        position === \"right-top\" &&\r\n          \"bg-linear-to-l right-full top-1/2 w-[130px] origin-right rotate-[-25deg]\",\r\n        position === \"right-middle\" &&\r\n          \"bg-linear-to-l right-full top-1/2 w-[120px] origin-right\",\r\n        position === \"right-bottom\" &&\r\n          \"bg-linear-to-l right-full top-1/2 w-[130px] origin-right rotate-[25deg]\",\r\n      ]}\r\n    ></div>\r\n  {/if}\r\n</div>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "card/integration-cardv5.svelte",
-      "type": "integration",
-      "target": "card/integration-cardv5.svelte",
-      "content": "<script lang=\"ts\">\r\n  import { cn } from \"$lib/utils\";\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  let {\r\n    children,\r\n    class: _class = \"\",\r\n    isCenter = false,\r\n  }: {\r\n    children: Snippet;\r\n    class?: string;\r\n    isCenter?: boolean;\r\n  } = $props();\r\n</script>\r\n\r\n<div\r\n  class={cn(\r\n    \"relative z-30 flex size-12 rounded-full border bg-white shadow-sm shadow-black/5 dark:bg-white/5 dark:backdrop-blur-md\",\r\n    _class\r\n  )}\r\n>\r\n  <div class={cn(\"m-auto size-fit *:size-5\", isCenter && \"*:size-8\")}>\r\n    {@render children()}\r\n  </div>\r\n</div>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "card/integration-cardv7.svelte",
-      "type": "integration",
-      "target": "card/integration-cardv7.svelte",
-      "content": "<script lang=\"ts\">\r\n  import type { Snippet } from \"svelte\";\r\n  let {\r\n    children,\r\n    class: _class = \"\",\r\n    isCenter = false,\r\n  }: { children: Snippet; class?: string; isCenter?: boolean } = $props();\r\n</script>\r\n\r\n<div\r\n  class={[\r\n    \"bg-background relative z-20 flex size-12 rounded-full border\",\r\n    _class,\r\n  ]}\r\n>\r\n  <div class={[\"m-auto size-fit *:size-5\", isCenter && \"*:size-8\"]}>\r\n    {@render children()}\r\n  </div>\r\n</div>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    {
-      "path": "card/integration-cardv8.svelte",
-      "type": "integration",
-      "target": "card/integration-cardv8.svelte",
-      "content": "",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-cards",
+	"type": "registry:block",
+	"description": "Collection of integration card variants for logos",
+	"devDependencies": [
+		"@lucide/svelte",
+		"svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"card",
+		"utils"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n\timport Card from \"$COMPONENTS$/ui/card/card.svelte\";\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\n\timport type { Snippet } from \"svelte\";\n\n\ttype IntegrationCardProps = {\n\t\ttitle: string;\n\t\tdescription: string;\n\t\tlink?: string;\n\t\tchildren?: Snippet;\n\t};\n\tlet {\n\t\tchildren,\n\t\ttitle,\n\t\tdescription,\n\t\tlink = \"https://github.com/SikandarJODD/cnblocks\",\n\t}: IntegrationCardProps = $props();\n</script>\n\n<Card class=\"p-6\">\n\t<div class=\"relative\">\n\t\t<div class=\"*:size-10\">{@render children?.()}</div>\n\t\t<div class=\"space-y-2 py-6\">\n\t\t\t<h3 class=\"text-base font-medium\">{title}</h3>\n\t\t\t<p class=\"line-clamp-2 text-sm text-muted-foreground\">{description}</p>\n\t\t</div>\n\n\t\t<div class=\"flex gap-3 border-t border-dashed pt-6\">\n\t\t\t<Button variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-2 shadow-none\" href={link}>\n\t\t\t\tLearn More\n\t\t\t\t<ChevronRight class=\"ml-0 !size-3.5 opacity-50\" />\n\t\t\t</Button>\n\t\t</div>\n\t</div>\n</Card>\n",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-card.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\n\tlet {\n\t\tchildren,\n\t\tclass: _class,\n\t\tborderClassName,\n\t}: {\n\t\tchildren?: Snippet;\n\t\tclass?: string;\n\t\tborderClassName?: string;\n\t} = $props();\n</script>\n\n<div class={[\"relative flex size-20 rounded-xl bg-background dark:bg-transparent\", _class]}>\n\t<div\n\t\trole=\"presentation\"\n\t\tclass={[\n\t\t\t\"absolute inset-0 rounded-xl border border-black/20 dark:border-white/25\",\n\t\t\tborderClassName,\n\t\t]}\n\t></div>\n\t<div class=\"relative z-20 m-auto size-fit *:size-8\">\n\t\t{@render children?.()}\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-cardv2.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\n\tlet {\n\t\tchildren,\n\t\tclass: _class,\n\t\tborderClassName,\n\t}: {\n\t\tchildren?: Snippet;\n\t\tclass?: string;\n\t\tborderClassName?: string;\n\t} = $props();\n</script>\n\n<div class={[\"relative flex size-20 rounded-xl bg-background dark:bg-transparent\", _class]}>\n\t<div\n\t\trole=\"presentation\"\n\t\tclass={[\n\t\t\t\"absolute inset-0 rounded-xl border border-black/20 dark:border-white/25\",\n\t\t\tborderClassName,\n\t\t]}\n\t></div>\n\t<div class=\"relative z-20 m-auto size-fit *:size-8\">\n\t\t{@render children?.()}\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-cardv3.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\n\tlet {\n\t\tchildren,\n\t\tclass: _class,\n\t\tposition,\n\t\tisCenter,\n\t}: {\n\t\tchildren: Snippet;\n\t\tclass?: string;\n\t\tposition?: string;\n\t\tisCenter?: boolean;\n\t} = $props();\n</script>\n\n<div class={[\"relative flex size-12 rounded-xl border bg-background dark:bg-transparent\", _class]}>\n\t<div class={[\"relative z-20 m-auto size-fit *:size-6\", isCenter && \"*:size-8\"]}>\n\t\t{@render children()}\n\t</div>\n\t{#if position && !isCenter}\n\t\t<div\n\t\t\tclass={[\n\t\t\t\t\"absolute z-10 h-px bg-linear-to-r to-muted-foreground/25\",\n\t\t\t\tposition === \"left-top\" && \"top-1/2 left-full w-[130px] origin-left rotate-[25deg]\",\n\t\t\t\tposition === \"left-middle\" && \"top-1/2 left-full w-[120px] origin-left\",\n\t\t\t\tposition === \"left-bottom\" &&\n\t\t\t\t\t\"top-1/2 left-full w-[130px] origin-left rotate-[-25deg]\",\n\t\t\t\tposition === \"right-top\" &&\n\t\t\t\t\t\"top-1/2 right-full w-[130px] origin-right rotate-[-25deg] bg-linear-to-l\",\n\t\t\t\tposition === \"right-middle\" &&\n\t\t\t\t\t\"top-1/2 right-full w-[120px] origin-right bg-linear-to-l\",\n\t\t\t\tposition === \"right-bottom\" &&\n\t\t\t\t\t\"top-1/2 right-full w-[130px] origin-right rotate-[25deg] bg-linear-to-l\",\n\t\t\t]}\n\t\t></div>\n\t{/if}\n</div>\n",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-cardv4.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"$UTILS$\";\n\timport type { Snippet } from \"svelte\";\n\n\tlet {\n\t\tchildren,\n\t\tclass: _class = \"\",\n\t\tisCenter = false,\n\t}: {\n\t\tchildren: Snippet;\n\t\tclass?: string;\n\t\tisCenter?: boolean;\n\t} = $props();\n</script>\n\n<div\n\tclass={cn(\n\t\t\"relative z-30 flex size-12 rounded-full border bg-white shadow-sm shadow-black/5 dark:bg-white/5 dark:backdrop-blur-md\",\n\t\t_class\n\t)}\n>\n\t<div class={cn(\"m-auto size-fit *:size-5\", isCenter && \"*:size-8\")}>\n\t\t{@render children()}\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-cardv5.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\tlet {\n\t\tchildren,\n\t\tclass: _class = \"\",\n\t\tisCenter = false,\n\t}: { children: Snippet; class?: string; isCenter?: boolean } = $props();\n</script>\n\n<div class={[\"relative z-20 flex size-12 rounded-full border bg-background\", _class]}>\n\t<div class={[\"m-auto size-fit *:size-5\", isCenter && \"*:size-8\"]}>\n\t\t{@render children()}\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-cardv7.svelte"
+		},
+		{
+			"content": "",
+			"type": "registry:component",
+			"target": "blocks/integration/card/integration-cardv8.svelte"
+		}
+	]
 }

@@ -1,28 +1,19 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "content-four",
-  "type": "content",
-  "description": "Content section with feature highlights",
-  "registryDependencies": [
-    "button"
-  ],
-  "dependencies": [],
-  "devDependencies": [
-    {
-      "ecosystem": "js",
-      "name": "@lucide/svelte",
-      "version": "^0.561.0"
-    }
-  ],
-  "files": [
-    {
-      "path": "content-four.svelte",
-      "type": "content",
-      "target": "content-four.svelte",
-      "content": "<script>\r\n  import Button from \"$lib/components/ui/button/button.svelte\";\r\n  import ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n  <div class=\"mx-auto max-w-5xl px-6\">\r\n    <div class=\"grid gap-6 md:grid-cols-2 md:gap-12\">\r\n      <h2 class=\"text-4xl font-medium\">\r\n        The Lyra ecosystem brings together our models, products and platforms.\r\n      </h2>\r\n      <div class=\"space-y-6\">\r\n        <p>\r\n          Lyra is evolving to be more than just the models. It supports an\r\n          entire ecosystem — from products to the APIs and platforms helping\r\n          developers and businesses innovate.\r\n        </p>\r\n        <p>\r\n          Tailus UI. <span class=\"font-bold\"\r\n            >It supports an entire ecosystem</span\r\n          > — from products innovate. Sit minus, quod debitis autem quia aspernatur\r\n          delectus impedit modi, neque non id ad dignissimos? Saepe deleniti perferendis\r\n          beatae.\r\n        </p>\r\n        <Button variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-1.5\">\r\n          <span>Learn More</span>\r\n          <ChevronRight class=\"size-2\" />\r\n        </Button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-four",
+	"type": "registry:block",
+	"description": "Content section with feature highlights",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\n</script>\n\n<section class=\"py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t<div class=\"grid gap-6 md:grid-cols-2 md:gap-12\">\n\t\t\t<h2 class=\"text-4xl font-medium\">\n\t\t\t\tThe Lyra ecosystem brings together our models, products and platforms.\n\t\t\t</h2>\n\t\t\t<div class=\"space-y-6\">\n\t\t\t\t<p>\n\t\t\t\t\tLyra is evolving to be more than just the models. It supports an entire\n\t\t\t\t\tecosystem — from products to the APIs and platforms helping developers and\n\t\t\t\t\tbusinesses innovate.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tTailus UI. <span class=\"font-bold\">It supports an entire ecosystem</span> — from products\n\t\t\t\t\tinnovate. Sit minus, quod debitis autem quia aspernatur delectus impedit modi, neque\n\t\t\t\t\tnon id ad dignissimos? Saepe deleniti perferendis beatae.\n\t\t\t\t</p>\n\t\t\t\t<Button variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-1.5\">\n\t\t\t\t\t<span>Learn More</span>\n\t\t\t\t\t<ChevronRight class=\"size-2\" />\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/content/content-four.svelte"
+		}
+	]
 }

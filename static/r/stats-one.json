@@ -1,20 +1,13 @@
 {
-  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
-  "name": "stats-one",
-  "type": "stats",
-  "description": "Simple stats row with large numbers",
-  "registryDependencies": [],
-  "dependencies": [],
-  "devDependencies": [],
-  "files": [
-    {
-      "path": "stats-one.svelte",
-      "type": "stats",
-      "target": "stats-one.svelte",
-      "content": "<section class=\"py-12 md:py-20\">\r\n  <div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n      <div class=\"relative z-10 mx-auto max-w-xl space-y-6 text-center\">\r\n          <h2 class=\"text-4xl font-medium lg:text-5xl\">Tailus UI in numbers</h2>\r\n          <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>\r\n      </div>\r\n\r\n      <div class=\"grid gap-12 divide-y *:text-center md:grid-cols-3 md:gap-2 md:divide-x md:divide-y-0\">\r\n          <div class=\"space-y-4\">\r\n              <div class=\"text-5xl font-bold\">+1200</div>\r\n              <p>Stars on GitHub</p>\r\n          </div>\r\n          <div class=\"space-y-4\">\r\n              <div class=\"text-5xl font-bold\">22 Million</div>\r\n              <p>Active Users</p>\r\n          </div>\r\n          <div class=\"space-y-4\">\r\n              <div class=\"text-5xl font-bold\">+500</div>\r\n              <p>Powered Apps</p>\r\n          </div>\r\n      </div>\r\n  </div>\r\n</section>",
-      "registryDependencies": [],
-      "dependencies": [],
-      "devDependencies": []
-    }
-  ]
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-one",
+	"type": "registry:block",
+	"description": "Simple stats row with large numbers",
+	"files": [
+		{
+			"content": "<section class=\"py-12 md:py-20\">\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\n\t\t<div class=\"relative z-10 mx-auto max-w-xl space-y-6 text-center\">\n\t\t\t<h2 class=\"text-4xl font-medium lg:text-5xl\">Tailus UI in numbers</h2>\n\t\t\t<p>\n\t\t\t\tGemini is evolving to be more than just the models. It supports an entire to the\n\t\t\t\tAPIs and platforms helping developers and businesses innovate.\n\t\t\t</p>\n\t\t</div>\n\n\t\t<div\n\t\t\tclass=\"grid gap-12 divide-y *:text-center md:grid-cols-3 md:gap-2 md:divide-x md:divide-y-0\"\n\t\t>\n\t\t\t<div class=\"space-y-4\">\n\t\t\t\t<div class=\"text-5xl font-bold\">+1200</div>\n\t\t\t\t<p>Stars on GitHub</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-4\">\n\t\t\t\t<div class=\"text-5xl font-bold\">22 Million</div>\n\t\t\t\t<p>Active Users</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-4\">\n\t\t\t\t<div class=\"text-5xl font-bold\">+500</div>\n\t\t\t\t<p>Powered Apps</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "blocks/stats/stats-one.svelte"
+		}
+	]
 }

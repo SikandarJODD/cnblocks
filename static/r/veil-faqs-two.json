@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-faqs-two",
+	"type": "registry:block",
+	"description": "Veil FAQs component, variant Two.",
+	"registryDependencies": [
+		"accordion"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport {\n\t\tAccordion,\n\t\tAccordionContent,\n\t\tAccordionItem,\n\t\tAccordionTrigger,\n\t} from \"$COMPONENTS$/ui/accordion\";\n\n\ttype FAQItem = {\n\t\tid: string;\n\t\tquestion: string;\n\t\tanswer: string;\n\t};\n\n\tconst faqItems: FAQItem[] = [\n\t\t{\n\t\t\tid: \"item-1\",\n\t\t\tquestion: \"How does the free trial work?\",\n\t\t\tanswer: \"Start with a 14-day free trial with full access to all features. No credit card required. You can upgrade to a paid plan at any time during or after the trial.\",\n\t\t},\n\t\t{\n\t\t\tid: \"item-2\",\n\t\t\tquestion: \"Can I change my plan later?\",\n\t\t\tanswer: \"Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the difference.\",\n\t\t},\n\t\t{\n\t\t\tid: \"item-3\",\n\t\t\tquestion: \"What payment methods do you accept?\",\n\t\t\tanswer: \"We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.\",\n\t\t},\n\t\t{\n\t\t\tid: \"item-4\",\n\t\t\tquestion: \"Is there a setup fee?\",\n\t\t\tanswer: \"No, there are no setup fees or hidden costs. You only pay for your subscription plan.\",\n\t\t},\n\t\t{\n\t\t\tid: \"item-5\",\n\t\t\tquestion: \"Do you offer refunds?\",\n\t\t\tanswer: \"We offer a 30-day money-back guarantee. If you're not satisfied, contact us within 30 days for a full refund.\",\n\t\t},\n\t];\n</script>\n\n<section class=\"@container bg-background py-24\">\n\t<div class=\"mx-auto max-w-3xl px-6\">\n\t\t<div class=\"flex flex-col gap-8 @xl:flex-row @xl:items-start @xl:gap-12\">\n\t\t\t<div class=\"shrink-0 @xl:sticky @xl:top-24 @xl:w-64\">\n\t\t\t\t<h2 class=\"font-serif text-3xl font-medium\">FAQs</h2>\n\t\t\t\t<p class=\"mt-3 text-sm text-muted-foreground\">Your questions answered</p>\n\t\t\t\t<p class=\"mt-6 hidden text-sm text-muted-foreground @xl:block\">\n\t\t\t\t\tNeed more help?\n\t\t\t\t\t<a href=\"#\" class=\"font-medium text-primary hover:underline\"> Contact us </a>\n\t\t\t\t</p>\n\t\t\t</div>\n\n\t\t\t<div class=\"flex-1\">\n\t\t\t\t<Accordion type=\"single\" collapsible>\n\t\t\t\t\t{#each faqItems as item (item.id)}\n\t\t\t\t\t\t<AccordionItem value={item.id} class=\"border-dashed\">\n\t\t\t\t\t\t\t<AccordionTrigger\n\t\t\t\t\t\t\t\tclass=\"cursor-pointer py-4 text-sm font-medium hover:no-underline\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t{item.question}\n\t\t\t\t\t\t\t</AccordionTrigger>\n\t\t\t\t\t\t\t<AccordionContent>\n\t\t\t\t\t\t\t\t<p class=\"pb-2 text-sm text-muted-foreground\">{item.answer}</p>\n\t\t\t\t\t\t\t</AccordionContent>\n\t\t\t\t\t\t</AccordionItem>\n\t\t\t\t\t{/each}\n\t\t\t\t</Accordion>\n\t\t\t\t<p class=\"mt-6 text-sm text-muted-foreground @xl:hidden\">\n\t\t\t\t\tNeed more help?\n\t\t\t\t\t<a href=\"#\" class=\"font-medium text-primary hover:underline\"> Contact us </a>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "veil/faqs/faqs-two.svelte"
+		}
+	]
+}

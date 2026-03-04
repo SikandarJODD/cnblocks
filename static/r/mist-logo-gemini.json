@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-logo-gemini",
+	"type": "registry:block",
+	"description": "Mist-style Gemini AI logo SVG",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\tlet { ...rest } = $props();\n</script>\n\n<svg\n\theight=\"1em\"\n\tstyle=\"flex: none; line-height: 1;\"\n\tviewBox=\"0 0 24 24\"\n\txmlns=\"http://www.w3.org/2000/svg\"\n\twidth=\"1em\"\n\t{...rest}\n>\n\t<title>{\"Gemini\"}</title>\n\t<defs>\n\t\t<linearGradient id=\"lobe-icons-gemini-fill\" x1=\"0%\" x2=\"68.73%\" y1=\"100%\" y2=\"30.395%\">\n\t\t\t<stop offset=\"0%\" stop-color=\"#1C7DFF\" />\n\t\t\t<stop offset=\"52.021%\" stop-color=\"#1C69FF\" />\n\t\t\t<stop offset=\"100%\" stop-color=\"#F0DCD6\" />\n\t\t</linearGradient>\n\t</defs>\n\t<path\n\t\td=\"M12 24A14.304 14.304 0 000 12 14.304 14.304 0 0012 0a14.305 14.305 0 0012 12 14.305 14.305 0 00-12 12\"\n\t\tfill=\"url(#lobe-icons-gemini-fill)\"\n\t\tfill-rule=\"nonzero\"\n\t/>\n</svg>\n",
+			"type": "registry:component",
+			"target": "mist/mlogos/Gemini.svelte"
+		}
+	]
+}

@@ -27,4 +27,3 @@ export const highlighter = createHighlighterCore({
 	langs: Object.entries(bundledLanguages).map(([_, lang]) => lang),
 	engine: createJavaScriptRegexEngine(),
 });
-
