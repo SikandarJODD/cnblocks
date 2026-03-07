@@ -5,16 +5,16 @@
 </script>
 
 <svelte:head>
-	<title>Svelte Shadcn Blocks - 50+ UI & Marketing Blocks</title>
+	<title>Svelte Shadcn Blocks - 150+ UI & Marketing Blocks</title>
 	<meta
 		name="description"
-		content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages."
+		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
 	/>
 
 	<meta property="og:title" content="Svelte Shadcn Blocks - 50+ UI & Marketing Blocks" />
 	<meta
 		property="og:description"
-		content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages."
+		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
 	/>
 	<meta property="og:image" content="https://sv-blocks.vercel.app/og.png" />
 	<meta property="og:url" content="https://sv-blocks.vercel.app" />
@@ -23,7 +23,7 @@
 	<meta name="twitter:title" content="Svelte Shadcn Blocks - 50+ UI & Marketing Blocks" />
 	<meta
 		name="twitter:description"
-		content="Svelte Shadcn Blocks offers 50+ UI & marketing components for building responsive landing pages."
+		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
 	/>
 	<meta name="twitter:image" content="https://sv-blocks.vercel.app/og.png" />
 	<meta name="twitter:card" content="summary_large_image" />

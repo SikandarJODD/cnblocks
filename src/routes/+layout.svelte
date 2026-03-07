@@ -2,8 +2,6 @@
 	import { page } from "$app/state";
 	import { ModeWatcher, setTheme, theme } from "mode-watcher";
 	import "../app.css";
-	// import "../shadcn.css";
-	import { onMount } from "svelte";
 	let { children } = $props();
 
 	function resolveTheme(pathname: string): "veil" | "mist" | "default" {
@@ -33,9 +31,6 @@
 			setTheme(activeRouteTheme);
 		}
 	});
-	// onMount(() => {
-	// 	setTheme("veil");
-	// });
 </script>
 
 <ModeWatcher />
