@@ -472,7 +472,7 @@
 						{/if}
 					</PaneGroup>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="theme-container relative h-full w-full">
+					<div in:scale={{ start: 0.85 }} class="theme-container overflow-hidden w-full">
 						<BlockComponent></BlockComponent>
 					</div>
 				{/if}

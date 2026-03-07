@@ -1,5 +1,18 @@
 <script lang="ts">
 	import Marquee from "$lib/components/magic/Marquee.svelte";
+	import {
+		Beacon,
+		Bolt,
+		Cisco,
+		Claude,
+		Figma,
+		FirebaseFull,
+		Hulu,
+		Spotify,
+		SupabaseFull,
+		VercelFull,
+	} from "$lib/svgs";
+
 	import { cn } from "$lib/utils";
 
 	export const GRADIENT_ANGLES = {
@@ -23,86 +36,29 @@
 			<div class="md:max-w-44 md:border-r md:pr-6">
 				<p class="text-end text-sm">Powering the best teams</p>
 			</div>
-			<div class="relative py-6 md:w-[calc(100%-11rem)]">
+			<div class="relative py-6 **:fill-foreground md:w-[calc(100%-11rem)]">
 				<Marquee>
-					<div class="flex">
-						<img
-							class="mx-auto h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/nvidia.svg"
-							alt="Nvidia Logo"
-							height="20"
-							width="auto"
-						/>
-					</div>
-
-					<div class="flex">
-						<img
-							class="mx-auto h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/column.svg"
-							alt="Column Logo"
-							height="16"
-							width="auto"
-						/>
-					</div>
-					<div class="flex">
-						<img
-							class="mx-auto h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/github.svg"
-							alt="GitHub Logo"
-							height="16"
-							width="auto"
-						/>
-					</div>
-					<div class="flex">
-						<img
-							class="mx-auto h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/nike.svg"
-							alt="Nike Logo"
-							height="20"
-							width="auto"
-						/>
-					</div>
-					<div class="flex">
-						<img
-							class="mx-auto h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-							alt="Lemon Squeezy Logo"
-							height="20"
-							width="auto"
-						/>
-					</div>
-					<div class="flex">
-						<img
-							class="mx-auto h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/laravel.svg"
-							alt="Laravel Logo"
-							height="16"
-							width="auto"
-						/>
-					</div>
-					<div class="flex">
-						<img
-							class="mx-auto h-7 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/lilly.svg"
-							alt="Lilly Logo"
-							height="28"
-							width="auto"
-						/>
-					</div>
-
-					<div class="flex">
-						<img
-							class="mx-auto h-6 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/openai.svg"
-							alt="OpenAI Logo"
-							height="24"
-							width="auto"
-						/>
-					</div>
+					<Bolt height={22} width={56} />
+					<VercelFull height={22} width={84} />
+					<SupabaseFull class="h-6" />
+					<Hulu height={18} width={56} />
+					<Spotify height={24} width={80} />
+					<FirebaseFull height={24} width={80} />
+					<Beacon height={24} width={80} />
+					<Claude height={26} width={90} />
+					<Figma height={24} width={24} />
+					<Cisco height={30} width={60} />
 				</Marquee>
 
-				<div class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"></div>
-				<div class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"></div>
+				<div
+					aria-hidden={true}
+					class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"
+				></div>
+				<div
+					aria-hidden={true}
+					class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"
+				></div>
+
 				{@render progressiveBlur({
 					direction: "left",
 					blurIntensity: 1,
@@ -154,77 +110,79 @@
 
 <!--
 <script lang="ts">
-  import { cn } from "$lib/utils";
-  import type { Snippet } from "svelte";
+	import { cn } from "$lib/utils";
+	import type { Snippet } from "svelte";
 
-  type MarqueeProps = {
-    pauseOnHover?: boolean;
-    vertical?: boolean;
-    repeat?: number;
-    reverse?: boolean;
-    class?: string;
-    children?: Snippet;
-  };
-  let {
-    pauseOnHover = false,
-    vertical = false,
-    repeat = 4,
-    reverse = false,
-    class: _class = "",
-    children,
-  }: MarqueeProps = $props();
+	type MarqueeProps = {
+		pauseOnHover?: boolean;
+		vertical?: boolean;
+		repeat?: number;
+		reverse?: boolean;
+		class?: string;
+		children?: Snippet;
+	};
+	let {
+		pauseOnHover = false,
+		vertical = false,
+		repeat = 4,
+		reverse = false,
+		class: _class = "",
+		children,
+	}: MarqueeProps = $props();
 </script>
 
 <div
-  class={cn(
-    "group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]",
-    {
-      "flex-row": !vertical,
-      "flex-col": vertical,
-    },
-    _class
-  )}
+	class={cn(
+		"group flex gap-(--gap) overflow-hidden p-2 [--duration:16s] [--gap:3rem]",
+		{
+			"flex-row": !vertical,
+			"flex-col": vertical,
+		},
+		_class
+	)}
 >
-  {#each { length: repeat } as _, i (i)}
-    <div
-      class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-        "animate-marquee flex-row": !vertical,
-        "animate-marquee-vertical flex-col": vertical,
-        "group-hover:[animation-play-state:paused]": pauseOnHover,
-        "[animation-direction:reverse]": reverse,
-      })}
-    >
-      {@render children?.()}
-    </div>
-  {/each}
+	{#each { length: repeat } as _, i (i)}
+		<div
+			class={cn("flex shrink-0 justify-around gap-(--gap)", {
+				"animate-marquee flex-row": !vertical,
+				"animate-marquee-vertical flex-col": vertical,
+				"group-hover:paused": pauseOnHover,
+			})}
+			style="animation-direction:{reverse ? 'reverse' : 'normal'};
+      "
+		>
+			{@render children?.()}
+		</div>
+	{/each}
 </div>
 
 <style>
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+	@keyframes marquee {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-100%);
+		}
+	}
 
-  @keyframes marquee-vertical {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
-  }
+	@keyframes marquee-vertical {
+		0% {
+			transform: translateY(0%);
+		}
+		100% {
+			transform: translateY(-100%);
+		}
+	}
 
-  .animate-marquee {
-    animation: marquee var(--duration) linear infinite;
-  }
+	.animate-marquee {
+		animation: marquee var(--duration) linear infinite;
+	}
 
-  .animate-marquee-vertical {
-    animation: marquee-vertical var(--duration) linear infinite;
-  }
+	.animate-marquee-vertical {
+		animation: marquee-vertical var(--duration) linear infinite;
+	}
 </style>
+
 
  -->

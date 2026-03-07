@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from "svelte";
-	import { Beacon, Bolt, Cisco, Hulu, Spotify, Supabase, Vercel } from "$lib/svgs";
+	import { Beacon, Bolt, Cisco, Hulu, Spotify, SupabaseFull, VercelFull } from "$lib/svgs";
 
 	type LogoGroup = "ai" | "hosting" | "payments" | "streaming";
 	type LogoItem = {
@@ -17,11 +17,11 @@
 			{ key: "hulu", component: Hulu, className: "h-3.5 w-full" },
 		],
 		hosting: [
-			{ key: "supabase", component: Supabase, className: "size-5" },
+			{ key: "supabase", component: SupabaseFull, className: "size-5" },
 			{ key: "spotify", component: Spotify, className: "h-5 w-full" },
 			{
 				key: "vercel",
-				component: Vercel,
+				component: VercelFull,
 				className: "h-3.5 w-full",
 				props: { variant: "full" },
 			},
@@ -30,7 +30,7 @@
 			{ key: "hulu", component: Hulu, className: "h-3.5 w-full" },
 			{
 				key: "vercel",
-				component: Vercel,
+				component: VercelFull,
 				className: "h-3.5 w-full",
 				props: { variant: "full" },
 			},

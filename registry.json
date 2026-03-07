@@ -1,6 +1,6 @@
 {
 	"$schema": "https://shadcn-svelte.com/schema/registry.json",
-	"name": "@sv/cnblocks",
+	"name": "sv-blocks",
 	"homepage": "https://sv-blocks.vercel.app",
 	"aliases": {
 		"lib": "$lib",

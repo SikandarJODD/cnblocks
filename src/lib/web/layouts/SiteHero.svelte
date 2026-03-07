@@ -19,7 +19,7 @@
 					<div class="text-center sm:mx-auto lg:mt-0 lg:mr-auto">
 						<div>
 							<a
-								href="/docs/mcp"
+								href="/veil/hero"
 								class="group mx-auto flex w-fit items-center gap-2 rounded-full border bg-muted p-1 pl-4 shadow-md shadow-zinc-950/5 backdrop-blur-xs transition-colors duration-300 hover:bg-muted dark:border-t-white/5 dark:bg-muted/60 dark:shadow-zinc-950 dark:hover:border-t-border"
 							>
 								<span class="flex items-center gap-1.5 text-sm text-foreground">
@@ -42,7 +42,7 @@
 											stroke-linejoin="round"
 										></path>
 									</svg>
-									Introducing MCP Server
+									Introducing 60 New Blocks - Veil Kit
 								</span>
 								<div
 									class="size-6 overflow-hidden rounded-full bg-background duration-500 group-hover:bg-muted"
@@ -134,7 +134,7 @@
 								>
 							</div>
 							Svelte Shadcn Blocks<br />
-							100+ UI & Marketing Blocks
+							150+ UI & Marketing Blocks
 						</h1>
 						<p
 							class="mx-auto mt-6 max-w-3xl text-sm text-balance text-muted-foreground md:mt-10 md:text-lg"
