@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { Spotify } from "$lib/svgs";
+</script>
+
 <section class="py-16 md:py-32">
 	<div class="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
 		<div class="relative z-10 max-w-xl space-y-6">
@@ -45,13 +49,14 @@
 
 					<div class="mt-6 space-y-3">
 						<cite class="block font-medium">John Doe, CEO</cite>
-						<img
+						<!-- <img
 							class="h-5 w-fit dark:invert"
 							src="https://html.tailus.io/blocks/customers/nvidia.svg"
 							alt="Nvidia Logo"
 							height="20"
 							width="auto"
-						/>
+						/> -->
+						<Spotify class="h-5 w-fit dark:invert" />
 					</div>
 				</blockquote>
 			</div>

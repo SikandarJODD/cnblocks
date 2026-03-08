@@ -51,3 +51,21 @@ New Templates using Mist, Veil Blocks
 ---
 
 New Video for Launch of Components
+
+---
+
+9 March 2026
+
+Logos not working on Default blocks for
+all hero sections
+Stats 4 doesn't have NVDIA Logo : https://sv-blocks.vercel.app/stats - solved
+Pricing 5 doesn't have all logos : https://sv-blocks.vercel.app/pricing - solved
+Team Doesn't have Logos : https://sv-blocks.vercel.app/team - solved
+
+---
+
+No Placeholder : - solved
+Contact: https://sv-blocks.vercel.app/contact
+Sign Up : https://sv-blocks.vercel.app/signup
+Login : https://sv-blocks.vercel.app/login
+Forgot Password : https://sv-blocks.vercel.app/forgot-password

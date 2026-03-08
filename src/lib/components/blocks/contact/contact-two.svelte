@@ -54,11 +54,11 @@
 				<div class="mt-12 space-y-6 *:space-y-3 **:[&>label]:block">
 					<div>
 						<Label for="name" class="space-y-2">Full name</Label>
-						<Input type="text" id="name" required />
+						<Input type="text" id="name" placeholder="John Doe" required />
 					</div>
 					<div>
 						<Label for="email" class="space-y-2">Work Email</Label>
-						<Input type="email" id="email" required />
+						<Input type="email" id="email" placeholder="you@company.com" required />
 					</div>
 					<div>
 						<Label for="country" class="space-y-2">Country/Region</Label>
@@ -73,7 +73,7 @@
 					</div>
 					<div>
 						<Label for="website" class="space-y-2">Company Website</Label>
-						<Input type="url" id="website" />
+						<Input type="url" id="website" placeholder="https://company.com" />
 					</div>
 					<div>
 						<Label for="job" class="space-y-2">Job function</Label>
@@ -89,7 +89,7 @@
 					</div>
 					<div>
 						<Label for="msg" class="space-y-2">Message</Label>
-						<Textarea id="msg" rows={3} />
+						<Textarea id="msg" rows={3} placeholder="Tell us about your needs..." />
 					</div>
 					<Button>Submit</Button>
 				</div>

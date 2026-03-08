@@ -60,7 +60,7 @@
 		</div>
 	</section>
 
-	<section class="space-y-4 mb-10">
+	<section class="mb-10 space-y-4">
 		<H2 id="how-to-support">How To Support</H2>
 		<UnorderedList>
 			<ListItem>Become a recurring sponsor on GitHub.</ListItem>

@@ -48,7 +48,13 @@
 							Forgot password?
 						</Button>
 					</div>
-					<Input type="password" id="password" name="password" required />
+					<Input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Enter your password"
+						required
+					/>
 				</div>
 
 				<Button class="w-full" type="submit">Sign In</Button>

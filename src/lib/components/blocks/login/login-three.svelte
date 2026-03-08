@@ -83,7 +83,13 @@
 			<div class="space-y-6">
 				<div class="space-y-2">
 					<Label for="email" class="block text-sm">Email</Label>
-					<Input type="email" required name="email" id="email" />
+					<Input
+						type="email"
+						required
+						name="email"
+						id="email"
+						placeholder="you@example.com"
+					/>
 				</div>
 
 				<Button class="w-full">Continue</Button>

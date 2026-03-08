@@ -28,6 +28,19 @@
 		}
 		return false;
 	});
+
+	import {
+		Beacon,
+		Bolt,
+		Cisco,
+		Claude,
+		Figma,
+		FirebaseFull,
+		Hulu,
+		Spotify,
+		SupabaseFull,
+		VercelFull,
+	} from "$lib/svgs";
 </script>
 
 <!-- Scroll below to see the snippet code  -->
@@ -79,88 +92,24 @@
       </div> -->
 		</div>
 	</section>
-	<section class="bg-background pb-2">
+	<section class="bg-background py-6">
 		<div class="group relative m-auto max-w-7xl px-6">
 			<div class="flex flex-col items-center md:flex-row">
 				<div class="md:max-w-44 md:border-r md:pr-6">
 					<p class="text-end text-sm">Powering the best teams</p>
 				</div>
-				<!-- Checkout Logo Cloud Three  -->
-				<!-- I have provided progresive blur snippet code & Marquee code -->
-				<div class="relative py-6 md:w-[calc(100%-11rem)]">
+				<div class="relative py-6 **:fill-foreground md:w-[calc(100%-11rem)]">
 					<Marquee>
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nvidia.svg"
-								alt="Nvidia Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/column.svg"
-								alt="Column Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/github.svg"
-								alt="GitHub Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nike.svg"
-								alt="Nike Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-								alt="Lemon Squeezy Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/laravel.svg"
-								alt="Laravel Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-7 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/lilly.svg"
-								alt="Lilly Logo"
-								height="28"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-6 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/openai.svg"
-								alt="OpenAI Logo"
-								height="24"
-								width="auto"
-							/>
-						</div>
+						<Bolt height={22} width={56} />
+						<VercelFull height={22} width={84} />
+						<SupabaseFull class="h-6" />
+						<Hulu height={18} width={56} />
+						<Spotify height={24} width={80} />
+						<FirebaseFull height={24} width={80} />
+						<Beacon height={24} width={80} />
+						<Claude height={26} width={90} />
+						<Figma height={24} width={24} />
+						<Cisco height={30} width={60} />
 					</Marquee>
 
 					<div

@@ -73,11 +73,13 @@
 			{/each}
 		</div>
 	</div>
-	<div class="no-scrollbar relative max-h-[550px] min-h-[32rem] w-full overflow-auto border-none sm:w-full">
+	<div
+		class="relative no-scrollbar max-h-[550px] min-h-[32rem] w-full overflow-auto border-none sm:w-full"
+	>
 		<!-- <Code.Overflow> -->
 		<Code.Root
 			lang={selectedCode.lang}
-			class="no-scrollbar relative w-full rounded-none border-none"
+			class="relative no-scrollbar w-full rounded-none border-none"
 			code={selectedCode.filecode}
 			highlight={selectedCode.highlight}
 			hideLines={selectedCode.hideLines}

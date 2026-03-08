@@ -41,7 +41,13 @@
 
 				<div class="space-y-3">
 					<Label for="password" class="text-sm">Password</Label>
-					<Input type="password" id="password" name="password" required />
+					<Input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Create a password"
+						required
+					/>
 				</div>
 
 				<Button class="w-full" type="submit">Create Account</Button>

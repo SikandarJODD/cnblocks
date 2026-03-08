@@ -99,17 +99,35 @@
 				<div class="grid grid-cols-2 gap-3">
 					<div class="space-y-2">
 						<Label for="firstname" class="block text-sm">Firstname</Label>
-						<Input type="text" required name="firstname" id="firstname" />
+						<Input
+							type="text"
+							required
+							name="firstname"
+							id="firstname"
+							placeholder="John"
+						/>
 					</div>
 					<div class="space-y-2">
 						<Label for="lastname" class="block text-sm">Lastname</Label>
-						<Input type="text" required name="lastname" id="lastname" />
+						<Input
+							type="text"
+							required
+							name="lastname"
+							id="lastname"
+							placeholder="Doe"
+						/>
 					</div>
 				</div>
 
 				<div class="space-y-2">
 					<Label for="email" class="block text-sm">Username</Label>
-					<Input type="email" required name="email" id="email" />
+					<Input
+						type="email"
+						required
+						name="email"
+						id="email"
+						placeholder="you@example.com"
+					/>
 				</div>
 
 				<div class="space-y-2">
@@ -119,6 +137,7 @@
 						required
 						name="pwd"
 						id="pwd"
+						placeholder="Create a password"
 						class="input sz-md variant-mixed"
 					/>
 				</div>
