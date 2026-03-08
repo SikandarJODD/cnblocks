@@ -4,6 +4,8 @@
 
 	let { children } = $props();
 
+	type PreviewTheme = "veil" | "mist";
+
 	const numberWords = new Map<string, string>([
 		["one", "One"],
 		["two", "Two"],
@@ -74,7 +76,15 @@
 		};
 	}
 
+	function resolvePreviewTheme(pathname: string): PreviewTheme | null {
+		const segments = pathname.split("/").filter(Boolean);
+		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
+
+		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
+	}
+
 	const seo = $derived(getPreviewMeta(page.url.pathname));
+	const previewTheme = $derived(resolvePreviewTheme(page.url.pathname));
 </script>
 
 <SEOComponent
@@ -84,4 +94,12 @@
 	noindex={true}
 />
 
-{@render children()}
+{#if previewTheme}
+	<div data-theme={previewTheme}>
+		<div class="theme-container">
+			{@render children()}
+		</div>
+	</div>
+{:else}
+	{@render children()}
+{/if}

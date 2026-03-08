@@ -88,10 +88,19 @@
 	} from "$lib/components/ui/tooltip";
 	import CodeEditor from "./CodeEditor.svelte";
 
+	type ScopedTheme = "veil" | "mist";
+
+	function resolveScopedTheme(pathname: string): ScopedTheme | null {
+		const segments = pathname.split("/").filter(Boolean);
+		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
+
+		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
+	}
+
 	let showIframeComp = $state(false);
-	let currentRouteSegment = $derived(page.url.pathname.split("/").filter(Boolean)[0] ?? "");
+	let activePreviewTheme = $derived(resolveScopedTheme(page.url.pathname));
 	let themeSetupHref = $derived(
-		currentRouteSegment === "veil" ? "/v2-docs/veil-theme" : "/v2-docs/mist-theme"
+		activePreviewTheme === "veil" ? "/v2-docs/veil-theme" : "/v2-docs/mist-theme"
 	);
 </script>
 
@@ -511,9 +520,17 @@
 						{/if}
 					</PaneGroup>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="theme-container w-full overflow-hidden">
-						<BlockComponent></BlockComponent>
-					</div>
+					{#if activePreviewTheme}
+						<div data-theme={activePreviewTheme}>
+							<div in:scale={{ start: 0.85 }} class="theme-container w-full overflow-hidden">
+								<BlockComponent></BlockComponent>
+							</div>
+						</div>
+					{:else}
+						<div in:scale={{ start: 0.85 }} class="w-full overflow-hidden">
+							<BlockComponent></BlockComponent>
+						</div>
+					{/if}
 				{/if}
 			</div>
 
