@@ -59,7 +59,7 @@
 			<div class="space-y-2 pb-3">
 				<NavMain label="Guide" items={data.guide} />
 				<NavMain label="Theme Setup" items={data.themeSetup} />
-				<NavProjects label="Templates" projects={data.templates} />
+				<!-- <NavProjects label="Templates" projects={data.templates} /> -->
 				<NavProjects label="Resources" projects={data.resources} />
 			</div>
 		</ScrollArea>
