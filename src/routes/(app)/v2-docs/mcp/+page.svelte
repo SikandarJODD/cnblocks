@@ -27,7 +27,7 @@
 	title="MCP Server"
 	description="Set up jsrepo MCP server for Cursor and Windsurf workflows."
 >
-	<section class="space-y-4">
+	<!-- <section class="space-y-4">
 		<H2 id="overview">Overview</H2>
 		<Paragraph>
 			Use MCP with jsrepo to make block discovery and installation easier in AI IDEs like
@@ -43,7 +43,7 @@
 				jsrepo MCP docs
 			</Link>
 		</Paragraph>
-	</section>
+	</section> -->
 
 	<section class="space-y-4">
 		<H2 id="cursor-setup">Cursor Setup</H2>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import { ExternalLinkIcon } from "@lucide/svelte";
 	import type { Component, ComponentProps } from "svelte";
 
 	let {
@@ -21,7 +22,7 @@
 		<Sidebar.Menu>
 			{#each items as item (item.title)}
 				<Sidebar.MenuItem>
-					<Sidebar.MenuButton size="sm">
+					<Sidebar.MenuButton size="sm" class='py-4 bg-secondary/80 '>
 						{#snippet child({ props })}
 							<a
 								href={item.url}
@@ -29,7 +30,7 @@
 								rel={item.external ? "noopener noreferrer" : undefined}
 								{...props}
 							>
-								<item.icon class="size-4! text-emerald-600" />
+								<item.icon class="size-4! text-cyan-400" />
 								<span>{item.title}</span>
 							</a>
 						{/snippet}

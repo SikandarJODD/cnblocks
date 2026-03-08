@@ -6,7 +6,7 @@
 
 	let {
 		ref = $bindable(null),
-		variant = "ghost",
+		variant = 'ghost',
 		size = "icon",
 		class: className,
 		...rest

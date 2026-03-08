@@ -77,7 +77,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		group: "theme",
 		toc: true,
 		seo: {
-			title: "Shadcn Blocks for Wiki-Style Websites",
+			title: "Mist Theme Setup - Notion-Inspired Marketing Pages",
 			description:
 				"Craft sleek, Notion-inspired marketing pages. Built on top of Shadcn Svelte UI.",
 			keywords: [...docsKeywords, "mist", "theme setup"],
@@ -86,11 +86,11 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	veilTheme: {
 		key: "veilTheme",
 		path: "/v2-docs/veil-theme",
-		navTitle: "Veil Theme Guide",
+		navTitle: "Veil Theme Setup",
 		group: "theme",
 		toc: true,
 		seo: {
-			title: "Veil Theme Setup and Component Overrides",
+			title: "Veil Theme Setup",
 			description:
 				"Apply Veil theme tokens and update button, card, input, and textarea primitives for consistent UI styling.",
 			keywords: [
@@ -187,12 +187,12 @@ export const docsV2TemplateItems: DocsV2NavItem[] = [
 ];
 
 export const docsV2FooterActions: DocsV2FooterAction[] = [
-	{
-		key: "feedback",
-		title: "Send Feedback",
-		url: "https://github.com/SikandarJODD/cnblocks/issues",
-		external: true,
-	},
+	// {
+	// 	key: "feedback",
+	// 	title: "Send Feedback",
+	// 	url: "https://github.com/SikandarJODD/cnblocks/issues",
+	// 	external: true,
+	// },
 	{
 		key: "sponsor",
 		title: "Sponsor Project",

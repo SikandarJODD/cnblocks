@@ -71,7 +71,7 @@
 			<Sidebar.MenuItem>
 				<Sidebar.MenuButton
 					class={cn({
-						"bg-sidebar-accent text-xs text-sidebar-accent-foreground": isActive(
+						"bg-sidebar-accent  text-sidebar-accent-foreground": isActive(
 							item.url,
 							item.external
 						),

@@ -14,9 +14,9 @@
 	let selectedCode = $derived(code[selectedIndex]);
 </script>
 
-<div class="flex overflow-auto rounded-md border">
+<div class="no-scrollbar flex overflow-auto rounded-md border">
 	<div
-		class="hidden min-w-66 overflow-auto rounded-tl-md border-r bg-neutral-50 font-mono text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25 dark:text-white"
+		class="no-scrollbar hidden min-w-54 overflow-auto rounded-tl-md border-r bg-neutral-50 font-mono text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25 dark:text-white"
 	>
 		<div>
 			<div
@@ -73,11 +73,11 @@
 			{/each}
 		</div>
 	</div>
-	<div class="relative max-h-[550px] min-h-[32rem] w-full overflow-auto border-none sm:w-full">
+	<div class="no-scrollbar relative max-h-[550px] min-h-[32rem] w-full overflow-auto border-none sm:w-full">
 		<!-- <Code.Overflow> -->
 		<Code.Root
 			lang={selectedCode.lang}
-			class="w-full rounded-none border-none "
+			class="no-scrollbar relative w-full rounded-none border-none"
 			code={selectedCode.filecode}
 			highlight={selectedCode.highlight}
 			hideLines={selectedCode.hideLines}
