@@ -8,8 +8,9 @@
 	import { cn } from "$lib/utils";
 	import { browser } from "$app/environment";
 
+	// border-l
 	const style = tv({
-		base: "not-prose relative h-full max-h-[650px] overflow-auto rounded-none border-l",
+		base: "not-prose relative h-full max-h-[650px] overflow-auto rounded-none",
 		variants: {
 			variant: {
 				default: "border-border bg-secondary/10",

@@ -11,11 +11,14 @@
 	import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
 	import type { Component } from "svelte";
+	import { watch } from "runed";
 
 	interface BlockPreviewProps {
 		itemId?: string;
 		code: MistCode | MistCode[];
 		preview: string;
+		previewMode?: "inline" | "iframe";
+		previewHeight?: number;
 		title: string;
 		category: string;
 		previewOnly?: boolean;
@@ -34,6 +37,8 @@
 		itemId,
 		code,
 		preview,
+		previewMode = "inline",
+		previewHeight,
 		title = "Hero Section",
 		category = "Components",
 		slug,
@@ -97,11 +102,28 @@
 		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
 	}
 
-	let showIframeComp = $state(false);
+	let showIframeComp = $derived(previewMode === "iframe");
+	let forcesIframe = $derived(previewMode === "iframe");
+	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
+	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
 	let activePreviewTheme = $derived(resolveScopedTheme(page.url.pathname));
 	let themeSetupHref = $derived(
 		activePreviewTheme === "veil" ? "/v2-docs/veil-theme" : "/v2-docs/mist-theme"
 	);
+
+	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {
+		const iframeDocument = iframe?.contentDocument;
+		if (!iframeDocument) return;
+
+		iframeDocument.documentElement.classList.add("no-scrollbar");
+		iframeDocument.body.classList.add("no-scrollbar");
+	}
+
+	watch(() => forcesIframe, (isForced) => {
+		if (isForced && !showIframeComp) {
+			showIframeComp = true;
+		}
+	});
 </script>
 
 <section
@@ -199,7 +221,7 @@
 			</div>
 
 			<div class="flex items-center gap-2">
-				{#if showIframeComp}
+				{#if shouldRenderInIframe}
 					<div transition:scale={{ start: 0.8 }}>
 						<!-- Laptop Icon -->
 						<TooltipProvider delayDuration={100}>
@@ -343,69 +365,71 @@
 						</TooltipProvider>
 					</div>
 				{/if}
-				<TooltipProvider delayDuration={120}>
-					<Tooltip>
-						<TooltipTrigger>
-							<Button
-								size="icon"
-								onclick={() => {
-									showIframeComp = !showIframeComp;
-								}}
-								class="relative h-8 w-8 cursor-pointer shadow-none"
-								variant="outline"
-								aria-label="Toggle Responsive UI"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="28"
-									height="28"
-									viewBox="0 0 24 24"
-									fill="none"
+				{#if !forcesIframe}
+					<TooltipProvider delayDuration={120}>
+						<Tooltip>
+							<TooltipTrigger>
+								<Button
+									size="icon"
+									onclick={() => {
+										showIframeComp = !showIframeComp;
+									}}
+									class="relative h-8 w-8 cursor-pointer shadow-none"
+									variant="outline"
+									aria-label="Toggle Responsive UI"
 								>
-									<path
-										d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
-										class={showIframeComp
-											? "fill-green-500/10 stroke-green-500"
-											: "stroke-primary"}
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-									<path
-										d="M10 3L10 21"
-										class={showIframeComp
-											? "stroke-green-500"
-											: "stroke-primary"}
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-									<path
-										d="M5.5 7H6.5M5.5 10H6.5"
-										class={showIframeComp
-											? "stroke-green-500"
-											: "stroke-primary"}
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-									<path
-										d="M17 10L15 12L17 14"
-										class={showIframeComp
-											? "stroke-green-500"
-											: "stroke-primary"}
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-								</svg>
-							</Button>
-						</TooltipTrigger>
-						<TooltipContent align="center" class="px-2 py-1 text-[10px]"
-							>Responsive UI</TooltipContent
-						>
-					</Tooltip>
-				</TooltipProvider>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="28"
+										height="28"
+										viewBox="0 0 24 24"
+										fill="none"
+									>
+										<path
+											d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
+											class={showIframeComp
+												? "fill-green-500/10 stroke-green-500"
+												: "stroke-primary"}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+										<path
+											d="M10 3L10 21"
+											class={showIframeComp
+												? "stroke-green-500"
+												: "stroke-primary"}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+										<path
+											d="M5.5 7H6.5M5.5 10H6.5"
+											class={showIframeComp
+												? "stroke-green-500"
+												: "stroke-primary"}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+										<path
+											d="M17 10L15 12L17 14"
+											class={showIframeComp
+												? "stroke-green-500"
+												: "stroke-primary"}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</Button>
+							</TooltipTrigger>
+							<TooltipContent align="center" class="px-2 py-1 text-[10px]"
+								>Responsive UI</TooltipContent
+							>
+						</Tooltip>
+					</TooltipProvider>
+				{/if}
 				{#if code}
 					<PreviewInstallAdd {itemId} registryPath="r" />
 					<Button
@@ -462,7 +486,7 @@
 
 		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:border-x lg:px-0">
 			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
-				{#if showIframeComp}
+				{#if shouldRenderInIframe}
 					<PaneGroup direction="horizontal">
 						<Pane
 							bind:pane={ref}
@@ -473,25 +497,30 @@
 							}}
 							defaultSize={DEFAULT_SIZE}
 							minSize={SM_SIZE}
-							class="h-fit border-x"
+							class="h-fit border-r"
 						>
 							<iframe
 								loading="lazy"
 								allowFullScreen
 								bind:this={iframeRef}
 								{title}
-								height={iframeHeight}
-								class="@starting:opacity-0 @starting:blur-xl block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
+								height={resolvedIframeHeight}
+								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
 								src={preview}
 								id={`block-${title}`}
 								style="
-                --iframe-height: {iframeHeight}px;"
+                --iframe-height: {resolvedIframeHeight}px;"
 								onload={() => {
 									isLoading = false;
-									let contentHeight =
-										iframeRef?.contentWindow?.document.body.scrollHeight;
-									if (contentHeight) {
-										iframeHeight = contentHeight + 20;
+									applyIframeScrollbarStyles(iframeRef);
+									if (!previewHeight) {
+										let contentHeight =
+											iframeRef?.contentWindow?.document.body.scrollHeight;
+										if (contentHeight) {
+											iframeHeight = contentHeight + 20;
+										}
+									} else {
+										iframeHeight = previewHeight;
 									}
 								}}
 							></iframe>

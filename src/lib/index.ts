@@ -36,7 +36,8 @@ export function getBlock(
 	totalBlocks: number,
 	category: string,
 	comps: string[],
-	components: any[]
+	components: any[],
+	options: { previewMode?: Block["previewMode"]; previewHeight?: number } = {}
 ): Block[] {
 	let temp = [];
 	for (let i = 1; i < totalBlocks + 1; i++) {
@@ -46,6 +47,8 @@ export function getBlock(
 			title: numToString(i),
 			category: category,
 			preview: `/preview/${category}/${numToString(i)}`,
+			previewMode: options.previewMode,
+			previewHeight: options.previewHeight,
 			code: { code: comps[i - 1] },
 			component: components[i - 1],
 		});

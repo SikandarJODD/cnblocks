@@ -83,8 +83,19 @@
 		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
 	}
 
+	function getPreviewCategory(pathname: string): string | null {
+		const segments = pathname.split("/").filter(Boolean);
+		const previewSegments = segments[0] === "preview" ? segments.slice(1) : segments;
+		const themeSegment =
+			previewSegments[0] === "veil" || previewSegments[0] === "mist" ? previewSegments[0] : null;
+		const contentSegments = themeSegment ? previewSegments.slice(1) : previewSegments;
+
+		return contentSegments[0] ?? null;
+	}
+
 	const seo = $derived(getPreviewMeta(page.url.pathname));
 	const previewTheme = $derived(resolvePreviewTheme(page.url.pathname));
+	const previewCategory = $derived(getPreviewCategory(page.url.pathname));
 </script>
 
 <SEOComponent
@@ -96,10 +107,21 @@
 
 {#if previewTheme}
 	<div data-theme={previewTheme}>
-		<div class="theme-container">
-			{@render children()}
+		<div
+			class={[
+				"theme-container",
+				previewCategory === "header" && "min-h-[140vh] bg-background",
+			]}
+		>
+			<div class={previewCategory === "header" ? "pb-24" : undefined}>
+				{@render children()}
+			</div>
 		</div>
 	</div>
 {:else}
-	{@render children()}
+	<div
+		class={previewCategory === "header" ? "min-h-[140vh] bg-background pb-24" : undefined}
+	>
+		{@render children()}
+	</div>
 {/if}

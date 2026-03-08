@@ -245,7 +245,7 @@
 {#snippet heroheader()}
 	<header>
 		<!-- Add `fixed` class to component to make it fixed on top -->
-		<nav class="z-20 w-full px-2">
+		<nav class="z-20 fixed w-full px-2">
 			<div
 				class={[
 					"mx-auto mt-2 max-w-6xl rounded-2xl px-6 transition-all duration-300 lg:px-12",

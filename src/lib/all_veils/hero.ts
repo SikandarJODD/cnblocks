@@ -17,6 +17,8 @@ export const all_veils_hero: MistBlock[] = [
 		title: "Hero One",
 		category: "hero",
 		preview: "/preview/veil/hero/hero-one",
+		previewMode: "iframe",
+		previewHeight: 720,
 		itemId: "veil-hero-one",
 		code: {
 			code: HeroOneCode,
@@ -29,6 +31,8 @@ export const all_veils_hero: MistBlock[] = [
 		title: "Hero Two",
 		category: "hero",
 		preview: "/preview/veil/hero/hero-two",
+		previewMode: "iframe",
+		previewHeight: 720,
 		itemId: "veil-hero-two",
 		code: {
 			code: HeroTwoCode,
@@ -41,6 +45,8 @@ export const all_veils_hero: MistBlock[] = [
 		title: "Hero Three",
 		category: "hero",
 		preview: "/preview/veil/hero/hero-three",
+		previewMode: "iframe",
+		previewHeight: 720,
 		itemId: "veil-hero-three",
 		code: {
 			code: HeroThreeCode,
@@ -53,6 +59,8 @@ export const all_veils_hero: MistBlock[] = [
 		title: "Hero Four",
 		category: "hero",
 		preview: "/preview/veil/hero/hero-four",
+		previewMode: "iframe",
+		previewHeight: 720,
 		itemId: "veil-hero-four",
 		code: {
 			code: HeroFourCode,
@@ -65,6 +73,8 @@ export const all_veils_hero: MistBlock[] = [
 		title: "Hero Five",
 		category: "hero",
 		preview: "/preview/veil/hero/hero-five",
+		previewMode: "iframe",
+		previewHeight: 720,
 		itemId: "veil-hero-five",
 		code: {
 			code: HeroFiveCode,
