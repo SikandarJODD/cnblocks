@@ -58,9 +58,9 @@
 	</Sidebar.Inset>
 
 	{#if showToc}
-		<aside class="mr-5 hidden lg:block lg:min-w-68">
+		<aside class="md:mr-5 hidden lg:block lg:w-70">
 			<div
-				class="sticky top-6 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur-sm"
+				class="sticky top-6 rounded-2xl border border-border bg-card/70 p-5 backdrop-blur-sm"
 			>
 				<p
 					class="mb-3 flex items-center gap-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase"

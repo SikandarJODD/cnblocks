@@ -25,7 +25,7 @@
 	// const sidebar = useSidebar();
 </script>
 
-<Sidebar.Menu class="rounded-md border border-dashed bg-secondary/30  hover:border-cyan-500/50">
+<Sidebar.Menu class="rounded-md border border-dashed bg-secondary/30  hover:border-cyan-500/50 ">
 	<Sidebar.MenuItem>
 		<a href={user.visit} target="_blank" rel="noopener noreferrer">
 			<Sidebar.MenuButton

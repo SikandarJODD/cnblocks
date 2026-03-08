@@ -187,12 +187,12 @@ export const docsV2TemplateItems: DocsV2NavItem[] = [
 ];
 
 export const docsV2FooterActions: DocsV2FooterAction[] = [
-	{
-		key: "feedback",
-		title: "Send Feedback",
-		url: "https://github.com/SikandarJODD/cnblocks/issues",
-		external: true,
-	},
+	// {
+	// 	key: "feedback",
+	// 	title: "Send Feedback",
+	// 	url: "https://github.com/SikandarJODD/cnblocks/issues",
+	// 	external: true,
+	// },
 	{
 		key: "sponsor",
 		title: "Sponsor Project",

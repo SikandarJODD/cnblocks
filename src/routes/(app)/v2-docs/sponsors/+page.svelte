@@ -49,7 +49,7 @@
 					class="flex flex-col items-center justify-center rounded-xl border bg-card p-3"
 				>
 					<img
-						class="size-16 rounded-full object-cover"
+						class="size-24 rounded-full border object-cover"
 						src={sponsor.avatar}
 						alt={sponsor.name}
 						loading="lazy"
@@ -60,7 +60,7 @@
 		</div>
 	</section>
 
-	<section class="space-y-4">
+	<section class="space-y-4 mb-10">
 		<H2 id="how-to-support">How To Support</H2>
 		<UnorderedList>
 			<ListItem>Become a recurring sponsor on GitHub.</ListItem>
@@ -81,7 +81,7 @@
 		</div>
 	</section>
 
-	<section class="space-y-4">
+	<!-- <section class="space-y-4">
 		<H3 id="feedback-and-requests">Feedback and Requests</H3>
 		<Paragraph>
 			For feature requests and sponsorship-related questions, open an issue or discussion on{" "}
@@ -93,5 +93,5 @@
 				GitHub
 			</Link>.
 		</Paragraph>
-	</section>
+	</section> -->
 </DocsPageShell>

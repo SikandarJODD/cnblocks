@@ -60,12 +60,12 @@
 				<NavMain label="Guide" items={data.guide} />
 				<NavMain label="Theme Setup" items={data.themeSetup} />
 				<!-- <NavProjects label="Templates" projects={data.templates} /> -->
-				<NavProjects label="Resources" projects={data.resources} />
+				<NavProjects label="Resources & Sponsors" projects={data.resources} />
 			</div>
 		</ScrollArea>
 	</Sidebar.Content>
-	<Sidebar.Footer>
-		<NavSecondary items={data.footer} class="mb-2" />
+	<Sidebar.Footer class="gap-0!">
+		<NavSecondary items={data.footer} class="mb-0 px-0" />
 		<NavUser user={data.user} />
 	</Sidebar.Footer>
 </Sidebar.Root>

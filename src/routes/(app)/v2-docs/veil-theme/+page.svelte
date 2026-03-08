@@ -707,8 +707,20 @@ export {
 				>Installation</Link
 			>
 			first. After Veil primitives are configured, continue to <Link href="/v2-docs/mcp"
-				>MCP Server</Link
+			>MCP Server</Link
 			> for AI-assisted discovery and install workflows.
 		</Paragraph>
 	</section> -->
+
+	<section class="space-y-4">
+		<H2 id="setup-complete">Setup Complete</H2>
+		<Paragraph>
+			Veil theme setup is now complete. Your app is ready to start using Veil components and
+			build warm, elegant product interfaces.
+		</Paragraph>
+		<Paragraph>
+			Use primitives from <code>$lib/components/ui/veil/*</code> or explore the
+			<Link href="/veil">Veil components</Link> collection to start composing screens.
+		</Paragraph>
+	</section>
 </DocsPageShell>
