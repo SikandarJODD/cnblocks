@@ -77,7 +77,7 @@
 		<!-- <Code.Overflow> -->
 		<Code.Root
 			lang={selectedCode.lang}
-			class="no-scrollbar w-full rounded-none border-none"
+			class="no-scrollbar relative w-full rounded-none border-none"
 			code={selectedCode.filecode}
 			highlight={selectedCode.highlight}
 			hideLines={selectedCode.hideLines}

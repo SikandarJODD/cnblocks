@@ -470,7 +470,6 @@ export {
 	--font-serif: "Asar", serif;
 
 	@variant dark {
-		--font-family: "Geist", sans-serif;
 		--background: oklch(0.1448 0 0);
 		--foreground: oklch(0.9027 0.0137 60.56);
 
@@ -497,23 +496,44 @@ export {
 }`}
 			lang="css"
 		/>
+		<!-- <Paragraph>
+			Veil uses Geist as the primary sans font.
+			<Link href="https://fonts.google.com/specimen/Geist" target="_blank" rel="noreferrer">
+				Geist on Google Fonts
+			</Link>
+		</Paragraph>
 		<Paragraph>
 			Veil uses Asar as the serif accent font.
 			<Link href="https://fonts.google.com/specimen/Asar" target="_blank" rel="noreferrer">
 				Asar on Google Fonts
 			</Link>
+		</Paragraph> -->
+		<Paragraph>Veil Theme uses Geist, Asar font.</Paragraph>
+		<Paragraph
+			>Gesit Font : <Link
+				href="https://fonts.google.com/specimen/Geist"
+				target="_blank"
+				rel="noreferrer">Geist on Google Fonts</Link
+			>
+		</Paragraph>
+		<Paragraph
+			>Asar Font : <Link
+				href="https://fonts.google.com/specimen/Asar"
+				target="_blank"
+				rel="noreferrer">Asar on Google Fonts</Link
+			>
 		</Paragraph>
 	</section>
 
 	<section class="space-y-4">
-		<H2 id="global-container">Global Container</H2>
+		<H2 id="apply-theme">Apply Theme</H2>
 		<Paragraph>
 			Ensure your root body includes <code>theme-container</code> so the selected theme scope is
 			applied across the application.
 		</Paragraph>
 		<DocsCodeBlock
 			fileName="src/app.html"
-			code={`<body class="theme-container">
+			code={`<body data-theme="veil" class="theme-container">
 	<!-- Your Application -->
 </body>`}
 			lang="html"
@@ -531,30 +551,30 @@ export {
 		>
 			<Thead>
 				<Tr>
-					<Th class='border-r'>Component</Th>
-					<Th class='border-r'>Import Path</Th>
+					<Th class="border-r">Component</Th>
+					<Th class="border-r">Import Path</Th>
 					<Th>Update Scope</Th>
 				</Tr>
 			</Thead>
 			<Tbody>
-				<Tr class=''>
-					<Td class='border-r'>Button</Td>
-					<Td class="font-mono text-xs border-r">$lib/components/ui/veil/button</Td>
+				<Tr class="">
+					<Td class="border-r">Button</Td>
+					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/button</Td>
 					<Td>Variant and size classes, anchor/button rendering</Td>
 				</Tr>
-				<Tr class=''>
-					<Td class='border-r'>Card</Td>
-					<Td class="font-mono text-xs border-r">$lib/components/ui/veil/card</Td>
+				<Tr class="">
+					<Td class="border-r">Card</Td>
+					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/card</Td>
 					<Td>Root variants and all card composition primitives</Td>
 				</Tr>
-				<Tr class=''>
-					<Td class='border-r'>Input</Td>
-					<Td class="font-mono text-xs border-r">$lib/components/ui/veil/input</Td>
+				<Tr class="">
+					<Td class="border-r">Input</Td>
+					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/input</Td>
 					<Td>Field styling, file input branch, focus/error states</Td>
 				</Tr>
-				<Tr class=''>
-					<Td class='border-r'>Textarea</Td>
-					<Td class="font-mono text-xs border-r">$lib/components/ui/veil/textarea</Td>
+				<Tr class="">
+					<Td class="border-r">Textarea</Td>
+					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/textarea</Td>
 					<Td>Multiline field sizing, focus/error/disabled states</Td>
 				</Tr>
 			</Tbody>

@@ -15,13 +15,14 @@
 	import Check from "@lucide/svelte/icons/check";
 	import Copy from "@lucide/svelte/icons/copy";
 	import X from "@lucide/svelte/icons/x";
+	import type { CopyButtonProps } from "./types";
 
-	interface Props extends Omit<ButtonProps, "href"> {
-		text: string;
-		icon?: Snippet<[]>;
-		animationDuration?: number;
-		onCopy?: (status: UseClipboard["status"]) => void;
-	}
+	// interface Props extends Omit<ButtonProps, "href"> {
+	// 	text: string;
+	// 	icon?: Snippet<[]>;
+	// 	animationDuration?: number;
+	// 	onCopy?: (status: UseClipboard["status"]) => void;
+	// }
 
 	let {
 		text,
@@ -32,19 +33,19 @@
 		onCopy,
 		class: className,
 		...restProps
-	}: Props = $props();
+	}: CopyButtonProps = $props();
 
 	const clipboard = new UseClipboard({ delay: 1500 });
 </script>
 
-<TooltipProvider delayDuration={0}>
+<TooltipProvider delayDuration={200}>
 	<Tooltip>
-		<TooltipTrigger>
+		<TooltipTrigger class={className}>
 			<Button
 				{...restProps}
 				{variant}
 				{size}
-				class={cn("z-50 h-8 w-8", className)}
+				class={cn("z-50 h-8 w-8")}
 				type="button"
 				name="copy"
 				tabindex={-1}
@@ -55,12 +56,12 @@
 			>
 				{#if clipboard.status === "success"}
 					<div in:scale={{ duration: animationDuration, start: 0.5 }}>
-						<Check class="!size-3.5 text-[#10B981]" />
+						<Check class="size-3.5! text-[#10B981]" />
 						<span class="sr-only">Copied</span>
 					</div>
 				{:else if clipboard.status === "failure"}
 					<div in:scale={{ duration: animationDuration, start: 0.5 }}>
-						<X class="!size-3.5" />
+						<X class="size-3.5!" />
 						<span class="sr-only">Failed to copy</span>
 					</div>
 				{:else}
@@ -68,14 +69,14 @@
 						{#if icon}
 							{@render icon()}
 						{:else}
-							<Copy class="!size-3.5 opacity-50" />
+							<Copy class="size-3.5! opacity-50" />
 						{/if}
 						<span class="sr-only">Copy</span>
 					</div>
 				{/if}
 			</Button>
 		</TooltipTrigger>
-		<TooltipContent align="center" side="top" class="px-2 py-1 text-[10px]"
+		<TooltipContent align="center" side="top" class="z-50 px-2 py-1 text-[10px]"
 			>Copy Code</TooltipContent
 		>
 	</Tooltip>
