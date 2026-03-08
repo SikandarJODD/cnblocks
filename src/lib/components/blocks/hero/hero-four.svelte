@@ -35,6 +35,19 @@
 		class?: string;
 		blurIntensity?: number;
 	};
+
+	import {
+		Beacon,
+		Bolt,
+		Cisco,
+		Claude,
+		Figma,
+		FirebaseFull,
+		Hulu,
+		Spotify,
+		SupabaseFull,
+		VercelFull,
+	} from "$lib/svgs";
 </script>
 
 {@render header()}
@@ -74,7 +87,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="bg-background pb-16 md:pb-32">
+	<!-- <section class="bg-background pb-16 md:pb-32">
 		<div class="group relative m-auto max-w-6xl px-6">
 			<div class="flex flex-col items-center md:flex-row">
 				<div class="md:max-w-44 md:border-r md:pr-6">
@@ -164,16 +177,49 @@
 					<div
 						class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"
 					></div>
-					<!-- <ProgressiveBlur
-              class="pointer-events-none absolute left-0 top-0 h-full w-20"
-              direction="left"
-              blurIntensity={1}
-            />
-            <ProgressiveBlur
-              class="pointer-events-none absolute right-0 top-0 h-full w-20"
-              direction="right"
-              blurIntensity={1}
-            /> -->
+					{@render progressiveBlur({
+						direction: "left",
+						blurIntensity: 1,
+						class: "pointer-events-none absolute left-0 top-0 h-full w-20",
+					})}
+					{@render progressiveBlur({
+						direction: "right",
+						blurIntensity: 1,
+						class: "pointer-events-none absolute right-0 top-0 h-full w-20",
+					})}
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<section class="border-t bg-background pt-4 pb-16 md:pb-32">
+		<div class="group relative m-auto max-w-6xl px-6">
+			<div class="flex flex-col items-center md:flex-row">
+				<div class="md:max-w-44 md:border-r md:pr-6">
+					<p class="text-end text-sm">Powering the best teams</p>
+				</div>
+				<div class="relative py-6 **:fill-foreground md:w-[calc(100%-11rem)]">
+					<Marquee>
+						<Bolt height={22} width={56} />
+						<VercelFull height={22} width={84} />
+						<SupabaseFull class="h-6" />
+						<Hulu height={18} width={56} />
+						<Spotify height={24} width={80} />
+						<FirebaseFull height={24} width={80} />
+						<Beacon height={24} width={80} />
+						<Claude height={26} width={90} />
+						<Figma height={24} width={24} />
+						<Cisco height={30} width={60} />
+					</Marquee>
+
+					<div
+						aria-hidden={true}
+						class="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background"
+					></div>
+					<div
+						aria-hidden={true}
+						class="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background"
+					></div>
+
 					{@render progressiveBlur({
 						direction: "left",
 						blurIntensity: 1,

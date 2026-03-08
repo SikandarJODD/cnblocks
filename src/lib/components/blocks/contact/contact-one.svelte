@@ -39,12 +39,12 @@
 			<form action="" class="mt-12 space-y-6 *:space-y-3 **:[&>label]:block">
 				<div>
 					<Label for="name">Full name</Label>
-					<Input type="text" id="name" required />
+					<Input type="text" id="name" placeholder="John Doe" required />
 				</div>
 
 				<div>
 					<Label for="email">Work Email</Label>
-					<Input type="email" id="email" required />
+					<Input type="email" id="email" placeholder="you@company.com" required />
 				</div>
 
 				<div>
@@ -61,7 +61,7 @@
 
 				<div>
 					<Label for="website">Company Website</Label>
-					<Input type="url" id="website" />
+					<Input type="url" id="website" placeholder="https://company.com" />
 					<span class="inline-block text-sm text-muted-foreground"
 						>Must start with 'https'</span
 					>
@@ -82,7 +82,7 @@
 
 				<div>
 					<Label for="msg">Message</Label>
-					<Textarea id="msg" rows={3} />
+					<Textarea id="msg" rows={3} placeholder="Tell us about your needs..." />
 				</div>
 
 				<Button>Submit</Button>

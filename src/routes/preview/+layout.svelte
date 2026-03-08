@@ -44,7 +44,12 @@
 
 		return token
 			.split("-")
-			.map((part) => routeAliases[part] ?? numberWords.get(part) ?? `${part[0]?.toUpperCase() ?? ""}${part.slice(1)}`)
+			.map(
+				(part) =>
+					routeAliases[part] ??
+					numberWords.get(part) ??
+					`${part[0]?.toUpperCase() ?? ""}${part.slice(1)}`
+			)
 			.join(" ");
 	}
 
@@ -52,7 +57,9 @@
 		const segments = pathname.split("/").filter(Boolean);
 		const previewSegments = segments[0] === "preview" ? segments.slice(1) : segments;
 		const themeSegment =
-			previewSegments[0] === "veil" || previewSegments[0] === "mist" ? previewSegments[0] : null;
+			previewSegments[0] === "veil" || previewSegments[0] === "mist"
+				? previewSegments[0]
+				: null;
 		const contentSegments = themeSegment ? previewSegments.slice(1) : previewSegments;
 		const [category = "component", ...variantParts] = contentSegments;
 
@@ -87,7 +94,9 @@
 		const segments = pathname.split("/").filter(Boolean);
 		const previewSegments = segments[0] === "preview" ? segments.slice(1) : segments;
 		const themeSegment =
-			previewSegments[0] === "veil" || previewSegments[0] === "mist" ? previewSegments[0] : null;
+			previewSegments[0] === "veil" || previewSegments[0] === "mist"
+				? previewSegments[0]
+				: null;
 		const contentSegments = themeSegment ? previewSegments.slice(1) : previewSegments;
 
 		return contentSegments[0] ?? null;
@@ -119,9 +128,7 @@
 		</div>
 	</div>
 {:else}
-	<div
-		class={previewCategory === "header" ? "min-h-[140vh] bg-background pb-24" : undefined}
-	>
+	<div class={previewCategory === "header" ? "min-h-[140vh] bg-background pb-24" : undefined}>
 		{@render children()}
 	</div>
 {/if}

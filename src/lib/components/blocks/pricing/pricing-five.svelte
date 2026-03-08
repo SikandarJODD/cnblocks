@@ -7,6 +7,8 @@
 		"Third advantage donate to project",
 		"Fourth, access to all components weekly",
 	];
+
+	import { VercelFull, SupabaseFull, Spotify, Figma, FirebaseFull } from "$lib/svgs";
 </script>
 
 <div class="relative py-16 md:py-32">
@@ -51,34 +53,11 @@
 							Companies using our platform include:
 						</p>
 						<div class="mt-12 flex flex-wrap items-center justify-between gap-6">
-							<img
-								class="h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nvidia.svg"
-								alt="Nvidia Logo"
-								height="20"
-								width="auto"
-							/>
-							<img
-								class="h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/column.svg"
-								alt="Column Logo"
-								height="16"
-								width="auto"
-							/>
-							<img
-								class="h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/github.svg"
-								alt="GitHub Logo"
-								height="16"
-								width="auto"
-							/>
-							<img
-								class="h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nike.svg"
-								alt="Nike Logo"
-								height="20"
-								width="auto"
-							/>
+							<VercelFull class="h-5 w-fit dark:invert" />
+							<SupabaseFull class="h-4 w-fit dark:invert" />
+							<Spotify class="h-4 w-fit dark:invert" />
+							<Figma class="h-5 w-fit dark:invert" />
+							<FirebaseFull class="h-5 w-fit dark:invert" />
 						</div>
 					</div>
 				</div>

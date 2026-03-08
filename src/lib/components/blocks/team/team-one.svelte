@@ -6,19 +6,19 @@
 			avatar: "https://avatars.githubusercontent.com/u/47919550?v=4",
 		},
 		{
-			name: "Théo Balick",
-			role: "Frontend Dev",
-			avatar: "https://avatars.githubusercontent.com/u/68236786?v=4",
+			name: "Bhide Svelte",
+			role: "Sveltekit Developer",
+			avatar: "https://avatars.githubusercontent.com/u/93428946?v=4",
 		},
 		{
-			name: "Glodie Lukose",
+			name: "Dheeraj Purohit",
 			role: "Frontend Dev",
-			avatar: "https://avatars.githubusercontent.com/u/99137927?v=4",
+			avatar: "https://avatars.githubusercontent.com/u/30369664?v=4",
 		},
 		{
-			name: "Bernard Ngandu",
-			role: "Backend Dev",
-			avatar: "https://avatars.githubusercontent.com/u/31113941?v=4",
+			name: "Aidan Bleser",
+			role: "Full Stack Dev",
+			avatar: "https://avatars.githubusercontent.com/u/117548273?v=4",
 		},
 	];
 </script>

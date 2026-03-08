@@ -21,22 +21,40 @@
 				<div class="grid gap-4 @md:grid-cols-2">
 					<div class="space-y-2">
 						<Label for="firstName" class="text-sm">First name</Label>
-						<Input type="text" id="firstName" name="firstName" required />
+						<Input
+							type="text"
+							id="firstName"
+							name="firstName"
+							placeholder="John"
+							required
+						/>
 					</div>
 					<div class="space-y-2">
 						<Label for="lastName" class="text-sm">Last name</Label>
-						<Input type="text" id="lastName" name="lastName" required />
+						<Input
+							type="text"
+							id="lastName"
+							name="lastName"
+							placeholder="Doe"
+							required
+						/>
 					</div>
 				</div>
 
 				<div class="space-y-2">
 					<Label for="email" class="text-sm">Work email</Label>
-					<Input type="email" id="email" name="email" required />
+					<Input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="you@company.com"
+						required
+					/>
 				</div>
 
 				<div class="space-y-2">
 					<Label for="company" class="text-sm">Company</Label>
-					<Input type="text" id="company" name="company" />
+					<Input type="text" id="company" name="company" placeholder="Acme Inc." />
 				</div>
 
 				<div class="grid gap-4 @md:grid-cols-2">

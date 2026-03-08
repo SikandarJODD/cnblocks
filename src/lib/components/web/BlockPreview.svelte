@@ -101,11 +101,14 @@
 		iframeDocument.body.classList.add("no-scrollbar");
 	}
 
-	watch(() => forcesIframe, (isForced) => {
-		if (isForced && !showIframeComp) {
-			showIframeComp = true;
+	watch(
+		() => forcesIframe,
+		(isForced) => {
+			if (isForced && !showIframeComp) {
+				showIframeComp = true;
+			}
 		}
-	});
+	);
 </script>
 
 <section

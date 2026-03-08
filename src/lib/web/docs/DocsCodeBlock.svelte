@@ -96,6 +96,11 @@
     {@html htmlCode}
   </div> -->
 	<div>
-		<Code class="border-none no-scrollbar [&_pre]:no-scrollbar" {code} lang={normalizedLang} hideLines={true} />
+		<Code
+			class="no-scrollbar border-none [&_pre]:no-scrollbar"
+			{code}
+			lang={normalizedLang}
+			hideLines={true}
+		/>
 	</div>
 </div>

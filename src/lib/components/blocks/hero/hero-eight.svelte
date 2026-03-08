@@ -17,6 +17,19 @@
 		{ name: "About", href: "#a" },
 	];
 	let menuState = $state(false);
+
+	import {
+		Beacon,
+		Bolt,
+		Cisco,
+		Claude,
+		Figma,
+		FirebaseFull,
+		Hulu,
+		Spotify,
+		SupabaseFull,
+		VercelFull,
+	} from "$lib/svgs";
 </script>
 
 <!-- Scroll below to see the snippet code  -->
@@ -42,7 +55,7 @@
 					</a>
 
 					<h1
-						class="mt-8 text-4xl font-semibold text-balance md:text-5xl xl:text-6xl xl:[line-height:1.125]"
+						class="mt-8 text-4xl font-semibold text-balance md:text-5xl xl:text-6xl xl:leading-[1.125]"
 					>
 						Modern Software testing reimagined
 					</h1>
@@ -92,85 +105,18 @@
 				Your favorite companies are our partners.
 			</h2>
 			<div
-				class="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12"
+				class="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 **:fill-foreground sm:gap-x-16 sm:gap-y-12"
 			>
-				<img
-					class="h-5 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/nvidia.svg"
-					alt="Nvidia Logo"
-					height="20"
-					width="auto"
-				/>
-				<img
-					class="h-4 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/column.svg"
-					alt="Column Logo"
-					height="16"
-					width="auto"
-				/>
-				<img
-					class="h-4 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/github.svg"
-					alt="GitHub Logo"
-					height="16"
-					width="auto"
-				/>
-				<img
-					class="h-5 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/nike.svg"
-					alt="Nike Logo"
-					height="20"
-					width="auto"
-				/>
-				<img
-					class="h-4 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/laravel.svg"
-					alt="Laravel Logo"
-					height="16"
-					width="auto"
-				/>
-				<img
-					class="h-7 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/lilly.svg"
-					alt="Lilly Logo"
-					height="28"
-					width="auto"
-				/>
-				<img
-					class="h-5 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-					alt="Lemon Squeezy Logo"
-					height="20"
-					width="auto"
-				/>
-				<img
-					class="h-6 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/openai.svg"
-					alt="OpenAI Logo"
-					height="24"
-					width="auto"
-				/>
-				<img
-					class="h-4 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/tailwindcss.svg"
-					alt="Tailwind CSS Logo"
-					height="16"
-					width="auto"
-				/>
-				<img
-					class="h-5 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/vercel.svg"
-					alt="Vercel Logo"
-					height="20"
-					width="auto"
-				/>
-				<img
-					class="h-5 w-fit dark:invert"
-					src="https://html.tailus.io/blocks/customers/zapier.svg"
-					alt="Zapier Logo"
-					height="20"
-					width="auto"
-				/>
+				<Bolt height={22} width={56} />
+				<VercelFull height={22} width={84} />
+				<SupabaseFull class="h-6" />
+				<Hulu height={18} width={56} />
+				<Spotify height={24} width={80} />
+				<FirebaseFull height={24} width={80} />
+				<Beacon height={24} width={80} />
+				<Claude height={26} width={90} />
+				<Figma height={24} width={24} />
+				<Cisco height={30} width={60} />
 			</div>
 		</div>
 	</section>

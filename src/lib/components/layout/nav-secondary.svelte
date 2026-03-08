@@ -22,7 +22,7 @@
 		<Sidebar.Menu>
 			{#each items as item (item.title)}
 				<Sidebar.MenuItem>
-					<Sidebar.MenuButton size="sm" class='py-4 bg-secondary/80 '>
+					<Sidebar.MenuButton size="sm" class="bg-secondary/80 py-4 ">
 						{#snippet child({ props })}
 							<a
 								href={item.url}
