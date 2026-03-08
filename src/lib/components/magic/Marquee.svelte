@@ -22,7 +22,7 @@
 
 <div
 	class={cn(
-		"group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:16s] [--gap:3rem]",
+		"group flex gap-(--gap) overflow-hidden p-2 [--duration:16s] [--gap:3rem]",
 		{
 			"flex-row": !vertical,
 			"flex-col": vertical,
@@ -32,10 +32,10 @@
 >
 	{#each { length: repeat } as _, i (i)}
 		<div
-			class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
+			class={cn("flex shrink-0 justify-around gap-(--gap)", {
 				"animate-marquee flex-row": !vertical,
 				"animate-marquee-vertical flex-col": vertical,
-				"group-hover:[animation-play-state:paused]": pauseOnHover,
+				"group-hover:paused": pauseOnHover,
 			})}
 			style="animation-direction:{reverse ? 'reverse' : 'normal'};
       "

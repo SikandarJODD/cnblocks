@@ -1,16 +1,11 @@
 <script lang="ts">
 	import Card from "$lib/components/ui/card/card.svelte";
-
-	import Layout from "@lucide/svelte/icons/layout";
-	import Target from "@lucide/svelte/icons/target";
-	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
-	import Sparkles from "@lucide/svelte/icons/sparkles";
 	import CompareImgBlock from "$lib/components/magic/CompareImgBlock.svelte";
 </script>
 
 <section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)]
-  dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.200)] dark:[--color-secondary:theme(color.indigo.950)]"
+	data-theme="mist"
+	class="theme-container"
 >
 	<div class="py-16 md:py-24">
 		<div class="mx-auto w-full max-w-5xl px-2 md:px-6">

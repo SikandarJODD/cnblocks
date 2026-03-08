@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { page } from "$app/state";
 	import { cn } from "$lib/utils";
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
 	import { MediaQuery } from "svelte/reactivity";
 	import Separator from "../ui/separator/separator.svelte";
 	import Button from "../ui/button/button.svelte";
 	import Maximize from "@lucide/svelte/icons/maximize";
+	import Palette from "@lucide/svelte/icons/palette";
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
 	import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
@@ -86,7 +88,20 @@
 	} from "$lib/components/ui/tooltip";
 	import CodeEditor from "./CodeEditor.svelte";
 
+	type ScopedTheme = "veil" | "mist";
+
+	function resolveScopedTheme(pathname: string): ScopedTheme | null {
+		const segments = pathname.split("/").filter(Boolean);
+		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
+
+		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
+	}
+
 	let showIframeComp = $state(false);
+	let activePreviewTheme = $derived(resolveScopedTheme(page.url.pathname));
+	let themeSetupHref = $derived(
+		activePreviewTheme === "veil" ? "/v2-docs/veil-theme" : "/v2-docs/mist-theme"
+	);
 </script>
 
 <section
@@ -96,10 +111,10 @@
 	<div class="relative border-y">
 		<div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
 			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent to-(--color-border) to-75%"
+				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
 			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent to-(--color-border) to-75%"
+				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
 		</div>
 
@@ -168,17 +183,17 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden !h-4 lg:block" />
+					<Separator orientation="vertical" class="hidden h-4! lg:block" />
 				{/if}
 				<Button variant="ghost" class="size-8" href={preview} target="_blank">
-					<Maximize strokeWidth={1.6} class="!size-4 sm:opacity-70" />
+					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
 				</Button>
-				<Separator orientation="vertical" class="hidden !h-4 lg:block" />
+				<Separator orientation="vertical" class="hidden h-4! lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
 				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical" class="!h-4" />
+				<Separator orientation="vertical" class="h-4!" />
 				<span class="ml-0 text-sm capitalize">{title}</span>
 				<!-- {/if} -->
 			</div>
@@ -393,9 +408,42 @@
 				</TooltipProvider>
 				{#if code}
 					<PreviewInstallAdd {itemId} registryPath="r" />
+					<Button
+						variant="outline"
+						size="sm"
+						class="h-8 gap-1.5 px-3 text-xs shadow-none"
+						href={themeSetupHref}
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="size-3.5"
+							viewBox="0 0 24 24"
+							fill="none"
+							role="img"
+							color="currentColor"
+						>
+							<path
+								opacity="0.4"
+								d="M20.7906 9.15201C21.5969 10.5418 22 11.2366 22 12C22 12.7634 21.5969 13.4582 20.7906 14.848L18.8669 18.1638C18.0638 19.548 17.6623 20.2402 17.0019 20.6201C16.3416 21 15.5402 21 13.9373 21L10.0627 21C8.45982 21 7.6584 21 6.99807 20.6201C6.33774 20.2402 5.93619 19.548 5.13311 18.1638L3.20942 14.848C2.40314 13.4582 2 12.7634 2 12C2 11.2366 2.40314 10.5418 3.20942 9.152L5.13311 5.83621C5.93619 4.45196 6.33774 3.75984 6.99807 3.37992C7.6584 3 8.45982 3 10.0627 3L13.9373 3C15.5402 3 16.3416 3 17.0019 3.37992C17.6623 3.75984 18.0638 4.45197 18.8669 5.83622L20.7906 9.15201Z"
+								fill="currentColor"
+							></path>
+							<path
+								d="M20.7906 9.15201C21.5969 10.5418 22 11.2366 22 12C22 12.7634 21.5969 13.4582 20.7906 14.848L18.8669 18.1638C18.0638 19.548 17.6623 20.2402 17.0019 20.6201C16.3416 21 15.5402 21 13.9373 21L10.0627 21C8.45982 21 7.6584 21 6.99807 20.6201C6.33774 20.2402 5.93619 19.548 5.13311 18.1638L3.20942 14.848C2.40314 13.4582 2 12.7634 2 12C2 11.2366 2.40314 10.5418 3.20942 9.152L5.13311 5.83621C5.93619 4.45196 6.33774 3.75984 6.99807 3.37992C7.6584 3 8.45982 3 10.0627 3L13.9373 3C15.5402 3 16.3416 3 17.0019 3.37992C17.6623 3.75984 18.0638 4.45197 18.8669 5.83622L20.7906 9.15201Z"
+								stroke="currentColor"
+								stroke-width="1.5"
+							></path>
+							<path
+								d="M9 8L15 16"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+							></path>
+						</svg>
+						<span>Theme Setup</span>
+					</Button>
 
 					{#if !Array.isArray(code)}
-						<Separator class="!h-4" orientation="vertical" />
+						<Separator class="h-4!" orientation="vertical" />
 
 						<CopyButton text={code.code} />
 					{/if}
@@ -407,10 +455,10 @@
 	<div class="relative">
 		<div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
 			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-(--color-border)"
+				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"
 			></div>
 			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-(--color-border)"
+				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"
 			></div>
 		</div>
 
@@ -472,9 +520,17 @@
 						{/if}
 					</PaneGroup>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="theme-container relative h-full w-full">
-						<BlockComponent></BlockComponent>
-					</div>
+					{#if activePreviewTheme}
+						<div data-theme={activePreviewTheme}>
+							<div in:scale={{ start: 0.85 }} class="theme-container w-full overflow-hidden">
+								<BlockComponent></BlockComponent>
+							</div>
+						</div>
+					{:else}
+						<div in:scale={{ start: 0.85 }} class="w-full overflow-hidden">
+							<BlockComponent></BlockComponent>
+						</div>
+					{/if}
 				{/if}
 			</div>
 
