@@ -82,7 +82,7 @@
 			class="relative flex items-center overflow-hidden rounded-3xl *:w-full not-dark:bg-linear-to-b not-dark:via-muted @max-xl:-mx-6"
 		>
 			<div
-				aria-hidden
+				aria-hidden={true}
 				class={cn(
 					"absolute inset-0 grid grid-cols-4 mask-y-from-65% duration-300 *:bg-linear-to-r *:to-muted not-dark:opacity-50 dark:*:to-foreground/2",
 					feature === "seamless-integrations" &&
@@ -110,7 +110,7 @@
 </section>
 
 {#snippet IntegrationsIllustration()}
-	<div aria-hidden class="flex h-44 flex-col justify-between pt-8 **:fill-foreground">
+	<div aria-hidden={true} class="flex h-44 flex-col justify-between pt-8 **:fill-foreground">
 		<div class="relative flex h-10 items-center gap-12 px-6">
 			<div class="absolute inset-0 my-auto h-px bg-border"></div>
 
@@ -157,7 +157,7 @@
 {/snippet}
 
 {#snippet RealTimeIllustration()}
-	<div aria-hidden class="relative h-44 translate-y-6">
+	<div aria-hidden={true} class="relative h-44 translate-y-6">
 		<div class="absolute inset-0 mx-auto w-px bg-foreground/15"></div>
 		<div class="absolute -inset-x-16 top-6 aspect-square rounded-full border"></div>
 		<div
@@ -171,7 +171,7 @@
 {/snippet}
 
 {#snippet EnterpriseIllustration()}
-	<div aria-hidden class="relative flex size-44 items-center justify-center">
+	<div aria-hidden={true} class="relative flex size-44 items-center justify-center">
 		<Shield class="absolute inset-0 size-full stroke-[0.1px] opacity-15" />
 		<Shield
 			class="size-32 fill-card stroke-border stroke-[0.2px] drop-shadow-xl drop-shadow-black/3 dark:fill-foreground/10"
@@ -181,7 +181,7 @@
 
 {#snippet DeveloperIllustration()}
 	<div
-		aria-hidden
+		aria-hidden={true}
 		class="flex h-44 justify-between pt-12 pb-6 *:h-full *:w-px *:bg-foreground/15"
 	>
 		<div></div>

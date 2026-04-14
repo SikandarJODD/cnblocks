@@ -51,7 +51,7 @@
 						</Button>
 					</div>
 					<div
-						aria-hidden
+						aria-hidden={true}
 						class="relative mask-y-from-50% max-md:mx-auto max-md:*:scale-90"
 					>
 						{#each prompts as prompt}

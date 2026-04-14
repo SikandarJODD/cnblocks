@@ -22,7 +22,7 @@
 						Connect your favorite tools and services with just a few clicks.
 					</p>
 				</div>
-				<div aria-hidden class="flex h-44 flex-col justify-between pt-8 **:fill-foreground">
+				<div aria-hidden={true} class="flex h-44 flex-col justify-between pt-8 **:fill-foreground">
 					<div class="relative flex h-10 items-center gap-12 px-6">
 						<div class="absolute inset-0 my-auto h-px bg-border"></div>
 
@@ -74,7 +74,7 @@
 						Keep your data synchronized across all platforms automatically.
 					</p>
 				</div>
-				<div aria-hidden class="relative h-44 translate-y-6">
+				<div aria-hidden={true} class="relative h-44 translate-y-6">
 					<div class="absolute inset-0 mx-auto w-px bg-foreground/15"></div>
 					<div class="absolute -inset-x-16 top-6 aspect-square rounded-full border"></div>
 					<div
@@ -94,7 +94,7 @@
 					</p>
 				</div>
 				<div
-					aria-hidden
+					aria-hidden={true}
 					class="flex h-44 justify-between pt-12 pb-6 *:h-full *:w-px *:bg-foreground/15"
 				>
 					<div></div>

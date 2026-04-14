@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { Linkedin, Twitter, Youtube } from "$lib/components/icons";
 	import { Button } from "$lib/components/ui/veil/button";
-	import { Linkedin, Twitter, Youtube } from "@lucide/svelte";
 	import type { Component } from "svelte";
 
 	type SocialMedia = "twitter" | "linkedin" | "youtube";

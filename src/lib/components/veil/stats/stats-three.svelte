@@ -30,7 +30,7 @@
 	<div
 		class="pointer-events-none relative mx-auto max-w-4xl mask-radial-[50%_100%] mask-radial-from-65% mask-radial-at-bottom dark:opacity-50"
 	>
-		<div class="absolute inset-0 z-10 bg-primary mix-blend-overlay" />
+		<div class="absolute inset-0 z-10 bg-primary mix-blend-overlay"></div>
 		<img
 			src="https://images.unsplash.com/photo-1723307060937-b003478a2c03?q=80&w=2928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 			alt="globe with world map"

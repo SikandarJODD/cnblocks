@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from "$lib/components/ui/button/button.svelte";
 	import Rocket from "@lucide/svelte/icons/rocket";
 	import Menu from "@lucide/svelte/icons/menu";
@@ -9,7 +9,7 @@
 	import Swiper from "swiper";
 	import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 	// import Swiper styles
-	import "swiper/css";
+	import "swiper/css/bundle";
 	import { onMount } from "svelte";
 
 	onMount(() => {

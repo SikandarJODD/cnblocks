@@ -1,6 +1,7 @@
 <script lang="ts">
+	import { GitHub, Linkedin, Twitter } from "$lib/components/icons";
 	import Logo from "$lib/components/web/Logo.svelte";
-	import { Github, Linkedin, Twitter } from "@lucide/svelte";
+	// import { Github, Linkedin, Twitter } from "@lucide/svelte";
 	import type { Component } from "svelte";
 
 	type LinkItem = { label: string; href: string };
@@ -16,7 +17,7 @@
 
 	const social: SocialItem[] = [
 		{ icon: Twitter, href: "#", label: "Twitter" },
-		{ icon: Github, href: "#", label: "GitHub" },
+		{ icon: GitHub, href: "#", label: "GitHub" },
 		{ icon: Linkedin, href: "#", label: "LinkedIn" },
 	];
 

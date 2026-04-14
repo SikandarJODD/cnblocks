@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div
-		aria-hidden
+		aria-hidden={true}
 		class="pointer-events-none relative mask-radial-[50%_100%] mask-radial-from-65% mask-radial-at-bottom sm:absolute sm:right-0 sm:bottom-0 sm:left-1/2 sm:min-w-6xl dark:opacity-50"
 	>
 		<div class="absolute inset-0 z-10 bg-primary mix-blend-overlay"></div>
