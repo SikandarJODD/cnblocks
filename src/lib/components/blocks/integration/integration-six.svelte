@@ -9,7 +9,7 @@
 	<div class="bg-muted py-24 md:py-32 dark:bg-background">
 		<div class="mx-auto max-w-5xl px-6">
 			<div
-				class="mx-auto max-w-md [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6"
+				class="mx-auto max-w-md mask-[radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6"
 			>
 				<div
 					class="rounded-xl border bg-background px-6 pt-3 pb-12 shadow-xl dark:bg-muted/50"

@@ -115,7 +115,7 @@
 {#snippet CodeIllustration({ _class = "" }: { _class?: string })}
 	<div
 		class={cn(
-			"[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]",
+			"mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]",
 			_class
 		)}
 	>

@@ -204,7 +204,7 @@
 						/>
 					</div>
 					<Button type="submit" class="mt-3">
-						<span>Subscribe</span>
+						Subscribe
 					</Button>
 				</form>
 			</div>

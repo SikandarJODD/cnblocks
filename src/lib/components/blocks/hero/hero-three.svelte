@@ -92,20 +92,20 @@
 							class="relative mx-auto mt-32 max-w-2xl bg-radial from-primary/50 to-transparent to-55% text-left dark:from-primary/25"
 						>
 							<div
-								class="absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-[2rem] border border-border/50 bg-background [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] p-2 sm:-translate-x-6"
+								class="absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-4xl border border-border/50 bg-background mask-[linear-gradient(to_bottom,#000_50%,transparent_90%)] p-2 sm:-translate-x-6"
 							>
 								<div
-									class="relative h-96 overflow-hidden rounded-[1.5rem] border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50"
+									class="relative h-96 overflow-hidden rounded-3xl border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50"
 								></div>
 							</div>
 							<div
-								class="mx-auto w-80 translate-x-4 rounded-[2rem] border border-border/50 bg-muted [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] p-2 backdrop-blur-3xl sm:translate-x-8 dark:bg-background/50"
+								class="mx-auto w-80 translate-x-4 rounded-4xl border border-border/50 bg-muted mask-[linear-gradient(to_bottom,#000_50%,transparent_90%)] p-2 backdrop-blur-3xl sm:translate-x-8 dark:bg-background/50"
 							>
 								<div
-									class="space-y-2 overflow-hidden rounded-[1.5rem] border bg-background p-2 shadow-xl dark:bg-white/5 dark:shadow-black dark:backdrop-blur-3xl"
+									class="space-y-2 overflow-hidden rounded-3xl border bg-background p-2 shadow-xl dark:bg-white/5 dark:shadow-black dark:backdrop-blur-3xl"
 								>
 									<!-- App Component -->
-									<div class="relative space-y-3 rounded-[1rem] bg-white/5 p-4">
+									<div class="relative space-y-3 rounded-2xl bg-white/5 p-4">
 										<div class="flex items-center gap-1.5 text-orange-400">
 											<svg
 												class="size-5"
@@ -146,7 +146,7 @@
 														>
 													</div>
 													<div
-														class="flex h-5 items-center rounded bg-gradient-to-l from-emerald-400 to-indigo-600 px-2 text-xs text-white"
+														class="flex h-5 items-center rounded bg-linear-to-l from-emerald-400 to-indigo-600 px-2 text-xs text-white"
 													>
 														2024
 													</div>
@@ -172,12 +172,12 @@
 									</div>
 									<!-- App Component End -->
 									<div
-										class="rounded-[1rem] bg-muted p-4 pb-16 dark:bg-white/5"
+										class="rounded-2xl bg-muted p-4 pb-16 dark:bg-white/5"
 									></div>
 								</div>
 							</div>
 							<div
-								class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] [background-size:16px_16px] mix-blend-overlay dark:opacity-5"
+								class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] bg-size-[16px_16px] mix-blend-overlay dark:opacity-5"
 							></div>
 						</div>
 					</div>

@@ -60,14 +60,14 @@
 					aria-valuenow={segment.value}
 					aria-valuemin={0}
 					aria-valuemax={total * 1000}
-				/>
+				></div>
 			{/each}
 		</div>
 
 		<div class="flex flex-wrap items-center gap-x-8 gap-y-2">
 			{#each segments as segment (segment.label)}
 				<div class="flex items-center gap-2">
-					<span class={cn("size-3 shrink-0 rounded", segment.color)} aria-hidden="true" />
+					<span class={cn("size-3 shrink-0 rounded", segment.color)} aria-hidden="true" ></span>
 					<span class="text-sm text-muted-foreground">
 						{segment.label}
 					</span>
@@ -78,7 +78,7 @@
 				</div>
 			{/each}
 			<div class="flex items-center gap-2">
-				<span class="size-3 shrink-0 rounded-sm bg-muted" aria-hidden="true" />
+				<span class="size-3 shrink-0 rounded-sm bg-muted" aria-hidden="true" ></span>
 				<span class="text-sm text-muted-foreground">Free</span>
 				<span class="text-sm text-muted-foreground tabular-nums">
 					{Math.round(total * 1000 - used)}

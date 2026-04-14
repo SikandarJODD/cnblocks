@@ -28,7 +28,7 @@
 		autoplayDuration = 5000,
 	}: Props = $props();
 
-	let sliderXPercent = new Spring(initialSliderPercentage, { stiffness: 0.15 });
+	let sliderXPercent = $derived(new Spring(initialSliderPercentage, { stiffness: 0.15 }));
 	let isDragging = false;
 	let isMouseOver = false;
 	let sliderRef: HTMLElement | null = $state(null);

@@ -88,7 +88,7 @@
 		TooltipTrigger,
 	} from "$lib/components/ui/tooltip";
 
-	let showIframeComp = $state(previewMode === "iframe");
+	let showIframeComp = $derived(previewMode === "iframe");
 	let forcesIframe = $derived(previewMode === "iframe");
 	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
 	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);

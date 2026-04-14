@@ -54,7 +54,7 @@
 			</div>
 
 			<div class="flex-1">
-				<Accordion type="single" collapsible>
+				<Accordion type="single" >
 					{#each faqItems as item (item.id)}
 						<AccordionItem value={item.id} class="border-dashed">
 							<AccordionTrigger

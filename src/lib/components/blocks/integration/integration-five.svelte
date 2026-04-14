@@ -10,7 +10,7 @@
 	<div class="py-24 md:py-32">
 		<div class="mx-auto max-w-5xl px-6">
 			<div
-				class="group relative mx-auto flex aspect-16/10 max-w-[22rem] items-center justify-between sm:max-w-sm"
+				class="group relative mx-auto flex aspect-16/10 max-w-88 items-center justify-between sm:max-w-sm"
 			>
 				<div
 					role="presentation"

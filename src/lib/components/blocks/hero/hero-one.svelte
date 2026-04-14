@@ -116,7 +116,7 @@
 								class="border bg-foreground/10 p-0.5"
 								style="border-radius: calc(0.5rem + 0.125rem + 4px);"
 							>
-								<Button href="#link" size="lg" class="rounded-xl px-5 text-base">
+								<Button href="/" size="lg" class="rounded-xl px-5 text-base">
 									<span class="text-nowrap">Start Building</span>
 								</Button>
 							</div>

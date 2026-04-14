@@ -74,7 +74,7 @@
 					</a>
 
 					<h1
-						class="mt-8 text-4xl font-semibold md:text-5xl xl:text-5xl xl:[line-height:1.125]"
+						class="mt-8 text-4xl font-semibold md:text-5xl xl:text-5xl xl:leading-[1.125]"
 					>
 						Tame the Wild West <br /> of Frontend Development
 					</h1>
@@ -96,10 +96,10 @@
 				</div>
 				<div class="x-auto relative mx-auto mt-8 max-w-lg sm:mt-12">
 					<div
-						class="absolute inset-0 -top-8 left-1/2 -z-20 h-56 w-full -translate-x-1/2 [background-image:linear-gradient(to_bottom,transparent_98%,theme(colors.gray.200/75%)_98%),linear-gradient(to_right,transparent_94%,_theme(colors.gray.200/75%)_94%)] [background-size:16px_35px] [mask:radial-gradient(black,transparent_95%)] dark:opacity-10"
+						class="absolute inset-0 -top-8 left-1/2 -z-20 h-56 w-full -translate-x-1/2 bg-[linear-gradient(to_bottom,transparent_98%,--theme(--color-gray-200/75%)_98%),linear-gradient(to_right,transparent_94%,--theme(--color-gray-200/75%)_94%)] bg-size-[16px_35px] [mask:radial-gradient(black,transparent_95%)] dark:opacity-10"
 					></div>
 					<div
-						class="absolute inset-x-0 top-12 -z-[1] mx-auto h-1/3 w-2/3 rounded-full bg-blue-300 blur-3xl dark:bg-white/20"
+						class="absolute inset-x-0 top-12 -z-1 mx-auto h-1/3 w-2/3 rounded-full bg-blue-300 blur-3xl dark:bg-white/20"
 					></div>
 
 					<div class="swiper">

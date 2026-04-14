@@ -47,7 +47,7 @@
 						<div
 							class="{colorClasses[item.color]} h-1.5 rounded-xs"
 							style="width: {item.percentage}%"
-						/>
+						></div>
 					{/each}
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 						<span
 							class="{colorClasses[item.color]} size-2.5 rounded-xs"
 							aria-hidden="true"
-						/>
+						></span>
 						<span class="text-foreground">{item.label}</span>
 						<span class="text-muted-foreground">
 							(${item.amount} / {item.percentage}%)

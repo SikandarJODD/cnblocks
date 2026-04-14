@@ -77,16 +77,12 @@
 							class="border bg-foreground/10 p-0.5"
 							style="border-radius: calc(var(--radius) + 4px + 0.125rem);"
 						>
-							<Button size="lg" class="rounded-xl px-5 text-base">
-								<a href="#a">
-									<span class="text-nowrap">Start Building</span>
-								</a>
+							<Button href="/" size="lg" class="rounded-xl px-5 text-base">
+								<span class="text-nowrap">Start Building</span>
 							</Button>
 						</div>
-						<Button size="lg" variant="ghost" class="h-10.5 rounded-xl px-5 text-base">
-							<a href="#a">
-								<span class="text-nowrap">Request a demo</span>
-							</a>
+						<Button href="/" size="lg" variant="ghost" class="h-10.5 rounded-xl px-5 text-base">
+							<span class="text-nowrap">Request a demo</span>
 						</Button>
 					</div>
 				</div>

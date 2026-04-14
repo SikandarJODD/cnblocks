@@ -22,16 +22,16 @@
 		<div
 			class={[
 				"absolute z-10 h-px bg-linear-to-r to-muted-foreground/25",
-				position === "left-top" && "top-1/2 left-full w-[130px] origin-left rotate-[25deg]",
-				position === "left-middle" && "top-1/2 left-full w-[120px] origin-left",
+				position === "left-top" && "top-1/2 left-full w-32.5 origin-left rotate-25",
+				position === "left-middle" && "top-1/2 left-full w-30 origin-left",
 				position === "left-bottom" &&
-					"top-1/2 left-full w-[130px] origin-left rotate-[-25deg]",
+					"top-1/2 left-full w-32.5 origin-left rotate-[-25deg]",
 				position === "right-top" &&
-					"top-1/2 right-full w-[130px] origin-right rotate-[-25deg] bg-linear-to-l",
+					"top-1/2 right-full w-32.5 origin-right rotate-[-25deg] bg-linear-to-l",
 				position === "right-middle" &&
-					"top-1/2 right-full w-[120px] origin-right bg-linear-to-l",
+					"top-1/2 right-full w-30 origin-right bg-linear-to-l",
 				position === "right-bottom" &&
-					"top-1/2 right-full w-[130px] origin-right rotate-[25deg] bg-linear-to-l",
+					"top-1/2 right-full w-32.5 origin-right rotate-25 bg-linear-to-l",
 			]}
 		></div>
 	{/if}

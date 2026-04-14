@@ -137,8 +137,8 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.j
 					class="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
 				>
 					<div
-						class={`pointer-events-none absolute inset-0 bg-gradient-to-br ${card.accent}`}
-					/>
+						class={`pointer-events-none absolute inset-0 bg-linear-to-br ${card.accent}`}
+					></div>
 					<div class="relative z-10 space-y-4">
 						<span
 							class="inline-flex rounded-full border border-border/80 bg-background/80 px-2.5 py-1 text-xs font-medium text-muted-foreground"

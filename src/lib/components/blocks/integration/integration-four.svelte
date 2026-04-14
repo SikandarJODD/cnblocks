@@ -63,7 +63,7 @@
 				</div>
 				<div
 					role="presentation"
-					class="absolute inset-1/3 bg-[radial-gradient(var(--dots-color)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] [background-size:16px_16px] opacity-50 [--dots-color:black] dark:[--dots-color:white]"
+					class="absolute inset-1/3 bg-[radial-gradient(var(--dots-color)_1px,transparent_1px)] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] bg-size-[16px_16px] opacity-50 [--dots-color:black] dark:[--dots-color:white]"
 				></div>
 
 				<div class="space-y-6">

@@ -4,7 +4,6 @@
 	import {
 		AudioLines,
 		ChevronRight,
-		Github,
 		ImageIcon,
 		Lightbulb,
 		Mic2,
@@ -13,6 +12,7 @@
 		ShoppingBag,
 		Telescope,
 	} from "@lucide/svelte";
+	import Github from "$lib/components/logos/github.svelte";
 </script>
 
 <HeaderFour />
@@ -32,7 +32,7 @@
 			</div>
 			<div class="relative z-10 mx-auto w-full max-w-5xl px-6">
 				<div
-					aria-hidden
+					aria-hidden={true}
 					class="mb-6 ml-auto max-w-3xl min-w-2xl scale-90 mask-radial-[75%_100%] mask-radial-from-65% mask-radial-to-90% mask-radial-at-left py-12 pl-6 perspective-near sm:mb-12 md:pl-12 lg:mb-20"
 				>
 					<div
@@ -49,7 +49,7 @@
 							</div>
 							<span
 								class="mx-3 my-0.5 block h-px bg-[linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-size-[6px_1px] bg-bottom bg-repeat-x opacity-30 dark:opacity-15"
-							/>
+							></span>
 							<div
 								class="flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm hover:bg-muted [&>svg]:size-4 [&>svg]:opacity-65"
 							>

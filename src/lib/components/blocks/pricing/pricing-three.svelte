@@ -46,8 +46,8 @@
 					<span class="my-3 block text-2xl font-semibold">$0 / mo</span>
 
 					<CardDescription class="text-sm">Per editor</CardDescription>
-					<Button variant="outline" class="mt-4 w-full">
-						<a href="">Get Started</a>
+					<Button href="/" variant="outline" class="mt-4 w-full">
+						Get Started
 					</Button>
 				</CardHeader>
 
@@ -78,8 +78,8 @@
 
 					<CardDescription class="text-sm">Per editor</CardDescription>
 
-					<Button class="mt-4 w-full">
-						<a href="">Get Started</a>
+					<Button href="/" class="mt-4 w-full">
+						Get Started
 					</Button>
 				</CardHeader>
 
@@ -105,8 +105,8 @@
 
 					<CardDescription class="text-sm">Per editor</CardDescription>
 
-					<Button variant="outline" class="mt-4 w-full">
-						<a href="">Get Started</a>
+					<Button href="/" variant="outline" class="mt-4 w-full">
+						Get Started
 					</Button>
 				</CardHeader>
 
