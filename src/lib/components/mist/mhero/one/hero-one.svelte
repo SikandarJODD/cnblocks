@@ -25,7 +25,7 @@
 								<span class="text-nowrap">Get Started</span>
 								<ChevronRight class="opacity-50" />
 							</Button>
-							<Button href="#" size="lg" variant="outline" class="pl-5">
+							<Button href="/" size="lg" variant="outline" class="pl-5">
 								<CirclePlay class="fill-primary/25 stroke-primary" />
 								<span class="text-nowrap">Watch video</span>
 							</Button>

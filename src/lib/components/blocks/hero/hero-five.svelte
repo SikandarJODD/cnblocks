@@ -64,7 +64,7 @@
 					<div
 						class="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start"
 					>
-						<Button size="lg" href="#" class="h-12 rounded-full pr-3 pl-5 text-base">
+						<Button size="lg" href="/" class="h-12 rounded-full pr-3 pl-5 text-base">
 							<span class="text-nowrap">Start Building</span>
 							<ChevronRight class="ml-1" />
 						</Button>
@@ -245,16 +245,16 @@
 								variant="outline"
 								size="sm"
 								class={cn(isScrolled && "lg:hidden")}
-								href="#"
+								href="/"
 							>
 								Login
 							</Button>
-							<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+							<Button href="/" size="sm" class={cn(isScrolled && "lg:hidden")}
 								>Sign Up</Button
 							>
 							<Button
 								size="sm"
-								href="#"
+								href="/"
 								class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
 							>
 								Get Strated

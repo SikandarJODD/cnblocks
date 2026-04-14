@@ -35,7 +35,7 @@
 			<div class="space-y-0">
 				<div class="mb-2 flex items-center justify-between">
 					<Label for="password">Password</Label>
-					<a href="#" class="text-sm text-primary hover:underline"> Reset password </a>
+					<a href="/" class="text-sm text-primary hover:underline"> Reset password </a>
 				</div>
 				<div class="relative">
 					<Input
@@ -76,7 +76,7 @@
 		<CardFooter class="flex justify-center border-t py-4!">
 			<p class="text-center text-sm text-muted-foreground">
 				New to Acme?{" "}
-				<a href="#" class="text-primary hover:underline"> Sign up </a>
+				<a href="/" class="text-primary hover:underline"> Sign up </a>
 			</p>
 		</CardFooter>
 	</Card>

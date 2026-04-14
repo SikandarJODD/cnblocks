@@ -43,7 +43,7 @@
 						<p class="text-sm text-muted-foreground">Per editor</p>
 					</div>
 
-					<Button href="#" variant="outline" class="w-full">Get Started</Button>
+					<Button href="/" variant="outline" class="w-full">Get Started</Button>
 
 					<hr class="border-dashed" />
 
@@ -69,7 +69,7 @@
 							<p class="text-sm text-muted-foreground">Per editor</p>
 						</div>
 
-						<Button href="#" class="w-full">Get Started</Button>
+						<Button href="/" class="w-full">Get Started</Button>
 					</div>
 
 					<div>

@@ -42,7 +42,7 @@
 <div class="mx-auto px-4 py-20">
 	<h2
 		id="benefits-title"
-		class="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-3xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
+		class="inline-block bg-linear-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-3xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
 	>
 		What&rsquo;s in for you
 	</h2>

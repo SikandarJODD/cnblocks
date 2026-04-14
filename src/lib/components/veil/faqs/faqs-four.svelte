@@ -75,7 +75,7 @@
 
 		<p class="mt-8 text-center text-sm text-muted-foreground">
 			Have another question?
-			<a href="#" class="font-medium text-primary hover:underline">Get in touch</a>
+			<a href="/" class="font-medium text-primary hover:underline">Get in touch</a>
 		</p>
 	</div>
 </section>

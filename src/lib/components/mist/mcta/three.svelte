@@ -14,11 +14,11 @@
 				Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.
 			</p>
 			<div class="mt-8 flex gap-3">
-				<Button variant="mdefault" href="#" class="pr-2">
+				<Button variant="mdefault" href="/" class="pr-2">
 					Try Mist for Free
 					<ChevronRight strokeWidth={2.5} class="size-3.5! opacity-50" />
 				</Button>
-				<Button href="#" variant="outline" class="pl-2.5">
+				<Button href="/" variant="outline" class="pl-2.5">
 					<Calendar class="!size-3.5 opacity-50" strokeWidth={2.5} />
 					Request a Demo
 				</Button>

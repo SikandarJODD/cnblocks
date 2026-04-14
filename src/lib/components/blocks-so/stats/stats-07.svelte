@@ -50,7 +50,7 @@
 			You are currently on the{" "}
 			<span class="font-medium text-foreground">starter plan</span>.{" "}
 			<a
-				href="#"
+				href="/"
 				class="inline-flex items-center gap-1 text-primary hover:underline hover:underline-offset-4"
 			>
 				View other plans

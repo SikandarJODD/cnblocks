@@ -90,7 +90,7 @@
 			</a>
 			<div class="flex gap-3">
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Threads"
@@ -115,7 +115,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Instagram"
@@ -135,7 +135,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="TikTok"
@@ -211,7 +211,7 @@
 		</div>
 		<div class="mt-16 flex items-center justify-between rounded-md bg-muted p-4 px-6 py-3">
 			<span class="text-title">&copy; tailus 2021 - Present</span>
-			<a href="#" class="text-sm text-muted-foreground hover:text-primary"> Licence </a>
+			<a href="/" class="text-sm text-muted-foreground hover:text-primary"> Licence </a>
 		</div>
 	</div>
 </footer>

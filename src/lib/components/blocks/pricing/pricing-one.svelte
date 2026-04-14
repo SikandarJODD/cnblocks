@@ -62,7 +62,7 @@
 				</CardContent>
 
 				<CardFooter class="mt-auto">
-					<Button href="#" variant="outline" class="w-full">Get Started</Button>
+					<Button href="/" variant="outline" class="w-full">Get Started</Button>
 				</CardFooter>
 			</Card>
 

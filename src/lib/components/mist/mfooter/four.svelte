@@ -31,7 +31,7 @@
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="flex flex-wrap justify-between gap-12">
 			<div class="order-last flex items-center gap-3 md:order-first">
-				<a href="#" aria-label="go home">
+				<a href="/" aria-label="go home">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="22"

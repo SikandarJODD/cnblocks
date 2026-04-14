@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.10.1",
-		"@lucide/svelte": "^0.561.0",
+		"@lucide/svelte": "^1.8.0",
 		"@shikijs/langs": "^4.0.2",
 		"@shikijs/themes": "^4.0.2",
 		"@sveltejs/kit": "^2.57.1",
@@ -44,9 +44,9 @@
 		"tailwind-merge": "^3.3.0",
 		"tailwind-variants": "^3.2.2",
 		"tailwindcss": "^4.1.8",
-		"typescript": "^5.8.3",
+		"typescript": "^6.0.2",
 		"velite": "^0.3.1",
-		"vite": "^6.0.0"
+		"vite": "^8.0.8"
 	},
 	"dependencies": {
 		"@changesets/cli": "^2.29.4",

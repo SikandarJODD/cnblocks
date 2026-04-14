@@ -9,8 +9,8 @@
 			<p class="mt-4">Libero sapiente aliquam quibusdam aspernatur.</p>
 
 			<div class="mt-12 flex flex-wrap justify-center gap-4">
-				<Button href="#" size="lg">Get Started</Button>
-				<Button href="#" size="lg" variant="outline">Book Demo</Button>
+				<Button href="/" size="lg">Get Started</Button>
+				<Button href="/" size="lg" variant="outline">Book Demo</Button>
 			</div>
 		</div>
 	</div>

@@ -149,7 +149,7 @@
 		<div class="rounded-(--radius) border bg-muted p-3">
 			<p class="text-center text-sm text-accent-foreground">
 				Have an account ?
-				<Button href="#" variant="link" class="px-2">Sign in</Button>
+				<Button href="/" variant="link" class="px-2">Sign in</Button>
 			</p>
 		</div>
 	</form>

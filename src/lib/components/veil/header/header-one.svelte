@@ -95,17 +95,17 @@
 							variant="ghost"
 							size="sm"
 							class={cn(isScrolled && "lg:hidden")}
-							href="#"
+							href="/"
 						>
 							<span>Login</span>
 						</Button>
-						<Button size="sm" class={cn(isScrolled && "lg:hidden")} href="#">
+						<Button size="sm" class={cn(isScrolled && "lg:hidden")} href="/">
 							<span>Sign Up</span>
 						</Button>
 						<Button
 							size="sm"
 							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-							href="#"
+							href="/"
 						>
 							<span>Get Started</span>
 						</Button>

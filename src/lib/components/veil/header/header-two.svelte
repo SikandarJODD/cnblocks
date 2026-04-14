@@ -117,7 +117,7 @@
 									</li>
 								{/each}
 							</ul>
-							<Button size="sm" class="mx-2 gap-1 pr-1" href="#">
+							<Button size="sm" class="mx-2 gap-1 pr-1" href="/">
 								<span>Get started</span>
 								<ChevronRight class="opacity-50" />
 							</Button>
@@ -150,10 +150,10 @@
 							isScrolled && "lg:opacity-0 lg:blur-[4px]"
 						)}
 					>
-						<Button variant="ghost" size="sm" href="#">
+						<Button variant="ghost" size="sm" href="/">
 							<span>Login</span>
 						</Button>
-						<Button size="sm" href="#">
+						<Button size="sm" href="/">
 							<span>Sign Up</span>
 						</Button>
 					</div>

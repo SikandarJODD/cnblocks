@@ -66,7 +66,7 @@
 		</Accordion>
 		<p class="mt-8 text-center text-sm text-muted-foreground">
 			Can't find what you're looking for?
-			<a href="#" class="font-medium text-primary hover:underline"> Contact support </a>
+			<a href="/" class="font-medium text-primary hover:underline"> Contact support </a>
 		</p>
 	</div>
 </section>

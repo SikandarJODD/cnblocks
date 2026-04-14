@@ -85,7 +85,7 @@
 					Connect seamlessly with popular platforms and services to enhance your workflow.
 				</p>
 
-				<Button href="#" variant="outline" size="sm">Get started</Button>
+				<Button href="/" variant="outline" size="sm">Get started</Button>
 			</div>
 		</div>
 	</div>

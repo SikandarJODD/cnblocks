@@ -23,7 +23,7 @@
 				<p class="mt-4 mb-6 text-balance text-muted-foreground">
 					Everything you need to build, connect, and scale your integrations effortlessly.
 				</p>
-				<Button href="#" variant="secondary" size="sm" class="gap-1 pr-1.5">
+				<Button href="/" variant="secondary" size="sm" class="gap-1 pr-1.5">
 					Get started
 					<ChevronRight />
 				</Button>

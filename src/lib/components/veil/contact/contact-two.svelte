@@ -115,7 +115,7 @@
 
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			By submitting, you agree to our
-			<a href="#" class="text-foreground underline">Privacy Policy</a>
+			<a href="/" class="text-foreground underline">Privacy Policy</a>
 		</p>
 	</div>
 </section>

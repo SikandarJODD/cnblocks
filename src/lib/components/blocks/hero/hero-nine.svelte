@@ -68,7 +68,7 @@
 						vitae, excepturi ducimus iste provident dolores.
 					</p>
 
-					<Button href="#" size="lg">
+					<Button href="/" size="lg">
 						<span class="btn-label">Start Building</span>
 					</Button>
 				</div>

@@ -70,7 +70,7 @@
 
 		<p class="mt-6 text-xs text-muted-foreground">
 			Configure limits in{" "}
-			<a href="#" class="text-emerald-600 hover:underline dark:text-emerald-400">
+			<a href="/" class="text-emerald-600 hover:underline dark:text-emerald-400">
 				resource settings.
 			</a>
 		</p>

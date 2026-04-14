@@ -12,8 +12,8 @@
 					</h2>
 				</div>
 				<div class="flex justify-end gap-3">
-					<Button href="#" variant="outline" size="lg">Get a Demo</Button>
-					<Button href="#" size="lg" variant="mdefault">Get Started</Button>
+					<Button href="/" variant="outline" size="lg">Get a Demo</Button>
+					<Button href="/" size="lg" variant="mdefault">Get Started</Button>
 				</div>
 			</div>
 		</div>

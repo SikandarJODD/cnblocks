@@ -58,7 +58,7 @@
 				<div>
 					<div class="flex items-center justify-between">
 						<Label for="password">Password</Label>
-						<a href="#" class="text-sm text-primary hover:underline">
+						<a href="/" class="text-sm text-primary hover:underline">
 							Forgot Password?
 						</a>
 					</div>
@@ -104,7 +104,7 @@
 
 			<div class="text-center text-sm">
 				No account?{" "}
-				<a href="#" class="font-medium text-primary hover:underline"> Create an account </a>
+				<a href="/" class="font-medium text-primary hover:underline"> Create an account </a>
 			</div>
 		</div>
 	</div>

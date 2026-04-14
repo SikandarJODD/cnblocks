@@ -68,7 +68,7 @@
 		</Card>
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			Still have questions?
-			<a href="#" class="font-medium text-primary hover:underline"> Contact support </a>
+			<a href="/" class="font-medium text-primary hover:underline"> Contact support </a>
 		</p>
 	</div>
 </section>

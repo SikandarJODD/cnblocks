@@ -41,7 +41,7 @@
 					<div class="flex items-center justify-between">
 						<Label for="password" class="text-sm">Password</Label>
 						<Button
-							href="#"
+							href="/"
 							variant="link"
 							class="h-auto p-0 text-xs text-muted-foreground hover:text-foreground"
 						>
@@ -102,7 +102,7 @@
 
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			Don't have an account?
-			<Button href="#" variant="link" class="px-1 font-medium text-primary">Sign up</Button>
+			<Button href="/" variant="link" class="px-1 font-medium text-primary">Sign up</Button>
 		</p>
 	</div>
 </section>

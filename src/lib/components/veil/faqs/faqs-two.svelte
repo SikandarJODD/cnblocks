@@ -49,7 +49,7 @@
 				<p class="mt-3 text-sm text-muted-foreground">Your questions answered</p>
 				<p class="mt-6 hidden text-sm text-muted-foreground @xl:block">
 					Need more help?
-					<a href="#" class="font-medium text-primary hover:underline"> Contact us </a>
+					<a href="/" class="font-medium text-primary hover:underline"> Contact us </a>
 				</p>
 			</div>
 
@@ -70,7 +70,7 @@
 				</Accordion>
 				<p class="mt-6 text-sm text-muted-foreground @xl:hidden">
 					Need more help?
-					<a href="#" class="font-medium text-primary hover:underline"> Contact us </a>
+					<a href="/" class="font-medium text-primary hover:underline"> Contact us </a>
 				</p>
 			</div>
 		</div>
