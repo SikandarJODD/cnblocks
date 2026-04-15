@@ -53,13 +53,12 @@
 	};
 </script>
 
-<Sidebar.Root bind:ref variant="inset" class="pt-16" {...restProps}>
+<Sidebar.Root bind:ref class="md:mt-16 h-[calc(100vh-4rem)] [--sidebar-width:15rem]" {...restProps}>
 	<Sidebar.Content class="overflow-hidden">
 		<ScrollArea class="h-full pr-1" orientation="vertical" scrollbarYClasses="hidden">
 			<div class="space-y-2 pb-3">
 				<NavMain label="Guide" items={data.guide} />
 				<NavMain label="Theme Setup" items={data.themeSetup} />
-				<!-- <NavProjects label="Templates" projects={data.templates} /> -->
 				<NavProjects label="Resources & Sponsors" projects={data.resources} />
 			</div>
 		</ScrollArea>

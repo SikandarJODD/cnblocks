@@ -31,16 +31,12 @@
 	title="Introduction"
 	description="Everything you need to start using Svelte Shadcn Blocks."
 >
-	<section class="space-y-4">
+	<section>
 		<H2 id="overview">Overview</H2>
-		<Paragraph>
+		<Paragraph class='mt-1'>
 			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong
 				>Svelte 5</Strong
-			>, shadcn-svelte primitives, and Tailwind CSS v4.
-		</Paragraph>
-		<Paragraph>
-			The new docs v2 focuses on better navigation, predictable route structure, and
-			consistent content composition through markdown components.
+			>, shadcn-svelte primitives, and Tailwind CSS
 		</Paragraph>
 	</section>
 
@@ -74,26 +70,11 @@
 		</Table>
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="quick-start">Quick Start</H2>
-		<UnorderedList>
-			<ListItem>Go to the installation guide and set up base dependencies.</ListItem>
-			<ListItem>Pick your preferred theme setup flow (Mist or Veil).</ListItem>
-			<ListItem>Use MCP docs if you want AI-assisted block installation workflows.</ListItem>
-		</UnorderedList>
-		<Paragraph>
+		<Paragraph class="mt-1">
 			Start with <Link href="/v2-docs/installation">Installation</Link> and continue with the theme
 			setup that matches your project.
 		</Paragraph>
 	</section>
-
-	<!-- <section class="space-y-4">
-		<H2 id="documentation-map">Documentation Map</H2>
-		<H3 id="guide">Guide</H3>
-		<Paragraph>Introduction and installation paths for first-time setup.</Paragraph>
-		<H3 id="theme-setup">Theme Setup</H3>
-		<Paragraph>Dedicated setup pages for Mist and Veil themes.</Paragraph>
-		<H3 id="resources">Resources</H3>
-		<Paragraph>Reference pages like MCP integration and sponsor/community links.</Paragraph>
-	</section> -->
 </DocsPageShell>

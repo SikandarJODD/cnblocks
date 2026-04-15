@@ -411,24 +411,9 @@ export {
 	title="Veil Theme Setup"
 	description="Apply Veil theme tokens and update button, card, input, and textarea primitives for consistent UI styling."
 >
-	<!-- <section class="space-y-4">
-		<H2 id="overview">Overview</H2>
-		<Paragraph>
-			Veil is a warm, earthy variant for minimal and elegant product interfaces. To make Veil
-			blocks render correctly, keep theme variables in place and update these four UI
-			primitives:
-			<code>Button</code>, <code>Card</code>, <code>Input</code>, and <code>Textarea</code>.
-		</Paragraph>
-		<UnorderedList>
-			<ListItem>Use this page as the source for Veil-specific primitive overrides.</ListItem>
-			<ListItem>Keep import paths under <code>$lib/components/ui/veil/*</code>.</ListItem>
-			<ListItem>Apply theme tokens globally using <code>.theme-container</code>.</ListItem>
-		</UnorderedList>
-	</section> -->
-
-	<section class="space-y-4">
+	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
-		<Paragraph class="text-muted-foreground">
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			Add the Veil tokens to your global stylesheet (for example <code>app.css</code> or
 			<code>globals.css</code>) so all Veil primitives resolve color, border, focus ring, and
 			typography consistently.
@@ -525,9 +510,9 @@ export {
 		</Paragraph>
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="apply-theme">Apply Theme</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Ensure your root body includes <code>theme-container</code> so the selected theme scope is
 			applied across the application.
 		</Paragraph>
@@ -540,9 +525,9 @@ export {
 		/>
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="required-components">Required Components</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			After theme tokens are configured, update these four Veil primitives in your app.
 		</Paragraph>
 		<Table
@@ -581,9 +566,9 @@ export {
 		</Table>
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="button-component">Button Component</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
 		</Paragraph>
 		<H3 id="button-usage">Usage</H3>
@@ -602,9 +587,9 @@ export {
 		<MultipleCode code={buttonSourceCode} />
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="card-component">Card Component</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil card supports four variants: <code>default</code>, <code>soft</code>,
 			<code>mixed</code>, and <code>outline</code>, with composition primitives for
 			header/content/footer layouts.
@@ -637,9 +622,9 @@ export {
 		<MultipleCode code={cardSourceCode} />
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="input-component">Input Component</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil input covers standard and file fields while preserving unified focus and invalid
 			states.
 		</Paragraph>
@@ -659,9 +644,9 @@ export {
 		<MultipleCode code={inputSourceCode} />
 	</section>
 
-	<section class="space-y-4">
+	<section >
 		<H2 id="textarea-component">Textarea Component</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil textarea shares input tokens, adds multiline sizing, and keeps focus/validation
 			states aligned with other form controls.
 		</Paragraph>
@@ -680,47 +665,5 @@ export {
 		</div>
 		<H3 id="textarea-source">Source</H3>
 		<MultipleCode code={textareaSourceCode} />
-	</section>
-
-	<!-- <section class="space-y-4">
-		<H2 id="verification">Verification</H2>
-		<Paragraph>Use this checklist after setup:</Paragraph>
-		<UnorderedList>
-			<ListItem
-				><code>data-theme="veil"</code> is applied where theme switching is controlled.</ListItem
-			>
-			<ListItem><code>theme-container</code> is present on the root body wrapper.</ListItem>
-			<ListItem
-				>Imports resolve from <code>$lib/components/ui/veil/*</code> without type errors.</ListItem
-			>
-			<ListItem
-				>Button/Card variants and Input/Textarea focus states render correctly in light and
-				dark mode.</ListItem
-			>
-		</UnorderedList>
-	</section> -->
-
-	<!-- <section class="space-y-4">
-		<H2 id="next-steps">Next Steps</H2>
-		<Paragraph>
-			If base setup is not complete, follow <Link href="/v2-docs/installation"
-				>Installation</Link
-			>
-			first. After Veil primitives are configured, continue to <Link href="/v2-docs/mcp"
-			>MCP Server</Link
-			> for AI-assisted discovery and install workflows.
-		</Paragraph>
-	</section> -->
-
-	<section class="space-y-4">
-		<H2 id="setup-complete">Setup Complete</H2>
-		<Paragraph>
-			Veil theme setup is now complete. Your app is ready to start using Veil components and
-			build warm, elegant product interfaces.
-		</Paragraph>
-		<Paragraph>
-			Use primitives from <code>$lib/components/ui/veil/*</code> or explore the
-			<Link href="/veil">Veil components</Link> collection to start composing screens.
-		</Paragraph>
 	</section>
 </DocsPageShell>

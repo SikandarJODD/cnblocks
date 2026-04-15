@@ -85,7 +85,7 @@
 		const html = hl.codeToHtml(code, {
 			lang: lang,
 			themes: {
-				dark: "vesper",
+				dark: "github-dark",
 				light: "github-light",
 			},
 			transformers: [

@@ -17,17 +17,12 @@
 					class="relative mx-auto -mb-px flex h-12 snap-x snap-proximity scroll-px-6 items-center gap-6 overflow-x-auto overflow-y-hidden px-6 lg:scroll-px-2 lg:gap-4"
 				>
 					{#each all_veils_category_block as category}
-						<li
-							class={cn(
-								"flex h-full snap-start items-center border-b border-b-transparent",
-								isActive(category.href) && "border-primary"
-							)}
-						>
+						<li class={cn("flex h-full snap-start items-center ")}>
 							<a
 								href={category.href}
 								class={cn(
-									isActive(category.href) && "text-primary!",
-									"flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 transition-all duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground"
+									"flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 transition-all duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground",
+									isActive(category.href) && "bg-muted text-primary!"
 								)}
 							>
 								<span class="block w-max text-nowrap capitalize"

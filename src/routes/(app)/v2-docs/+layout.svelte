@@ -36,55 +36,44 @@
 
 <Sidebar.Provider>
 	<DocsSidebar />
-	<Sidebar.Inset class="mr-5! min-h-[calc(100svh-4rem)] border-r lg:h-[calc(100vh-10rem)]!">
-		<!-- <header class="flex h-14 items-center border-b px-4 lg:hidden">
-			<Sidebar.Trigger />
-			<span class="ml-3 text-sm font-medium text-muted-foreground">Documentation</span>
-		</header> -->
 
-		<!-- <div class="flex min-h-0 flex-1"> -->
-		<div class={cn("min-h-0 px-4 py-6 md:px-4 lg:my-0 lg:pt-6 lg:pb-10")}>
-			<ScrollArea
-				class="my-0 min-h-0 min-w-0 py-0 lg:h-full"
-				orientation="vertical"
-				scrollbarYClasses="hidden"
-			>
-				<div id="docs-content-container" class="min-h-0 min-w-0">
-					{@render children()}
-				</div>
-			</ScrollArea>
+	<div class="grid w-full grid-cols-1 md:grid-cols-8 md:gap-x-6 md:px-6">
+		<!-- Main Content  -->
+		<div class="py-6 md:col-span-6">
+			<!-- <div id="docs-content-container" class="min-h-0 min-w-0 pt-6"> -->
+			{@render children()}
+			<!-- </div> -->
 		</div>
-		<!-- </div> -->
-	</Sidebar.Inset>
-
-	{#if showToc}
-		<aside class="hidden md:mr-5 lg:block lg:w-70">
-			<div
-				class="sticky top-6 rounded-2xl border border-border bg-card/70 p-5 backdrop-blur-sm"
-			>
-				<p
-					class="mb-3 flex items-center gap-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="14"
-						height="14"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						aria-hidden="true"
-					>
-						<line x1="4" x2="20" y1="6" y2="6"></line>
-						<line x1="4" x2="14" y1="12" y2="12"></line>
-						<line x1="4" x2="10" y1="18" y2="18"></line>
-					</svg>
-					On this page
-				</p>
-				<Toc toc={toc.current} />
-			</div>
-		</aside>
-	{/if}
+		<!-- Aside : TOC -->
+		<div class="md:col-span-2">
+			{#if showToc}
+				<aside class="sticky top-20 hidden lg:block">
+					<div class="rounded-2xl border border-border bg-card/70 p-5 backdrop-blur-sm">
+						<p
+							class="mb-3 flex items-center gap-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<line x1="4" x2="20" y1="6" y2="6"></line>
+								<line x1="4" x2="14" y1="12" y2="12"></line>
+								<line x1="4" x2="10" y1="18" y2="18"></line>
+							</svg>
+							On this page
+						</p>
+						<Toc toc={toc.current} />
+					</div>
+				</aside>
+			{/if}
+		</div>
+	</div>
 </Sidebar.Provider>

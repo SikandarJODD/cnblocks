@@ -29,22 +29,9 @@
 		await copyCode.copy(code);
 	};
 
-	// import { codeToHtml } from "shiki";
-	// import { onMount } from "svelte";
 	import Code from "$lib/components/web/code/code.svelte";
 	import type { SupportedLanguage } from "$lib/components/web/code/shiki";
 	import { scale } from "svelte/transition";
-
-	// let htmlCode = $state("");
-	// onMount(async () => {
-	//   htmlCode = await codeToHtml(code, {
-	//     lang: lang,
-	//     themes: {
-	//       dark: "github-light",
-	//       light: "github-light",
-	//     },
-	//   });
-	// });
 </script>
 
 <div
