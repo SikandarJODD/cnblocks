@@ -11,12 +11,13 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"build:registry:core": "jsrepo build",
-		"build:registry": "pnpm shadcn-svelte registry build",
 		"ci:release": "jsrepo publish --verbose && changeset tag",
-		"create:veil": "node scripts/create-tailark-feature.mjs",
 		"lint": "prettier --check .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"build:registry:core": "jsrepo build",
+		"build:blocks": "pnpm shadcn-svelte registry build",
+		"build:mist": "pnpm shadcn-svelte registry build ./mist-registry.json -o ./static/m",
+		"build:veil": "pnpm shadcn-svelte registry build ./veil-registry.json -o ./static/v"
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.10.1",
