@@ -15,7 +15,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		title: "Testimonial One",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-one",
-		itemId: "veil-testimonial-one",
+		itemId: "testimonial-one",
 		code: {
 			code: TestimonialOneCode,
 			lang: "svelte",
@@ -27,7 +27,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		title: "Testimonial Two",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-two",
-		itemId: "veil-testimonial-two",
+		itemId: "testimonial-two",
 		code: {
 			code: TestimonialTwoCode,
 			lang: "svelte",
@@ -39,7 +39,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		title: "Testimonial Three",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-three",
-		itemId: "veil-testimonial-three",
+		itemId: "testimonial-three",
 		code: {
 			code: TestimonialThreeCode,
 			lang: "svelte",
@@ -51,7 +51,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		title: "Testimonial Four",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-four",
-		itemId: "veil-testimonial-four",
+		itemId: "testimonial-four",
 		code: {
 			code: TestimonialFourCode,
 			lang: "svelte",

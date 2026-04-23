@@ -28,7 +28,7 @@ export const all_mists_heros: MistBlock[] = [
 		previewMode: "iframe",
 		previewHeight: 780,
 
-		itemId: "mist-hero-one",
+		itemId: "hero-one",
 		component: HeroOne,
 		code: [
 			{
@@ -51,7 +51,7 @@ export const all_mists_heros: MistBlock[] = [
 		previewMode: "iframe",
 		previewHeight: 780,
 
-		itemId: "mist-hero-two",
+		itemId: "hero-two",
 		component: HeroTwo,
 		code: [
 			{
@@ -74,7 +74,7 @@ export const all_mists_heros: MistBlock[] = [
 		previewMode: "iframe",
 		previewHeight: 780,
 
-		itemId: "mist-hero-three",
+		itemId: "hero-three",
 		component: HeroThree,
 		code: [
 			{
@@ -97,7 +97,7 @@ export const all_mists_heros: MistBlock[] = [
 		previewMode: "iframe",
 		previewHeight: 780,
 
-		itemId: "mist-hero-four",
+		itemId: "hero-four",
 		component: HeroFour,
 		code: [
 			{
@@ -120,7 +120,7 @@ export const all_mists_heros: MistBlock[] = [
 		previewMode: "iframe",
 		previewHeight: 780,
 
-		itemId: "mist-hero-five",
+		itemId: "hero-five",
 		component: HeroFive,
 		code: {
 			code: HeroFiveCode,
@@ -135,7 +135,7 @@ export const all_mists_heros: MistBlock[] = [
 		previewMode: "iframe",
 		previewHeight: 780,
 
-		itemId: "mist-hero-six",
+		itemId: "hero-six",
 		component: HeroSix,
 		code: {
 			code: HeroSixCode,

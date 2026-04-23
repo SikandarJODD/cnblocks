@@ -11,7 +11,7 @@ export const all_veils_integration: MistBlock[] = [
 		title: "Integration One",
 		category: "integration",
 		preview: "/preview/veil/integration/integration-one",
-		itemId: "veil-integration-one",
+		itemId: "integration-one",
 		code: {
 			code: IntegrationOneCode,
 			lang: "svelte",
@@ -23,7 +23,7 @@ export const all_veils_integration: MistBlock[] = [
 		title: "Integration Two",
 		category: "integration",
 		preview: "/preview/veil/integration/integration-two",
-		itemId: "veil-integration-two",
+		itemId: "integration-two",
 		code: {
 			code: IntegrationTwoCode,
 			lang: "svelte",

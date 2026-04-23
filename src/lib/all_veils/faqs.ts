@@ -15,7 +15,7 @@ export const all_veils_faqs: MistBlock[] = [
 		title: "Faqs One",
 		category: "faqs",
 		preview: "/preview/veil/faqs/faqs-one",
-		itemId: "veil-faqs-one",
+		itemId: "faqs-one",
 		code: {
 			code: FaqsOneCode,
 			lang: "svelte",
@@ -27,7 +27,7 @@ export const all_veils_faqs: MistBlock[] = [
 		title: "Faqs Two",
 		category: "faqs",
 		preview: "/preview/veil/faqs/faqs-two",
-		itemId: "veil-faqs-two",
+		itemId: "faqs-two",
 		code: {
 			code: FaqsTwoCode,
 			lang: "svelte",
@@ -39,7 +39,7 @@ export const all_veils_faqs: MistBlock[] = [
 		title: "Faqs Three",
 		category: "faqs",
 		preview: "/preview/veil/faqs/faqs-three",
-		itemId: "veil-faqs-three",
+		itemId: "faqs-three",
 		code: {
 			code: FaqsThreeCode,
 			lang: "svelte",
@@ -51,7 +51,7 @@ export const all_veils_faqs: MistBlock[] = [
 		title: "Faqs Four",
 		category: "faqs",
 		preview: "/preview/veil/faqs/faqs-four",
-		itemId: "veil-faqs-four",
+		itemId: "faqs-four",
 		code: {
 			code: FaqsFourCode,
 			lang: "svelte",

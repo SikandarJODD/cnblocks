@@ -13,7 +13,7 @@ export const all_veils_login: MistBlock[] = [
 		title: "Login One",
 		category: "login",
 		preview: "/preview/veil/login/login-one",
-		itemId: "veil-login-one",
+		itemId: "login-one",
 		code: {
 			code: LoginOneCode,
 			lang: "svelte",
@@ -25,7 +25,7 @@ export const all_veils_login: MistBlock[] = [
 		title: "Login Two",
 		category: "login",
 		preview: "/preview/veil/login/login-two",
-		itemId: "veil-login-two",
+		itemId: "login-two",
 		code: {
 			code: LoginTwoCode,
 			lang: "svelte",
@@ -37,7 +37,7 @@ export const all_veils_login: MistBlock[] = [
 		title: "Login Three",
 		category: "login",
 		preview: "/preview/veil/login/login-three",
-		itemId: "veil-login-three",
+		itemId: "login-three",
 		code: {
 			code: LoginThreeCode,
 			lang: "svelte",

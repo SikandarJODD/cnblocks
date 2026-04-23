@@ -15,7 +15,7 @@ export const all_veils_call_to_action: MistBlock[] = [
 		title: "Call To Action One",
 		category: "call-to-action",
 		preview: "/preview/veil/call-to-action/call-to-action-one",
-		itemId: "veil-call-to-action-one",
+		itemId: "call-to-action-one",
 		code: {
 			code: CallToActionOneCode,
 			lang: "svelte",
@@ -27,7 +27,7 @@ export const all_veils_call_to_action: MistBlock[] = [
 		title: "Call To Action Two",
 		category: "call-to-action",
 		preview: "/preview/veil/call-to-action/call-to-action-two",
-		itemId: "veil-call-to-action-two",
+		itemId: "call-to-action-two",
 		code: {
 			code: CallToActionTwoCode,
 			lang: "svelte",
@@ -39,7 +39,7 @@ export const all_veils_call_to_action: MistBlock[] = [
 		title: "Call To Action Three",
 		category: "call-to-action",
 		preview: "/preview/veil/call-to-action/call-to-action-three",
-		itemId: "veil-call-to-action-three",
+		itemId: "call-to-action-three",
 		code: {
 			code: CallToActionThreeCode,
 			lang: "svelte",
@@ -51,7 +51,7 @@ export const all_veils_call_to_action: MistBlock[] = [
 		title: "Call To Action Four",
 		category: "call-to-action",
 		preview: "/preview/veil/call-to-action/call-to-action-four",
-		itemId: "veil-call-to-action-four",
+		itemId: "call-to-action-four",
 		code: {
 			code: CallToActionFourCode,
 			lang: "svelte",

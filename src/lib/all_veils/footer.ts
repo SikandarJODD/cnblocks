@@ -19,7 +19,7 @@ export const all_veils_footer: MistBlock[] = [
 		title: "Footer One",
 		category: "footer",
 		preview: "/preview/veil/footer/footer-one",
-		itemId: "veil-footer-one",
+		itemId: "footer-one",
 		code: {
 			code: FooterOneCode,
 			lang: "svelte",
@@ -31,7 +31,7 @@ export const all_veils_footer: MistBlock[] = [
 		title: "Footer Two",
 		category: "footer",
 		preview: "/preview/veil/footer/footer-two",
-		itemId: "veil-footer-two",
+		itemId: "footer-two",
 		code: {
 			code: FooterTwoCode,
 			lang: "svelte",
@@ -43,7 +43,7 @@ export const all_veils_footer: MistBlock[] = [
 		title: "Footer Three",
 		category: "footer",
 		preview: "/preview/veil/footer/footer-three",
-		itemId: "veil-footer-three",
+		itemId: "footer-three",
 		code: {
 			code: FooterThreeCode,
 			lang: "svelte",
@@ -55,7 +55,7 @@ export const all_veils_footer: MistBlock[] = [
 		title: "Footer Four",
 		category: "footer",
 		preview: "/preview/veil/footer/footer-four",
-		itemId: "veil-footer-four",
+		itemId: "footer-four",
 		code: {
 			code: FooterFourCode,
 			lang: "svelte",
@@ -67,7 +67,7 @@ export const all_veils_footer: MistBlock[] = [
 		title: "Footer Five",
 		category: "footer",
 		preview: "/preview/veil/footer/footer-five",
-		itemId: "veil-footer-five",
+		itemId: "footer-five",
 		code: {
 			code: FooterFiveCode,
 			lang: "svelte",
@@ -79,7 +79,7 @@ export const all_veils_footer: MistBlock[] = [
 		title: "Footer Six",
 		category: "footer",
 		preview: "/preview/veil/footer/footer-six",
-		itemId: "veil-footer-six",
+		itemId: "footer-six",
 		code: {
 			code: FooterSixCode,
 			lang: "svelte",

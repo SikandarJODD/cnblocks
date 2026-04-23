@@ -11,7 +11,7 @@ export const all_mists_logocloud: MistBlock[] = [
 		category: "logocloud",
 		preview: "/preview/mist/logocloud/one",
 
-		itemId: "mist-logocloud-one",
+		itemId: "logocloud-one",
 		code: {
 			code: LogocloudOneCode,
 			lang: "svelte",
@@ -24,7 +24,7 @@ export const all_mists_logocloud: MistBlock[] = [
 		category: "logocloud",
 		preview: "/preview/mist/logocloud/two",
 
-		itemId: "mist-logocloud-two",
+		itemId: "logocloud-two",
 		code: {
 			code: LogocloudTwoCode,
 			lang: "svelte",

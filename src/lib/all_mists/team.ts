@@ -11,7 +11,7 @@ export const all_mists_team: MistBlock[] = [
 		category: "team",
 		preview: "/preview/mist/team/one",
 
-		itemId: "mist-team-one",
+		itemId: "team-one",
 		code: {
 			code: TeamOneCode,
 			lang: "svelte",
@@ -24,7 +24,7 @@ export const all_mists_team: MistBlock[] = [
 		category: "team",
 		preview: "/preview/mist/team/two",
 
-		itemId: "mist-team-two",
+		itemId: "team-two",
 		code: {
 			code: TeamTwoCode,
 			lang: "svelte",

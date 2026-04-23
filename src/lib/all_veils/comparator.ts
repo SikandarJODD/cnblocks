@@ -13,7 +13,7 @@ export const all_veils_comparator: MistBlock[] = [
 		title: "Comparator One",
 		category: "comparator",
 		preview: "/preview/veil/comparator/comparator-one",
-		itemId: "veil-comparator-one",
+		itemId: "comparator-one",
 		code: {
 			code: ComparatorOneCode,
 			lang: "svelte",
@@ -25,7 +25,7 @@ export const all_veils_comparator: MistBlock[] = [
 		title: "Comparator Two",
 		category: "comparator",
 		preview: "/preview/veil/comparator/comparator-two",
-		itemId: "veil-comparator-two",
+		itemId: "comparator-two",
 		code: {
 			code: ComparatorTwoCode,
 			lang: "svelte",
@@ -37,7 +37,7 @@ export const all_veils_comparator: MistBlock[] = [
 		title: "Comparator Three",
 		category: "comparator",
 		preview: "/preview/veil/comparator/comparator-three",
-		itemId: "veil-comparator-three",
+		itemId: "comparator-three",
 		code: {
 			code: ComparatorThreeCode,
 			lang: "svelte",

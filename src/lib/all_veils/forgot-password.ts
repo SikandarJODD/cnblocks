@@ -13,7 +13,7 @@ export const all_veils_forgot_password: MistBlock[] = [
 		title: "Forgot Password One",
 		category: "forgot-password",
 		preview: "/preview/veil/forgot-password/forgot-password-one",
-		itemId: "veil-forgot-password-one",
+		itemId: "forgot-password-one",
 		code: {
 			code: ForgotPasswordOneCode,
 			lang: "svelte",
@@ -25,7 +25,7 @@ export const all_veils_forgot_password: MistBlock[] = [
 		title: "Forgot Password Two",
 		category: "forgot-password",
 		preview: "/preview/veil/forgot-password/forgot-password-two",
-		itemId: "veil-forgot-password-two",
+		itemId: "forgot-password-two",
 		code: {
 			code: ForgotPasswordTwoCode,
 			lang: "svelte",
@@ -37,7 +37,7 @@ export const all_veils_forgot_password: MistBlock[] = [
 		title: "Forgot Password Three",
 		category: "forgot-password",
 		preview: "/preview/veil/forgot-password/forgot-password-three",
-		itemId: "veil-forgot-password-three",
+		itemId: "forgot-password-three",
 		code: {
 			code: ForgotPasswordThreeCode,
 			lang: "svelte",

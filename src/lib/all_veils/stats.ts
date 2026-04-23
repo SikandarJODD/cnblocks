@@ -15,7 +15,7 @@ export const all_veils_stats: MistBlock[] = [
 		title: "Stats One",
 		category: "stats",
 		preview: "/preview/veil/stats/stats-one",
-		itemId: "veil-stats-one",
+		itemId: "stats-one",
 		code: {
 			code: StatsOneCode,
 			lang: "svelte",
@@ -27,7 +27,7 @@ export const all_veils_stats: MistBlock[] = [
 		title: "Stats Two",
 		category: "stats",
 		preview: "/preview/veil/stats/stats-two",
-		itemId: "veil-stats-two",
+		itemId: "stats-two",
 		code: {
 			code: StatsTwoCode,
 			lang: "svelte",
@@ -39,7 +39,7 @@ export const all_veils_stats: MistBlock[] = [
 		title: "Stats Three",
 		category: "stats",
 		preview: "/preview/veil/stats/stats-three",
-		itemId: "veil-stats-three",
+		itemId: "stats-three",
 		code: {
 			code: StatsThreeCode,
 			lang: "svelte",
@@ -51,7 +51,7 @@ export const all_veils_stats: MistBlock[] = [
 		title: "Stats Four",
 		category: "stats",
 		preview: "/preview/veil/stats/stats-four",
-		itemId: "veil-stats-four",
+		itemId: "stats-four",
 		code: {
 			code: StatsFourCode,
 			lang: "svelte",

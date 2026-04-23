@@ -11,7 +11,7 @@ export const all_veils_logo_cloud: MistBlock[] = [
 		title: "Logo Cloud One",
 		category: "logo-cloud",
 		preview: "/preview/veil/logo-cloud/logo-cloud-one",
-		itemId: "veil-logo-cloud-one",
+		itemId: "logo-cloud-one",
 		code: {
 			code: LogoCloudOneCode,
 			lang: "svelte",
@@ -23,7 +23,7 @@ export const all_veils_logo_cloud: MistBlock[] = [
 		title: "Logo Cloud Two",
 		category: "logo-cloud",
 		preview: "/preview/veil/logo-cloud/logo-cloud-two",
-		itemId: "veil-logo-cloud-two",
+		itemId: "logo-cloud-two",
 		code: {
 			code: LogoCloudTwoCode,
 			lang: "svelte",
