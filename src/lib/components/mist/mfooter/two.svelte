@@ -143,7 +143,7 @@
 			>
 			<div class="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="X/Twitter"
@@ -163,7 +163,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="aedIn"
@@ -183,7 +183,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Facebook"
@@ -203,7 +203,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Threads"
@@ -228,7 +228,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Instagram"
@@ -248,7 +248,7 @@
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="TikTok"

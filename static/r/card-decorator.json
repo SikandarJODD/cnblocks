@@ -3,12 +3,9 @@
 	"name": "card-decorator",
 	"type": "registry:block",
 	"description": "Decorative card component with visual effects",
-	"devDependencies": [
-		"svelte"
-	],
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\tlet { children }: { children: Snippet } = $props();\n</script>\n\n<div\n\tclass=\"relative mx-auto size-36 transition-all duration-500 ease-in [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:bg-white/5 dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]\"\n>\n\t<div\n\t\tclass=\"absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px]\"\n\t></div>\n\t<div class=\"absolute inset-0 bg-radial from-transparent to-background to-75%\"></div>\n\t<div\n\t\tclass=\"absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l bg-background\"\n\t>\n\t\t{@render children()}\n\t</div>\n</div>\n",
+			"content": "<script lang=\"ts\">\r\n\timport type { Snippet } from \"svelte\";\r\n\tlet { children }: { children: Snippet } = $props();\r\n</script>\r\n\r\n<div\r\n\tclass=\"relative mx-auto size-36 transition-all duration-500 ease-in [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:bg-white/5 dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]\"\r\n>\r\n\t<div\r\n\t\tclass=\"absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[24px_24px]\"\r\n\t></div>\r\n\t<div class=\"absolute inset-0 bg-radial from-transparent to-background to-75%\"></div>\r\n\t<div\r\n\t\tclass=\"absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l bg-background\"\r\n\t>\r\n\t\t{@render children()}\r\n\t</div>\r\n</div>\r\n",
 			"type": "registry:component",
 			"target": "blocks/feature/card-decorator.svelte"
 		}

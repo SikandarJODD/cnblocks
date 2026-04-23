@@ -38,19 +38,19 @@
 			<p class="text-sm text-muted-foreground">&copy; {year} Veil.</p>
 			<div class="flex flex-wrap gap-4">
 				<a
-					href="#"
+					href="/"
 					class="text-sm text-muted-foreground transition-colors hover:text-foreground"
 				>
 					Privacy Policy
 				</a>
 				<a
-					href="#"
+					href="/"
 					class="text-sm text-muted-foreground transition-colors hover:text-foreground"
 				>
 					Terms of Service
 				</a>
 				<a
-					href="#"
+					href="/"
 					class="text-sm text-muted-foreground transition-colors hover:text-foreground"
 				>
 					Cookies

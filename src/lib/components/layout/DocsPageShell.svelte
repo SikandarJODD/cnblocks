@@ -29,9 +29,9 @@
 <div class="mx-auto w-full max-w-4xl">
 	<article class="min-w-0 space-y-8" data-doc-content bind:this={contentRef}>
 		<section>
-			<H1 id="introduction">{title}</H1>
+			<H1 id="introduction" class="tracking-tighter">{title}</H1>
 			{#if description}
-				<Paragraph class="mt-3">{description}</Paragraph>
+				<Paragraph class="mt-1">{description}</Paragraph>
 			{/if}
 		</section>
 		{@render children?.()}

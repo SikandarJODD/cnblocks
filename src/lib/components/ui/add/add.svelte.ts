@@ -43,50 +43,28 @@ class AddRootState {
 		return this.provider.opts.registryOptions.current;
 	}
 
-	get isUrlInstall() {
-		return /^https?:\/\//.test(this.opts.item.current);
-	}
-
 	addCommand: string = $derived.by(() => {
-		if (this.isUrlInstall) {
-			const command = resolveCommand(this.agent, "execute", [
-				"shadcn-svelte@latest",
-				"add",
-				this.opts.item.current,
-			]);
-
-			return command
-				? `${command.command} ${command.args.join(" ")}`
-				: `npx shadcn-svelte@latest add ${this.opts.item.current}`;
-		}
-
 		const command = resolveCommand(this.agent, "execute", [
-			"jsrepo",
+			"shadcn-svelte@latest",
 			"add",
-			this.opts.withoutRegistry.current
-				? this.opts.item.current
-				: `${this.registry}/${this.opts.item.current}`,
+			this.opts.item.current,
 		]);
 
 		return command
 			? `${command.command} ${command.args.join(" ")}`
-			: `npx jsrepo add ${this.opts.withoutRegistry.current ? this.opts.item.current : `${this.registry}/${this.opts.item.current}`}`;
+			: `npx shadcn-svelte@latest add ${this.opts.withoutRegistry.current ? this.opts.item.current : `${this.registry}/${this.opts.item.current}`}`;
 	});
 
 	initCommand: string = $derived.by(() => {
-		if (this.isUrlInstall) {
-			const command = resolveCommand(this.agent, "execute", ["shadcn-svelte@latest", "init"]);
-
-			return command
-				? `${command.command} ${command.args.join(" ")}`
-				: "npx shadcn-svelte@latest init";
-		}
-
-		const command = resolveCommand(this.agent, "execute", ["jsrepo", "init", this.registry]);
+		const command = resolveCommand(this.agent, "execute", [
+			"shadcn-svelte@latest",
+			"init",
+			this.registry,
+		]);
 
 		return command
 			? `${command.command} ${command.args.join(" ")}`
-			: `npx jsrepo init ${this.registry}`;
+			: `npx shadcn-svelte@latest init ${this.registry}`;
 	});
 
 	get registry() {

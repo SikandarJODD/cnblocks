@@ -16,7 +16,7 @@ export const all_mists_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/mist/testimonial/one",
 
-		itemId: "mist-testimonial-one",
+		itemId: "testimonial-one",
 		code: {
 			code: TestimonialOneCode,
 			lang: "svelte",
@@ -29,7 +29,7 @@ export const all_mists_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/mist/testimonial/two",
 
-		itemId: "mist-testimonial-two",
+		itemId: "testimonial-two",
 		code: {
 			code: TestimonialTwoCode,
 			lang: "svelte",
@@ -42,7 +42,7 @@ export const all_mists_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/mist/testimonial/three",
 
-		itemId: "mist-testimonial-three",
+		itemId: "testimonial-three",
 		code: {
 			code: TestimonialThreeCode,
 			lang: "svelte",
@@ -55,7 +55,7 @@ export const all_mists_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/mist/testimonial/four",
 
-		itemId: "mist-testimonial-four",
+		itemId: "testimonial-four",
 		code: {
 			code: TestimonialFourCode,
 			lang: "svelte",
@@ -68,7 +68,7 @@ export const all_mists_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/mist/testimonial/five",
 
-		itemId: "mist-testimonial-five",
+		itemId: "testimonial-five",
 		code: {
 			code: TestimonialFiveCode,
 			lang: "svelte",

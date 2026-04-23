@@ -1,6 +1,6 @@
 <section class="scroll-py-16 py-16 md:scroll-py-32 md:py-32">
 	<div class="mx-auto max-w-5xl px-6">
-		<div class="grid gap-y-12 px-2 lg:[grid-template-columns:1fr_auto]">
+		<div class="grid gap-y-12 px-2 lg:grid-cols-[1fr_auto]">
 			<div class="text-center lg:text-left">
 				<h2 class="mb-4 text-3xl font-semibold md:text-4xl">
 					Frequently <br class="hidden lg:block" /> Asked <br class="hidden lg:block" />

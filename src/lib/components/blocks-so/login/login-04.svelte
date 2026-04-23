@@ -21,7 +21,7 @@
 			<p class="mt-2 text-sm text-muted-foreground dark:text-muted-foreground">
 				Don&apos;t have an account?{" "}
 				<a
-					href="#"
+					href="/"
 					class="font-medium text-primary hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"
 				>
 					Sign up
@@ -33,7 +33,7 @@
 				<Button
 					variant="outline"
 					class="flex-1 items-center justify-center space-x-2 py-2"
-					href="#"
+					href="/"
 				>
 					<GitHubIcon class="size-5" aria-hidden="true" />
 					<span class="text-sm font-medium">Login with GitHub</span>
@@ -41,7 +41,7 @@
 				<Button
 					variant="outline"
 					class="mt-2 flex-1 items-center justify-center space-x-2 py-2 sm:mt-0"
-					href="#"
+					href="/"
 				>
 					<GoogleIcon class="size-4" aria-hidden="true" />
 					<span class="text-sm font-medium">Login with Google</span>
@@ -95,7 +95,7 @@
 			<p class="mt-6 text-sm text-muted-foreground dark:text-muted-foreground">
 				Forgot your password?{" "}
 				<a
-					href="#"
+					href="/"
 					class="font-medium text-primary hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"
 				>
 					Reset password

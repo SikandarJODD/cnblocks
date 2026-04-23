@@ -2,7 +2,8 @@
 	import { Badge } from "$lib/components/ui/badge";
 	import { Card, CardContent, CardTitle } from "$lib/components/ui/card";
 	import { cn } from "$lib/utils";
-	import { TrendingDown, TrendingUp } from "@lucide/svelte";
+	import TrendingDown from "@lucide/svelte/icons/trending-down";
+	import TrendingUp from "@lucide/svelte/icons/trending-up";
 
 	const stats = [
 		{

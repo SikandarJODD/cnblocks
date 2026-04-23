@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-five",
+	"type": "registry:block",
+	"description": "Mist-style testimonial carousel",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"avatar"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Avatar, AvatarFallback, AvatarImage } from \"$COMPONENTS$/ui/avatar\";\r\n\timport Quote from \"@lucide/svelte/icons/quote\";\r\n</script>\r\n\r\n<section>\r\n\t<div class=\"bg-muted py-24\">\r\n\t\t<div class=\"mx-auto w-full max-w-2xl px-6 text-center\">\r\n\t\t\t<div class=\"max-w-xl\">\r\n\t\t\t\t<Quote class=\"mx-auto size-8 fill-background stroke-background drop-shadow-sm\" />\r\n\t\t\t\t<blockquote class=\"mt-6\">\r\n\t\t\t\t\t<p class=\"text-xl text-foreground\">\r\n\t\t\t\t\t\tUsing Tailark has been like unlocking a secret design superpower. It's the\r\n\t\t\t\t\t\tperfect fusion of simplicity and versatility, enabling us to create UIs that\r\n\t\t\t\t\t\tare as stunning as they are user-friendly.\r\n\t\t\t\t\t</p>\r\n\t\t\t\t\t<footer class=\"mt-6 flex flex-col items-center justify-center\">\r\n\t\t\t\t\t\t<Avatar class=\" size-12 border border-transparent shadow ring-1\">\r\n\t\t\t\t\t\t\t<AvatarImage\r\n\t\t\t\t\t\t\t\tsrc=\"https://avatars.githubusercontent.com/u/68236786?v=4\"\r\n\t\t\t\t\t\t\t\talt=\"Théo Balick\"\r\n\t\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t\t<AvatarFallback>T</AvatarFallback>\r\n\t\t\t\t\t\t</Avatar>\r\n\t\t\t\t\t\t<cite class=\"mt-2 text-lg font-medium text-foreground\">Théo Balick</cite>\r\n\t\t\t\t\t\t<span class=\"text-muted-foreground\">@theo_b</span>\r\n\t\t\t\t\t</footer>\r\n\t\t\t\t</blockquote>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mtestimonial/five.svelte"
+		}
+	]
+}

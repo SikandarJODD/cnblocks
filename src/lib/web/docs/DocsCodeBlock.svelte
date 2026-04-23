@@ -10,41 +10,18 @@
 	type CodeBlockProps = {
 		code: string;
 		fileName?: string;
-		lang?: SupportedLanguage | "ts" | "js" | "md";
+		lang?: SupportedLanguage;
 		class?: string;
 	};
 	let { code = "", fileName = "", lang = "bash", class: _class = "" }: CodeBlockProps = $props();
-
-	const normalizedLang: SupportedLanguage = $derived(
-		lang === "ts"
-			? "typescript"
-			: lang === "js"
-				? "javascript"
-				: lang === "md"
-					? "markdown"
-					: lang
-	);
 	let copyCode = new UseClipboard({ delay: 1000 });
 	let handleCopy = async () => {
 		await copyCode.copy(code);
 	};
 
-	// import { codeToHtml } from "shiki";
-	// import { onMount } from "svelte";
-	import Code from "$lib/components/web/code/code.svelte";
-	import type { SupportedLanguage } from "$lib/components/web/code/shiki";
+	import Code from "$lib/components/ui/code/code.svelte";
+	import type { SupportedLanguage } from "$lib/components/ui/code/shiki";
 	import { scale } from "svelte/transition";
-
-	// let htmlCode = $state("");
-	// onMount(async () => {
-	//   htmlCode = await codeToHtml(code, {
-	//     lang: lang,
-	//     themes: {
-	//       dark: "github-light",
-	//       light: "github-light",
-	//     },
-	//   });
-	// });
 </script>
 
 <div
@@ -64,7 +41,7 @@
 					<Svelte />
 				{:else if lang === "css"}
 					<CSS />
-				{:else if lang === "ts" || lang === "typescript"}
+				{:else if lang === "typescript"}
 					<TypeScript />
 				{:else}
 					<CodeIcon size={14} class="text-neutral-500 dark:text-neutral-600" />
@@ -90,16 +67,11 @@
 			</button>
 		</div>
 	{/if}
-	<!-- <div
-    class="relative overflow-x-auto p-4 [&_pre]:!bg-transparent [&_code]:text-sm"
-  >
-    {@html htmlCode}
-  </div> -->
 	<div>
 		<Code
 			class="no-scrollbar border-none [&_pre]:no-scrollbar"
 			{code}
-			lang={normalizedLang}
+			{lang}
 			hideLines={true}
 		/>
 	</div>

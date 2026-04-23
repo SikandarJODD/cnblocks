@@ -130,16 +130,16 @@
 							variant="outline"
 							size="sm"
 							class={cn(isScrolled && "lg:hidden")}
-							href="#"
+							href="/"
 						>
 							Login
 						</Button>
-						<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+						<Button href="/" size="sm" class={cn(isScrolled && "lg:hidden")}
 							>Sign Up</Button
 						>
 						<Button
 							size="sm"
-							href="#"
+							href="/"
 							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
 						>
 							Get Strated

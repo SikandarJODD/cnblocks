@@ -7,9 +7,6 @@
 		H2,
 		H3,
 		Paragraph,
-		Link,
-		UnorderedList,
-		ListItem,
 		Table,
 		Thead,
 		Tbody,
@@ -346,9 +343,9 @@ export {
 		</UnorderedList>
 	</section> -->
 
-	<section class="space-y-4">
+	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
-		<Paragraph class="text-muted-foreground">
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			Add the Mist theme variables to your global stylesheet (for example <code>app.css</code>
 			or <code>globals.css</code>) so Mist primitives resolve color, border, and contrast
 			consistently.
@@ -404,24 +401,24 @@ export {
 		/>
 	</section>
 
-	<section class="space-y-4">
+	<section>
 		<H2 id="apply-theme">Apply Theme</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			Ensure your root body includes <code>theme-container</code> so the selected Mist theme is
 			applied across the application.
 		</Paragraph>
 		<DocsCodeBlock
 			fileName="src/app.html"
-			lang="html"
+			lang={"html"}
 			code={`<body data-theme="mist" class="theme-container">
 	<!-- Your Application -->
 </body>`}
 		/>
 	</section>
 
-	<section class="space-y-4">
+	<section>
 		<H2 id="required-components">Required Components</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			After theme tokens are configured, update these Mist primitives in your app.
 		</Paragraph>
 		<Table
@@ -450,9 +447,9 @@ export {
 		</Table>
 	</section>
 
-	<section class="space-y-4">
+	<section>
 		<H2 id="button-component">Button Component</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-6">
 			Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
 			the standard shadcn-like variants.
 		</Paragraph>
@@ -470,9 +467,9 @@ export {
 		<MultipleCode code={buttonSourceCode} />
 	</section>
 
-	<section class="space-y-4">
+	<section>
 		<H2 id="card-component">Card Component</H2>
-		<Paragraph>
+		<Paragraph class="mt-1 mb-6">
 			Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections
 			commonly used across documentation-style layouts.
 		</Paragraph>
@@ -500,34 +497,5 @@ export {
 		/>
 		<H3 id="card-source">Source</H3>
 		<MultipleCode code={cardSourceCode} />
-	</section>
-
-	<!-- <section class="space-y-4">
-		<H2 id="next-steps">Next Steps</H2>
-		<Paragraph>
-			If you have not completed the base setup, start with <Link href="/v2-docs/installation"
-				>Installation</Link
-			>. After Mist setup is ready, continue to <Link href="/v2-docs/mcp">MCP Server</Link> for
-			AI-assisted discovery and installation workflows.
-		</Paragraph>
-		<UnorderedList>
-			<ListItem>Use Mist sections from `/mist/*` routes as composition references.</ListItem>
-			<ListItem
-				>Reuse Mist primitives from `$lib/components/ui/mist/*` for consistency.</ListItem
-			>
-			<ListItem>Keep accents subtle and prioritize readable copy blocks.</ListItem>
-		</UnorderedList>
-	</section> -->
-
-	<section class="space-y-4">
-		<H2 id="setup-complete">Setup Complete</H2>
-		<Paragraph>
-			Mist theme setup is now complete. Your app is ready to start using Mist components and
-			build calm, documentation-focused interfaces.
-		</Paragraph>
-		<Paragraph>
-			Use primitives from <code>$lib/components/ui/mist/*</code> or explore the
-			<Link href="/mist">Mist components</Link> collection to start composing pages.
-		</Paragraph>
 	</section>
 </DocsPageShell>

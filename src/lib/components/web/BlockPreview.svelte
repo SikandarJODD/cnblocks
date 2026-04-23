@@ -14,7 +14,7 @@
 
 	export interface MistCode {
 		code: string;
-		lang?: string;
+		lang?: SupportedLanguage;
 		name?: string;
 		highlight?: (number | [number, number])[];
 	}
@@ -87,8 +87,9 @@
 		TooltipProvider,
 		TooltipTrigger,
 	} from "$lib/components/ui/tooltip";
+	import type { SupportedLanguage } from "../ui/code/shiki";
 
-	let showIframeComp = $state(previewMode === "iframe");
+	let showIframeComp = $derived(previewMode === "iframe");
 	let forcesIframe = $derived(previewMode === "iframe");
 	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
 	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
@@ -118,10 +119,10 @@
 	<div class="relative border-y">
 		<div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
 			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent to-(--color-border) to-75%"
+				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
 			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent to-(--color-border) to-75%"
+				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
 		</div>
 
@@ -190,17 +191,17 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden !h-4 lg:block" />
+					<Separator orientation="vertical" class="hidden h-4! lg:block" />
 				{/if}
 				<Button variant="ghost" size="sm" class="size-8" href={preview} target="_blank">
-					<Maximize strokeWidth={1.6} class="!size-4 sm:opacity-70" />
+					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
 				</Button>
-				<Separator orientation="vertical" class="hidden !h-4 lg:block" />
+				<Separator orientation="vertical" class="hidden h-4! lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
 				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical" class="!h-4" />
+				<Separator orientation="vertical" class="h-4!" />
 				<span class="ml-0 text-sm capitalize">{category + " " + title}</span>
 				<!-- {/if} -->
 			</div>
@@ -416,10 +417,10 @@
 					</TooltipProvider>
 				{/if}
 				{#if code}
-					<PreviewInstallAdd {itemId} registryPath="r" />
+					<PreviewInstallAdd {itemId} />
 
 					{#if !Array.isArray(code)}
-						<Separator class="!h-4" orientation="vertical" />
+						<Separator class="h-4!" orientation="vertical" />
 
 						<CopyButton text={code.code} />
 					{/if}
@@ -431,10 +432,10 @@
 	<div class="relative">
 		<div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
 			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-(--color-border)"
+				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"
 			></div>
 			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-(--color-border)"
+				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"
 			></div>
 		</div>
 
@@ -507,7 +508,7 @@
 				{/if}
 			</div>
 
-			<div class="bg-white dark:bg-transparent">
+			<div class="bg-secondary! dark:bg-transparent">
 				<!-- {#key code} -->
 				{#if mode === "code"}
 					<CodeEditor {code} />

@@ -64,7 +64,7 @@
 					<div class="flex items-center justify-between">
 						<Label for="pwd" class="text-title text-sm">Password</Label>
 						<Button
-							href="#"
+							href="/"
 							variant="link"
 							size="sm"
 							class="link intent-info variant-ghost text-sm"
@@ -138,7 +138,7 @@
 		<div class="p-3">
 			<p class="text-center text-sm text-accent-foreground">
 				Don't have an account ?
-				<Button href="#" variant="link" class="px-2">Create account</Button>
+				<Button href="/" variant="link" class="px-2">Create account</Button>
 			</p>
 		</div>
 	</form>

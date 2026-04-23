@@ -13,7 +13,7 @@ export const all_mists_integrations: MistBlock[] = [
 		category: "integration",
 		preview: "/preview/mist/integration/one",
 
-		itemId: "mist-integration-one",
+		itemId: "integration-one",
 		code: {
 			code: IntegrationOneCode,
 			lang: "svelte",
@@ -26,7 +26,7 @@ export const all_mists_integrations: MistBlock[] = [
 		category: "integration",
 		preview: "/preview/mist/integration/two",
 
-		itemId: "mist-integration-two",
+		itemId: "integration-two",
 		code: {
 			code: IntegrationTwoCode,
 			lang: "svelte",
@@ -39,7 +39,7 @@ export const all_mists_integrations: MistBlock[] = [
 		category: "integration",
 		preview: "/preview/mist/integration/three",
 
-		itemId: "mist-integration-three",
+		itemId: "integration-three",
 		code: {
 			code: IntegrationThreeCode,
 			lang: "svelte",

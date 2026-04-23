@@ -113,14 +113,14 @@
 					<p class="text-center text-xs text-muted-foreground dark:text-muted-foreground">
 						By signing in, you agree to our{" "}
 						<a
-							href="#"
+							href="/"
 							class="text-primary capitalize hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"
 						>
 							Terms of use
 						</a>{" "}
 						and{" "}
 						<a
-							href="#"
+							href="/"
 							class="text-primary capitalize hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"
 						>
 							Privacy policy
@@ -133,7 +133,7 @@
 		<p class="mt-6 text-center text-sm text-muted-foreground dark:text-muted-foreground">
 			Already have an account?{" "}
 			<a
-				href="#"
+				href="/"
 				class="font-medium text-primary hover:text-primary/90 dark:text-primary hover:dark:text-primary/90"
 			>
 				Sign in

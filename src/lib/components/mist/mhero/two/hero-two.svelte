@@ -14,7 +14,7 @@
 				<div class="relative z-10 mx-auto max-w-5xl px-6 text-center">
 					<div>
 						<a
-							href="#"
+							href="/"
 							class="mx-auto flex w-fit items-center justify-center gap-2 rounded-md py-0.5 pr-3 pl-1 transition-colors duration-150 hover:bg-foreground/5"
 						>
 							<div

@@ -8,5 +8,5 @@
 <MetaTags {...seoMetaTags} title="Testimonial" />
 
 {#each all_veils_testimonial as block}
-	<MistBlockPreview {...block} />
+	<MistBlockPreview  {...block} />
 {/each}

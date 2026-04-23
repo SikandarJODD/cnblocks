@@ -13,7 +13,7 @@ export const all_veils_signup: MistBlock[] = [
 		title: "Signup One",
 		category: "signup",
 		preview: "/preview/veil/signup/signup-one",
-		itemId: "veil-signup-one",
+		itemId: "signup-one",
 		code: {
 			code: SignupOneCode,
 			lang: "svelte",
@@ -25,7 +25,7 @@ export const all_veils_signup: MistBlock[] = [
 		title: "Signup Two",
 		category: "signup",
 		preview: "/preview/veil/signup/signup-two",
-		itemId: "veil-signup-two",
+		itemId: "signup-two",
 		code: {
 			code: SignupTwoCode,
 			lang: "svelte",
@@ -37,7 +37,7 @@ export const all_veils_signup: MistBlock[] = [
 		title: "Signup Three",
 		category: "signup",
 		preview: "/preview/veil/signup/signup-three",
-		itemId: "veil-signup-three",
+		itemId: "signup-three",
 		code: {
 			code: SignupThreeCode,
 			lang: "svelte",

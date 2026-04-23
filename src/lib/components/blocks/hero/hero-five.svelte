@@ -1,6 +1,6 @@
 <script>
-	import Marquee from "$lib/components/magic/Marquee.svelte";
-	import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
+	import { Marquee } from "$lib/components/magic/marquee";
+	import { ProgressiveBlur } from "$lib/components/magic/progressive-blur";
 	import Button from "$lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
@@ -64,18 +64,17 @@
 					<div
 						class="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start"
 					>
-						<Button size="lg" href="#" class="h-12 rounded-full pr-3 pl-5 text-base">
+						<Button size="lg" href="/" class="h-12 rounded-full pr-3 pl-5 text-base">
 							<span class="text-nowrap">Start Building</span>
 							<ChevronRight class="ml-1" />
 						</Button>
 						<Button
 							size="lg"
 							variant="ghost"
+							href="/"
 							class="h-12 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5"
 						>
-							<a href="#link">
-								<span class="text-nowrap">Request a demo</span>
-							</a>
+							<span class="text-nowrap">Request a demo</span>
 						</Button>
 					</div>
 				</div>
@@ -245,16 +244,16 @@
 								variant="outline"
 								size="sm"
 								class={cn(isScrolled && "lg:hidden")}
-								href="#"
+								href="/"
 							>
 								Login
 							</Button>
-							<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+							<Button href="/" size="sm" class={cn(isScrolled && "lg:hidden")}
 								>Sign Up</Button
 							>
 							<Button
 								size="sm"
-								href="#"
+								href="/"
 								class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
 							>
 								Get Strated

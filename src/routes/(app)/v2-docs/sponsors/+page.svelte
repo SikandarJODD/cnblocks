@@ -38,9 +38,9 @@
 	title="Sponsors"
 	description="Support development of Svelte Shadcn Blocks and help keep the project sustainable."
 >
-	<section class="space-y-4">
+	<section>
 		<H2 id="current-sponsors">Current Sponsors</H2>
-		<div class="grid grid-cols-2 gap-4 md:grid-cols-6">
+		<div class="mt-2 grid grid-cols-2 gap-4 md:grid-cols-6">
 			{#each sponsors as sponsor}
 				<a
 					href={sponsor.href}
@@ -60,14 +60,14 @@
 		</div>
 	</section>
 
-	<section class="mb-10 space-y-4">
+	<section>
 		<H2 id="how-to-support">How To Support</H2>
-		<UnorderedList>
+		<UnorderedList class="mt-2">
 			<ListItem>Become a recurring sponsor on GitHub.</ListItem>
 			<ListItem>Share the project with your developer network.</ListItem>
 			<ListItem>Contribute docs, bug fixes, and component improvements.</ListItem>
 		</UnorderedList>
-		<div class="flex flex-wrap gap-3">
+		<div class="mt-6 flex flex-wrap gap-3">
 			<Button href="https://github.com/sponsors/SikandarJODD" target="_blank"
 				>Donate on GitHub</Button
 			>

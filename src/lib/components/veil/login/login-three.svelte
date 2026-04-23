@@ -80,14 +80,14 @@
 		</div>
 
 		<div class="mt-8 text-center">
-			<Button href="#" variant="link" class="text-sm text-muted-foreground">
+			<Button href="/" variant="link" class="text-sm text-muted-foreground">
 				Forgot password?
 			</Button>
 		</div>
 
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			New here?
-			<Button href="#" variant="link" class="px-1 font-medium text-primary"
+			<Button href="/" variant="link" class="px-1 font-medium text-primary"
 				>Create account</Button
 			>
 		</p>

@@ -11,7 +11,7 @@ export const all_veils_team: MistBlock[] = [
 		title: "Team One",
 		category: "team",
 		preview: "/preview/veil/team/team-one",
-		itemId: "veil-team-one",
+		itemId: "team-one",
 		code: {
 			code: TeamOneCode,
 			lang: "svelte",
@@ -23,7 +23,7 @@ export const all_veils_team: MistBlock[] = [
 		title: "Team Two",
 		category: "team",
 		preview: "/preview/veil/team/team-two",
-		itemId: "veil-team-two",
+		itemId: "team-two",
 		code: {
 			code: TeamTwoCode,
 			lang: "svelte",

@@ -9,7 +9,7 @@ export const all_mists_comparator: MistBlock[] = [
 		category: "comparator",
 		preview: "/preview/mist/comparator/one",
 
-		itemId: "mist-comparator-one",
+		itemId: "comparator-one",
 		code: [
 			{
 				code: ComparatorOneCode,

@@ -43,18 +43,18 @@
 	{@render header()}
 	<main>
 		<div
-			aria-hidden
+			aria-hidden={true}
 			class="absolute inset-0 isolate z-2 hidden opacity-50 contain-strict lg:block"
 		>
 			<div
 				class="absolute top-0 left-0 h-320 w-140 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]"
-			/>
+			></div>
 			<div
 				class="absolute top-0 left-0 h-320 w-60 [translate:5%_-50%] -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]"
-			/>
+			></div>
 			<div
 				class="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]"
-			/>
+			></div>
 		</div>
 
 		<section class="overflow-hidden bg-white dark:bg-transparent">
@@ -68,7 +68,7 @@
 						vitae, excepturi ducimus iste provident dolores.
 					</p>
 
-					<Button href="#" size="lg">
+					<Button href="/" size="lg">
 						<span class="btn-label">Start Building</span>
 					</Button>
 				</div>
@@ -79,30 +79,30 @@
 					<div class="[transform:rotateX(20deg);]">
 						<div class="relative skew-x-[.36rad] lg:h-176">
 							<div
-								aria-hidden
+								aria-hidden={true}
 								class="absolute -inset-16 z-1 bg-linear-to-b from-background via-transparent to-background sm:-inset-32"
-							/>
+							></div>
 							<div
-								aria-hidden
+								aria-hidden={true}
 								class="absolute -inset-16 z-1 bg-white/50 bg-linear-to-r from-background via-transparent to-background sm:-inset-32 dark:bg-transparent"
-							/>
+							></div>
 
 							<div
-								aria-hidden
-								class="absolute -inset-16 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] [--color-border:var(--color-zinc-400)] sm:-inset-32 dark:[--color-border:color-mix(in_oklab,var(--color-white)_20%,transparent)]"
-							/>
+								aria-hidden={true}
+								class="absolute -inset-16 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[24px_24px] [--color-border:var(--color-zinc-400)] sm:-inset-32 dark:[--color-border:color-mix(in_oklab,var(--color-white)_20%,transparent)]"
+							></div>
 							<div
-								aria-hidden
-								class="absolute inset-0 z-11 bg-gradient-to-l from-background"
-							/>
+								aria-hidden={true}
+								class="absolute inset-0 z-11 bg-linear-to-l from-background"
+							></div>
 							<div
-								aria-hidden
+								aria-hidden={true}
 								class="absolute inset-0 z-2 size-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,transparent_40%,var(--color-background)_100%)]"
-							/>
+							></div>
 							<div
-								aria-hidden
+								aria-hidden={true}
 								class="absolute inset-0 z-2 size-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,transparent_40%,var(--color-background)_100%)]"
-							/>
+							></div>
 
 							<img
 								class="relative z-1 rounded-(--radius) border dark:hidden"

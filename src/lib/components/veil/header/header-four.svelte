@@ -3,7 +3,9 @@
 	import { Button } from "$lib/components/ui/veil/button";
 	import Logo from "$lib/components/web/Logo.svelte";
 	import { cn } from "$lib/utils";
-	import { ChevronRight, Menu, X } from "@lucide/svelte";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
 
 	const menuItems = [
 		{ name: "Features", href: "#link" },
@@ -117,7 +119,7 @@
 									</li>
 								{/each}
 							</ul>
-							<Button size="sm" class="mx-2 gap-1 pr-1" href="#">
+							<Button size="sm" class="mx-2 gap-1 pr-1" href="/">
 								<span>Get started</span>
 								<ChevronRight class="opacity-50" />
 							</Button>
@@ -150,10 +152,10 @@
 							isScrolled && "lg:opacity-0 lg:blur-[4px]"
 						)}
 					>
-						<Button variant="ghost" size="sm" href="#">
+						<Button variant="ghost" size="sm" href="/">
 							<span>Login</span>
 						</Button>
-						<Button size="sm" href="#">
+						<Button size="sm" href="/">
 							<span>Sign Up</span>
 						</Button>
 					</div>

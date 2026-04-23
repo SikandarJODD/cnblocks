@@ -31,7 +31,7 @@
 						</span>
 
 						<div class="flex justify-center">
-							<Button href="#" size="lg">Get Started</Button>
+							<Button href="/" size="lg">Get Started</Button>
 						</div>
 
 						<p class="mt-12 text-sm text-muted-foreground">

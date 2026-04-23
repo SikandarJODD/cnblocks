@@ -5,7 +5,7 @@
 	"description": "Replit logo SVG component",
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\tlet { ...rest } = $props();\n</script>\n\n<svg\n\twidth=\"1em\"\n\theight=\"1em\"\n\tviewBox=\"0 0 20 24\"\n\tfill=\"none\"\n\txmlns=\"http://www.w3.org/2000/svg\"\n\t{...rest}\n>\n\t<path\n\t\td=\"M0 1.5C0 0.671573 0.671573 0 1.5 0H8.5C9.32843 0 10 0.671573 10 1.5V8H1.5C0.671573 8 0 7.32843 0 6.5V1.5Z\"\n\t\tfill=\"#F26207\"\n\t/>\n\t<path\n\t\td=\"M10 8H18.5C19.3284 8 20 8.67157 20 9.5V14.5C20 15.3284 19.3284 16 18.5 16H10V8Z\"\n\t\tfill=\"#F26207\"\n\t/>\n\t<path\n\t\td=\"M0 17.5C0 16.6716 0.671573 16 1.5 16H10V22.5C10 23.3284 9.32843 24 8.5 24H1.5C0.671573 24 0 23.3284 0 22.5V17.5Z\"\n\t\tfill=\"#F26207\"\n\t/>\n</svg>\n",
+			"content": "<script lang=\"ts\">\r\n\tlet { ...rest } = $props();\r\n</script>\r\n\r\n<svg\r\n\twidth=\"1em\"\r\n\theight=\"1em\"\r\n\tviewBox=\"0 0 20 24\"\r\n\tfill=\"none\"\r\n\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t{...rest}\r\n>\r\n\t<path\r\n\t\td=\"M0 1.5C0 0.671573 0.671573 0 1.5 0H8.5C9.32843 0 10 0.671573 10 1.5V8H1.5C0.671573 8 0 7.32843 0 6.5V1.5Z\"\r\n\t\tfill=\"#F26207\"\r\n\t/>\r\n\t<path\r\n\t\td=\"M10 8H18.5C19.3284 8 20 8.67157 20 9.5V14.5C20 15.3284 19.3284 16 18.5 16H10V8Z\"\r\n\t\tfill=\"#F26207\"\r\n\t/>\r\n\t<path\r\n\t\td=\"M0 17.5C0 16.6716 0.671573 16 1.5 16H10V22.5C10 23.3284 9.32843 24 8.5 24H1.5C0.671573 24 0 23.3284 0 22.5V17.5Z\"\r\n\t\tfill=\"#F26207\"\r\n\t/>\r\n</svg>\r\n",
 			"type": "registry:component",
 			"target": "blocks/logos/Replit.svelte"
 		}

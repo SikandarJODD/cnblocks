@@ -1,0 +1,25 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "footer-six",
+	"type": "registry:block",
+	"description": "Veil Footer component, variant Six.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"./theme-switcher.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Logo from \"$COMPONENTS$/web/Logo.svelte\";\r\n\timport SocialMediaOne from \"./social-media-one.svelte\";\r\n\timport ThemeSwitcher from \"./theme-switcher.svelte\";\r\n\r\n\ttype LinkItem = { label: string; href: string };\r\n\r\n\tconst links: LinkItem[] = [\r\n\t\t{ label: \"Features\", href: \"#\" },\r\n\t\t{ label: \"Pricing\", href: \"#\" },\r\n\t\t{ label: \"Blog\", href: \"#\" },\r\n\t];\r\n\r\n\tconst year = new Date().getFullYear();\r\n</script>\r\n\r\n<footer class=\"@container bg-background py-12\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"flex flex-col\">\r\n\t\t\t<a\r\n\t\t\t\thref=\"/\"\r\n\t\t\t\taria-label=\"go home\"\r\n\t\t\t\tclass=\"-ml-1.5 flex size-8 rounded-lg *:m-auto hover:bg-foreground/5\"\r\n\t\t\t>\r\n\t\t\t\t<Logo class=\"size-5\" />\r\n\t\t\t</a>\r\n\t\t\t<nav class=\"my-8 flex flex-col gap-y-4\">\r\n\t\t\t\t{#each links as link (link.label)}\r\n\t\t\t\t\t<a\r\n\t\t\t\t\t\thref={link.href}\r\n\t\t\t\t\t\tclass=\"text-sm text-muted-foreground transition-colors hover:text-foreground\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t{link.label}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t{/each}\r\n\t\t\t</nav>\r\n\r\n\t\t\t<div class=\"flex justify-between\">\r\n\t\t\t\t<ThemeSwitcher />\r\n\t\t\t\t<SocialMediaOne />\r\n\t\t\t</div>\r\n\r\n\t\t\t<p\r\n\t\t\t\tclass=\"mt-2 border-t border-dashed border-foreground/10 pt-6 text-sm text-muted-foreground\"\r\n\t\t\t>\r\n\t\t\t\t&copy; {year} Veil.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t</div>\r\n</footer>\r\n",
+			"type": "registry:component",
+			"target": "veil/footer/footer-six.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Linkedin, Twitter, Youtube } from \"$COMPONENTS$/icons\";\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport type { Component } from \"svelte\";\r\n\r\n\ttype SocialMedia = \"twitter\" | \"linkedin\" | \"youtube\";\r\n\r\n\ttype SocialItem = {\r\n\t\tid: SocialMedia;\r\n\t\tlabel: string;\r\n\t\thref: string;\r\n\t\ticon: Component;\r\n\t};\r\n\r\n\tconst socials: SocialItem[] = [\r\n\t\t{ id: \"twitter\", label: \"Twitter\", href: \"#\", icon: Twitter },\r\n\t\t{ id: \"linkedin\", label: \"LinkedIn\", href: \"#\", icon: Linkedin },\r\n\t\t{ id: \"youtube\", label: \"YouTube\", href: \"#\", icon: Youtube },\r\n\t];\r\n\r\n\tlet hoveredSocialMedia = $state<SocialMedia | null>(null);\r\n\r\n\tconst tooltipLabel = $derived.by(() => {\r\n\t\tswitch (hoveredSocialMedia ?? \"twitter\") {\r\n\t\t\tcase \"twitter\":\r\n\t\t\t\treturn \"Follow us on Twitter\";\r\n\t\t\tcase \"linkedin\":\r\n\t\t\t\treturn \"Follow us on LinkedIn\";\r\n\t\t\tcase \"youtube\":\r\n\t\t\t\treturn \"Follow us on YouTube\";\r\n\t\t\tdefault:\r\n\t\t\t\treturn \"Follow us\";\r\n\t\t}\r\n\t});\r\n</script>\r\n\r\n<div class=\"flex w-fit flex-col items-end\">\r\n\t<div class=\"-mr-2 mb-2 flex\">\r\n\t\t{#each socials as item (item.id)}\r\n\t\t\t<Button\r\n\t\t\t\thref={item.href}\r\n\t\t\t\ttarget=\"_blank\"\r\n\t\t\t\trel=\"noopener noreferrer\"\r\n\t\t\t\treferrerpolicy=\"no-referrer\"\r\n\t\t\t\tsize=\"icon\"\r\n\t\t\t\tvariant=\"ghost\"\r\n\t\t\t\taria-label={\"Follow us on \" + item.label}\r\n\t\t\t\taria-pressed={hoveredSocialMedia === item.id}\r\n\t\t\t\tclass={hoveredSocialMedia === item.id ? \"text-foreground\" : \"\"}\r\n\t\t\t\tonmouseenter={() => (hoveredSocialMedia = item.id)}\r\n\t\t\t\tonmouseleave={() => (hoveredSocialMedia = null)}\r\n\t\t\t\tonfocus={() => (hoveredSocialMedia = item.id)}\r\n\t\t\t\tonblur={() => (hoveredSocialMedia = null)}\r\n\t\t\t>\r\n\t\t\t\t<item.icon />\r\n\t\t\t</Button>\r\n\t\t{/each}\r\n\t</div>\r\n\r\n\t<div\r\n\t\taria-live=\"polite\"\r\n\t\tclass=\"w-fit text-xs leading-none text-muted-foreground transition-opacity duration-200\"\r\n\t\tclass:opacity-100={hoveredSocialMedia !== null}\r\n\t\tclass:opacity-0={hoveredSocialMedia === null}\r\n\t>\r\n\t\t{tooltipLabel}\r\n\t</div>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "veil/footer/social-media-one.svelte"
+		}
+	]
+}

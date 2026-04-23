@@ -13,7 +13,7 @@ export const all_veils_features: MistBlock[] = [
 		title: "Features One",
 		category: "features",
 		preview: "/preview/veil/features/features-one",
-		itemId: "veil-features-one",
+		itemId: "features-one",
 		code: {
 			code: FeaturesOneCode,
 			lang: "svelte",
@@ -25,7 +25,7 @@ export const all_veils_features: MistBlock[] = [
 		title: "Features Two",
 		category: "features",
 		preview: "/preview/veil/features/features-two",
-		itemId: "veil-features-two",
+		itemId: "features-two",
 		code: {
 			code: FeaturesTwoCode,
 			lang: "svelte",
@@ -37,7 +37,7 @@ export const all_veils_features: MistBlock[] = [
 		title: "Features Three",
 		category: "features",
 		preview: "/preview/veil/features/features-three",
-		itemId: "veil-features-three",
+		itemId: "features-three",
 		code: {
 			code: FeaturesThreeCode,
 			lang: "svelte",

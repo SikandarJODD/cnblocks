@@ -3,16 +3,12 @@
 	"name": "feature-card",
 	"type": "registry:block",
 	"description": "Reusable feature card with icon and text",
-	"devDependencies": [
-		"svelte"
-	],
 	"registryDependencies": [
-		"card",
-		"utils"
+		"card"
 	],
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\timport Card from \"$COMPONENTS$/ui/card/card.svelte\";\n\timport { cn } from \"$UTILS$\";\n\timport type { Snippet } from \"svelte\";\n\n\tlet { children, class: _class = \"\" }: { children: Snippet; class?: string } = $props();\n</script>\n\n<Card class={cn(\"group relative rounded-none shadow-zinc-950/5\", _class)}>\n\t{@render cardDecorator()}\n\t{@render children()}\n</Card>\n\n{#snippet cardDecorator()}\n\t<span\n\t\tclass=\"absolute -top-px -left-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-top-width: 2px;\n      border-left-width: 2px;\"\n\t></span>\n\t<span\n\t\tclass=\"absolute -top-px -right-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-top-width: 2px;\n      border-right-width: 2px;\"\n\t></span>\n\t<span\n\t\tclass=\"absolute -bottom-px -left-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-bottom-width: 2px;\n      border-left-width: 2px;\"\n\t></span>\n\t<span\n\t\tclass=\"absolute -right-px -bottom-px block size-2 border-primary\"\n\t\tstyle=\"\n      border-bottom-width: 2px;\n      border-right-width: 2px;\"\n\t></span>\n{/snippet}\n",
+			"content": "<script lang=\"ts\">\r\n\timport Card from \"$COMPONENTS$/ui/card/card.svelte\";\r\n\timport { cn } from \"$UTILS$\";\r\n\timport type { Snippet } from \"svelte\";\r\n\r\n\tlet { children, class: _class = \"\" }: { children: Snippet; class?: string } = $props();\r\n</script>\r\n\r\n<Card class={cn(\"group relative rounded-none shadow-zinc-950/5\", _class)}>\r\n\t{@render cardDecorator()}\r\n\t{@render children()}\r\n</Card>\r\n\r\n{#snippet cardDecorator()}\r\n\t<span\r\n\t\tclass=\"absolute -top-px -left-px block size-2 border-primary\"\r\n\t\tstyle=\"\r\n      border-top-width: 2px;\r\n      border-left-width: 2px;\"\r\n\t></span>\r\n\t<span\r\n\t\tclass=\"absolute -top-px -right-px block size-2 border-primary\"\r\n\t\tstyle=\"\r\n      border-top-width: 2px;\r\n      border-right-width: 2px;\"\r\n\t></span>\r\n\t<span\r\n\t\tclass=\"absolute -bottom-px -left-px block size-2 border-primary\"\r\n\t\tstyle=\"\r\n      border-bottom-width: 2px;\r\n      border-left-width: 2px;\"\r\n\t></span>\r\n\t<span\r\n\t\tclass=\"absolute -right-px -bottom-px block size-2 border-primary\"\r\n\t\tstyle=\"\r\n      border-bottom-width: 2px;\r\n      border-right-width: 2px;\"\r\n\t></span>\r\n{/snippet}\r\n",
 			"type": "registry:component",
 			"target": "blocks/feature/feature-card.svelte"
 		}

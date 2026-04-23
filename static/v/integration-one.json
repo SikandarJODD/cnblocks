@@ -1,0 +1,25 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-one",
+	"type": "registry:block",
+	"description": "Veil Integration component, variant One.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n\timport IntegrationIllustration from \"./integration-illustration.svelte\";\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<IntegrationIllustration />\r\n\t\t<div class=\"mx-auto mt-12 max-w-md text-center text-balance\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium\">Connect Your Favorite Tools</h2>\r\n\t\t\t<p class=\"mt-4 mb-6 text-muted-foreground\">\r\n\t\t\t\tSeamlessly integrate with the services you already use. Set up in minutes, not days.\r\n\t\t\t</p>\r\n\t\t\t<Button variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-1.5\">\r\n\t\t\t\tLearn more\r\n\t\t\t\t<ChevronRight />\r\n\t\t\t</Button>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/integration/integration-one.svelte"
+		},
+		{
+			"content": "<script>\r\n\timport {\r\n\t\tBolt as Logo,\r\n\t\tClerk,\r\n\t\tFirebase,\r\n\t\tLinear,\r\n\t\tSlack,\r\n\t\tSupabase,\r\n\t\tVercel,\r\n\t} from \"$LIB$/svgs/index\";\r\n</script>\r\n\r\n<div aria-hidden={true} class=\"mx-auto flex h-44 max-w-lg flex-col justify-between **:fill-foreground\">\r\n\t<div class=\"relative flex h-10 items-center justify-between gap-12 @lg:px-6\">\r\n\t\t<div class=\"absolute inset-0 my-auto h-px bg-border\"></div>\r\n\r\n\t\t<div\r\n\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t>\r\n\t\t\t<Vercel class=\"size-3.5\" />\r\n\t\t</div>\r\n\t\t<div\r\n\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t>\r\n\t\t\t<Slack class=\"size-3.5\" />\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"relative flex h-10 items-center justify-between px-12 @lg:px-24\">\r\n\t\t<div class=\"absolute inset-0 my-auto h-px bg-border\"></div>\r\n\t\t<div\r\n\t\t\tclass=\"absolute inset-0 my-auto h-px w-1/2 bg-linear-to-r from-primary via-amber-500 to-pink-400 mask-r-from-75% mask-r-to-75% mask-l-from-15% mask-l-to-40%\"\r\n\t\t></div>\r\n\t\t<div\r\n\t\t\tclass=\"absolute inset-0 my-auto ml-auto h-px w-1/2 bg-linear-to-r from-indigo-500 via-emerald-500 to-blue-400 mask-r-from-15% mask-r-to-40% mask-l-from-75% mask-l-to-75%\"\r\n\t\t></div>\r\n\r\n\t\t<div\r\n\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t>\r\n\t\t\t<Clerk class=\"size-3.5\" />\r\n\t\t</div>\r\n\t\t<div class=\"rounded-full border border-dashed border-foreground/15 p-2\">\r\n\t\t\t<div\r\n\t\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t\t>\r\n\t\t\t\t<Logo class=\"h-4\" />\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div\r\n\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t>\r\n\t\t\t<Linear class=\"size-3.5\" />\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"relative flex h-10 items-center justify-between gap-12 @lg:px-6\">\r\n\t\t<div class=\"absolute inset-0 my-auto h-px bg-border\"></div>\r\n\r\n\t\t<div\r\n\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t>\r\n\t\t\t<Supabase class=\"size-3.5\" />\r\n\t\t</div>\r\n\t\t<div\r\n\t\t\tclass=\"relative flex h-8 items-center rounded-full bg-card px-3 shadow-sm ring shadow-black/6.5 ring-border\"\r\n\t\t>\r\n\t\t\t<Firebase class=\"size-3.5\" />\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "veil/integration/integration-illustration.svelte"
+		}
+	]
+}

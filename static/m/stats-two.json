@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-two",
+	"type": "registry:block",
+	"description": "Mist-style two-column stats",
+	"files": [
+		{
+			"content": "<script>\r\n\t// Component logic here\r\n</script>\r\n\r\n<section>\r\n\t<div class=\"bg-muted/50 py-24\">\r\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t\t<div>\r\n\t\t\t\t<h2 class=\"text-4xl font-semibold lg:text-5xl\">Tailark in numbers</h2>\r\n\t\t\t\t<p class=\"mt-4 text-lg text-balance text-muted-foreground\">\r\n\t\t\t\t\tOur platform continues to grow with developers and businesses using our tools to\r\n\t\t\t\t\tcreate innovative solutions and enhance productivity.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"mt-8 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div class=\"text-4xl font-bold text-foreground\">90+</div>\r\n\t\t\t\t\t<p class=\"text-muted-foreground\">Integrations</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div class=\"text-4xl font-bold text-foreground\">56%</div>\r\n\t\t\t\t\t<p class=\"text-muted-foreground\">Productivity Boost</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div class=\"text-4xl font-bold text-foreground\">24/7</div>\r\n\t\t\t\t\t<p class=\"text-muted-foreground\">Customer Support</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div class=\"text-4xl font-bold text-foreground\">10k+</div>\r\n\t\t\t\t\t<p class=\"text-muted-foreground\">Active Users</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mstats/two.svelte"
+		}
+	]
+}

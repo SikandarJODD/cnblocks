@@ -60,10 +60,10 @@ Install a block from any variant:
 pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/r/hero-one.json
 
 # Mist
-pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/mist-hero-one.json
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
 
 # Veil
-pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/veil-hero-one.json
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json
 ```
 
 ## Inspiration

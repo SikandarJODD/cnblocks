@@ -3,7 +3,8 @@
 	import { Button } from "$lib/components/ui/veil/button";
 	import Logo from "$lib/components/web/Logo.svelte";
 	import { cn } from "$lib/utils";
-	import { Menu, X } from "@lucide/svelte";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
 
 	const menuItems = [
 		{ name: "Features", href: "#link" },
@@ -95,17 +96,17 @@
 							variant="ghost"
 							size="sm"
 							class={cn(isScrolled && "lg:hidden")}
-							href="#"
+							href="/"
 						>
 							<span>Login</span>
 						</Button>
-						<Button size="sm" class={cn(isScrolled && "lg:hidden")} href="#">
+						<Button size="sm" class={cn(isScrolled && "lg:hidden")} href="/">
 							<span>Sign Up</span>
 						</Button>
 						<Button
 							size="sm"
 							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-							href="#"
+							href="/"
 						>
 							<span>Get Started</span>
 						</Button>

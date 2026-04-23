@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/veil/button";
 	import { mode, resetMode, setMode } from "mode-watcher";
-	import { Monitor, Moon, Sun } from "@lucide/svelte";
+	import Monitor from "@lucide/svelte/icons/monitor";
+	import Sun from "@lucide/svelte/icons/sun";
+	import Moon from "@lucide/svelte/icons/moon";
 	import { fade, fly, scale } from "svelte/transition";
 
 	type ThemeOption = "system" | "light" | "dark";

@@ -271,7 +271,6 @@
 			"description": "Decorative card component with visual effects",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": ["svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/card-decorator.svelte",
@@ -284,9 +283,8 @@
 			"name": "feature-card",
 			"type": "registry:block",
 			"description": "Reusable feature card with icon and text",
-			"registryDependencies": ["card", "utils"],
+			"registryDependencies": ["card"],
 			"dependencies": [],
-			"devDependencies": ["svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-card.svelte",
@@ -376,7 +374,7 @@
 			"description": "Feature list with checkmarks and descriptions",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "dotted-map", "svelte"],
+			"devDependencies": ["@lucide/svelte", "dotted-map"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/feature/feature-nine.svelte",
@@ -389,7 +387,7 @@
 			"name": "feature-one",
 			"type": "registry:block",
 			"description": "Simple three-column feature grid",
-			"registryDependencies": ["card", "card-decorator"],
+			"registryDependencies": ["card", "local:card-decorator"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -434,7 +432,7 @@
 			"name": "feature-ten",
 			"type": "registry:block",
 			"description": "Feature block with centered image and cards",
-			"registryDependencies": ["card", "feature-card", "utils"],
+			"registryDependencies": ["card", "feature-card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -464,7 +462,7 @@
 			"name": "feature-three",
 			"type": "registry:block",
 			"description": "Three-column feature cards with borders",
-			"registryDependencies": ["card", "card-decorator"],
+			"registryDependencies": ["card", "local:card-decorator"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -494,7 +492,7 @@
 			"name": "feature-two",
 			"type": "registry:block",
 			"description": "Two-column feature with image on side",
-			"registryDependencies": ["card", "card-decorator"],
+			"registryDependencies": ["card", "local:card-decorator"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -554,7 +552,7 @@
 			"name": "footer-three",
 			"type": "registry:block",
 			"description": "Three-column footer with contact info",
-			"registryDependencies": ["button", "input", "label", "utils"],
+			"registryDependencies": ["button", "input", "label"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -629,9 +627,9 @@
 			"name": "hero-header-nine",
 			"type": "registry:block",
 			"description": "Header with mega menu navigation",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header-nine.svelte",
@@ -644,9 +642,9 @@
 			"name": "hero-header-seven",
 			"type": "registry:block",
 			"description": "Transparent header with centered logo",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header-seven.svelte",
@@ -659,9 +657,9 @@
 			"name": "hero-header",
 			"type": "registry:block",
 			"description": "Standard navigation header with logo and links",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/header/hero-header.svelte",
@@ -674,7 +672,7 @@
 			"name": "hero-eight",
 			"type": "registry:block",
 			"description": "Hero with video background and overlay",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -689,9 +687,14 @@
 			"name": "hero-five",
 			"type": "registry:block",
 			"description": "Hero section with app mockup image",
-			"registryDependencies": ["button", "marquee", "progressive-blur", "utils"],
+			"registryDependencies": [
+				"button",
+				"local:marquee",
+				"local:progressive-blur",
+				"local:svgs"
+			],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-five.svelte",
@@ -704,9 +707,14 @@
 			"name": "hero-four",
 			"type": "registry:block",
 			"description": "Split hero with image on right side",
-			"registryDependencies": ["button", "marquee", "utils"],
+			"registryDependencies": [
+				"button",
+				"local:marquee",
+				"local:progressive-blur",
+				"local:svgs"
+			],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-four.svelte",
@@ -719,9 +727,9 @@
 			"name": "hero-nine",
 			"type": "registry:block",
 			"description": "Hero with animated background elements",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-nine.svelte",
@@ -734,9 +742,9 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Classic centered hero with headline and CTA",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-one.svelte",
@@ -749,9 +757,9 @@
 			"name": "hero-seven",
 			"type": "registry:block",
 			"description": "Hero with gradient background and stats",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte", "swiper"],
+			"devDependencies": ["@lucide/svelte", "swiper"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-seven.svelte",
@@ -766,7 +774,7 @@
 			"description": "Hero section with logo cloud below",
 			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-six.svelte",
@@ -779,9 +787,14 @@
 			"name": "hero-three",
 			"type": "registry:block",
 			"description": "Hero with background image and overlay",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": [
+				"button",
+				"local:marquee",
+				"local:progressive-blur",
+				"local:svgs"
+			],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-three.svelte",
@@ -794,9 +807,9 @@
 			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Two-column hero with image carousel",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/hero/hero-two.svelte",
@@ -809,9 +822,9 @@
 			"name": "integration-cards",
 			"type": "registry:block",
 			"description": "Collection of integration card variants for logos",
-			"registryDependencies": ["button", "card", "utils"],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/blocks/integration/card/integration-card.svelte",
@@ -854,7 +867,7 @@
 			"name": "integration-eight",
 			"type": "registry:block",
 			"description": "Integration grid with animated connections",
-			"registryDependencies": ["button", "logo-collection"],
+			"registryDependencies": ["button", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -869,7 +882,7 @@
 			"name": "integration-five",
 			"type": "registry:block",
 			"description": "Integration showcase with hover details",
-			"registryDependencies": ["button", "integration-cards", "logo-collection"],
+			"registryDependencies": ["button", "local:integration-cards", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -884,7 +897,7 @@
 			"name": "integration-four",
 			"type": "registry:block",
 			"description": "Four-column integration logo grid",
-			"registryDependencies": ["button", "integration-cards", "logo-collection"],
+			"registryDependencies": ["button", "local:integration-cards", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -899,7 +912,7 @@
 			"name": "integration-one",
 			"type": "registry:block",
 			"description": "Simple integration logos in grid layout",
-			"registryDependencies": ["integration-cards", "logo-collection"],
+			"registryDependencies": ["local:integration-cards", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -914,7 +927,12 @@
 			"name": "integration-seven",
 			"type": "registry:block",
 			"description": "Integration section with categories",
-			"registryDependencies": ["button", "integration-cards", "logo-collection", "marquee"],
+			"registryDependencies": [
+				"button",
+				"local:integration-cards",
+				"local:logo-collection",
+				"local:marquee"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -929,7 +947,7 @@
 			"name": "integration-six",
 			"type": "registry:block",
 			"description": "Integration cards with descriptions",
-			"registryDependencies": ["button", "logo-collection"],
+			"registryDependencies": ["button", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -944,7 +962,7 @@
 			"name": "integration-three",
 			"type": "registry:block",
 			"description": "Three-column integration with icons",
-			"registryDependencies": ["button", "integration-cards", "logo-collection"],
+			"registryDependencies": ["button", "local:integration-cards", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -959,7 +977,7 @@
 			"name": "integration-two",
 			"type": "registry:block",
 			"description": "Two-row integration logo marquee",
-			"registryDependencies": ["button", "integration-cards", "logo-collection"],
+			"registryDependencies": ["button", "local:integration-cards", "local:logo-collection"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -1050,12 +1068,12 @@
 			"type": "registry:block",
 			"description": "Logo collection utilities and exports",
 			"registryDependencies": [
-				"logo-gemini",
-				"logo-google-palm",
-				"logo-magic-ui",
-				"logo-media-wiki",
-				"logo-replit",
-				"logo-vscodium"
+				"local:logo-gemini",
+				"local:logo-google-palm",
+				"local:logo-magic-ui",
+				"local:logo-media-wiki",
+				"local:logo-replit",
+				"local:logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -1131,7 +1149,7 @@
 			"name": "pricing-five",
 			"type": "registry:block",
 			"description": "Pricing table with feature comparison",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -1251,7 +1269,7 @@
 			"name": "stats-four",
 			"type": "registry:block",
 			"description": "Four-column stats with icons",
-			"registryDependencies": [],
+			"registryDependencies": ["local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -1428,1882 +1446,202 @@
 			]
 		},
 		{
-			"name": "veil-hero-one",
-			"type": "registry:block",
-			"description": "Veil Hero component, variant One.",
-			"registryDependencies": ["veil-header-one"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/hero/hero-one.svelte",
-					"type": "registry:component",
-					"target": "veil/hero/hero-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-hero-two",
-			"type": "registry:block",
-			"description": "Veil Hero component, variant Two.",
-			"registryDependencies": ["veil-header-two"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/hero/hero-two.svelte",
-					"type": "registry:component",
-					"target": "veil/hero/hero-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-hero-three",
-			"type": "registry:block",
-			"description": "Veil Hero component, variant Three.",
-			"registryDependencies": ["veil-header-three"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/hero/hero-three.svelte",
-					"type": "registry:component",
-					"target": "veil/hero/hero-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-hero-four",
-			"type": "registry:block",
-			"description": "Veil Hero component, variant Four.",
-			"registryDependencies": ["veil-header-four"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/hero/hero-four.svelte",
-					"type": "registry:component",
-					"target": "veil/hero/hero-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-hero-five",
-			"type": "registry:block",
-			"description": "Veil Hero component, variant Five.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/hero/hero-five.svelte",
-					"type": "registry:component",
-					"target": "veil/hero/hero-five.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-header-one",
-			"type": "registry:block",
-			"description": "Veil Header component, variant One.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/header/header-one.svelte",
-					"type": "registry:component",
-					"target": "veil/header/header-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-header-two",
-			"type": "registry:block",
-			"description": "Veil Header component, variant Two.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/header/header-two.svelte",
-					"type": "registry:component",
-					"target": "veil/header/header-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-header-three",
-			"type": "registry:block",
-			"description": "Veil Header component, variant Three.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/header/header-three.svelte",
-					"type": "registry:component",
-					"target": "veil/header/header-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-header-four",
-			"type": "registry:block",
-			"description": "Veil Header component, variant Four.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/header/header-four.svelte",
-					"type": "registry:component",
-					"target": "veil/header/header-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-features-one",
-			"type": "registry:block",
-			"description": "Veil Features component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/features/features-one.svelte",
-					"type": "registry:component",
-					"target": "veil/features/features-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-features-two",
-			"type": "registry:block",
-			"description": "Veil Features component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/features/features-two.svelte",
-					"type": "registry:component",
-					"target": "veil/features/features-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-features-three",
-			"type": "registry:block",
-			"description": "Veil Features component, variant Three.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/features/features-three.svelte",
-					"type": "registry:component",
-					"target": "veil/features/features-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-content-one",
-			"type": "registry:block",
-			"description": "Veil Content component, variant One.",
+			"name": "marquee",
+			"type": "registry:component",
+			"description": "Animated marquee component for horizontally or vertically scrolling content",
 			"registryDependencies": [],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/components/veil/content/content-one.svelte",
+					"path": "src/lib/components/magic/marquee/marquee.svelte",
 					"type": "registry:component",
-					"target": "veil/content/content-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-content-two",
-			"type": "registry:block",
-			"description": "Veil Content component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/content/content-two.svelte",
-					"type": "registry:component",
-					"target": "veil/content/content-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-content-three",
-			"type": "registry:block",
-			"description": "Veil Content component, variant Three.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/content/content-three.svelte",
-					"type": "registry:component",
-					"target": "veil/content/content-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-integration-one",
-			"type": "registry:block",
-			"description": "Veil Integration component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/integration/integration-one.svelte",
-					"type": "registry:component",
-					"target": "veil/integration/integration-one.svelte"
+					"target": "magic/marquee/marquee.svelte"
 				},
 				{
-					"path": "src/lib/components/veil/integration/integration-illustration.svelte",
-					"type": "registry:component",
-					"target": "veil/integration/integration-illustration.svelte"
+					"path": "src/lib/components/magic/marquee/index.ts",
+					"type": "registry:file",
+					"target": "magic/marquee/index.ts"
 				}
 			]
 		},
 		{
-			"name": "veil-integration-two",
-			"type": "registry:block",
-			"description": "Veil Integration component, variant Two.",
+			"name": "progressive-blur",
+			"type": "registry:component",
+			"description": "Progressive layered blur overlay component",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
+			"devDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/components/veil/integration/integration-two.svelte",
+					"path": "src/lib/components/magic/progressive-blur/progressive-blur.svelte",
 					"type": "registry:component",
-					"target": "veil/integration/integration-two.svelte"
+					"target": "magic/progressive-blur/progressive-blur.svelte"
 				},
 				{
-					"path": "src/lib/components/veil/integration/integration-illustration-two.svelte",
-					"type": "registry:component",
-					"target": "veil/integration/integration-illustration-two.svelte"
+					"path": "src/lib/components/magic/progressive-blur/index.ts",
+					"type": "registry:file",
+					"target": "magic/progressive-blur/index.ts"
 				}
 			]
 		},
 		{
-			"name": "veil-call-to-action-one",
+			"name": "logocloud-one",
 			"type": "registry:block",
-			"description": "Veil Call To Action component, variant One.",
-			"registryDependencies": [],
+			"description": "Logo cloud with partner logos in a centered wrap layout",
+			"registryDependencies": ["local:svgs"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/blocks/logocloud/logocloud-one.svelte",
+					"type": "registry:component",
+					"target": "blocks/logocloud/logocloud-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "logocloud-two",
+			"type": "registry:block",
+			"description": "Interactive logo cloud with hover call-to-action",
+			"registryDependencies": ["local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
-					"path": "src/lib/components/veil/call-to-action/call-to-action-one.svelte",
+					"path": "src/lib/components/blocks/logocloud/logocloud-two.svelte",
 					"type": "registry:component",
-					"target": "veil/call-to-action/call-to-action-one.svelte"
+					"target": "blocks/logocloud/logocloud-two.svelte"
 				}
 			]
 		},
 		{
-			"name": "veil-call-to-action-two",
+			"name": "logocloud-three",
 			"type": "registry:block",
-			"description": "Veil Call To Action component, variant Two.",
-			"registryDependencies": [],
+			"description": "Scrolling logo cloud marquee with progressive blur edges",
+			"registryDependencies": ["local:marquee", "local:progressive-blur", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
+			"devDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/components/veil/call-to-action/call-to-action-two.svelte",
+					"path": "src/lib/components/blocks/logocloud/logocloud-three.svelte",
 					"type": "registry:component",
-					"target": "veil/call-to-action/call-to-action-two.svelte"
+					"target": "blocks/logocloud/logocloud-three.svelte"
 				}
 			]
 		},
 		{
-			"name": "veil-call-to-action-three",
-			"type": "registry:block",
-			"description": "Veil Call To Action component, variant Three.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/call-to-action/call-to-action-three.svelte",
-					"type": "registry:component",
-					"target": "veil/call-to-action/call-to-action-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-call-to-action-four",
-			"type": "registry:block",
-			"description": "Veil Call To Action component, variant Four.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/call-to-action/call-to-action-four.svelte",
-					"type": "registry:component",
-					"target": "veil/call-to-action/call-to-action-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-stats-one",
-			"type": "registry:block",
-			"description": "Veil Stats component, variant One.",
+			"name": "svgs",
+			"type": "registry:component",
+			"description": "Shared SVG logo and icon components",
 			"registryDependencies": [],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/components/veil/stats/stats-one.svelte",
+					"path": "src/lib/svgs/beacon.svelte",
 					"type": "registry:component",
-					"target": "veil/stats/stats-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-stats-two",
-			"type": "registry:block",
-			"description": "Veil Stats component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/stats/stats-two.svelte",
-					"type": "registry:component",
-					"target": "veil/stats/stats-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-stats-three",
-			"type": "registry:block",
-			"description": "Veil Stats component, variant Three.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/stats/stats-three.svelte",
-					"type": "registry:component",
-					"target": "veil/stats/stats-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-stats-four",
-			"type": "registry:block",
-			"description": "Veil Stats component, variant Four.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/stats/stats-four.svelte",
-					"type": "registry:component",
-					"target": "veil/stats/stats-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-pricing-one",
-			"type": "registry:block",
-			"description": "Veil Pricing component, variant One.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/pricing/pricing-one.svelte",
-					"type": "registry:component",
-					"target": "veil/pricing/pricing-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-pricing-two",
-			"type": "registry:block",
-			"description": "Veil Pricing component, variant Two.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/pricing/pricing-two.svelte",
-					"type": "registry:component",
-					"target": "veil/pricing/pricing-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-pricing-three",
-			"type": "registry:block",
-			"description": "Veil Pricing component, variant Three.",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/pricing/pricing-three.svelte",
-					"type": "registry:component",
-					"target": "veil/pricing/pricing-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-testimonial-one",
-			"type": "registry:block",
-			"description": "Veil Testimonial component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/testimonial/testimonial-one.svelte",
-					"type": "registry:component",
-					"target": "veil/testimonial/testimonial-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-testimonial-two",
-			"type": "registry:block",
-			"description": "Veil Testimonial component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/testimonial/testimonial-two.svelte",
-					"type": "registry:component",
-					"target": "veil/testimonial/testimonial-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-testimonial-three",
-			"type": "registry:block",
-			"description": "Veil Testimonial component, variant Three.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/testimonial/testimonial-three.svelte",
-					"type": "registry:component",
-					"target": "veil/testimonial/testimonial-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-testimonial-four",
-			"type": "registry:block",
-			"description": "Veil Testimonial component, variant Four.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/testimonial/testimonial-four.svelte",
-					"type": "registry:component",
-					"target": "veil/testimonial/testimonial-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-team-one",
-			"type": "registry:block",
-			"description": "Veil Team component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/team/team-one.svelte",
-					"type": "registry:component",
-					"target": "veil/team/team-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-team-two",
-			"type": "registry:block",
-			"description": "Veil Team component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/team/team-two.svelte",
-					"type": "registry:component",
-					"target": "veil/team/team-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-logo-cloud-one",
-			"type": "registry:block",
-			"description": "Veil Logo Cloud component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/logo-cloud/logo-cloud-one.svelte",
-					"type": "registry:component",
-					"target": "veil/logo-cloud/logo-cloud-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-logo-cloud-two",
-			"type": "registry:block",
-			"description": "Veil Logo Cloud component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/logo-cloud/logo-cloud-two.svelte",
-					"type": "registry:component",
-					"target": "veil/logo-cloud/logo-cloud-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-faqs-one",
-			"type": "registry:block",
-			"description": "Veil FAQs component, variant One.",
-			"registryDependencies": ["accordion"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/faqs/faqs-one.svelte",
-					"type": "registry:component",
-					"target": "veil/faqs/faqs-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-faqs-two",
-			"type": "registry:block",
-			"description": "Veil FAQs component, variant Two.",
-			"registryDependencies": ["accordion"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/faqs/faqs-two.svelte",
-					"type": "registry:component",
-					"target": "veil/faqs/faqs-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-faqs-three",
-			"type": "registry:block",
-			"description": "Veil FAQs component, variant Three.",
-			"registryDependencies": ["accordion"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/faqs/faqs-three.svelte",
-					"type": "registry:component",
-					"target": "veil/faqs/faqs-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-faqs-four",
-			"type": "registry:block",
-			"description": "Veil FAQs component, variant Four.",
-			"registryDependencies": ["accordion"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/faqs/faqs-four.svelte",
-					"type": "registry:component",
-					"target": "veil/faqs/faqs-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-contact-one",
-			"type": "registry:block",
-			"description": "Veil Contact component, variant One.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/contact/contact-one.svelte",
-					"type": "registry:component",
-					"target": "veil/contact/contact-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-contact-two",
-			"type": "registry:block",
-			"description": "Veil Contact component, variant Two.",
-			"registryDependencies": ["label", "select"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/contact/contact-two.svelte",
-					"type": "registry:component",
-					"target": "veil/contact/contact-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-signup-one",
-			"type": "registry:block",
-			"description": "Veil Signup component, variant One.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/signup/signup-one.svelte",
-					"type": "registry:component",
-					"target": "veil/signup/signup-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-signup-two",
-			"type": "registry:block",
-			"description": "Veil Signup component, variant Two.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/signup/signup-two.svelte",
-					"type": "registry:component",
-					"target": "veil/signup/signup-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-signup-three",
-			"type": "registry:block",
-			"description": "Veil Signup component, variant Three.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/signup/signup-three.svelte",
-					"type": "registry:component",
-					"target": "veil/signup/signup-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-login-one",
-			"type": "registry:block",
-			"description": "Veil Login component, variant One.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/login/login-one.svelte",
-					"type": "registry:component",
-					"target": "veil/login/login-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-login-two",
-			"type": "registry:block",
-			"description": "Veil Login component, variant Two.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/login/login-two.svelte",
-					"type": "registry:component",
-					"target": "veil/login/login-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-login-three",
-			"type": "registry:block",
-			"description": "Veil Login component, variant Three.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/login/login-three.svelte",
-					"type": "registry:component",
-					"target": "veil/login/login-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-forgot-password-one",
-			"type": "registry:block",
-			"description": "Veil Forgot Password component, variant One.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/forgot-password/forgot-password-one.svelte",
-					"type": "registry:component",
-					"target": "veil/forgot-password/forgot-password-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-forgot-password-two",
-			"type": "registry:block",
-			"description": "Veil Forgot Password component, variant Two.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/forgot-password/forgot-password-two.svelte",
-					"type": "registry:component",
-					"target": "veil/forgot-password/forgot-password-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-forgot-password-three",
-			"type": "registry:block",
-			"description": "Veil Forgot Password component, variant Three.",
-			"registryDependencies": ["label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/forgot-password/forgot-password-three.svelte",
-					"type": "registry:component",
-					"target": "veil/forgot-password/forgot-password-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-comparator-one",
-			"type": "registry:block",
-			"description": "Veil Comparator component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/comparator/comparator-one.svelte",
-					"type": "registry:component",
-					"target": "veil/comparator/comparator-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-comparator-two",
-			"type": "registry:block",
-			"description": "Veil Comparator component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/comparator/comparator-two.svelte",
-					"type": "registry:component",
-					"target": "veil/comparator/comparator-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-comparator-three",
-			"type": "registry:block",
-			"description": "Veil Comparator component, variant Three.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/comparator/comparator-three.svelte",
-					"type": "registry:component",
-					"target": "veil/comparator/comparator-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-footer-one",
-			"type": "registry:block",
-			"description": "Veil Footer component, variant One.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/footer-one.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/footer-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-footer-two",
-			"type": "registry:block",
-			"description": "Veil Footer component, variant Two.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/footer-two.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/footer-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-footer-three",
-			"type": "registry:block",
-			"description": "Veil Footer component, variant Three.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/footer-three.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/footer-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-footer-four",
-			"type": "registry:block",
-			"description": "Veil Footer component, variant Four.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/footer-four.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/footer-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-footer-five",
-			"type": "registry:block",
-			"description": "Veil Footer component, variant Five.",
-			"registryDependencies": ["vhelper-theme-switcher"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/footer-five.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/footer-five.svelte"
-				}
-			]
-		},
-		{
-			"name": "veil-footer-six",
-			"type": "registry:block",
-			"description": "Veil Footer component, variant Six.",
-			"registryDependencies": ["vhelper-theme-switcher"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/footer-six.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/footer-six.svelte"
+					"target": "svgs/beacon.svelte"
 				},
 				{
-					"path": "src/lib/components/veil/footer/social-media-one.svelte",
+					"path": "src/lib/svgs/bolt.svelte",
 					"type": "registry:component",
-					"target": "veil/footer/social-media-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "vhelper-theme-switcher",
-			"type": "registry:block",
-			"description": "Internal Veil footer theme switcher helper.",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "mode-watcher", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/veil/footer/theme-switcher.svelte",
-					"type": "registry:component",
-					"target": "veil/footer/theme-switcher.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-comparator-one",
-			"type": "registry:block",
-			"description": "Mist-style before/after image comparison",
-			"registryDependencies": ["button"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcomparator/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mcomparator/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-contact-one",
-			"type": "registry:block",
-			"description": "Mist-style minimal contact form",
-			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcontact/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mcontact/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-content-four",
-			"type": "registry:block",
-			"description": "Mist-style content with feature grid",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcontent/four.svelte",
-					"type": "registry:component",
-					"target": "mist/mcontent/four.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-content-one",
-			"type": "registry:block",
-			"description": "Mist-style simple content block",
-			"registryDependencies": ["button", "toggle-group", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcontent/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mcontent/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-content-three",
-			"type": "registry:block",
-			"description": "Mist-style content with side image",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcontent/three.svelte",
-					"type": "registry:component",
-					"target": "mist/mcontent/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-content-two",
-			"type": "registry:block",
-			"description": "Mist-style two-column content",
-			"registryDependencies": ["button", "toggle-group", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcontent/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mcontent/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-cta-one",
-			"type": "registry:block",
-			"description": "Mist-style centered CTA block",
-			"registryDependencies": ["button"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcta/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mcta/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-cta-three",
-			"type": "registry:block",
-			"description": "Mist-style CTA with background",
-			"registryDependencies": ["button"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcta/three.svelte",
-					"type": "registry:component",
-					"target": "mist/mcta/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-cta-two",
-			"type": "registry:block",
-			"description": "Mist-style two-column CTA",
-			"registryDependencies": ["button"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mcta/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mcta/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-eight",
-			"type": "registry:block",
-			"description": "Mist-style feature with icon grid",
-			"registryDependencies": ["card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/eight.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/eight.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-eleven",
-			"type": "registry:block",
-			"description": "Mist-style feature with alternating rows",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/eleven.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/eleven.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-table",
-			"type": "registry:block",
-			"description": "Mist-style feature comparison table",
-			"registryDependencies": ["utils"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/feature-table.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/feature-table.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-five",
-			"type": "registry:block",
-			"description": "Mist-style feature with bullet points",
-			"registryDependencies": ["button"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/five.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/five.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-four",
-			"type": "registry:block",
-			"description": "Mist-style four-column feature grid",
-			"registryDependencies": ["button", "card", "toggle-group", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/four.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/four.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-nine",
-			"type": "registry:block",
-			"description": "Mist-style feature with checkmarks",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/nine.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/nine.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-one",
-			"type": "registry:block",
-			"description": "Mist-style simple feature grid",
-			"registryDependencies": ["card", "mist-feature-table"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-seven",
-			"type": "registry:block",
-			"description": "Mist-style feature with tabs",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/seven.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/seven.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-six",
-			"type": "registry:block",
-			"description": "Mist-style six-column feature grid",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/six.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/six.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-ten",
-			"type": "registry:block",
-			"description": "Mist-style feature with centered image",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/ten.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/ten.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-three",
-			"type": "registry:block",
-			"description": "Mist-style three-column feature cards",
-			"registryDependencies": ["button", "card", "toggle-group", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/three.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-feature-two",
-			"type": "registry:block",
-			"description": "Mist-style feature with side image",
-			"registryDependencies": ["card"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfeature/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mfeature/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-footer-four",
-			"type": "registry:block",
-			"description": "Mist-style multi-column footer",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfooter/four.svelte",
-					"type": "registry:component",
-					"target": "mist/mfooter/four.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-footer-one",
-			"type": "registry:block",
-			"description": "Mist-style simple centered footer",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfooter/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mfooter/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-footer-three",
-			"type": "registry:block",
-			"description": "Mist-style footer with contact info",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfooter/three.svelte",
-					"type": "registry:component",
-					"target": "mist/mfooter/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-footer-two",
-			"type": "registry:block",
-			"description": "Mist-style two-row footer",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mfooter/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mfooter/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-forgot-password-one",
-			"type": "registry:block",
-			"description": "Mist-style password reset form",
-			"registryDependencies": ["button", "input", "label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mforgot-password/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mforgot-password/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-hero-five",
-			"type": "registry:block",
-			"description": "Mist-style hero with app mockup",
-			"registryDependencies": ["button", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mhero/five/hero-five.svelte",
-					"type": "registry:component",
-					"target": "mist/mhero/five/hero-five.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-hero-four",
-			"type": "registry:block",
-			"description": "Mist-style split hero with image",
-			"registryDependencies": ["button", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mhero/four/header.svelte",
-					"type": "registry:component",
-					"target": "mist/mhero/four/header.svelte"
+					"target": "svgs/bolt.svelte"
 				},
 				{
-					"path": "src/lib/components/mist/mhero/four/hero-four.svelte",
+					"path": "src/lib/svgs/cisco.svelte",
 					"type": "registry:component",
-					"target": "mist/mhero/four/hero-four.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-hero-one",
-			"type": "registry:block",
-			"description": "Mist-style centered hero with CTA",
-			"registryDependencies": ["button", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mhero/one/header.svelte",
-					"type": "registry:component",
-					"target": "mist/mhero/one/header.svelte"
+					"target": "svgs/cisco.svelte"
 				},
 				{
-					"path": "src/lib/components/mist/mhero/one/hero-one.svelte",
+					"path": "src/lib/svgs/claude.svelte",
 					"type": "registry:component",
-					"target": "mist/mhero/one/hero-one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-hero-six",
-			"type": "registry:block",
-			"description": "Mist-style hero with logo cloud",
-			"registryDependencies": ["button", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mhero/six/hero-six.svelte",
-					"type": "registry:component",
-					"target": "mist/mhero/six/hero-six.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-hero-three",
-			"type": "registry:block",
-			"description": "Mist-style hero with background",
-			"registryDependencies": ["button", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mhero/three/header.svelte",
-					"type": "registry:component",
-					"target": "mist/mhero/three/header.svelte"
+					"target": "svgs/claude.svelte"
 				},
 				{
-					"path": "src/lib/components/mist/mhero/three/hero-three.svelte",
+					"path": "src/lib/svgs/clerk.svelte",
 					"type": "registry:component",
-					"target": "mist/mhero/three/hero-three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-hero-two",
-			"type": "registry:block",
-			"description": "Mist-style two-column hero",
-			"registryDependencies": ["button", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mhero/two/header.svelte",
-					"type": "registry:component",
-					"target": "mist/mhero/two/header.svelte"
+					"target": "svgs/clerk.svelte"
 				},
 				{
-					"path": "src/lib/components/mist/mhero/two/hero-two.svelte",
+					"path": "src/lib/svgs/figma.svelte",
 					"type": "registry:component",
-					"target": "mist/mhero/two/hero-two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-integration-card",
-			"type": "registry:block",
-			"description": "Mist-style integration logo card",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
-			"files": [
+					"target": "svgs/figma.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mintegration/integration-card.svelte",
+					"path": "src/lib/svgs/firebase.svelte",
 					"type": "registry:component",
-					"target": "mist/mintegration/integration-card.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-integration-one",
-			"type": "registry:block",
-			"description": "Mist-style integration grid",
-			"registryDependencies": [
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
-			],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/firebase.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mintegration/one.svelte",
+					"path": "src/lib/svgs/firebase-full.svelte",
 					"type": "registry:component",
-					"target": "mist/mintegration/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-integration-three",
-			"type": "registry:block",
-			"description": "Mist-style integration with icons",
-			"registryDependencies": [
-				"mist-integration-card",
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
-			],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/firebase-full.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mintegration/three.svelte",
+					"path": "src/lib/svgs/hulu.svelte",
 					"type": "registry:component",
-					"target": "mist/mintegration/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-integration-two",
-			"type": "registry:block",
-			"description": "Mist-style integration marquee",
-			"registryDependencies": [
-				"button",
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
-			],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/hulu.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mintegration/two.svelte",
+					"path": "src/lib/svgs/linear.svelte",
 					"type": "registry:component",
-					"target": "mist/mintegration/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-login-one",
-			"type": "registry:block",
-			"description": "Mist-style minimal login form",
-			"registryDependencies": ["button", "input", "label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/linear.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogin/one.svelte",
+					"path": "src/lib/svgs/send-feedback.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogin/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logocloud-one",
-			"type": "registry:block",
-			"description": "Mist-style grayscale logo cloud",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/send-feedback.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogocloud/one.svelte",
+					"path": "src/lib/svgs/slack.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogocloud/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logocloud-two",
-			"type": "registry:block",
-			"description": "Mist-style logo cloud with hover",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/slack.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogocloud/two.svelte",
+					"path": "src/lib/svgs/sponsor-project.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogocloud/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-gemini",
-			"type": "registry:block",
-			"description": "Mist-style Gemini AI logo SVG",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/sponsor-project.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/Gemini.svelte",
+					"path": "src/lib/svgs/spotify.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/Gemini.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-google-palm",
-			"type": "registry:block",
-			"description": "Mist-style Google PaLM logo SVG",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/spotify.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/GooglePaLM.svelte",
+					"path": "src/lib/svgs/supabase.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/GooglePaLM.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-collection",
-			"type": "registry:block",
-			"description": "Mist-style logo collection utilities",
-			"registryDependencies": [
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
-			],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/supabase.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/logos.ts",
+					"path": "src/lib/svgs/supabase-full.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/logos.ts"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-magic-ui",
-			"type": "registry:block",
-			"description": "Mist-style Magic UI logo SVG",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/supabase-full.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/MagicUI.svelte",
+					"path": "src/lib/svgs/svelte.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/MagicUI.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-media-wiki",
-			"type": "registry:block",
-			"description": "Mist-style MediaWiki logo SVG",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/svelte.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/MediaWiki.svelte",
+					"path": "src/lib/svgs/twilio.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/MediaWiki.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-replit",
-			"type": "registry:block",
-			"description": "Mist-style Replit logo SVG",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/twilio.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/Replit.svelte",
+					"path": "src/lib/svgs/vercel.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/Replit.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-logo-vscodium",
-			"type": "registry:block",
-			"description": "Mist-style VSCodium logo SVG",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
+					"target": "svgs/vercel.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mlogos/VSCodium.svelte",
+					"path": "src/lib/svgs/vercel-full.svelte",
 					"type": "registry:component",
-					"target": "mist/mlogos/VSCodium.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-pricing-one",
-			"type": "registry:block",
-			"description": "Mist-style simple pricing cards",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
+					"target": "svgs/vercel-full.svelte"
+				},
 				{
-					"path": "src/lib/components/mist/mpricing/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mpricing/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-pricing-two",
-			"type": "registry:block",
-			"description": "Mist-style pricing with toggle",
-			"registryDependencies": ["button", "card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mpricing/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mpricing/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-signup-one",
-			"type": "registry:block",
-			"description": "Mist-style minimal signup form",
-			"registryDependencies": ["button", "input", "label"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/msignup/one.svelte",
-					"type": "registry:component",
-					"target": "mist/msignup/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-stats-four",
-			"type": "registry:block",
-			"description": "Mist-style four-column stats",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mstats/four.svelte",
-					"type": "registry:component",
-					"target": "mist/mstats/four.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-stats-one",
-			"type": "registry:block",
-			"description": "Mist-style simple stats row",
-			"registryDependencies": ["card"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mstats/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mstats/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-stats-three",
-			"type": "registry:block",
-			"description": "Mist-style stats with descriptions",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mstats/three.svelte",
-					"type": "registry:component",
-					"target": "mist/mstats/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-stats-two",
-			"type": "registry:block",
-			"description": "Mist-style two-column stats",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mstats/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mstats/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-team-one",
-			"type": "registry:block",
-			"description": "Mist-style team member grid",
-			"registryDependencies": ["avatar", "button"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mteam/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mteam/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-team-two",
-			"type": "registry:block",
-			"description": "Mist-style team with social links",
-			"registryDependencies": ["avatar", "button", "hover-card"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mteam/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mteam/two.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-testimonial-five",
-			"type": "registry:block",
-			"description": "Mist-style testimonial carousel",
-			"registryDependencies": ["avatar"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mtestimonial/five.svelte",
-					"type": "registry:component",
-					"target": "mist/mtestimonial/five.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-testimonial-four",
-			"type": "registry:block",
-			"description": "Mist-style four-column testimonials",
-			"registryDependencies": ["avatar"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mtestimonial/four.svelte",
-					"type": "registry:component",
-					"target": "mist/mtestimonial/four.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-testimonial-one",
-			"type": "registry:block",
-			"description": "Mist-style centered testimonial",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mtestimonial/one.svelte",
-					"type": "registry:component",
-					"target": "mist/mtestimonial/one.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-testimonial-three",
-			"type": "registry:block",
-			"description": "Mist-style three-column testimonials",
-			"registryDependencies": ["avatar", "utils"],
-			"dependencies": [],
-			"devDependencies": ["@lucide/svelte"],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mtestimonial/three.svelte",
-					"type": "registry:component",
-					"target": "mist/mtestimonial/three.svelte"
-				}
-			]
-		},
-		{
-			"name": "mist-testimonial-two",
-			"type": "registry:block",
-			"description": "Mist-style two-column testimonials",
-			"registryDependencies": ["avatar"],
-			"dependencies": [],
-			"devDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/components/mist/mtestimonial/two.svelte",
-					"type": "registry:component",
-					"target": "mist/mtestimonial/two.svelte"
+					"path": "src/lib/svgs/index.ts",
+					"type": "registry:file",
+					"target": "svgs/index.ts"
 				}
 			]
 		}

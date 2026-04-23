@@ -207,7 +207,7 @@
 								>
 									Continuous Growth
 								</h2>
-								<p class="text-sm text-foreground text-muted-foreground">
+								<p class="text-sm text-muted-foreground">
 									Stay ahead with the latest trends in web development and
 									innovation.
 								</p>

@@ -5,6 +5,7 @@
 		AccordionItem,
 		AccordionTrigger,
 	} from "$lib/components/ui/accordion";
+
 	let faqItems = [
 		{
 			id: "item-1",

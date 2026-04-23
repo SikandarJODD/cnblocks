@@ -16,7 +16,7 @@
 					<h1 class="text-3xl font-semibold text-foreground">Welcome back!</h1>
 					<p class="text-sm text-muted-foreground">
 						First time here?{" "}
-						<a href="#" class="text-foreground hover:underline"> Sign up for free </a>
+						<a href="/" class="text-foreground hover:underline"> Sign up for free </a>
 					</p>
 				</div>
 
@@ -42,9 +42,9 @@
 
 				<p class="w-11/12 text-center text-xs text-muted-foreground">
 					You acknowledge that you read, and agree, to our{" "}
-					<a href="#" class="underline hover:text-foreground"> Terms of Service </a>{" "}
+					<a href="/" class="underline hover:text-foreground"> Terms of Service </a>{" "}
 					and our{" "}
-					<a href="#" class="underline hover:text-foreground"> Privacy Policy </a>
+					<a href="/" class="underline hover:text-foreground"> Privacy Policy </a>
 					.
 				</p>
 			</div>

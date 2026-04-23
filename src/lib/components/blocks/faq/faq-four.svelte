@@ -5,6 +5,7 @@
 		AccordionItem,
 		AccordionTrigger,
 	} from "$lib/components/ui/accordion";
+
 	const faqItems = [
 		{
 			id: "item-1",
@@ -70,7 +71,7 @@
 
 			<p class="mx-auto mt-6 w-fit text-sm text-muted-foreground">
 				Can't find what you're looking for? Contact our{" "}
-				<a href="#" class="font-medium text-primary hover:underline">
+				<a href="/" class="font-medium text-primary hover:underline">
 					customer support team
 				</a>
 			</p>

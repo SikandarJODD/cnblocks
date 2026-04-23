@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { cn } from "$lib/utils";
-	import { type Icon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
 	import Calendar from "@lucide/svelte/icons/calendar";
 	import MapIcon from "@lucide/svelte/icons/map";
 
@@ -27,7 +27,7 @@
 	}
 
 	interface CardHeadingProps {
-		icon: typeof Icon;
+		icon: LucideIcon;
 		title: string;
 		description: string;
 	}

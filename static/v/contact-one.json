@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "contact-one",
+	"type": "registry:block",
+	"description": "Veil Contact component, variant One.",
+	"registryDependencies": [
+		"button",
+		"card",
+		"input",
+		"label",
+		"textarea"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\r\n\timport { Input } from \"$COMPONENTS$/ui/veil/input\";\r\n\timport { Label } from \"$COMPONENTS$/ui/label\";\r\n\timport { Textarea } from \"$COMPONENTS$/ui/veil/textarea\";\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-3xl px-6\">\r\n\t\t<div>\r\n\t\t\t<h1 class=\"font-serif text-4xl font-medium text-balance sm:text-5xl\">Get in Touch</h1>\r\n\t\t\t<p class=\"mt-4 max-w-md text-balance text-muted-foreground\">\r\n\t\t\t\tHave questions? We'd love to hear from you. Send us a message and we'll respond as\r\n\t\t\t\tsoon as possible.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"mt-12 grid gap-8 @xl:grid-cols-5\">\r\n\t\t\t<div class=\"space-y-6 *:space-y-2 @xl:col-span-2\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<p class=\"text-sm font-medium text-foreground\">Email</p>\r\n\t\t\t\t\t<a\r\n\t\t\t\t\t\thref=\"mailto:hello@example.com\"\r\n\t\t\t\t\t\tclass=\"text-sm text-muted-foreground hover:text-primary\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\thello@example.com\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<p class=\"text-sm font-medium text-foreground\">Phone</p>\r\n\t\t\t\t\t<a\r\n\t\t\t\t\t\thref=\"tel:+1234567890\"\r\n\t\t\t\t\t\tclass=\"text-sm text-muted-foreground hover:text-primary\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t+1 (234) 567-890\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<p class=\"text-sm font-medium text-foreground\">Office</p>\r\n\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t123 Main Street, San Francisco, CA 94102\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<Card variant=\"outline\" class=\"p-6 @xl:col-span-3\">\r\n\t\t\t\t<form action=\"\" class=\"space-y-5\">\r\n\t\t\t\t\t<div class=\"grid gap-4 @md:grid-cols-2\">\r\n\t\t\t\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t\t\t\t<Label for=\"name\" class=\"text-sm\">Name</Label>\r\n\t\t\t\t\t\t\t<Input\r\n\t\t\t\t\t\t\t\ttype=\"text\"\r\n\t\t\t\t\t\t\t\tid=\"name\"\r\n\t\t\t\t\t\t\t\tname=\"name\"\r\n\t\t\t\t\t\t\t\tplaceholder=\"Your name\"\r\n\t\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t\t\t\t<Label for=\"email\" class=\"text-sm\">Email</Label>\r\n\t\t\t\t\t\t\t<Input\r\n\t\t\t\t\t\t\t\ttype=\"email\"\r\n\t\t\t\t\t\t\t\tid=\"email\"\r\n\t\t\t\t\t\t\t\tname=\"email\"\r\n\t\t\t\t\t\t\t\tplaceholder=\"you@example.com\"\r\n\t\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t\t\t<Label for=\"subject\" class=\"text-sm\">Subject</Label>\r\n\t\t\t\t\t\t<Input\r\n\t\t\t\t\t\t\ttype=\"text\"\r\n\t\t\t\t\t\t\tid=\"subject\"\r\n\t\t\t\t\t\t\tname=\"subject\"\r\n\t\t\t\t\t\t\tplaceholder=\"How can we help?\"\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t\t\t<Label for=\"message\" class=\"text-sm\">Message</Label>\r\n\t\t\t\t\t\t<Textarea\r\n\t\t\t\t\t\t\tid=\"message\"\r\n\t\t\t\t\t\t\tname=\"message\"\r\n\t\t\t\t\t\t\trows={4}\r\n\t\t\t\t\t\t\tplaceholder=\"Tell us more...\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\tclass=\"min-h-28\"\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<Button class=\"w-full\" type=\"submit\">Send Message</Button>\r\n\t\t\t\t</form>\r\n\t\t\t</Card>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/contact/contact-one.svelte"
+		}
+	]
+}

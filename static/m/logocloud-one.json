@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logocloud-one",
+	"type": "registry:block",
+	"description": "Mist-style grayscale logo cloud",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Cisco, Slack, Spotify, Vercel } from \"$LIB$/svgs\";\r\n</script>\r\n\r\n<section>\r\n\t<div class=\"mx-auto max-w-5xl px-6 py-8\">\r\n\t\t<div>\r\n\t\t\t<p class=\"font-medium text-muted-foreground\">Trusted by teams at :</p>\r\n\t\t\t<div class=\"mt-4 flex items-center gap-12\">\r\n\t\t\t\t<div class=\"flex items-center justify-center\">\r\n\t\t\t\t\t<Vercel class=\"h-5 w-full text-foreground\" variant=\"full\" />\r\n\t\t\t\t</div>\r\n\r\n\t\t\t\t<div class=\"flex items-center justify-center\">\r\n\t\t\t\t\t<Cisco class=\"h-4 w-full text-foreground\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"flex items-center justify-center\">\r\n\t\t\t\t\t<Slack class=\"h-4 w-full\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"flex items-center justify-center\">\r\n\t\t\t\t\t<Spotify class=\"h-5 w-full\" />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mlogocloud/one.svelte"
+		}
+	]
+}

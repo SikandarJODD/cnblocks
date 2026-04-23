@@ -77,7 +77,7 @@
 
 		<p class="mt-8 text-center text-sm text-muted-foreground">
 			Already have an account?
-			<Button href="#" variant="link" class="px-1 font-medium text-primary">Sign in</Button>
+			<Button href="/" variant="link" class="px-1 font-medium text-primary">Sign in</Button>
 		</p>
 	</div>
 </section>

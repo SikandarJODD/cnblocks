@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-five",
+	"type": "registry:block",
+	"description": "Mist-style feature with bullet points",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport CalendarCheck from \"@lucide/svelte/icons/calendar-check\";\r\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n\timport Target from \"@lucide/svelte/icons/target\";\r\n</script>\r\n\r\n<section\r\n\tclass=\"[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]\"\r\n>\r\n\t<div class=\"bg-muted/50 py-24\">\r\n\t\t<div class=\"mx-auto w-full max-w-5xl px-6\">\r\n\t\t\t<div class=\"grid gap-12 md:grid-cols-5\">\r\n\t\t\t\t<div class=\"md:col-span-2\">\r\n\t\t\t\t\t<h2 class=\"text-4xl font-semibold text-balance text-foreground\">\r\n\t\t\t\t\t\tThe AI Coding Assistant that helps you write code faster\r\n\t\t\t\t\t</h2>\r\n\t\t\t\t\t<Button class=\"mt-8 pr-2\" variant=\"outline\" href=\"/\">\r\n\t\t\t\t\t\tLearn more\r\n\t\t\t\t\t\t<ChevronRight class=\"size-4 opacity-50\" />\r\n\t\t\t\t\t</Button>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t\t<div class=\"space-y-6 md:col-span-3 md:space-y-10\">\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t<Target class=\"size-5\" />\r\n\t\t\t\t\t\t\t<h3 class=\"text-lg font-semibold text-foreground\">Code Generation</h3>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<p class=\"mt-3 text-balance text-muted-foreground\">\r\n\t\t\t\t\t\t\tJust describe the code you want to write and we'll generate it for you.\r\n\t\t\t\t\t\t\tFrom boilerplate code to complex business logic, we've got you covered.\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t<CalendarCheck class=\"size-5\" />\r\n\t\t\t\t\t\t\t<h3 class=\"text-lg font-semibold text-foreground\">Code Review</h3>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<p class=\"mt-3 text-balance text-muted-foreground\">\r\n\t\t\t\t\t\t\tGet instant feedback on your code. Our AI will review your code and\r\n\t\t\t\t\t\t\tsuggest improvements in terms of best practices and performance.\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"relative -mx-12 mt-16 px-12\">\r\n\t\t\t\t<div\r\n\t\t\t\t\tclass=\"relative mx-auto overflow-hidden rounded-xl border border-foreground/20 bg-background shadow-lg ring-1 shadow-black/10\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<img src=\"/mist/tailark-2.png\" alt=\"app screen\" width=\"2880\" height=\"1842\" />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mfeature/five.svelte"
+		}
+	]
+}

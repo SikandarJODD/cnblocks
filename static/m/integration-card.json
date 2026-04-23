@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-card",
+	"type": "registry:block",
+	"description": "Mist-style integration logo card",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport Card from \"$COMPONENTS$/ui/card/card.svelte\";\r\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n\timport type { Snippet } from \"svelte\";\r\n\r\n\ttype IntegrationCardProps = {\r\n\t\ttitle: string;\r\n\t\tdescription: string;\r\n\t\tchildren?: Snippet;\r\n\t};\r\n\tlet { children, title, description }: IntegrationCardProps = $props();\r\n</script>\r\n\r\n<Card variant=\"soft\" class=\"p-6\">\r\n\t<div class=\"relative\">\r\n\t\t<div class=\"*:size-10\">{@render children?.()}</div>\r\n\t\t<div class=\"mt-6 space-y-1.5\">\r\n\t\t\t<h3 class=\"text-lg font-semibold\">{title}</h3>\r\n\t\t\t<p class=\"line-clamp-2 text-muted-foreground\">{description}</p>\r\n\t\t</div>\r\n\t</div>\r\n</Card>\r\n",
+			"type": "registry:component",
+			"target": "mist/mintegration/integration-card.svelte"
+		}
+	]
+}

@@ -8,6 +8,8 @@ import Terminal from "./terminal.svelte";
 import Code from "./code.svelte";
 import MCP from "./mcp.svelte";
 import Markdown from "./markdown.svelte";
+import Linkedin from "./linkedin.svelte";
+import Youtube from "./youtube.svelte";
 
 export interface Props extends HTMLAttributes<SVGElement> {
 	class?: string;
@@ -15,4 +17,16 @@ export interface Props extends HTMLAttributes<SVGElement> {
 	height?: number;
 }
 
-export { GitHub, CSS, TypeScript, Twitter, Svelte, Terminal, Code as CodeIcon, MCP, Markdown };
+export {
+	GitHub,
+	CSS,
+	TypeScript,
+	Twitter,
+	Svelte,
+	Terminal,
+	Code as CodeIcon,
+	MCP,
+	Markdown,
+	Linkedin,
+	Youtube,
+};

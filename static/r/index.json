@@ -203,9 +203,6 @@
 		"type": "registry:block",
 		"description": "Decorative card component with visual effects",
 		"dependencies": [],
-		"devDependencies": [
-			"svelte"
-		],
 		"registryDependencies": [],
 		"relativeUrl": "card-decorator.json"
 	},
@@ -214,12 +211,8 @@
 		"type": "registry:block",
 		"description": "Reusable feature card with icon and text",
 		"dependencies": [],
-		"devDependencies": [
-			"svelte"
-		],
 		"registryDependencies": [
-			"card",
-			"utils"
+			"card"
 		],
 		"relativeUrl": "feature-card.json"
 	},
@@ -283,8 +276,7 @@
 		"dependencies": [],
 		"devDependencies": [
 			"@lucide/svelte",
-			"dotted-map",
-			"svelte"
+			"dotted-map"
 		],
 		"registryDependencies": [],
 		"relativeUrl": "feature-nine.json"
@@ -299,7 +291,7 @@
 		],
 		"registryDependencies": [
 			"card",
-			"card-decorator"
+			"local:card-decorator"
 		],
 		"relativeUrl": "feature-one.json"
 	},
@@ -335,8 +327,7 @@
 		],
 		"registryDependencies": [
 			"card",
-			"feature-card",
-			"utils"
+			"feature-card"
 		],
 		"relativeUrl": "feature-ten.json"
 	},
@@ -359,7 +350,7 @@
 		],
 		"registryDependencies": [
 			"card",
-			"card-decorator"
+			"local:card-decorator"
 		],
 		"relativeUrl": "feature-three.json"
 	},
@@ -384,7 +375,7 @@
 		],
 		"registryDependencies": [
 			"card",
-			"card-decorator"
+			"local:card-decorator"
 		],
 		"relativeUrl": "feature-two.json"
 	},
@@ -430,8 +421,7 @@
 		"registryDependencies": [
 			"button",
 			"input",
-			"label",
-			"utils"
+			"label"
 		],
 		"relativeUrl": "footer-three.json"
 	},
@@ -489,12 +479,10 @@
 		"description": "Header with mega menu navigation",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"utils"
+			"button"
 		],
 		"relativeUrl": "hero-header-nine.json"
 	},
@@ -504,12 +492,10 @@
 		"description": "Transparent header with centered logo",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"utils"
+			"button"
 		],
 		"relativeUrl": "hero-header-seven.json"
 	},
@@ -519,12 +505,10 @@
 		"description": "Standard navigation header with logo and links",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"utils"
+			"button"
 		],
 		"relativeUrl": "hero-header.json"
 	},
@@ -537,7 +521,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"button",
+			"local:svgs"
 		],
 		"relativeUrl": "hero-eight.json"
 	},
@@ -547,14 +532,13 @@
 		"description": "Hero section with app mockup image",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button",
-			"marquee",
-			"progressive-blur",
-			"utils"
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
 		],
 		"relativeUrl": "hero-five.json"
 	},
@@ -564,13 +548,13 @@
 		"description": "Split hero with image on right side",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button",
-			"marquee",
-			"utils"
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
 		],
 		"relativeUrl": "hero-four.json"
 	},
@@ -580,11 +564,11 @@
 		"description": "Hero with animated background elements",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"button",
+			"local:svgs"
 		],
 		"relativeUrl": "hero-nine.json"
 	},
@@ -594,12 +578,11 @@
 		"description": "Classic centered hero with headline and CTA",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button",
-			"utils"
+			"local:svgs"
 		],
 		"relativeUrl": "hero-one.json"
 	},
@@ -610,12 +593,10 @@
 		"dependencies": [],
 		"devDependencies": [
 			"@lucide/svelte",
-			"svelte",
 			"swiper"
 		],
 		"registryDependencies": [
-			"button",
-			"utils"
+			"button"
 		],
 		"relativeUrl": "hero-seven.json"
 	},
@@ -625,8 +606,7 @@
 		"description": "Hero section with logo cloud below",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button"
@@ -639,12 +619,13 @@
 		"description": "Hero with background image and overlay",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button",
-			"utils"
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
 		],
 		"relativeUrl": "hero-three.json"
 	},
@@ -654,12 +635,11 @@
 		"description": "Two-column hero with image carousel",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button",
-			"utils"
+			"local:svgs"
 		],
 		"relativeUrl": "hero-two.json"
 	},
@@ -669,13 +649,11 @@
 		"description": "Collection of integration card variants for logos",
 		"dependencies": [],
 		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [
 			"button",
-			"card",
-			"utils"
+			"card"
 		],
 		"relativeUrl": "integration-cards.json"
 	},
@@ -689,7 +667,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"logo-collection"
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-eight.json"
 	},
@@ -701,8 +679,8 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"button",
-			"integration-cards",
-			"logo-collection"
+			"local:integration-cards",
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-five.json"
 	},
@@ -714,8 +692,8 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"button",
-			"integration-cards",
-			"logo-collection"
+			"local:integration-cards",
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-four.json"
 	},
@@ -726,8 +704,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"integration-cards",
-			"logo-collection"
+			"local:integration-cards",
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-one.json"
 	},
@@ -739,9 +717,9 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"button",
-			"integration-cards",
-			"logo-collection",
-			"marquee"
+			"local:integration-cards",
+			"local:logo-collection",
+			"local:marquee"
 		],
 		"relativeUrl": "integration-seven.json"
 	},
@@ -755,7 +733,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"logo-collection"
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-six.json"
 	},
@@ -767,8 +745,8 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"button",
-			"integration-cards",
-			"logo-collection"
+			"local:integration-cards",
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-three.json"
 	},
@@ -780,8 +758,8 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"button",
-			"integration-cards",
-			"logo-collection"
+			"local:integration-cards",
+			"local:logo-collection"
 		],
 		"relativeUrl": "integration-two.json"
 	},
@@ -849,12 +827,12 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"logo-gemini",
-			"logo-google-palm",
-			"logo-magic-ui",
-			"logo-media-wiki",
-			"logo-replit",
-			"logo-vscodium"
+			"local:logo-gemini",
+			"local:logo-google-palm",
+			"local:logo-magic-ui",
+			"local:logo-media-wiki",
+			"local:logo-replit",
+			"local:logo-vscodium"
 		],
 		"relativeUrl": "logo-collection.json"
 	},
@@ -903,7 +881,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"button",
+			"local:svgs"
 		],
 		"relativeUrl": "pricing-five.json"
 	},
@@ -1007,7 +986,9 @@
 		"description": "Four-column stats with icons",
 		"dependencies": [],
 		"devDependencies": [],
-		"registryDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
 		"relativeUrl": "stats-four.json"
 	},
 	{
@@ -1124,1427 +1105,67 @@
 		"relativeUrl": "testimonial-two.json"
 	},
 	{
-		"name": "veil-hero-one",
+		"name": "marquee",
+		"type": "registry:component",
+		"description": "Animated marquee component for horizontally or vertically scrolling content",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "marquee.json"
+	},
+	{
+		"name": "progressive-blur",
+		"type": "registry:component",
+		"description": "Progressive layered blur overlay component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "progressive-blur.json"
+	},
+	{
+		"name": "logocloud-one",
 		"type": "registry:block",
-		"description": "Veil Hero component, variant One.",
+		"description": "Logo cloud with partner logos in a centered wrap layout",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logocloud-one.json"
+	},
+	{
+		"name": "logocloud-two",
+		"type": "registry:block",
+		"description": "Interactive logo cloud with hover call-to-action",
 		"dependencies": [],
 		"devDependencies": [
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"veil-header-one"
+			"local:svgs"
 		],
-		"relativeUrl": "veil-hero-one.json"
+		"relativeUrl": "logocloud-two.json"
 	},
 	{
-		"name": "veil-hero-two",
+		"name": "logocloud-three",
 		"type": "registry:block",
-		"description": "Veil Hero component, variant Two.",
+		"description": "Scrolling logo cloud marquee with progressive blur edges",
 		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
+		"devDependencies": [],
 		"registryDependencies": [
-			"veil-header-two"
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
 		],
-		"relativeUrl": "veil-hero-two.json"
+		"relativeUrl": "logocloud-three.json"
 	},
 	{
-		"name": "veil-hero-three",
-		"type": "registry:block",
-		"description": "Veil Hero component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"veil-header-three"
-		],
-		"relativeUrl": "veil-hero-three.json"
-	},
-	{
-		"name": "veil-hero-four",
-		"type": "registry:block",
-		"description": "Veil Hero component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"veil-header-four"
-		],
-		"relativeUrl": "veil-hero-four.json"
-	},
-	{
-		"name": "veil-hero-five",
-		"type": "registry:block",
-		"description": "Veil Hero component, variant Five.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-hero-five.json"
-	},
-	{
-		"name": "veil-header-one",
-		"type": "registry:block",
-		"description": "Veil Header component, variant One.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-header-one.json"
-	},
-	{
-		"name": "veil-header-two",
-		"type": "registry:block",
-		"description": "Veil Header component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-header-two.json"
-	},
-	{
-		"name": "veil-header-three",
-		"type": "registry:block",
-		"description": "Veil Header component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-header-three.json"
-	},
-	{
-		"name": "veil-header-four",
-		"type": "registry:block",
-		"description": "Veil Header component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-header-four.json"
-	},
-	{
-		"name": "veil-features-one",
-		"type": "registry:block",
-		"description": "Veil Features component, variant One.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-features-one.json"
-	},
-	{
-		"name": "veil-features-two",
-		"type": "registry:block",
-		"description": "Veil Features component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-features-two.json"
-	},
-	{
-		"name": "veil-features-three",
-		"type": "registry:block",
-		"description": "Veil Features component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-features-three.json"
-	},
-	{
-		"name": "veil-content-one",
-		"type": "registry:block",
-		"description": "Veil Content component, variant One.",
+		"name": "svgs",
+		"type": "registry:component",
+		"description": "Shared SVG logo and icon components",
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [],
-		"relativeUrl": "veil-content-one.json"
-	},
-	{
-		"name": "veil-content-two",
-		"type": "registry:block",
-		"description": "Veil Content component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-content-two.json"
-	},
-	{
-		"name": "veil-content-three",
-		"type": "registry:block",
-		"description": "Veil Content component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-content-three.json"
-	},
-	{
-		"name": "veil-integration-one",
-		"type": "registry:block",
-		"description": "Veil Integration component, variant One.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-integration-one.json"
-	},
-	{
-		"name": "veil-integration-two",
-		"type": "registry:block",
-		"description": "Veil Integration component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-integration-two.json"
-	},
-	{
-		"name": "veil-call-to-action-one",
-		"type": "registry:block",
-		"description": "Veil Call To Action component, variant One.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-call-to-action-one.json"
-	},
-	{
-		"name": "veil-call-to-action-two",
-		"type": "registry:block",
-		"description": "Veil Call To Action component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-call-to-action-two.json"
-	},
-	{
-		"name": "veil-call-to-action-three",
-		"type": "registry:block",
-		"description": "Veil Call To Action component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-call-to-action-three.json"
-	},
-	{
-		"name": "veil-call-to-action-four",
-		"type": "registry:block",
-		"description": "Veil Call To Action component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-call-to-action-four.json"
-	},
-	{
-		"name": "veil-stats-one",
-		"type": "registry:block",
-		"description": "Veil Stats component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-stats-one.json"
-	},
-	{
-		"name": "veil-stats-two",
-		"type": "registry:block",
-		"description": "Veil Stats component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-stats-two.json"
-	},
-	{
-		"name": "veil-stats-three",
-		"type": "registry:block",
-		"description": "Veil Stats component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-stats-three.json"
-	},
-	{
-		"name": "veil-stats-four",
-		"type": "registry:block",
-		"description": "Veil Stats component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-stats-four.json"
-	},
-	{
-		"name": "veil-pricing-one",
-		"type": "registry:block",
-		"description": "Veil Pricing component, variant One.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-pricing-one.json"
-	},
-	{
-		"name": "veil-pricing-two",
-		"type": "registry:block",
-		"description": "Veil Pricing component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-pricing-two.json"
-	},
-	{
-		"name": "veil-pricing-three",
-		"type": "registry:block",
-		"description": "Veil Pricing component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "veil-pricing-three.json"
-	},
-	{
-		"name": "veil-testimonial-one",
-		"type": "registry:block",
-		"description": "Veil Testimonial component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-testimonial-one.json"
-	},
-	{
-		"name": "veil-testimonial-two",
-		"type": "registry:block",
-		"description": "Veil Testimonial component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-testimonial-two.json"
-	},
-	{
-		"name": "veil-testimonial-three",
-		"type": "registry:block",
-		"description": "Veil Testimonial component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-testimonial-three.json"
-	},
-	{
-		"name": "veil-testimonial-four",
-		"type": "registry:block",
-		"description": "Veil Testimonial component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-testimonial-four.json"
-	},
-	{
-		"name": "veil-team-one",
-		"type": "registry:block",
-		"description": "Veil Team component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-team-one.json"
-	},
-	{
-		"name": "veil-team-two",
-		"type": "registry:block",
-		"description": "Veil Team component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-team-two.json"
-	},
-	{
-		"name": "veil-logo-cloud-one",
-		"type": "registry:block",
-		"description": "Veil Logo Cloud component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-logo-cloud-one.json"
-	},
-	{
-		"name": "veil-logo-cloud-two",
-		"type": "registry:block",
-		"description": "Veil Logo Cloud component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-logo-cloud-two.json"
-	},
-	{
-		"name": "veil-faqs-one",
-		"type": "registry:block",
-		"description": "Veil FAQs component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"accordion"
-		],
-		"relativeUrl": "veil-faqs-one.json"
-	},
-	{
-		"name": "veil-faqs-two",
-		"type": "registry:block",
-		"description": "Veil FAQs component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"accordion"
-		],
-		"relativeUrl": "veil-faqs-two.json"
-	},
-	{
-		"name": "veil-faqs-three",
-		"type": "registry:block",
-		"description": "Veil FAQs component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"accordion"
-		],
-		"relativeUrl": "veil-faqs-three.json"
-	},
-	{
-		"name": "veil-faqs-four",
-		"type": "registry:block",
-		"description": "Veil FAQs component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"accordion"
-		],
-		"relativeUrl": "veil-faqs-four.json"
-	},
-	{
-		"name": "veil-contact-one",
-		"type": "registry:block",
-		"description": "Veil Contact component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-contact-one.json"
-	},
-	{
-		"name": "veil-contact-two",
-		"type": "registry:block",
-		"description": "Veil Contact component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label",
-			"select"
-		],
-		"relativeUrl": "veil-contact-two.json"
-	},
-	{
-		"name": "veil-signup-one",
-		"type": "registry:block",
-		"description": "Veil Signup component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-signup-one.json"
-	},
-	{
-		"name": "veil-signup-two",
-		"type": "registry:block",
-		"description": "Veil Signup component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-signup-two.json"
-	},
-	{
-		"name": "veil-signup-three",
-		"type": "registry:block",
-		"description": "Veil Signup component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-signup-three.json"
-	},
-	{
-		"name": "veil-login-one",
-		"type": "registry:block",
-		"description": "Veil Login component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-login-one.json"
-	},
-	{
-		"name": "veil-login-two",
-		"type": "registry:block",
-		"description": "Veil Login component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-login-two.json"
-	},
-	{
-		"name": "veil-login-three",
-		"type": "registry:block",
-		"description": "Veil Login component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-login-three.json"
-	},
-	{
-		"name": "veil-forgot-password-one",
-		"type": "registry:block",
-		"description": "Veil Forgot Password component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-forgot-password-one.json"
-	},
-	{
-		"name": "veil-forgot-password-two",
-		"type": "registry:block",
-		"description": "Veil Forgot Password component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-forgot-password-two.json"
-	},
-	{
-		"name": "veil-forgot-password-three",
-		"type": "registry:block",
-		"description": "Veil Forgot Password component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"label"
-		],
-		"relativeUrl": "veil-forgot-password-three.json"
-	},
-	{
-		"name": "veil-comparator-one",
-		"type": "registry:block",
-		"description": "Veil Comparator component, variant One.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-comparator-one.json"
-	},
-	{
-		"name": "veil-comparator-two",
-		"type": "registry:block",
-		"description": "Veil Comparator component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-comparator-two.json"
-	},
-	{
-		"name": "veil-comparator-three",
-		"type": "registry:block",
-		"description": "Veil Comparator component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-comparator-three.json"
-	},
-	{
-		"name": "veil-footer-one",
-		"type": "registry:block",
-		"description": "Veil Footer component, variant One.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-footer-one.json"
-	},
-	{
-		"name": "veil-footer-two",
-		"type": "registry:block",
-		"description": "Veil Footer component, variant Two.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-footer-two.json"
-	},
-	{
-		"name": "veil-footer-three",
-		"type": "registry:block",
-		"description": "Veil Footer component, variant Three.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "veil-footer-three.json"
-	},
-	{
-		"name": "veil-footer-four",
-		"type": "registry:block",
-		"description": "Veil Footer component, variant Four.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "veil-footer-four.json"
-	},
-	{
-		"name": "veil-footer-five",
-		"type": "registry:block",
-		"description": "Veil Footer component, variant Five.",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"vhelper-theme-switcher"
-		],
-		"relativeUrl": "veil-footer-five.json"
-	},
-	{
-		"name": "veil-footer-six",
-		"type": "registry:block",
-		"description": "Veil Footer component, variant Six.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"vhelper-theme-switcher"
-		],
-		"relativeUrl": "veil-footer-six.json"
-	},
-	{
-		"name": "vhelper-theme-switcher",
-		"type": "registry:block",
-		"description": "Internal Veil footer theme switcher helper.",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"mode-watcher",
-			"svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "vhelper-theme-switcher.json"
-	},
-	{
-		"name": "mist-comparator-one",
-		"type": "registry:block",
-		"description": "Mist-style before/after image comparison",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button"
-		],
-		"relativeUrl": "mist-comparator-one.json"
-	},
-	{
-		"name": "mist-contact-one",
-		"type": "registry:block",
-		"description": "Mist-style minimal contact form",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button",
-			"card",
-			"input",
-			"label",
-			"select",
-			"textarea"
-		],
-		"relativeUrl": "mist-contact-one.json"
-	},
-	{
-		"name": "mist-content-four",
-		"type": "registry:block",
-		"description": "Mist-style content with feature grid",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "mist-content-four.json"
-	},
-	{
-		"name": "mist-content-one",
-		"type": "registry:block",
-		"description": "Mist-style simple content block",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"toggle-group",
-			"utils"
-		],
-		"relativeUrl": "mist-content-one.json"
-	},
-	{
-		"name": "mist-content-three",
-		"type": "registry:block",
-		"description": "Mist-style content with side image",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-content-three.json"
-	},
-	{
-		"name": "mist-content-two",
-		"type": "registry:block",
-		"description": "Mist-style two-column content",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"toggle-group",
-			"utils"
-		],
-		"relativeUrl": "mist-content-two.json"
-	},
-	{
-		"name": "mist-cta-one",
-		"type": "registry:block",
-		"description": "Mist-style centered CTA block",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button"
-		],
-		"relativeUrl": "mist-cta-one.json"
-	},
-	{
-		"name": "mist-cta-three",
-		"type": "registry:block",
-		"description": "Mist-style CTA with background",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button"
-		],
-		"relativeUrl": "mist-cta-three.json"
-	},
-	{
-		"name": "mist-cta-two",
-		"type": "registry:block",
-		"description": "Mist-style two-column CTA",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button"
-		],
-		"relativeUrl": "mist-cta-two.json"
-	},
-	{
-		"name": "mist-feature-eight",
-		"type": "registry:block",
-		"description": "Mist-style feature with icon grid",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"card"
-		],
-		"relativeUrl": "mist-feature-eight.json"
-	},
-	{
-		"name": "mist-feature-eleven",
-		"type": "registry:block",
-		"description": "Mist-style feature with alternating rows",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-feature-eleven.json"
-	},
-	{
-		"name": "mist-feature-table",
-		"type": "registry:block",
-		"description": "Mist-style feature comparison table",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"utils"
-		],
-		"relativeUrl": "mist-feature-table.json"
-	},
-	{
-		"name": "mist-feature-five",
-		"type": "registry:block",
-		"description": "Mist-style feature with bullet points",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button"
-		],
-		"relativeUrl": "mist-feature-five.json"
-	},
-	{
-		"name": "mist-feature-four",
-		"type": "registry:block",
-		"description": "Mist-style four-column feature grid",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card",
-			"toggle-group",
-			"utils"
-		],
-		"relativeUrl": "mist-feature-four.json"
-	},
-	{
-		"name": "mist-feature-nine",
-		"type": "registry:block",
-		"description": "Mist-style feature with checkmarks",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-feature-nine.json"
-	},
-	{
-		"name": "mist-feature-one",
-		"type": "registry:block",
-		"description": "Mist-style simple feature grid",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"card",
-			"mist-feature-table"
-		],
-		"relativeUrl": "mist-feature-one.json"
-	},
-	{
-		"name": "mist-feature-seven",
-		"type": "registry:block",
-		"description": "Mist-style feature with tabs",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-feature-seven.json"
-	},
-	{
-		"name": "mist-feature-six",
-		"type": "registry:block",
-		"description": "Mist-style six-column feature grid",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-feature-six.json"
-	},
-	{
-		"name": "mist-feature-ten",
-		"type": "registry:block",
-		"description": "Mist-style feature with centered image",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-feature-ten.json"
-	},
-	{
-		"name": "mist-feature-three",
-		"type": "registry:block",
-		"description": "Mist-style three-column feature cards",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card",
-			"toggle-group",
-			"utils"
-		],
-		"relativeUrl": "mist-feature-three.json"
-	},
-	{
-		"name": "mist-feature-two",
-		"type": "registry:block",
-		"description": "Mist-style feature with side image",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"card"
-		],
-		"relativeUrl": "mist-feature-two.json"
-	},
-	{
-		"name": "mist-footer-four",
-		"type": "registry:block",
-		"description": "Mist-style multi-column footer",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-footer-four.json"
-	},
-	{
-		"name": "mist-footer-one",
-		"type": "registry:block",
-		"description": "Mist-style simple centered footer",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-footer-one.json"
-	},
-	{
-		"name": "mist-footer-three",
-		"type": "registry:block",
-		"description": "Mist-style footer with contact info",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-footer-three.json"
-	},
-	{
-		"name": "mist-footer-two",
-		"type": "registry:block",
-		"description": "Mist-style two-row footer",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-footer-two.json"
-	},
-	{
-		"name": "mist-forgot-password-one",
-		"type": "registry:block",
-		"description": "Mist-style password reset form",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button",
-			"input",
-			"label"
-		],
-		"relativeUrl": "mist-forgot-password-one.json"
-	},
-	{
-		"name": "mist-hero-five",
-		"type": "registry:block",
-		"description": "Mist-style hero with app mockup",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"utils"
-		],
-		"relativeUrl": "mist-hero-five.json"
-	},
-	{
-		"name": "mist-hero-four",
-		"type": "registry:block",
-		"description": "Mist-style split hero with image",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"utils"
-		],
-		"relativeUrl": "mist-hero-four.json"
-	},
-	{
-		"name": "mist-hero-one",
-		"type": "registry:block",
-		"description": "Mist-style centered hero with CTA",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"utils"
-		],
-		"relativeUrl": "mist-hero-one.json"
-	},
-	{
-		"name": "mist-hero-six",
-		"type": "registry:block",
-		"description": "Mist-style hero with logo cloud",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"utils"
-		],
-		"relativeUrl": "mist-hero-six.json"
-	},
-	{
-		"name": "mist-hero-three",
-		"type": "registry:block",
-		"description": "Mist-style hero with background",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"utils"
-		],
-		"relativeUrl": "mist-hero-three.json"
-	},
-	{
-		"name": "mist-hero-two",
-		"type": "registry:block",
-		"description": "Mist-style two-column hero",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"utils"
-		],
-		"relativeUrl": "mist-hero-two.json"
-	},
-	{
-		"name": "mist-integration-card",
-		"type": "registry:block",
-		"description": "Mist-style integration logo card",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte",
-			"svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-integration-card.json"
-	},
-	{
-		"name": "mist-integration-one",
-		"type": "registry:block",
-		"description": "Mist-style integration grid",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"mist-logo-gemini",
-			"mist-logo-google-palm",
-			"mist-logo-magic-ui",
-			"mist-logo-media-wiki",
-			"mist-logo-replit",
-			"mist-logo-vscodium"
-		],
-		"relativeUrl": "mist-integration-one.json"
-	},
-	{
-		"name": "mist-integration-three",
-		"type": "registry:block",
-		"description": "Mist-style integration with icons",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"mist-integration-card",
-			"mist-logo-gemini",
-			"mist-logo-google-palm",
-			"mist-logo-magic-ui",
-			"mist-logo-media-wiki",
-			"mist-logo-replit",
-			"mist-logo-vscodium"
-		],
-		"relativeUrl": "mist-integration-three.json"
-	},
-	{
-		"name": "mist-integration-two",
-		"type": "registry:block",
-		"description": "Mist-style integration marquee",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button",
-			"mist-logo-gemini",
-			"mist-logo-google-palm",
-			"mist-logo-magic-ui",
-			"mist-logo-media-wiki",
-			"mist-logo-replit",
-			"mist-logo-vscodium"
-		],
-		"relativeUrl": "mist-integration-two.json"
-	},
-	{
-		"name": "mist-login-one",
-		"type": "registry:block",
-		"description": "Mist-style minimal login form",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button",
-			"input",
-			"label"
-		],
-		"relativeUrl": "mist-login-one.json"
-	},
-	{
-		"name": "mist-logocloud-one",
-		"type": "registry:block",
-		"description": "Mist-style grayscale logo cloud",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logocloud-one.json"
-	},
-	{
-		"name": "mist-logocloud-two",
-		"type": "registry:block",
-		"description": "Mist-style logo cloud with hover",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logocloud-two.json"
-	},
-	{
-		"name": "mist-logo-gemini",
-		"type": "registry:block",
-		"description": "Mist-style Gemini AI logo SVG",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logo-gemini.json"
-	},
-	{
-		"name": "mist-logo-google-palm",
-		"type": "registry:block",
-		"description": "Mist-style Google PaLM logo SVG",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logo-google-palm.json"
-	},
-	{
-		"name": "mist-logo-collection",
-		"type": "registry:block",
-		"description": "Mist-style logo collection utilities",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"mist-logo-gemini",
-			"mist-logo-google-palm",
-			"mist-logo-magic-ui",
-			"mist-logo-media-wiki",
-			"mist-logo-replit",
-			"mist-logo-vscodium"
-		],
-		"relativeUrl": "mist-logo-collection.json"
-	},
-	{
-		"name": "mist-logo-magic-ui",
-		"type": "registry:block",
-		"description": "Mist-style Magic UI logo SVG",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logo-magic-ui.json"
-	},
-	{
-		"name": "mist-logo-media-wiki",
-		"type": "registry:block",
-		"description": "Mist-style MediaWiki logo SVG",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logo-media-wiki.json"
-	},
-	{
-		"name": "mist-logo-replit",
-		"type": "registry:block",
-		"description": "Mist-style Replit logo SVG",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logo-replit.json"
-	},
-	{
-		"name": "mist-logo-vscodium",
-		"type": "registry:block",
-		"description": "Mist-style VSCodium logo SVG",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-logo-vscodium.json"
-	},
-	{
-		"name": "mist-pricing-one",
-		"type": "registry:block",
-		"description": "Mist-style simple pricing cards",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-pricing-one.json"
-	},
-	{
-		"name": "mist-pricing-two",
-		"type": "registry:block",
-		"description": "Mist-style pricing with toggle",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"button",
-			"card"
-		],
-		"relativeUrl": "mist-pricing-two.json"
-	},
-	{
-		"name": "mist-signup-one",
-		"type": "registry:block",
-		"description": "Mist-style minimal signup form",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"button",
-			"input",
-			"label"
-		],
-		"relativeUrl": "mist-signup-one.json"
-	},
-	{
-		"name": "mist-stats-four",
-		"type": "registry:block",
-		"description": "Mist-style four-column stats",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-stats-four.json"
-	},
-	{
-		"name": "mist-stats-one",
-		"type": "registry:block",
-		"description": "Mist-style simple stats row",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"card"
-		],
-		"relativeUrl": "mist-stats-one.json"
-	},
-	{
-		"name": "mist-stats-three",
-		"type": "registry:block",
-		"description": "Mist-style stats with descriptions",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "mist-stats-three.json"
-	},
-	{
-		"name": "mist-stats-two",
-		"type": "registry:block",
-		"description": "Mist-style two-column stats",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-stats-two.json"
-	},
-	{
-		"name": "mist-team-one",
-		"type": "registry:block",
-		"description": "Mist-style team member grid",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"avatar",
-			"button"
-		],
-		"relativeUrl": "mist-team-one.json"
-	},
-	{
-		"name": "mist-team-two",
-		"type": "registry:block",
-		"description": "Mist-style team with social links",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"avatar",
-			"button",
-			"hover-card"
-		],
-		"relativeUrl": "mist-team-two.json"
-	},
-	{
-		"name": "mist-testimonial-five",
-		"type": "registry:block",
-		"description": "Mist-style testimonial carousel",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"avatar"
-		],
-		"relativeUrl": "mist-testimonial-five.json"
-	},
-	{
-		"name": "mist-testimonial-four",
-		"type": "registry:block",
-		"description": "Mist-style four-column testimonials",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"avatar"
-		],
-		"relativeUrl": "mist-testimonial-four.json"
-	},
-	{
-		"name": "mist-testimonial-one",
-		"type": "registry:block",
-		"description": "Mist-style centered testimonial",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [],
-		"relativeUrl": "mist-testimonial-one.json"
-	},
-	{
-		"name": "mist-testimonial-three",
-		"type": "registry:block",
-		"description": "Mist-style three-column testimonials",
-		"dependencies": [],
-		"devDependencies": [
-			"@lucide/svelte"
-		],
-		"registryDependencies": [
-			"avatar",
-			"utils"
-		],
-		"relativeUrl": "mist-testimonial-three.json"
-	},
-	{
-		"name": "mist-testimonial-two",
-		"type": "registry:block",
-		"description": "Mist-style two-column testimonials",
-		"dependencies": [],
-		"devDependencies": [],
-		"registryDependencies": [
-			"avatar"
-		],
-		"relativeUrl": "mist-testimonial-two.json"
+		"relativeUrl": "svgs.json"
 	}
 ]

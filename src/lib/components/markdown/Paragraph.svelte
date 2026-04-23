@@ -13,7 +13,7 @@
 
 <p
 	{...restProps}
-	class={cn("mt-4 text-base leading-relaxed text-muted-foreground first:mt-0", className)}
+	class={cn("mt-4 text-base leading-normal text-muted-foreground first:mt-0", className)}
 >
 	{@render children?.()}
 </p>

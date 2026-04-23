@@ -116,7 +116,7 @@
 								class="border bg-foreground/10 p-0.5"
 								style="border-radius: calc(0.5rem + 0.125rem + 4px);"
 							>
-								<Button href="#link" size="lg" class="rounded-xl px-5 text-base">
+								<Button href="/" size="lg" class="rounded-xl px-5 text-base">
 									<span class="text-nowrap">Start Building</span>
 								</Button>
 							</div>
@@ -307,16 +307,16 @@
 								variant="outline"
 								size="sm"
 								class={cn(isScrolled && "lg:hidden")}
-								href="#"
+								href="/"
 							>
 								Login
 							</Button>
-							<Button href="#" size="sm" class={cn(isScrolled && "lg:hidden")}
+							<Button href="/" size="sm" class={cn(isScrolled && "lg:hidden")}
 								>Sign Up</Button
 							>
 							<Button
 								size="sm"
-								href="#"
+								href="/"
 								class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
 							>
 								Get Strated

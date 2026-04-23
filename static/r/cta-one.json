@@ -8,7 +8,7 @@
 	],
 	"files": [
 		{
-			"content": "<script>\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\n</script>\n\n<section class=\"py-16 md:py-32\">\n\t<div class=\"mx-auto max-w-5xl px-6\">\n\t\t<div class=\"text-center\">\n\t\t\t<h2 class=\"text-4xl font-semibold text-balance lg:text-5xl\">Start Building</h2>\n\t\t\t<p class=\"mt-4\">Libero sapiente aliquam quibusdam aspernatur.</p>\n\n\t\t\t<div class=\"mt-12 flex flex-wrap justify-center gap-4\">\n\t\t\t\t<Button href=\"#\" size=\"lg\">Get Started</Button>\n\t\t\t\t<Button href=\"#\" size=\"lg\" variant=\"outline\">Book Demo</Button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"content": "<script>\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t<div class=\"text-center\">\r\n\t\t\t<h2 class=\"text-4xl font-semibold text-balance lg:text-5xl\">Start Building</h2>\r\n\t\t\t<p class=\"mt-4\">Libero sapiente aliquam quibusdam aspernatur.</p>\r\n\r\n\t\t\t<div class=\"mt-12 flex flex-wrap justify-center gap-4\">\r\n\t\t\t\t<Button href=\"/\" size=\"lg\">Get Started</Button>\r\n\t\t\t\t<Button href=\"/\" size=\"lg\" variant=\"outline\">Book Demo</Button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
 			"type": "registry:component",
 			"target": "blocks/cta/cta-one.svelte"
 		}

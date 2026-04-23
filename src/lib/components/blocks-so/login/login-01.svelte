@@ -38,7 +38,7 @@
 				variant="outline"
 				class="inline-flex w-full items-center justify-center space-x-2"
 			>
-				<a href="#">
+				<a href="/">
 					<GoogleIcon class="size-5" aria-hidden={true} />
 					<span class="text-sm font-medium">Sign in with Google</span>
 				</a>
@@ -46,9 +46,9 @@
 
 			<p class="mt-4 text-xs text-muted-foreground">
 				By signing in, you agree to our{" "}
-				<a href="#" class="underline underline-offset-4"> terms of service </a>{" "}
+				<a href="/" class="underline underline-offset-4"> terms of service </a>{" "}
 				and{" "}
-				<a href="#" class="underline underline-offset-4"> privacy policy </a>
+				<a href="/" class="underline underline-offset-4"> privacy policy </a>
 				.
 			</p>
 		</div>

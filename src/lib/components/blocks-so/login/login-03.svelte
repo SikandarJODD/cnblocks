@@ -51,7 +51,7 @@
 			<p class="mt-6 text-sm text-muted-foreground dark:text-muted-foreground">
 				Forgot your password?{" "}
 				<a
-					href="#"
+					href="/"
 					class="font-medium text-primary hover:text-primary/90 dark:text-primary dark:hover:text-primary/90"
 				>
 					Reset password

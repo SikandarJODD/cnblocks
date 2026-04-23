@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-four",
+	"type": "registry:block",
+	"description": "Mist-style four-column stats",
+	"files": [
+		{
+			"content": "<section>\r\n\t<div class=\"py-24\">\r\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t\t<h2 class=\"sr-only\">Tailark in stats</h2>\r\n\t\t\t<div class=\"grid grid-cols-2 gap-4 md:grid-cols-4\">\r\n\t\t\t\t<div class=\"space-y-0.5 md:text-center\">\r\n\t\t\t\t\t<div class=\"text-4xl font-bold text-primary\">90+</div>\r\n\t\t\t\t\t<p class=\"text-muted-foreground\">Integrations</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"space-y-0.5 md:text-center\">\r\n\t\t\t\t\t<div class=\"text-4xl font-bold text-primary\">56%</div>\r\n\t\t\t\t\t<p class=\"text-muted-foreground\">Productivity Boost</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-span-2 border-t pt-4 md:border-t-0 md:border-l md:pt-0 md:pl-12\">\r\n\t\t\t\t\t<p class=\"text-lg text-balance text-muted-foreground\">\r\n\t\t\t\t\t\tOur platform continues to grow with developers and businesses using\r\n\t\t\t\t\t\tproductivity.\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mstats/four.svelte"
+		}
+	]
+}

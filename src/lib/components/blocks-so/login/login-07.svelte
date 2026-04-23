@@ -4,7 +4,12 @@
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";
 	import { Separator } from "$lib/components/ui/separator";
-	import { ArrowRight, Eye, EyeOff, Lock, Mail } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import Eye from "@lucide/svelte/icons/eye";
+	import EyeOff from "@lucide/svelte/icons/eye-off";
+	import Lock from "@lucide/svelte/icons/lock";
+	import Mail from "@lucide/svelte/icons/mail";
+
 	import GoogleIcon from "./google-icon.svelte";
 	import LogoIcon from "./logo-icon.svelte";
 
@@ -58,7 +63,7 @@
 				<div>
 					<div class="flex items-center justify-between">
 						<Label for="password">Password</Label>
-						<a href="#" class="text-sm text-primary hover:underline">
+						<a href="/" class="text-sm text-primary hover:underline">
 							Forgot Password?
 						</a>
 					</div>
@@ -104,7 +109,7 @@
 
 			<div class="text-center text-sm">
 				No account?{" "}
-				<a href="#" class="font-medium text-primary hover:underline"> Create an account </a>
+				<a href="/" class="font-medium text-primary hover:underline"> Create an account </a>
 			</div>
 		</div>
 	</div>

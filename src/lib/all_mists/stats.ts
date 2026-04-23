@@ -16,7 +16,7 @@ export const all_mists_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/mist/stats/one",
 
-		itemId: "mist-stats-one",
+		itemId: "stats-one",
 		code: {
 			code: StatsOneCode,
 			lang: "svelte",
@@ -29,7 +29,7 @@ export const all_mists_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/mist/stats/two",
 
-		itemId: "mist-stats-two",
+		itemId: "stats-two",
 		code: {
 			code: StatsTwoCode,
 			lang: "svelte",
@@ -42,7 +42,7 @@ export const all_mists_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/mist/stats/three",
 
-		itemId: "mist-stats-three",
+		itemId: "stats-three",
 		code: {
 			code: StatsThreeCode,
 			lang: "svelte",
@@ -55,7 +55,7 @@ export const all_mists_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/mist/stats/four",
 
-		itemId: "mist-stats-four",
+		itemId: "stats-four",
 		code: {
 			code: StatsFourCode,
 			lang: "svelte",

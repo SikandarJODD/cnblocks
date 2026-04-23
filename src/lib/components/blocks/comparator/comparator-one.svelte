@@ -56,19 +56,6 @@
 	];
 </script>
 
-<!--
-@component
-
-- A component that compares free, pro and startup plans.
-
-@example
-```svelte
-<ComparatorOne />
-```
-
-@param {Object} tableData - The data for the table .
--->
-
 <section class="py-16 md:py-32">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="w-full overflow-auto lg:overflow-visible">

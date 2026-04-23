@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-three",
+	"type": "registry:block",
+	"description": "Veil Testimonial component, variant Three.",
+	"files": [
+		{
+			"content": "<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"relative pl-6\">\r\n\t\t\t<div class=\"absolute inset-0 w-0.5 rounded-full bg-primary\"></div>\r\n\t\t\t<p class=\"text-xl text-balance text-foreground\">\r\n\t\t\t\tTailark has been a game-changer for our team. It has helped us to build a modern and\r\n\t\t\t\tscalable web application.\r\n\t\t\t</p>\r\n\r\n\t\t\t<div class=\"mt-8 flex items-center gap-3\">\r\n\t\t\t\t<div\r\n\t\t\t\t\tclass=\"relative size-10 shrink-0 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-foreground/10\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<img\r\n\t\t\t\t\t\tsrc=\"https://avatars.githubusercontent.com/u/68236786?v=4\"\r\n\t\t\t\t\t\talt=\"Theo Balick\"\r\n\t\t\t\t\t\tclass=\"rounded-full object-cover\"\r\n\t\t\t\t\t\twidth={40}\r\n\t\t\t\t\t\theight={40}\r\n\t\t\t\t\t/>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"space-y-0.5\">\r\n\t\t\t\t\t<p class=\"text-sm font-medium text-muted-foreground\">Théo Balick</p>\r\n\t\t\t\t\t<p class=\"text-xs text-muted-foreground\">Founder, CEO - Acme</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/testimonial/testimonial-three.svelte"
+		}
+	]
+}

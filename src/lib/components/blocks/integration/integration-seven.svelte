@@ -1,22 +1,19 @@
 <script lang="ts">
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { Marquee } from "$lib/components/magic/marquee";
 	import IntegrationCardv7 from "./card/integration-cardv7.svelte";
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
-
-	import Button from "$lib/components/ui/button/button.svelte";
-
-	// Scroll below for Marquee component code
-	import Marquee from "$lib/components/magic/Marquee.svelte";
 </script>
 
 <section>
 	<div class="bg-muted py-24 md:py-32 dark:bg-background">
 		<div class="mx-auto max-w-5xl px-6">
 			<div
-				class="group relative mx-auto max-w-[22rem] items-center justify-between space-y-6 bg-muted/25 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] sm:max-w-md"
+				class="group relative mx-auto max-w-88 items-center justify-between space-y-6 bg-muted/25 mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] sm:max-w-md"
 			>
 				<div
 					role="presentation"
-					class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"
+					class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[32px_32px] opacity-50"
 				></div>
 				<div>
 					<Marquee>

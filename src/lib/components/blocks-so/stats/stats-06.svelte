@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { cn } from "$lib/utils";
-	import { AlertTriangle, Check, ChevronRight, Eye } from "@lucide/svelte";
+	import AlertTriangle from "@lucide/svelte/icons/alert-triangle";
+	import Check from "@lucide/svelte/icons/check";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Eye from "@lucide/svelte/icons/eye";
 
 	const data = [
 		{
@@ -65,7 +68,8 @@
 								<dd>
 									<p class="text-sm text-muted-foreground">
 										<a href={item.href} class="focus:outline-none">
-											<span class="absolute inset-0" aria-hidden={true} />
+											<span class="absolute inset-0" aria-hidden={true}
+											></span>
 											{item.goalsAchieved}/5 goals
 										</a>
 									</p>

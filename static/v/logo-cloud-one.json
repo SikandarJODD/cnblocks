@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-one",
+	"type": "registry:block",
+	"description": "Veil Logo Cloud component, variant One.",
+	"registryDependencies": [
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport {\r\n\t\tSpotify,\r\n\t\tBolt,\r\n\t\tHulu,\r\n\t\tLinear,\r\n\t\tCisco,\r\n\t\tBeacon,\r\n\t\tVercelFull,\r\n\t\tSupabaseFull,\r\n\t} from \"$LIB$/svgs\";\r\n</script>\r\n\r\n<section class=\"@container bg-background py-12\">\r\n\t<div class=\"mx-auto max-w-xl px-6\">\r\n\t\t<div\r\n\t\t\tclass=\"grid grid-cols-3 gap-x-8 gap-y-12 *:flex *:items-center *:justify-center **:fill-foreground @xl:grid-cols-4\"\r\n\t\t>\r\n\t\t\t<div>\r\n\t\t\t\t<VercelFull class=\"h-3.5 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<Spotify class=\"h-4.5 w-full\" />\r\n\t\t\t</div>\r\n\r\n\t\t\t<div>\r\n\t\t\t\t<SupabaseFull class=\"h-5\" />\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<Hulu class=\"h-3.5 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<Bolt class=\"h-4 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<Linear class=\"size-4\" />\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<Cisco class=\"h-5 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<Beacon class=\"h-3.5 w-full\" />\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/logo-cloud/logo-cloud-one.svelte"
+		}
+	]
+}

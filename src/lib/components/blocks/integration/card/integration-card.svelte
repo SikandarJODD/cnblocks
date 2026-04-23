@@ -29,7 +29,7 @@
 		<div class="flex gap-3 border-t border-dashed pt-6">
 			<Button variant="secondary" size="sm" class="gap-1 pr-2 shadow-none" href={link}>
 				Learn More
-				<ChevronRight class="ml-0 !size-3.5 opacity-50" />
+				<ChevronRight class="ml-0 size-3.5! opacity-50" />
 			</Button>
 		</div>
 	</div>

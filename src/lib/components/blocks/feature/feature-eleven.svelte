@@ -20,7 +20,7 @@
 		class="z-10 block w-fit rounded-lg border border-blue-200/20 bg-blue-50/50 px-3 py-1.5 leading-4 font-semibold tracking-tighter uppercase sm:text-sm dark:border-blue-800/30 dark:bg-blue-900/20"
 	>
 		<span
-			class="bg-gradient-to-b from-blue-500 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400"
+			class="bg-linear-to-b from-blue-500 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400"
 		>
 			Security at Scale
 		</span>
@@ -28,7 +28,7 @@
 
 	<h2
 		id="features-title"
-		class="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl dark:from-gray-50 dark:to-gray-300"
+		class="mt-2 inline-block bg-linear-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl dark:from-gray-50 dark:to-gray-300"
 	>
 		Architected for speed and reliability
 	</h2>
@@ -45,7 +45,7 @@
 				class="border-l-2 border-blue-100 pl-6 md:border-l md:text-center lg:border-gray-200 lg:first:border-none dark:border-blue-900 lg:dark:border-gray-800"
 			>
 				<dd
-					class="inline-block bg-gradient-to-t from-blue-900 to-blue-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent lg:text-6xl dark:from-blue-700 dark:to-blue-400"
+					class="inline-block bg-linear-to-t from-blue-900 to-blue-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent lg:text-6xl dark:from-blue-700 dark:to-blue-400"
 				>
 					{stat.value}
 				</dd>

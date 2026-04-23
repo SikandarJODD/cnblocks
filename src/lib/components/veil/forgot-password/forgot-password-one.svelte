@@ -45,7 +45,7 @@
 
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			Remember your password?
-			<Button href="#" variant="link" class="px-1 font-medium text-primary">Sign in</Button>
+			<Button href="/" variant="link" class="px-1 font-medium text-primary">Sign in</Button>
 		</p>
 	</div>
 </section>

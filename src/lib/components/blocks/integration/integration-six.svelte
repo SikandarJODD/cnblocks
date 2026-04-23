@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Gemini, GooglePaLM, Replit } from "../logos/logos";
 	import Button from "$lib/components/ui/button/button.svelte";
-	import { type Icon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
 	import Plus from "@lucide/svelte/icons/plus";
 </script>
 
@@ -9,7 +9,7 @@
 	<div class="bg-muted py-24 md:py-32 dark:bg-background">
 		<div class="mx-auto max-w-5xl px-6">
 			<div
-				class="mx-auto max-w-md [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6"
+				class="mx-auto max-w-md mask-[radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6"
 			>
 				<div
 					class="rounded-xl border bg-background px-6 pt-3 pb-12 shadow-xl dark:bg-muted/50"
@@ -52,7 +52,7 @@
 	name,
 	description,
 }: {
-	icon: typeof Icon;
+	icon: LucideIcon;
 	name: string;
 	description: string;
 })}

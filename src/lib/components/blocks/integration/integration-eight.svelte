@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 	import Button from "$lib/components/ui/button/button.svelte";
-	import { type Icon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
 </script>
 
 <section>
@@ -38,7 +38,7 @@
 			</div>
 
 			<div
-				class="-mx-6 [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:mr-0 md:ml-auto"
+				class="-mx-6 mask-[radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:mr-0 md:ml-auto"
 			>
 				<div
 					class="rounded-2xl border bg-background p-3 shadow-lg md:pb-12 dark:bg-muted/50"
@@ -86,7 +86,7 @@
 	name,
 	description,
 }: {
-	icon: typeof Icon;
+	icon: LucideIcon;
 	name: string;
 	description: string;
 })}

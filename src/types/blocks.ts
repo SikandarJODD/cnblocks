@@ -1,3 +1,4 @@
+import type { SupportedLanguage } from "$lib/components/ui/code/shiki";
 import type { Component } from "svelte";
 
 export type PreviewMode = "inline" | "iframe";
@@ -17,6 +18,6 @@ export interface Block {
 export interface MistCode {
 	name?: string;
 	code: string;
-	lang?: string;
+	lang?: SupportedLanguage;
 	highlight?: (number | [number, number])[];
 }

@@ -22,14 +22,14 @@
 		title: string;
 		category: string;
 		previewOnly?: boolean;
-		slug: string;
+		slug?: string;
 		component: Component;
 	}
 
 	export interface MistCode {
-		code: string;
-		lang?: string;
 		name?: string;
+		code: string;
+		lang?: SupportedLanguage;
 		highlight?: (number | [number, number])[];
 	}
 
@@ -92,10 +92,12 @@
 		TooltipTrigger,
 	} from "$lib/components/ui/tooltip";
 	import CodeEditor from "./CodeEditor.svelte";
+	import type { SupportedLanguage } from "../ui/code/shiki";
 
 	type ScopedTheme = "veil" | "mist";
 
-	function resolveScopedTheme(pathname: string): ScopedTheme | null {
+	function resolveScopedTheme(): ScopedTheme | null {
+		let pathname = page.url.pathname.toString();
 		const segments = pathname.split("/").filter(Boolean);
 		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
 
@@ -106,7 +108,7 @@
 	let forcesIframe = $derived(previewMode === "iframe");
 	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
 	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
-	let activePreviewTheme = $derived(resolveScopedTheme(page.url.pathname));
+	let activePreviewTheme = $derived(resolveScopedTheme());
 	let themeSetupHref = $derived(
 		activePreviewTheme === "veil" ? "/v2-docs/veil-theme" : "/v2-docs/mist-theme"
 	);
@@ -434,7 +436,7 @@
 					</TooltipProvider>
 				{/if}
 				{#if code}
-					<PreviewInstallAdd {itemId} registryPath="r" />
+					<PreviewInstallAdd {itemId} />
 					<Button
 						variant="outline"
 						size="sm"

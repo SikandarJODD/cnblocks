@@ -13,7 +13,7 @@ export const all_mists_cta: MistBlock[] = [
 		category: "cta",
 		preview: "/preview/mist/cta/one",
 
-		itemId: "mist-cta-one",
+		itemId: "cta-one",
 		code: {
 			code: CtaOneCode,
 			lang: "svelte",
@@ -26,7 +26,7 @@ export const all_mists_cta: MistBlock[] = [
 		category: "cta",
 		preview: "/preview/mist/cta/two",
 
-		itemId: "mist-cta-two",
+		itemId: "cta-two",
 		code: {
 			code: CtaTwoCode,
 			lang: "svelte",
@@ -39,7 +39,7 @@ export const all_mists_cta: MistBlock[] = [
 		category: "cta",
 		preview: "/preview/mist/cta/three",
 
-		itemId: "mist-cta-three",
+		itemId: "cta-three",
 		code: {
 			code: CtaThreeCode,
 			lang: "svelte",

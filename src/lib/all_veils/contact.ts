@@ -11,7 +11,7 @@ export const all_veils_contact: MistBlock[] = [
 		title: "Contact One",
 		category: "contact",
 		preview: "/preview/veil/contact/contact-one",
-		itemId: "veil-contact-one",
+		itemId: "contact-one",
 		code: {
 			code: ContactOneCode,
 			lang: "svelte",
@@ -23,7 +23,7 @@ export const all_veils_contact: MistBlock[] = [
 		title: "Contact Two",
 		category: "contact",
 		preview: "/preview/veil/contact/contact-two",
-		itemId: "veil-contact-two",
+		itemId: "contact-two",
 		code: {
 			code: ContactTwoCode,
 			lang: "svelte",

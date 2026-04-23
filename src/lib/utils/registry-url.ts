@@ -1,26 +1,34 @@
-import { registryNamespaces } from "$lib/generated/registry-namespaces";
-
 export type RegistryNamespace = "r" | "v" | "m";
-
-export function getRegistryNamespace(itemId: string): RegistryNamespace {
-	const namespaceMap: Record<string, RegistryNamespace> = registryNamespaces;
-	const mapped = namespaceMap[itemId];
-	if (mapped) return mapped;
-	if (itemId.startsWith("mist-")) return "m";
-	if (itemId.startsWith("veil-")) return "v";
-	return "r";
-}
-
-export function hasRegistryItem(itemId: string): boolean {
-	return Object.hasOwn(registryNamespaces, itemId);
-}
 
 function sanitizeBase(originOrBase: string): string {
 	return originOrBase.replace(/\/+$/, "").replace(/\/(r|v|m)$/i, "");
 }
 
-export function getRegistryItemUrl(originOrBase: string, itemId: string): string {
-	const namespace = getRegistryNamespace(itemId);
+function sanitizeRegistryPath(registryPath?: string | null): RegistryNamespace {
+	const normalized = (registryPath ?? "").replace(/^\/+|\/+$/g, "").toLowerCase();
+	if (normalized === "m" || normalized === "v") return normalized;
+	return "r";
+}
+
+export function getRegistryPathFromPathname(pathname?: string | null): RegistryNamespace {
+	const cleanPathname = (pathname ?? "").split("?")[0].split("#")[0];
+	const segments = cleanPathname.split("/").filter(Boolean);
+	const familySegment = segments[0] === "preview" ? segments[1] : segments[0];
+
+	if (familySegment === "mist") return "m";
+	if (familySegment === "veil") return "v";
+	return "r";
+}
+
+export function getRegistryItemUrl(
+	originOrBase: string,
+	pathname: string | null | undefined,
+	itemId: string,
+	registryPath?: string | null
+): string {
+	const namespace = registryPath
+		? sanitizeRegistryPath(registryPath)
+		: getRegistryPathFromPathname(pathname);
 	const base = sanitizeBase(originOrBase);
 	if (!base) {
 		return `/${namespace}/${itemId}.json`;

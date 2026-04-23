@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logocloud-three",
+	"type": "registry:block",
+	"description": "Scrolling logo cloud marquee with progressive blur edges",
+	"registryDependencies": [
+		"./marquee.json",
+		"./progressive-blur.json",
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Marquee } from \"$COMPONENTS$/magic/marquee\";\r\n\timport { ProgressiveBlur } from \"$COMPONENTS$/magic/progressive-blur\";\r\n\timport {\r\n\t\tBeacon,\r\n\t\tBolt,\r\n\t\tCisco,\r\n\t\tClaude,\r\n\t\tFigma,\r\n\t\tFirebaseFull,\r\n\t\tHulu,\r\n\t\tSpotify,\r\n\t\tSupabaseFull,\r\n\t\tVercelFull,\r\n\t} from \"$LIB$/svgs\";\r\n\r\n\timport { cn } from \"$UTILS$\";\r\n\r\n\texport const GRADIENT_ANGLES = {\r\n\t\ttop: 0,\r\n\t\tright: 90,\r\n\t\tbottom: 180,\r\n\t\tleft: 270,\r\n\t};\r\n\r\n\ttype ProgressiveBlurProps = {\r\n\t\tdirection?: keyof typeof GRADIENT_ANGLES;\r\n\t\tblurLayers?: number;\r\n\t\tclass?: string;\r\n\t\tblurIntensity?: number;\r\n\t};\r\n</script>\r\n\r\n<section class=\"overflow-hidden bg-background py-16\">\r\n\t<div class=\"group relative m-auto max-w-7xl px-6\">\r\n\t\t<div class=\"flex flex-col items-center md:flex-row\">\r\n\t\t\t<div class=\"md:max-w-44 md:border-r md:pr-6\">\r\n\t\t\t\t<p class=\"text-end text-sm\">Powering the best teams</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"relative py-6 **:fill-foreground md:w-[calc(100%-11rem)]\">\r\n\t\t\t\t<Marquee>\r\n\t\t\t\t\t<Bolt height={22} width={56} />\r\n\t\t\t\t\t<VercelFull height={22} width={84} />\r\n\t\t\t\t\t<SupabaseFull class=\"h-6\" />\r\n\t\t\t\t\t<Hulu height={18} width={56} />\r\n\t\t\t\t\t<Spotify height={24} width={80} />\r\n\t\t\t\t\t<FirebaseFull height={24} width={80} />\r\n\t\t\t\t\t<Beacon height={24} width={80} />\r\n\t\t\t\t\t<Claude height={26} width={90} />\r\n\t\t\t\t\t<Figma height={24} width={24} />\r\n\t\t\t\t\t<Cisco height={30} width={60} />\r\n\t\t\t\t</Marquee>\r\n\r\n\t\t\t\t<div\r\n\t\t\t\t\taria-hidden={true}\r\n\t\t\t\t\tclass=\"absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background\"\r\n\t\t\t\t></div>\r\n\t\t\t\t<div\r\n\t\t\t\t\taria-hidden={true}\r\n\t\t\t\t\tclass=\"absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background\"\r\n\t\t\t\t></div>\r\n\r\n\t\t\t\t<ProgressiveBlur\r\n\t\t\t\t\tdirection=\"left\"\r\n\t\t\t\t\tblurIntensity={1}\r\n\t\t\t\t\tclass=\"pointer-events-none absolute top-0 left-0 h-full w-20\"\r\n\t\t\t\t/>\r\n\t\t\t\t<ProgressiveBlur\r\n\t\t\t\t\tdirection=\"right\"\r\n\t\t\t\t\tblurIntensity={1}\r\n\t\t\t\t\tclass=\"pointer-events-none absolute top-0 right-0 h-full w-20\"\r\n\t\t\t\t/>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/logocloud/logocloud-three.svelte"
+		}
+	]
+}

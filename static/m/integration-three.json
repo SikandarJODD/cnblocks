@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-three",
+	"type": "registry:block",
+	"description": "Mist-style integration with icons",
+	"registryDependencies": [
+		"./integration-card.json",
+		"logo-gemini",
+		"logo-google-palm",
+		"logo-magic-ui",
+		"logo-media-wiki",
+		"logo-replit",
+		"logo-vscodium"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Gemini from \"../mlogos/Gemini.svelte\";\r\n\timport GooglePaLM from \"../mlogos/GooglePaLM.svelte\";\r\n\timport Replit from \"../mlogos/Replit.svelte\";\r\n\timport MediaWiki from \"../mlogos/MediaWiki.svelte\";\r\n\timport MagicUI from \"../mlogos/MagicUI.svelte\";\r\n\timport VSCodium from \"../mlogos/VSCodium.svelte\";\r\n\timport IntegrationCard from \"./integration-card.svelte\";\r\n</script>\r\n\r\n<section>\r\n\t<div class=\"py-32\">\r\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t\t<div>\r\n\t\t\t\t<h2 class=\"text-3xl font-semibold text-balance md:text-4xl\">\r\n\t\t\t\t\tIntegrate with your favorite tools\r\n\t\t\t\t</h2>\r\n\t\t\t\t<p class=\"mt-3 text-lg text-muted-foreground\">\r\n\t\t\t\t\tConnect seamlessly with popular platforms and services to enhance your workflow.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3\">\r\n\t\t\t\t<IntegrationCard\r\n\t\t\t\t\ttitle=\"Google Gemini\"\r\n\t\t\t\t\tdescription=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<Gemini />\r\n\t\t\t\t</IntegrationCard>\r\n\r\n\t\t\t\t<IntegrationCard\r\n\t\t\t\t\ttitle=\"Replit\"\r\n\t\t\t\t\tdescription=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<Replit />\r\n\t\t\t\t</IntegrationCard>\r\n\r\n\t\t\t\t<IntegrationCard\r\n\t\t\t\t\ttitle=\"Magic UI\"\r\n\t\t\t\t\tdescription=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<MagicUI />\r\n\t\t\t\t</IntegrationCard>\r\n\r\n\t\t\t\t<IntegrationCard\r\n\t\t\t\t\ttitle=\"VSCodium\"\r\n\t\t\t\t\tdescription=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<VSCodium />\r\n\t\t\t\t</IntegrationCard>\r\n\r\n\t\t\t\t<IntegrationCard\r\n\t\t\t\t\ttitle=\"MediaWiki\"\r\n\t\t\t\t\tdescription=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<MediaWiki />\r\n\t\t\t\t</IntegrationCard>\r\n\r\n\t\t\t\t<IntegrationCard\r\n\t\t\t\t\ttitle=\"Google PaLM\"\r\n\t\t\t\t\tdescription=\"Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<GooglePaLM />\r\n\t\t\t\t</IntegrationCard>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mintegration/three.svelte"
+		}
+	]
+}

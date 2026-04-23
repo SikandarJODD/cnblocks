@@ -44,7 +44,7 @@
 <section class="@container bg-background py-24">
 	<div class="mx-auto max-w-2xl px-6">
 		<h2 class="text-center font-serif text-4xl font-medium">Your Questions Answered</h2>
-		<Accordion type="single" collapsible class="mt-12">
+		<Accordion type="single" class="mt-12">
 			{#each faqItems as item (item.id)}
 				<div class="group">
 					<AccordionItem
@@ -66,7 +66,7 @@
 		</Accordion>
 		<p class="mt-8 text-center text-sm text-muted-foreground">
 			Can't find what you're looking for?
-			<a href="#" class="font-medium text-primary hover:underline"> Contact support </a>
+			<a href="/" class="font-medium text-primary hover:underline"> Contact support </a>
 		</p>
 	</div>
 </section>

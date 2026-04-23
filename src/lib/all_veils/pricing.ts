@@ -13,7 +13,7 @@ export const all_veils_pricing: MistBlock[] = [
 		title: "Pricing One",
 		category: "pricing",
 		preview: "/preview/veil/pricing/pricing-one",
-		itemId: "veil-pricing-one",
+		itemId: "pricing-one",
 		code: {
 			code: PricingOneCode,
 			lang: "svelte",
@@ -25,7 +25,7 @@ export const all_veils_pricing: MistBlock[] = [
 		title: "Pricing Two",
 		category: "pricing",
 		preview: "/preview/veil/pricing/pricing-two",
-		itemId: "veil-pricing-two",
+		itemId: "pricing-two",
 		code: {
 			code: PricingTwoCode,
 			lang: "svelte",
@@ -37,7 +37,7 @@ export const all_veils_pricing: MistBlock[] = [
 		title: "Pricing Three",
 		category: "pricing",
 		preview: "/preview/veil/pricing/pricing-three",
-		itemId: "veil-pricing-three",
+		itemId: "pricing-three",
 		code: {
 			code: PricingThreeCode,
 			lang: "svelte",

@@ -23,7 +23,7 @@
 			<Card class="group border-0 shadow-none">
 				<CardHeader class="pb-3">
 					<CardDecorator>
-						<Zap class="size-6" aria-hidden />
+						<Zap class="size-6" aria-hidden={true} />
 					</CardDecorator>
 
 					<h3 class="mt-6 font-medium">Customizable</h3>
@@ -40,7 +40,7 @@
 			<Card class="group border-0 shadow-none">
 				<CardHeader class="pb-3">
 					<CardDecorator>
-						<Settings2 class="size-6" aria-hidden />
+						<Settings2 class="size-6" aria-hidden={true} />
 					</CardDecorator>
 
 					<h3 class="mt-6 font-medium">You have full control</h3>
@@ -57,7 +57,7 @@
 			<Card class="group border-0 shadow-none">
 				<CardHeader class="pb-3">
 					<CardDecorator>
-						<Sparkles class="size-6" aria-hidden />
+						<Sparkles class="size-6" aria-hidden={true} />
 					</CardDecorator>
 
 					<h3 class="mt-6 font-medium">Powered By AI</h3>

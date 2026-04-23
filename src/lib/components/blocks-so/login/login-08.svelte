@@ -4,7 +4,9 @@
 	import { Checkbox } from "$lib/components/ui/checkbox";
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";
-	import { EyeIcon, EyeOffIcon, Key } from "@lucide/svelte";
+	import EyeIcon from "@lucide/svelte/icons/eye";
+	import EyeOffIcon from "@lucide/svelte/icons/eye-off";
+	import Key from "@lucide/svelte/icons/key";
 	import LogoIcon from "./logo-icon.svelte";
 
 	let isPasswordVisible = $state(false);
@@ -35,7 +37,7 @@
 			<div class="space-y-0">
 				<div class="mb-2 flex items-center justify-between">
 					<Label for="password">Password</Label>
-					<a href="#" class="text-sm text-primary hover:underline"> Reset password </a>
+					<a href="/" class="text-sm text-primary hover:underline"> Reset password </a>
 				</div>
 				<div class="relative">
 					<Input
@@ -76,7 +78,7 @@
 		<CardFooter class="flex justify-center border-t py-4!">
 			<p class="text-center text-sm text-muted-foreground">
 				New to Acme?{" "}
-				<a href="#" class="text-primary hover:underline"> Sign up </a>
+				<a href="/" class="text-primary hover:underline"> Sign up </a>
 			</p>
 		</CardFooter>
 	</Card>

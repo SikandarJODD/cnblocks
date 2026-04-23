@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Check, Minus } from "@lucide/svelte";
+	import Check from "@lucide/svelte/icons/check";
+	import Minus from "@lucide/svelte/icons/minus";
 	import { Button } from "$lib/components/ui/veil/button";
 	import { Card } from "$lib/components/ui/veil/card";
 

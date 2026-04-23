@@ -10,7 +10,10 @@
 	} from "$lib/svgs/index";
 </script>
 
-<div aria-hidden class="mx-auto flex h-44 max-w-lg flex-col justify-between **:fill-foreground">
+<div
+	aria-hidden={true}
+	class="mx-auto flex h-44 max-w-lg flex-col justify-between **:fill-foreground"
+>
 	<div class="relative flex h-10 items-center justify-between gap-12 @lg:px-6">
 		<div class="absolute inset-0 my-auto h-px bg-border"></div>
 

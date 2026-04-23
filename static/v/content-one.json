@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-one",
+	"type": "registry:block",
+	"description": "Veil Content component, variant One.",
+	"files": [
+		{
+			"content": "<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto grid max-w-3xl gap-6 px-6 @2xl:grid-cols-2\">\r\n\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">\r\n\t\t\tCreate Content with AI Assistance\r\n\t\t</h2>\r\n\r\n\t\t<div class=\"flex flex-col gap-6\">\r\n\t\t\t<p class=\"text-muted-foreground\">\r\n\t\t\t\t<span class=\"font-medium text-foreground\">Generate Ideas</span> Spark creativity with\r\n\t\t\t\tAI-powered content suggestions and inspiration.\r\n\t\t\t</p>\r\n\r\n\t\t\t<p class=\"text-muted-foreground\">\r\n\t\t\t\t<span class=\"font-medium text-foreground\">Improve Writing</span> Enhance your text with\r\n\t\t\t\tsmart editing suggestions and style refinements.\r\n\t\t\t</p>\r\n\r\n\t\t\t<p class=\"text-muted-foreground\">\r\n\t\t\t\t<span class=\"font-medium text-foreground\">Design Layouts</span> Create visually appealing\r\n\t\t\t\tlayouts that capture your audience's attention.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/content/content-one.svelte"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-one",
+	"type": "registry:block",
+	"description": "Mist-style simple stats row",
+	"registryDependencies": [
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Card from \"$COMPONENTS$/ui/card/card.svelte\";\r\n</script>\r\n\r\n<section class=\"bg-muted py-12 md:py-20 dark:[--color-muted:var(--color-zinc-900)]\">\r\n\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t<Card\r\n\t\t\tclass=\"grid gap-0.5 divide-y *:py-8 *:text-center md:grid-cols-3 md:divide-x md:divide-y-0\"\r\n\t\t>\r\n\t\t\t<div>\r\n\t\t\t\t<div class=\"space-y-1 text-4xl font-bold text-foreground\">+1200</div>\r\n\t\t\t\t<p class=\"text-muted-foreground\">Stars on GitHub</p>\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<div class=\"space-y-1 text-4xl font-bold text-foreground\">56%</div>\r\n\t\t\t\t<p class=\"text-muted-foreground\">Conversion rate</p>\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<div class=\"space-y-1 text-4xl font-bold text-foreground\">+500</div>\r\n\t\t\t\t<p class=\"text-muted-foreground\">Powered Apps</p>\r\n\t\t\t</div>\r\n\t\t</Card>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mstats/one.svelte"
+		}
+	]
+}

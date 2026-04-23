@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "comparator-two",
+	"type": "registry:block",
+	"description": "Veil Comparator component, variant Two.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Check from \"@lucide/svelte/icons/check\";\r\n\timport Minus from \"@lucide/svelte/icons/minus\";\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\r\n\r\n\ttype FeatureRow = {\r\n\t\tname: string;\r\n\t\tfree: boolean | string;\r\n\t\tpro: boolean | string;\r\n\t};\r\n\r\n\tconst features: FeatureRow[] = [\r\n\t\t{ name: \"Integrations\", free: \"5\", pro: \"Unlimited\" },\r\n\t\t{ name: \"API Calls\", free: \"10K/mo\", pro: \"500K/mo\" },\r\n\t\t{ name: \"Team Members\", free: \"2\", pro: \"20\" },\r\n\t\t{ name: \"Support\", free: \"Email\", pro: \"Priority\" },\r\n\t\t{ name: \"Analytics Dashboard\", free: false, pro: true },\r\n\t\t{ name: \"Custom Webhooks\", free: false, pro: true },\r\n\t\t{ name: \"Advanced Security\", free: false, pro: true },\r\n\t\t{ name: \"API Access\", free: false, pro: true },\r\n\t];\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"text-center\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">Free vs Pro</h2>\r\n\t\t\t<p class=\"mx-auto mt-4 max-w-md text-balance text-muted-foreground\">\r\n\t\t\t\tSee what you get with each plan.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<Card variant=\"outline\" class=\"mt-12 overflow-auto @max-md:*:min-w-md\">\r\n\t\t\t<div class=\"grid grid-cols-3\">\r\n\t\t\t\t<div class=\"p-4\"></div>\r\n\t\t\t\t<div class=\"min-w-32 border-l p-4 text-center\">\r\n\t\t\t\t\t<p class=\"font-medium text-foreground\">Free</p>\r\n\t\t\t\t\t<p class=\"font-serif text-2xl font-medium\">$0</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"min-w-32 border-l bg-primary/5 p-4 text-center\">\r\n\t\t\t\t\t<p class=\"font-medium text-foreground\">Pro</p>\r\n\t\t\t\t\t<p class=\"font-serif text-2xl font-medium\">$29</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t{#each features as feature (feature.name)}\r\n\t\t\t\t<div class=\"grid grid-cols-3 border-t\">\r\n\t\t\t\t\t<div class=\"p-4 text-sm text-muted-foreground\">{feature.name}</div>\r\n\t\t\t\t\t<div class=\"flex min-w-32 items-center justify-center border-l p-4 text-sm\">\r\n\t\t\t\t\t\t{#if typeof feature.free === \"boolean\"}\r\n\t\t\t\t\t\t\t{#if feature.free}\r\n\t\t\t\t\t\t\t\t<Check class=\"size-4 text-primary\" />\r\n\t\t\t\t\t\t\t{:else}\r\n\t\t\t\t\t\t\t\t<Minus class=\"size-4 text-muted-foreground/50\" />\r\n\t\t\t\t\t\t\t{/if}\r\n\t\t\t\t\t\t{:else}\r\n\t\t\t\t\t\t\t<span class=\"text-foreground\">{feature.free}</span>\r\n\t\t\t\t\t\t{/if}\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div\r\n\t\t\t\t\t\tclass=\"flex min-w-32 items-center justify-center border-l bg-primary/5 p-4 text-sm\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t{#if typeof feature.pro === \"boolean\"}\r\n\t\t\t\t\t\t\t{#if feature.pro}\r\n\t\t\t\t\t\t\t\t<Check class=\"size-4 text-primary\" />\r\n\t\t\t\t\t\t\t{:else}\r\n\t\t\t\t\t\t\t\t<Minus class=\"size-4 text-muted-foreground/50\" />\r\n\t\t\t\t\t\t\t{/if}\r\n\t\t\t\t\t\t{:else}\r\n\t\t\t\t\t\t\t<span class=\"font-medium text-foreground\">{feature.pro}</span>\r\n\t\t\t\t\t\t{/if}\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t{/each}\r\n\r\n\t\t\t<div class=\"grid grid-cols-3 border-t\">\r\n\t\t\t\t<div class=\"p-4\"></div>\r\n\t\t\t\t<div class=\"min-w-32 border-l p-4\">\r\n\t\t\t\t\t<Button href=\"#link\" variant=\"outline\" size=\"sm\" class=\"w-full\"\r\n\t\t\t\t\t\t>Get Started</Button\r\n\t\t\t\t\t>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"min-w-32 border-l bg-primary/5 p-4\">\r\n\t\t\t\t\t<Button href=\"#link\" size=\"sm\" class=\"w-full\">Upgrade</Button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</Card>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/comparator/comparator-two.svelte"
+		}
+	]
+}

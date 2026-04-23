@@ -5,7 +5,11 @@
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";
 	import { Select, SelectContent, SelectItem, SelectTrigger } from "$lib/components/ui/select";
-	import { BarChart, Code, Eye, EyeOff, User } from "@lucide/svelte";
+	import BarChart from "@lucide/svelte/icons/bar-chart";
+	import Code from "@lucide/svelte/icons/code";
+	import Eye from "@lucide/svelte/icons/eye";
+	import EyeOff from "@lucide/svelte/icons/eye-off";
+	import User from "@lucide/svelte/icons/user";
 	import LogoIcon from "./logo-icon.svelte";
 
 	let showPassword = $state(false);
@@ -99,9 +103,9 @@
 					<Checkbox id="terms" />
 					<label for="terms" class="text-sm text-muted-foreground">
 						I agree to the{" "}
-						<a href="#" class="text-primary hover:underline"> Terms </a>{" "}
+						<a href="/" class="text-primary hover:underline"> Terms </a>{" "}
 						and{" "}
-						<a href="#" class="text-primary hover:underline"> Conditions </a>
+						<a href="/" class="text-primary hover:underline"> Conditions </a>
 					</label>
 				</div>
 
@@ -112,7 +116,7 @@
 			<CardFooter class="flex justify-center border-t py-4!">
 				<p class="text-center text-sm text-muted-foreground">
 					Already have an account?{" "}
-					<a href="#" class="text-primary hover:underline"> Sign in </a>
+					<a href="/" class="text-primary hover:underline"> Sign in </a>
 				</p>
 			</CardFooter>
 		</Card>

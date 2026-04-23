@@ -87,23 +87,13 @@
 
 	<Divider />
 
-	<section class="space-y-4">
-		<H2 id="run-server">Run MCP Server</H2>
+	<section>
+		<H2 id="run-server" class="mb-2">Run MCP Server</H2>
 		<DocsCodeBlock
 			fileName="Terminal"
 			code={`npm install -g jsrepo
 jsrepo mcp`}
 			lang="bash"
 		/>
-		<H3 id="verification">Verification</H3>
-		<Blockquote>
-			After setup, ask your AI IDE to list available registry items and verify it can resolve
-			`@sv/cnblocks` entries.
-		</Blockquote>
-		<Paragraph>
-			Need the base setup first? Return to <Link href="/v2-docs/installation"
-				>Installation</Link
-			>.
-		</Paragraph>
 	</section>
 </DocsPageShell>

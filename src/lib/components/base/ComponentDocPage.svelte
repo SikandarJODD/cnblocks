@@ -46,7 +46,10 @@
 
 	let PreviewComp = $derived(preview);
 	let resolvedPreviewAddItem = $derived(previewAddItem ?? id);
-	let installUrl = $derived(getRegistryItemUrl(page.url.origin, resolvedPreviewAddItem));
+	let installPathname = $derived(previewHref ?? page.url.pathname);
+	let installUrl = $derived(
+		getRegistryItemUrl(page.url.origin, installPathname, resolvedPreviewAddItem)
+	);
 	let previewInstallCmd = $derived(previewInstallCommand ?? `npx jsrepo add @sv/cnblocks/${id}`);
 	let resolvedPreviewRegistry = $derived(
 		previewRegistry ?? previewRegistryOptions[0] ?? "@sv/cnblocks"

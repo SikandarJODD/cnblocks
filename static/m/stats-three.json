@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-three",
+	"type": "registry:block",
+	"description": "Mist-style stats with descriptions",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport ArrowRight from \"@lucide/svelte/icons/arrow-right\";\r\n\tlet stats = [\r\n\t\t{ value: \"90+\", label: \"Integrations\" },\r\n\t\t{ value: \"56%\", label: \"Productivity Boost\" },\r\n\t\t{ value: \"24/7\", label: \"Customer Support\" },\r\n\t\t{ value: \"10k+\", label: \"Active Users\" },\r\n\t];\r\n</script>\r\n\r\n<section>\r\n\t<div class=\"py-24\">\r\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t\t<div>\r\n\t\t\t\t<h2 class=\"text-2xl font-semibold\">Tailark in numbers</h2>\r\n\t\t\t\t<p class=\"mt-4 text-lg text-balance text-muted-foreground\">\r\n\t\t\t\t\tOur platform continues to grow with developers and businesses using our tools to\r\n\t\t\t\t\tcreate innovative solutions and enhance productivity.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\t\t<ul role=\"list\" class=\"mt-8 space-y-2 text-muted-foreground\">\r\n\t\t\t\t{#each stats as stat, index}\r\n\t\t\t\t\t<li class=\"-ml-0.5 flex items-center gap-1.5\">\r\n\t\t\t\t\t\t<ArrowRight class=\"size-4 opacity-50\" />\r\n\t\t\t\t\t\t<span class=\"font-medium text-foreground\">{stat.value}</span>\r\n\t\t\t\t\t\t{stat.label}\r\n\t\t\t\t\t</li>\r\n\t\t\t\t{/each}\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mstats/three.svelte"
+		}
+	]
+}

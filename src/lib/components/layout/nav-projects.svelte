@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import Badge from "$lib/components/ui/badge/badge.svelte";
 	import { cn } from "$lib/utils";
 
 	let {

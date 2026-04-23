@@ -4,12 +4,12 @@
 	"type": "registry:block",
 	"description": "Logo collection utilities and exports",
 	"registryDependencies": [
-		"logo-gemini",
-		"logo-google-palm",
-		"logo-magic-ui",
-		"logo-media-wiki",
-		"logo-replit",
-		"logo-vscodium"
+		"./logo-gemini.json",
+		"./logo-google-palm.json",
+		"./logo-magic-ui.json",
+		"./logo-media-wiki.json",
+		"./logo-replit.json",
+		"./logo-vscodium.json"
 	],
 	"files": [
 		{

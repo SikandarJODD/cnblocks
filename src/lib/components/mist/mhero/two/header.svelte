@@ -117,12 +117,12 @@
 							variant="ghost"
 							size="sm"
 							class={cn(isScrolled && "lg:hidden", "rounded-full")}
-							href="#"
+							href="/"
 						>
 							Login
 						</Button>
 						<Button
-							href="#"
+							href="/"
 							size="sm"
 							variant="mdefault"
 							class={cn(isScrolled && "lg:hidden", "rounded-full")}
@@ -132,7 +132,7 @@
 						<Button
 							size="sm"
 							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-							href="#"
+							href="/"
 						>
 							<span>Get Started</span>
 						</Button>

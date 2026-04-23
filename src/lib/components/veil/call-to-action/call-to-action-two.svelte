@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/veil/button";
 	import { Card } from "$lib/components/ui/veil/card";
-	import { ArrowRight } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 
 	type Props = {
 		eyebrow?: string;

@@ -51,7 +51,7 @@
 			</p>
 		</div>
 		<Card variant="outline" class="mt-12 p-2">
-			<Accordion type="single" collapsible>
+			<Accordion type="single">
 				{#each faqItems as item (item.id)}
 					<AccordionItem value={item.id} class="border-b-0 px-4">
 						<AccordionTrigger
@@ -68,7 +68,7 @@
 		</Card>
 		<p class="mt-6 text-center text-sm text-muted-foreground">
 			Still have questions?
-			<a href="#" class="font-medium text-primary hover:underline"> Contact support </a>
+			<a href="/" class="font-medium text-primary hover:underline"> Contact support </a>
 		</p>
 	</div>
 </section>

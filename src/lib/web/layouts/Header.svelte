@@ -3,12 +3,12 @@
 	import Button from "$lib/components/ui/button/button.svelte";
 	let navs: NavItem[] = [
 		{ name: "Home", url: "/" },
-		{ name: "Veil", url: "/veil", isNew: true },
+		{ name: "Docs", url: "/docs/installation" },
 		{ name: "Blocks", url: "/hero" },
+		{ name: "Veil", url: "/veil", isNew: true },
 		{ name: "Mists", url: "/mist/hero", isNew: true },
 		{ name: "Templates", url: "/templates" },
-		{ name: "Changelog", url: "/changelog" },
-		{ name: "Docs", url: "/docs/installation" },
+		// { name: "Changelog", url: "/changelog" },
 	];
 	type NavItem = {
 		name: string;
@@ -128,8 +128,7 @@
 
 <nav
 	class={cn(
-		"sticky top-0 z-1000 backdrop-blur-2xl transition-all  duration-200",
-		isDocs ? "border-b-transparent bg-sidebar" : "border-b bg-transparent"
+		"sticky top-0 z-1000 border-b bg-transparent  backdrop-blur-2xl transition-all duration-200"
 	)}
 >
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -182,22 +181,20 @@
 									<span class="hidden sm:inline"> Home </span>
 								</NavigationMenu.Link>
 							</NavigationMenu.Item>
-
-							<NavigationMenu.Item id="veil">
-								<NavigationMenu.Link
-									class="data-[state=open]:shadow-mini group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted dark:hover:bg-muted dark:data-[state=open]:bg-muted"
-									href="/veil"
-								>
-									<span class="hidden sm:inline"> Veil </span>
-								</NavigationMenu.Link>
-							</NavigationMenu.Item>
-
 							<NavigationMenu.Item id="docs">
 								<NavigationMenu.Link
 									class="data-[state=open]:shadow-mini group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted dark:hover:bg-muted dark:data-[state=open]:bg-muted"
 									href="/v2-docs"
 								>
 									<span class="hidden sm:inline"> Docs </span>
+								</NavigationMenu.Link>
+							</NavigationMenu.Item>
+							<NavigationMenu.Item id="veil">
+								<NavigationMenu.Link
+									class="data-[state=open]:shadow-mini group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted dark:hover:bg-muted dark:data-[state=open]:bg-muted"
+									href="/veil/features"
+								>
+									<span class="hidden sm:inline"> Veil </span>
 								</NavigationMenu.Link>
 							</NavigationMenu.Item>
 
@@ -302,14 +299,14 @@
 									</ul>
 								</NavigationMenu.Content>
 							</NavigationMenu.Item>
-							<NavigationMenu.Item id="changelog">
+							<!-- <NavigationMenu.Item id="changelog">
 								<NavigationMenu.Link
 									class="data-[state=open]:shadow-mini group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted dark:hover:bg-muted dark:data-[state=open]:bg-muted"
 									href="/changelog"
 								>
 									<span class="hidden sm:inline"> Changelog </span>
 								</NavigationMenu.Link>
-							</NavigationMenu.Item>
+							</NavigationMenu.Item> -->
 
 							<NavigationMenu.Indicator
 								class="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 transition-[all,transform_250ms_ease] duration-200 data-[state=hidden]:animate-fade-out data-[state=hidden]:opacity-0 data-[state=visible]:animate-fade-in"
