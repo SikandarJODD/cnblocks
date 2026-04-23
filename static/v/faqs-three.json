@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "faqs-three",
+	"type": "registry:block",
+	"description": "Veil FAQs component, variant Three.",
+	"registryDependencies": [
+		"accordion"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport {\r\n\t\tAccordion,\r\n\t\tAccordionContent,\r\n\t\tAccordionItem,\r\n\t\tAccordionTrigger,\r\n\t} from \"$COMPONENTS$/ui/accordion\";\r\n\r\n\ttype FAQItem = {\r\n\t\tid: string;\r\n\t\tquestion: string;\r\n\t\tanswer: string;\r\n\t};\r\n\r\n\tconst faqItems: FAQItem[] = [\r\n\t\t{\r\n\t\t\tid: \"item-1\",\r\n\t\t\tquestion: \"How does the free trial work?\",\r\n\t\t\tanswer: \"Start with a 14-day free trial with full access to all features. No credit card required. You can upgrade to a paid plan at any time during or after the trial.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tid: \"item-2\",\r\n\t\t\tquestion: \"Can I change my plan later?\",\r\n\t\t\tanswer: \"Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the difference.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tid: \"item-3\",\r\n\t\t\tquestion: \"What payment methods do you accept?\",\r\n\t\t\tanswer: \"We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tid: \"item-4\",\r\n\t\t\tquestion: \"Is there a setup fee?\",\r\n\t\t\tanswer: \"No, there are no setup fees or hidden costs. You only pay for your subscription plan.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tid: \"item-5\",\r\n\t\t\tquestion: \"Do you offer refunds?\",\r\n\t\t\tanswer: \"We offer a 30-day money-back guarantee. If you're not satisfied, contact us within 30 days for a full refund.\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<h2 class=\"text-center font-serif text-4xl font-medium\">Your Questions Answered</h2>\r\n\t\t<Accordion type=\"single\"  class=\"mt-12\">\r\n\t\t\t{#each faqItems as item (item.id)}\r\n\t\t\t\t<div class=\"group\">\r\n\t\t\t\t\t<AccordionItem\r\n\t\t\t\t\t\tvalue={item.id}\r\n\t\t\t\t\t\tclass=\"peer rounded-xl border-none px-5 py-1 transition-colors data-[state=open]:bg-muted/50\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t<AccordionTrigger\r\n\t\t\t\t\t\t\tclass=\"cursor-pointer py-4 text-sm font-medium hover:no-underline\"\r\n\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t{item.question}\r\n\t\t\t\t\t\t</AccordionTrigger>\r\n\t\t\t\t\t\t<AccordionContent>\r\n\t\t\t\t\t\t\t<p class=\"pb-2 text-sm text-muted-foreground\">{item.answer}</p>\r\n\t\t\t\t\t\t</AccordionContent>\r\n\t\t\t\t\t</AccordionItem>\r\n\t\t\t\t\t<hr class=\"mx-5 group-last:hidden peer-data-[state=open]:opacity-0\" />\r\n\t\t\t\t</div>\r\n\t\t\t{/each}\r\n\t\t</Accordion>\r\n\t\t<p class=\"mt-8 text-center text-sm text-muted-foreground\">\r\n\t\t\tCan't find what you're looking for?\r\n\t\t\t<a href=\"/\" class=\"font-medium text-primary hover:underline\"> Contact support </a>\r\n\t\t</p>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/faqs/faqs-three.svelte"
+		}
+	]
+}

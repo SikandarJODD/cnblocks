@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-seven",
+	"type": "registry:block",
+	"description": "Content block with alternating layout",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Zap from \"@lucide/svelte/icons/zap\";\r\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n\t\t<h2 class=\"relative z-10 max-w-xl text-4xl font-medium lg:text-5xl\">\r\n\t\t\tThe Lyra ecosystem brings together our models.\r\n\t\t</h2>\r\n\t\t<div class=\"grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24\">\r\n\t\t\t<div class=\"relative space-y-4\">\r\n\t\t\t\t<p class=\"text-muted-foreground\">\r\n\t\t\t\t\tGemini is evolving to be more than just the models. <span\r\n\t\t\t\t\t\tclass=\"font-bold text-accent-foreground\"\r\n\t\t\t\t\t\t>It supports an entire ecosystem</span\r\n\t\t\t\t\t> — from products innovate.\r\n\t\t\t\t</p>\r\n\t\t\t\t<p class=\"text-muted-foreground\">\r\n\t\t\t\t\tIt supports an entire ecosystem — from products to the APIs and platforms\r\n\t\t\t\t\thelping developers and businesses innovate\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<div class=\"grid grid-cols-2 gap-3 pt-6 sm:gap-4\">\r\n\t\t\t\t\t<div class=\"space-y-3\">\r\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t<Zap class=\"size-4\" />\r\n\t\t\t\t\t\t\t<h3 class=\"text-sm font-medium\">Faaast</h3>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\tIt supports an entire helping developers and innovate.\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t<Cpu class=\"size-4\" />\r\n\t\t\t\t\t\t\t<h3 class=\"text-sm font-medium\">Powerful</h3>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\tIt supports an entire helping developers and businesses.\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"relative mt-6 sm:mt-0\">\r\n\t\t\t\t<div\r\n\t\t\t\t\tclass=\"relative aspect-67/34 rounded-2xl bg-linear-to-b from-zinc-300 to-transparent p-px dark:from-zinc-700\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<img\r\n\t\t\t\t\t\tsrc=\"/exercice-dark.png\"\r\n\t\t\t\t\t\tclass=\"hidden rounded-[15px] dark:block\"\r\n\t\t\t\t\t\talt=\"payments illustration dark\"\r\n\t\t\t\t\t\twidth={1206}\r\n\t\t\t\t\t\theight={612}\r\n\t\t\t\t\t/>\r\n\t\t\t\t\t<img\r\n\t\t\t\t\t\tsrc=\"/exercice.png\"\r\n\t\t\t\t\t\tclass=\"rounded-[15px] shadow dark:hidden\"\r\n\t\t\t\t\t\talt=\"payments illustration light\"\r\n\t\t\t\t\t\twidth={1206}\r\n\t\t\t\t\t\theight={612}\r\n\t\t\t\t\t/>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/content/content-seven.svelte"
+		}
+	]
+}

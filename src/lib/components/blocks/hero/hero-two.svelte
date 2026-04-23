@@ -79,7 +79,12 @@
 								<span class="text-nowrap">Start Building</span>
 							</Button>
 						</div>
-						<Button href="/" size="lg" variant="ghost" class="h-10.5 rounded-xl px-5 text-base">
+						<Button
+							href="/"
+							size="lg"
+							variant="ghost"
+							class="h-10.5 rounded-xl px-5 text-base"
+						>
 							<span class="text-nowrap">Request a demo</span>
 						</Button>
 					</div>

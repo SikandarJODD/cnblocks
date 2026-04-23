@@ -1,13 +1,7 @@
 <script lang="ts">
 	import SEOComponent from "$lib/seo/SEO.svelte";
 	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
-	import {
-		H2,
-		Paragraph,
-		Steps,
-		Step,
-		Link,
-	} from "$lib/components/markdown/index";
+	import { H2, Paragraph, Steps, Step, Link } from "$lib/components/markdown/index";
 	import { docsV2PageMap } from "$lib/config/docs-v2";
 	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
 

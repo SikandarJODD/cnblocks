@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-two",
+	"type": "registry:block",
+	"description": "Content block with centered text and CTA",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Zap from \"@lucide/svelte/icons/zap\";\r\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n\t\t<h2 class=\"relative z-10 max-w-xl text-4xl font-medium lg:text-5xl\">\r\n\t\t\tThe Lyra ecosystem brings together our models.\r\n\t\t</h2>\r\n\t\t<div class=\"relative\">\r\n\t\t\t<div class=\"relative z-10 space-y-4 md:w-1/2\">\r\n\t\t\t\t<p class=\"text-body\">\r\n\t\t\t\t\tLyra is evolving to be more than just the models. <span\r\n\t\t\t\t\t\tclass=\"text-title font-medium\">It supports an entire ecosystem</span\r\n\t\t\t\t\t> — from products innovate.\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>\r\n\t\t\t\t\tIt supports an entire ecosystem — from products to the APIs and platforms\r\n\t\t\t\t\thelping developers and businesses innovate\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<div class=\"grid grid-cols-2 gap-3 pt-6 sm:gap-4\">\r\n\t\t\t\t\t<div class=\"space-y-3\">\r\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t<Zap class=\"size-4\" />\r\n\t\t\t\t\t\t\t<h3 class=\"text-sm font-medium\">Faaast</h3>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\tIt supports an entire helping developers and innovate.\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t<Cpu class=\"size-4\" />\r\n\t\t\t\t\t\t\t<h3 class=\"text-sm font-medium\">Powerful</h3>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\tIt supports an entire helping developers and businesses.\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"mt-12 h-fit md:absolute md:inset-x-0 md:-inset-y-12 md:mt-0\">\r\n\t\t\t\t<div\r\n\t\t\t\t\tclass=\"absolute inset-0 z-1 hidden bg-linear-to-l from-transparent to-background to-55% md:block\"\r\n\t\t\t\t></div>\r\n\t\t\t\t<div class=\"relative rounded-2xl border border-dotted border-border/50 p-2\">\r\n\t\t\t\t\t<img\r\n\t\t\t\t\t\tsrc=\"/charts.png\"\r\n\t\t\t\t\t\tclass=\"hidden rounded-[12px] dark:block\"\r\n\t\t\t\t\t\talt=\"payments illustration dark\"\r\n\t\t\t\t\t\twidth={1207}\r\n\t\t\t\t\t\theight={929}\r\n\t\t\t\t\t/>\r\n\t\t\t\t\t<img\r\n\t\t\t\t\t\tsrc=\"/charts-light.png\"\r\n\t\t\t\t\t\tclass=\"rounded-[12px] shadow dark:hidden\"\r\n\t\t\t\t\t\talt=\"payments illustration light\"\r\n\t\t\t\t\t\twidth={1207}\r\n\t\t\t\t\t\theight={929}\r\n\t\t\t\t\t/>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/content/content-two.svelte"
+		}
+	]
+}

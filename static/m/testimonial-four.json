@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-four",
+	"type": "registry:block",
+	"description": "Mist-style four-column testimonials",
+	"registryDependencies": [
+		"avatar"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Avatar, AvatarFallback, AvatarImage } from \"$COMPONENTS$/ui/avatar\";\r\n</script>\r\n\r\n<section class=\"[--color-primary:var(--color-indigo-500)]\">\r\n\t<div class=\"py-24\">\r\n\t\t<div class=\"mx-auto w-full max-w-5xl px-6\">\r\n\t\t\t<blockquote\r\n\t\t\t\tclass=\"relative max-w-xl pl-6 before:absolute before:inset-y-0 before:left-0 before:w-1 before:rounded-full before:bg-primary\"\r\n\t\t\t>\r\n\t\t\t\t<p class=\"text-lg text-foreground\">\r\n\t\t\t\t\tUsing Tailark has been like unlocking a secret design superpower. It's the\r\n\t\t\t\t\tperfect fusion of simplicity and versatility, enabling us to create UIs that are\r\n\t\t\t\t\tas stunning as they are user-friendly.\r\n\t\t\t\t</p>\r\n\t\t\t\t<footer class=\"mt-4 flex items-center gap-2\">\r\n\t\t\t\t\t<Avatar class=\" size-6 border border-transparent shadow ring-1\">\r\n\t\t\t\t\t\t<AvatarImage\r\n\t\t\t\t\t\t\tsrc=\"https://avatars.githubusercontent.com/u/68236786?v=4\"\r\n\t\t\t\t\t\t\talt=\"Théo Balick\"\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t<AvatarFallback>T</AvatarFallback>\r\n\t\t\t\t\t</Avatar>\r\n\t\t\t\t\t<cite>Théo Balick</cite>\r\n\t\t\t\t\t<span aria-hidden=\"true\" class=\"size-1 rounded-full bg-foreground/15\"></span>\r\n\t\t\t\t\t<span class=\"text-muted-foreground\">Product Designer</span>\r\n\t\t\t\t</footer>\r\n\t\t\t</blockquote>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mtestimonial/four.svelte"
+		}
+	]
+}

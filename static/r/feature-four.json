@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-four",
+	"type": "registry:block",
+	"description": "Four-column feature grid with icons",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\r\n\timport Fingerprint from \"@lucide/svelte/icons/fingerprint\";\r\n\timport Pencil from \"@lucide/svelte/icons/pencil\";\r\n\timport Settings2 from \"@lucide/svelte/icons/settings-2\";\r\n\timport Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n\timport Zap from \"@lucide/svelte/icons/zap\";\r\n</script>\r\n\r\n<section class=\"py-12 md:py-20\">\r\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n\t\t<div class=\"relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12\">\r\n\t\t\t<h2 class=\"text-4xl font-medium text-balance lg:text-5xl\">\r\n\t\t\t\tThe foundation for creative teams management\r\n\t\t\t</h2>\r\n\t\t\t<p>\r\n\t\t\t\tLyra is evolving to be more than just the models. It supports an entire to the APIs\r\n\t\t\t\tand platforms helping developers and businesses innovate.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\r\n\t\t<div\r\n\t\t\tclass=\"relative mx-auto grid max-w-4xl divide-x divide-y border *:p-12 sm:grid-cols-2 lg:grid-cols-3\"\r\n\t\t>\r\n\t\t\t<div class=\"space-y-3\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Zap class=\"size-4\" />\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Faaast</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm\">It supports an entire helping developers and innovate.</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Cpu class=\"size-4\" />\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Powerful</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm\">It supports an entire helping developers and businesses.</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Fingerprint class=\"size-4\" />\r\n\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Security</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm\">It supports an helping developers businesses.</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Pencil class=\"size-4\" />\r\n\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Customization</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm\">It supports helping developers and businesses innovate.</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Settings2 class=\"size-4\" />\r\n\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Control</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm\">It supports helping developers and businesses innovate.</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Sparkles class=\"size-4\" />\r\n\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Built for AI</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm\">It supports helping developers and businesses innovate.</p>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/feature/feature-four.svelte"
+		}
+	]
+}

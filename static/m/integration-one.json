@@ -1,0 +1,21 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-one",
+	"type": "registry:block",
+	"description": "Mist-style integration grid",
+	"registryDependencies": [
+		"logo-gemini",
+		"logo-google-palm",
+		"logo-magic-ui",
+		"logo-media-wiki",
+		"logo-replit",
+		"logo-vscodium"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Gemini from \"../mlogos/Gemini.svelte\";\r\n\timport GooglePaLM from \"../mlogos/GooglePaLM.svelte\";\r\n\timport Replit from \"../mlogos/Replit.svelte\";\r\n\timport MediaWiki from \"../mlogos/MediaWiki.svelte\";\r\n\timport MagicUI from \"../mlogos/MagicUI.svelte\";\r\n\timport VSCodium from \"../mlogos/VSCodium.svelte\";\r\n</script>\r\n\r\n<section>\r\n\t<div class=\"mx-auto max-w-5xl px-6 py-8\">\r\n\t\t<div class=\"flex flex-wrap items-center gap-4\">\r\n\t\t\t<p class=\"font-medium text-muted-foreground\">Integrate with :</p>\r\n\t\t\t<div class=\"flex max-w-2xs flex-wrap gap-3 divide-x *:pr-3\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<Gemini class=\"m-auto size-5\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<GooglePaLM class=\"m-auto size-5\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<Replit class=\"m-auto size-5\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<MediaWiki class=\"m-auto size-5\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<MagicUI class=\"m-auto size-5\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<VSCodium class=\"m-auto size-5\" />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mintegration/one.svelte"
+		}
+	]
+}

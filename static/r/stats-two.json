@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-two",
+	"type": "registry:block",
+	"description": "Two-column stats with side image",
+	"files": [
+		{
+			"content": "<section class=\"py-12 md:py-20\">\r\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-16\">\r\n\t\t<div class=\"relative z-10 mx-auto max-w-xl space-y-6 text-center\">\r\n\t\t\t<h2 class=\"text-4xl font-semibold lg:text-5xl\">Tailus UI in numbers</h2>\r\n\t\t\t<p>\r\n\t\t\t\tGemini is evolving to be more than just the models. It supports an entire to the\r\n\t\t\t\tAPIs and platforms helping developers and businesses innovate.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\r\n\t\t<div\r\n\t\t\tclass=\"grid gap-0.5 *:text-center md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]\"\r\n\t\t>\r\n\t\t\t<div class=\"space-y-4 rounded-(--radius) bg-muted py-12\">\r\n\t\t\t\t<div class=\"text-5xl font-bold\">+1200</div>\r\n\t\t\t\t<p>Stars on GitHub</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-4 rounded-(--radius) bg-muted py-12\">\r\n\t\t\t\t<div class=\"text-5xl font-bold\">56%</div>\r\n\t\t\t\t<p>Conversion rate</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-4 rounded-(--radius) bg-muted py-12\">\r\n\t\t\t\t<div class=\"text-5xl font-bold\">+500</div>\r\n\t\t\t\t<p>Powered Apps</p>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/stats/stats-two.svelte"
+		}
+	]
+}

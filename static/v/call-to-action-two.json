@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "call-to-action-two",
+	"type": "registry:block",
+	"description": "Veil Call To Action component, variant Two.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\r\n\timport ArrowRight from \"@lucide/svelte/icons/arrow-right\";\r\n\r\n\ttype Props = {\r\n\t\teyebrow?: string;\r\n\t\ttitle?: string;\r\n\t\tdescription?: string;\r\n\t\tctaLabel?: string;\r\n\t\tctaHref?: string;\r\n\t};\r\n\r\n\tlet {\r\n\t\teyebrow = \"Limited Time Offer\",\r\n\t\ttitle = \"Start Building Today\",\r\n\t\tdescription = \"Get 3 months free when you sign up for an annual plan. No credit card required to start.\",\r\n\t\tctaLabel = \"Claim Your Offer\",\r\n\t\tctaHref = \"#link\",\r\n\t}: Props = $props();\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<Card variant=\"outline\" class=\"p-8 md:p-12\">\r\n\t\t\t<div class=\"mb-6 text-sm font-medium text-muted-foreground\">{eyebrow}</div>\r\n\t\t\t<h2 class=\"font-serif text-3xl font-medium text-balance md:text-4xl\">{title}</h2>\r\n\t\t\t<p class=\"mt-4 max-w-md text-balance text-muted-foreground\">\r\n\t\t\t\t{description}\r\n\t\t\t</p>\r\n\t\t\t<Button href={ctaHref} class=\"mt-8 gap-2\">\r\n\t\t\t\t{ctaLabel}\r\n\t\t\t\t<ArrowRight class=\"size-4\" />\r\n\t\t\t</Button>\r\n\t\t</Card>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/call-to-action/call-to-action-two.svelte"
+		}
+	]
+}

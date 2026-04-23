@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "pricing-three",
+	"type": "registry:block",
+	"description": "Veil Pricing component, variant Three.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport ArrowRight from \"@lucide/svelte/icons/arrow-right\";\r\n\timport Check from \"@lucide/svelte/icons/check\";\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\r\n\timport { cn } from \"$UTILS$\";\r\n\r\n\tconst plans = [\r\n\t\t{\r\n\t\t\tname: \"Monthly\",\r\n\t\t\tprice: \"$29\",\r\n\t\t\tperiod: \"/month\",\r\n\t\t\tdescription: \"Flexible month-to-month billing\",\r\n\t\t\tfeatures: [\"All features included\", \"Cancel anytime\", \"No long-term commitment\"],\r\n\t\t},\r\n\t\t{\r\n\t\t\tname: \"Annual\",\r\n\t\t\tprice: \"$19\",\r\n\t\t\tperiod: \"/month\",\r\n\t\t\tdescription: \"Save 35% with annual billing\",\r\n\t\t\tfeatures: [\"All features included\", \"2 months free\", \"Priority onboarding\"],\r\n\t\t\thighlighted: true,\r\n\t\t\tbadge: \"Best Value\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"text-center\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">One Plan, Simple Pricing</h2>\r\n\t\t\t<p class=\"mx-auto mt-4 max-w-md text-balance text-muted-foreground\">\r\n\t\t\t\tEverything you need to build powerful integrations. Choose your billing cycle.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<div class=\"mt-12 grid gap-6 @xl:grid-cols-2 @xl:gap-3\">\r\n\t\t\t{#each plans as plan (plan.name)}\r\n\t\t\t\t<Card\r\n\t\t\t\t\tvariant={plan.highlighted ? \"default\" : \"mixed\"}\r\n\t\t\t\t\tclass={cn(\"relative p-6\", plan.highlighted && \"ring-primary\")}\r\n\t\t\t\t>\r\n\t\t\t\t\t<div class=\"mb-6\">\r\n\t\t\t\t\t\t<h3 class=\"font-medium text-foreground\">{plan.name}</h3>\r\n\t\t\t\t\t\t<p class=\"mt-1 text-sm text-muted-foreground\">{plan.description}</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<span class=\"font-serif text-5xl font-medium\">{plan.price}</span>\r\n\t\t\t\t\t\t<span class=\"text-muted-foreground\">{plan.period}</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<ul class=\"mt-6 space-y-3\">\r\n\t\t\t\t\t\t{#each plan.features as feature (feature)}\r\n\t\t\t\t\t\t\t<li class=\"flex items-center gap-2 text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\t\t<Check class=\"size-4 text-primary\" />\r\n\t\t\t\t\t\t\t\t{feature}\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t{/each}\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t\t<Button\r\n\t\t\t\t\t\thref=\"#link\"\r\n\t\t\t\t\t\tvariant={plan.highlighted ? \"default\" : \"outline\"}\r\n\t\t\t\t\t\tclass=\"mt-8 w-full gap-2\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\tGet Started\r\n\t\t\t\t\t\t<ArrowRight class=\"size-4\" />\r\n\t\t\t\t\t</Button>\r\n\t\t\t\t</Card>\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t\t<p class=\"mt-8 text-center text-sm text-muted-foreground\">\r\n\t\t\tAll plans include a 14-day free trial. No credit card required.\r\n\t\t</p>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/pricing/pricing-three.svelte"
+		}
+	]
+}

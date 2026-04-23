@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "call-to-action-one",
+	"type": "registry:block",
+	"description": "Veil Call To Action component, variant One.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n\r\n\ttype Props = {\r\n\t\ttitle?: string;\r\n\t\tdescription?: string;\r\n\t\tprimaryLabel?: string;\r\n\t\tprimaryHref?: string;\r\n\t\tsecondaryLabel?: string;\r\n\t\tsecondaryHref?: string;\r\n\t};\r\n\r\n\tlet {\r\n\t\ttitle = \"Ready to Get Started?\",\r\n\t\tdescription = \"Join thousands of teams already using our platform to build better products faster.\",\r\n\t\tprimaryLabel = \"Start Free Trial\",\r\n\t\tprimaryHref = \"#link\",\r\n\t\tsecondaryLabel = \"Talk to Sales\",\r\n\t\tsecondaryHref = \"#link\",\r\n\t}: Props = $props();\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"text-center\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">{title}</h2>\r\n\t\t\t<p class=\"mx-auto mt-4 max-w-md text-balance text-muted-foreground\">\r\n\t\t\t\t{description}\r\n\t\t\t</p>\r\n\t\t\t<div class=\"mt-6 flex flex-wrap justify-center gap-3\">\r\n\t\t\t\t<Button href={primaryHref} class=\"pr-1.5\">\r\n\t\t\t\t\t<span>{primaryLabel}</span>\r\n\t\t\t\t\t<ChevronRight class=\"opacity-50\" />\r\n\t\t\t\t</Button>\r\n\t\t\t\t<Button variant=\"secondary\" href={secondaryHref}>\r\n\t\t\t\t\t{secondaryLabel}\r\n\t\t\t\t</Button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/call-to-action/call-to-action-one.svelte"
+		}
+	]
+}

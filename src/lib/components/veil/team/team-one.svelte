@@ -27,8 +27,14 @@
 		<div class="mt-12 grid gap-12 text-sm">
 			{#each members as member, index}
 				<div class="relative grid grid-cols-[auto_1fr] gap-4">
-					<div aria-hidden={true} class="absolute -inset-x-6 inset-y-1 max-h-26 border-y"></div>
-					<div aria-hidden={true} class="absolute inset-x-1 -inset-y-6 w-26 border-x"></div>
+					<div
+						aria-hidden={true}
+						class="absolute -inset-x-6 inset-y-1 max-h-26 border-y"
+					></div>
+					<div
+						aria-hidden={true}
+						class="absolute inset-x-1 -inset-y-6 w-26 border-x"
+					></div>
 					<div
 						class="relative size-28 shrink-0 rounded-xl shadow-md shadow-foreground/6.5 before:absolute before:inset-0 before:rounded-xl before:border before:border-foreground/10 dark:shadow-black/6.5"
 					>

@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-five",
+	"type": "registry:block",
+	"description": "Content block with image and text in grid layout",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Zap from \"@lucide/svelte/icons/zap\";\r\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\r\n\timport Lock from \"@lucide/svelte/icons/lock\";\r\n\timport Sparkles from \"@lucide/svelte/icons/sparkles\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-12\">\r\n\t\t<div class=\"mx-auto max-w-xl space-y-6 text-center md:space-y-12\">\r\n\t\t\t<h2 class=\"text-4xl font-medium text-balance lg:text-5xl\">\r\n\t\t\t\tThe Lyra ecosystem brings together our models, products and platforms.\r\n\t\t\t</h2>\r\n\t\t\t<p>\r\n\t\t\t\tLyra is evolving to be more than just the models. It supports an entire ecosystem —\r\n\t\t\t\tfrom products to the APIs and platforms helping developers and businesses innovate.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<img\r\n\t\t\tclass=\"rounded-(--radius) grayscale\"\r\n\t\t\tsrc=\"https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\r\n\t\t\talt=\"team_img\"\r\n\t\t\tloading=\"lazy\"\r\n\t\t/>\r\n\r\n\t\t<div class=\"relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4\">\r\n\t\t\t<div class=\"space-y-3\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Zap class=\"size-4\" />\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Faaast</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\tIt supports an entire helping developers and innovate.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Cpu class=\"size-4\" />\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Powerful</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\tIt supports an entire helping developers and businesses.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Lock class=\"size-4\" />\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">Security</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\tIt supports an helping developers businesses innovate.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"space-y-2\">\r\n\t\t\t\t<div class=\"flex items-center gap-2\">\r\n\t\t\t\t\t<Sparkles class=\"size-4\" />\r\n\r\n\t\t\t\t\t<h3 class=\"text-sm font-medium\">AI Powered</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\tIt supports an helping developers businesses innovate.\r\n\t\t\t\t</p>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/content/content-five.svelte"
+		}
+	]
+}

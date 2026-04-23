@@ -510,7 +510,7 @@ export {
 		</Paragraph>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="apply-theme">Apply Theme</H2>
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Ensure your root body includes <code>theme-container</code> so the selected theme scope is
@@ -525,7 +525,7 @@ export {
 		/>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="required-components">Required Components</H2>
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			After theme tokens are configured, update these four Veil primitives in your app.
@@ -566,7 +566,7 @@ export {
 		</Table>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="button-component">Button Component</H2>
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
@@ -587,7 +587,7 @@ export {
 		<MultipleCode code={buttonSourceCode} />
 	</section>
 
-	<section >
+	<section>
 		<H2 id="card-component">Card Component</H2>
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil card supports four variants: <code>default</code>, <code>soft</code>,
@@ -622,7 +622,7 @@ export {
 		<MultipleCode code={cardSourceCode} />
 	</section>
 
-	<section >
+	<section>
 		<H2 id="input-component">Input Component</H2>
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil input covers standard and file fields while preserving unified focus and invalid
@@ -644,7 +644,7 @@ export {
 		<MultipleCode code={inputSourceCode} />
 	</section>
 
-	<section >
+	<section>
 		<H2 id="textarea-component">Textarea Component</H2>
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			Veil textarea shares input tokens, adds multiline sizing, and keeps focus/validation

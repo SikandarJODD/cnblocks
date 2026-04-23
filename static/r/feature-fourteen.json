@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-fourteen",
+	"type": "registry:block",
+	"description": "Feature section with numbered steps",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\tlet benefits = [\r\n\t\t{\r\n\t\t\ttitle: \"Work in Zurich\",\r\n\t\t\tdescription: \"We are in-person first and have a fantastic office in Zurich.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Competitive salary & equity\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"We pay competitive salary and option packages to attract the very best talent.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Health, dental, vision\",\r\n\t\t\tdescription: \"Database pays all of your health, dental, and vision insurance.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Yearly off-sites\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"We bring everyone together at an interesting location to discuss the big picture.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Book budget\",\r\n\t\t\tdescription: \"We provide every employee with a 350 dollar budget for books.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Tasty snacks\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"The fridge and pantry are stocked + free dinner catered every night (incl. weekends).\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"20 PTO days per year\",\r\n\t\t\tdescription: \"Take time off to recharge and come back refreshed.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Spotify Premium\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"We really have the best fringe benefits, even a Spotify subscription is included.\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<div class=\"mx-auto px-4 py-20\">\r\n\t<h2\r\n\t\tid=\"benefits-title\"\r\n\t\tclass=\"inline-block bg-linear-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-3xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300\"\r\n\t>\r\n\t\tWhat&rsquo;s in for you\r\n\t</h2>\r\n\t<dl class=\"mt-8 grid grid-cols-4 gap-x-10 gap-y-8 sm:mt-12 sm:gap-y-10\">\r\n\t\t{#each benefits as benefit, index}\r\n\t\t\t<div class=\"col-span-4 sm:col-span-2 lg:col-span-1\">\r\n\t\t\t\t<dt class=\"relative font-semibold text-gray-900 dark:text-gray-50\">\r\n\t\t\t\t\t{benefit.title}\r\n\t\t\t\t\t<div class=\"absolute top-1 -left-2 h-4 w-0.5 rounded-full bg-blue-500\"></div>\r\n\t\t\t\t</dt>\r\n\t\t\t\t<dd class=\"mt-2 leading-7 text-gray-600 dark:text-gray-400\">\r\n\t\t\t\t\t{benefit.description}\r\n\t\t\t\t</dd>\r\n\t\t\t</div>\r\n\t\t{/each}\r\n\t</dl>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "blocks/feature/feature-fourteen.svelte"
+		}
+	]
+}

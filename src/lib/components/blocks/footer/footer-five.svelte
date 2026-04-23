@@ -203,9 +203,7 @@
 							name="email"
 						/>
 					</div>
-					<Button type="submit" class="mt-3">
-						Subscribe
-					</Button>
+					<Button type="submit" class="mt-3">Subscribe</Button>
 				</form>
 			</div>
 		</div>

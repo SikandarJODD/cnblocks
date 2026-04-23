@@ -128,8 +128,7 @@
 
 <nav
 	class={cn(
-		"sticky top-0 z-1000 backdrop-blur-2xl transition-all  duration-200 border-b bg-transparent",
-
+		"sticky top-0 z-1000 border-b bg-transparent  backdrop-blur-2xl transition-all duration-200"
 	)}
 >
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

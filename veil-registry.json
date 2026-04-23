@@ -14,16 +14,9 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant One.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"local:header-one",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "card", "local:header-one", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-one.svelte",
@@ -36,16 +29,9 @@
 			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"local:header-two",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "card", "local:header-two", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-two.svelte",
@@ -58,14 +44,9 @@
 			"name": "hero-three",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Three.",
-			"registryDependencies": [
-				"button",
-				"local:header-three"
-			],
+			"registryDependencies": ["button", "local:header-three"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-three.svelte",
@@ -78,14 +59,9 @@
 			"name": "hero-four",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Four.",
-			"registryDependencies": [
-				"button",
-				"local:header-four"
-			],
+			"registryDependencies": ["button", "local:header-four"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-four.svelte",
@@ -98,13 +74,9 @@
 			"name": "hero-five",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Five.",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/hero/hero-five.svelte",
@@ -118,9 +90,7 @@
 			"type": "registry:block",
 			"description": "Veil Header component, variant One.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-one.svelte",
@@ -128,18 +98,14 @@
 					"target": "veil/header/header-one.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button"
-			]
+			"registryDependencies": ["button"]
 		},
 		{
 			"name": "header-two",
 			"type": "registry:block",
 			"description": "Veil Header component, variant Two.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-two.svelte",
@@ -147,18 +113,14 @@
 					"target": "veil/header/header-two.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button"
-			]
+			"registryDependencies": ["button"]
 		},
 		{
 			"name": "header-three",
 			"type": "registry:block",
 			"description": "Veil Header component, variant Three.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-three.svelte",
@@ -166,18 +128,14 @@
 					"target": "veil/header/header-three.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button"
-			]
+			"registryDependencies": ["button"]
 		},
 		{
 			"name": "header-four",
 			"type": "registry:block",
 			"description": "Veil Header component, variant Four.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/header/header-four.svelte",
@@ -185,22 +143,15 @@
 					"target": "veil/header/header-four.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button"
-			]
+			"registryDependencies": ["button"]
 		},
 		{
 			"name": "features-one",
 			"type": "registry:block",
 			"description": "Veil Features component, variant One.",
-			"registryDependencies": [
-				"card",
-				"local:svgs"
-			],
+			"registryDependencies": ["card", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/features/features-one.svelte",
@@ -213,14 +164,9 @@
 			"name": "features-two",
 			"type": "registry:block",
 			"description": "Veil Features component, variant Two.",
-			"registryDependencies": [
-				"card",
-				"local:svgs"
-			],
+			"registryDependencies": ["card", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/features/features-two.svelte",
@@ -234,9 +180,7 @@
 			"type": "registry:block",
 			"description": "Veil Features component, variant Three.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/features/features-three.svelte",
@@ -244,10 +188,7 @@
 					"target": "veil/features/features-three.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button",
-				"local:svgs"
-			]
+			"registryDependencies": ["button", "local:svgs"]
 		},
 		{
 			"name": "content-one",
@@ -285,9 +226,7 @@
 			"description": "Veil Content component, variant Three.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/content/content-three.svelte",
@@ -300,14 +239,9 @@
 			"name": "integration-one",
 			"type": "registry:block",
 			"description": "Veil Integration component, variant One.",
-			"registryDependencies": [
-				"button",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/integration/integration-one.svelte",
@@ -325,14 +259,9 @@
 			"name": "integration-two",
 			"type": "registry:block",
 			"description": "Veil Integration component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "local:svgs"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/integration/integration-two.svelte",
@@ -350,13 +279,9 @@
 			"name": "call-to-action-one",
 			"type": "registry:block",
 			"description": "Veil Call To Action component, variant One.",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-one.svelte",
@@ -369,14 +294,9 @@
 			"name": "call-to-action-two",
 			"type": "registry:block",
 			"description": "Veil Call To Action component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-two.svelte",
@@ -389,13 +309,9 @@
 			"name": "call-to-action-three",
 			"type": "registry:block",
 			"description": "Veil Call To Action component, variant Three.",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-three.svelte",
@@ -408,14 +324,9 @@
 			"name": "call-to-action-four",
 			"type": "registry:block",
 			"description": "Veil Call To Action component, variant Four.",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/call-to-action/call-to-action-four.svelte",
@@ -489,9 +400,7 @@
 			"type": "registry:block",
 			"description": "Veil Pricing component, variant One.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/pricing/pricing-one.svelte",
@@ -499,19 +408,14 @@
 					"target": "veil/pricing/pricing-one.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button",
-				"card"
-			]
+			"registryDependencies": ["button", "card"]
 		},
 		{
 			"name": "pricing-two",
 			"type": "registry:block",
 			"description": "Veil Pricing component, variant Two.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/pricing/pricing-two.svelte",
@@ -519,19 +423,14 @@
 					"target": "veil/pricing/pricing-two.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button",
-				"card"
-			]
+			"registryDependencies": ["button", "card"]
 		},
 		{
 			"name": "pricing-three",
 			"type": "registry:block",
 			"description": "Veil Pricing component, variant Three.",
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/pricing/pricing-three.svelte",
@@ -539,10 +438,7 @@
 					"target": "veil/pricing/pricing-three.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button",
-				"card"
-			]
+			"registryDependencies": ["button", "card"]
 		},
 		{
 			"name": "testimonial-one",
@@ -563,9 +459,7 @@
 			"name": "testimonial-two",
 			"type": "registry:block",
 			"description": "Veil Testimonial component, variant Two.",
-			"registryDependencies": [
-				"card"
-			],
+			"registryDependencies": ["card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -640,9 +534,7 @@
 			"name": "logo-cloud-one",
 			"type": "registry:block",
 			"description": "Veil Logo Cloud component, variant One.",
-			"registryDependencies": [
-				"local:svgs"
-			],
+			"registryDependencies": ["local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -657,9 +549,7 @@
 			"name": "logo-cloud-two",
 			"type": "registry:block",
 			"description": "Veil Logo Cloud component, variant Two.",
-			"registryDependencies": [
-				"local:svgs"
-			],
+			"registryDependencies": ["local:svgs"],
 			"dependencies": [],
 			"files": [
 				{
@@ -673,10 +563,7 @@
 			"name": "faqs-one",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant One.",
-			"registryDependencies": [
-				"accordion",
-				"card"
-			],
+			"registryDependencies": ["accordion", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -691,9 +578,7 @@
 			"name": "faqs-two",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant Two.",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -708,9 +593,7 @@
 			"name": "faqs-three",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant Three.",
-			"registryDependencies": [
-				"accordion"
-			],
+			"registryDependencies": ["accordion"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -725,10 +608,7 @@
 			"name": "faqs-four",
 			"type": "registry:block",
 			"description": "Veil FAQs component, variant Four.",
-			"registryDependencies": [
-				"accordion",
-				"card"
-			],
+			"registryDependencies": ["accordion", "card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -743,13 +623,7 @@
 			"name": "contact-one",
 			"type": "registry:block",
 			"description": "Veil Contact component, variant One.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -764,14 +638,7 @@
 			"name": "contact-two",
 			"type": "registry:block",
 			"description": "Veil Contact component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"select",
-				"textarea"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -786,13 +653,7 @@
 			"name": "signup-one",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant One.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -807,12 +668,7 @@
 			"name": "signup-two",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -827,12 +683,7 @@
 			"name": "signup-three",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant Three.",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -847,13 +698,7 @@
 			"name": "login-one",
 			"type": "registry:block",
 			"description": "Veil Login component, variant One.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -868,12 +713,7 @@
 			"name": "login-two",
 			"type": "registry:block",
 			"description": "Veil Login component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -888,12 +728,7 @@
 			"name": "login-three",
 			"type": "registry:block",
 			"description": "Veil Login component, variant Three.",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -908,13 +743,7 @@
 			"name": "forgot-password-one",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant One.",
-			"registryDependencies": [
-				"button",
-				"card",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "card", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -929,12 +758,7 @@
 			"name": "forgot-password-two",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -949,12 +773,7 @@
 			"name": "forgot-password-three",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant Three.",
-			"registryDependencies": [
-				"button",
-				"input",
-				"label",
-				"local:svgs"
-			],
+			"registryDependencies": ["button", "input", "label", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -969,14 +788,9 @@
 			"name": "comparator-one",
 			"type": "registry:block",
 			"description": "Veil Comparator component, variant One.",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/comparator/comparator-one.svelte",
@@ -989,14 +803,9 @@
 			"name": "comparator-two",
 			"type": "registry:block",
 			"description": "Veil Comparator component, variant Two.",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/comparator/comparator-two.svelte",
@@ -1009,14 +818,9 @@
 			"name": "comparator-three",
 			"type": "registry:block",
 			"description": "Veil Comparator component, variant Three.",
-			"registryDependencies": [
-				"button",
-				"card"
-			],
+			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/comparator/comparator-three.svelte",
@@ -1046,9 +850,7 @@
 			"description": "Veil Footer component, variant Two.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-two.svelte",
@@ -1078,9 +880,7 @@
 			"description": "Veil Footer component, variant Four.",
 			"registryDependencies": [],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-four.svelte",
@@ -1093,9 +893,7 @@
 			"name": "footer-five",
 			"type": "registry:block",
 			"description": "Veil Footer component, variant Five.",
-			"registryDependencies": [
-				"local:theme-switcher"
-			],
+			"registryDependencies": ["local:theme-switcher"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -1110,14 +908,9 @@
 			"name": "footer-six",
 			"type": "registry:block",
 			"description": "Veil Footer component, variant Six.",
-			"registryDependencies": [
-				"button",
-				"local:theme-switcher"
-			],
+			"registryDependencies": ["button", "local:theme-switcher"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte"
-			],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/footer-six.svelte",
@@ -1135,14 +928,9 @@
 			"name": "theme-switcher",
 			"type": "registry:block",
 			"description": "Internal Veil footer theme switcher helper.",
-			"registryDependencies": [
-				"button"
-			],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": [
-				"@lucide/svelte",
-				"mode-watcher"
-			],
+			"devDependencies": ["@lucide/svelte", "mode-watcher"],
 			"files": [
 				{
 					"path": "src/lib/components/veil/footer/theme-switcher.svelte",

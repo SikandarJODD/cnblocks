@@ -87,8 +87,8 @@
 
 	<Divider />
 
-	<section >
-		<H2 id="run-server" class='mb-2'>Run MCP Server</H2>
+	<section>
+		<H2 id="run-server" class="mb-2">Run MCP Server</H2>
 		<DocsCodeBlock
 			fileName="Terminal"
 			code={`npm install -g jsrepo

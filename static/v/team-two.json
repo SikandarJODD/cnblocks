@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "team-two",
+	"type": "registry:block",
+	"description": "Veil Team component, variant Two.",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\tconst members = [\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\r\n\t\t\tname: \"Meschac Irung\",\r\n\t\t\trole: \"Frontend Engineer at Acme\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/68236786?v=4\",\r\n\t\t\tname: \"Theo Balick\",\r\n\t\t\trole: \"Founder, CEO - Acme\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/12345678?v=4\",\r\n\t\t\tname: \"Sarah Johnson\",\r\n\t\t\trole: \"DevOps Engineer\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"space-y-4\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">Meet Our Founders</h2>\r\n\t\t\t<p class=\"text-balance text-muted-foreground\">\r\n\t\t\t\tThe visionary leaders behind our mission to transform how teams work and\r\n\t\t\t\tcollaborate.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<div\r\n\t\t\tclass=\"mt-12 grid grid-cols-2 gap-3 gap-y-6 text-sm @xl:grid-cols-3 @xl:gap-6 @xl:gap-12\"\r\n\t\t>\r\n\t\t\t{#each members as member, index}\r\n\t\t\t\t<div class=\"flex flex-col gap-4\">\r\n\t\t\t\t\t<div\r\n\t\t\t\t\t\tclass=\"relative size-28 shrink-0 rounded-xl shadow-md shadow-foreground/6.5 before:absolute before:inset-0 before:rounded-xl before:border before:border-foreground/10 dark:shadow-black/6.5\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t<img\r\n\t\t\t\t\t\t\tsrc={member.avatar}\r\n\t\t\t\t\t\t\talt={member.name}\r\n\t\t\t\t\t\t\tclass=\"rounded-xl object-cover\"\r\n\t\t\t\t\t\t\twidth={120}\r\n\t\t\t\t\t\t\theight={120}\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<div class=\"space-y-1\">\r\n\t\t\t\t\t\t<p class=\"text-sm font-medium text-foreground\">{member.name}</p>\r\n\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">{member.role}</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/team/team-two.svelte"
+		}
+	]
+}

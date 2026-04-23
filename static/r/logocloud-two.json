@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logocloud-two",
+	"type": "registry:block",
+	"description": "Interactive logo cloud with hover call-to-action",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n\timport {\r\n\t\tBeacon,\r\n\t\tBolt,\r\n\t\tClaude,\r\n\t\tFirebase,\r\n\t\tFirebaseFull,\r\n\t\tHulu,\r\n\t\tSpotify,\r\n\t\tSupabase,\r\n\t\tSupabaseFull,\r\n\t\tVercel,\r\n\t\tVercelFull,\r\n\t} from \"$LIB$/svgs\";\r\n</script>\r\n\r\n<section class=\"bg-background py-16\">\r\n\t<div class=\"group relative m-auto max-w-5xl px-6\">\r\n\t\t<div\r\n\t\t\tclass=\"absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100\"\r\n\t\t>\r\n\t\t\t<a href=\"/\" class=\"block text-sm duration-150 hover:opacity-75\">\r\n\t\t\t\t<span> Meet Our Customers</span>\r\n\r\n\t\t\t\t<ChevronRight class=\"ml-1 inline-block size-3\" />\r\n\t\t\t</a>\r\n\t\t</div>\r\n\t\t<div\r\n\t\t\tclass=\"mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 **:fill-foreground group-hover:opacity-50 group-hover:blur-xs sm:gap-x-16 sm:gap-y-14 md:grid-cols-4\"\r\n\t\t>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<Bolt class=\"mx-auto h-5 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<VercelFull class=\"mx-auto h-4 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<SupabaseFull class=\"mx-auto h-6\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<Hulu class=\"mx-auto h-4 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<Spotify class=\"mx-auto h-6 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<FirebaseFull class=\"mx-auto h-6 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<Beacon class=\"mx-auto h-4 w-full\" />\r\n\t\t\t</div>\r\n\t\t\t<div class=\"flex items-center\">\r\n\t\t\t\t<Claude class=\"mx-auto h-5 w-full\" />\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/logocloud/logocloud-two.svelte"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "marquee",
+	"type": "registry:component",
+	"description": "Animated marquee component for horizontally or vertically scrolling content",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from \"$UTILS$\";\r\n\timport type { Snippet } from \"svelte\";\r\n\r\n\ttype MarqueeProps = {\r\n\t\tpauseOnHover?: boolean;\r\n\t\tvertical?: boolean;\r\n\t\trepeat?: number;\r\n\t\treverse?: boolean;\r\n\t\tclass?: string;\r\n\t\tchildren?: Snippet;\r\n\t};\r\n\tlet {\r\n\t\tpauseOnHover = false,\r\n\t\tvertical = false,\r\n\t\trepeat = 4,\r\n\t\treverse = false,\r\n\t\tclass: _class = \"\",\r\n\t\tchildren,\r\n\t}: MarqueeProps = $props();\r\n</script>\r\n\r\n<div\r\n\tclass={cn(\r\n\t\t\"group flex gap-(--gap) overflow-hidden p-2 [--duration:16s] [--gap:3rem]\",\r\n\t\t{\r\n\t\t\t\"flex-row\": !vertical,\r\n\t\t\t\"flex-col\": vertical,\r\n\t\t},\r\n\t\t_class\r\n\t)}\r\n>\r\n\t{#each { length: repeat } as _, i (i)}\r\n\t\t<div\r\n\t\t\tclass={cn(\"flex shrink-0 justify-around gap-(--gap)\", {\r\n\t\t\t\t\"animate-marquee flex-row\": !vertical,\r\n\t\t\t\t\"animate-marquee-vertical flex-col\": vertical,\r\n\t\t\t\t\"group-hover:paused\": pauseOnHover,\r\n\t\t\t})}\r\n\t\t\tstyle=\"animation-direction:{reverse ? 'reverse' : 'normal'};\r\n      \"\r\n\t\t>\r\n\t\t\t{@render children?.()}\r\n\t\t</div>\r\n\t{/each}\r\n</div>\r\n\r\n<style>\r\n\t@keyframes marquee {\r\n\t\t0% {\r\n\t\t\ttransform: translateX(0%);\r\n\t\t}\r\n\t\t100% {\r\n\t\t\ttransform: translateX(-100%);\r\n\t\t}\r\n\t}\r\n\r\n\t@keyframes marquee-vertical {\r\n\t\t0% {\r\n\t\t\ttransform: translateY(0%);\r\n\t\t}\r\n\t\t100% {\r\n\t\t\ttransform: translateY(-100%);\r\n\t\t}\r\n\t}\r\n\r\n\t.animate-marquee {\r\n\t\tanimation: marquee var(--duration) linear infinite;\r\n\t}\r\n\r\n\t.animate-marquee-vertical {\r\n\t\tanimation: marquee-vertical var(--duration) linear infinite;\r\n\t}\r\n</style>\r\n",
+			"type": "registry:component",
+			"target": "magic/marquee/marquee.svelte"
+		},
+		{
+			"content": "import Marquee from \"./marquee.svelte\";\r\nexport { Marquee };",
+			"type": "registry:file",
+			"target": "magic/marquee/index.ts"
+		}
+	]
+}

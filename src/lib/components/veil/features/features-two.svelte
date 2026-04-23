@@ -22,7 +22,10 @@
 						Connect your favorite tools and services with just a few clicks.
 					</p>
 				</div>
-				<div aria-hidden={true} class="flex h-44 flex-col justify-between pt-8 **:fill-foreground">
+				<div
+					aria-hidden={true}
+					class="flex h-44 flex-col justify-between pt-8 **:fill-foreground"
+				>
 					<div class="relative flex h-10 items-center gap-12 px-6">
 						<div class="absolute inset-0 my-auto h-px bg-border"></div>
 

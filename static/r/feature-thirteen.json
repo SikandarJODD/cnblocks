@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-thirteen",
+	"type": "registry:block",
+	"description": "Feature section with large hero image",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\tconst features = [\r\n\t\t{\r\n\t\t\ttitle: \"1. Prototype\",\r\n\t\t\tsubtitle: \"Build fast, test early\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"Quickly spin up a working model with libraries for popular frameworks like React.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"2. Present\",\r\n\t\t\tsubtitle: \"Showcase your vision\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"Use intuitive plug & play features to prepare a live demo and deploy from our platform.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"3. Iterate\",\r\n\t\t\tsubtitle: \"Refine and improve\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"Continuously enhance your product by integrating with over a hundred tools.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"4. Deploy\",\r\n\t\t\tsubtitle: \"Launch with confidence\",\r\n\t\t\tdescription:\r\n\t\t\t\t\"Deploy securely with encryption, ensuring data compliance and user consent.\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<div class=\"mx-auto w-full max-w-6xl px-3 py-20\">\r\n\t<dl class=\"grid grid-cols-4 gap-10\">\r\n\t\t{#each features as item}\r\n\t\t\t<div class=\"col-span-full sm:col-span-2 lg:col-span-1\">\r\n\t\t\t\t<span\r\n\t\t\t\t\tclass=\"rounded-lg bg-blue-50/50 px-3 py-1.5 leading-4 font-semibold tracking-tighter shadow-sm ring-1 shadow-blue-500/20 ring-blue-200/20 sm:text-sm dark:bg-blue-900/20 dark:ring-blue-800/30\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<span\r\n\t\t\t\t\t\tclass=\"bg-linear-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t{item.title}\r\n\t\t\t\t\t</span>\r\n\t\t\t\t</span>\r\n\t\t\t\t<dt class=\"mt-6 font-semibold text-gray-900 dark:text-gray-50\">\r\n\t\t\t\t\t{item.subtitle}\r\n\t\t\t\t</dt>\r\n\t\t\t\t<dd class=\"mt-2 leading-7 text-gray-600 dark:text-gray-400\">\r\n\t\t\t\t\t{item.description}\r\n\t\t\t\t</dd>\r\n\t\t\t</div>\r\n\t\t{/each}\r\n\t</dl>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "blocks/feature/feature-thirteen.svelte"
+		}
+	]
+}

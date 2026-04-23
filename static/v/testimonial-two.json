@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-two",
+	"type": "registry:block",
+	"description": "Veil Testimonial component, variant Two.",
+	"registryDependencies": [
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\r\n\r\n\tconst testimonials = [\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/47919550?v=4\",\r\n\t\t\tname: \"Meschac Irung\",\r\n\t\t\trole: \"Frontend Engineer at Acme\",\r\n\t\t\tquote: \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/68236786?v=4\",\r\n\t\t\tname: \"Theo Balick\",\r\n\t\t\trole: \"Founder, CEO - Acme\",\r\n\t\t\tquote: \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/12345678?v=4\",\r\n\t\t\tname: \"Sarah Johnson\",\r\n\t\t\trole: \"DevOps Engineer\",\r\n\t\t\tquote: \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tavatar: \"https://avatars.githubusercontent.com/u/34567890?v=4\",\r\n\t\t\tname: \"Aisha Patel\",\r\n\t\t\trole: \"Data Scientist\",\r\n\t\t\tquote: \"Tailark has been a game-changer for our team. It has helped us to build a modern and scalable web application.\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"space-y-4\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">What Our Customers Say</h2>\r\n\t\t\t<p class=\"text-balance text-muted-foreground\">\r\n\t\t\t\tHear from the teams and individuals who have transformed their workflow with our\r\n\t\t\t\tplatform.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<div class=\"mt-12 grid gap-3 @xl:grid-cols-2\">\r\n\t\t\t{#each testimonials as testimonial, index}\r\n\t\t\t\t<Card\r\n\t\t\t\t\tvariant=\"outline\"\r\n\t\t\t\t\tclass=\"flex items-end gap-3 rounded-2xl p-4 text-sm text-foreground\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<div\r\n\t\t\t\t\t\tclass=\"relative size-5 shrink-0 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-foreground/10\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t<img\r\n\t\t\t\t\t\t\tsrc={testimonial.avatar}\r\n\t\t\t\t\t\t\talt={testimonial.name}\r\n\t\t\t\t\t\t\tclass=\"rounded-full object-cover\"\r\n\t\t\t\t\t\t\twidth={40}\r\n\t\t\t\t\t\t\theight={40}\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"space-y-6\">\r\n\t\t\t\t\t\t<p class=\"text-lg text-foreground\">{testimonial.quote}</p>\r\n\r\n\t\t\t\t\t\t<div class=\"space-y-1\">\r\n\t\t\t\t\t\t\t<p class=\"text-sm font-medium text-muted-foreground\">\r\n\t\t\t\t\t\t\t\t{testimonial.name}\r\n\t\t\t\t\t\t\t</p>\r\n\t\t\t\t\t\t\t<p class=\"text-xs text-muted-foreground\">{testimonial.role}</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</Card>\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/testimonial/testimonial-two.svelte"
+		}
+	]
+}

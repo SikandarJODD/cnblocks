@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-three",
+	"type": "registry:block",
+	"description": "Two-column content with image sidebar",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport ChevronRight from \"@lucide/svelte/icons/chevron-right\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-12\">\r\n\t\t<img\r\n\t\t\tclass=\"rounded-(--radius) grayscale\"\r\n\t\t\tsrc=\"https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\r\n\t\t\talt=\"team_image\"\r\n\t\t\tloading=\"lazy\"\r\n\t\t/>\r\n\r\n\t\t<div class=\"grid gap-6 md:grid-cols-2 md:gap-12\">\r\n\t\t\t<h2 class=\"text-4xl font-medium\">\r\n\t\t\t\tThe Lyra ecosystem brings together our models, products and platforms.\r\n\t\t\t</h2>\r\n\t\t\t<div class=\"space-y-6\">\r\n\t\t\t\t<p>\r\n\t\t\t\t\tLyra is evolving to be more than just the models. It supports an entire\r\n\t\t\t\t\tecosystem — from products to the APIs and platforms helping developers and\r\n\t\t\t\t\tbusinesses innovate.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<Button href=\"/\" variant=\"secondary\" size=\"sm\" class=\"gap-1 pr-1.5\">\r\n\t\t\t\t\t<span>Learn More</span>\r\n\t\t\t\t\t<ChevronRight class=\"size-2\" />\r\n\t\t\t\t</Button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/content/content-three.svelte"
+		}
+	]
+}

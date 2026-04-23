@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "pricing-five",
+	"type": "registry:block",
+	"description": "Pricing table with feature comparison",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport Check from \"@lucide/svelte/icons/check\";\r\n\tlet list = [\r\n\t\t\"First premium advantage\",\r\n\t\t\"Second advantage weekly\",\r\n\t\t\"Third advantage donate to project\",\r\n\t\t\"Fourth, access to all components weekly\",\r\n\t];\r\n\r\n\timport { VercelFull, SupabaseFull, Spotify, Figma, FirebaseFull } from \"$LIB$/svgs\";\r\n</script>\r\n\r\n<div class=\"relative py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t<div class=\"mx-auto max-w-2xl text-center\">\r\n\t\t\t<h2 class=\"text-3xl font-bold text-balance md:text-4xl lg:text-5xl\">\r\n\t\t\t\tStart managing your company smarter today\r\n\t\t\t</h2>\r\n\t\t</div>\r\n\t\t<div class=\"mt-8 md:mt-20\">\r\n\t\t\t<div class=\"relative rounded-3xl border bg-card shadow-2xl shadow-zinc-950/5\">\r\n\t\t\t\t<div\r\n\t\t\t\t\tclass=\"grid items-center gap-12 divide-y p-12 md:grid-cols-2 md:divide-x md:divide-y-0\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<div class=\"pb-12 text-center md:pr-12 md:pb-0\">\r\n\t\t\t\t\t\t<h3 class=\"text-2xl font-semibold\">Suite Enterprise</h3>\r\n\t\t\t\t\t\t<p class=\"mt-2 text-lg\">For your company of any size</p>\r\n\t\t\t\t\t\t<span class=\"mt-12 mb-6 inline-block text-6xl font-bold\">\r\n\t\t\t\t\t\t\t<span class=\"text-4xl\">$</span>234\r\n\t\t\t\t\t\t</span>\r\n\r\n\t\t\t\t\t\t<div class=\"flex justify-center\">\r\n\t\t\t\t\t\t\t<Button href=\"/\" size=\"lg\">Get Started</Button>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t<p class=\"mt-12 text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\tIncludes : Security, Unlimited Storage, Payment, Search engine, and all\r\n\t\t\t\t\t\t\tfeatures\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"relative\">\r\n\t\t\t\t\t\t<ul role=\"list\" class=\"space-y-4\">\r\n\t\t\t\t\t\t\t{#each list as item}\r\n\t\t\t\t\t\t\t\t<li class=\"flex items-center gap-2\">\r\n\t\t\t\t\t\t\t\t\t<Check class=\"size-3\" />\r\n\t\t\t\t\t\t\t\t\t<span>{item}</span>\r\n\t\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t\t{/each}\r\n\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t<p class=\"mt-6 text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\tTeam can be any size, and you can add or switch members as needed.\r\n\t\t\t\t\t\t\tCompanies using our platform include:\r\n\t\t\t\t\t\t</p>\r\n\t\t\t\t\t\t<div class=\"mt-12 flex flex-wrap items-center justify-between gap-6\">\r\n\t\t\t\t\t\t\t<VercelFull class=\"h-5 w-fit dark:invert\" />\r\n\t\t\t\t\t\t\t<SupabaseFull class=\"h-4 w-fit dark:invert\" />\r\n\t\t\t\t\t\t\t<Spotify class=\"h-4 w-fit dark:invert\" />\r\n\t\t\t\t\t\t\t<Figma class=\"h-5 w-fit dark:invert\" />\r\n\t\t\t\t\t\t\t<FirebaseFull class=\"h-5 w-fit dark:invert\" />\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "blocks/pricing/pricing-five.svelte"
+		}
+	]
+}

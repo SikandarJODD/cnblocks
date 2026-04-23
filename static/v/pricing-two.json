@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "pricing-two",
+	"type": "registry:block",
+	"description": "Veil Pricing component, variant Two.",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"button",
+		"card"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport ArrowRight from \"@lucide/svelte/icons/arrow-right\";\r\n\timport { Button } from \"$COMPONENTS$/ui/veil/button\";\r\n\timport { Card } from \"$COMPONENTS$/ui/veil/card\";\r\n\timport { cn } from \"$UTILS$\";\r\n\r\n\tconst tiers = [\r\n\t\t{\r\n\t\t\tname: \"Hobby\",\r\n\t\t\tdescription: \"For personal projects\",\r\n\t\t\tprice: \"$0\",\r\n\t\t\tperiod: \"/month\",\r\n\t\t\tlimit: \"1,000 requests/month\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tname: \"Pro\",\r\n\t\t\tdescription: \"For professional use\",\r\n\t\t\tprice: \"$20\",\r\n\t\t\tperiod: \"/month\",\r\n\t\t\tlimit: \"50,000 requests/month\",\r\n\t\t\thighlighted: true,\r\n\t\t},\r\n\t\t{\r\n\t\t\tname: \"Scale\",\r\n\t\t\tdescription: \"For high-volume apps\",\r\n\t\t\tprice: \"$100\",\r\n\t\t\tperiod: \"/month\",\r\n\t\t\tlimit: \"500,000 requests/month\",\r\n\t\t},\r\n\t\t{\r\n\t\t\tname: \"Enterprise\",\r\n\t\t\tdescription: \"For large organizations\",\r\n\t\t\tprice: \"Custom\",\r\n\t\t\tperiod: \"\",\r\n\t\t\tlimit: \"Unlimited requests\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<section class=\"@container bg-background py-24\">\r\n\t<div class=\"mx-auto max-w-3xl px-6\">\r\n\t\t<div class=\"text-center\">\r\n\t\t\t<h2 class=\"font-serif text-4xl font-medium text-balance\">Usage-Based Pricing</h2>\r\n\t\t\t<p class=\"mx-auto mt-4 max-w-md text-balance text-muted-foreground\">\r\n\t\t\t\tPay only for what you use. All plans include the same features.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<div class=\"mt-12 space-y-3\">\r\n\t\t\t{#each tiers as tier (tier.name)}\r\n\t\t\t\t<Card\r\n\t\t\t\t\tvariant=\"outline\"\r\n\t\t\t\t\tclass={cn(\r\n\t\t\t\t\t\t\"flex flex-col gap-4 p-4 @2xl:flex-row @2xl:items-center @2xl:justify-between\",\r\n\t\t\t\t\t\ttier.highlighted && \"ring-primary\"\r\n\t\t\t\t\t)}\r\n\t\t\t\t>\r\n\t\t\t\t\t<div class=\"flex flex-col gap-2 @2xl:flex-row @2xl:items-center @2xl:gap-6\">\r\n\t\t\t\t\t\t<div class=\"shrink-0 @2xl:w-44\">\r\n\t\t\t\t\t\t\t<h3 class=\"font-medium text-foreground\">{tier.name}</h3>\r\n\t\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">{tier.description}</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"@2xl:border-l @2xl:pl-6\">\r\n\t\t\t\t\t\t\t<p class=\"text-sm text-muted-foreground\">{tier.limit}</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"flex flex-col gap-4 @2xl:flex-row @2xl:items-center\">\r\n\t\t\t\t\t\t<div class=\"@2xl:text-right\">\r\n\t\t\t\t\t\t\t<span class=\"font-serif text-2xl font-medium\">{tier.price}</span>\r\n\t\t\t\t\t\t\t{#if tier.period}\r\n\t\t\t\t\t\t\t\t<span class=\"text-sm text-muted-foreground\">{tier.period}</span>\r\n\t\t\t\t\t\t\t{/if}\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<Button\r\n\t\t\t\t\t\t\thref=\"#link\"\r\n\t\t\t\t\t\t\tvariant={tier.highlighted ? \"default\" : \"outline\"}\r\n\t\t\t\t\t\t\tsize=\"sm\"\r\n\t\t\t\t\t\t\tclass=\"gap-1\"\r\n\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t{tier.price === \"Custom\" ? \"Contact Us\" : \"Get Started\"}\r\n\t\t\t\t\t\t\t<ArrowRight class=\"size-3.5\" />\r\n\t\t\t\t\t\t</Button>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</Card>\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t\t<div class=\"mt-8 rounded-xl bg-muted p-6 text-center\">\r\n\t\t\t<p class=\"font-medium text-foreground\">Need more requests?</p>\r\n\t\t\t<p class=\"mt-1 text-sm text-muted-foreground\">\r\n\t\t\t\tAdditional requests are billed at $0.001 per request after your plan limit.\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "veil/pricing/pricing-two.svelte"
+		}
+	]
+}

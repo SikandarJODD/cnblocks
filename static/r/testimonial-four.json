@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-four",
+	"type": "registry:block",
+	"description": "Four-column testimonial grid",
+	"registryDependencies": [
+		"avatar"
+	],
+	"files": [
+		{
+			"content": "<script>\r\n\timport { Avatar, AvatarImage, AvatarFallback } from \"$COMPONENTS$/ui/avatar\";\r\n</script>\r\n\r\n<section class=\"py-16 md:py-32\">\r\n\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t<div class=\"mx-auto max-w-2xl text-center\">\r\n\t\t\t<blockquote>\r\n\t\t\t\t<p class=\"text-lg font-medium sm:text-xl md:text-3xl\">\r\n\t\t\t\t\tUsing TailsUI has been like unlocking a secret design superpower. It's the\r\n\t\t\t\t\tperfect fusion of simplicity and versatility, enabling us to create UIs that are\r\n\t\t\t\t\tas stunning as they are user-friendly.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<div class=\"mt-12 flex items-center justify-center gap-6\">\r\n\t\t\t\t\t<Avatar class=\"size-12\">\r\n\t\t\t\t\t\t<AvatarImage\r\n\t\t\t\t\t\t\tsrc=\"https://tailus.io/images/reviews/shekinah.webp\"\r\n\t\t\t\t\t\t\talt=\"Shekinah Tshiokufila\"\r\n\t\t\t\t\t\t\theight=\"400\"\r\n\t\t\t\t\t\t\twidth=\"400\"\r\n\t\t\t\t\t\t\tloading=\"lazy\"\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t<AvatarFallback>ST</AvatarFallback>\r\n\t\t\t\t\t</Avatar>\r\n\r\n\t\t\t\t\t<div class=\"space-y-1 border-l pl-6\">\r\n\t\t\t\t\t\t<cite class=\"font-medium\">John Doe</cite>\r\n\t\t\t\t\t\t<span class=\"block text-sm text-muted-foreground\">CEO, Nvidia</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</blockquote>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "blocks/testimonial/testimonial-four.svelte"
+		}
+	]
+}

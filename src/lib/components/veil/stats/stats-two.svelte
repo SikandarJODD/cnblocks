@@ -27,7 +27,10 @@
 			</div>
 		</div>
 	</div>
-	<div aria-hidden={true} class="mx-auto flex h-72 max-w-5xl items-end justify-between gap-0.5 px-6">
+	<div
+		aria-hidden={true}
+		class="mx-auto flex h-72 max-w-5xl items-end justify-between gap-0.5 px-6"
+	>
 		<!-- {Array.from({ length: 48 }, (_, i) => {
                     const progress = i / 47
                     const base = Math.pow(progress, 2.2)

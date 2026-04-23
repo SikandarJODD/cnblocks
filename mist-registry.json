@@ -11,7 +11,7 @@
 	},
 	"items": [
 		{
-			"name": "mist-comparator-one",
+			"name": "comparator-one",
 			"type": "registry:block",
 			"description": "Mist-style before/after image comparison",
 			"registryDependencies": ["button"],
@@ -26,7 +26,7 @@
 			]
 		},
 		{
-			"name": "mist-contact-one",
+			"name": "contact-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal contact form",
 			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
@@ -41,7 +41,7 @@
 			]
 		},
 		{
-			"name": "mist-content-four",
+			"name": "content-four",
 			"type": "registry:block",
 			"description": "Mist-style content with feature grid",
 			"registryDependencies": [],
@@ -56,10 +56,10 @@
 			]
 		},
 		{
-			"name": "mist-content-one",
+			"name": "content-one",
 			"type": "registry:block",
 			"description": "Mist-style simple content block",
-			"registryDependencies": ["button", "toggle-group", "utils"],
+			"registryDependencies": ["button", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -71,7 +71,7 @@
 			]
 		},
 		{
-			"name": "mist-content-three",
+			"name": "content-three",
 			"type": "registry:block",
 			"description": "Mist-style content with side image",
 			"registryDependencies": [],
@@ -86,10 +86,10 @@
 			]
 		},
 		{
-			"name": "mist-content-two",
+			"name": "content-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column content",
-			"registryDependencies": ["button", "toggle-group", "utils"],
+			"registryDependencies": ["button", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -101,7 +101,7 @@
 			]
 		},
 		{
-			"name": "mist-cta-one",
+			"name": "cta-one",
 			"type": "registry:block",
 			"description": "Mist-style centered CTA block",
 			"registryDependencies": ["button"],
@@ -116,7 +116,7 @@
 			]
 		},
 		{
-			"name": "mist-cta-three",
+			"name": "cta-three",
 			"type": "registry:block",
 			"description": "Mist-style CTA with background",
 			"registryDependencies": ["button"],
@@ -131,7 +131,7 @@
 			]
 		},
 		{
-			"name": "mist-cta-two",
+			"name": "cta-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column CTA",
 			"registryDependencies": ["button"],
@@ -146,7 +146,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-eight",
+			"name": "feature-eight",
 			"type": "registry:block",
 			"description": "Mist-style feature with icon grid",
 			"registryDependencies": ["card"],
@@ -161,7 +161,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-eleven",
+			"name": "feature-eleven",
 			"type": "registry:block",
 			"description": "Mist-style feature with alternating rows",
 			"registryDependencies": ["button", "card"],
@@ -176,7 +176,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-table",
+			"name": "feature-table",
 			"type": "registry:block",
 			"description": "Mist-style feature comparison table",
 			"registryDependencies": ["utils"],
@@ -191,7 +191,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-five",
+			"name": "feature-five",
 			"type": "registry:block",
 			"description": "Mist-style feature with bullet points",
 			"registryDependencies": ["button"],
@@ -206,10 +206,10 @@
 			]
 		},
 		{
-			"name": "mist-feature-four",
+			"name": "feature-four",
 			"type": "registry:block",
 			"description": "Mist-style four-column feature grid",
-			"registryDependencies": ["button", "card", "toggle-group", "utils"],
+			"registryDependencies": ["button", "card", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -221,7 +221,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-nine",
+			"name": "feature-nine",
 			"type": "registry:block",
 			"description": "Mist-style feature with checkmarks",
 			"registryDependencies": ["button", "card"],
@@ -236,10 +236,10 @@
 			]
 		},
 		{
-			"name": "mist-feature-one",
+			"name": "feature-one",
 			"type": "registry:block",
 			"description": "Mist-style simple feature grid",
-			"registryDependencies": ["card", "mist-feature-table"],
+			"registryDependencies": ["card", "local:feature-table"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -251,7 +251,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-seven",
+			"name": "feature-seven",
 			"type": "registry:block",
 			"description": "Mist-style feature with tabs",
 			"registryDependencies": ["button", "card"],
@@ -266,7 +266,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-six",
+			"name": "feature-six",
 			"type": "registry:block",
 			"description": "Mist-style six-column feature grid",
 			"registryDependencies": ["button", "card"],
@@ -281,7 +281,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-ten",
+			"name": "feature-ten",
 			"type": "registry:block",
 			"description": "Mist-style feature with centered image",
 			"registryDependencies": ["button", "card"],
@@ -296,10 +296,10 @@
 			]
 		},
 		{
-			"name": "mist-feature-three",
+			"name": "feature-three",
 			"type": "registry:block",
 			"description": "Mist-style three-column feature cards",
-			"registryDependencies": ["button", "card", "toggle-group", "utils"],
+			"registryDependencies": ["button", "card", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -311,7 +311,7 @@
 			]
 		},
 		{
-			"name": "mist-feature-two",
+			"name": "feature-two",
 			"type": "registry:block",
 			"description": "Mist-style feature with side image",
 			"registryDependencies": ["card"],
@@ -326,7 +326,7 @@
 			]
 		},
 		{
-			"name": "mist-footer-four",
+			"name": "footer-four",
 			"type": "registry:block",
 			"description": "Mist-style multi-column footer",
 			"registryDependencies": [],
@@ -341,7 +341,7 @@
 			]
 		},
 		{
-			"name": "mist-footer-one",
+			"name": "footer-one",
 			"type": "registry:block",
 			"description": "Mist-style simple centered footer",
 			"registryDependencies": [],
@@ -356,7 +356,7 @@
 			]
 		},
 		{
-			"name": "mist-footer-three",
+			"name": "footer-three",
 			"type": "registry:block",
 			"description": "Mist-style footer with contact info",
 			"registryDependencies": [],
@@ -371,7 +371,7 @@
 			]
 		},
 		{
-			"name": "mist-footer-two",
+			"name": "footer-two",
 			"type": "registry:block",
 			"description": "Mist-style two-row footer",
 			"registryDependencies": [],
@@ -386,7 +386,7 @@
 			]
 		},
 		{
-			"name": "mist-forgot-password-one",
+			"name": "forgot-password-one",
 			"type": "registry:block",
 			"description": "Mist-style password reset form",
 			"registryDependencies": ["button", "input", "label"],
@@ -401,10 +401,10 @@
 			]
 		},
 		{
-			"name": "mist-hero-five",
+			"name": "hero-five",
 			"type": "registry:block",
 			"description": "Mist-style hero with app mockup",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -416,12 +416,12 @@
 			]
 		},
 		{
-			"name": "mist-hero-four",
+			"name": "hero-four",
 			"type": "registry:block",
 			"description": "Mist-style split hero with image",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/four/header.svelte",
@@ -436,12 +436,12 @@
 			]
 		},
 		{
-			"name": "mist-hero-one",
+			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Mist-style centered hero with CTA",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/one/header.svelte",
@@ -456,10 +456,10 @@
 			]
 		},
 		{
-			"name": "mist-hero-six",
+			"name": "hero-six",
 			"type": "registry:block",
 			"description": "Mist-style hero with logo cloud",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -471,12 +471,12 @@
 			]
 		},
 		{
-			"name": "mist-hero-three",
+			"name": "hero-three",
 			"type": "registry:block",
 			"description": "Mist-style hero with background",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/three/header.svelte",
@@ -491,12 +491,12 @@
 			]
 		},
 		{
-			"name": "mist-hero-two",
+			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column hero",
-			"registryDependencies": ["button", "utils"],
+			"registryDependencies": ["button"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mhero/two/header.svelte",
@@ -511,12 +511,12 @@
 			]
 		},
 		{
-			"name": "mist-integration-card",
+			"name": "integration-card",
 			"type": "registry:block",
 			"description": "Mist-style integration logo card",
 			"registryDependencies": ["button", "card"],
 			"dependencies": [],
-			"devDependencies": ["@lucide/svelte", "svelte"],
+			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
 					"path": "src/lib/components/mist/mintegration/integration-card.svelte",
@@ -526,16 +526,16 @@
 			]
 		},
 		{
-			"name": "mist-integration-one",
+			"name": "integration-one",
 			"type": "registry:block",
 			"description": "Mist-style integration grid",
 			"registryDependencies": [
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
+				"logo-gemini",
+				"logo-google-palm",
+				"logo-magic-ui",
+				"logo-media-wiki",
+				"logo-replit",
+				"logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -548,17 +548,17 @@
 			]
 		},
 		{
-			"name": "mist-integration-three",
+			"name": "integration-three",
 			"type": "registry:block",
 			"description": "Mist-style integration with icons",
 			"registryDependencies": [
-				"mist-integration-card",
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
+				"local:integration-card",
+				"logo-gemini",
+				"logo-google-palm",
+				"logo-magic-ui",
+				"logo-media-wiki",
+				"logo-replit",
+				"logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -571,17 +571,17 @@
 			]
 		},
 		{
-			"name": "mist-integration-two",
+			"name": "integration-two",
 			"type": "registry:block",
 			"description": "Mist-style integration marquee",
 			"registryDependencies": [
 				"button",
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
+				"logo-gemini",
+				"logo-google-palm",
+				"logo-magic-ui",
+				"logo-media-wiki",
+				"logo-replit",
+				"logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -594,7 +594,7 @@
 			]
 		},
 		{
-			"name": "mist-login-one",
+			"name": "login-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal login form",
 			"registryDependencies": ["button", "input", "label"],
@@ -609,7 +609,7 @@
 			]
 		},
 		{
-			"name": "mist-logocloud-one",
+			"name": "logocloud-one",
 			"type": "registry:block",
 			"description": "Mist-style grayscale logo cloud",
 			"registryDependencies": [],
@@ -624,7 +624,7 @@
 			]
 		},
 		{
-			"name": "mist-logocloud-two",
+			"name": "logocloud-two",
 			"type": "registry:block",
 			"description": "Mist-style logo cloud with hover",
 			"registryDependencies": [],
@@ -639,7 +639,7 @@
 			]
 		},
 		{
-			"name": "mist-logo-gemini",
+			"name": "logo-gemini",
 			"type": "registry:block",
 			"description": "Mist-style Gemini AI logo SVG",
 			"registryDependencies": [],
@@ -654,7 +654,7 @@
 			]
 		},
 		{
-			"name": "mist-logo-google-palm",
+			"name": "logo-google-palm",
 			"type": "registry:block",
 			"description": "Mist-style Google PaLM logo SVG",
 			"registryDependencies": [],
@@ -669,16 +669,16 @@
 			]
 		},
 		{
-			"name": "mist-logo-collection",
+			"name": "logo-collection",
 			"type": "registry:block",
 			"description": "Mist-style logo collection utilities",
 			"registryDependencies": [
-				"mist-logo-gemini",
-				"mist-logo-google-palm",
-				"mist-logo-magic-ui",
-				"mist-logo-media-wiki",
-				"mist-logo-replit",
-				"mist-logo-vscodium"
+				"logo-gemini",
+				"logo-google-palm",
+				"logo-magic-ui",
+				"logo-media-wiki",
+				"logo-replit",
+				"logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -691,7 +691,7 @@
 			]
 		},
 		{
-			"name": "mist-logo-magic-ui",
+			"name": "logo-magic-ui",
 			"type": "registry:block",
 			"description": "Mist-style Magic UI logo SVG",
 			"registryDependencies": [],
@@ -706,7 +706,7 @@
 			]
 		},
 		{
-			"name": "mist-logo-media-wiki",
+			"name": "logo-media-wiki",
 			"type": "registry:block",
 			"description": "Mist-style MediaWiki logo SVG",
 			"registryDependencies": [],
@@ -721,7 +721,7 @@
 			]
 		},
 		{
-			"name": "mist-logo-replit",
+			"name": "logo-replit",
 			"type": "registry:block",
 			"description": "Mist-style Replit logo SVG",
 			"registryDependencies": [],
@@ -736,7 +736,7 @@
 			]
 		},
 		{
-			"name": "mist-logo-vscodium",
+			"name": "logo-vscodium",
 			"type": "registry:block",
 			"description": "Mist-style VSCodium logo SVG",
 			"registryDependencies": [],
@@ -751,7 +751,7 @@
 			]
 		},
 		{
-			"name": "mist-pricing-one",
+			"name": "pricing-one",
 			"type": "registry:block",
 			"description": "Mist-style simple pricing cards",
 			"registryDependencies": ["button", "card"],
@@ -766,7 +766,7 @@
 			]
 		},
 		{
-			"name": "mist-pricing-two",
+			"name": "pricing-two",
 			"type": "registry:block",
 			"description": "Mist-style pricing with toggle",
 			"registryDependencies": ["button", "card"],
@@ -781,7 +781,7 @@
 			]
 		},
 		{
-			"name": "mist-signup-one",
+			"name": "signup-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal signup form",
 			"registryDependencies": ["button", "input", "label"],
@@ -796,7 +796,7 @@
 			]
 		},
 		{
-			"name": "mist-stats-four",
+			"name": "stats-four",
 			"type": "registry:block",
 			"description": "Mist-style four-column stats",
 			"registryDependencies": [],
@@ -811,7 +811,7 @@
 			]
 		},
 		{
-			"name": "mist-stats-one",
+			"name": "stats-one",
 			"type": "registry:block",
 			"description": "Mist-style simple stats row",
 			"registryDependencies": ["card"],
@@ -826,7 +826,7 @@
 			]
 		},
 		{
-			"name": "mist-stats-three",
+			"name": "stats-three",
 			"type": "registry:block",
 			"description": "Mist-style stats with descriptions",
 			"registryDependencies": [],
@@ -841,7 +841,7 @@
 			]
 		},
 		{
-			"name": "mist-stats-two",
+			"name": "stats-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column stats",
 			"registryDependencies": [],
@@ -856,7 +856,7 @@
 			]
 		},
 		{
-			"name": "mist-team-one",
+			"name": "team-one",
 			"type": "registry:block",
 			"description": "Mist-style team member grid",
 			"registryDependencies": ["avatar", "button"],
@@ -871,7 +871,7 @@
 			]
 		},
 		{
-			"name": "mist-team-two",
+			"name": "team-two",
 			"type": "registry:block",
 			"description": "Mist-style team with social links",
 			"registryDependencies": ["avatar", "button", "hover-card"],
@@ -886,7 +886,7 @@
 			]
 		},
 		{
-			"name": "mist-testimonial-five",
+			"name": "testimonial-five",
 			"type": "registry:block",
 			"description": "Mist-style testimonial carousel",
 			"registryDependencies": ["avatar"],
@@ -901,7 +901,7 @@
 			]
 		},
 		{
-			"name": "mist-testimonial-four",
+			"name": "testimonial-four",
 			"type": "registry:block",
 			"description": "Mist-style four-column testimonials",
 			"registryDependencies": ["avatar"],
@@ -916,7 +916,7 @@
 			]
 		},
 		{
-			"name": "mist-testimonial-one",
+			"name": "testimonial-one",
 			"type": "registry:block",
 			"description": "Mist-style centered testimonial",
 			"registryDependencies": [],
@@ -931,10 +931,10 @@
 			]
 		},
 		{
-			"name": "mist-testimonial-three",
+			"name": "testimonial-three",
 			"type": "registry:block",
 			"description": "Mist-style three-column testimonials",
-			"registryDependencies": ["avatar", "utils"],
+			"registryDependencies": ["avatar"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -946,7 +946,7 @@
 			]
 		},
 		{
-			"name": "mist-testimonial-two",
+			"name": "testimonial-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column testimonials",
 			"registryDependencies": ["avatar"],

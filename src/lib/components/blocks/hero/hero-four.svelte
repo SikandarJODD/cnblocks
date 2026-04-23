@@ -112,12 +112,12 @@
 					<ProgressiveBlur
 						direction="left"
 						blurIntensity={1}
-						class="pointer-events-none absolute left-0 top-0 h-full w-20"
+						class="pointer-events-none absolute top-0 left-0 h-full w-20"
 					/>
 					<ProgressiveBlur
 						direction="right"
 						blurIntensity={1}
-						class="pointer-events-none absolute right-0 top-0 h-full w-20"
+						class="pointer-events-none absolute top-0 right-0 h-full w-20"
 					/>
 				</div>
 			</div>

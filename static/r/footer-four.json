@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "footer-four",
+	"type": "registry:block",
+	"description": "Multi-column footer with sitemap links",
+	"files": [
+		{
+			"content": "<script>\r\n\tconst links = [\r\n\t\t{\r\n\t\t\ttitle: \"Features\",\r\n\t\t\thref: \"#\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Solution\",\r\n\t\t\thref: \"#\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Customers\",\r\n\t\t\thref: \"#\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Pricing\",\r\n\t\t\thref: \"#\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"Help\",\r\n\t\t\thref: \"#\",\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: \"About\",\r\n\t\t\thref: \"#\",\r\n\t\t},\r\n\t];\r\n</script>\r\n\r\n<footer class=\"border-b bg-white py-12 dark:bg-transparent\">\r\n\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t<div class=\"flex flex-wrap justify-between gap-6\">\r\n\t\t\t<span class=\"order-last block text-center text-sm text-muted-foreground md:order-first\"\r\n\t\t\t\t>© {new Date().getFullYear()} Tailus UI, All rights reserved</span\r\n\t\t\t>\r\n\t\t\t<div class=\"order-first flex flex-wrap justify-center gap-6 text-sm md:order-last\">\r\n\t\t\t\t{#each links as link, index}\r\n\t\t\t\t\t<a\r\n\t\t\t\t\t\thref={link.href}\r\n\t\t\t\t\t\tclass=\"block text-muted-foreground duration-150 hover:text-primary\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t<span>{link.title}</span>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t{/each}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</footer>\r\n",
+			"type": "registry:component",
+			"target": "blocks/footer/footer-four.svelte"
+		}
+	]
+}

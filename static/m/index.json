@@ -1,0 +1,733 @@
+[
+	{
+		"name": "comparator-one",
+		"type": "registry:block",
+		"description": "Mist-style before/after image comparison",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "comparator-one.json"
+	},
+	{
+		"name": "contact-one",
+		"type": "registry:block",
+		"description": "Mist-style minimal contact form",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"card",
+			"input",
+			"label",
+			"select",
+			"textarea"
+		],
+		"relativeUrl": "contact-one.json"
+	},
+	{
+		"name": "content-four",
+		"type": "registry:block",
+		"description": "Mist-style content with feature grid",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "content-four.json"
+	},
+	{
+		"name": "content-one",
+		"type": "registry:block",
+		"description": "Mist-style simple content block",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"toggle-group"
+		],
+		"relativeUrl": "content-one.json"
+	},
+	{
+		"name": "content-three",
+		"type": "registry:block",
+		"description": "Mist-style content with side image",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "content-three.json"
+	},
+	{
+		"name": "content-two",
+		"type": "registry:block",
+		"description": "Mist-style two-column content",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"toggle-group"
+		],
+		"relativeUrl": "content-two.json"
+	},
+	{
+		"name": "cta-one",
+		"type": "registry:block",
+		"description": "Mist-style centered CTA block",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-one.json"
+	},
+	{
+		"name": "cta-three",
+		"type": "registry:block",
+		"description": "Mist-style CTA with background",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-three.json"
+	},
+	{
+		"name": "cta-two",
+		"type": "registry:block",
+		"description": "Mist-style two-column CTA",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-two.json"
+	},
+	{
+		"name": "feature-eight",
+		"type": "registry:block",
+		"description": "Mist-style feature with icon grid",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"card"
+		],
+		"relativeUrl": "feature-eight.json"
+	},
+	{
+		"name": "feature-eleven",
+		"type": "registry:block",
+		"description": "Mist-style feature with alternating rows",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "feature-eleven.json"
+	},
+	{
+		"name": "feature-table",
+		"type": "registry:block",
+		"description": "Mist-style feature comparison table",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"utils"
+		],
+		"relativeUrl": "feature-table.json"
+	},
+	{
+		"name": "feature-five",
+		"type": "registry:block",
+		"description": "Mist-style feature with bullet points",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "feature-five.json"
+	},
+	{
+		"name": "feature-four",
+		"type": "registry:block",
+		"description": "Mist-style four-column feature grid",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card",
+			"toggle-group"
+		],
+		"relativeUrl": "feature-four.json"
+	},
+	{
+		"name": "feature-nine",
+		"type": "registry:block",
+		"description": "Mist-style feature with checkmarks",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "feature-nine.json"
+	},
+	{
+		"name": "feature-one",
+		"type": "registry:block",
+		"description": "Mist-style simple feature grid",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"card",
+			"local:feature-table"
+		],
+		"relativeUrl": "feature-one.json"
+	},
+	{
+		"name": "feature-seven",
+		"type": "registry:block",
+		"description": "Mist-style feature with tabs",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "feature-seven.json"
+	},
+	{
+		"name": "feature-six",
+		"type": "registry:block",
+		"description": "Mist-style six-column feature grid",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "feature-six.json"
+	},
+	{
+		"name": "feature-ten",
+		"type": "registry:block",
+		"description": "Mist-style feature with centered image",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "feature-ten.json"
+	},
+	{
+		"name": "feature-three",
+		"type": "registry:block",
+		"description": "Mist-style three-column feature cards",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card",
+			"toggle-group"
+		],
+		"relativeUrl": "feature-three.json"
+	},
+	{
+		"name": "feature-two",
+		"type": "registry:block",
+		"description": "Mist-style feature with side image",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"card"
+		],
+		"relativeUrl": "feature-two.json"
+	},
+	{
+		"name": "footer-four",
+		"type": "registry:block",
+		"description": "Mist-style multi-column footer",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-four.json"
+	},
+	{
+		"name": "footer-one",
+		"type": "registry:block",
+		"description": "Mist-style simple centered footer",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-one.json"
+	},
+	{
+		"name": "footer-three",
+		"type": "registry:block",
+		"description": "Mist-style footer with contact info",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-three.json"
+	},
+	{
+		"name": "footer-two",
+		"type": "registry:block",
+		"description": "Mist-style two-row footer",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-two.json"
+	},
+	{
+		"name": "forgot-password-one",
+		"type": "registry:block",
+		"description": "Mist-style password reset form",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "forgot-password-one.json"
+	},
+	{
+		"name": "hero-five",
+		"type": "registry:block",
+		"description": "Mist-style hero with app mockup",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-five.json"
+	},
+	{
+		"name": "hero-four",
+		"type": "registry:block",
+		"description": "Mist-style split hero with image",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-four.json"
+	},
+	{
+		"name": "hero-one",
+		"type": "registry:block",
+		"description": "Mist-style centered hero with CTA",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-one.json"
+	},
+	{
+		"name": "hero-six",
+		"type": "registry:block",
+		"description": "Mist-style hero with logo cloud",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-six.json"
+	},
+	{
+		"name": "hero-three",
+		"type": "registry:block",
+		"description": "Mist-style hero with background",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-three.json"
+	},
+	{
+		"name": "hero-two",
+		"type": "registry:block",
+		"description": "Mist-style two-column hero",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-two.json"
+	},
+	{
+		"name": "integration-card",
+		"type": "registry:block",
+		"description": "Mist-style integration logo card",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "integration-card.json"
+	},
+	{
+		"name": "integration-one",
+		"type": "registry:block",
+		"description": "Mist-style integration grid",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"logo-gemini",
+			"logo-google-palm",
+			"logo-magic-ui",
+			"logo-media-wiki",
+			"logo-replit",
+			"logo-vscodium"
+		],
+		"relativeUrl": "integration-one.json"
+	},
+	{
+		"name": "integration-three",
+		"type": "registry:block",
+		"description": "Mist-style integration with icons",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:integration-card",
+			"logo-gemini",
+			"logo-google-palm",
+			"logo-magic-ui",
+			"logo-media-wiki",
+			"logo-replit",
+			"logo-vscodium"
+		],
+		"relativeUrl": "integration-three.json"
+	},
+	{
+		"name": "integration-two",
+		"type": "registry:block",
+		"description": "Mist-style integration marquee",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"logo-gemini",
+			"logo-google-palm",
+			"logo-magic-ui",
+			"logo-media-wiki",
+			"logo-replit",
+			"logo-vscodium"
+		],
+		"relativeUrl": "integration-two.json"
+	},
+	{
+		"name": "login-one",
+		"type": "registry:block",
+		"description": "Mist-style minimal login form",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "login-one.json"
+	},
+	{
+		"name": "logocloud-one",
+		"type": "registry:block",
+		"description": "Mist-style grayscale logo cloud",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logocloud-one.json"
+	},
+	{
+		"name": "logocloud-two",
+		"type": "registry:block",
+		"description": "Mist-style logo cloud with hover",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logocloud-two.json"
+	},
+	{
+		"name": "logo-gemini",
+		"type": "registry:block",
+		"description": "Mist-style Gemini AI logo SVG",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-gemini.json"
+	},
+	{
+		"name": "logo-google-palm",
+		"type": "registry:block",
+		"description": "Mist-style Google PaLM logo SVG",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-google-palm.json"
+	},
+	{
+		"name": "logo-collection",
+		"type": "registry:block",
+		"description": "Mist-style logo collection utilities",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"logo-gemini",
+			"logo-google-palm",
+			"logo-magic-ui",
+			"logo-media-wiki",
+			"logo-replit",
+			"logo-vscodium"
+		],
+		"relativeUrl": "logo-collection.json"
+	},
+	{
+		"name": "logo-magic-ui",
+		"type": "registry:block",
+		"description": "Mist-style Magic UI logo SVG",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-magic-ui.json"
+	},
+	{
+		"name": "logo-media-wiki",
+		"type": "registry:block",
+		"description": "Mist-style MediaWiki logo SVG",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-media-wiki.json"
+	},
+	{
+		"name": "logo-replit",
+		"type": "registry:block",
+		"description": "Mist-style Replit logo SVG",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-replit.json"
+	},
+	{
+		"name": "logo-vscodium",
+		"type": "registry:block",
+		"description": "Mist-style VSCodium logo SVG",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-vscodium.json"
+	},
+	{
+		"name": "pricing-one",
+		"type": "registry:block",
+		"description": "Mist-style simple pricing cards",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "pricing-one.json"
+	},
+	{
+		"name": "pricing-two",
+		"type": "registry:block",
+		"description": "Mist-style pricing with toggle",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "pricing-two.json"
+	},
+	{
+		"name": "signup-one",
+		"type": "registry:block",
+		"description": "Mist-style minimal signup form",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "signup-one.json"
+	},
+	{
+		"name": "stats-four",
+		"type": "registry:block",
+		"description": "Mist-style four-column stats",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-four.json"
+	},
+	{
+		"name": "stats-one",
+		"type": "registry:block",
+		"description": "Mist-style simple stats row",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"card"
+		],
+		"relativeUrl": "stats-one.json"
+	},
+	{
+		"name": "stats-three",
+		"type": "registry:block",
+		"description": "Mist-style stats with descriptions",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "stats-three.json"
+	},
+	{
+		"name": "stats-two",
+		"type": "registry:block",
+		"description": "Mist-style two-column stats",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-two.json"
+	},
+	{
+		"name": "team-one",
+		"type": "registry:block",
+		"description": "Mist-style team member grid",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"button"
+		],
+		"relativeUrl": "team-one.json"
+	},
+	{
+		"name": "team-two",
+		"type": "registry:block",
+		"description": "Mist-style team with social links",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"hover-card"
+		],
+		"relativeUrl": "team-two.json"
+	},
+	{
+		"name": "testimonial-five",
+		"type": "registry:block",
+		"description": "Mist-style testimonial carousel",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar"
+		],
+		"relativeUrl": "testimonial-five.json"
+	},
+	{
+		"name": "testimonial-four",
+		"type": "registry:block",
+		"description": "Mist-style four-column testimonials",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar"
+		],
+		"relativeUrl": "testimonial-four.json"
+	},
+	{
+		"name": "testimonial-one",
+		"type": "registry:block",
+		"description": "Mist-style centered testimonial",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "testimonial-one.json"
+	},
+	{
+		"name": "testimonial-three",
+		"type": "registry:block",
+		"description": "Mist-style three-column testimonials",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar"
+		],
+		"relativeUrl": "testimonial-three.json"
+	},
+	{
+		"name": "testimonial-two",
+		"type": "registry:block",
+		"description": "Mist-style two-column testimonials",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar"
+		],
+		"relativeUrl": "testimonial-two.json"
+	}
+]

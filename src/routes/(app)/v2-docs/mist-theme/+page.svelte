@@ -346,9 +346,9 @@ export {
 		</UnorderedList>
 	</section> -->
 
-	<section >
+	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
-		<Paragraph class="text-muted-foreground mt-1 mb-6">
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			Add the Mist theme variables to your global stylesheet (for example <code>app.css</code>
 			or <code>globals.css</code>) so Mist primitives resolve color, border, and contrast
 			consistently.
@@ -404,9 +404,9 @@ export {
 		/>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="apply-theme">Apply Theme</H2>
-		<Paragraph class="text-muted-foreground mt-1 mb-6">
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			Ensure your root body includes <code>theme-container</code> so the selected Mist theme is
 			applied across the application.
 		</Paragraph>
@@ -419,9 +419,9 @@ export {
 		/>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="required-components">Required Components</H2>
-		<Paragraph class="text-muted-foreground mt-1 mb-6">
+		<Paragraph class="mt-1 mb-6 text-muted-foreground">
 			After theme tokens are configured, update these Mist primitives in your app.
 		</Paragraph>
 		<Table
@@ -450,7 +450,7 @@ export {
 		</Table>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="button-component">Button Component</H2>
 		<Paragraph class="mt-1 mb-6">
 			Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
@@ -470,7 +470,7 @@ export {
 		<MultipleCode code={buttonSourceCode} />
 	</section>
 
-	<section >
+	<section>
 		<H2 id="card-component">Card Component</H2>
 		<Paragraph class="mt-1 mb-6">
 			Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections

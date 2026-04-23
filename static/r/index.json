@@ -1,0 +1,1171 @@
+[
+	{
+		"name": "comparator-one",
+		"type": "registry:block",
+		"description": "Before/after image comparison slider block",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "comparator-one.json"
+	},
+	{
+		"name": "contact-one",
+		"type": "registry:block",
+		"description": "Contact form with input fields and submit button",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"card",
+			"input",
+			"label",
+			"select",
+			"textarea"
+		],
+		"relativeUrl": "contact-one.json"
+	},
+	{
+		"name": "contact-two",
+		"type": "registry:block",
+		"description": "Two-column contact section with form and info",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"card",
+			"input",
+			"label",
+			"select",
+			"textarea"
+		],
+		"relativeUrl": "contact-two.json"
+	},
+	{
+		"name": "content-five",
+		"type": "registry:block",
+		"description": "Content block with image and text in grid layout",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "content-five.json"
+	},
+	{
+		"name": "content-four",
+		"type": "registry:block",
+		"description": "Content section with feature highlights",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "content-four.json"
+	},
+	{
+		"name": "content-one",
+		"type": "registry:block",
+		"description": "Simple content block with heading and description",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "content-one.json"
+	},
+	{
+		"name": "content-seven",
+		"type": "registry:block",
+		"description": "Content block with alternating layout",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "content-seven.json"
+	},
+	{
+		"name": "content-six",
+		"type": "registry:block",
+		"description": "Content section with icons and descriptions",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "content-six.json"
+	},
+	{
+		"name": "content-three",
+		"type": "registry:block",
+		"description": "Two-column content with image sidebar",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "content-three.json"
+	},
+	{
+		"name": "content-two",
+		"type": "registry:block",
+		"description": "Content block with centered text and CTA",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "content-two.json"
+	},
+	{
+		"name": "cta-one",
+		"type": "registry:block",
+		"description": "Call-to-action block with centered heading and buttons",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-one.json"
+	},
+	{
+		"name": "cta-three",
+		"type": "registry:block",
+		"description": "CTA section with background gradient",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-three.json"
+	},
+	{
+		"name": "cta-two",
+		"type": "registry:block",
+		"description": "Two-column CTA with text and action buttons",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-two.json"
+	},
+	{
+		"name": "faq-four",
+		"type": "registry:block",
+		"description": "FAQ section with search and categories",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"accordion"
+		],
+		"relativeUrl": "faq-four.json"
+	},
+	{
+		"name": "faq-one",
+		"type": "registry:block",
+		"description": "Simple accordion-style FAQ block",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "faq-one.json"
+	},
+	{
+		"name": "faq-three",
+		"type": "registry:block",
+		"description": "FAQ with two-column layout",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"accordion"
+		],
+		"relativeUrl": "faq-three.json"
+	},
+	{
+		"name": "faq-two",
+		"type": "registry:block",
+		"description": "FAQ section with expandable items",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"accordion"
+		],
+		"relativeUrl": "faq-two.json"
+	},
+	{
+		"name": "card-decorator",
+		"type": "registry:block",
+		"description": "Decorative card component with visual effects",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "card-decorator.json"
+	},
+	{
+		"name": "feature-card",
+		"type": "registry:block",
+		"description": "Reusable feature card with icon and text",
+		"dependencies": [],
+		"registryDependencies": [
+			"card"
+		],
+		"relativeUrl": "feature-card.json"
+	},
+	{
+		"name": "feature-eight",
+		"type": "registry:block",
+		"description": "Feature grid with icons in circular containers",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"card"
+		],
+		"relativeUrl": "feature-eight.json"
+	},
+	{
+		"name": "feature-eleven",
+		"type": "registry:block",
+		"description": "Feature section with alternating image/text rows",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "feature-eleven.json"
+	},
+	{
+		"name": "feature-five",
+		"type": "registry:block",
+		"description": "Feature block with large image and bullet points",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-five.json"
+	},
+	{
+		"name": "feature-four",
+		"type": "registry:block",
+		"description": "Four-column feature grid with icons",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-four.json"
+	},
+	{
+		"name": "feature-fourteen",
+		"type": "registry:block",
+		"description": "Feature section with numbered steps",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "feature-fourteen.json"
+	},
+	{
+		"name": "feature-nine",
+		"type": "registry:block",
+		"description": "Feature list with checkmarks and descriptions",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte",
+			"dotted-map"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-nine.json"
+	},
+	{
+		"name": "feature-one",
+		"type": "registry:block",
+		"description": "Simple three-column feature grid",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"card",
+			"local:card-decorator"
+		],
+		"relativeUrl": "feature-one.json"
+	},
+	{
+		"name": "feature-seven",
+		"type": "registry:block",
+		"description": "Feature section with tabs and content panels",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-seven.json"
+	},
+	{
+		"name": "feature-six",
+		"type": "registry:block",
+		"description": "Six-column feature grid with hover effects",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-six.json"
+	},
+	{
+		"name": "feature-ten",
+		"type": "registry:block",
+		"description": "Feature block with centered image and cards",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"card",
+			"feature-card"
+		],
+		"relativeUrl": "feature-ten.json"
+	},
+	{
+		"name": "feature-thirteen",
+		"type": "registry:block",
+		"description": "Feature section with large hero image",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "feature-thirteen.json"
+	},
+	{
+		"name": "feature-three",
+		"type": "registry:block",
+		"description": "Three-column feature cards with borders",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"card",
+			"local:card-decorator"
+		],
+		"relativeUrl": "feature-three.json"
+	},
+	{
+		"name": "feature-twelve",
+		"type": "registry:block",
+		"description": "Feature grid with gradient backgrounds",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-twelve.json"
+	},
+	{
+		"name": "feature-two",
+		"type": "registry:block",
+		"description": "Two-column feature with image on side",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"card",
+			"local:card-decorator"
+		],
+		"relativeUrl": "feature-two.json"
+	},
+	{
+		"name": "footer-five",
+		"type": "registry:block",
+		"description": "Footer with newsletter signup and social links",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "footer-five.json"
+	},
+	{
+		"name": "footer-four",
+		"type": "registry:block",
+		"description": "Multi-column footer with sitemap links",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-four.json"
+	},
+	{
+		"name": "footer-one",
+		"type": "registry:block",
+		"description": "Simple centered footer with logo and links",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-one.json"
+	},
+	{
+		"name": "footer-three",
+		"type": "registry:block",
+		"description": "Three-column footer with contact info",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "footer-three.json"
+	},
+	{
+		"name": "footer-two",
+		"type": "registry:block",
+		"description": "Two-row footer with links and copyright",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "footer-two.json"
+	},
+	{
+		"name": "forgot-password-one",
+		"type": "registry:block",
+		"description": "Forgot password form with email input",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "forgot-password-one.json"
+	},
+	{
+		"name": "forgot-password-two",
+		"type": "registry:block",
+		"description": "Password reset form with side illustration",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "forgot-password-two.json"
+	},
+	{
+		"name": "hero-header-eight",
+		"type": "registry:block",
+		"description": "Navigation header with dropdown menus",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-header-eight.json"
+	},
+	{
+		"name": "hero-header-nine",
+		"type": "registry:block",
+		"description": "Header with mega menu navigation",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-header-nine.json"
+	},
+	{
+		"name": "hero-header-seven",
+		"type": "registry:block",
+		"description": "Transparent header with centered logo",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-header-seven.json"
+	},
+	{
+		"name": "hero-header",
+		"type": "registry:block",
+		"description": "Standard navigation header with logo and links",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-header.json"
+	},
+	{
+		"name": "hero-eight",
+		"type": "registry:block",
+		"description": "Hero with video background and overlay",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-eight.json"
+	},
+	{
+		"name": "hero-five",
+		"type": "registry:block",
+		"description": "Hero section with app mockup image",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-five.json"
+	},
+	{
+		"name": "hero-four",
+		"type": "registry:block",
+		"description": "Split hero with image on right side",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-four.json"
+	},
+	{
+		"name": "hero-nine",
+		"type": "registry:block",
+		"description": "Hero with animated background elements",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-nine.json"
+	},
+	{
+		"name": "hero-one",
+		"type": "registry:block",
+		"description": "Classic centered hero with headline and CTA",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-one.json"
+	},
+	{
+		"name": "hero-seven",
+		"type": "registry:block",
+		"description": "Hero with gradient background and stats",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte",
+			"swiper"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-seven.json"
+	},
+	{
+		"name": "hero-six",
+		"type": "registry:block",
+		"description": "Hero section with logo cloud below",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "hero-six.json"
+	},
+	{
+		"name": "hero-three",
+		"type": "registry:block",
+		"description": "Hero with background image and overlay",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-three.json"
+	},
+	{
+		"name": "hero-two",
+		"type": "registry:block",
+		"description": "Two-column hero with image carousel",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-two.json"
+	},
+	{
+		"name": "integration-cards",
+		"type": "registry:block",
+		"description": "Collection of integration card variants for logos",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "integration-cards.json"
+	},
+	{
+		"name": "integration-eight",
+		"type": "registry:block",
+		"description": "Integration grid with animated connections",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-eight.json"
+	},
+	{
+		"name": "integration-five",
+		"type": "registry:block",
+		"description": "Integration showcase with hover details",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"local:integration-cards",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-five.json"
+	},
+	{
+		"name": "integration-four",
+		"type": "registry:block",
+		"description": "Four-column integration logo grid",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"local:integration-cards",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-four.json"
+	},
+	{
+		"name": "integration-one",
+		"type": "registry:block",
+		"description": "Simple integration logos in grid layout",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:integration-cards",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-one.json"
+	},
+	{
+		"name": "integration-seven",
+		"type": "registry:block",
+		"description": "Integration section with categories",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"local:integration-cards",
+			"local:logo-collection",
+			"local:marquee"
+		],
+		"relativeUrl": "integration-seven.json"
+	},
+	{
+		"name": "integration-six",
+		"type": "registry:block",
+		"description": "Integration cards with descriptions",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-six.json"
+	},
+	{
+		"name": "integration-three",
+		"type": "registry:block",
+		"description": "Three-column integration with icons",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"local:integration-cards",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-three.json"
+	},
+	{
+		"name": "integration-two",
+		"type": "registry:block",
+		"description": "Two-row integration logo marquee",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"local:integration-cards",
+			"local:logo-collection"
+		],
+		"relativeUrl": "integration-two.json"
+	},
+	{
+		"name": "login-one",
+		"type": "registry:block",
+		"description": "Simple centered login form with inputs",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "login-one.json"
+	},
+	{
+		"name": "login-three",
+		"type": "registry:block",
+		"description": "Login form with social auth buttons",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "login-three.json"
+	},
+	{
+		"name": "login-two",
+		"type": "registry:block",
+		"description": "Split login with side illustration",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "login-two.json"
+	},
+	{
+		"name": "logo-gemini",
+		"type": "registry:block",
+		"description": "Google Gemini AI logo SVG component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-gemini.json"
+	},
+	{
+		"name": "logo-google-palm",
+		"type": "registry:block",
+		"description": "Google PaLM AI logo SVG component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-google-palm.json"
+	},
+	{
+		"name": "logo-collection",
+		"type": "registry:block",
+		"description": "Logo collection utilities and exports",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:logo-gemini",
+			"local:logo-google-palm",
+			"local:logo-magic-ui",
+			"local:logo-media-wiki",
+			"local:logo-replit",
+			"local:logo-vscodium"
+		],
+		"relativeUrl": "logo-collection.json"
+	},
+	{
+		"name": "logo-magic-ui",
+		"type": "registry:block",
+		"description": "Magic UI logo SVG component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-magic-ui.json"
+	},
+	{
+		"name": "logo-media-wiki",
+		"type": "registry:block",
+		"description": "MediaWiki logo SVG component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-media-wiki.json"
+	},
+	{
+		"name": "logo-replit",
+		"type": "registry:block",
+		"description": "Replit logo SVG component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-replit.json"
+	},
+	{
+		"name": "logo-vscodium",
+		"type": "registry:block",
+		"description": "VSCodium logo SVG component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo-vscodium.json"
+	},
+	{
+		"name": "pricing-five",
+		"type": "registry:block",
+		"description": "Pricing table with feature comparison",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:svgs"
+		],
+		"relativeUrl": "pricing-five.json"
+	},
+	{
+		"name": "pricing-four",
+		"type": "registry:block",
+		"description": "Four-tier pricing with toggle switch",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "pricing-four.json"
+	},
+	{
+		"name": "pricing-one",
+		"type": "registry:block",
+		"description": "Simple three-tier pricing cards",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "pricing-one.json"
+	},
+	{
+		"name": "pricing-three",
+		"type": "registry:block",
+		"description": "Pricing with highlighted popular plan",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "pricing-three.json"
+	},
+	{
+		"name": "pricing-two",
+		"type": "registry:block",
+		"description": "Two-column pricing with monthly/yearly toggle",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"card"
+		],
+		"relativeUrl": "pricing-two.json"
+	},
+	{
+		"name": "signup-one",
+		"type": "registry:block",
+		"description": "Simple centered signup form",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "signup-one.json"
+	},
+	{
+		"name": "signup-three",
+		"type": "registry:block",
+		"description": "Signup form with social auth options",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "signup-three.json"
+	},
+	{
+		"name": "signup-two",
+		"type": "registry:block",
+		"description": "Split signup with side illustration",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"button",
+			"input",
+			"label"
+		],
+		"relativeUrl": "signup-two.json"
+	},
+	{
+		"name": "stats-four",
+		"type": "registry:block",
+		"description": "Four-column stats with icons",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "stats-four.json"
+	},
+	{
+		"name": "stats-one",
+		"type": "registry:block",
+		"description": "Simple stats row with large numbers",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-one.json"
+	},
+	{
+		"name": "stats-three",
+		"type": "registry:block",
+		"description": "Stats cards with descriptions",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-three.json"
+	},
+	{
+		"name": "stats-two",
+		"type": "registry:block",
+		"description": "Two-column stats with side image",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-two.json"
+	},
+	{
+		"name": "team-one",
+		"type": "registry:block",
+		"description": "Team grid with member photos and roles",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "team-one.json"
+	},
+	{
+		"name": "team-two",
+		"type": "registry:block",
+		"description": "Team section with social links",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "team-two.json"
+	},
+	{
+		"name": "testimonial-five",
+		"type": "registry:block",
+		"description": "Testimonial carousel with navigation",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar",
+			"card"
+		],
+		"relativeUrl": "testimonial-five.json"
+	},
+	{
+		"name": "testimonial-four",
+		"type": "registry:block",
+		"description": "Four-column testimonial grid",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar"
+		],
+		"relativeUrl": "testimonial-four.json"
+	},
+	{
+		"name": "testimonial-one",
+		"type": "registry:block",
+		"description": "Simple centered testimonial quote",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar",
+			"card"
+		],
+		"relativeUrl": "testimonial-one.json"
+	},
+	{
+		"name": "testimonial-six",
+		"type": "registry:block",
+		"description": "Testimonial with video embed",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar",
+			"card"
+		],
+		"relativeUrl": "testimonial-six.json"
+	},
+	{
+		"name": "testimonial-three",
+		"type": "registry:block",
+		"description": "Three-column testimonial cards",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "testimonial-three.json"
+	},
+	{
+		"name": "testimonial-two",
+		"type": "registry:block",
+		"description": "Two-column testimonial with photos",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"avatar",
+			"card"
+		],
+		"relativeUrl": "testimonial-two.json"
+	},
+	{
+		"name": "marquee",
+		"type": "registry:component",
+		"description": "Animated marquee component for horizontally or vertically scrolling content",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "marquee.json"
+	},
+	{
+		"name": "progressive-blur",
+		"type": "registry:component",
+		"description": "Progressive layered blur overlay component",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "progressive-blur.json"
+	},
+	{
+		"name": "logocloud-one",
+		"type": "registry:block",
+		"description": "Logo cloud with partner logos in a centered wrap layout",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logocloud-one.json"
+	},
+	{
+		"name": "logocloud-two",
+		"type": "registry:block",
+		"description": "Interactive logo cloud with hover call-to-action",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logocloud-two.json"
+	},
+	{
+		"name": "logocloud-three",
+		"type": "registry:block",
+		"description": "Scrolling logo cloud marquee with progressive blur edges",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:marquee",
+			"local:progressive-blur",
+			"local:svgs"
+		],
+		"relativeUrl": "logocloud-three.json"
+	},
+	{
+		"name": "svgs",
+		"type": "registry:component",
+		"description": "Shared SVG logo and icon components",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "svgs.json"
+	}
+]

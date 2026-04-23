@@ -15,7 +15,7 @@
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"build:registry:core": "jsrepo build",
-		"build:blocks": "pnpm shadcn-svelte registry build",
+		"build:blocks": "pnpm shadcn-svelte registry build ./registry.json -o ./static/r",
 		"build:mist": "pnpm shadcn-svelte registry build ./mist-registry.json -o ./static/m",
 		"build:veil": "pnpm shadcn-svelte registry build ./veil-registry.json -o ./static/v"
 	},

@@ -68,7 +68,8 @@
 								<dd>
 									<p class="text-sm text-muted-foreground">
 										<a href={item.href} class="focus:outline-none">
-											<span class="absolute inset-0" aria-hidden={true} ></span>
+											<span class="absolute inset-0" aria-hidden={true}
+											></span>
 											{item.goalsAchieved}/5 goals
 										</a>
 									</p>

@@ -30,7 +30,7 @@
 					<span class="text-right font-medium text-foreground">
 						{item.value}
 					</span>
-					<span class="h-5 w-px bg-border" aria-hidden="true" ></span>
+					<span class="h-5 w-px bg-border" aria-hidden="true"></span>
 					<span
 						class={cn(
 							"w-15 rounded px-1.5 py-1 text-center text-xs font-semibold",

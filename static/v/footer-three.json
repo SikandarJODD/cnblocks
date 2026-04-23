@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "footer-three",
+	"type": "registry:block",
+	"description": "Veil Footer component, variant Three.",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Logo from \"$COMPONENTS$/web/Logo.svelte\";\r\n\r\n\ttype LinkItem = { label: string; href: string };\r\n\r\n\tconst links: LinkItem[] = [\r\n\t\t{ label: \"Home\", href: \"#\" },\r\n\t\t{ label: \"Features\", href: \"#\" },\r\n\t\t{ label: \"Pricing\", href: \"#\" },\r\n\t\t{ label: \"About\", href: \"#\" },\r\n\t\t{ label: \"Blog\", href: \"#\" },\r\n\t\t{ label: \"Contact\", href: \"#\" },\r\n\t];\r\n\r\n\tconst year = new Date().getFullYear();\r\n</script>\r\n\r\n<footer class=\"@container bg-background py-12\">\r\n\t<div class=\"mx-auto max-w-2xl px-6\">\r\n\t\t<div class=\"border-y py-8\">\r\n\t\t\t<div class=\"flex flex-col gap-6 @xl:flex-row @xl:items-center\">\r\n\t\t\t\t<a href=\"/\" aria-label=\"home\">\r\n\t\t\t\t\t<Logo class=\"h-5 w-fit\" />\r\n\t\t\t\t</a>\r\n\t\t\t\t<nav class=\"flex flex-wrap gap-x-6 gap-y-2 @xl:ml-auto\">\r\n\t\t\t\t\t{#each links as link (link.label)}\r\n\t\t\t\t\t\t<a\r\n\t\t\t\t\t\t\thref={link.href}\r\n\t\t\t\t\t\t\tclass=\"text-sm text-muted-foreground transition-colors hover:text-foreground\"\r\n\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t{link.label}\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t{/each}\r\n\t\t\t\t</nav>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"flex flex-col-reverse gap-4 pt-8 @xl:flex-row @xl:justify-between\">\r\n\t\t\t<p class=\"text-sm text-muted-foreground\">&copy; {year} Veil.</p>\r\n\t\t\t<div class=\"flex flex-wrap gap-4\">\r\n\t\t\t\t<a\r\n\t\t\t\t\thref=\"/\"\r\n\t\t\t\t\tclass=\"text-sm text-muted-foreground transition-colors hover:text-foreground\"\r\n\t\t\t\t>\r\n\t\t\t\t\tPrivacy Policy\r\n\t\t\t\t</a>\r\n\t\t\t\t<a\r\n\t\t\t\t\thref=\"/\"\r\n\t\t\t\t\tclass=\"text-sm text-muted-foreground transition-colors hover:text-foreground\"\r\n\t\t\t\t>\r\n\t\t\t\t\tTerms of Service\r\n\t\t\t\t</a>\r\n\t\t\t\t<a\r\n\t\t\t\t\thref=\"/\"\r\n\t\t\t\t\tclass=\"text-sm text-muted-foreground transition-colors hover:text-foreground\"\r\n\t\t\t\t>\r\n\t\t\t\t\tCookies\r\n\t\t\t\t</a>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</footer>\r\n",
+			"type": "registry:component",
+			"target": "veil/footer/footer-three.svelte"
+		}
+	]
+}

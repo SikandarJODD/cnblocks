@@ -38,9 +38,9 @@
 	title="Sponsors"
 	description="Support development of Svelte Shadcn Blocks and help keep the project sustainable."
 >
-	<section >
+	<section>
 		<H2 id="current-sponsors">Current Sponsors</H2>
-		<div class="grid grid-cols-2 gap-4 md:grid-cols-6 mt-2">
+		<div class="mt-2 grid grid-cols-2 gap-4 md:grid-cols-6">
 			{#each sponsors as sponsor}
 				<a
 					href={sponsor.href}

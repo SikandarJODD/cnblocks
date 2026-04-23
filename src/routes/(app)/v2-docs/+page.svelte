@@ -33,7 +33,7 @@
 >
 	<section>
 		<H2 id="overview">Overview</H2>
-		<Paragraph class='mt-1'>
+		<Paragraph class="mt-1">
 			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong
 				>Svelte 5</Strong
 			>, shadcn-svelte primitives, and Tailwind CSS
@@ -70,7 +70,7 @@
 		</Table>
 	</section>
 
-	<section >
+	<section>
 		<H2 id="quick-start">Quick Start</H2>
 		<Paragraph class="mt-1">
 			Start with <Link href="/v2-docs/installation">Installation</Link> and continue with the theme

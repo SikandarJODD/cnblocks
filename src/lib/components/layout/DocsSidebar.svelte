@@ -53,7 +53,7 @@
 	};
 </script>
 
-<Sidebar.Root bind:ref class="md:mt-16 h-[calc(100vh-4rem)] [--sidebar-width:15rem]" {...restProps}>
+<Sidebar.Root bind:ref class="h-[calc(100vh-4rem)] [--sidebar-width:15rem] md:mt-16" {...restProps}>
 	<Sidebar.Content class="overflow-hidden">
 		<ScrollArea class="h-full pr-1" orientation="vertical" scrollbarYClasses="hidden">
 			<div class="space-y-2 pb-3">

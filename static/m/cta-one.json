@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "cta-one",
+	"type": "registry:block",
+	"description": "Mist-style centered CTA block",
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n</script>\r\n\r\n<section class=\"[--color-primary:var(--color-indigo-500)]\">\r\n\t<div class=\"py-12\">\r\n\t\t<div class=\"mx-auto max-w-5xl px-6\">\r\n\t\t\t<div class=\"space-y-6 text-center\">\r\n\t\t\t\t<h2 class=\"text-3xl font-semibold text-balance text-foreground lg:text-4xl\">\r\n\t\t\t\t\tBuild 10x Faster with Mist\r\n\t\t\t\t</h2>\r\n\t\t\t\t<div class=\"flex justify-center gap-3\">\r\n\t\t\t\t\t<Button variant=\"mdefault\" href=\"/\" size=\"lg\">Get Started</Button>\r\n\t\t\t\t\t<Button href=\"/\" variant=\"outline\" size=\"lg\">Get a Demo</Button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mcta/one.svelte"
+		}
+	]
+}

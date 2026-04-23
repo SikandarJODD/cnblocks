@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "progressive-blur",
+	"type": "registry:component",
+	"description": "Progressive layered blur overlay component",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from \"$UTILS$\";\r\n\r\n\texport const GRADIENT_ANGLES = {\r\n\t\ttop: 0,\r\n\t\tright: 90,\r\n\t\tbottom: 180,\r\n\t\tleft: 270,\r\n\t};\r\n\r\n\ttype ProgressiveBlurProps = {\r\n\t\tdirection?: keyof typeof GRADIENT_ANGLES;\r\n\t\tblurLayers?: number;\r\n\t\tclass?: string;\r\n\t\tblurIntensity?: number;\r\n\t};\r\n\r\n\tlet {\r\n\t\tdirection = \"bottom\",\r\n\t\tblurLayers = 8,\r\n\t\tclass: _class = \"\",\r\n\t\tblurIntensity = 0.25,\r\n\t}: ProgressiveBlurProps = $props();\r\n\r\n\tlet layers = $derived(Math.max(blurLayers, 2));\r\n\tlet segmentSize = $derived(1 / (blurLayers + 1));\r\n</script>\r\n\r\n<div class={cn(\"relative\", _class)}>\r\n\t{#each { length: layers } as _, index}\r\n\t\t{@const angle = GRADIENT_ANGLES[direction]}\r\n\t\t{@const gradientStops = [\r\n\t\t\tindex * segmentSize,\r\n\t\t\t(index + 1) * segmentSize,\r\n\t\t\t(index + 2) * segmentSize,\r\n\t\t\t(index + 3) * segmentSize,\r\n\t\t].map(\r\n\t\t\t(pos, posIndex) =>\r\n\t\t\t\t`rgba(255, 255, 255, ${posIndex === 1 || posIndex === 2 ? 1 : 0}) ${pos * 100}%`\r\n\t\t)}\r\n\t\t{@const gradient = `linear-gradient(${angle}deg, ${gradientStops.join(\", \")})`}\r\n\r\n\t\t<div\r\n\t\t\tclass=\"pointer-events-none absolute inset-0 rounded-[inherit]\"\r\n\t\t\tstyle=\"mask-image: {gradient};\r\n  -webkit-mask-image: {gradient};\r\n  backdrop-filter: blur({index * blurIntensity}px); z-index: {index * 10};\"\r\n\t\t></div>\r\n\t{/each}\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "magic/progressive-blur/progressive-blur.svelte"
+		},
+		{
+			"content": "import ProgressiveBlur from \"./progressive-blur.svelte\";\r\nexport { ProgressiveBlur };",
+			"type": "registry:file",
+			"target": "magic/progressive-blur/index.ts"
+		}
+	]
+}

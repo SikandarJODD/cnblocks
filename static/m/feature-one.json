@@ -1,0 +1,17 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-one",
+	"type": "registry:block",
+	"description": "Mist-style simple feature grid",
+	"registryDependencies": [
+		"card",
+		"./feature-table.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Card } from \"$COMPONENTS$/ui/card\";\r\n\timport FeatureTable from \"./feature-table.svelte\";\r\n</script>\r\n\r\n<!-- Card Variant : soft  -->\r\n<section\r\n\tclass=\"[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]\"\r\n>\r\n\t<div class=\"bg-muted/50 py-24\">\r\n\t\t<div class=\"mx-auto w-full max-w-5xl px-6\">\r\n\t\t\t<div>\r\n\t\t\t\t<h2 class=\"text-4xl font-semibold text-foreground\">Effortless Task Management</h2>\r\n\t\t\t\t<p class=\"mt-4 mb-12 text-lg text-balance text-muted-foreground\">\r\n\t\t\t\t\tAutomate your tasks and workflows by connecting your favorite tools like Notion,\r\n\t\t\t\t\tTodoist, and more. AI-powered scheduling helps you stay on track and adapt to\r\n\t\t\t\t\tchanging priorities.\r\n\t\t\t\t</p>\r\n\t\t\t\t<div class=\"rounded-3xl bg-foreground/5 p-6\">\r\n\t\t\t\t\t<FeatureTable />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div\r\n\t\t\t\tclass=\"relative mt-16 grid gap-12 border-b border-foreground/10 pb-12 [--radius:1rem] md:grid-cols-2\"\r\n\t\t\t>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<h3 class=\"text-xl font-semibold text-foreground\">Marketing Campaigns</h3>\r\n\t\t\t\t\t<p class=\"my-4 text-lg text-muted-foreground\">\r\n\t\t\t\t\t\tEffortlessly plan and execute your marketing campaigns organized.\r\n\t\t\t\t\t</p>\r\n\t\t\t\t\t<Card variant=\"soft\" class=\"aspect-video overflow-hidden px-6\">\r\n\t\t\t\t\t\t<Card class=\"h-full translate-y-6\" />\r\n\t\t\t\t\t</Card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<h3 class=\"text-xl font-semibold text-foreground\">AI Meeting Scheduler</h3>\r\n\t\t\t\t\t<p class=\"my-4 text-lg text-muted-foreground\">\r\n\t\t\t\t\t\tEffortlessly book and manage your meetings. Stay on top of your schedule.\r\n\t\t\t\t\t</p>\r\n\r\n\t\t\t\t\t<Card variant=\"soft\" class=\"aspect-video overflow-hidden\">\r\n\t\t\t\t\t\t<Card class=\"h-full translate-6\" />\r\n\t\t\t\t\t</Card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<blockquote\r\n\t\t\t\tclass=\"relative mt-12 max-w-xl pl-6 before:absolute before:inset-y-0 before:left-0 before:w-1 before:rounded-full before:bg-primary\"\r\n\t\t\t>\r\n\t\t\t\t<p class=\"text-lg text-foreground\">\r\n\t\t\t\t\tWow, auto-generated pages are the kind of thing that you don't even know you\r\n\t\t\t\t\tneed until you see it. It's like an AI-native CRM.\r\n\t\t\t\t</p>\r\n\t\t\t\t<footer class=\"mt-4 flex items-center gap-2\">\r\n\t\t\t\t\t<cite>Méschac Irung</cite>\r\n\t\t\t\t\t<span aria-hidden=\"true\" class=\"size-1 rounded-full bg-foreground/15\"></span>\r\n\t\t\t\t\t<span class=\"text-muted-foreground\">Creator</span>\r\n\t\t\t\t</footer>\r\n\t\t\t</blockquote>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n",
+			"type": "registry:component",
+			"target": "mist/mfeature/one.svelte"
+		}
+	]
+}
