@@ -29,9 +29,7 @@
 	import {
 		Beacon,
 		Bolt,
-		Cisco,
 		Claude,
-		Figma,
 		FirebaseFull,
 		Hulu,
 		Spotify,

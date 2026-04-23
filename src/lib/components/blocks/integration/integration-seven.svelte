@@ -1,11 +1,8 @@
 <script lang="ts">
+	import Button from "$lib/components/ui/button/button.svelte";
+	import { Marquee } from "$lib/components/magic/marquee";
 	import IntegrationCardv7 from "./card/integration-cardv7.svelte";
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
-
-	import Button from "$lib/components/ui/button/button.svelte";
-
-	// Scroll below for Marquee component code
-	import Marquee from "$lib/components/magic/Marquee.svelte";
 </script>
 
 <section>

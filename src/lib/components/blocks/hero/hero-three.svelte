@@ -1,7 +1,7 @@
 <script>
 	import Button from "$lib/components/ui/button/button.svelte";
-	import Marquee from "$lib/components/magic/Marquee.svelte";
-	import ProgressiveBlur from "$lib/components/magic/ProgressiveBlur.svelte";
+	import { Marquee } from "$lib/components/magic/marquee";
+	import { ProgressiveBlur } from "$lib/components/magic/progressive-blur";
 	// Hero Header Component
 
 	import { cn } from "$lib/utils";
