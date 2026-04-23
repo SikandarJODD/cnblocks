@@ -7,9 +7,6 @@
 		H2,
 		H3,
 		Paragraph,
-		Link,
-		UnorderedList,
-		ListItem,
 		Table,
 		Thead,
 		Tbody,
@@ -412,7 +409,7 @@ export {
 		</Paragraph>
 		<DocsCodeBlock
 			fileName="src/app.html"
-			lang="html"
+			lang={"html"}
 			code={`<body data-theme="mist" class="theme-container">
 	<!-- Your Application -->
 </body>`}

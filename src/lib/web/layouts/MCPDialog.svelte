@@ -2,7 +2,7 @@
 	import Button from "$lib/components/ui/button/button.svelte";
 	import * as Dialog from "$lib/components/ui/dialog/index.js";
 	import * as Tabs from "$lib/components/ui/tabs/index.js";
-	import Code from "$lib/components/web/code/code.svelte";
+	import Code from "$lib/components/ui/code/code.svelte";
 </script>
 
 <Dialog.Root>
@@ -70,6 +70,5 @@
   }
 }`}
 		class="mb-4 border-none"
-		hideCopy={false}
 	/>
 {/snippet}
