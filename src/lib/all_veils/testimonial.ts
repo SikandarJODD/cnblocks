@@ -11,11 +11,11 @@ import TestimonialFourCode from "$lib/components/veil/testimonial/testimonial-fo
 
 export const all_veils_testimonial: MistBlock[] = [
 	{
+		itemId: "testimonial-one",
 		slug: "testimonial-one",
 		title: "Testimonial One",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-one",
-		itemId: "testimonial-one",
 		code: {
 			code: TestimonialOneCode,
 			lang: "svelte",
@@ -23,11 +23,11 @@ export const all_veils_testimonial: MistBlock[] = [
 		component: TestimonialOne,
 	},
 	{
+		itemId: "testimonial-two",
 		slug: "testimonial-two",
 		title: "Testimonial Two",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-two",
-		itemId: "testimonial-two",
 		code: {
 			code: TestimonialTwoCode,
 			lang: "svelte",

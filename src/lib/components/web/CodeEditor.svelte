@@ -7,7 +7,7 @@
 	import Copy from "@lucide/svelte/icons/copy";
 	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
 	import { scale } from "svelte/transition";
-	import Code  from "$lib/components/ui/code/code.svelte";
+	import Code from "$lib/components/ui/code/code.svelte";
 	let {
 		code,
 	}: {
@@ -92,7 +92,12 @@
 			{#key selectedIndex}
 				{@render CopyButton()}
 				<!-- <CodeBlock code={code[selectedIndex].code} /> -->
-				<Code code={code[selectedIndex].code} highlight={code[selectedIndex]?.highlight} />
+				<Code
+					lang={code[selectedIndex]?.lang || "svelte"}
+					class="rounded-none border-none!"
+					code={code[selectedIndex].code}
+					highlight={code[selectedIndex]?.highlight}
+				/>
 			{/key}
 		</div>
 	</div>
@@ -100,7 +105,12 @@
 	<!-- {@render CopyButton()} -->
 	<!-- <CodeBlock code={code.code} /> -->
 	<div class="relative h-144 sm:w-full">
-		<Code code={code.code} highlight={code?.highlight} />
+		<Code
+			class="rounded-none border-none! outline-none"
+			lang={code?.lang || "svelte"}
+			code={code.code}
+			highlight={code?.highlight}
+		/>
 	</div>
 {/if}
 

@@ -14,7 +14,7 @@
 
 	export interface MistCode {
 		code: string;
-		lang?: string;
+		lang?: SupportedLanguage;
 		name?: string;
 		highlight?: (number | [number, number])[];
 	}
@@ -87,6 +87,7 @@
 		TooltipProvider,
 		TooltipTrigger,
 	} from "$lib/components/ui/tooltip";
+	import type { SupportedLanguage } from "../ui/code/shiki";
 
 	let showIframeComp = $derived(previewMode === "iframe");
 	let forcesIframe = $derived(previewMode === "iframe");
@@ -507,7 +508,7 @@
 				{/if}
 			</div>
 
-			<div class="bg-white dark:bg-transparent">
+			<div class="bg-secondary! dark:bg-transparent">
 				<!-- {#key code} -->
 				{#if mode === "code"}
 					<CodeEditor {code} />
