@@ -434,7 +434,7 @@
 					</TooltipProvider>
 				{/if}
 				{#if code}
-					<PreviewInstallAdd {itemId} registryPath="r" />
+					<PreviewInstallAdd {itemId} />
 					<Button
 						variant="outline"
 						size="sm"

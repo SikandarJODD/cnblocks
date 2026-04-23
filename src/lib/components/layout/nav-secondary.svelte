@@ -1,6 +1,5 @@
 <script lang="ts">
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import ExternalLinkIcon from "@lucide/svelte/icons/external-link";
 	import type { Component, ComponentProps } from "svelte";
 
 	let {

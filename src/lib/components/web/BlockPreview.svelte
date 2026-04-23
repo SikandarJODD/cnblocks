@@ -416,7 +416,7 @@
 					</TooltipProvider>
 				{/if}
 				{#if code}
-					<PreviewInstallAdd {itemId} registryPath="r" />
+					<PreviewInstallAdd {itemId} />
 
 					{#if !Array.isArray(code)}
 						<Separator class="!h-4" orientation="vertical" />

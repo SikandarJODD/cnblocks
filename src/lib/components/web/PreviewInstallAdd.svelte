@@ -3,7 +3,7 @@
 	import * as Add from "$lib/components/ui/add";
 	import { AGENTS, type Agent } from "$lib/components/ui/add";
 	import { cn } from "$lib/utils";
-	import { hasRegistryItem } from "$lib/utils/registry-url";
+	import { getRegistryItemUrl } from "$lib/utils/registry-url";
 
 	interface PreviewInstallAddProps {
 		itemId?: string;
@@ -29,11 +29,9 @@
 	let resolvedInstallUrlBase = $derived(
 		(installUrlBase?.trim() || page.url.origin).replace(/\/+$/, "")
 	);
-	let resolvedRegistryPath = $derived(registryPath.replace(/^\/+|\/+$/g, "") || "r");
-
 	let installUrl = $derived(
-		itemId && hasRegistryItem(itemId)
-			? `${resolvedInstallUrlBase}/${resolvedRegistryPath}/${itemId}.json`
+		itemId
+			? getRegistryItemUrl(resolvedInstallUrlBase, page.url.pathname, itemId, registryPath)
 			: ""
 	);
 	let showRegistryOptions = $derived(registryOptions.length > 1);

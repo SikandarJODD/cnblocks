@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/state";
 	import type { Snippet } from "svelte";
 	import * as Frame from "$lib/components/ui/frame/index.js";
 	import { Button } from "$lib/components/ui/button";
@@ -76,11 +77,12 @@
 	};
 
 	let resolvedAddItem = $derived(addItem ?? getLegacyItemFromCommand(installCommand));
+	let installPathname = $derived(previewHref ?? page.url.pathname);
 	const getInstallBase = (base: string) => base.replace(/\/+$/, "").replace(/\/(r|v|m)$/i, "");
 	let resolvedInstallUrl = $derived(
 		installUrl ??
 			(resolvedAddItem
-				? getRegistryItemUrl(getInstallBase(installUrlBase), resolvedAddItem)
+				? getRegistryItemUrl(getInstallBase(installUrlBase), installPathname, resolvedAddItem)
 				: "")
 	);
 	let fullInstallCommand = $derived.by(() => {
