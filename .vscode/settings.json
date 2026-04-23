@@ -1,18 +1,19 @@
 {
 	"files.exclude": {
-		// "**/.svelte-kit": true,
-		// "**/.vercel": true,
-		// "**/node_modules": true,
-		"**/.github/**": true
+		"**/.svelte-kit": true,
+		"**/.vercel": true,
+		"**/node_modules": true,
+		"**/.github/**": true,
+
 	},
 	"files.watcherExclude": {
 		"**/.svelte-kit/**": true,
 		"**/.vercel/**": true,
-		"**/node_modules/**": true
+		"**/node_modules/**": true,
 	},
 	"search.exclude": {
 		"**/.svelte-kit/**": true,
 		"**/.vercel/**": true,
-		"**/node_modules/**": true
+		"**/node_modules/**": true,
 	}
 }

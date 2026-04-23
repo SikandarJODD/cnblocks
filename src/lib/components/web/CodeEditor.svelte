@@ -1,5 +1,4 @@
 <script lang="ts">
-	import CodeBlock from "./CodeBlock.svelte";
 	import type { MistCode } from "./MistBlockPreview.svelte";
 	import ChevronDown from "@lucide/svelte/icons/chevron-down";
 	import Button from "../ui/button/button.svelte";
@@ -8,8 +7,7 @@
 	import Copy from "@lucide/svelte/icons/copy";
 	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
 	import { scale } from "svelte/transition";
-	import Code from "./code/code.svelte";
-
+	import Code  from "$lib/components/ui/code/code.svelte";
 	let {
 		code,
 	}: {
@@ -89,7 +87,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="relative min-h-[32rem] w-full sm:w-[calc(100%-14rem)]">
+		<div class="relative min-h-128 w-full sm:w-[calc(100%-14rem)]">
 			<!-- <CopyButton {copied} onCopy={copy} /> -->
 			{#key selectedIndex}
 				{@render CopyButton()}
@@ -101,7 +99,7 @@
 {:else}
 	<!-- {@render CopyButton()} -->
 	<!-- <CodeBlock code={code.code} /> -->
-	<div class="relative h-[36rem] sm:w-full">
+	<div class="relative h-144 sm:w-full">
 		<Code code={code.code} highlight={code?.highlight} />
 	</div>
 {/if}
@@ -115,11 +113,11 @@
 	>
 		{#if clipboard.status === "success"}
 			<span in:scale>
-				<Check class="!size-3.5 text-[#10B981]" />
+				<Check class="size-3.5! text-[#10B981]" />
 			</span>
 		{:else}
 			<span in:scale>
-				<Copy class="!size-3.5 opacity-50" />
+				<Copy class="size-3.5! opacity-50" />
 			</span>
 		{/if}
 	</Button>
