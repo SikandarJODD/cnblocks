@@ -3,8 +3,9 @@
 	import { Button } from "$lib/components/ui/veil/button";
 	import Logo from "$lib/components/web/Logo.svelte";
 	import { cn } from "$lib/utils";
-	import { ChevronRight, Menu, X } from "@lucide/svelte";
-
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
 	const menuItems = [
 		{ name: "Features", href: "#link" },
 		{ name: "Pricing", href: "#link" },

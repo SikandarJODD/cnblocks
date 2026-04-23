@@ -13,7 +13,7 @@
 		Twilio,
 		Vercel,
 	} from "$lib/svgs";
-	import { ChevronRight } from "@lucide/svelte";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 </script>
 
 <HeaderTwo />

@@ -4,7 +4,12 @@
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";
 	import { Separator } from "$lib/components/ui/separator";
-	import { ArrowRight, Eye, EyeOff, Lock, Mail } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import Eye from "@lucide/svelte/icons/eye";
+	import EyeOff from "@lucide/svelte/icons/eye-off";
+	import Lock from "@lucide/svelte/icons/lock";
+	import Mail from "@lucide/svelte/icons/mail";
+
 	import GoogleIcon from "./google-icon.svelte";
 	import LogoIcon from "./logo-icon.svelte";
 

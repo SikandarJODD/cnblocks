@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/veil/button";
-	import { ChevronRight, Mail } from "@lucide/svelte";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Mail from "@lucide/svelte/icons/mail";
 
 	type Props = {
 		title?: string;

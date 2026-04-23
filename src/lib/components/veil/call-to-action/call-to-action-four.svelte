@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/veil/button";
 	import { Card } from "$lib/components/ui/veil/card";
-	import { ArrowRight, Check } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import Check from "@lucide/svelte/icons/check";
 
 	type Props = {
 		title?: string;

@@ -4,7 +4,9 @@
 	import { Checkbox } from "$lib/components/ui/checkbox";
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";
-	import { EyeIcon, EyeOffIcon, Key } from "@lucide/svelte";
+	import EyeIcon from "@lucide/svelte/icons/eye";
+	import EyeOffIcon from "@lucide/svelte/icons/eye-off";
+	import Key from "@lucide/svelte/icons/key";
 	import LogoIcon from "./logo-icon.svelte";
 
 	let isPasswordVisible = $state(false);

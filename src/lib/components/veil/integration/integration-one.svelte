@@ -1,6 +1,6 @@
 <script>
 	import { Button } from "$lib/components/ui/veil/button";
-	import { ChevronRight } from "@lucide/svelte";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import IntegrationIllustration from "./integration-illustration.svelte";
 </script>
 

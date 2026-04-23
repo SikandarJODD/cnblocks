@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { ChevronRight, Cloud, Cpu, Shield } from "@lucide/svelte";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import Cloud from "@lucide/svelte/icons/cloud";
+	import Cpu from "@lucide/svelte/icons/cpu";
+	import Shield from "@lucide/svelte/icons/shield";
+
 	import { Button } from "$lib/components/ui/veil/button";
 	import { cn } from "$lib/utils";
 	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "$lib/svgs/index";

@@ -5,7 +5,11 @@
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";
 	import { Select, SelectContent, SelectItem, SelectTrigger } from "$lib/components/ui/select";
-	import { BarChart, Code, Eye, EyeOff, User } from "@lucide/svelte";
+	import BarChart from "@lucide/svelte/icons/bar-chart";
+	import Code from "@lucide/svelte/icons/code";
+	import Eye from "@lucide/svelte/icons/eye";
+	import EyeOff from "@lucide/svelte/icons/eye-off";
+	import User from "@lucide/svelte/icons/user";
 	import LogoIcon from "./logo-icon.svelte";
 
 	let showPassword = $state(false);

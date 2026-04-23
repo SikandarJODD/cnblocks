@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
-	import { ExternalLink } from "@lucide/svelte";
+	import ExternalLink from "@lucide/svelte/icons/external-link";
 
 	const data = [
 		{

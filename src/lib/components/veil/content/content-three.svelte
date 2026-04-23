@@ -1,5 +1,7 @@
 <script>
-	import { Lightbulb, Pencil, PencilRuler } from "@lucide/svelte";
+	import Lightbulb from "@lucide/svelte/icons/lightbulb";
+	import Pencil from "@lucide/svelte/icons/pencil";
+	import PencilRuler from "@lucide/svelte/icons/pencil-ruler";
 </script>
 
 <section class="@container bg-background py-24">

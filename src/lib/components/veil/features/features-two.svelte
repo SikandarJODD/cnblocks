@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card } from "$lib/components/ui/veil/card";
-	import { Shield } from "@lucide/svelte";
+	import Shield from "@lucide/svelte/icons/shield";
 	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "$lib/svgs/index";
 </script>
 

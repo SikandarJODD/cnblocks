@@ -1,7 +1,11 @@
 <script lang="ts">
 	import HeaderThree from "$lib/components/veil/header/header-three.svelte";
 	import { Button } from "$lib/components/ui/veil/button";
-	import { AudioLines, ChevronRight, MessageCircle, Mic2, Plus } from "@lucide/svelte";
+	import AudioLines from "@lucide/svelte/icons/audio-lines";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import MessageCircle from "@lucide/svelte/icons/message-circle";
+	import Mic2 from "@lucide/svelte/icons/mic-2";
+	import Plus from "@lucide/svelte/icons/plus";
 
 	const prompts = [
 		"How do I integrate Supabase authentication?",

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 	import Button from "$lib/components/ui/button/button.svelte";
-	import { type Icon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
 </script>
 
 <section>
@@ -86,7 +86,7 @@
 	name,
 	description,
 }: {
-	icon: typeof Icon;
+	icon: LucideIcon;
 	name: string;
 	description: string;
 })}

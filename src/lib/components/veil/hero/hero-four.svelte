@@ -1,17 +1,16 @@
 <script lang="ts">
 	import HeaderFour from "$lib/components/veil/header/header-four.svelte";
 	import { Button } from "$lib/components/ui/veil/button";
-	import {
-		AudioLines,
-		ChevronRight,
-		ImageIcon,
-		Lightbulb,
-		Mic2,
-		Paperclip,
-		Plus,
-		ShoppingBag,
-		Telescope,
-	} from "@lucide/svelte";
+	import AudioLines from "@lucide/svelte/icons/audio-lines";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import ImageIcon from "@lucide/svelte/icons/image";
+	import Lightbulb from "@lucide/svelte/icons/lightbulb";
+	import Mic2 from "@lucide/svelte/icons/mic-2";
+	import Paperclip from "@lucide/svelte/icons/paperclip";
+	import Plus from "@lucide/svelte/icons/plus";
+	import ShoppingBag from "@lucide/svelte/icons/shopping-bag";
+	import Telescope from "@lucide/svelte/icons/telescope";
+
 	import Github from "$lib/components/logos/github.svelte";
 </script>
 
