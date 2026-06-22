@@ -18,12 +18,8 @@
 					<div
 						class="flex flex-col items-center justify-center gap-3 *:w-full sm:flex-row sm:*:w-auto"
 					>
-						<Button variant="mdefault" href="/" size="lg">
-							<span class="text-nowrap">Get Started</span>
-						</Button>
-						<Button href="/" size="lg" variant="outline">
-							<span class="text-nowrap">View Demo</span>
-						</Button>
+						<Button variant="mdefault" href="/" size="lg">Get Started</Button>
+						<Button href="/" size="lg" variant="outline">View Demo</Button>
 					</div>
 				</div>
 

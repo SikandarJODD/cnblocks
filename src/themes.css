@@ -1,3 +1,6 @@
+@import '@fontsource/asar';
+@import '@fontsource-variable/geist';
+
 [data-theme="mist"] .theme-container {
 	--radius: 0.625rem;
 	--background: var(--color-white);
@@ -75,11 +78,11 @@
 	--input: --alpha(var(--foreground)/20%);
 	--ring: var(--primary);
 
-	--font-family: "Geist", sans-serif;
+	--font-family: "Geist Variable", sans-serif;
 	--font-serif: "Asar", serif;
 
 	@variant dark {
-		--font-family: "Geist", sans-serif;
+		--font-family: "Geist Variable", sans-serif;
 		--background: oklch(0.1448 0 0);
 		--foreground: oklch(0.9027 0.0137 60.56);
 

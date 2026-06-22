@@ -7,7 +7,7 @@ export type DocsV2PageKey =
 	| "installation"
 	| "mistTheme"
 	| "veilTheme"
-	| "mcp"
+	// | "mcp"
 	| "sponsors";
 
 export type DocsV2PageMeta = {
@@ -105,19 +105,19 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 			],
 		},
 	},
-	mcp: {
-		key: "mcp",
-		path: "/v2-docs/mcp",
-		navTitle: "MCP Server",
-		group: "resources",
-		toc: true,
-		seo: {
-			title: "MCP Server Setup",
-			description:
-				"Configure MCP Server integration for Cursor and Windsurf with Svelte Shadcn Blocks.",
-			keywords: [...docsKeywords, "mcp", "cursor", "windsurf"],
-		},
-	},
+	// mcp: {
+	// 	key: "mcp",
+	// 	path: "/v2-docs/mcp",
+	// 	navTitle: "MCP Server",
+	// 	group: "resources",
+	// 	toc: true,
+	// 	seo: {
+	// 		title: "MCP Server Setup",
+	// 		description:
+	// 			"Configure MCP Server integration for Cursor and Windsurf with Svelte Shadcn Blocks.",
+	// 		keywords: [...docsKeywords, "mcp", "cursor", "windsurf"],
+	// 	},
+	// },
 	sponsors: {
 		key: "sponsors",
 		path: "/v2-docs/sponsors",
@@ -155,7 +155,7 @@ export const docsV2ResourceItems: DocsV2NavItem[] = [
 		.map((item) => ({
 			title: item.navTitle,
 			url: item.path,
-			badge: item.key === "mcp" ? "New" : undefined,
+			// badge: item.key === "mcp" ? "New" : undefined,
 		})),
 	// {
 	// 	title: "Static Docs (Normal)",

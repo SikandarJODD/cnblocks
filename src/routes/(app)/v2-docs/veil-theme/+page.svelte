@@ -414,12 +414,12 @@ export {
 	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
 		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Add the Veil tokens to your global stylesheet (for example <code>app.css</code> or
-			<code>globals.css</code>) so all Veil primitives resolve color, border, focus ring, and
-			typography consistently.
+			Add the Veil tokens to your global stylesheet <code class='bg-secondary px-1 rounded-sm'>app.css</code> or
+			<code class='bg-secondary px-1 rounded-sm'>layout.css</code> so all Veil primitives resolve color, border, focus ring, and typography
+			consistently.
 		</Paragraph>
 		<DocsCodeBlock
-			fileName="globals.css"
+			fileName="layout.css"
 			code={`[data-theme="veil"] .theme-container {
 	--radius: 0.625rem;
 

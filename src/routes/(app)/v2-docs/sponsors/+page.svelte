@@ -16,6 +16,11 @@
 
 	const sponsors = [
 		{
+			name: "Hunter Johnston",
+			avatar: "https://github.com/huntabyte.png",
+			href: "https://github.com/huntabyte",
+		},
+		{
 			name: "Yashash Pugalia",
 			avatar: "https://avatars.githubusercontent.com/u/89068816?v=4",
 			href: "https://github.com/yashash-pugalia",
@@ -40,7 +45,7 @@
 >
 	<section>
 		<H2 id="current-sponsors">Current Sponsors</H2>
-		<div class="mt-2 grid grid-cols-2 gap-4 md:grid-cols-6">
+		<div class="mt-2 grid grid-cols-2 gap-4 md:grid-cols-5">
 			{#each sponsors as sponsor}
 				<a
 					href={sponsor.href}

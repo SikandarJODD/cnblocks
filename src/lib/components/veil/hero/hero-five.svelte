@@ -7,8 +7,8 @@
 <header class="fixed inset-x-0 top-4 z-50 mx-auto w-fit">
 	<div class="flex items-center gap-6 rounded-full bg-foreground/5 py-2 pr-2 pl-5 backdrop-blur">
 		<Logo class="h-5" />
-		<Button class="pr-1.5" variant="outline" size="sm" href="#link">
-			<span class="text-nowrap">Get started</span>
+		<Button class="pr-1.5" variant="outline" size="sm" href="/">
+			<span class="text-nowrap">Get Started</span>
 			<ChevronRight class="opacity-50" />
 		</Button>
 	</div>
@@ -38,7 +38,7 @@
 					</p>
 
 					<Button class="mt-6 pr-1.5" href="#link">
-						<span class="text-nowrap">Start Building</span>
+						Start Building
 						<ChevronRight class="opacity-50" />
 					</Button>
 				</div>

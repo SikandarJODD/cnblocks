@@ -17,10 +17,10 @@
 
 			<div class="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:*:w-auto">
 				<Button variant="mdefault">
-					<span class="text-nowrap">Get Started</span>
+					Get Started
 				</Button>
 				<Button variant="ghost">
-					<span class="text-nowrap">View Demo</span>
+					View Demo
 				</Button>
 			</div>
 		</div>

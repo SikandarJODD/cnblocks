@@ -118,7 +118,7 @@
 					</p>
 
 					<Button class="mt-6 pr-1.5" href="#link">
-						<span class="text-nowrap">Start Building</span>
+						Start Building
 						<ChevronRight class="opacity-50" />
 					</Button>
 				</div>

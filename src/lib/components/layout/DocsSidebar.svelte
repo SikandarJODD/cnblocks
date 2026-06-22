@@ -27,8 +27,8 @@
 		user: {
 			name: "Bhide Svelte",
 			desc: "Svelte Shadcn Blocks",
-			avatar: "https://pbs.twimg.com/profile_images/1734257897247514625/IaW4s_ba_400x400.jpg",
-			visit: "https://github.com/SikandarJODD/cnblocks",
+			avatar: "https://github.com/SikandarJODD.png",
+			visit: "https://bhide.dev?utm_source=cnblocks",
 		},
 		guide: docsV2GuideItems,
 		themeSetup: docsV2ThemeItems,
@@ -59,7 +59,7 @@
 			<div class="space-y-2 pb-3">
 				<NavMain label="Guide" items={data.guide} />
 				<NavMain label="Theme Setup" items={data.themeSetup} />
-				<NavProjects label="Resources & Sponsors" projects={data.resources} />
+				<NavProjects label="Sponsors" projects={data.resources} />
 			</div>
 		</ScrollArea>
 	</Sidebar.Content>

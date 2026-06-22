@@ -40,7 +40,7 @@
 	<dl
 		class="mt-12 grid grid-cols-1 gap-y-8 md:grid-cols-3 md:border-y md:border-gray-200 md:py-14 dark:border-gray-800"
 	>
-		{#each stats as stat, index}
+		{#each stats as stat}
 			<div
 				class="border-l-2 border-blue-100 pl-6 md:border-l md:text-center lg:border-gray-200 lg:first:border-none dark:border-blue-900 lg:dark:border-gray-800"
 			>

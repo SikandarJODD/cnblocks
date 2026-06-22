@@ -65,7 +65,7 @@
 						class="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start"
 					>
 						<Button size="lg" href="/" class="h-12 rounded-full pr-3 pl-5 text-base">
-							<span class="text-nowrap">Start Building</span>
+							Start Building
 							<ChevronRight class="ml-1" />
 						</Button>
 						<Button
@@ -74,7 +74,7 @@
 							href="/"
 							class="h-12 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5"
 						>
-							<span class="text-nowrap">Request a demo</span>
+							Request a demo
 						</Button>
 					</div>
 				</div>

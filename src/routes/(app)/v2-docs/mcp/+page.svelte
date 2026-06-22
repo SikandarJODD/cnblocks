@@ -14,14 +14,14 @@
 	import { docsV2PageMap } from "$lib/config/docs-v2";
 	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
 
-	const pageMeta = docsV2PageMap.mcp;
+	// const pageMeta = docsV2PageMap.mcp;
 </script>
 
-<SEOComponent
+<!-- <SEOComponent
 	title={pageMeta.seo.title}
 	description={pageMeta.seo.description}
 	keywords={pageMeta.seo.keywords}
-/>
+/> -->
 
 <DocsPageShell
 	title="MCP Server"

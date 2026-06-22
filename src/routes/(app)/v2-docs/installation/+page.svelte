@@ -6,36 +6,6 @@
 	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
 
 	const pageMeta = docsV2PageMap.installation;
-
-	const variantCards = [
-		{
-			label: "Default",
-			title: "50+ Components - Default Variant",
-			description:
-				"Balanced, production-ready UI blocks for general SaaS and marketing pages.",
-			linkText: "Browse default previews",
-			href: "/preview/hero/one",
-			accent: "from-emerald-500/20 via-emerald-500/5 to-transparent",
-		},
-		{
-			label: "Mist",
-			title: "50+ Components - Mist Variant",
-			description:
-				"Minimal, content-first sections for documentation-heavy pages and clean layouts.",
-			linkText: "Open Mist setup guide",
-			href: "/v2-docs/mist-theme",
-			accent: "from-sky-500/20 via-sky-500/5 to-transparent",
-		},
-		{
-			label: "Veil",
-			title: "50+ Components - Veil Variant",
-			description:
-				"Modern, high-contrast blocks tailored for product storytelling and launch pages.",
-			linkText: "Open Veil setup guide",
-			href: "/v2-docs/veil-theme",
-			accent: "from-amber-500/20 via-amber-500/5 to-transparent",
-		},
-	];
 </script>
 
 <SEOComponent

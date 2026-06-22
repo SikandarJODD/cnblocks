@@ -8,9 +8,9 @@
 		</div>
 		<div class="mx-auto mt-12 flex max-w-lg flex-wrap justify-center gap-3">
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -22,9 +22,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -36,9 +36,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -50,9 +50,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -64,9 +64,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -78,9 +78,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -92,9 +92,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -106,9 +106,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -120,9 +120,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -134,9 +134,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img
@@ -148,9 +148,9 @@
 				/>
 			</a>
 			<a
-				href="https://github.com/meschacirung"
+				href="https://github.com/SikandarJODD"
 				target="_blank"
-				title="Méschac Irung"
+				title="Bhide Svelte"
 				class="size-16 rounded-full border *:size-full *:rounded-full *:object-cover"
 			>
 				<img

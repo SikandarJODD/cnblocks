@@ -3,11 +3,8 @@
 	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
 	import {
 		H2,
-		H3,
 		Paragraph,
 		Strong,
-		UnorderedList,
-		ListItem,
 		Table,
 		Thead,
 		Tbody,
@@ -36,7 +33,7 @@
 		<Paragraph class="mt-1">
 			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong
 				>Svelte 5</Strong
-			>, shadcn-svelte primitives, and Tailwind CSS
+			>, Shadcn-Svelte and Tailwind CSS
 		</Paragraph>
 	</section>
 

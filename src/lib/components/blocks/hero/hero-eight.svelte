@@ -71,7 +71,7 @@
 					<div class="mt-8">
 						<Button size="lg" href="/">
 							<Rocket class="relative size-4" />
-							<span class="text-nowrap">Start Building</span>
+							Start Building
 						</Button>
 					</div>
 				</div>
