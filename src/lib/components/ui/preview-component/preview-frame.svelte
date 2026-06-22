@@ -82,7 +82,11 @@
 	let resolvedInstallUrl = $derived(
 		installUrl ??
 			(resolvedAddItem
-				? getRegistryItemUrl(getInstallBase(installUrlBase), installPathname, resolvedAddItem)
+				? getRegistryItemUrl(
+						getInstallBase(installUrlBase),
+						installPathname,
+						resolvedAddItem
+					)
 				: "")
 	);
 	let fullInstallCommand = $derived.by(() => {

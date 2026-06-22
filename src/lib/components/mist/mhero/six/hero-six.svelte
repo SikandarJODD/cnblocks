@@ -16,12 +16,8 @@
 			</p>
 
 			<div class="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:*:w-auto">
-				<Button variant="mdefault">
-					Get Started
-				</Button>
-				<Button variant="ghost">
-					View Demo
-				</Button>
+				<Button variant="mdefault">Get Started</Button>
+				<Button variant="ghost">View Demo</Button>
 			</div>
 		</div>
 

@@ -64,15 +64,16 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json
 
 ## Other Similar Project
 
-### **Svelte Efferd Blocks** — *Free & Open Source*
+### **Svelte Efferd Blocks** — _Free & Open Source_
+
 **[Live Demo](https://sv-efferd.pages.dev)** | **[GitHub](https://github.com/SikandarJODD/sv-efferd)**
 
 A collection of **60+ premium marketing blocks** designed for high-conversion SaaS, product, and landing pages.
 
-* **60+** responsive, ready-to-use components.
-* Optimized for modern marketing and rapid deployment.
-* Built with Svelte 5, Shadcn-Svelte and Tailwind CSS.
-* Free and open source under the MIT License.
+- **60+** responsive, ready-to-use components.
+- Optimized for modern marketing and rapid deployment.
+- Built with Svelte 5, Shadcn-Svelte and Tailwind CSS.
+- Free and open source under the MIT License.
 
 ---
 

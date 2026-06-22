@@ -1,9 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import '@fontsource-variable/inter';
-@import '@fontsource-variable/geist-mono';
-@import '@fontsource-variable/sora';
-
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/geist-mono";
+@import "@fontsource-variable/sora";
 
 @import "./themes.css";
 

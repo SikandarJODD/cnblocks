@@ -2,11 +2,7 @@
 	import { page } from "$app/state";
 	import * as Add from "$lib/components/ui/add";
 	import { AGENTS, type Agent } from "$lib/components/ui/add";
-	import {
-		HoverCard,
-		HoverCardContent,
-		HoverCardTrigger,
-	} from "$lib/components/ui/hover-card";
+	import { HoverCard, HoverCardContent, HoverCardTrigger } from "$lib/components/ui/hover-card";
 	import { cn } from "$lib/utils";
 	import { getRegistryItemUrl } from "$lib/utils/registry-url";
 	import { PersistedState } from "runed";
