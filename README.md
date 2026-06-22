@@ -2,10 +2,9 @@
 
 [![jsrepo](https://jsrepo.com/badges/@sv/cnblocks)](https://jsrepo.com/@sv/cnblocks)
 [![jsrepo downloads](https://jsrepo.com/badges/@sv/cnblocks/dm)](https://jsrepo.com/@sv/cnblocks)
-
-Production-ready UI and marketing blocks for **Svelte 5**, built with **shadcn-svelte** and **Tailwind CSS v4**.
-
 ![Svelte Shadcn Blocks](https://sv-blocks.vercel.app/og.png)
+
+Production-ready Svelte blocks based on shadcn-svelte and Tailwind CSS, inspired by Tailark. Perfect for marketing sites, product pages, documentation, and SaaS landing pages.
 
 ## What's New
 
@@ -15,21 +14,19 @@ The new **Veil** collection is now live with **60 production-ready blocks** for 
 
 Explore Veil: [https://sv-blocks.vercel.app/veil](https://sv-blocks.vercel.app/veil)
 
-## Variants
+## 3 Variants
 
-Svelte Shadcn Blocks now includes 3 variants:
+| Variant | Style                                 | Block Count | Visit                                                 |
+| ------- | ------------------------------------- | ----------- | ----------------------------------------------------- |
+| Normal  | Bold marketing visuals                | 50+         | [Explore](https://sv-blocks.vercel.app/integration)   |
+| Mist    | Minimal, documentation-friendly style | 50+         | [Explore](https://sv-blocks.vercel.app/mist/feature)  |
+| Veil    | Polished modern SaaS style            | 60 new      | [Explore](https://sv-blocks.vercel.app/veil/features) |
 
-| Variant | Style                                 | Block Count |
-| ------- | ------------------------------------- | ----------- |
-| Normal  | Bold marketing visuals                | 50+         |
-| Mist    | Minimal, documentation-friendly style | 50+         |
-| Veil    | Polished modern SaaS style            | 60 new      |
-
-That is **160+ blocks** across the library.
+That is **150+ blocks** across the library.
 
 ## Features
 
-- 160+ ready-to-use blocks across Normal, Mist, and Veil
+- 150+ ready-to-use blocks across Normal, Mist, and Veil
 - Svelte 5 + SvelteKit-friendly structure
 - Tailwind CSS v4 and shadcn-svelte based
 - Responsive and theme-aware components
@@ -38,19 +35,18 @@ That is **160+ blocks** across the library.
 
 ## Preview and Docs
 
-- Website: [https://sv-blocks.vercel.app](https://sv-blocks.vercel.app)
-- Docs v2: [https://sv-blocks.vercel.app/v2-docs](https://sv-blocks.vercel.app/v2-docs)
-- Installation guide: [https://sv-blocks.vercel.app/v2-docs/installation](https://sv-blocks.vercel.app/v2-docs/installation)
-- Mist theme setup: [https://sv-blocks.vercel.app/v2-docs/mist-theme](https://sv-blocks.vercel.app/v2-docs/mist-theme)
-- Veil theme setup: [https://sv-blocks.vercel.app/v2-docs/veil-theme](https://sv-blocks.vercel.app/v2-docs/veil-theme)
-- MCP docs: [https://sv-blocks.vercel.app/v2-docs/mcp](https://sv-blocks.vercel.app/v2-docs/mcp)
+- Website: [Live Preview](https://sv-blocks.vercel.app)
+- [Documentation](https://sv-blocks.vercel.app/v2-docs)
+- [Installation Guide](https://sv-blocks.vercel.app/v2-docs/installation)
+- [Mist Theme Setup](https://sv-blocks.vercel.app/v2-docs/mist-theme)
+- [Veil Theme Setup](https://sv-blocks.vercel.app/v2-docs/veil-theme)
 
 ## Quick Start
 
 ```bash
-npx sv create my-app
-npx sv add tailwindcss
-npx shadcn-svelte@next init
+pnpm dlx sv create my-app
+pnpm dlx sv add tailwindcss
+pnpm dlx shadcn-svelte@next init
 ```
 
 Install a block from any variant:
@@ -66,20 +62,27 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
 pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json
 ```
 
+## Other Similar Project
+
+### **Svelte Efferd Blocks** — *Free & Open Source*
+**[Live Demo](https://sv-efferd.pages.dev)** | **[GitHub](https://github.com/SikandarJODD/sv-efferd)**
+
+A collection of **60+ premium marketing blocks** designed for high-conversion SaaS, product, and landing pages.
+
+* **60+** responsive, ready-to-use components.
+* Optimized for modern marketing and rapid deployment.
+* Built with Svelte 5, Shadcn-Svelte and Tailwind CSS.
+* Free and open source under the MIT License.
+
+---
+
 ## Inspiration
 
-Inspired by [Tailark](https://tailark.com/), adapted for Svelte developers.
+Inspired by [Tailark](https://tailark.com), adapted for Svelte developers.
 
 ## Sponsor
 
 Support the project on GitHub Sponsors: [SikandarJODD](https://github.com/sponsors/SikandarJODD)
-
-## Contributing
-
-Issues and pull requests are welcome.
-
-- Report bugs or request features: [https://github.com/SikandarJODD/cnblocks/issues](https://github.com/SikandarJODD/cnblocks/issues)
-- Discuss updates: [https://x.com/Sikandar_Bhide](https://x.com/Sikandar_Bhide)
 
 ## License
 

@@ -9,7 +9,6 @@
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
-	import { scrollY } from "svelte/reactivity/window";
 	import Mail from "@lucide/svelte/icons/mail";
 	import SendHorizonal from "@lucide/svelte/icons/send-horizontal";
 

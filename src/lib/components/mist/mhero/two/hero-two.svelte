@@ -42,10 +42,10 @@
 
 						<div class="flex items-center justify-center gap-3">
 							<Button variant="mdefault" size="lg">
-								<span class="text-nowrap">Start Building</span>
+								Start Building
 							</Button>
 							<Button size="lg" variant="outline">
-								<span class="text-nowrap">Watch Video</span>
+								Watch Video
 							</Button>
 						</div>
 					</div>

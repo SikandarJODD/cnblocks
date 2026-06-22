@@ -21,7 +21,7 @@
 					non id ad dignissimos? Saepe deleniti perferendis beatae.
 				</p>
 				<Button variant="secondary" size="sm" class="gap-1 pr-1.5">
-					<span>Learn More</span>
+					Learn More
 					<ChevronRight class="size-2" />
 				</Button>
 			</div>

@@ -76,7 +76,7 @@
 							style="border-radius: calc(var(--radius) + 4px + 0.125rem);"
 						>
 							<Button href="/" size="lg" class="rounded-xl px-5 text-base">
-								<span class="text-nowrap">Start Building</span>
+								Start Building
 							</Button>
 						</div>
 						<Button
@@ -85,7 +85,7 @@
 							variant="ghost"
 							class="h-10.5 rounded-xl px-5 text-base"
 						>
-							<span class="text-nowrap">Request a demo</span>
+							Request a demo
 						</Button>
 					</div>
 				</div>

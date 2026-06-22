@@ -70,11 +70,9 @@
 					<div
 						class="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start"
 					>
-						<Button href="/" size="lg" class="px-5 text-base">
-							<span class="text-nowrap">Start Building</span>
-						</Button>
+						<Button href="/" size="lg" class="px-5 text-base">Start Building</Button>
 						<Button size="lg" variant="ghost" class="px-5 text-base" href="/">
-							<span class="text-nowrap">Request a demo</span>
+							Request a demo
 						</Button>
 					</div>
 				</div>

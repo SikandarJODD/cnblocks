@@ -22,12 +22,12 @@
 
 						<div class="flex items-center gap-3">
 							<Button variant="mdefault" size="lg" class="pr-4.5">
-								<span class="text-nowrap">Get Started</span>
+								Get Started
 								<ChevronRight class="opacity-50" />
 							</Button>
 							<Button href="/" size="lg" variant="outline" class="pl-5">
 								<CirclePlay class="fill-primary/25 stroke-primary" />
-								<span class="text-nowrap">Watch video</span>
+								Watch Video
 							</Button>
 						</div>
 					</div>
