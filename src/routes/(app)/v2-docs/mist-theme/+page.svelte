@@ -325,9 +325,11 @@ export {
 	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
 		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Add the Mist theme variables to your global stylesheet <code class='bg-secondary px-1 rounded-sm'>app.css</code>
-			or <code class='bg-secondary px-1 rounded-sm'>layout.css</code> so Mist primitives resolve color, border, and contrast
-			consistently.
+			Add the Mist theme variables to your global stylesheet <code
+				class="rounded-sm bg-secondary px-1">app.css</code
+			>
+			or <code class="rounded-sm bg-secondary px-1">layout.css</code> so Mist primitives resolve
+			color, border, and contrast consistently.
 		</Paragraph>
 		<DocsCodeBlock
 			fileName="layout.css"
@@ -432,7 +434,7 @@ export {
 			Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
 			the standard shadcn-like variants.
 		</Paragraph>
-		<H3 id="button-usage" class='mb-2'>Usage</H3>
+		<H3 id="button-usage" class="mb-2">Usage</H3>
 		<DocsCodeBlock
 			fileName="button-usage.svelte"
 			lang="svelte"
@@ -442,7 +444,7 @@ export {
 
 <Button variant="neutral">Neutral Button</Button>`}
 		/>
-		<H3 id="button-source" class='mb-2'>Source</H3>
+		<H3 id="button-source" class="mb-2">Source</H3>
 		<MultipleCode code={buttonSourceCode} />
 	</section>
 
@@ -452,7 +454,7 @@ export {
 			Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections
 			commonly used across documentation-style layouts.
 		</Paragraph>
-		<H3 id="card-usage" class='mb-2'>Usage</H3>
+		<H3 id="card-usage" class="mb-2">Usage</H3>
 		<DocsCodeBlock
 			fileName="card-usage.svelte"
 			lang="svelte"
@@ -474,7 +476,7 @@ export {
 	<CardContent>...</CardContent>
 </Card>`}
 		/>
-		<H3 id="card-source" class='mb-2'>Source</H3>
+		<H3 id="card-source" class="mb-2">Source</H3>
 		<MultipleCode code={cardSourceCode} />
 	</section>
 </DocsPageShell>

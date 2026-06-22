@@ -43,13 +43,15 @@
 			class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
 		>
 			Created by
-			<a href="https://x.com/MeschacIrung" class="text-sky-500 bg-sky-50 px-1 dark:bg-sky-900/20" target="_blank"
-				>Méschac Irung</a
+			<a
+				href="https://x.com/MeschacIrung"
+				class="bg-sky-50 px-1 text-sky-500 dark:bg-sky-900/20"
+				target="_blank">Méschac Irung</a
 			>Ported by
 			<div class="flex items-start justify-center gap-2 text-center font-medium sm:gap-1">
 				<div class="block">
 					<a
-						class="flex items-center gap-1 rounded-sm bg-orange-100 dark:bg-orange-900/30 text-orange-400 px-1"
+						class="flex items-center gap-1 rounded-sm bg-orange-100 px-1 text-orange-400 dark:bg-orange-900/30"
 						href="https://bhide.dev?utm_source=cnblocks"
 						target="_blank"
 					>
@@ -94,7 +96,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex mt-2">
+		<div class="mt-2 flex">
 			<Button
 				href="https://github.com/SikandarJODD/cnblocks"
 				target="_blank"

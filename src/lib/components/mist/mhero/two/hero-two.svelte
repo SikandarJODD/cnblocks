@@ -41,12 +41,8 @@
 						</p>
 
 						<div class="flex items-center justify-center gap-3">
-							<Button variant="mdefault" size="lg">
-								Start Building
-							</Button>
-							<Button size="lg" variant="outline">
-								Watch Video
-							</Button>
+							<Button variant="mdefault" size="lg">Start Building</Button>
+							<Button size="lg" variant="outline">Watch Video</Button>
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
-@import '@fontsource/asar';
-@import '@fontsource-variable/geist';
+@import "@fontsource/asar";
+@import "@fontsource-variable/geist";
 
 [data-theme="mist"] .theme-container {
 	--radius: 0.625rem;

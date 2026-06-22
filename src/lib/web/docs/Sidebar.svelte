@@ -20,7 +20,7 @@
 
 <aside class="bg-main sticky top-28 w-[180px] flex-1 max-lg:hidden">
 	<nav
-		class="flex h-full flex-col gap-6 overflow-y-auto [-ms-overflow-style:none] [scrollbar-width:none] max-lg:hidden [&::-webkit-scrollbar]:hidden"
+		class="flex h-full [scrollbar-width:none] flex-col gap-6 overflow-y-auto [-ms-overflow-style:none] max-lg:hidden [&::-webkit-scrollbar]:hidden"
 	>
 		<div class="flex flex-col gap-1">
 			<span class="text-sm font-medium text-foreground"> Getting Started </span>
