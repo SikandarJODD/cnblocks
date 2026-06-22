@@ -3,7 +3,7 @@
 	import { mode, toggleMode } from "mode-watcher";
 </script>
 
-<Button onclick={toggleMode} class="rounded-full" variant="ghost" size="icon">
+<Button onclick={toggleMode} class="rounded-full cursor-pointer" variant="ghost" size="icon">
 	<!-- Sun Icon -->
 	{#if mode.current === "light"}
 		<svg

@@ -322,36 +322,15 @@ export {
 	title="Mist Theme Setup"
 	description="Apply Mist theme tokens and update button and card primitives for documentation-style UI styling."
 >
-	<!-- <section class="space-y-4">
-		<H2 id="overview">Overview</H2>
-		<Paragraph>
-			Mist is the Notion-inspired variant designed for wiki-style and content-heavy websites.
-			It keeps the visual language minimal so product messaging and documentation stay
-			readable.
-		</Paragraph>
-		<UnorderedList>
-			<ListItem
-				>Best for documentation hubs, changelogs, product guides, and lightweight marketing
-				pages.</ListItem
-			>
-			<ListItem
-				>Includes Mist-specific UI primitives like neutral buttons and soft/mixed cards.</ListItem
-			>
-			<ListItem
-				>Works with the same Svelte 5 and shadcn-svelte foundations as other variants.</ListItem
-			>
-		</UnorderedList>
-	</section> -->
-
 	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
 		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Add the Mist theme variables to your global stylesheet (for example <code>app.css</code>
-			or <code>globals.css</code>) so Mist primitives resolve color, border, and contrast
+			Add the Mist theme variables to your global stylesheet <code class='bg-secondary px-1 rounded-sm'>app.css</code>
+			or <code class='bg-secondary px-1 rounded-sm'>layout.css</code> so Mist primitives resolve color, border, and contrast
 			consistently.
 		</Paragraph>
 		<DocsCodeBlock
-			fileName="globals.css"
+			fileName="layout.css"
 			lang="css"
 			code={`[data-theme="mist"] .theme-container {
 	--radius: 0.625rem;
@@ -453,7 +432,7 @@ export {
 			Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
 			the standard shadcn-like variants.
 		</Paragraph>
-		<H3 id="button-usage">Usage</H3>
+		<H3 id="button-usage" class='mb-2'>Usage</H3>
 		<DocsCodeBlock
 			fileName="button-usage.svelte"
 			lang="svelte"
@@ -463,7 +442,7 @@ export {
 
 <Button variant="neutral">Neutral Button</Button>`}
 		/>
-		<H3 id="button-source">Source</H3>
+		<H3 id="button-source" class='mb-2'>Source</H3>
 		<MultipleCode code={buttonSourceCode} />
 	</section>
 
@@ -473,7 +452,7 @@ export {
 			Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections
 			commonly used across documentation-style layouts.
 		</Paragraph>
-		<H3 id="card-usage">Usage</H3>
+		<H3 id="card-usage" class='mb-2'>Usage</H3>
 		<DocsCodeBlock
 			fileName="card-usage.svelte"
 			lang="svelte"
@@ -495,7 +474,7 @@ export {
 	<CardContent>...</CardContent>
 </Card>`}
 		/>
-		<H3 id="card-source">Source</H3>
+		<H3 id="card-source" class='mb-2'>Source</H3>
 		<MultipleCode code={cardSourceCode} />
 	</section>
 </DocsPageShell>

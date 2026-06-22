@@ -1,7 +1,6 @@
 <script>
 	import Button from "$lib/components/ui/button/button.svelte";
 	import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
-	import Logo from "./Logo.svelte";
 	import ThemeToggle from "./ThemeToggle.svelte";
 </script>
 
@@ -44,17 +43,26 @@
 			class="mt-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-muted-foreground"
 		>
 			Created by
-			<a href="https://x.com/MeschacIrung" class="text-primary" target="_blank"
+			<a href="https://x.com/MeschacIrung" class="text-sky-500 bg-sky-50 px-1 dark:bg-sky-900/20" target="_blank"
 				>Méschac Irung</a
 			>Ported by
-			<div
-				class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white"
-			>
+			<div class="flex items-start justify-center gap-2 text-center font-medium sm:gap-1">
 				<div class="block">
-					<a class="block pb-2" href="https://x.com/Sikandar_Bhide" target="_blank"
-						>Bhide Svelte</a
+					<a
+						class="flex items-center gap-1 rounded-sm bg-orange-100 dark:bg-orange-900/30 text-orange-400 px-1"
+						href="https://bhide.dev?utm_source=cnblocks"
+						target="_blank"
 					>
-					<div class="-mt-5 grow overflow-hidden">
+						<span>
+							<img
+								src="https://github.com/SikandarJODD.png"
+								alt="Bhide Svelte"
+								class="size-4 rounded-full"
+							/>
+						</span>
+						Bhide Svelte
+					</a>
+					<!-- <div class="-mt-4.5 grow overflow-hidden">
 						<svg
 							aria-hidden="true"
 							class="w-16"
@@ -82,11 +90,11 @@
 								</linearGradient>
 							</defs>
 						</svg>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
-		<div class="flex">
+		<div class="flex mt-2">
 			<Button
 				href="https://github.com/SikandarJODD/cnblocks"
 				target="_blank"
@@ -94,7 +102,7 @@
 				class="-ml-4 gap-1 text-sm text-foreground decoration-primary"
 			>
 				GitHub
-				<ArrowUpRight class="!size-3.5 opacity-50" />
+				<ArrowUpRight class="size-3.5! opacity-80" />
 			</Button>
 			<ThemeToggle />
 		</div>

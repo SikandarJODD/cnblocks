@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/geist-mono';
+@import '@fontsource-variable/sora';
+
 
 @import "./themes.css";
 
@@ -82,8 +86,9 @@
 }
 
 @theme inline {
-	--font-sans: Inter, sans-serif;
-	--font-display: Sora, sans-serif;
+	--font-sans: "Inter Variable", sans-serif;
+	--font-display: "Sora Variable", sans-serif;
+	--font-mono: "Geist Mono Variable", monospace;
 
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
