@@ -8,7 +8,7 @@
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
 	import ImportAliasToggle from "./ImportAliasToggle.svelte";
 	import { transformCodeImports, type ImportAliasStyle } from "./import-alias";
-	import { CopyButton } from "../ui/copy-button";
+	// import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
 	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
@@ -494,11 +494,11 @@
 						<span>Theme Setup</span>
 					</Button>
 
-					{#if !Array.isArray(displayedCode)}
+					<!-- {#if !Array.isArray(displayedCode)}
 						<Separator orientation="vertical" class="my-auto h-4!" />
 
 						<CopyButton text={displayedCode.code} />
-					{/if}
+					{/if} -->
 				{/if}
 			</div>
 		</div>
