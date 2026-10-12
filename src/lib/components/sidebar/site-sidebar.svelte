@@ -21,7 +21,7 @@
 			href="https://bhide.dev?utm_source=sv-blocks&utm_medium=referral"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="font-cursive text-[13px] text-ink/80 hover:underline dark:text-primary/70"
+			class="font-cursive text-[13px] text-ink/80 hover:underline dark:text-primary"
 		>Bhide Svelte</a>
 	</p>
 	<SidebarFooter />
