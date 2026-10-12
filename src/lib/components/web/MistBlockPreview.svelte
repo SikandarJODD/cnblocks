@@ -144,7 +144,9 @@
 	class="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
 >
 	<div class="relative border-y">
-		<div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
+		<div
+			class="absolute inset-x-4 -top-14 bottom-0 mx-auto hidden max-w-7xl md:block lg:inset-x-0"
+		>
 			<div
 				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
@@ -494,7 +496,9 @@
 	</div>
 
 	<div class="relative">
-		<div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
+		<div
+			class="absolute inset-x-4 -bottom-14 mx-auto hidden h-14 max-w-7xl md:block lg:inset-x-0"
+		>
 			<div
 				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"
 			></div>

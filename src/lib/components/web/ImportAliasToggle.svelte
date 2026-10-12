@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
 	import {
-		Tooltip,
-		TooltipContent,
-		TooltipProvider,
-		TooltipTrigger,
-	} from "#lib/components/ui/tooltip/index.js";
-	import { Tooltip as TooltipPrimitive } from "bits-ui";
+		HoverCard,
+		HoverCardContent,
+		HoverCardTrigger,
+	} from "#lib/components/ui/hover-card/index.js";
 	import type { ImportAliasStyle } from "./import-alias";
 
 	let {
@@ -19,41 +17,45 @@
 		{ label: "$", value: "dollar", title: "SvelteKit 2" },
 		{ label: "#", value: "hash", title: "SvelteKit 3" },
 	];
-
-	const tooltipTether = TooltipPrimitive.createTether<{ label: string }>();
 </script>
 
-<div
-	class="flex h-8 items-center rounded-md border bg-background p-0.5 shadow-xs"
-	role="group"
-	aria-label="SvelteKit import alias version"
->
-	<TooltipProvider delayDuration={150}>
-		{#each options as option (option.value)}
-			<TooltipTrigger tether={tooltipTether} payload={{ label: option.title }}>
-				<button
-					type="button"
-					class={cn(
-						"size-6 rounded-sm font-mono text-xs transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none",
-						value === option.value
-							? "bg-muted text-foreground shadow-xs"
-							: "text-muted-foreground hover:text-foreground"
-					)}
-					aria-label={option.title}
-					aria-pressed={value === option.value}
-					onclick={() => (value = option.value)}
-				>
-					{option.label}
-				</button>
-			</TooltipTrigger>
-		{/each}
+<HoverCard openDelay={200}>
+	<HoverCardTrigger>
+		{#snippet child({ props })}
+			<div
+				{...props}
+				class="flex h-8 items-center justify-center gap-0.5 rounded-md border px-0.5"
+				role="group"
+				aria-label="SvelteKit import alias version"
+			>
+				{#each options as option (option.value)}
+					<button
+						type="button"
+						class={cn(
+							"size-6 cursor-pointer rounded-md font-mono text-xs transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none",
+							value === option.value
+								? "bg-muted text-foreground shadow-xs"
+								: "text-muted-foreground hover:text-foreground"
+						)}
+						aria-label={option.title}
+						aria-pressed={value === option.value}
+						onclick={() => (value = option.value)}
+					>
+						{option.label}
+					</button>
+				{/each}
+			</div>
+		{/snippet}
+	</HoverCardTrigger>
 
-		<Tooltip tether={tooltipTether}>
-			{#snippet children({ payload })}
-				<TooltipContent class="rounded-full px-2.5 py-1 text-[11px]">
-					{payload?.label}
-				</TooltipContent>
-			{/snippet}
-		</Tooltip>
-	</TooltipProvider>
-</div>
+	<HoverCardContent class="w-fit space-y-1.5 px-3 py-2 text-xs">
+		<p class="flex items-center justify-between gap-3">
+			SvelteKit 2
+			<kbd class="rounded bg-muted px-1.5 py-0.5 font-mono text-[10px]">$</kbd>
+		</p>
+		<p class="flex items-center justify-between gap-3">
+			SvelteKit 3
+			<kbd class="rounded bg-muted px-1.5 py-0.5 font-mono text-[10px]">#</kbd>
+		</p>
+	</HoverCardContent>
+</HoverCard>
