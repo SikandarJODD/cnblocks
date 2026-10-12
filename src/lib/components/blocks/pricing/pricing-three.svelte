@@ -34,7 +34,7 @@
 
 		<div class="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
 			<Card.Root>
-				<Card.Header class="p-6 pb-0">
+				<Card.Header>
 					<Card.Title class="font-medium">Free</Card.Title>
 
 					<span class="my-3 block text-2xl font-semibold">$0 / mo</span>
@@ -43,7 +43,7 @@
 					<Button href="/" variant="outline" class="mt-4 w-full">Get Started</Button>
 				</Card.Header>
 
-				<Card.Content class="space-y-4 p-6">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">
@@ -63,7 +63,7 @@
 					>Popular</span
 				>
 
-				<Card.Header class="p-6 pb-0">
+				<Card.Header>
 					<Card.Title class="font-medium">Pro</Card.Title>
 
 					<span class="my-3 block text-2xl font-semibold">$19 / mo</span>
@@ -73,7 +73,7 @@
 					<Button href="/" class="mt-4 w-full">Get Started</Button>
 				</Card.Header>
 
-				<Card.Content class="space-y-4 p-6">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">
@@ -88,7 +88,7 @@
 			</Card.Root>
 
 			<Card.Root class="flex flex-col">
-				<Card.Header class="p-6 pb-0">
+				<Card.Header>
 					<Card.Title class="font-medium">Startup</Card.Title>
 
 					<span class="my-3 block text-2xl font-semibold">$29 / mo</span>
@@ -98,7 +98,7 @@
 					<Button href="/" variant="outline" class="mt-4 w-full">Get Started</Button>
 				</Card.Header>
 
-				<Card.Content class="space-y-4 p-6">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">

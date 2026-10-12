@@ -37,13 +37,13 @@
 			class="mt-8 grid gap-6 [--color-card:var(--color-muted)] *:border-none *:shadow-none md:mt-20 md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]"
 		>
 			<Card.Root class="flex flex-col">
-				<Card.Header class="p-6 pb-0">
+				<Card.Header>
 					<Card.Title class="font-medium">Free</Card.Title>
 					<span class="my-3 block text-2xl font-semibold">$0 / mo</span>
 					<Card.Description class="text-sm">Per editor</Card.Description>
 				</Card.Header>
 
-				<Card.Content class="space-y-4 p-6">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">
@@ -56,7 +56,7 @@
 					</ul>
 				</Card.Content>
 
-				<Card.Footer class="mt-auto p-6 pt-0">
+				<Card.Footer class="mt-auto">
 					<Button variant="outline" class="w-full">Get Started</Button>
 				</Card.Footer>
 			</Card.Root>
@@ -68,13 +68,13 @@
 				>
 
 				<div class="flex flex-col">
-					<Card.Header class="p-6 pb-0">
+					<Card.Header>
 						<Card.Title class="font-medium">Pro</Card.Title>
 						<span class="my-3 block text-2xl font-semibold">$19 / mo</span>
 						<Card.Description class="text-sm">Per editor</Card.Description>
 					</Card.Header>
 
-					<Card.Content class="space-y-4 p-6">
+					<Card.Content class="space-y-4">
 						<hr class="border-dashed" />
 						<ul class="list-outside space-y-3 text-sm">
 							{#each pricingList.pro as item}
@@ -86,20 +86,20 @@
 						</ul>
 					</Card.Content>
 
-					<Card.Footer class="p-6 pt-0">
+					<Card.Footer>
 						<Button class="w-full">Get Started</Button>
 					</Card.Footer>
 				</div>
 			</Card.Root>
 
 			<Card.Root class="flex flex-col">
-				<Card.Header class="p-6 pb-0">
+				<Card.Header>
 					<Card.Title class="font-medium">Startup</Card.Title>
 					<span class="my-3 block text-2xl font-semibold">$29 / mo</span>
 					<Card.Description class="text-sm">Per editor</Card.Description>
 				</Card.Header>
 
-				<Card.Content class="space-y-4 p-6">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">
@@ -112,7 +112,7 @@
 					</ul>
 				</Card.Content>
 
-				<Card.Footer class="mt-auto p-6 pt-0">
+				<Card.Footer class="mt-auto">
 					<Button variant="outline" class="w-full">Get Started</Button>
 				</Card.Footer>
 			</Card.Root>
