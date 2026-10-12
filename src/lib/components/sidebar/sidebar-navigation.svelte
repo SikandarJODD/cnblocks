@@ -15,7 +15,7 @@
 	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
 </script>
 
-<Sidebar.Group class="p-2 pt-0">
+<Sidebar.Group class="px-0 pt-0">
 	<Sidebar.GroupContent>
 		<Sidebar.Menu class="gap-0">
 			<Sidebar.MenuItem>
@@ -36,7 +36,7 @@
 							<Sidebar.MenuSubButton
 								href={library.href}
 								isActive={activeLibrary?.key === library.key}
-								class="h-6 px-2 text-xs! font-mono! font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-ink dark:data-active:text-primary"
+								class="h-6 px-2 text-xs! font-mono! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 dark:hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
 							>
 								<span>{library.title}</span>
 								<Kbd.Root class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums">
@@ -67,8 +67,8 @@
 </Sidebar.Group>
 
 {#if activeLibrary}
-	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden p-2 pt-4">
-		<Sidebar.GroupLabel class="mb-1 h-6 px-2 text-[10px] uppercase tracking-wider">
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-4">
+		<Sidebar.GroupLabel class="mb-1 h-6 px-1 text-xs font-mono uppercase text-ink/70 dark:text-muted-foreground/80">
 			Categories
 		</Sidebar.GroupLabel>
 		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
@@ -93,8 +93,8 @@
 		</Sidebar.GroupContent>
 	</Sidebar.Group>
 {:else if docsActive}
-	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden p-2 pt-4">
-		<Sidebar.GroupLabel class="mb-1 h-6 px-2 text-[10px] uppercase tracking-wider">Docs</Sidebar.GroupLabel>
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-2">
+		<Sidebar.GroupLabel class="mb-1 h-6 px-1 text-xs font-mono uppercase text-ink/70 dark:text-muted-foreground/80 ">Docs</Sidebar.GroupLabel>
 		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
 			<div class="scroll-fade-effect-y no-scrollbar h-full overflow-y-auto pb-6">
 				<Sidebar.Menu class="gap-1">
