@@ -15,8 +15,7 @@ export const all_veils_header: MistBlock[] = [
 		title: "Header One",
 		category: "header",
 		preview: "/preview/veil/header/header-one",
-		previewMode: "iframe",
-		previewHeight: 640,
+		previewMode: "inline",
 		itemId: "header-one",
 		code: {
 			code: HeaderOneCode,
@@ -29,8 +28,7 @@ export const all_veils_header: MistBlock[] = [
 		title: "Header Two",
 		category: "header",
 		preview: "/preview/veil/header/header-two",
-		previewMode: "iframe",
-		previewHeight: 640,
+		previewMode: "inline",
 		itemId: "header-two",
 		code: {
 			code: HeaderTwoCode,
@@ -43,8 +41,7 @@ export const all_veils_header: MistBlock[] = [
 		title: "Header Three",
 		category: "header",
 		preview: "/preview/veil/header/header-three",
-		previewMode: "iframe",
-		previewHeight: 640,
+		previewMode: "inline",
 		itemId: "header-three",
 		code: {
 			code: HeaderThreeCode,
@@ -57,8 +54,7 @@ export const all_veils_header: MistBlock[] = [
 		title: "Header Four",
 		category: "header",
 		preview: "/preview/veil/header/header-four",
-		previewMode: "iframe",
-		previewHeight: 640,
+		previewMode: "inline",
 		itemId: "header-four",
 		code: {
 			code: HeaderFourCode,

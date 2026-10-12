@@ -47,6 +47,5 @@ let components = [
 ];
 
 export let hero: Block[] = getBlock(components.length, "hero", codes, components, {
-	previewMode: "iframe",
-	previewHeight: 780,
+	previewMode: "inline",
 });

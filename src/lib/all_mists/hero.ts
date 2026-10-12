@@ -25,8 +25,7 @@ export const all_mists_heros: MistBlock[] = [
 		title: "one",
 		category: "hero",
 		preview: "/preview/mist/hero/one",
-		previewMode: "iframe",
-		previewHeight: 780,
+		previewMode: "inline",
 
 		itemId: "hero-one",
 		component: HeroOne,
@@ -48,8 +47,7 @@ export const all_mists_heros: MistBlock[] = [
 		title: "Hero Two",
 		category: "hero",
 		preview: "/preview/mist/hero/two",
-		previewMode: "iframe",
-		previewHeight: 780,
+		previewMode: "inline",
 
 		itemId: "hero-two",
 		component: HeroTwo,
@@ -71,8 +69,7 @@ export const all_mists_heros: MistBlock[] = [
 		title: "Hero Three",
 		category: "hero",
 		preview: "/preview/mist/hero/three",
-		previewMode: "iframe",
-		previewHeight: 780,
+		previewMode: "inline",
 
 		itemId: "hero-three",
 		component: HeroThree,
@@ -94,8 +91,7 @@ export const all_mists_heros: MistBlock[] = [
 		title: "Hero Four",
 		category: "hero",
 		preview: "/preview/mist/hero/four",
-		previewMode: "iframe",
-		previewHeight: 780,
+		previewMode: "inline",
 
 		itemId: "hero-four",
 		component: HeroFour,
@@ -117,8 +113,7 @@ export const all_mists_heros: MistBlock[] = [
 		title: "Hero Five",
 		category: "hero",
 		preview: "/preview/mist/hero/five",
-		previewMode: "iframe",
-		previewHeight: 780,
+		previewMode: "inline",
 
 		itemId: "hero-five",
 		component: HeroFive,
@@ -132,8 +127,7 @@ export const all_mists_heros: MistBlock[] = [
 		title: "Hero Six",
 		category: "hero",
 		preview: "/preview/mist/hero/six",
-		previewMode: "iframe",
-		previewHeight: 780,
+		previewMode: "inline",
 
 		itemId: "hero-six",
 		component: HeroSix,

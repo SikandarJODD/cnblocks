@@ -52,6 +52,7 @@
 	const SM_SIZE = 30;
 	const MD_SIZE = 62;
 	const LG_SIZE = 82;
+	const MAX_IFRAME_HEIGHT = 1200;
 
 	let width = $state(DEFAULT_SIZE);
 	let mode = $state<"preview" | "code">("preview");
@@ -119,7 +120,10 @@
 		iframeDocument.body.style.overflow = "hidden";
 
 		const syncHeight = () => {
-			const contentHeight = iframeDocument.documentElement.scrollHeight;
+			const contentHeight = Math.min(
+				iframeDocument.documentElement.scrollHeight,
+				MAX_IFRAME_HEIGHT
+			);
 			if (contentHeight > 0 && contentHeight !== iframeHeight) {
 				iframeHeight = contentHeight;
 			}
@@ -515,7 +519,7 @@
 							bind:this={iframeRef}
 							{title}
 							height={iframeHeight}
-							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
+							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full duration-200 will-change-auto rounded-2xl!"
 							src={preview}
 							id={`block-${title}`}
 							style="--iframe-height: {iframeHeight}px;"
@@ -538,7 +542,10 @@
 					<div data-theme={activePreviewTheme}>
 						<div
 							in:scale={{ start: 0.85 }}
-							class="theme-container relative w-full overflow-hidden [contain:paint]"
+							class={cn(
+								"theme-container relative w-full overflow-hidden [contain:paint]",
+								category === "header" && "min-h-80"
+							)}
 						>
 							<BlockComponent></BlockComponent>
 						</div>
