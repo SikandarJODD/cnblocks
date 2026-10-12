@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { scrollY } from "svelte/reactivity/window";
 	import Button from "#lib/components/ui/button/button.svelte";
-	import MistCategoryNav from "#lib/web/layouts/MistCategoryNav.svelte";
 	import type { Snippet } from "svelte";
 	import { fly } from "svelte/transition";
 
@@ -10,24 +9,20 @@
 </script>
 
 <div>
-	<MistCategoryNav />
-	<section>
-		<div
-			class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
-		></div>
+	<section class="rounded-t-2xl bg-muted dark:bg-muted/50">
+		{@render children()}
 	</section>
-	{@render children()}
 	{#if visible}
 		{@render scrollToTop()}
 	{/if}
 </div>
 
 {#snippet scrollToTop()}
-	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-4 bottom-4 z-50">
+	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6 bottom-18 z-50">
 		<Button
 			size="icon"
 			variant="secondary"
-			class="rounded-full"
+			class="cursor-pointer rounded-full"
 			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			<svg

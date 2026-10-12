@@ -46,7 +46,7 @@
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
-		"rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
+		"flex h-8 items-center justify-center gap-2 rounded-full px-2.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background/70 data-[state=checked]:bg-background data-[state=checked]:shadow-xs dark:hover:bg-muted/50 dark:data-[state=checked]:bg-muted dark:data-[state=checked]:shadow-none";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
@@ -172,21 +172,19 @@
 	);
 </script>
 
-<section
-	id="{category}-{title}"
-	class="group w-full min-w-0 max-w-full overflow-hidden"
->
-
-	<div class="relative mx-2 my-1.5 min-w-0 overflow-hidden rounded-xl border border-muted dark:border-muted/50">
+<section id="{category}-{title}" class="group mb-4 w-full max-w-full min-w-0 overflow-hidden pb-2">
+	<div class="relative min-w-0 overflow-hidden rounded-2xl">
 		<div
-			class="relative z-10  hidden  justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2 "
+			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"
 		>
-			<div class=" flex items-center gap-2">
+			<div class="flex items-center gap-2">
 				{#if code}
 					<div class="flex gap-0.5">
 						<Button
 							variant={mode === "preview" ? "secondary" : "ghost"}
 							onclick={() => (mode = "preview")}
+							aria-pressed={mode === "preview"}
+							data-state={mode === "preview" ? "checked" : "unchecked"}
 							class={radioItem}
 							size="sm"
 						>
@@ -218,6 +216,8 @@
 						<Button
 							variant={mode === "code" ? "secondary" : "ghost"}
 							onclick={() => (mode = "code")}
+							aria-pressed={mode === "code"}
+							data-state={mode === "code" ? "checked" : "unchecked"}
 							size="sm"
 							class={radioItem}
 						>
@@ -243,17 +243,17 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden  lg:block" />
+					<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				{/if}
 				<Button variant="ghost" class="size-8" href={preview} target="_blank">
 					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
 				</Button>
-				<Separator orientation="vertical" class="hidden lg:block" />
+				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
 				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical"  />
+				<Separator orientation="vertical" class="my-auto h-4!" />
 				<span class="ml-0 text-sm capitalize">{title}</span>
 				<!-- {/if} -->
 			</div>
@@ -459,7 +459,7 @@
 				{#if code}
 					{#if mode === "code"}
 						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator  orientation="vertical" />
+						<Separator orientation="vertical" class="my-auto h-4!" />
 					{/if}
 					<PreviewInstallAdd {itemId} />
 					<Button
@@ -495,7 +495,7 @@
 					</Button>
 
 					{#if !Array.isArray(displayedCode)}
-						<Separator  orientation="vertical" />
+						<Separator orientation="vertical" class="my-auto h-4!" />
 
 						<CopyButton text={displayedCode.code} />
 					{/if}
@@ -505,9 +505,14 @@
 		<MobileBlockPreviewToolbar bind:mode {title} {preview} {itemId} code={displayedCode} />
 	</div>
 
-	<div class="relative min-w-0 max-w-full overflow-hidden">
-		<div class="relative z-10 min-w-0 max-w-full overflow-hidden px-0 lg:px-0">
-			<div class={cn("bg-white dark:bg-transparent mx-1 rounded-2xl border border-transparent dark:border-muted overflow-hidden", mode === "code" && "hidden")}>
+	<div class="relative max-w-full min-w-0 overflow-hidden">
+		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
+			<div
+				class={cn(
+					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-white dark:border-muted dark:bg-muted/50!",
+					mode === "code" && "hidden"
+				)}
+			>
 				{#if shouldRenderInIframe}
 					<div
 						class="h-fit"
@@ -543,7 +548,7 @@
 						<div
 							in:scale={{ start: 0.85 }}
 							class={cn(
-								"theme-container relative w-full overflow-hidden [contain:paint]",
+								"theme-container relative w-full overflow-hidden bg-background contain-[paint]",
 								category === "header" && "min-h-80 bg-background"
 							)}
 						>
@@ -551,13 +556,13 @@
 						</div>
 					</div>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="w-full overflow-hidden">
+					<div in:scale={{ start: 0.85 }} class="w-full overflow-hidden bg-background">
 						<BlockComponent></BlockComponent>
 					</div>
 				{/if}
 			</div>
 
-			<div class="min-w-0 max-w-full overflow-hidden bg-white dark:bg-transparent">
+			<div class="max-w-full min-w-0 overflow-hidden">
 				{#if mode === "code"}
 					<CodeEditor code={displayedCode} />
 				{/if}
