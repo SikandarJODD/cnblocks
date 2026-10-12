@@ -52,7 +52,7 @@
 					{/if}
 				</Button>
 			{/if}
-			<CopyButton size="icon-xs" text={code.filecode} />
+			<CopyButton size="icon-xs" variant='ghost' text={code.filecode} />
 		</div>
 	</Frame.Header>
 	<Frame.Panel class="overflow-hidden p-0">
@@ -72,7 +72,7 @@
 				</Code.Root>
 			</Code.Overflow>
 		{:else}
-			<div class="scroll-fade-effect-y no-scrollbar max-h-[600px] overflow-y-auto">
+			<div class="scroll-fade scroll-fade-b-20 no-scrollbar max-h-[600px] overflow-y-auto">
 				<Code.Root
 					lang={code.lang || "svelte"}
 					class="h-auto w-full overflow-visible rounded-none border-none bg-background"
