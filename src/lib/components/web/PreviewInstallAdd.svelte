@@ -55,7 +55,7 @@
 					{#snippet child({ props })}
 						<Add.Group {...props} class={cn("h-8 w-80 max-w-full", className)}>
 							<Add.Button class="h-8 min-w-0 md:pr-2 md:pl-2 [&>div]:size-8" />
-							<Add.GroupSeparator class="h-4" />
+							<Add.GroupSeparator />
 							<Add.Dropdown class="size-8">
 								<Add.DropdownContent>
 									{#each AGENTS as addAgent (addAgent)}

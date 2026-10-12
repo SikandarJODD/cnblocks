@@ -201,7 +201,7 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden h-4! lg:block" />
+					<Separator orientation="vertical" class="hidden lg:block" />
 				{/if}
 				<Button variant="ghost" size="sm" class="size-8" href={preview} target="_blank">
 					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />

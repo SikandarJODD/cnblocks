@@ -220,17 +220,17 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden h-4! lg:block" />
+					<Separator orientation="vertical" class="hidden  lg:block" />
 				{/if}
 				<Button variant="ghost" class="size-8" href={preview} target="_blank">
 					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
 				</Button>
-				<Separator orientation="vertical" class="hidden h-4! lg:block" />
+				<Separator orientation="vertical" class="hidden lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
 				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical" class="h-4!" />
+				<Separator orientation="vertical"  />
 				<span class="ml-0 text-sm capitalize">{title}</span>
 				<!-- {/if} -->
 			</div>
@@ -448,7 +448,7 @@
 				{#if code}
 					{#if mode === "code"}
 						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator class="h-4!" orientation="vertical" />
+						<Separator  orientation="vertical" />
 					{/if}
 					<PreviewInstallAdd {itemId} />
 					<Button
@@ -484,7 +484,7 @@
 					</Button>
 
 					{#if !Array.isArray(displayedCode)}
-						<Separator class="h-4!" orientation="vertical" />
+						<Separator  orientation="vertical" />
 
 						<CopyButton text={displayedCode.code} />
 					{/if}
