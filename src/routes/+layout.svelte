@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ModeWatcher, toggleMode } from "mode-watcher";
-	import "../app.css";
+	import "./layout.css";
 	import { activeElement, PressedKeys } from "runed";
 
 	let { children } = $props();

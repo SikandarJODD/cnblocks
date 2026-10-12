@@ -4,7 +4,7 @@
 @import "@fontsource-variable/geist-mono";
 @import "@fontsource-variable/sora";
 
-@import "./themes.css";
+@import "../themes.css";
 
 @custom-variant dark (&:is(.dark *));
 
