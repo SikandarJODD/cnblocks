@@ -10,13 +10,15 @@
 </script>
 
 <div>
-	<CategoryNavigation />
+	<!-- <CategoryNavigation />
 	<section>
 		<div
 			class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
 		></div>
+	</section> -->
+	<section class='bg-muted dark:bg-muted/50 rounded-t-2xl'>
+		{@render children()}
 	</section>
-	{@render children()}
 	{#if visible}
 		{@render scrollToTop()}
 	{/if}

@@ -42,7 +42,7 @@
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
-		"rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
+		"rounded-full duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
@@ -153,26 +153,14 @@
 	);
 </script>
 
-<section
-	id="{category}-{title}"
-	class="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
->
-	<div class="relative border-y">
+<section id="{category}-{title}" class="group w-full max-w-full min-w-0 overflow-hidden mb-6">
+	<div
+		class="relative  min-w-0 overflow-hidden rounded-2xl" 
+	>
 		<div
-			class="absolute inset-x-4 -top-14 bottom-0 mx-auto hidden max-w-7xl md:block lg:inset-x-0"
+			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"
 		>
-			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-		</div>
-
-		<div
-			class="relative z-10 mx-auto hidden max-w-7xl justify-between py-1.5 pr-6 pl-8 [--color-border:var(--color-zinc-200)] md:flex md:py-2 lg:pr-2 lg:pl-6 dark:[--color-border:var(--color-zinc-800)]"
-		>
-			<div class="-ml-3 flex items-center gap-2">
+			<div class="flex items-center gap-2">
 				{#if code}
 					<div class="flex gap-0.5">
 						<Button
@@ -234,19 +222,17 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden lg:block" />
+					<Separator orientation="vertical" class="hidden h-4! my-auto lg:block" />
 				{/if}
-				<Button variant="ghost" size="sm" class="size-8" href={preview} target="_blank">
+				<Button variant="ghost" class="size-8" href={preview} target="_blank">
 					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
 				</Button>
-				<Separator orientation="vertical" class="hidden h-4! lg:block" />
+				<Separator orientation="vertical" class="hidden h-4! my-auto lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
-				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical" class="h-4!" />
+				<Separator orientation="vertical" class='h-4! my-auto'/>
 				<span class="ml-0 text-sm capitalize">{category + " " + title}</span>
-				<!-- {/if} -->
 			</div>
 
 			<div class="flex items-center gap-2">
@@ -450,12 +436,12 @@
 				{#if code}
 					{#if mode === "code"}
 						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator class="h-4!" orientation="vertical" />
+						<Separator orientation="vertical" />
 					{/if}
 					<PreviewInstallAdd {itemId} />
 
 					{#if !Array.isArray(displayedCode)}
-						<Separator class="h-4!" orientation="vertical" />
+						<Separator orientation="vertical" class='h-4! my-auto'/>
 
 						<CopyButton text={displayedCode.code} />
 					{/if}
@@ -472,32 +458,23 @@
 		/>
 	</div>
 
-	<div class="relative">
-		<div
-			class="absolute inset-x-4 -bottom-14 mx-auto hidden h-14 max-w-7xl md:block lg:inset-x-0"
-		>
+	<div class="relative max-w-full min-w-0 overflow-hidden">
+		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
 			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"
-			></div>
-			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"
-			></div>
-		</div>
-
-		<div class="relative z-10 mx-auto max-w-7xl px-0 md:px-4 lg:border-x lg:px-0">
-			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
+				class={cn(
+					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 dark:border-muted bg-white dark:bg-transparent",
+					mode === "code" && "hidden"
+				)}
+			>
 				{#if shouldRenderInIframe}
-					<div
-						class="h-fit border-r"
-						style:width={`${width}%`}
-					>
+					<div class="h-fit" style:width={`${width}%`}>
 						<iframe
 							loading="lazy"
 							allowFullScreen
 							bind:this={iframeRef}
 							{title}
 							height={iframeHeight}
-							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full duration-200 will-change-auto"
+							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! duration-200 will-change-auto"
 							src={preview}
 							id={`block-${title}`}
 							style="--iframe-height: {iframeHeight}px;"
@@ -520,7 +497,7 @@
 					<div
 						in:scale={{ start: 0.85 }}
 						class={cn(
-							"theme-container relative w-full overflow-hidden [contain:paint]",
+							"theme-container relative w-full overflow-hidden contain-[paint] bg-background",
 							category === "header" && "min-h-80 bg-background"
 						)}
 					>
@@ -529,12 +506,10 @@
 				{/if}
 			</div>
 
-			<div class="bg-secondary! dark:bg-transparent">
-				<!-- {#key code} -->
+			<div class="max-w-full min-w-0 overflow-hidden bg-secondary! dark:bg-transparent">
 				{#if mode === "code"}
 					<CodeEditor code={displayedCode} />
 				{/if}
-				<!-- {/key} -->
 			</div>
 		</div>
 	</div>
