@@ -23,11 +23,11 @@
 </div>
 
 {#snippet scrollToTop()}
-	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-4 bottom-4 z-50">
+	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6 bottom-18 z-50">
 		<Button
 			size="icon"
 			variant="secondary"
-			class="rounded-full"
+			class="cursor-pointer rounded-full"
 			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			<svg
