@@ -1,0 +1,92 @@
+import {
+	all_mists_category_block,
+	all_veils_category_block,
+	category_blocks,
+} from "#lib/all_blocks/category_block.js";
+
+export type NavigationItem = {
+	title: string;
+	href: string;
+};
+
+export type CategoryItem = NavigationItem & {
+	count?: number;
+};
+
+export type BlockLibrary = NavigationItem & {
+	key: "kit" | "mist" | "veil";
+	categories: CategoryItem[];
+	count: number;
+};
+
+const withTotal = (categories: CategoryItem[]) =>
+	categories.reduce((total, category) => total + (category.count ?? 0), 0);
+
+const kitCategories: CategoryItem[] = [
+	...category_blocks.map((category) => ({
+		title: category.title,
+		href: `/kit${category.href}`,
+		count: category.length,
+	})),
+	{ title: "Testimonials", href: "/kit/testimonial", count: 6 },
+];
+
+const mistCategories: CategoryItem[] = [
+	...all_mists_category_block.map((category) => ({
+		title: category.title,
+		href: category.href,
+		count: category.length,
+	})),
+	{ title: "Testimonials", href: "/mist/testimonials", count: 5 },
+];
+
+const veilCategories: CategoryItem[] = all_veils_category_block.map((category) => ({
+	title: category.title,
+	href: category.href,
+	count: category.length,
+}));
+
+export const blockLibraries: BlockLibrary[] = [
+	{
+		key: "kit",
+		title: "Kit",
+		href: "/kit/hero",
+		categories: kitCategories,
+		count: withTotal(kitCategories),
+	},
+	{
+		key: "mist",
+		title: "Mist",
+		href: "/mist/hero",
+		categories: mistCategories,
+		count: withTotal(mistCategories),
+	},
+	{
+		key: "veil",
+		title: "Veil",
+		href: "/veil/hero",
+		categories: veilCategories,
+		count: withTotal(veilCategories),
+	},
+];
+
+export const primaryNavigation: NavigationItem[] = [
+	{ title: "Pages", href: "/" },
+	{ title: "Templates", href: "/templates" },
+	{ title: "Docs", href: "/docs" },
+];
+
+export const docsNavigation: NavigationItem[] = [
+	{ title: "Introduction", href: "/docs" },
+	{ title: "Quick Setup", href: "/docs/installation" },
+	{ title: "Mist Theme", href: "/docs/mist-theme" },
+	{ title: "Veil Theme", href: "/docs/veil-theme" },
+];
+
+export function getBlockLibrary(pathname: string) {
+	return blockLibraries.find((library) => pathname.startsWith(`/${library.key}`));
+}
+
+export function isCurrentPath(pathname: string, href: string) {
+	return href === "/" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
+}

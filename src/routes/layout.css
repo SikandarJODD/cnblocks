@@ -4,6 +4,7 @@
 @import "@fontsource-variable/geist-mono";
 @import "@fontsource-variable/sora";
 @import '@fontsource-variable/jetbrains-mono';
+@import "@fontsource-variable/lexend";
 
 @import "../themes.css";
 @import "shadcn-svelte/tailwind.css";
@@ -90,6 +91,7 @@
 	--font-sans: "Inter Variable", sans-serif;
 	--font-display: "Sora Variable", sans-serif;
 	--font-mono: "JetBrains Mono Variable", monospace;
+	--font-sidebar-content: "Lexend Variable", sans-serif;
 
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);

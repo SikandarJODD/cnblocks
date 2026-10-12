@@ -3,12 +3,11 @@
 ```text
 routes/
 |-- (app)/
-|   |-- (comps)/
-|   |-- docs/
-|   |-- mist/
-|   |-- old-docs/
-|   |-- templates/
-|   `-- veil/
+|   |-- (blocks)/
+|   |   |-- kit/
+|   |   |-- mist/
+|   |   `-- veil/
+|   `-- docs/
 |-- preview/
 `-- sidebar-08/
 ```

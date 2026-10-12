@@ -1,0 +1,119 @@
+<script lang="ts">
+	import { page } from "$app/state";
+	import * as Kbd from "#lib/components/ui/kbd/index.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import {
+		blockLibraries,
+		docsNavigation,
+		getBlockLibrary,
+		isCurrentPath,
+		primaryNavigation,
+	} from "./navigation.js";
+
+	const pathname = $derived(page.url.pathname);
+	const activeLibrary = $derived(getBlockLibrary(pathname));
+	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
+</script>
+
+<Sidebar.Group class="p-2 pt-0">
+	<Sidebar.GroupContent>
+		<Sidebar.Menu class="gap-0">
+			<Sidebar.MenuItem>
+				<Sidebar.MenuButton
+					class="h-7 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+					isActive={Boolean(activeLibrary)}
+				>
+					{#snippet child({ props })}
+						<a href="/kit/hero" {...props}>
+							<span>Blocks</span>
+						</a>
+					{/snippet}
+				</Sidebar.MenuButton>
+
+				<Sidebar.MenuSub class="mx-0 mt-0.5 gap-0 border-l-0 pl-2 pr-0 py-0">
+					{#each blockLibraries as library}
+						<Sidebar.MenuSubItem>
+							<Sidebar.MenuSubButton
+								href={library.href}
+								isActive={activeLibrary?.key === library.key}
+								class="h-6 px-2 text-[13px]! font-sans font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+							>
+								<span>{library.title}</span>
+								<Kbd.Root class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums">
+									{library.count}
+								</Kbd.Root>
+							</Sidebar.MenuSubButton>
+						</Sidebar.MenuSubItem>
+					{/each}
+				</Sidebar.MenuSub>
+			</Sidebar.MenuItem>
+
+			{#each primaryNavigation as item}
+				<Sidebar.MenuItem>
+					<Sidebar.MenuButton
+						class="h-7 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+						isActive={isCurrentPath(pathname, item.href)}
+					>
+						{#snippet child({ props })}
+							<a href={item.href} {...props}>
+								<span>{item.title}</span>
+							</a>
+						{/snippet}
+					</Sidebar.MenuButton>
+				</Sidebar.MenuItem>
+			{/each}
+		</Sidebar.Menu>
+	</Sidebar.GroupContent>
+</Sidebar.Group>
+
+{#if activeLibrary}
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden p-2 pt-4">
+		<Sidebar.GroupLabel class="mb-1 h-6 px-2 text-[10px] uppercase tracking-wider">
+			Categories
+		</Sidebar.GroupLabel>
+		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
+			<div class="scroll-fade-effect-y no-scrollbar h-full overflow-y-auto pb-6">
+				<Sidebar.Menu class="gap-1">
+				{#each activeLibrary.categories as category}
+					<Sidebar.MenuItem>
+						<Sidebar.MenuButton
+							class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+							isActive={pathname === category.href}
+						>
+							{#snippet child({ props })}
+								<a href={category.href} {...props}>
+									<span>{category.title}</span>
+								</a>
+							{/snippet}
+						</Sidebar.MenuButton>
+					</Sidebar.MenuItem>
+				{/each}
+				</Sidebar.Menu>
+			</div>
+		</Sidebar.GroupContent>
+	</Sidebar.Group>
+{:else if docsActive}
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden p-2 pt-4">
+		<Sidebar.GroupLabel class="mb-1 h-6 px-2 text-[10px] uppercase tracking-wider">Docs</Sidebar.GroupLabel>
+		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
+			<div class="scroll-fade-effect-y no-scrollbar h-full overflow-y-auto pb-6">
+				<Sidebar.Menu class="gap-1">
+				{#each docsNavigation as item}
+					<Sidebar.MenuItem>
+						<Sidebar.MenuButton
+							class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+							isActive={pathname === item.href}
+						>
+							{#snippet child({ props })}
+								<a href={item.href} {...props}>
+									<span>{item.title}</span>
+								</a>
+							{/snippet}
+						</Sidebar.MenuButton>
+					</Sidebar.MenuItem>
+				{/each}
+				</Sidebar.Menu>
+			</div>
+		</Sidebar.GroupContent>
+	</Sidebar.Group>
+{/if}
