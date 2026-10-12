@@ -4,6 +4,7 @@
 	import SidebarFooter from "./sidebar-footer.svelte";
 	import SidebarHeader from "./sidebar-header.svelte";
 	import SidebarNavigation from "./sidebar-navigation.svelte";
+	import SidebarSupportCard from "./sidebar-support-card.svelte";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 </script>
@@ -13,6 +14,7 @@
 	<Sidebar.Content class="gap-0 overflow-hidden">
 		<SidebarNavigation />
 	</Sidebar.Content>
+	<SidebarSupportCard />
 	<SidebarFooter />
 	<!-- <Sidebar.Rail /> -->
 </Sidebar.Root>
