@@ -6,11 +6,13 @@
 	import Button from "../ui/button/button.svelte";
 	import Maximize from "@lucide/svelte/icons/maximize";
 	import CodeEditor from "./CodeEditor.svelte";
+	import ImportAliasToggle from "./ImportAliasToggle.svelte";
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
+	import { transformCodeImports, type ImportAliasStyle } from "./import-alias";
 	import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
 	import type { Component } from "svelte";
-	import { watch } from "runed";
+	import { PersistedState, watch } from "runed";
 
 	export interface MistCode {
 		code: string;
@@ -54,6 +56,11 @@
 	let mode = $state("preview");
 	let iframeHeight = $state(0);
 	let isLoading = $state(true);
+	let importAliasStyle = new PersistedState<ImportAliasStyle>(
+		"sveltekit-import-alias-style",
+		"dollar"
+	);
+	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
 
 	let ref: PaneAPI | undefined = $state(undefined);
 
@@ -417,12 +424,16 @@
 					</TooltipProvider>
 				{/if}
 				{#if code}
+					{#if mode === "code"}
+						<ImportAliasToggle bind:value={importAliasStyle.current} />
+						<Separator class="h-4!" orientation="vertical" />
+					{/if}
 					<PreviewInstallAdd {itemId} />
 
-					{#if !Array.isArray(code)}
+					{#if !Array.isArray(displayedCode)}
 						<Separator class="h-4!" orientation="vertical" />
 
-						<CopyButton text={code.code} />
+						<CopyButton text={displayedCode.code} />
 					{/if}
 				{/if}
 			</div>
@@ -511,7 +522,7 @@
 			<div class="bg-secondary! dark:bg-transparent">
 				<!-- {#key code} -->
 				{#if mode === "code"}
-					<CodeEditor {code} />
+					<CodeEditor code={displayedCode} />
 				{/if}
 				<!-- {/key} -->
 			</div>
