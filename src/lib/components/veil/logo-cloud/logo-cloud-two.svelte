@@ -53,7 +53,7 @@
 
 	const groups = Object.keys(logos) as LogoGroup[];
 	let currentIndex = 0;
-	let currentGroup: LogoGroup = groups[currentIndex];
+	let currentGroup = $state<LogoGroup>(groups[currentIndex]);
 	let timer: ReturnType<typeof setInterval> | undefined;
 
 	onMount(() => {

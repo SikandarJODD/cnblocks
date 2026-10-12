@@ -12,8 +12,8 @@
 		{ name: "Company", href: "#link" },
 	];
 
-	let menuState = false;
-	let isScrolled = false;
+	let menuState = $state(false);
+	let isScrolled = $state(false);
 
 	onMount(() => {
 		const handleScroll = () => {

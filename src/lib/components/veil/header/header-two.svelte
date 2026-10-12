@@ -12,9 +12,9 @@
 		{ name: "Company", href: "#link" },
 	];
 
-	let menuState = false;
-	let isScrolled = false;
-	let isLarge = false;
+	let menuState = $state(false);
+	let isScrolled = $state(false);
+	let isLarge = $state(false);
 
 	onMount(() => {
 		const media = window.matchMedia("(min-width: 64rem)");
