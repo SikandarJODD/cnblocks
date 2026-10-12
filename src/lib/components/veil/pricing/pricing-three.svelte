@@ -56,7 +56,7 @@
 						{/each}
 					</ul>
 					<Button
-						href="#link"
+						href="/"
 						variant={plan.highlighted ? "default" : "outline"}
 						class="mt-8 w-full gap-2"
 					>

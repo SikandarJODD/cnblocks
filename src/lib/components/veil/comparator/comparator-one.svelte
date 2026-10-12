@@ -102,7 +102,7 @@
 				{#each plans as plan (plan.name)}
 					<div class={`border-l p-4 ${plan.highlighted ? "bg-primary/5" : ""}`}>
 						<Button
-							href="#link"
+							href="/"
 							variant={plan.highlighted ? "default" : "outline"}
 							size="sm"
 							class="w-full"

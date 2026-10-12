@@ -15,9 +15,9 @@
 		title = "Ready to Get Started?",
 		description = "Join thousands of teams already using our platform to build better products faster.",
 		primaryLabel = "Start Free Trial",
-		primaryHref = "#link",
+		primaryHref = "/",
 		secondaryLabel = "Talk to Sales",
-		secondaryHref = "#link",
+		secondaryHref = "/",
 	}: Props = $props();
 </script>
 

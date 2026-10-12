@@ -16,7 +16,7 @@
 		description = "Get the latest updates, tips, and exclusive offers delivered straight to your inbox.",
 		emailPlaceholder = "Enter your email",
 		subscribeLabel = "Subscribe",
-		subscribeHref = "#link",
+		subscribeHref = "/",
 	}: Props = $props();
 </script>
 

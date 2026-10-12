@@ -7,9 +7,9 @@
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 	const menuItems = [
-		{ name: "Features", href: "#link" },
-		{ name: "Pricing", href: "#link" },
-		{ name: "Company", href: "#link" },
+		{ name: "Features", href: "/" },
+		{ name: "Pricing", href: "/" },
+		{ name: "Company", href: "/" },
 	];
 
 	let menuState = $state(false);

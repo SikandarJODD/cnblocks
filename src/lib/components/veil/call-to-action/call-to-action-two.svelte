@@ -16,7 +16,7 @@
 		title = "Start Building Today",
 		description = "Get 3 months free when you sign up for an annual plan. No credit card required to start.",
 		ctaLabel = "Claim Your Offer",
-		ctaHref = "#link",
+		ctaHref = "/",
 	}: Props = $props();
 </script>
 

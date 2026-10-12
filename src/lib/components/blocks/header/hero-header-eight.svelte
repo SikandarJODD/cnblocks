@@ -4,10 +4,10 @@
 	import Button from "#lib/components/ui/button/button.svelte";
 
 	let menuItems = [
-		{ name: "Features", href: "#a" },
-		{ name: "Solution", href: "#a" },
-		{ name: "Pricing", href: "#a" },
-		{ name: "About", href: "#a" },
+		{ name: "Features", href: "/" },
+		{ name: "Solution", href: "/" },
+		{ name: "Pricing", href: "/" },
+		{ name: "About", href: "/" },
 	];
 	let menuState = $state(false);
 </script>

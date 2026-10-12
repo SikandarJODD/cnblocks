@@ -113,7 +113,7 @@
 								{/if}
 							</div>
 							<Button
-								href="#link"
+								href="/"
 								variant={plan.highlighted ? "default" : "outline"}
 								size="sm"
 								class="mt-4"

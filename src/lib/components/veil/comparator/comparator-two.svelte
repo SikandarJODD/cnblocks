@@ -76,12 +76,10 @@
 			<div class="grid grid-cols-3 border-t">
 				<div class="p-4"></div>
 				<div class="min-w-32 border-l p-4">
-					<Button href="#link" variant="outline" size="sm" class="w-full"
-						>Get Started</Button
-					>
+					<Button href="/" variant="outline" size="sm" class="w-full">Get Started</Button>
 				</div>
 				<div class="min-w-32 border-l bg-primary/5 p-4">
-					<Button href="#link" size="sm" class="w-full">Upgrade</Button>
+					<Button href="/" size="sm" class="w-full">Upgrade</Button>
 				</div>
 			</div>
 		</Card>

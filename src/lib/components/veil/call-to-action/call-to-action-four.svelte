@@ -28,7 +28,7 @@
 		priceSuffix = "/month",
 		priceNote = "Free forever for individuals",
 		ctaLabel = "Get Started Free",
-		ctaHref = "#link",
+		ctaHref = "/",
 	}: Props = $props();
 </script>
 

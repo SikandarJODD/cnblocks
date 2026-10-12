@@ -71,7 +71,7 @@
 							{/if}
 						</div>
 						<Button
-							href="#link"
+							href="/"
 							variant={tier.highlighted ? "default" : "outline"}
 							size="sm"
 							class="gap-1"

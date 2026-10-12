@@ -49,7 +49,7 @@
 							app.
 						</p>
 
-						<Button class="mt-6 pr-1.5" href="#link">
+						<Button class="mt-6 pr-1.5" href="/">
 							Start Building
 							<ChevronRight class="opacity-50" />
 						</Button>
