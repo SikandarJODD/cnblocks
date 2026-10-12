@@ -26,9 +26,9 @@
 </script>
 
 {#if Array.isArray(code)}
-	<div class="flex border border-muted rounded-xl overflow-hidden">
+	<div class="flex w-full min-w-0 max-w-full overflow-hidden rounded-xl border border-muted">
 		<div
-			class="hidden w-56 bg-neutral-50 font-mono text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25 dark:text-white"
+			class="hidden w-56 shrink-0 bg-neutral-50 font-mono text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25 dark:text-white"
 		>
 			<div class="pt-1.5 pb-5.5 font-mono">
 				<div>
@@ -87,14 +87,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="relative min-h-128 w-full sm:w-[calc(100%-14rem)]">
+		<div class="code-editor relative min-h-128 min-w-0 flex-1 overflow-hidden">
 			<!-- <CopyButton {copied} onCopy={copy} /> -->
 			{#key selectedIndex}
 				{@render CopyButton()}
 				<!-- <CodeBlock code={code[selectedIndex].code} /> -->
 				<Code
 					lang={code[selectedIndex]?.lang || "svelte"}
-					class="rounded-none border-none! overflow-hidden"
+					class="h-full min-w-0 max-w-full overflow-hidden rounded-none border-none!"
 					code={code[selectedIndex].code}
 					highlight={code[selectedIndex]?.highlight}
 				/>
@@ -104,9 +104,11 @@
 {:else}
 	<!-- {@render CopyButton()} -->
 	<!-- <CodeBlock code={code.code} /> -->
-	<div class="relative h-144 sm:w-full border border-muted rounded-xl overflow-hidden mx-2">
+	<div
+		class="code-editor relative mx-2 h-144 w-auto min-w-0 overflow-hidden rounded-xl border border-muted"
+	>
 		<Code
-			class="rounded-none border-none! outline-none overflow-hidden"
+			class="h-full min-w-0 max-w-full overflow-hidden rounded-none border-none! outline-none"
 			lang={code?.lang || "svelte"}
 			code={code.code}
 			highlight={code?.highlight}
@@ -132,3 +134,17 @@
 		{/if}
 	</Button>
 {/snippet}
+
+<style>
+	:global(.code-editor pre.shiki) {
+		max-width: 100%;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	:global(.code-editor pre.shiki::-webkit-scrollbar) {
+		display: none;
+	}
+</style>

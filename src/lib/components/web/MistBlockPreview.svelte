@@ -170,10 +170,10 @@
 
 <section
 	id="{category}-{title}"
-	class="group"
+	class="group w-full min-w-0 max-w-full overflow-hidden"
 >
 
-	<div class="relative border border-muted rounded-xl mx-2 my-1.5">
+	<div class="relative mx-2 my-1.5 min-w-0 overflow-hidden rounded-xl border border-muted dark:border-muted/50">
 		<div
 			class="relative z-10  hidden  justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2 "
 		>
@@ -501,9 +501,9 @@
 		<MobileBlockPreviewToolbar bind:mode {title} {preview} {itemId} code={displayedCode} />
 	</div>
 
-	<div class="relative">
-		<div class="relative z-10 px-0 lg:px-0">
-			<div class={cn("bg-white dark:bg-transparent mx-1 rounded-2xl overflow-hidden", mode === "code" && "hidden")}>
+	<div class="relative min-w-0 max-w-full overflow-hidden">
+		<div class="relative z-10 min-w-0 max-w-full overflow-hidden px-0 lg:px-0">
+			<div class={cn("bg-white dark:bg-transparent mx-1 rounded-2xl border border-transparent dark:border-muted overflow-hidden", mode === "code" && "hidden")}>
 				{#if shouldRenderInIframe}
 					<div
 						class="h-fit"
@@ -550,7 +550,7 @@
 				{/if}
 			</div>
 
-			<div class="bg-white dark:bg-transparent">
+			<div class="min-w-0 max-w-full overflow-hidden bg-white dark:bg-transparent">
 				{#if mode === "code"}
 					<CodeEditor code={displayedCode} />
 				{/if}

@@ -16,7 +16,7 @@
 <Sidebar.Provider>
 	<SiteSidebar />
 	<Sidebar.Inset>
-		<main class="flex-1 border rounded-2xl">
+			<main class="min-w-0 flex-1 rounded-2xl border">
 		<SidebarCollapsedToolbar />
 		<!-- <Header /> -->
 			{@render children()}
