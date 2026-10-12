@@ -2,9 +2,6 @@ import Root, {
 	type ButtonProps,
 	type ButtonSize,
 	type ButtonVariant,
-	type AnchorElementProps,
-	type ButtonElementProps,
-	type ButtonPropsWithoutHTML,
 	buttonVariants,
 } from "./button.svelte";
 
@@ -17,7 +14,4 @@ export {
 	type ButtonProps,
 	type ButtonSize,
 	type ButtonVariant,
-	type AnchorElementProps,
-	type ButtonElementProps,
-	type ButtonPropsWithoutHTML,
 };

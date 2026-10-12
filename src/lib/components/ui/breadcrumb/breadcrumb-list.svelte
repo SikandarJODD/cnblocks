@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { WithElementRef } from "bits-ui";
+	import { cn, type WithElementRef } from "#lib/utils.js";
 	import type { HTMLOlAttributes } from "svelte/elements";
-	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -13,10 +12,8 @@
 
 <ol
 	bind:this={ref}
-	class={cn(
-		"flex flex-wrap items-center gap-1.5 text-sm break-words text-muted-foreground sm:gap-2.5",
-		className
-	)}
+	data-slot="breadcrumb-list"
+	class={cn("text-muted-foreground gap-1.5 text-sm sm:gap-2.5 flex flex-wrap items-center wrap-break-word", className)}
 	{...restProps}
 >
 	{@render children?.()}

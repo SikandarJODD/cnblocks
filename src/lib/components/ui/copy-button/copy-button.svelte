@@ -5,7 +5,7 @@
 		TooltipProvider,
 		TooltipTrigger,
 	} from "#lib/components/ui/tooltip/index.js";
-	import { Button, type ButtonProps } from "#lib/components/ui/button/index.js";
+	import { Button, type ButtonProps } from "#lib/components/special/button/index.js";
 
 	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
 	import { cn } from "#lib/utils.js";
