@@ -2,11 +2,6 @@
 	import { page } from "$app/state";
 	import * as Add from "#lib/components/ui/add/index.js";
 	import { AGENTS, type Agent } from "#lib/components/ui/add/index.js";
-	import {
-		HoverCard,
-		HoverCardContent,
-		HoverCardTrigger,
-	} from "#lib/components/ui/hover-card/index.js";
 	import { cn } from "#lib/utils.js";
 	import { getRegistryItemUrl } from "#lib/utils/registry-url.js";
 	import { PersistedState } from "runed";
@@ -50,32 +45,23 @@
 {#if installUrl}
 	<Add.Provider bind:agent={agent.current} registry="" registryOptions={[installUrl]}>
 		<Add.Root item={installUrl}>
-			<HoverCard openDelay={200}>
-				<HoverCardTrigger>
-					{#snippet child({ props })}
-						<Add.Group {...props} class={cn("h-8 w-80 max-w-full", className)}>
-							<Add.Button class="h-8 min-w-0 md:pr-2 md:pl-2 [&>div]:size-8" />
-							<Add.GroupSeparator />
-							<Add.Dropdown class="size-8">
-								<Add.DropdownContent>
-									{#each AGENTS as addAgent (addAgent)}
-										<Add.DropdownAgentOption agent={addAgent} />
-									{/each}
-									{#if showRegistryOptions}
-										<Add.DropdownSeparator />
-										{#each registryOptions as option (option)}
-											<Add.DropdownRegistryOption registry={option} />
-										{/each}
-									{/if}
-								</Add.DropdownContent>
-							</Add.Dropdown>
-						</Add.Group>
-					{/snippet}
-				</HoverCardTrigger>
-				<HoverCardContent class="w-fit px-3 py-1.5">
-					<p class="font-mono text-xs leading-relaxed break-all">{installUrl}</p>
-				</HoverCardContent>
-			</HoverCard>
+			<Add.Group class={cn("h-8 w-80 max-w-full", className)}>
+				<Add.Button class="h-8 min-w-0 md:pr-2 md:pl-2 [&>div]:size-8" />
+				<Add.GroupSeparator />
+				<Add.Dropdown class="size-8">
+					<Add.DropdownContent class='shadow-none'>
+						{#each AGENTS as addAgent (addAgent)}
+							<Add.DropdownAgentOption agent={addAgent} />
+						{/each}
+						{#if showRegistryOptions}
+							<Add.DropdownSeparator />
+							{#each registryOptions as option (option)}
+								<Add.DropdownRegistryOption registry={option} />
+							{/each}
+						{/if}
+					</Add.DropdownContent>
+				</Add.Dropdown>
+			</Add.Group>
 		</Add.Root>
 	</Add.Provider>
 {/if}
