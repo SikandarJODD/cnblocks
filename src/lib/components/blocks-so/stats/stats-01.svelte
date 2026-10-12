@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Card, CardContent } from "$lib/components/ui/card";
-	import { cn } from "$lib/utils";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
+	import { cn } from "#lib/utils.js";
 
 	const data = [
 		{

@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import {
 		Card,
 		CardContent,
@@ -7,7 +7,7 @@
 		CardHeader,
 		CardTitle,
 		CardFooter,
-	} from "$lib/components/ui/card";
+	} from "#lib/components/ui/card/index.js";
 	import Check from "@lucide/svelte/icons/check";
 
 	let pricingList = {

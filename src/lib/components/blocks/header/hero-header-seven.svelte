@@ -1,8 +1,8 @@
 <script>
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import { scrollY } from "svelte/reactivity/window";
 
 	let menuItems = [

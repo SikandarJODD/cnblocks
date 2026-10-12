@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Card, CardContent } from "$lib/components/ui/card";
-	import { Progress } from "$lib/components/ui/progress/index.js";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
+	import { Progress } from "#lib/components/ui/progress/index.js";
 
 	const data = [
 		{

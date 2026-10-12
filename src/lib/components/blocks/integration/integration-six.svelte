@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Gemini, GooglePaLM, Replit } from "../logos/logos";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import type { LucideIcon } from "@lucide/svelte";
 	import Plus from "@lucide/svelte/icons/plus";
 </script>

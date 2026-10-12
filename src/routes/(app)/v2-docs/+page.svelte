@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SEOComponent from "$lib/seo/SEO.svelte";
-	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
 	import {
 		H2,
 		Paragraph,
@@ -12,8 +12,8 @@
 		Th,
 		Td,
 		Link,
-	} from "$lib/components/markdown/index";
-	import { docsV2PageMap } from "$lib/config/docs-v2";
+	} from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 
 	const pageMeta = docsV2PageMap.introduction;
 </script>

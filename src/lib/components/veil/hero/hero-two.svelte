@@ -1,7 +1,7 @@
 <script lang="ts">
-	import HeaderTwo from "$lib/components/veil/header/header-two.svelte";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import HeaderTwo from "#lib/components/veil/header/header-two.svelte";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 	import {
 		Clerk,
 		Claude,
@@ -12,7 +12,7 @@
 		Supabase,
 		Twilio,
 		Vercel,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 </script>
 

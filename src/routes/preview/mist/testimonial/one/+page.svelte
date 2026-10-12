@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_testimonial } from "$lib/all_mists/testimonial";
+	import { all_mists_testimonial } from "#lib/all_mists/testimonial.js";
 
 	const block = all_mists_testimonial.find((item) => item.slug === "one");
 

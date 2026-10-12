@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Card, CardContent } from "$lib/components/ui/card";
-	import { Input } from "$lib/components/ui/input";
-	import { Separator } from "$lib/components/ui/separator";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
+	import { Input } from "#lib/components/ui/input/index.js";
+	import { Separator } from "#lib/components/ui/separator/index.js";
 	import LogoIcon from "./logo-icon.svelte";
 </script>
 

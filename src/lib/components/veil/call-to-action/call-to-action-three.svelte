@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import Mail from "@lucide/svelte/icons/mail";
 

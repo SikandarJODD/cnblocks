@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card } from "$lib/components/ui/card";
+	import { Card } from "#lib/components/ui/card/index.js";
 	import FeatureTable from "./feature-table.svelte";
 </script>
 

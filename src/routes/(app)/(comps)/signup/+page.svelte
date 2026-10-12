@@ -1,7 +1,7 @@
 <script>
-	import { signup } from "$lib/all_blocks/signup";
-	import BlockPreview from "$lib/components/web/BlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { signup } from "#lib/all_blocks/signup.js";
+	import BlockPreview from "#lib/components/web/BlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { testimonials } from "$lib/all_blocks/testimonial";
+	import { testimonials } from "#lib/all_blocks/testimonial.js";
 
 	const block = testimonials.find((item) => item.title === "three");
 

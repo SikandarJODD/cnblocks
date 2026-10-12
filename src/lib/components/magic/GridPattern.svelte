@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	export let width = 40;
 	export let height = 40;
 	export let x = -1;

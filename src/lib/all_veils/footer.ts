@@ -1,17 +1,17 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import FooterOne from "$lib/components/veil/footer/footer-one.svelte";
-import FooterOneCode from "$lib/components/veil/footer/footer-one.svelte?raw";
-import FooterTwo from "$lib/components/veil/footer/footer-two.svelte";
-import FooterTwoCode from "$lib/components/veil/footer/footer-two.svelte?raw";
-import FooterThree from "$lib/components/veil/footer/footer-three.svelte";
-import FooterThreeCode from "$lib/components/veil/footer/footer-three.svelte?raw";
-import FooterFour from "$lib/components/veil/footer/footer-four.svelte";
-import FooterFourCode from "$lib/components/veil/footer/footer-four.svelte?raw";
-import FooterFive from "$lib/components/veil/footer/footer-five.svelte";
-import FooterFiveCode from "$lib/components/veil/footer/footer-five.svelte?raw";
-import FooterSix from "$lib/components/veil/footer/footer-six.svelte";
-import FooterSixCode from "$lib/components/veil/footer/footer-six.svelte?raw";
+import FooterOne from "#lib/components/veil/footer/footer-one.svelte";
+import FooterOneCode from "#lib/components/veil/footer/footer-one.svelte?raw";
+import FooterTwo from "#lib/components/veil/footer/footer-two.svelte";
+import FooterTwoCode from "#lib/components/veil/footer/footer-two.svelte?raw";
+import FooterThree from "#lib/components/veil/footer/footer-three.svelte";
+import FooterThreeCode from "#lib/components/veil/footer/footer-three.svelte?raw";
+import FooterFour from "#lib/components/veil/footer/footer-four.svelte";
+import FooterFourCode from "#lib/components/veil/footer/footer-four.svelte?raw";
+import FooterFive from "#lib/components/veil/footer/footer-five.svelte";
+import FooterFiveCode from "#lib/components/veil/footer/footer-five.svelte?raw";
+import FooterSix from "#lib/components/veil/footer/footer-six.svelte";
+import FooterSixCode from "#lib/components/veil/footer/footer-six.svelte?raw";
 
 export const all_veils_footer: MistBlock[] = [
 	{

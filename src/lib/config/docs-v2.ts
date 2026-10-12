@@ -1,4 +1,4 @@
-import type { SEO } from "$lib/types/seo";
+import type { SEO } from "#lib/types/seo.js";
 
 export type DocsV2GroupKey = "guide" | "theme" | "resources";
 

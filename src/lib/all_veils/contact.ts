@@ -1,9 +1,9 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import ContactOne from "$lib/components/veil/contact/contact-one.svelte";
-import ContactOneCode from "$lib/components/veil/contact/contact-one.svelte?raw";
-import ContactTwo from "$lib/components/veil/contact/contact-two.svelte";
-import ContactTwoCode from "$lib/components/veil/contact/contact-two.svelte?raw";
+import ContactOne from "#lib/components/veil/contact/contact-one.svelte";
+import ContactOneCode from "#lib/components/veil/contact/contact-one.svelte?raw";
+import ContactTwo from "#lib/components/veil/contact/contact-two.svelte";
+import ContactTwoCode from "#lib/components/veil/contact/contact-two.svelte?raw";
 
 export const all_veils_contact: MistBlock[] = [
 	{

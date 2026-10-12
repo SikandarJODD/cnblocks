@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-	import { H1, Paragraph } from "$lib/components/markdown/index";
+	import { H1, Paragraph } from "#lib/components/markdown/index.js";
 	import { getDocsLayoutContext } from "./docs-layout-context";
 
 	let { title, description, children }: DocsPageShellProps = $props();

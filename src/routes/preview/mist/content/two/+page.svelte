@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_content } from "$lib/all_mists/content";
+	import { all_mists_content } from "#lib/all_mists/content.js";
 
 	const block = all_mists_content.find((item) => item.slug === "two");
 

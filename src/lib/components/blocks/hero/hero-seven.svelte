@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Rocket from "@lucide/svelte/icons/rocket";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
@@ -33,7 +33,7 @@
 
 	// Hero Header Component
 
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { scrollY } from "svelte/reactivity/window";
 
 	let menuItems = [

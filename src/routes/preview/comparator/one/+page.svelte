@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { comparator } from "$lib/all_blocks/comparator";
+	import { comparator } from "#lib/all_blocks/comparator.js";
 
 	const block = comparator.find((item) => item.title === "one");
 

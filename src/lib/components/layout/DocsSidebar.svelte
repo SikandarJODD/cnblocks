@@ -1,20 +1,20 @@
 <script lang="ts">
 	import type { Component, ComponentProps } from "svelte";
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import NavMain from "./nav-main.svelte";
 	import NavProjects from "./nav-projects.svelte";
 	import NavSecondary from "./nav-secondary.svelte";
 	import NavUser from "./nav-user.svelte";
-	import SendFeedback from "$lib/svgs/send-feedback.svelte";
-	import SponsorProject from "$lib/svgs/sponsor-project.svelte";
-	import { ScrollArea } from "$lib/components/ui/scroll-area";
+	import SendFeedback from "#lib/svgs/send-feedback.svelte";
+	import SponsorProject from "#lib/svgs/sponsor-project.svelte";
+	import { ScrollArea } from "#lib/components/ui/scroll-area/index.js";
 	import {
 		docsV2FooterActions,
 		docsV2GuideItems,
 		docsV2ResourceItems,
 		docsV2TemplateItems,
 		docsV2ThemeItems,
-	} from "$lib/config/docs-v2";
+	} from "#lib/config/docs-v2.js";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 

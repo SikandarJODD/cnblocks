@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
-	import Logo from "$lib/components/web/Logo.svelte";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import Logo from "#lib/components/web/Logo.svelte";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 </script>
 

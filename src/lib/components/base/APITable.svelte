@@ -6,7 +6,7 @@
 	import Th from "../markdown/Th.svelte";
 	import Td from "../markdown/Td.svelte";
 	import InfoPopover from "./InfoPopover.svelte";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { H3 } from "../markdown";
 
 	type PropDef = {

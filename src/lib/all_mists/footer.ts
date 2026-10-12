@@ -1,12 +1,12 @@
-import type { MistBlock } from "$lib/types/mists";
-import FooterOne from "$lib/components/mist/mfooter/one.svelte";
-import FooterOneCode from "$lib/components/mist/mfooter/one.svelte?raw";
-import FooterTwo from "$lib/components/mist/mfooter/two.svelte";
-import FooterTwoCode from "$lib/components/mist/mfooter/two.svelte?raw";
-import FooterThree from "$lib/components/mist/mfooter/three.svelte";
-import FooterThreeCode from "$lib/components/mist/mfooter/three.svelte?raw";
-import FooterFour from "$lib/components/mist/mfooter/four.svelte";
-import FooterFourCode from "$lib/components/mist/mfooter/four.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import FooterOne from "#lib/components/mist/mfooter/one.svelte";
+import FooterOneCode from "#lib/components/mist/mfooter/one.svelte?raw";
+import FooterTwo from "#lib/components/mist/mfooter/two.svelte";
+import FooterTwoCode from "#lib/components/mist/mfooter/two.svelte?raw";
+import FooterThree from "#lib/components/mist/mfooter/three.svelte";
+import FooterThreeCode from "#lib/components/mist/mfooter/three.svelte?raw";
+import FooterFour from "#lib/components/mist/mfooter/four.svelte";
+import FooterFourCode from "#lib/components/mist/mfooter/four.svelte?raw";
 
 export const all_mists_footer: MistBlock[] = [
 	{

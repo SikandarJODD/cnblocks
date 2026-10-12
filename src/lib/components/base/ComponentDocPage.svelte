@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { Component } from "svelte";
-	import type { SEO } from "$lib/types/seo";
-	import type { CodeBlock } from "$lib/components/ui/code";
+	import type { SEO } from "#lib/types/seo.js";
+	import type { CodeBlock } from "#lib/components/ui/code/index.js";
 
 	export type ComponentDocPageProps = {
 		id: string;
@@ -22,10 +22,10 @@
 
 <script lang="ts">
 	import { page } from "$app/state";
-	import { H1, H2, Paragraph, H3 } from "$lib/components/markdown/index";
-	import { PreviewFrame } from "$lib/components/ui/preview-component";
-	import SEOComponent from "$lib/seo/SEO.svelte";
-	import { getRegistryItemUrl } from "$lib/utils/registry-url";
+	import { H1, H2, Paragraph, H3 } from "#lib/components/markdown/index.js";
+	import { PreviewFrame } from "#lib/components/ui/preview-component/index.js";
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import { getRegistryItemUrl } from "#lib/utils/registry-url.js";
 	import InstallComponent from "./InstallComponent.svelte";
 
 	let {

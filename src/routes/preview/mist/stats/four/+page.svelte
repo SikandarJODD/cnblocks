@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_stats } from "$lib/all_mists/stats";
+	import { all_mists_stats } from "#lib/all_mists/stats.js";
 
 	const block = all_mists_stats.find((item) => item.slug === "four");
 

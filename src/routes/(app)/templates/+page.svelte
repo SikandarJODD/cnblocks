@@ -1,9 +1,9 @@
 <script>
-	import RainbowButton from "$lib/components/magic/RainbowButton.svelte";
-	import Button from "$lib/components/ui/button/button.svelte";
-	import Separator from "$lib/components/ui/separator/separator.svelte";
-	import GridPattern from "$lib/components/magic/GridPattern.svelte";
-	import { cn } from "$lib/utils";
+	import RainbowButton from "#lib/components/magic/RainbowButton.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import Separator from "#lib/components/ui/separator/separator.svelte";
+	import GridPattern from "#lib/components/magic/GridPattern.svelte";
+	import { cn } from "#lib/utils.js";
 	let features = [
 		"Save 100+ hours of work",
 		"1x Landing Page with 10+ sections",

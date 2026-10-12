@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import Toc from "$lib/components/base/toc/toc.svelte";
-	import { docsV2Pages } from "$lib/config/docs-v2";
-	import DocsSidebar from "$lib/components/layout/DocsSidebar.svelte";
-	import { ScrollArea } from "$lib/components/ui/scroll-area";
-	import { setDocsLayoutContext } from "$lib/components/layout/docs-layout-context";
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import { UseToc } from "$lib/hooks/use-toc.svelte";
-	import { cn } from "$lib/utils";
+	import Toc from "#lib/components/base/toc/toc.svelte";
+	import { docsV2Pages } from "#lib/config/docs-v2.js";
+	import DocsSidebar from "#lib/components/layout/DocsSidebar.svelte";
+	import { ScrollArea } from "#lib/components/ui/scroll-area/index.js";
+	import { setDocsLayoutContext } from "#lib/components/layout/docs-layout-context.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import { UseToc } from "#lib/hooks/use-toc.svelte.js";
+	import { cn } from "#lib/utils.js";
 
 	let { children } = $props();
 

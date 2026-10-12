@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { Button } from "$lib/components/ui/veil/button";
-	import Logo from "$lib/components/web/Logo.svelte";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import Logo from "#lib/components/web/Logo.svelte";
+	import { cn } from "#lib/utils.js";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 

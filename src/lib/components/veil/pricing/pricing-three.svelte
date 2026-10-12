@@ -1,9 +1,9 @@
 <script lang="ts">
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	import Check from "@lucide/svelte/icons/check";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
+	import { cn } from "#lib/utils.js";
 
 	const plans = [
 		{

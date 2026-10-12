@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import type { LucideIcon } from "@lucide/svelte";
 </script>
 

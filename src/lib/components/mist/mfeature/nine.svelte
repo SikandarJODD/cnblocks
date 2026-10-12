@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "$lib/components/ui/card/card.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
 
 	import ArrowUp from "@lucide/svelte/icons/arrow-up";
 	import Globe from "@lucide/svelte/icons/globe";
@@ -9,7 +9,7 @@
 	import Signature from "@lucide/svelte/icons/signature";
 	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
 	import Target from "@lucide/svelte/icons/target";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Layout from "@lucide/svelte/icons/layout";
 
 	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { TypeScript } from "$lib/components/icons";
-	import { Svelte, Terminal, CSS, Markdown } from "$lib/components/icons";
-	import * as Code from "$lib/components/ui/code";
-	import type { CodeBlock as MagicCode } from "$lib/components/ui/code/index";
+	import { TypeScript } from "#lib/components/icons/index.js";
+	import { Svelte, Terminal, CSS, Markdown } from "#lib/components/icons/index.js";
+	import * as Code from "#lib/components/ui/code/index.js";
+	import type { CodeBlock as MagicCode } from "#lib/components/ui/code/index.js";
 	import CopyButton from "../copy-button/copy-button.svelte";
 
 	type Props = {

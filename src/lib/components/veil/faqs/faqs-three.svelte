@@ -4,7 +4,7 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger,
-	} from "$lib/components/ui/accordion";
+	} from "#lib/components/ui/accordion/index.js";
 
 	type FAQItem = {
 		id: string;

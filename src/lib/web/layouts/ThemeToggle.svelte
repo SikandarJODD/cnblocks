@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import { mode, toggleMode } from "mode-watcher";
 </script>
 

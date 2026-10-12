@@ -1,7 +1,7 @@
 <script>
-	import { stats } from "$lib/all_blocks/stats";
-	import BlockPreview from "$lib/components/web/BlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { stats } from "#lib/all_blocks/stats.js";
+	import BlockPreview from "#lib/components/web/BlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

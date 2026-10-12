@@ -1,5 +1,5 @@
 <script>
-	import { Card, CardContent } from "$lib/components/ui/card";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
 	import Shield from "@lucide/svelte/icons/shield";
 	import Users from "@lucide/svelte/icons/users";
 </script>

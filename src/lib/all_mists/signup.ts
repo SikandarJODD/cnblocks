@@ -1,6 +1,6 @@
-import type { MistBlock } from "$lib/types/mists";
-import SignupOne from "$lib/components/mist/msignup/one.svelte";
-import SignupOneCode from "$lib/components/mist/msignup/one.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import SignupOne from "#lib/components/mist/msignup/one.svelte";
+import SignupOneCode from "#lib/components/mist/msignup/one.svelte?raw";
 export const all_mists_signup: MistBlock[] = [
 	{
 		slug: "one",

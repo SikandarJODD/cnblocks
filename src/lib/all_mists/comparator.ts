@@ -1,6 +1,6 @@
-import type { MistBlock } from "$lib/types/mists";
-import ComparatorOne from "$lib/components/mist/mcomparator/one.svelte";
-import ComparatorOneCode from "$lib/components/mist/mcomparator/one.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import ComparatorOne from "#lib/components/mist/mcomparator/one.svelte";
+import ComparatorOneCode from "#lib/components/mist/mcomparator/one.svelte?raw";
 
 export const all_mists_comparator: MistBlock[] = [
 	{

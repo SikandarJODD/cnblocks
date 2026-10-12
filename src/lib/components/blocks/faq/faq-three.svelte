@@ -4,7 +4,7 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger,
-	} from "$lib/components/ui/accordion";
+	} from "#lib/components/ui/accordion/index.js";
 
 	import type { Icon } from "@lucide/svelte";
 	import Clock from "@lucide/svelte/icons/clock";

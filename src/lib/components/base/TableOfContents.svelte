@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SvelteMap } from "svelte/reactivity";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { page } from "$app/state";
 
 	type TocItem = {

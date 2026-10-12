@@ -1,9 +1,13 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import { HoverCard, HoverCardTrigger, HoverCardContent } from "$lib/components/ui/hover-card";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
+	import {
+		HoverCard,
+		HoverCardTrigger,
+		HoverCardContent,
+	} from "#lib/components/ui/hover-card/index.js";
 
 	const members = [
 		{

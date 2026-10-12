@@ -1,6 +1,6 @@
 <script lang="ts">
-	import * as Avatar from "$lib/components/ui/avatar/index.js";
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import * as Avatar from "#lib/components/ui/avatar/index.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 
 	let {
 		user,

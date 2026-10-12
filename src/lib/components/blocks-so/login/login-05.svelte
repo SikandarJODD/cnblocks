@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Card, CardContent } from "$lib/components/ui/card";
-	import { Checkbox } from "$lib/components/ui/checkbox";
-	import { Input } from "$lib/components/ui/input";
-	import { Label } from "$lib/components/ui/label";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
+	import { Checkbox } from "#lib/components/ui/checkbox/index.js";
+	import { Input } from "#lib/components/ui/input/index.js";
+	import { Label } from "#lib/components/ui/label/index.js";
 	import LogoIcon from "./logo-icon.svelte";
 </script>
 

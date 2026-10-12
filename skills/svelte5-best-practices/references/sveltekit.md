@@ -80,7 +80,7 @@ export const load = async () => {
 
 ```ts
 // +page.server.ts - CORRECT
-import { db } from "$lib/server/database";
+import { db } from "#lib/server/database";
 
 export const load = async () => {
   const users = await db.query("SELECT * FROM users");

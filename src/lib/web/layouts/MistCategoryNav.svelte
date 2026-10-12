@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { all_mists_category_block } from "$lib/all_blocks/category_block";
-	import ScrollArea from "$lib/components/ui/scroll-area/scroll-area.svelte";
-	import { cn } from "$lib/utils";
+	import { all_mists_category_block } from "#lib/all_blocks/category_block.js";
+	import ScrollArea from "#lib/components/ui/scroll-area/scroll-area.svelte";
+	import { cn } from "#lib/utils.js";
 	let pathname = $derived("/" + page.url.pathname.split("/").filter(Boolean)[0] || "/");
 	let isActive = (href: string) => {
 		return page.url.pathname === href;

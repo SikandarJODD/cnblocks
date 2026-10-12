@@ -1,12 +1,12 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import {
 		Card,
 		CardContent,
 		CardDescription,
 		CardHeader,
 		CardTitle,
-	} from "$lib/components/ui/card";
+	} from "#lib/components/ui/card/index.js";
 	import Check from "@lucide/svelte/icons/check";
 	let pricingList = {
 		free: ["Basic Analytics Dashboard", "5GB Cloud Storage", "Email and Chat Support"],

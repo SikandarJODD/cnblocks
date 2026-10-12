@@ -1,7 +1,7 @@
 ﻿<script lang="ts">
-	import { all_veils_features } from "$lib/all_veils/features";
-	import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { all_veils_features } from "#lib/all_veils/features.js";
+	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

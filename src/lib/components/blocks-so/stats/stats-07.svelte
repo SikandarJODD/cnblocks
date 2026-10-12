@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, CardContent } from "$lib/components/ui/card";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
 
 	const data = [

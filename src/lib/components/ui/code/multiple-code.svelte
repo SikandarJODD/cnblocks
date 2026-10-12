@@ -3,9 +3,9 @@
 	import * as Code from "./index";
 	import type { CodeBlock as MagicCode } from "./index";
 	import ChevronDown from "@lucide/svelte/icons/chevron-down";
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { cn } from "$lib/utils";
-	import { Svelte, TypeScript, Terminal } from "$lib/components/icons";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { cn } from "#lib/utils.js";
+	import { Svelte, TypeScript, Terminal } from "#lib/components/icons/index.js";
 	type Props = {
 		code: MagicCode[];
 	};

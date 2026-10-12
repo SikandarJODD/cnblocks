@@ -1,6 +1,6 @@
 <script lang="ts">
-	import HeaderFour from "$lib/components/veil/header/header-four.svelte";
-	import { Button } from "$lib/components/ui/veil/button";
+	import HeaderFour from "#lib/components/veil/header/header-four.svelte";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 	import AudioLines from "@lucide/svelte/icons/audio-lines";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import ImageIcon from "@lucide/svelte/icons/image";
@@ -11,7 +11,7 @@
 	import ShoppingBag from "@lucide/svelte/icons/shopping-bag";
 	import Telescope from "@lucide/svelte/icons/telescope";
 
-	import Github from "$lib/components/logos/github.svelte";
+	import Github from "#lib/components/logos/github.svelte";
 </script>
 
 <HeaderFour />

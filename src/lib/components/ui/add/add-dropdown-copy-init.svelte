@@ -1,9 +1,9 @@
 <script lang="ts">
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
 	import type { ComponentProps } from "svelte";
 	import { useAddDropdownCopyInit } from "./add.svelte.js";
 	import { mergeProps } from "bits-ui";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		class: className,

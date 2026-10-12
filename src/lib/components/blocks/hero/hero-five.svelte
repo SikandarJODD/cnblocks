@@ -1,14 +1,14 @@
 <script>
-	import { Marquee } from "$lib/components/magic/marquee";
-	import { ProgressiveBlur } from "$lib/components/magic/progressive-blur";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
+	import { ProgressiveBlur } from "#lib/components/magic/progressive-blur/index.js";
+	import Button from "#lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability
 
 	// Hero Header Component
 
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
@@ -40,7 +40,7 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 <!-- Scroll below to see the snippet code  -->

@@ -1,7 +1,7 @@
 ﻿<script lang="ts">
-	import { all_veils_call_to_action } from "$lib/all_veils/call-to-action";
-	import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { all_veils_call_to_action } from "#lib/all_veils/call-to-action.js";
+	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

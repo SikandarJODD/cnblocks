@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
 	import { MediaQuery } from "svelte/reactivity";
 	import Separator from "../ui/separator/separator.svelte";
@@ -93,7 +93,7 @@
 		TooltipContent,
 		TooltipProvider,
 		TooltipTrigger,
-	} from "$lib/components/ui/tooltip";
+	} from "#lib/components/ui/tooltip/index.js";
 	import type { SupportedLanguage } from "../ui/code/shiki";
 
 	let showIframeComp = $derived(previewMode === "iframe");

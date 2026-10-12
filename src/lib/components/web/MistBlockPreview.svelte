@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
 	import { MediaQuery } from "svelte/reactivity";
 	import Separator from "../ui/separator/separator.svelte";
@@ -97,7 +97,7 @@
 		TooltipContent,
 		TooltipProvider,
 		TooltipTrigger,
-	} from "$lib/components/ui/tooltip";
+	} from "#lib/components/ui/tooltip/index.js";
 	import CodeEditor from "./CodeEditor.svelte";
 	import type { SupportedLanguage } from "../ui/code/shiki";
 

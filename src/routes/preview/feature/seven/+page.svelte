@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { feature } from "$lib/all_blocks/features";
+	import { feature } from "#lib/all_blocks/features.js";
 
 	const block = feature.find((item) => item.title === "seven");
 

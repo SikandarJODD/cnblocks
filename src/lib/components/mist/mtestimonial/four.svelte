@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 </script>
 
 <section class="[--color-primary:var(--color-indigo-500)]">

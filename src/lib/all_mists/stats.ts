@@ -1,13 +1,13 @@
-import type { MistBlock } from "$lib/types/mists";
-import StatsOne from "$lib/components/mist/mstats/one.svelte";
-import StatsTwo from "$lib/components/mist/mstats/two.svelte";
-import StatsThree from "$lib/components/mist/mstats/three.svelte";
-import StatsFour from "$lib/components/mist/mstats/four.svelte";
+import type { MistBlock } from "#lib/types/mists.js";
+import StatsOne from "#lib/components/mist/mstats/one.svelte";
+import StatsTwo from "#lib/components/mist/mstats/two.svelte";
+import StatsThree from "#lib/components/mist/mstats/three.svelte";
+import StatsFour from "#lib/components/mist/mstats/four.svelte";
 
-import StatsOneCode from "$lib/components/mist/mstats/one.svelte?raw";
-import StatsTwoCode from "$lib/components/mist/mstats/two.svelte?raw";
-import StatsThreeCode from "$lib/components/mist/mstats/three.svelte?raw";
-import StatsFourCode from "$lib/components/mist/mstats/four.svelte?raw";
+import StatsOneCode from "#lib/components/mist/mstats/one.svelte?raw";
+import StatsTwoCode from "#lib/components/mist/mstats/two.svelte?raw";
+import StatsThreeCode from "#lib/components/mist/mstats/three.svelte?raw";
+import StatsFourCode from "#lib/components/mist/mstats/four.svelte?raw";
 
 export const all_mists_stats: MistBlock[] = [
 	{

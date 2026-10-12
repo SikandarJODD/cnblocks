@@ -10,7 +10,7 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 <section class="bg-background py-16">

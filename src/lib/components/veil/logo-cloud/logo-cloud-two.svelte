@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { onDestroy, onMount } from "svelte";
-	import { Beacon, Bolt, Cisco, Hulu, Spotify, SupabaseFull, VercelFull } from "$lib/svgs";
+	import {
+		Beacon,
+		Bolt,
+		Cisco,
+		Hulu,
+		Spotify,
+		SupabaseFull,
+		VercelFull,
+	} from "#lib/svgs/index.js";
 
 	type LogoGroup = "ai" | "hosting" | "payments" | "streaming";
 	type LogoItem = {

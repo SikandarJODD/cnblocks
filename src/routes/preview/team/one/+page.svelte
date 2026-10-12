@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { team } from "$lib/all_blocks/team";
+	import { team } from "#lib/all_blocks/team.js";
 
 	const block = team.find((item) => item.title === "one");
 

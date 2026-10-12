@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Card from "$lib/components/ui/card/card.svelte";
-	import { cn } from "$lib/utils";
+	import Card from "#lib/components/ui/card/card.svelte";
+	import { cn } from "#lib/utils.js";
 	import type { Snippet } from "svelte";
 
 	let { children, class: _class = "" }: { children: Snippet; class?: string } = $props();

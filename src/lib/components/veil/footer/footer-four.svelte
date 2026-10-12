@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Logo from "$lib/components/web/Logo.svelte";
-	import { GitHub, Linkedin, Twitter } from "$lib/components/icons";
+	import Logo from "#lib/components/web/Logo.svelte";
+	import { GitHub, Linkedin, Twitter } from "#lib/components/icons/index.js";
 	import type { Component } from "svelte";
 
 	type LinkItem = { label: string; href: string };

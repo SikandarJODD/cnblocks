@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import Target from "@lucide/svelte/icons/target";

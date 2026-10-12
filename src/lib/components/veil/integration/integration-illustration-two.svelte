@@ -7,7 +7,7 @@
 		Slack,
 		Supabase,
 		Vercel,
-	} from "$lib/svgs/index";
+	} from "#lib/svgs/index.js";
 </script>
 
 <div aria-hidden={true} class="relative mx-auto flex size-96 **:fill-foreground @max-md:scale-85">

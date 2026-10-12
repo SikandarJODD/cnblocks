@@ -1,4 +1,4 @@
-import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
 import { resolveCommand } from "package-manager-detector/commands";
 import { Context } from "runed";
 import type { ReadableBoxedValues, WritableBoxedValues } from "svelte-toolbelt";

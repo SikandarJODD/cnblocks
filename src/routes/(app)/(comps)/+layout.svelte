@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { scrollY } from "svelte/reactivity/window";
-	import Button from "$lib/components/ui/button/button.svelte";
-	import CategoryNavigation from "$lib/web/layouts/CategoryNavigation.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import CategoryNavigation from "#lib/web/layouts/CategoryNavigation.svelte";
 	import type { Snippet } from "svelte";
 	import { fly } from "svelte/transition";
 

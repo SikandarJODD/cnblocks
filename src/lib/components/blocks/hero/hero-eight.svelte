@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 	import Rocket from "@lucide/svelte/icons/rocket";
@@ -29,7 +29,7 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 <!-- Scroll below to see the snippet code  -->

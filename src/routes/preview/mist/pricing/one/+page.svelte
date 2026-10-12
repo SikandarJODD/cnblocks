@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_pricing } from "$lib/all_mists/pricing";
+	import { all_mists_pricing } from "#lib/all_mists/pricing.js";
 
 	const block = all_mists_pricing.find((item) => item.slug === "one");
 

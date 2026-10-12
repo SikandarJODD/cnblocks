@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 
 	type Props = {

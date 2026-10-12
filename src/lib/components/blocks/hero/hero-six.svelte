@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability

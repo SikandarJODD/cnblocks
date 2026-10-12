@@ -1,10 +1,10 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { Marquee } from "$lib/components/magic/marquee";
-	import { ProgressiveBlur } from "$lib/components/magic/progressive-blur";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
+	import { ProgressiveBlur } from "#lib/components/magic/progressive-blur/index.js";
 	// Hero Header Component
 
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 	import { scrollY } from "svelte/reactivity/window";
@@ -36,7 +36,7 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 <div>

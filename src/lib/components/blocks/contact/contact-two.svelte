@@ -1,10 +1,10 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { Card } from "$lib/components/ui/card";
-	import Input from "$lib/components/ui/input/input.svelte";
-	import Label from "$lib/components/ui/label/label.svelte";
-	import * as Select from "$lib/components/ui/select/index.js";
-	import { Textarea } from "$lib/components/ui/textarea";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { Card } from "#lib/components/ui/card/index.js";
+	import Input from "#lib/components/ui/input/input.svelte";
+	import Label from "#lib/components/ui/label/label.svelte";
+	import * as Select from "#lib/components/ui/select/index.js";
+	import { Textarea } from "#lib/components/ui/textarea/index.js";
 </script>
 
 <section class="py-32">

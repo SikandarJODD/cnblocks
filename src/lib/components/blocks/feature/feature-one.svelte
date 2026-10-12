@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
+	import { Card, CardContent, CardHeader } from "#lib/components/ui/card/index.js";
 	import CardDecorator from "./card-decorator.svelte";
 	import Zap from "@lucide/svelte/icons/zap";
 	import Settings2 from "@lucide/svelte/icons/settings-2";

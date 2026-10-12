@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { content } from "$lib/all_blocks/content";
+	import { content } from "#lib/all_blocks/content.js";
 
 	const block = content.find((item) => item.title === "one");
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
-	import { all_mists_forgot_password } from "$lib/all_mists/forgot_password";
-	import { seoMetaTags } from "$lib/config/seo";
+	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
+	import { all_mists_forgot_password } from "#lib/all_mists/forgot_password.js";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

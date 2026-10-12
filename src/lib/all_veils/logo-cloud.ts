@@ -1,9 +1,9 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import LogoCloudOne from "$lib/components/veil/logo-cloud/logo-cloud-one.svelte";
-import LogoCloudOneCode from "$lib/components/veil/logo-cloud/logo-cloud-one.svelte?raw";
-import LogoCloudTwo from "$lib/components/veil/logo-cloud/logo-cloud-two.svelte";
-import LogoCloudTwoCode from "$lib/components/veil/logo-cloud/logo-cloud-two.svelte?raw";
+import LogoCloudOne from "#lib/components/veil/logo-cloud/logo-cloud-one.svelte";
+import LogoCloudOneCode from "#lib/components/veil/logo-cloud/logo-cloud-one.svelte?raw";
+import LogoCloudTwo from "#lib/components/veil/logo-cloud/logo-cloud-two.svelte";
+import LogoCloudTwoCode from "#lib/components/veil/logo-cloud/logo-cloud-two.svelte?raw";
 
 export const all_veils_logo_cloud: MistBlock[] = [
 	{

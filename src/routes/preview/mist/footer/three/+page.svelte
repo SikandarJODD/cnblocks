@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_footer } from "$lib/all_mists/footer";
+	import { all_mists_footer } from "#lib/all_mists/footer.js";
 
 	const block = all_mists_footer.find((item) => item.slug === "three");
 

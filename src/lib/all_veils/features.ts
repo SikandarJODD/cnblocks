@@ -1,11 +1,11 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import FeaturesOne from "$lib/components/veil/features/features-one.svelte";
-import FeaturesOneCode from "$lib/components/veil/features/features-one.svelte?raw";
-import FeaturesTwo from "$lib/components/veil/features/features-two.svelte";
-import FeaturesTwoCode from "$lib/components/veil/features/features-two.svelte?raw";
-import FeaturesThree from "$lib/components/veil/features/features-three.svelte";
-import FeaturesThreeCode from "$lib/components/veil/features/features-three.svelte?raw";
+import FeaturesOne from "#lib/components/veil/features/features-one.svelte";
+import FeaturesOneCode from "#lib/components/veil/features/features-one.svelte?raw";
+import FeaturesTwo from "#lib/components/veil/features/features-two.svelte";
+import FeaturesTwoCode from "#lib/components/veil/features/features-two.svelte?raw";
+import FeaturesThree from "#lib/components/veil/features/features-three.svelte";
+import FeaturesThreeCode from "#lib/components/veil/features/features-three.svelte?raw";
 
 export const all_veils_features: MistBlock[] = [
 	{

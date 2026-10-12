@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Badge } from "$lib/components/ui/badge";
-	import { Card, CardContent } from "$lib/components/ui/card";
+	import { Badge } from "#lib/components/ui/badge/index.js";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
 
 	interface UsageItem {
 		label: string;

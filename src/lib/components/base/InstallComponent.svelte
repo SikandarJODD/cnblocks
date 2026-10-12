@@ -6,12 +6,12 @@
 </script>
 
 <script lang="ts">
-	import { cn } from "$lib/utils";
-	import * as Tabs from "$lib/components/ui/tabs";
-	import { PMCommand } from "$lib/components/ui/pm-command";
-	import Steps from "$lib/components/markdown/Steps.svelte";
-	import Step from "$lib/components/markdown/Step.svelte";
-	import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
+	import { cn } from "#lib/utils.js";
+	import * as Tabs from "#lib/components/ui/tabs/index.js";
+	import { PMCommand } from "#lib/components/ui/pm-command/index.js";
+	import Steps from "#lib/components/markdown/Steps.svelte";
+	import Step from "#lib/components/markdown/Step.svelte";
+	import SingleCodeFilename from "#lib/components/ui/code/single-code-filename.svelte";
 
 	let { installUrl, class: className }: InstallComponentProps = $props();
 

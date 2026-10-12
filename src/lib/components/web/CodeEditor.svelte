@@ -2,12 +2,12 @@
 	import type { MistCode } from "./MistBlockPreview.svelte";
 	import ChevronDown from "@lucide/svelte/icons/chevron-down";
 	import Button from "../ui/button/button.svelte";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import Check from "@lucide/svelte/icons/check";
 	import Copy from "@lucide/svelte/icons/copy";
-	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
 	import { scale } from "svelte/transition";
-	import Code from "$lib/components/ui/code/code.svelte";
+	import Code from "#lib/components/ui/code/code.svelte.js";
 	let {
 		code,
 	}: {

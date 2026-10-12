@@ -1,13 +1,13 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import CallToActionOne from "$lib/components/veil/call-to-action/call-to-action-one.svelte";
-import CallToActionOneCode from "$lib/components/veil/call-to-action/call-to-action-one.svelte?raw";
-import CallToActionTwo from "$lib/components/veil/call-to-action/call-to-action-two.svelte";
-import CallToActionTwoCode from "$lib/components/veil/call-to-action/call-to-action-two.svelte?raw";
-import CallToActionThree from "$lib/components/veil/call-to-action/call-to-action-three.svelte";
-import CallToActionThreeCode from "$lib/components/veil/call-to-action/call-to-action-three.svelte?raw";
-import CallToActionFour from "$lib/components/veil/call-to-action/call-to-action-four.svelte";
-import CallToActionFourCode from "$lib/components/veil/call-to-action/call-to-action-four.svelte?raw";
+import CallToActionOne from "#lib/components/veil/call-to-action/call-to-action-one.svelte";
+import CallToActionOneCode from "#lib/components/veil/call-to-action/call-to-action-one.svelte?raw";
+import CallToActionTwo from "#lib/components/veil/call-to-action/call-to-action-two.svelte";
+import CallToActionTwoCode from "#lib/components/veil/call-to-action/call-to-action-two.svelte?raw";
+import CallToActionThree from "#lib/components/veil/call-to-action/call-to-action-three.svelte";
+import CallToActionThreeCode from "#lib/components/veil/call-to-action/call-to-action-three.svelte?raw";
+import CallToActionFour from "#lib/components/veil/call-to-action/call-to-action-four.svelte";
+import CallToActionFourCode from "#lib/components/veil/call-to-action/call-to-action-four.svelte?raw";
 
 export const all_veils_call_to_action: MistBlock[] = [
 	{

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { hero } from "$lib/all_blocks/hero";
+	import { hero } from "#lib/all_blocks/hero.js";
 
 	const block = hero.find((item) => item.title === "one");
 

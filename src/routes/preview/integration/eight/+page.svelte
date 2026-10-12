@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { integration } from "$lib/all_blocks/integration";
+	import { integration } from "#lib/all_blocks/integration.js";
 
 	const block = integration.find((item) => item.title === "eight");
 

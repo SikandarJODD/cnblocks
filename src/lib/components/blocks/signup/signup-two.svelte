@@ -1,7 +1,7 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
-	import Input from "$lib/components/ui/input/input.svelte";
-	import Label from "$lib/components/ui/label/label.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import Input from "#lib/components/ui/input/input.svelte";
+	import Label from "#lib/components/ui/label/label.svelte";
 </script>
 
 <section class="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">

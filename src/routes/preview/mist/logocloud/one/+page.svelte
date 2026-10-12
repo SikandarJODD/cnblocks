@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_logocloud } from "$lib/all_mists/logocloud";
+	import { all_mists_logocloud } from "#lib/all_mists/logocloud.js";
 
 	const block = all_mists_logocloud.find((item) => item.slug === "one");
 

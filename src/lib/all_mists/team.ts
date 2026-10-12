@@ -1,8 +1,8 @@
-import type { MistBlock } from "$lib/types/mists";
-import TeamOne from "$lib/components/mist/mteam/one.svelte";
-import TeamTwo from "$lib/components/mist/mteam/two.svelte";
-import TeamOneCode from "$lib/components/mist/mteam/one.svelte?raw";
-import TeamTwoCode from "$lib/components/mist/mteam/two.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import TeamOne from "#lib/components/mist/mteam/one.svelte";
+import TeamTwo from "#lib/components/mist/mteam/two.svelte";
+import TeamOneCode from "#lib/components/mist/mteam/one.svelte?raw";
+import TeamTwoCode from "#lib/components/mist/mteam/two.svelte?raw";
 
 export const all_mists_team: MistBlock[] = [
 	{

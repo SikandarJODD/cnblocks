@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Card from "$lib/components/ui/card/card.svelte";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Check from "@lucide/svelte/icons/check";
 </script>
 

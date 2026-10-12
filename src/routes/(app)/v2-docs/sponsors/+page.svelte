@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SEOComponent from "$lib/seo/SEO.svelte";
-	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
 	import {
 		H2,
 		H3,
@@ -8,9 +8,9 @@
 		Link,
 		UnorderedList,
 		ListItem,
-	} from "$lib/components/markdown/index";
-	import { docsV2PageMap } from "$lib/config/docs-v2";
-	import Button from "$lib/components/ui/button/button.svelte";
+	} from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import Button from "#lib/components/ui/button/button.svelte";
 
 	const pageMeta = docsV2PageMap.sponsors;
 

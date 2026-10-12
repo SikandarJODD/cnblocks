@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Check from "@lucide/svelte/icons/check";
 	import Minus from "@lucide/svelte/icons/minus";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 
 	type FeatureKey = "integrations" | "apiCalls" | "support" | "analytics" | "webhooks" | "sso";
 

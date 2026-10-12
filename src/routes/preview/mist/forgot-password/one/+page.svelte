@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_forgot_password } from "$lib/all_mists/forgot_password";
+	import { all_mists_forgot_password } from "#lib/all_mists/forgot_password.js";
 
 	const block = all_mists_forgot_password.find((item) => item.slug === "one");
 

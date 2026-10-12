@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { forgot_password } from "$lib/all_blocks/forgot-password";
+	import { forgot_password } from "#lib/all_blocks/forgot-password.js";
 
 	const block = forgot_password.find((item) => item.title === "two");
 

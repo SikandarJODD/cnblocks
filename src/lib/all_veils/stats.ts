@@ -1,13 +1,13 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import StatsOne from "$lib/components/veil/stats/stats-one.svelte";
-import StatsOneCode from "$lib/components/veil/stats/stats-one.svelte?raw";
-import StatsTwo from "$lib/components/veil/stats/stats-two.svelte";
-import StatsTwoCode from "$lib/components/veil/stats/stats-two.svelte?raw";
-import StatsThree from "$lib/components/veil/stats/stats-three.svelte";
-import StatsThreeCode from "$lib/components/veil/stats/stats-three.svelte?raw";
-import StatsFour from "$lib/components/veil/stats/stats-four.svelte";
-import StatsFourCode from "$lib/components/veil/stats/stats-four.svelte?raw";
+import StatsOne from "#lib/components/veil/stats/stats-one.svelte";
+import StatsOneCode from "#lib/components/veil/stats/stats-one.svelte?raw";
+import StatsTwo from "#lib/components/veil/stats/stats-two.svelte";
+import StatsTwoCode from "#lib/components/veil/stats/stats-two.svelte?raw";
+import StatsThree from "#lib/components/veil/stats/stats-three.svelte";
+import StatsThreeCode from "#lib/components/veil/stats/stats-three.svelte?raw";
+import StatsFour from "#lib/components/veil/stats/stats-four.svelte";
+import StatsFourCode from "#lib/components/veil/stats/stats-four.svelte?raw";
 
 export const all_veils_stats: MistBlock[] = [
 	{

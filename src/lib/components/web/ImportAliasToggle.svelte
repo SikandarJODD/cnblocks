@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import {
 		Tooltip,
 		TooltipContent,
 		TooltipProvider,
 		TooltipTrigger,
-	} from "$lib/components/ui/tooltip";
+	} from "#lib/components/ui/tooltip/index.js";
 	import type { ImportAliasStyle } from "./import-alias";
 
 	let {

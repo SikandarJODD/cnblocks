@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Spotify } from "$lib/svgs";
+	import { Spotify } from "#lib/svgs/index.js";
 </script>
 
 <section class="py-16 md:py-32">

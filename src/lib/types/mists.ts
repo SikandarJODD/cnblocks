@@ -1,4 +1,4 @@
-import type { SupportedLanguage } from "$lib/components/ui/code/shiki";
+import type { SupportedLanguage } from "#lib/components/ui/code/shiki.js";
 
 export type PreviewMode = "inline" | "iframe";
 

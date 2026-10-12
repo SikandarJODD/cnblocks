@@ -1,7 +1,7 @@
 ﻿<script lang="ts">
-	import { all_veils_comparator } from "$lib/all_veils/comparator";
-	import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { all_veils_comparator } from "#lib/all_veils/comparator.js";
+	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

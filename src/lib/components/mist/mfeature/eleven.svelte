@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Card from "$lib/components/ui/card/card.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
 
 	import ArrowUp from "@lucide/svelte/icons/arrow-up";
 	import Globe from "@lucide/svelte/icons/globe";
 	import Plus from "@lucide/svelte/icons/plus";
 	import Sparkles from "@lucide/svelte/icons/sparkles";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 
 	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";
 	const BHIDE_SVELTE = "https://avatars.githubusercontent.com/u/93428946?v=4";
