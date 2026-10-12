@@ -14,6 +14,7 @@
 	import { scale } from "svelte/transition";
 	import type { Component } from "svelte";
 	import { PersistedState, watch } from "runed";
+	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
 
 	interface BlockPreviewProps {
 		itemId?: string;
@@ -57,7 +58,7 @@
 	const LG_SIZE = 82;
 
 	let width = $state(DEFAULT_SIZE);
-	let mode = $state("preview");
+	let mode = $state<"preview" | "code">("preview");
 	let iframeHeight = $state(0);
 	let isLoading = $state(true);
 	let importAliasStyle = new PersistedState<ImportAliasStyle>(
@@ -153,7 +154,7 @@
 		</div>
 
 		<div
-			class="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pr-6 pl-8 [--color-border:var(--color-zinc-200)] md:py-2 lg:pr-2 lg:pl-6 dark:[--color-border:var(--color-zinc-800)]"
+			class="relative z-10 mx-auto hidden max-w-7xl justify-between py-1.5 pr-6 pl-8 [--color-border:var(--color-zinc-200)] md:flex md:py-2 lg:pr-2 lg:pl-6 dark:[--color-border:var(--color-zinc-800)]"
 		>
 			<div class="-ml-3 flex items-center gap-2">
 				{#if code}
@@ -488,6 +489,8 @@
 				{/if}
 			</div>
 		</div>
+
+		<MobileBlockPreviewToolbar bind:mode {title} {preview} {itemId} code={displayedCode} />
 	</div>
 
 	<div class="relative">
@@ -500,7 +503,7 @@
 			></div>
 		</div>
 
-		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:border-x lg:px-0">
+		<div class="relative z-10 mx-auto max-w-7xl px-0 md:px-4 lg:border-x lg:px-0">
 			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
 				{#if shouldRenderInIframe}
 					<PaneGroup direction="horizontal">
