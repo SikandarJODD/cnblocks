@@ -21,10 +21,10 @@
 	import { toggleMode, mode } from "mode-watcher";
 	import CaretDown from "@lucide/svelte/icons/chevron-down";
 	import { NavigationMenu } from "bits-ui";
-	import cn from "clsx";
 	import Badge from "#lib/components/ui/badge/badge.svelte";
 	import McpDialog from "./MCPDialog.svelte";
 	import { page } from "$app/state";
+	import { cn } from "cn";
 
 	type ListItemProps = {
 		className?: string;
