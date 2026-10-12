@@ -544,7 +544,7 @@
 							in:scale={{ start: 0.85 }}
 							class={cn(
 								"theme-container relative w-full overflow-hidden [contain:paint]",
-								category === "header" && "min-h-80"
+								category === "header" && "min-h-80 bg-background"
 							)}
 						>
 							<BlockComponent></BlockComponent>
