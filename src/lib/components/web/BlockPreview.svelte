@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
-	import { Pane, PaneGroup, PaneResizer } from "paneforge";
-	import { MediaQuery } from "svelte/reactivity";
 	import Separator from "../ui/separator/separator.svelte";
 	import Button from "../ui/button/button.svelte";
 	import Maximize from "@lucide/svelte/icons/maximize";
@@ -11,7 +9,7 @@
 	import { transformCodeImports, type ImportAliasStyle } from "./import-alias";
 	import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
-	import type { Component } from "svelte";
+	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
 
@@ -26,7 +24,6 @@
 		code: MistCode | MistCode[];
 		preview: string;
 		previewMode?: "inline" | "iframe";
-		previewHeight?: number;
 		title: string;
 		category: string;
 		previewOnly?: boolean;
@@ -38,7 +35,6 @@
 		code,
 		preview,
 		previewMode = "inline",
-		previewHeight,
 		title = "Hero Section",
 		category = "Components",
 		previewOnly,
@@ -63,31 +59,9 @@
 	);
 	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
 
-	let ref: ReturnType<typeof Pane> | undefined = $state(undefined);
-
-	let large = new MediaQuery("min-width: 1024px");
-
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
-	// onMount(() => {
-	//   if (iframeRef) {
-	//     let iframe = iframeRef;
-	//     setTimeout(() => {
-	//       isLoading = false;
-	//       let contentHeight = iframe!.contentWindow!.document.body.scrollHeight;
-	//       iframeHeight = contentHeight + 20;
-	//     }, 3000);
-	//   }
-	// });
-	// $effect(() => {
-	//   const iframe = iframeRef;
-	//   if (iframe) {
-	//     iframe.addEventListener("load", () => {
-	//       isLoading = false;
-	//       let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
-	//       iframeHeight = contentHeight + 20;
-	//     });
-	//   }
-	// });
+	let iframeResizeObserver: ResizeObserver | undefined;
+	let removeIframeWheelListener: (() => void) | undefined;
 
 	import {
 		Tooltip,
@@ -100,15 +74,63 @@
 	let showIframeComp = $derived(previewMode === "iframe");
 	let forcesIframe = $derived(previewMode === "iframe");
 	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
-	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
 
-	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {
+	function setPreviewWidth(size: number) {
+		width = size;
+		iframeHeight = 0;
+	}
+
+	function cleanupIframe() {
+		iframeResizeObserver?.disconnect();
+		iframeResizeObserver = undefined;
+		removeIframeWheelListener?.();
+		removeIframeWheelListener = undefined;
+	}
+
+	function setupIframeAutoHeight(iframe: HTMLIFrameElement | null) {
 		const iframeDocument = iframe?.contentDocument;
-		if (!iframeDocument) return;
+		const iframeWindow = iframe?.contentWindow;
+		if (!iframeDocument || !iframeWindow) return;
+
+		cleanupIframe();
 
 		iframeDocument.documentElement.classList.add("no-scrollbar");
 		iframeDocument.body.classList.add("no-scrollbar");
+		iframeDocument.documentElement.style.overflow = "hidden";
+		iframeDocument.body.style.overflow = "hidden";
+
+		const syncHeight = () => {
+			const contentHeight = iframeDocument.documentElement.scrollHeight;
+			if (contentHeight > 0 && contentHeight !== iframeHeight) {
+				iframeHeight = contentHeight;
+			}
+		};
+
+		iframeResizeObserver = new ResizeObserver(syncHeight);
+		iframeResizeObserver.observe(iframeDocument.documentElement);
+		iframeResizeObserver.observe(iframeDocument.body);
+
+		const forwardWheelToPage = (event: WheelEvent) => {
+			if (event.ctrlKey) return;
+
+			const multiplier =
+				event.deltaMode === WheelEvent.DOM_DELTA_LINE
+					? 16
+					: event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+						? window.innerHeight
+						: 1;
+
+			event.preventDefault();
+			window.scrollBy(event.deltaX * multiplier, event.deltaY * multiplier);
+		};
+
+		iframeWindow.addEventListener("wheel", forwardWheelToPage, { passive: false });
+		removeIframeWheelListener = () =>
+			iframeWindow.removeEventListener("wheel", forwardWheelToPage);
+		syncHeight();
 	}
+
+	onDestroy(cleanupIframe);
 
 	watch(
 		() => forcesIframe,
@@ -116,6 +138,13 @@
 			if (isForced && !showIframeComp) {
 				showIframeComp = true;
 			}
+		}
+	);
+
+	watch(
+		() => shouldRenderInIframe,
+		(isRendered) => {
+			if (!isRendered) cleanupIframe();
 		}
 	);
 </script>
@@ -224,11 +253,7 @@
 							<Tooltip>
 								<TooltipTrigger
 									><Button
-										onclick={() => {
-											if (ref) {
-												ref.resize(DEFAULT_SIZE);
-											}
-										}}
+										onclick={() => setPreviewWidth(DEFAULT_SIZE)}
 										size="icon"
 										class="relative  h-8 w-8 cursor-pointer shadow-none"
 										variant="outline"
@@ -272,11 +297,7 @@
 							<Tooltip>
 								<TooltipTrigger>
 									<Button
-										onclick={() => {
-											if (ref) {
-												ref.resize(MD_SIZE);
-											}
-										}}
+										onclick={() => setPreviewWidth(MD_SIZE)}
 										size="icon"
 										class="relative h-8 w-8 cursor-pointer shadow-none"
 										variant="outline"
@@ -317,11 +338,7 @@
 							<Tooltip>
 								<TooltipTrigger
 									><Button
-										onclick={() => {
-											if (ref) {
-												ref.resize(SM_SIZE);
-											}
-										}}
+										onclick={() => setPreviewWidth(SM_SIZE)}
 										size="icon"
 										class="relative h-8 w-8 cursor-pointer shadow-none"
 										variant="outline"
@@ -466,65 +483,35 @@
 		<div class="relative z-10 mx-auto max-w-7xl px-0 md:px-4 lg:border-x lg:px-0">
 			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
 				{#if shouldRenderInIframe}
-					<PaneGroup direction="horizontal">
-						<Pane
-							bind:this={ref}
+					<div
+						class="h-fit border-r"
+						style:width={`${width}%`}
+					>
+						<iframe
+							loading="lazy"
+							allowFullScreen
+							bind:this={iframeRef}
+							{title}
+							height={iframeHeight}
+							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
+							src={preview}
 							id={`block-${title}`}
-							order={1}
-							onResize={(size) => {
-								width = Number(size);
+							style="--iframe-height: {iframeHeight}px;"
+							onload={() => {
+								isLoading = false;
+								setupIframeAutoHeight(iframeRef);
 							}}
-							defaultSize={DEFAULT_SIZE}
-							minSize={SM_SIZE}
-							class="h-fit border-r"
-						>
-							<iframe
-								loading="lazy"
-								allowFullScreen
-								bind:this={iframeRef}
-								{title}
-								height={resolvedIframeHeight}
-								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
-								src={preview}
-								id={`block-${title}`}
-								style="
-                --iframe-height: {resolvedIframeHeight}px;"
-								onload={() => {
-									isLoading = false;
-									applyIframeScrollbarStyles(iframeRef);
-									if (!previewHeight) {
-										let contentHeight =
-											iframeRef?.contentWindow?.document.body.scrollHeight;
-										if (contentHeight) {
-											iframeHeight = contentHeight + 20;
-										}
-									} else {
-										iframeHeight = previewHeight;
-									}
-								}}
-							></iframe>
-							{#if isLoading}
+						></iframe>
+						{#if isLoading}
+							<div
+								class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
+							>
 								<div
-									class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
-								>
-									<div
-										class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
-									></div>
-								</div>
-							{/if}
-						</Pane>
-						{#if large}
-							<PaneResizer
-								class="relative w-2 before:absolute before:inset-0 before:m-auto before:h-12 before:w-1 before:rounded-full before:bg-zinc-300 before:transition-[height,background] hover:before:h-16 hover:before:bg-zinc-400 focus:before:bg-zinc-400 dark:before:bg-zinc-600 dark:hover:before:bg-zinc-500 dark:focus:before:bg-zinc-400"
-							/>
-							<Pane
-								id={`code-${title}`}
-								order={2}
-								defaultSize={100 - DEFAULT_SIZE}
-								class="-mr-[0.5px] ml-px"
-							></Pane>
+									class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
+								></div>
+							</div>
 						{/if}
-					</PaneGroup>
+					</div>
 				{:else}
 					<div in:scale={{ start: 0.85 }} class="theme-container">
 						<BlockComponent></BlockComponent>

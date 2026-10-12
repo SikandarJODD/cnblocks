@@ -10,12 +10,12 @@
 </script>
 
 <div>
-	<VeilCategoryNav />
-	<section>
+	<!-- <VeilCategoryNav /> -->
+	<!-- <section>
 		<div
 			class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
 		></div>
-	</section>
+	</section> -->
 	{@render children()}
 	{#if visible}
 		{@render scrollToTop()}
@@ -23,7 +23,7 @@
 </div>
 
 {#snippet scrollToTop()}
-	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-4 bottom-4 z-50">
+	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6 bottom-18 z-50">
 		<Button
 			size="icon"
 			variant="secondary"

@@ -36,7 +36,7 @@
 							<Sidebar.MenuSubButton
 								href={library.href}
 								isActive={activeLibrary?.key === library.key}
-								class="h-6 px-2 text-[13px]! font-sans font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+								class="h-6 px-2 text-xs! font-mono! font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-ink dark:data-active:text-primary"
 							>
 								<span>{library.title}</span>
 								<Kbd.Root class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums">

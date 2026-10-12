@@ -26,7 +26,7 @@
 </script>
 
 {#if Array.isArray(code)}
-	<div class="flex">
+	<div class="flex border border-muted rounded-xl overflow-hidden">
 		<div
 			class="hidden w-56 bg-neutral-50 font-mono text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25 dark:text-white"
 		>
@@ -94,7 +94,7 @@
 				<!-- <CodeBlock code={code[selectedIndex].code} /> -->
 				<Code
 					lang={code[selectedIndex]?.lang || "svelte"}
-					class="rounded-none border-none!"
+					class="rounded-none border-none! overflow-hidden"
 					code={code[selectedIndex].code}
 					highlight={code[selectedIndex]?.highlight}
 				/>
@@ -104,9 +104,9 @@
 {:else}
 	<!-- {@render CopyButton()} -->
 	<!-- <CodeBlock code={code.code} /> -->
-	<div class="relative h-144 sm:w-full">
+	<div class="relative h-144 sm:w-full border border-muted rounded-xl overflow-hidden mx-2">
 		<Code
-			class="rounded-none border-none! outline-none"
+			class="rounded-none border-none! outline-none overflow-hidden"
 			lang={code?.lang || "svelte"}
 			code={code.code}
 			highlight={code?.highlight}

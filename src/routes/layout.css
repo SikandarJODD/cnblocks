@@ -45,6 +45,11 @@
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
 
+	/* Ink colors */
+	--ink: lab(36 55.64 -107.68);
+	--ink-dim: lab(93 0 -8);
+	--info: oklch(0.67 0.17 244.98);
+
 	/* Rainbow Button Colors */
 	--color-1: 0 100% 63%;
 	--color-2: 270 100% 63%;
@@ -129,6 +134,11 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 	--speed: 2s;
+
+	/* Ink Colors */
+	--color-ink: var(--ink);
+	--color-ink-dim: var(--ink-dim);
+	--color-info: var(--info);
 
 	/* Max Height of Code */
 	--pre-max-height: 500px;
