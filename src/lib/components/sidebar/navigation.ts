@@ -74,6 +74,7 @@ export const primaryNavigation: NavigationItem[] = [
 	{ title: "Pages", href: "/" },
 	{ title: "Templates", href: "/templates" },
 	{ title: "Docs", href: "/docs" },
+	{ title: "More Projects", href: "/projects" },
 ];
 
 export const docsNavigation: NavigationItem[] = [

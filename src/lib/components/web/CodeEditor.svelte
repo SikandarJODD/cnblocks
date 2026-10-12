@@ -26,7 +26,7 @@
 </script>
 
 {#if Array.isArray(code)}
-	<div class="flex w-full min-w-0 max-w-full overflow-hidden rounded-xl border border-muted">
+	<div class="flex w-full min-w-0 mx-2 max-w-full overflow-hidden rounded-xl border border-muted">
 		<div
 			class="hidden w-56 shrink-0 bg-neutral-50 font-mono text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25 dark:text-white"
 		>
