@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import Badge from "$lib/components/ui/badge/badge.svelte";
-	import { cn } from "$lib/utils";
+	import Badge from "#lib/components/ui/badge/badge.svelte";
+	import { cn } from "#lib/utils.js";
 	type Route = {
 		name: string;
 		slug: string;

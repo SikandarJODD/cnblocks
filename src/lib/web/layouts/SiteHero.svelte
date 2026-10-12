@@ -1,7 +1,7 @@
 <script>
-	import GridPattern from "$lib/components/magic/GridPattern.svelte";
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { cn } from "$lib/utils";
+	import GridPattern from "#lib/components/magic/GridPattern.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { cn } from "#lib/utils.js";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 </script>
 

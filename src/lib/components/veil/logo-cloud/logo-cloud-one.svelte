@@ -8,7 +8,7 @@
 		Beacon,
 		VercelFull,
 		SupabaseFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 <section class="@container bg-background py-12">

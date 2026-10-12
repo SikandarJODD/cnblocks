@@ -1,8 +1,8 @@
 <script lang="ts">
-	import SEOComponent from "$lib/seo/SEO.svelte";
-	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
-	import type { CodeBlock } from "$lib/components/ui/code";
-	import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import type { CodeBlock } from "#lib/components/ui/code/index.js";
+	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import {
 		H2,
 		H3,
@@ -14,9 +14,9 @@
 		Tr,
 		Th,
 		Td,
-	} from "$lib/components/markdown/index";
-	import { docsV2PageMap } from "$lib/config/docs-v2";
-	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
+	} from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
 
 	const pageMeta = docsV2PageMap.veilTheme;
 	const buttonSourceCode = [
@@ -66,7 +66,7 @@
 \<\/script\>
 
 \<\script lang="ts"\>
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		class: className,
@@ -141,7 +141,7 @@ export { Button };`,
 
 \<\script lang="ts"\>
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -162,7 +162,7 @@ export { Button };`,
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -183,7 +183,7 @@ export { Button };`,
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -212,7 +212,7 @@ export { Button };`,
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -232,7 +232,7 @@ export { Button };`,
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -252,7 +252,7 @@ export { Button };`,
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -300,7 +300,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from "svelte/elements";
 	import type { WithElementRef } from "bits-ui";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	type InputType = Exclude<HTMLInputTypeAttribute, "file">;
 
@@ -367,7 +367,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef, WithoutChildren } from "bits-ui";
 	import type { HTMLTextareaAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -578,7 +578,7 @@ export {
 		<DocsCodeBlock
 			fileName="button-usage.svelte"
 			code={`\<\script lang="ts"\>
-	import { Button } from "$lib/components/ui/veil/button";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 \<\/script\>
 
 <Button variant="default">Default Button</Button>
@@ -602,7 +602,7 @@ export {
 			<DocsCodeBlock
 				fileName="card-usage.svelte"
 				code={`\<\script lang="ts"\>
-	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/veil/card";
+	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/veil/card/index.js";
 \<\/script\>
 
 <Card variant="default">
@@ -635,7 +635,7 @@ export {
 		<DocsCodeBlock
 			fileName="input-usage.svelte"
 			code={`\<\script lang="ts"\>
-	import { Input } from "$lib/components/ui/veil/input";
+	import { Input } from "#lib/components/ui/veil/input/index.js";
 \<\/script\>
 
 <Input type="email" placeholder="you@example.com" />
@@ -658,7 +658,7 @@ export {
 			<DocsCodeBlock
 				fileName="textarea-usage.svelte"
 				code={`\<\script lang="ts"\>
-	import { Textarea } from "$lib/components/ui/veil/textarea";
+	import { Textarea } from "#lib/components/ui/veil/textarea/index.js";
 \<\/script\>
 
 <Textarea placeholder="Enter details..." />

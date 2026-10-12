@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 	import { mode, resetMode, setMode } from "mode-watcher";
 	import Monitor from "@lucide/svelte/icons/monitor";
 	import Sun from "@lucide/svelte/icons/sun";

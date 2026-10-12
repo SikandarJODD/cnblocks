@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Card from "$lib/components/ui/card/card.svelte";
-	import CompareImgBlock from "$lib/components/magic/CompareImgBlock.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
+	import CompareImgBlock from "#lib/components/magic/CompareImgBlock.svelte";
 </script>
 
 <section data-theme="mist" class="theme-container">

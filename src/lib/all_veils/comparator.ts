@@ -1,11 +1,11 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import ComparatorOne from "$lib/components/veil/comparator/comparator-one.svelte";
-import ComparatorOneCode from "$lib/components/veil/comparator/comparator-one.svelte?raw";
-import ComparatorTwo from "$lib/components/veil/comparator/comparator-two.svelte";
-import ComparatorTwoCode from "$lib/components/veil/comparator/comparator-two.svelte?raw";
-import ComparatorThree from "$lib/components/veil/comparator/comparator-three.svelte";
-import ComparatorThreeCode from "$lib/components/veil/comparator/comparator-three.svelte?raw";
+import ComparatorOne from "#lib/components/veil/comparator/comparator-one.svelte";
+import ComparatorOneCode from "#lib/components/veil/comparator/comparator-one.svelte?raw";
+import ComparatorTwo from "#lib/components/veil/comparator/comparator-two.svelte";
+import ComparatorTwoCode from "#lib/components/veil/comparator/comparator-two.svelte?raw";
+import ComparatorThree from "#lib/components/veil/comparator/comparator-three.svelte";
+import ComparatorThreeCode from "#lib/components/veil/comparator/comparator-three.svelte?raw";
 
 export const all_veils_comparator: MistBlock[] = [
 	{

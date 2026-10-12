@@ -1,11 +1,11 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import ForgotPasswordOne from "$lib/components/veil/forgot-password/forgot-password-one.svelte";
-import ForgotPasswordOneCode from "$lib/components/veil/forgot-password/forgot-password-one.svelte?raw";
-import ForgotPasswordTwo from "$lib/components/veil/forgot-password/forgot-password-two.svelte";
-import ForgotPasswordTwoCode from "$lib/components/veil/forgot-password/forgot-password-two.svelte?raw";
-import ForgotPasswordThree from "$lib/components/veil/forgot-password/forgot-password-three.svelte";
-import ForgotPasswordThreeCode from "$lib/components/veil/forgot-password/forgot-password-three.svelte?raw";
+import ForgotPasswordOne from "#lib/components/veil/forgot-password/forgot-password-one.svelte";
+import ForgotPasswordOneCode from "#lib/components/veil/forgot-password/forgot-password-one.svelte?raw";
+import ForgotPasswordTwo from "#lib/components/veil/forgot-password/forgot-password-two.svelte";
+import ForgotPasswordTwoCode from "#lib/components/veil/forgot-password/forgot-password-two.svelte?raw";
+import ForgotPasswordThree from "#lib/components/veil/forgot-password/forgot-password-three.svelte";
+import ForgotPasswordThreeCode from "#lib/components/veil/forgot-password/forgot-password-three.svelte?raw";
 
 export const all_veils_forgot_password: MistBlock[] = [
 	{

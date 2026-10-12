@@ -1,9 +1,9 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import IntegrationOne from "$lib/components/veil/integration/integration-one.svelte";
-import IntegrationOneCode from "$lib/components/veil/integration/integration-one.svelte?raw";
-import IntegrationTwo from "$lib/components/veil/integration/integration-two.svelte";
-import IntegrationTwoCode from "$lib/components/veil/integration/integration-two.svelte?raw";
+import IntegrationOne from "#lib/components/veil/integration/integration-one.svelte";
+import IntegrationOneCode from "#lib/components/veil/integration/integration-one.svelte?raw";
+import IntegrationTwo from "#lib/components/veil/integration/integration-two.svelte";
+import IntegrationTwoCode from "#lib/components/veil/integration/integration-two.svelte?raw";
 
 export const all_veils_integration: MistBlock[] = [
 	{

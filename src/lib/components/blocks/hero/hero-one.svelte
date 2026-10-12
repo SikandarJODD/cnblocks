@@ -1,12 +1,12 @@
 <script lang="ts">
 	// Shadcn Svelte UI Button Component
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 
 	// You can store Hero Header Component in seperate file
 	// I have used snippet for better readability
 
 	// Hero Header Component
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
@@ -19,10 +19,10 @@
 	};
 
 	let menuItems: MenuItem[] = [
-		{ name: "Features", href: "#a" },
-		{ name: "Solution", href: "#a" },
-		{ name: "Pricing", href: "#a" },
-		{ name: "About", href: "#a" },
+		{ name: "Features", href: "/" },
+		{ name: "Solution", href: "/" },
+		{ name: "Pricing", href: "/" },
+		{ name: "About", href: "/" },
 	];
 
 	let menuState = $state(false);
@@ -44,7 +44,7 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 <div>
@@ -72,7 +72,7 @@
 					<div class="text-center sm:mx-auto lg:mt-0 lg:mr-auto">
 						<div>
 							<a
-								href="#link"
+								href="/"
 								class="group mx-auto flex w-fit items-center gap-4 rounded-full border bg-muted p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 hover:bg-background dark:border-t-white/5 dark:shadow-zinc-950 dark:hover:border-t-border"
 							>
 								<span class="text-sm text-foreground"

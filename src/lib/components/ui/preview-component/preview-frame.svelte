@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import type { Snippet } from "svelte";
-	import * as Frame from "$lib/components/ui/frame/index.js";
-	import { Button } from "$lib/components/ui/button";
-	import * as Add from "$lib/components/ui/add";
-	import { AGENTS, type Agent } from "$lib/components/ui/add";
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-	import type { CodeBlock } from "$lib/components/ui/code";
-	import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
-	import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
+	import * as Frame from "#lib/components/ui/frame/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import * as Add from "#lib/components/ui/add/index.js";
+	import { AGENTS, type Agent } from "#lib/components/ui/add/index.js";
+	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
+	import type { CodeBlock } from "#lib/components/ui/code/index.js";
+	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
+	import SingleCodeFilename from "#lib/components/ui/code/single-code-filename.svelte";
 	import { resolveCommand } from "package-manager-detector/commands";
-	import { getRegistryItemUrl } from "$lib/utils/registry-url";
-	import { cn } from "$lib/utils";
+	import { getRegistryItemUrl } from "#lib/utils/registry-url.js";
+	import { cn } from "#lib/utils.js";
 	import Eye from "@lucide/svelte/icons/eye";
 	import CodeXml from "@lucide/svelte/icons/code-xml";
 	import Maximize from "@lucide/svelte/icons/maximize";

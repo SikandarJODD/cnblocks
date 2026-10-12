@@ -1,6 +1,6 @@
 import type { Component } from "svelte";
 import type { SEO } from "./seo";
-import type { CodeBlock } from "$lib/components/ui/code";
+import type { CodeBlock } from "#lib/components/ui/code/index.js";
 
 export type ComponentBadge = "new" | "beta" | "updated" | "deprecated";
 

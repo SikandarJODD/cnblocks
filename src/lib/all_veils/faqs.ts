@@ -1,13 +1,13 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import FaqsOne from "$lib/components/veil/faqs/faqs-one.svelte";
-import FaqsOneCode from "$lib/components/veil/faqs/faqs-one.svelte?raw";
-import FaqsTwo from "$lib/components/veil/faqs/faqs-two.svelte";
-import FaqsTwoCode from "$lib/components/veil/faqs/faqs-two.svelte?raw";
-import FaqsThree from "$lib/components/veil/faqs/faqs-three.svelte";
-import FaqsThreeCode from "$lib/components/veil/faqs/faqs-three.svelte?raw";
-import FaqsFour from "$lib/components/veil/faqs/faqs-four.svelte";
-import FaqsFourCode from "$lib/components/veil/faqs/faqs-four.svelte?raw";
+import FaqsOne from "#lib/components/veil/faqs/faqs-one.svelte";
+import FaqsOneCode from "#lib/components/veil/faqs/faqs-one.svelte?raw";
+import FaqsTwo from "#lib/components/veil/faqs/faqs-two.svelte";
+import FaqsTwoCode from "#lib/components/veil/faqs/faqs-two.svelte?raw";
+import FaqsThree from "#lib/components/veil/faqs/faqs-three.svelte";
+import FaqsThreeCode from "#lib/components/veil/faqs/faqs-three.svelte?raw";
+import FaqsFour from "#lib/components/veil/faqs/faqs-four.svelte";
+import FaqsFourCode from "#lib/components/veil/faqs/faqs-four.svelte?raw";
 
 export const all_veils_faqs: MistBlock[] = [
 	{

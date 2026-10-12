@@ -1,6 +1,6 @@
-import type { MistBlock } from "$lib/types/mists";
-import LoginOne from "$lib/components/mist/mlogin/one.svelte";
-import LoginOneCode from "$lib/components/mist/mlogin/one.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import LoginOne from "#lib/components/mist/mlogin/one.svelte";
+import LoginOneCode from "#lib/components/mist/mlogin/one.svelte?raw";
 
 export const all_mists_login: MistBlock[] = [
 	{

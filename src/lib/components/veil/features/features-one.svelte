@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Card } from "$lib/components/ui/veil/card";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 	import Shield from "@lucide/svelte/icons/shield";
-	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "$lib/svgs/index";
+	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "#lib/svgs/index.js";
 </script>
 
 <section class="@container bg-background py-24">

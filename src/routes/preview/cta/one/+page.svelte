@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cta } from "$lib/all_blocks/cta";
+	import { cta } from "#lib/all_blocks/cta.js";
 
 	const block = cta.find((item) => item.title === "one");
 

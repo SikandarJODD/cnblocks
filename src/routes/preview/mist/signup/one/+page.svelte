@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_signup } from "$lib/all_mists/signup";
+	import { all_mists_signup } from "#lib/all_mists/signup.js";
 
 	const block = all_mists_signup.find((item) => item.slug === "one");
 

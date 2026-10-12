@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import type { LucideIcon } from "@lucide/svelte";
 	import Calendar from "@lucide/svelte/icons/calendar";
 	import MapIcon from "@lucide/svelte/icons/map";
 
-	import FeatureCard from "$lib/components/blocks/feature/feature-card.svelte";
-	import * as Card from "$lib/components/ui/card/index.js";
+	import FeatureCard from "#lib/components/blocks/feature/feature-card.svelte";
+	import * as Card from "#lib/components/ui/card/index.js";
 
 	interface CircleConfig {
 		pattern: "none" | "border" | "primary" | "blue";

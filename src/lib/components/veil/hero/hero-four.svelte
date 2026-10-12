@@ -1,6 +1,6 @@
 <script lang="ts">
-	import HeaderFour from "$lib/components/veil/header/header-four.svelte";
-	import { Button } from "$lib/components/ui/veil/button";
+	import HeaderFour from "#lib/components/veil/header/header-four.svelte";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 	import AudioLines from "@lucide/svelte/icons/audio-lines";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import ImageIcon from "@lucide/svelte/icons/image";
@@ -11,7 +11,7 @@
 	import ShoppingBag from "@lucide/svelte/icons/shopping-bag";
 	import Telescope from "@lucide/svelte/icons/telescope";
 
-	import Github from "$lib/components/logos/github.svelte";
+	import Github from "#lib/components/logos/github.svelte";
 </script>
 
 <HeaderFour />
@@ -115,7 +115,7 @@
 						Veil is your all-in-one engine for adding seamless integrations to your app.
 					</p>
 
-					<Button class="mt-6 pr-1.5" href="#link">
+					<Button class="mt-6 pr-1.5" href="/">
 						Start Building
 						<ChevronRight class="opacity-50" />
 					</Button>

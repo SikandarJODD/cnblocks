@@ -3,7 +3,7 @@
 	import IntegrationCardv2 from "./card/integration-cardv2.svelte";
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 </script>
 
 <section>

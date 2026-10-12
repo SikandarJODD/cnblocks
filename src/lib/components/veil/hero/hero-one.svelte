@@ -1,7 +1,7 @@
 <script lang="ts">
-	import HeaderOne from "$lib/components/veil/header/header-one.svelte";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import HeaderOne from "#lib/components/veil/header/header-one.svelte";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 	import {
 		Clerk,
 		Claude,
@@ -12,7 +12,7 @@
 		Supabase,
 		Twilio,
 		Vercel,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 </script>
 
@@ -40,7 +40,7 @@
 						Veil is your all-in-one engine for adding seamless integrations to your app.
 					</p>
 
-					<Button class="mt-6 pr-1.5" href="#link">
+					<Button class="mt-6 pr-1.5" href="/">
 						<span class="text-nowrap">Start Building</span>
 						<ChevronRight class="opacity-50" />
 					</Button>

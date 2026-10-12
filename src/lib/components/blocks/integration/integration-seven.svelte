@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { Marquee } from "$lib/components/magic/marquee";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
 	import IntegrationCardv7 from "./card/integration-cardv7.svelte";
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 </script>
@@ -139,7 +139,7 @@
 <!-- Marquee Component Code -->
 
 <!-- <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "#lib/utils.js";
   import type { Snippet } from "svelte";
 
   type MarqueeProps = {

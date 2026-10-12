@@ -1,7 +1,7 @@
 <script>
-	import { hero } from "$lib/all_blocks/hero";
-	import BlockPreview from "$lib/components/web/BlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { hero } from "#lib/all_blocks/hero.js";
+	import BlockPreview from "#lib/components/web/BlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

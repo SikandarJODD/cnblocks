@@ -1,4 +1,4 @@
-import type { SupportedLanguage } from "$lib/components/ui/code/shiki";
+import type { SupportedLanguage } from "#lib/components/ui/code/shiki.js";
 import type { Component } from "svelte";
 
 export type PreviewMode = "inline" | "iframe";

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_integrations } from "$lib/all_mists/integrations";
+	import { all_mists_integrations } from "#lib/all_mists/integrations.js";
 
 	const block = all_mists_integrations.find((item) => item.slug === "two");
 

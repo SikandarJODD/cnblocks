@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
 	import ThemeToggle from "./ThemeToggle.svelte";
 </script>

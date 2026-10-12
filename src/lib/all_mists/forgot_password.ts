@@ -1,6 +1,6 @@
-import type { MistBlock } from "$lib/types/mists";
-import ForgotPasswordOne from "$lib/components/mist/mforgot-password/one.svelte";
-import ForgotPasswordOneCode from "$lib/components/mist/mforgot-password/one.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import ForgotPasswordOne from "#lib/components/mist/mforgot-password/one.svelte";
+import ForgotPasswordOneCode from "#lib/components/mist/mforgot-password/one.svelte?raw";
 export const all_mists_forgot_password: MistBlock[] = [
 	{
 		slug: "one",

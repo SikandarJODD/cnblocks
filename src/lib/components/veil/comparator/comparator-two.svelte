@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Check from "@lucide/svelte/icons/check";
 	import Minus from "@lucide/svelte/icons/minus";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 
 	type FeatureRow = {
 		name: string;
@@ -76,12 +76,10 @@
 			<div class="grid grid-cols-3 border-t">
 				<div class="p-4"></div>
 				<div class="min-w-32 border-l p-4">
-					<Button href="#link" variant="outline" size="sm" class="w-full"
-						>Get Started</Button
-					>
+					<Button href="/" variant="outline" size="sm" class="w-full">Get Started</Button>
 				</div>
 				<div class="min-w-32 border-l bg-primary/5 p-4">
-					<Button href="#link" size="sm" class="w-full">Upgrade</Button>
+					<Button href="/" size="sm" class="w-full">Upgrade</Button>
 				</div>
 			</div>
 		</Card>

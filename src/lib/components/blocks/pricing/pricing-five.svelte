@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Check from "@lucide/svelte/icons/check";
 	let list = [
 		"First premium advantage",
@@ -8,7 +8,7 @@
 		"Fourth, access to all components weekly",
 	];
 
-	import { VercelFull, SupabaseFull, Spotify, Figma, FirebaseFull } from "$lib/svgs";
+	import { VercelFull, SupabaseFull, Spotify, Figma, FirebaseFull } from "#lib/svgs/index.js";
 </script>
 
 <div class="relative py-16 md:py-32">

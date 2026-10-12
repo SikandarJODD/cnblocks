@@ -1,9 +1,9 @@
 <script lang="ts">
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-	import { useAddDropdownRegistryOption } from "$lib/components/ui/add/add.svelte.js";
+	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
+	import { useAddDropdownRegistryOption } from "#lib/components/ui/add/add.svelte.js";
 	import { box } from "svelte-toolbelt";
 	import type { ComponentProps, Component } from "svelte";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import CheckIcon from "@lucide/svelte/icons/check";
 	import AddRegistryLogo from "./add-registry-logo.svelte";
 

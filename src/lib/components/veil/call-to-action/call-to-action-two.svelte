@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 
 	type Props = {
@@ -16,7 +16,7 @@
 		title = "Start Building Today",
 		description = "Get 3 months free when you sign up for an annual plan. No credit card required to start.",
 		ctaLabel = "Claim Your Offer",
-		ctaHref = "#link",
+		ctaHref = "/",
 	}: Props = $props();
 </script>
 

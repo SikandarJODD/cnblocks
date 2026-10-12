@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_cta } from "$lib/all_mists/cta";
+	import { all_mists_cta } from "#lib/all_mists/cta.js";
 
 	const block = all_mists_cta.find((item) => item.slug === "two");
 

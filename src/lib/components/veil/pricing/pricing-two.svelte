@@ -1,8 +1,8 @@
 <script lang="ts">
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
+	import { cn } from "#lib/utils.js";
 
 	const tiers = [
 		{
@@ -71,7 +71,7 @@
 							{/if}
 						</div>
 						<Button
-							href="#link"
+							href="/"
 							variant={tier.highlighted ? "default" : "outline"}
 							size="sm"
 							class="gap-1"

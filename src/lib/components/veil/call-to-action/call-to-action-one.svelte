@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 
 	type Props = {
@@ -15,9 +15,9 @@
 		title = "Ready to Get Started?",
 		description = "Join thousands of teams already using our platform to build better products faster.",
 		primaryLabel = "Start Free Trial",
-		primaryHref = "#link",
+		primaryHref = "/",
 		secondaryLabel = "Talk to Sales",
-		secondaryHref = "#link",
+		secondaryHref = "/",
 	}: Props = $props();
 </script>
 

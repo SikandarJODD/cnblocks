@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import { cn } from "$lib/utils";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
+	import { cn } from "#lib/utils.js";
 	import Star from "@lucide/svelte/icons/star";
 
 	const testimonials = [

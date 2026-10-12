@@ -3,7 +3,7 @@
 	import IntegrationCardv5 from "./card/integration-cardv5.svelte";
 	import { Gemini, GooglePaLM, MagicUI, VSCodium, Replit, MediaWiki } from "../logos/logos";
 
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 </script>
 
 <section>
@@ -117,7 +117,7 @@
 <!-- Integration Card V5 Component Code  -->
 
 <!-- <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "#lib/utils.js";
   import type { Snippet } from "svelte";
 
   let {

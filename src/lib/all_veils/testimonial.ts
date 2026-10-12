@@ -1,13 +1,13 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import TestimonialOne from "$lib/components/veil/testimonial/testimonial-one.svelte";
-import TestimonialOneCode from "$lib/components/veil/testimonial/testimonial-one.svelte?raw";
-import TestimonialTwo from "$lib/components/veil/testimonial/testimonial-two.svelte";
-import TestimonialTwoCode from "$lib/components/veil/testimonial/testimonial-two.svelte?raw";
-import TestimonialThree from "$lib/components/veil/testimonial/testimonial-three.svelte";
-import TestimonialThreeCode from "$lib/components/veil/testimonial/testimonial-three.svelte?raw";
-import TestimonialFour from "$lib/components/veil/testimonial/testimonial-four.svelte";
-import TestimonialFourCode from "$lib/components/veil/testimonial/testimonial-four.svelte?raw";
+import TestimonialOne from "#lib/components/veil/testimonial/testimonial-one.svelte";
+import TestimonialOneCode from "#lib/components/veil/testimonial/testimonial-one.svelte?raw";
+import TestimonialTwo from "#lib/components/veil/testimonial/testimonial-two.svelte";
+import TestimonialTwoCode from "#lib/components/veil/testimonial/testimonial-two.svelte?raw";
+import TestimonialThree from "#lib/components/veil/testimonial/testimonial-three.svelte";
+import TestimonialThreeCode from "#lib/components/veil/testimonial/testimonial-three.svelte?raw";
+import TestimonialFour from "#lib/components/veil/testimonial/testimonial-four.svelte";
+import TestimonialFourCode from "#lib/components/veil/testimonial/testimonial-four.svelte?raw";
 
 export const all_veils_testimonial: MistBlock[] = [
 	{

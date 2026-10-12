@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { login } from "$lib/all_blocks/login";
+	import { login } from "#lib/all_blocks/login.js";
 
 	const block = login.find((item) => item.title === "three");
 

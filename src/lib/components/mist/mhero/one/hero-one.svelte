@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
+	import { Button } from "#lib/components/ui/button/index.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import CirclePlay from "@lucide/svelte/icons/circle-play";
 	import Header from "./header.svelte";

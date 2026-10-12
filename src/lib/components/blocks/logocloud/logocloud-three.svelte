@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Marquee } from "$lib/components/magic/marquee";
-	import { ProgressiveBlur } from "$lib/components/magic/progressive-blur";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
+	import { ProgressiveBlur } from "#lib/components/magic/progressive-blur/index.js";
 	import {
 		Beacon,
 		Bolt,
@@ -12,9 +12,9 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 
 	export const GRADIENT_ANGLES = {
 		top: 0,

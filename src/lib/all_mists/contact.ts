@@ -1,6 +1,6 @@
-import type { MistBlock } from "$lib/types/mists";
-import ContactOne from "$lib/components/mist/mcontact/one.svelte";
-import ContactOneCode from "$lib/components/mist/mcontact/one.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import ContactOne from "#lib/components/mist/mcontact/one.svelte";
+import ContactOneCode from "#lib/components/mist/mcontact/one.svelte?raw";
 
 export const all_mists_contact: MistBlock[] = [
 	{

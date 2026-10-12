@@ -7,7 +7,7 @@
 		Slack,
 		Supabase,
 		Vercel,
-	} from "$lib/svgs/index";
+	} from "#lib/svgs/index.js";
 </script>
 
 <div

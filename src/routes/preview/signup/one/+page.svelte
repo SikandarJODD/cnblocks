@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { signup } from "$lib/all_blocks/signup";
+	import { signup } from "#lib/all_blocks/signup.js";
 
 	const block = signup.find((item) => item.title === "one");
 

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Check from "@lucide/svelte/icons/check";
 	import Minus from "@lucide/svelte/icons/minus";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 
 	type PlanKey = "basic" | "pro" | "team";
 
@@ -102,7 +102,7 @@
 				{#each plans as plan (plan.name)}
 					<div class={`border-l p-4 ${plan.highlighted ? "bg-primary/5" : ""}`}>
 						<Button
-							href="#link"
+							href="/"
 							variant={plan.highlighted ? "default" : "outline"}
 							size="sm"
 							class="w-full"

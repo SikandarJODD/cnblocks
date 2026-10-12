@@ -4,8 +4,8 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger,
-	} from "$lib/components/ui/accordion";
-	import { Card } from "$lib/components/ui/veil/card";
+	} from "#lib/components/ui/accordion/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
 
 	type FAQItem = {
 		id: string;

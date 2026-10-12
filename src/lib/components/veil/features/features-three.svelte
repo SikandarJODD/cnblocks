@@ -4,9 +4,9 @@
 	import Cpu from "@lucide/svelte/icons/cpu";
 	import Shield from "@lucide/svelte/icons/shield";
 
-	import { Button } from "$lib/components/ui/veil/button";
-	import { cn } from "$lib/utils";
-	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "$lib/svgs/index";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { cn } from "#lib/utils.js";
+	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "#lib/svgs/index.js";
 
 	type Feature =
 		| "seamless-integrations"

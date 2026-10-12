@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_team } from "$lib/all_mists/team";
+	import { all_mists_team } from "#lib/all_mists/team.js";
 
 	const block = all_mists_team.find((item) => item.slug === "one");
 

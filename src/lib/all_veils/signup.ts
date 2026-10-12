@@ -1,11 +1,11 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import SignupOne from "$lib/components/veil/signup/signup-one.svelte";
-import SignupOneCode from "$lib/components/veil/signup/signup-one.svelte?raw";
-import SignupTwo from "$lib/components/veil/signup/signup-two.svelte";
-import SignupTwoCode from "$lib/components/veil/signup/signup-two.svelte?raw";
-import SignupThree from "$lib/components/veil/signup/signup-three.svelte";
-import SignupThreeCode from "$lib/components/veil/signup/signup-three.svelte?raw";
+import SignupOne from "#lib/components/veil/signup/signup-one.svelte";
+import SignupOneCode from "#lib/components/veil/signup/signup-one.svelte?raw";
+import SignupTwo from "#lib/components/veil/signup/signup-two.svelte";
+import SignupTwoCode from "#lib/components/veil/signup/signup-two.svelte?raw";
+import SignupThree from "#lib/components/veil/signup/signup-three.svelte";
+import SignupThreeCode from "#lib/components/veil/signup/signup-three.svelte?raw";
 
 export const all_veils_signup: MistBlock[] = [
 	{

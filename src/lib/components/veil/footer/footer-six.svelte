@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from "$lib/components/web/Logo.svelte";
+	import Logo from "#lib/components/web/Logo.svelte";
 	import SocialMediaOne from "./social-media-one.svelte";
 	import ThemeSwitcher from "./theme-switcher.svelte";
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { logocloud } from "$lib/all_blocks/logo-cloud";
+	import { logocloud } from "#lib/all_blocks/logo-cloud.js";
 
 	const block = logocloud.find((item) => item.title === "two");
 

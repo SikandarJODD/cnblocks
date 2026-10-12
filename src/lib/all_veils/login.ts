@@ -1,11 +1,11 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import LoginOne from "$lib/components/veil/login/login-one.svelte";
-import LoginOneCode from "$lib/components/veil/login/login-one.svelte?raw";
-import LoginTwo from "$lib/components/veil/login/login-two.svelte";
-import LoginTwoCode from "$lib/components/veil/login/login-two.svelte?raw";
-import LoginThree from "$lib/components/veil/login/login-three.svelte";
-import LoginThreeCode from "$lib/components/veil/login/login-three.svelte?raw";
+import LoginOne from "#lib/components/veil/login/login-one.svelte";
+import LoginOneCode from "#lib/components/veil/login/login-one.svelte?raw";
+import LoginTwo from "#lib/components/veil/login/login-two.svelte";
+import LoginTwoCode from "#lib/components/veil/login/login-two.svelte?raw";
+import LoginThree from "#lib/components/veil/login/login-three.svelte";
+import LoginThreeCode from "#lib/components/veil/login/login-three.svelte?raw";
 
 export const all_veils_login: MistBlock[] = [
 	{

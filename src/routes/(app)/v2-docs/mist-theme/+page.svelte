@@ -1,8 +1,8 @@
 <script lang="ts">
-	import SEOComponent from "$lib/seo/SEO.svelte";
-	import DocsPageShell from "$lib/components/layout/DocsPageShell.svelte";
-	import type { CodeBlock } from "$lib/components/ui/code";
-	import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import type { CodeBlock } from "#lib/components/ui/code/index.js";
+	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import {
 		H2,
 		H3,
@@ -13,9 +13,9 @@
 		Tr,
 		Th,
 		Td,
-	} from "$lib/components/markdown/index";
-	import { docsV2PageMap } from "$lib/config/docs-v2";
-	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
+	} from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
 
 	const pageMeta = docsV2PageMap.mistTheme;
 
@@ -66,7 +66,7 @@
 \<\/script\>
 
 \<\script lang="ts"\>
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		class: className,
@@ -154,7 +154,7 @@ export {
 
 \<\script lang="ts"\>
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -175,7 +175,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -195,7 +195,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -224,7 +224,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -244,7 +244,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -264,7 +264,7 @@ export {
 			filecode: `\<\script lang="ts"\>
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -439,7 +439,7 @@ export {
 			fileName="button-usage.svelte"
 			lang="svelte"
 			code={`\<\script lang="ts"\>
-	import { Button } from "$lib/components/ui/mist/button";
+	import { Button } from "#lib/components/ui/mist/button/index.js";
 \<\/script\>
 
 <Button variant="neutral">Neutral Button</Button>`}
@@ -459,7 +459,7 @@ export {
 			fileName="card-usage.svelte"
 			lang="svelte"
 			code={`\<\script lang="ts"\>
-	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/mist/card";
+	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/mist/card/index.js";
 \<\/script\>
 
 <Card variant="soft">

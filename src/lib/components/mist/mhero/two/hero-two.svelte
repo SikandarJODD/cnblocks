@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Sparkle from "@lucide/svelte/icons/sparkle";
 	import Header from "./header.svelte";
 </script>

@@ -1,11 +1,16 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
-	import Card from "$lib/components/ui/card/card.svelte";
-	import Input from "$lib/components/ui/input/input.svelte";
-	import Label from "$lib/components/ui/label/label.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
+	import Input from "#lib/components/ui/input/input.svelte";
+	import Label from "#lib/components/ui/label/label.svelte";
 
-	import { Select, SelectContent, SelectItem, SelectTrigger } from "$lib/components/ui/select";
-	import Textarea from "$lib/components/ui/textarea/textarea.svelte";
+	import {
+		Select,
+		SelectContent,
+		SelectItem,
+		SelectTrigger,
+	} from "#lib/components/ui/select/index.js";
+	import Textarea from "#lib/components/ui/textarea/textarea.svelte";
 </script>
 
 <section

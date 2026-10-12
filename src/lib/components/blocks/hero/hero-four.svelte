@@ -1,19 +1,19 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { ProgressiveBlur } from "$lib/components/magic/progressive-blur";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { ProgressiveBlur } from "#lib/components/magic/progressive-blur/index.js";
 	// Hero Header Component
 
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import Menu from "@lucide/svelte/icons/menu";
 	import X from "@lucide/svelte/icons/x";
 	import { scrollY } from "svelte/reactivity/window";
-	import { Marquee } from "$lib/components/magic/marquee";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
 
 	let menuItems = [
-		{ name: "Features", href: "#a" },
-		{ name: "Solution", href: "#a" },
-		{ name: "Pricing", href: "#a" },
-		{ name: "About", href: "#a" },
+		{ name: "Features", href: "/" },
+		{ name: "Solution", href: "/" },
+		{ name: "Pricing", href: "/" },
+		{ name: "About", href: "/" },
 	];
 	let menuState = $state(false);
 	let isScrolled = $derived.by(() => {
@@ -48,7 +48,7 @@
 		Spotify,
 		SupabaseFull,
 		VercelFull,
-	} from "$lib/svgs";
+	} from "#lib/svgs/index.js";
 </script>
 
 {@render header()}

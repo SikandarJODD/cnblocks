@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Avatar, AvatarImage, AvatarFallback } from "$lib/components/ui/avatar";
-	import { Card, CardContent } from "$lib/components/ui/card";
+	import { Avatar, AvatarImage, AvatarFallback } from "#lib/components/ui/avatar/index.js";
+	import { Card, CardContent } from "#lib/components/ui/card/index.js";
 	type Testimonial = {
 		name: string;
 		role: string;

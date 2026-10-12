@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/veil/button";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import Mail from "@lucide/svelte/icons/mail";
 
@@ -16,7 +16,7 @@
 		description = "Get the latest updates, tips, and exclusive offers delivered straight to your inbox.",
 		emailPlaceholder = "Enter your email",
 		subscribeLabel = "Subscribe",
-		subscribeHref = "#link",
+		subscribeHref = "/",
 	}: Props = $props();
 </script>
 

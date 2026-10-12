@@ -1,9 +1,9 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import TeamOne from "$lib/components/veil/team/team-one.svelte";
-import TeamOneCode from "$lib/components/veil/team/team-one.svelte?raw";
-import TeamTwo from "$lib/components/veil/team/team-two.svelte";
-import TeamTwoCode from "$lib/components/veil/team/team-two.svelte?raw";
+import TeamOne from "#lib/components/veil/team/team-one.svelte";
+import TeamOneCode from "#lib/components/veil/team/team-one.svelte?raw";
+import TeamTwo from "#lib/components/veil/team/team-two.svelte";
+import TeamTwoCode from "#lib/components/veil/team/team-two.svelte?raw";
 
 export const all_veils_team: MistBlock[] = [
 	{

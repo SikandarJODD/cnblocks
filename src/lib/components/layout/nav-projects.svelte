@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import { cn } from "$lib/utils";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		projects,

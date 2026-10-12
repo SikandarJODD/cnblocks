@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Cisco, Slack, Spotify, Vercel } from "$lib/svgs";
+	import { Cisco, Slack, Spotify, Vercel } from "#lib/svgs/index.js";
 </script>
 
 <section>

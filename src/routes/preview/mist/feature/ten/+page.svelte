@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_features } from "$lib/all_mists/feature";
+	import { all_mists_features } from "#lib/all_mists/feature.js";
 
 	const block = all_mists_features.find((item) => item.slug === "ten");
 

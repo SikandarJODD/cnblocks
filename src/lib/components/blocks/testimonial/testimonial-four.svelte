@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, AvatarImage, AvatarFallback } from "$lib/components/ui/avatar";
+	import { Avatar, AvatarImage, AvatarFallback } from "#lib/components/ui/avatar/index.js";
 </script>
 
 <section class="py-16 md:py-32">

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Check from "@lucide/svelte/icons/check";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Card } from "$lib/components/ui/veil/card";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Card } from "#lib/components/ui/veil/card/index.js";
+	import { cn } from "#lib/utils.js";
 
 	const plans = [
 		{
@@ -90,7 +90,7 @@
 						{/each}
 					</ul>
 					<Button
-						href="#link"
+						href="/"
 						variant={plan.highlighted ? "default" : "outline"}
 						class="mt-8 w-full"
 					>

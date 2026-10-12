@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_heros } from "$lib/all_mists/hero";
+	import { all_mists_heros } from "#lib/all_mists/hero.js";
 
 	const block = all_mists_heros.find((item) => item.slug === "six");
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ToggleGroup, ToggleGroupItem } from "$lib/components/ui/toggle-group";
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { cn } from "$lib/utils";
+	import { ToggleGroup, ToggleGroupItem } from "#lib/components/ui/toggle-group/index.js";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { cn } from "#lib/utils.js";
 
 	import BoldIcon from "@lucide/svelte/icons/bold";
 	import Calendar1 from "@lucide/svelte/icons/calendar-1";

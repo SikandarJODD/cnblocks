@@ -1,10 +1,10 @@
-import type { MistBlock } from "$lib/types/mists";
-import CtaOne from "$lib/components/mist/mcta/one.svelte";
-import CtaOneCode from "$lib/components/mist/mcta/one.svelte?raw";
-import CtaTwo from "$lib/components/mist/mcta/two.svelte";
-import CtaTwoCode from "$lib/components/mist/mcta/two.svelte?raw";
-import CtaThree from "$lib/components/mist/mcta/three.svelte";
-import CtaThreeCode from "$lib/components/mist/mcta/three.svelte?raw";
+import type { MistBlock } from "#lib/types/mists.js";
+import CtaOne from "#lib/components/mist/mcta/one.svelte";
+import CtaOneCode from "#lib/components/mist/mcta/one.svelte?raw";
+import CtaTwo from "#lib/components/mist/mcta/two.svelte";
+import CtaTwoCode from "#lib/components/mist/mcta/two.svelte?raw";
+import CtaThree from "#lib/components/mist/mcta/three.svelte";
+import CtaThreeCode from "#lib/components/mist/mcta/three.svelte?raw";
 
 export const all_mists_cta: MistBlock[] = [
 	{

@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { onDestroy, onMount } from "svelte";
-	import { Beacon, Bolt, Cisco, Hulu, Spotify, SupabaseFull, VercelFull } from "$lib/svgs";
+	import {
+		Beacon,
+		Bolt,
+		Cisco,
+		Hulu,
+		Spotify,
+		SupabaseFull,
+		VercelFull,
+	} from "#lib/svgs/index.js";
 
 	type LogoGroup = "ai" | "hosting" | "payments" | "streaming";
 	type LogoItem = {
@@ -45,7 +53,7 @@
 
 	const groups = Object.keys(logos) as LogoGroup[];
 	let currentIndex = 0;
-	let currentGroup: LogoGroup = groups[currentIndex];
+	let currentGroup = $state<LogoGroup>(groups[currentIndex]);
 	let timer: ReturnType<typeof setInterval> | undefined;
 
 	onMount(() => {

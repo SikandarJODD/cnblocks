@@ -1,7 +1,7 @@
 <script>
-	import { all_mists_pricing } from "$lib/all_mists/pricing";
-	import MistBlockPreview from "$lib/components/web/MistBlockPreview.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import { all_mists_pricing } from "#lib/all_mists/pricing.js";
+	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

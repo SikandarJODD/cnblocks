@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";
 	const BHIDE_SVELTE = "https://avatars.githubusercontent.com/u/93428946?v=4";
 	const RICH_HARRIS = "https://avatars.githubusercontent.com/u/1162160?v=4";

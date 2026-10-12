@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 
 	type ComponentProps = Record<string, unknown> & { class?: string };
 	const { class: className = "", ...restProps }: ComponentProps = $props();

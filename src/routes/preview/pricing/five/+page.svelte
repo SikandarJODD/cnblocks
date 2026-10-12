@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { pricing } from "$lib/all_blocks/pricing";
+	import { pricing } from "#lib/all_blocks/pricing.js";
 
 	const block = pricing.find((item) => item.title === "five");
 

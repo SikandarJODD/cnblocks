@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import Check from "@lucide/svelte/icons/check";
 	import Sparkles from "@lucide/svelte/icons/sparkles";
 	import Star from "@lucide/svelte/icons/star";

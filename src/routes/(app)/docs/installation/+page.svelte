@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
-	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
+	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
+	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
 </script>
 
 <svelte:head>

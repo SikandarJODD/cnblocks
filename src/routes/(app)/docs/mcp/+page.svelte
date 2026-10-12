@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DocsCodeBlock from "$lib/web/docs/DocsCodeBlock.svelte";
-	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
+	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
+	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
 </script>
 
 <svelte:head>
@@ -218,12 +218,12 @@ Hero, Feature, Content, Testimonial, Pricing, FAQ, CTA, Integration, Header, Foo
   "watermark": true,
   "configFiles": {},
   "paths": {
-    "*": "$lib/components/blocks",
-    "mist": "$lib/components/mist",
-    "magic": "$lib/components/magic",
-    "ui": "$lib/components/ui",
-    "hooks": "$lib/hooks",
-    "utils": "$lib/utils"
+    "*": "#lib/components/blocks",
+    "mist": "#lib/components/mist",
+    "magic": "#lib/components/magic",
+    "ui": "#lib/components/ui",
+    "hooks": "#lib/hooks",
+    "utils": "#lib/utils.js"
   }
 }`}
 						lang="json"

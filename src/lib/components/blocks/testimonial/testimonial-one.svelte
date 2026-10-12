@@ -1,6 +1,6 @@
 <script>
-	import { Avatar, AvatarImage, AvatarFallback } from "$lib/components/ui/avatar";
-	import { Card, CardContent, CardHeader } from "$lib/components/ui/card";
+	import { Avatar, AvatarImage, AvatarFallback } from "#lib/components/ui/avatar/index.js";
+	import { Card, CardContent, CardHeader } from "#lib/components/ui/card/index.js";
 </script>
 
 <section class="py-16 md:py-32">

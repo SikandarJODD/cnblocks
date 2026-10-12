@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-	import Button from "$lib/components/ui/button/button.svelte";
-	import * as Command from "$lib/components/ui/command/index";
-	import { search_comp } from "$lib/config/search_comp";
-	import { cn } from "$lib/utils";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import * as Command from "#lib/components/ui/command/index.js";
+	import { search_comp } from "#lib/config/search_comp.js";
+	import { cn } from "#lib/utils.js";
 	import Circle from "@lucide/svelte/icons/circle";
 	import { onMount } from "svelte";
 	let open = $state(false);

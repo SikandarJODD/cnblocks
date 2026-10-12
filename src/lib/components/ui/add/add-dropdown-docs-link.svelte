@@ -1,8 +1,8 @@
 <script lang="ts">
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
 	import type { ComponentProps } from "svelte";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 
 	let {
 		class: className,

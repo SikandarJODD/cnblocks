@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { faq } from "$lib/all_blocks/faq";
+	import { faq } from "#lib/all_blocks/faq.js";
 
 	const block = faq.find((item) => item.title === "two");
 

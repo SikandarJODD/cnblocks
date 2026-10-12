@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "$lib/components/ui/card/card.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
 
 	import Layout from "@lucide/svelte/icons/layout";
 	import Target from "@lucide/svelte/icons/target";

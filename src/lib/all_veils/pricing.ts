@@ -1,11 +1,11 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import PricingOne from "$lib/components/veil/pricing/pricing-one.svelte";
-import PricingOneCode from "$lib/components/veil/pricing/pricing-one.svelte?raw";
-import PricingTwo from "$lib/components/veil/pricing/pricing-two.svelte";
-import PricingTwoCode from "$lib/components/veil/pricing/pricing-two.svelte?raw";
-import PricingThree from "$lib/components/veil/pricing/pricing-three.svelte";
-import PricingThreeCode from "$lib/components/veil/pricing/pricing-three.svelte?raw";
+import PricingOne from "#lib/components/veil/pricing/pricing-one.svelte";
+import PricingOneCode from "#lib/components/veil/pricing/pricing-one.svelte?raw";
+import PricingTwo from "#lib/components/veil/pricing/pricing-two.svelte";
+import PricingTwoCode from "#lib/components/veil/pricing/pricing-two.svelte?raw";
+import PricingThree from "#lib/components/veil/pricing/pricing-three.svelte";
+import PricingThreeCode from "#lib/components/veil/pricing/pricing-three.svelte?raw";
 
 export const all_veils_pricing: MistBlock[] = [
 	{

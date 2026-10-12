@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
-	import { cn } from "$lib/utils";
+	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
+	import { cn } from "#lib/utils.js";
 	import CodeIcon from "@lucide/svelte/icons/code";
 	// import TerminalIcon from "@lucide/svelte/icons/terminal";
-	import { Svelte, Terminal, CSS, TypeScript } from "$lib/components/icons";
+	import { Svelte, Terminal, CSS, TypeScript } from "#lib/components/icons/index.js";
 	import CheckIcon from "@lucide/svelte/icons/check";
 	import CopyIcon from "@lucide/svelte/icons/copy";
 
@@ -19,8 +19,8 @@
 		await copyCode.copy(code);
 	};
 
-	import Code from "$lib/components/ui/code/code.svelte";
-	import type { SupportedLanguage } from "$lib/components/ui/code/shiki";
+	import Code from "#lib/components/ui/code/code.svelte";
+	import type { SupportedLanguage } from "#lib/components/ui/code/shiki.js";
 	import { scale } from "svelte/transition";
 </script>
 

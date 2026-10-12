@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { all_mists_contact } from "$lib/all_mists/contact";
+	import { all_mists_contact } from "#lib/all_mists/contact.js";
 
 	const block = all_mists_contact.find((item) => item.slug === "one");
 

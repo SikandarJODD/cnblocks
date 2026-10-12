@@ -1,13 +1,13 @@
-﻿import type { MistBlock } from "$lib/types/mists";
+﻿import type { MistBlock } from "#lib/types/mists.js";
 
-import HeaderOne from "$lib/components/veil/header/header-one.svelte";
-import HeaderOneCode from "$lib/components/veil/header/header-one.svelte?raw";
-import HeaderTwo from "$lib/components/veil/header/header-two.svelte";
-import HeaderTwoCode from "$lib/components/veil/header/header-two.svelte?raw";
-import HeaderThree from "$lib/components/veil/header/header-three.svelte";
-import HeaderThreeCode from "$lib/components/veil/header/header-three.svelte?raw";
-import HeaderFour from "$lib/components/veil/header/header-four.svelte";
-import HeaderFourCode from "$lib/components/veil/header/header-four.svelte?raw";
+import HeaderOne from "#lib/components/veil/header/header-one.svelte";
+import HeaderOneCode from "#lib/components/veil/header/header-one.svelte?raw";
+import HeaderTwo from "#lib/components/veil/header/header-two.svelte";
+import HeaderTwoCode from "#lib/components/veil/header/header-two.svelte?raw";
+import HeaderThree from "#lib/components/veil/header/header-three.svelte";
+import HeaderThreeCode from "#lib/components/veil/header/header-three.svelte?raw";
+import HeaderFour from "#lib/components/veil/header/header-four.svelte";
+import HeaderFourCode from "#lib/components/veil/header/header-four.svelte?raw";
 
 export const all_veils_header: MistBlock[] = [
 	{

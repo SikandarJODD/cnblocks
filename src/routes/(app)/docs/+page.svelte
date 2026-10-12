@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index";
+	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
 	import { marked } from "marked";
 	const members = [
 		{

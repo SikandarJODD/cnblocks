@@ -1,8 +1,15 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
-	let _class: string = "";
-	export let href: string = "";
-	export { _class as class };
+	import { cn } from "#lib/utils.js";
+	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
+
+	type Props = HTMLAnchorAttributes & HTMLButtonAttributes;
+
+	let {
+		class: className = "",
+		href = "",
+		children,
+		...restProps
+	}: Props = $props();
 </script>
 
 {#if href}
@@ -21,11 +28,11 @@
 			// dark mode colors
 			"dark:bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]",
 
-			_class
+			className
 		)}
-		{...$$restProps}
+		{...restProps}
 	>
-		<slot>Default</slot>
+		{#if children}{@render children()}{:else}Default{/if}
 	</a>
 {:else}
 	<button
@@ -41,10 +48,10 @@
 			// dark mode colors
 			"dark:bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]",
 
-			_class
+			className
 		)}
-		{...$$restProps}
+		{...restProps}
 	>
-		<slot>Default</slot>
+		{#if children}{@render children()}{:else}Default{/if}
 	</button>
 {/if}

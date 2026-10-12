@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Bolt as Logo } from "$lib/svgs/index";
-	import { Button } from "$lib/components/ui/veil/button";
-	import { Input } from "$lib/components/ui/veil/input";
-	import { Label } from "$lib/components/ui/label";
+	import { Bolt as Logo } from "#lib/svgs/index.js";
+	import { Button } from "#lib/components/ui/veil/button/index.js";
+	import { Input } from "#lib/components/ui/veil/input/index.js";
+	import { Label } from "#lib/components/ui/label/index.js";
 </script>
 
 <section class="flex min-h-screen bg-background px-4 py-16 md:py-24">

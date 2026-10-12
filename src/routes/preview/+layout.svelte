@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import SEOComponent from "$lib/seo/SEO.svelte";
+	import SEOComponent from "#lib/seo/SEO.svelte";
 
 	let { children } = $props();
 

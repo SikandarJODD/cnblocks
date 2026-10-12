@@ -1,6 +1,6 @@
 ﻿<script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
-	import { seoMetaTags } from "$lib/config/seo";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import { seoMetaTags } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 </script>
 

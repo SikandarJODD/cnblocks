@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
-	import Card from "$lib/components/ui/card/card.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
+	import Card from "#lib/components/ui/card/card.svelte";
 
 	import ArrowUp from "@lucide/svelte/icons/arrow-up";
 	import Globe from "@lucide/svelte/icons/globe";

@@ -4,9 +4,9 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger,
-	} from "$lib/components/ui/accordion";
+	} from "#lib/components/ui/accordion/index.js";
 
-	import type { Icon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
 	import Clock from "@lucide/svelte/icons/clock";
 	import CreditCard from "@lucide/svelte/icons/credit-card";
 	import Truck from "@lucide/svelte/icons/truck";
@@ -15,7 +15,7 @@
 
 	type FAQItem = {
 		id: string;
-		icon: typeof Icon;
+		icon: LucideIcon;
 		question: string;
 		answer: string;
 	};

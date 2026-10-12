@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { contact } from "$lib/all_blocks/contact";
+	import { contact } from "#lib/all_blocks/contact.js";
 
 	const block = contact.find((item) => item.title === "two");
 
