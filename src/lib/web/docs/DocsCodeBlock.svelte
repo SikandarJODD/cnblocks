@@ -19,7 +19,7 @@
 		await copyCode.copy(code);
 	};
 
-	import Code from "#lib/components/ui/code/code.svelte.js";
+	import Code from "#lib/components/ui/code/code.svelte";
 	import type { SupportedLanguage } from "#lib/components/ui/code/shiki.js";
 	import { scale } from "svelte/transition";
 </script>

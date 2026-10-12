@@ -7,7 +7,7 @@
 	import Copy from "@lucide/svelte/icons/copy";
 	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
 	import { scale } from "svelte/transition";
-	import Code from "#lib/components/ui/code/code.svelte.js";
+	import Code from "#lib/components/ui/code/code.svelte";
 	let {
 		code,
 	}: {
