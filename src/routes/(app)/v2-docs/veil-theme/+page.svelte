@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SEOComponent from "#lib/seo/SEO.svelte";
 	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
-	import type { CodeBlock } from "#lib/components/ui/code/index.js";
+	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import {
 		H2,
@@ -16,7 +16,6 @@
 		Td,
 	} from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
-	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
 
 	const pageMeta = docsV2PageMap.veilTheme;
 	const buttonSourceCode = [
@@ -421,9 +420,10 @@ export {
 			<code class="rounded-sm bg-secondary px-1">layout.css</code> so all Veil primitives resolve
 			color, border, focus ring, and typography consistently.
 		</Paragraph>
-		<DocsCodeBlock
-			fileName="layout.css"
-			code={`[data-theme="veil"] .theme-container {
+		<FrameCode
+			code={{
+				filename: "layout.css",
+				filecode: `[data-theme="veil"] .theme-container {
 	--radius: 0.625rem;
 
 	--background: oklch(0.9779 0.0042 56.38);
@@ -481,8 +481,9 @@ export {
 	}
 
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
-}`}
-			lang="css"
+			}`,
+				lang: "css",
+			}}
 		/>
 		<!-- <Paragraph>
 			Veil uses Geist as the primary sans font.
@@ -519,12 +520,14 @@ export {
 			Ensure your root body includes <code>theme-container</code> so the selected theme scope is
 			applied across the application.
 		</Paragraph>
-		<DocsCodeBlock
-			fileName="src/app.html"
-			code={`<body data-theme="veil" class="theme-container">
+		<FrameCode
+			code={{
+				filename: "src/app.html",
+				filecode: `<body data-theme="veil" class="theme-container">
 	<!-- Your Application -->
-</body>`}
-			lang="html"
+</body>`,
+				lang: "html",
+			}}
 		/>
 	</section>
 
@@ -575,16 +578,18 @@ export {
 			Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
 		</Paragraph>
 		<H3 id="button-usage">Usage</H3>
-		<DocsCodeBlock
-			fileName="button-usage.svelte"
-			code={`\<\script lang="ts"\>
+		<FrameCode
+			code={{
+				filename: "button-usage.svelte",
+				filecode: `\<\script lang="ts"\>
 	import { Button } from "#lib/components/ui/veil/button/index.js";
 \<\/script\>
 
 <Button variant="default">Default Button</Button>
 <Button variant="outline">Outline Button</Button>
-<Button size="lg">Large Button</Button>`}
-			lang="svelte"
+<Button size="lg">Large Button</Button>`,
+				lang: "svelte",
+			}}
 		/>
 		<H3 id="button-source">Source</H3>
 		<MultipleCode code={buttonSourceCode} />
@@ -599,9 +604,10 @@ export {
 		</Paragraph>
 		<H3 id="card-usage">Usage</H3>
 		<div>
-			<DocsCodeBlock
-				fileName="card-usage.svelte"
-				code={`\<\script lang="ts"\>
+			<FrameCode
+				code={{
+					filename: "card-usage.svelte",
+					filecode: `\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/veil/card/index.js";
 \<\/script\>
 
@@ -617,8 +623,9 @@ export {
 		<CardTitle>Outline Card</CardTitle>
 	</CardHeader>
 	<CardContent>...</CardContent>
-</Card>`}
-				lang="svelte"
+</Card>`,
+					lang: "svelte",
+				}}
 			/>
 		</div>
 		<H3 id="card-source">Source</H3>
@@ -632,16 +639,18 @@ export {
 			states.
 		</Paragraph>
 		<H3 id="input-usage">Usage</H3>
-		<DocsCodeBlock
-			fileName="input-usage.svelte"
-			code={`\<\script lang="ts"\>
+		<FrameCode
+			code={{
+				filename: "input-usage.svelte",
+				filecode: `\<\script lang="ts"\>
 	import { Input } from "#lib/components/ui/veil/input/index.js";
 \<\/script\>
 
 <Input type="email" placeholder="you@example.com" />
 <Input aria-invalid="true" placeholder="Invalid state" />
-<Input type="file" />`}
-			lang="svelte"
+<Input type="file" />`,
+				lang: "svelte",
+			}}
 		/>
 		<H3 id="input-source">Source</H3>
 		<MultipleCode code={inputSourceCode} />
@@ -655,15 +664,17 @@ export {
 		</Paragraph>
 		<H3 id="textarea-usage">Usage</H3>
 		<div>
-			<DocsCodeBlock
-				fileName="textarea-usage.svelte"
-				code={`\<\script lang="ts"\>
+			<FrameCode
+				code={{
+					filename: "textarea-usage.svelte",
+					filecode: `\<\script lang="ts"\>
 	import { Textarea } from "#lib/components/ui/veil/textarea/index.js";
 \<\/script\>
 
 <Textarea placeholder="Enter details..." />
-<Textarea aria-invalid="true" placeholder="Invalid state" />`}
-				lang="svelte"
+<Textarea aria-invalid="true" placeholder="Invalid state" />`,
+					lang: "svelte",
+				}}
 			/>
 		</div>
 		<H3 id="textarea-source">Source</H3>

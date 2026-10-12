@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SEOComponent from "#lib/seo/SEO.svelte";
 	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
-	import type { CodeBlock } from "#lib/components/ui/code/index.js";
+	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import {
 		H2,
@@ -15,7 +15,6 @@
 		Td,
 	} from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
-	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
 
 	const pageMeta = docsV2PageMap.mistTheme;
 
@@ -331,10 +330,11 @@ export {
 			or <code class="rounded-sm bg-secondary px-1">layout.css</code> so Mist primitives resolve
 			color, border, and contrast consistently.
 		</Paragraph>
-		<DocsCodeBlock
-			fileName="layout.css"
-			lang="css"
-			code={`[data-theme="mist"] .theme-container {
+		<FrameCode
+			code={{
+				filename: "layout.css",
+				lang: "css",
+				filecode: `[data-theme="mist"] .theme-container {
 	--radius: 0.625rem;
 	--background: var(--color-white);
 	--foreground: var(--color-zinc-950);
@@ -378,7 +378,8 @@ export {
 	}
 
 	@apply *:text-foreground;
-}`}
+			}`,
+			}}
 		/>
 	</section>
 
@@ -388,12 +389,14 @@ export {
 			Ensure your root body includes <code>theme-container</code> so the selected Mist theme is
 			applied across the application.
 		</Paragraph>
-		<DocsCodeBlock
-			fileName="src/app.html"
-			lang={"html"}
-			code={`<body data-theme="mist" class="theme-container">
+		<FrameCode
+			code={{
+				filename: "src/app.html",
+				lang: "html",
+				filecode: `<body data-theme="mist" class="theme-container">
 	<!-- Your Application -->
-</body>`}
+</body>`,
+			}}
 		/>
 	</section>
 
@@ -435,14 +438,16 @@ export {
 			the standard shadcn-like variants.
 		</Paragraph>
 		<H3 id="button-usage" class="mb-2">Usage</H3>
-		<DocsCodeBlock
-			fileName="button-usage.svelte"
-			lang="svelte"
-			code={`\<\script lang="ts"\>
+		<FrameCode
+			code={{
+				filename: "button-usage.svelte",
+				lang: "svelte",
+				filecode: `\<\script lang="ts"\>
 	import { Button } from "#lib/components/ui/mist/button/index.js";
 \<\/script\>
 
-<Button variant="neutral">Neutral Button</Button>`}
+<Button variant="neutral">Neutral Button</Button>`,
+			}}
 		/>
 		<H3 id="button-source" class="mb-2">Source</H3>
 		<MultipleCode code={buttonSourceCode} />
@@ -455,10 +460,11 @@ export {
 			commonly used across documentation-style layouts.
 		</Paragraph>
 		<H3 id="card-usage" class="mb-2">Usage</H3>
-		<DocsCodeBlock
-			fileName="card-usage.svelte"
-			lang="svelte"
-			code={`\<\script lang="ts"\>
+		<FrameCode
+			code={{
+				filename: "card-usage.svelte",
+				lang: "svelte",
+				filecode: `\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/mist/card/index.js";
 \<\/script\>
 
@@ -474,7 +480,8 @@ export {
 		<CardTitle>Mixed Card</CardTitle>
 	</CardHeader>
 	<CardContent>...</CardContent>
-</Card>`}
+</Card>`,
+			}}
 		/>
 		<H3 id="card-source" class="mb-2">Source</H3>
 		<MultipleCode code={cardSourceCode} />

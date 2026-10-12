@@ -20,7 +20,7 @@
 
 <Frame.Root class="w-full rounded-xl p-0.5">
 	<Frame.Header
-		class="flex-row items-center justify-between gap-2 py-0 pr-1 pl-4"
+		class="flex-row items-center justify-between gap-2 py-0 pr-1.5 pl-4"
 	>
 		<div class="flex min-w-0 items-center gap-1.5">
 			{#if code.lang === "svelte"}
@@ -42,7 +42,7 @@
 				{code.filename}
 			</Frame.Title>
 		</div>
-		<div class="flex items-center gap-1">
+		<div class="flex items-center gap-1 py-1">
 			{#if code.isExpand}
 				<Button variant="ghost" size="sm" onclick={updateIsExpanded}>
 					{#if isExpanded}
@@ -52,7 +52,7 @@
 					{/if}
 				</Button>
 			{/if}
-			<CopyButton size="icon-sm" text={code.filecode} />
+			<CopyButton size="icon-xs" text={code.filecode} />
 		</div>
 	</Frame.Header>
 	<Frame.Panel class="overflow-hidden p-0">
@@ -72,7 +72,7 @@
 				</Code.Root>
 			</Code.Overflow>
 		{:else}
-			<div class="scroll-fade-effect-y max-h-[600px] overflow-y-auto">
+			<div class="scroll-fade-effect-y no-scrollbar max-h-[600px] overflow-y-auto">
 				<Code.Root
 					lang={code.lang || "svelte"}
 					class="h-auto w-full overflow-visible rounded-none border-none bg-background"

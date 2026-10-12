@@ -41,11 +41,12 @@
 <TooltipProvider delayDuration={200}>
 	<Tooltip>
 		<TooltipTrigger class={className}>
-			<Button
-				{...restProps}
+			{#snippet child({props})}
+			  <Button
+				{...props}
 				{variant}
 				{size}
-				class={cn("z-50 h-8 w-8")}
+				class={cn("z-50")}
 				type="button"
 				name="copy"
 				tabindex={-1}
@@ -75,6 +76,7 @@
 					</div>
 				{/if}
 			</Button>
+			{/snippet}
 		</TooltipTrigger>
 		<TooltipContent align="center" side="top" class="z-50 px-2 py-1 text-[10px]"
 			>Copy Code</TooltipContent
