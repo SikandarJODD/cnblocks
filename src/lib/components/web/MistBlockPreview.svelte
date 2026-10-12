@@ -8,10 +8,12 @@
 	import Maximize from "@lucide/svelte/icons/maximize";
 	import Palette from "@lucide/svelte/icons/palette";
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
+	import ImportAliasToggle from "./ImportAliasToggle.svelte";
+	import { transformCodeImports, type ImportAliasStyle } from "./import-alias";
 	import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
 	import type { Component } from "svelte";
-	import { watch } from "runed";
+	import { PersistedState, watch } from "runed";
 
 	interface BlockPreviewProps {
 		itemId?: string;
@@ -58,6 +60,11 @@
 	let mode = $state("preview");
 	let iframeHeight = $state(0);
 	let isLoading = $state(true);
+	let importAliasStyle = new PersistedState<ImportAliasStyle>(
+		"sveltekit-import-alias-style",
+		"dollar"
+	);
+	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
 
 	let ref: PaneAPI | undefined = $state(undefined);
 
@@ -436,6 +443,10 @@
 					</TooltipProvider>
 				{/if}
 				{#if code}
+					{#if mode === "code"}
+						<ImportAliasToggle bind:value={importAliasStyle.current} />
+						<Separator class="h-4!" orientation="vertical" />
+					{/if}
 					<PreviewInstallAdd {itemId} />
 					<Button
 						variant="outline"
@@ -469,10 +480,10 @@
 						<span>Theme Setup</span>
 					</Button>
 
-					{#if !Array.isArray(code)}
+					{#if !Array.isArray(displayedCode)}
 						<Separator class="h-4!" orientation="vertical" />
 
-						<CopyButton text={code.code} />
+						<CopyButton text={displayedCode.code} />
 					{/if}
 				{/if}
 			</div>
@@ -569,7 +580,7 @@
 
 			<div class="bg-white dark:bg-transparent">
 				{#if mode === "code"}
-					<CodeEditor {code} />
+					<CodeEditor code={displayedCode} />
 				{/if}
 			</div>
 		</div>
