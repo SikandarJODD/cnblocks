@@ -438,7 +438,7 @@
 				{#if code}
 					{#if mode === "code"}
 						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator orientation="vertical" />
+						<Separator orientation="vertical" class='my-auto h-4!'/>
 					{/if}
 					<PreviewInstallAdd {itemId} />
 

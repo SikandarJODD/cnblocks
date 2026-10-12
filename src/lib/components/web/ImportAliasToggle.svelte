@@ -24,7 +24,7 @@
 		{#snippet child({ props })}
 			<div
 				{...props}
-				class="flex h-8 items-center justify-center gap-0.5 rounded-md border px-0.5"
+				class="flex h-8 items-center justify-center gap-0.5 rounded-md border bg-background/40 px-0.5 dark:bg-transparent"
 				role="group"
 				aria-label="SvelteKit import alias version"
 			>
@@ -34,8 +34,8 @@
 						class={cn(
 							"size-6 cursor-pointer rounded-md font-mono text-xs transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none",
 							value === option.value
-								? "bg-muted text-foreground shadow-xs"
-								: "text-muted-foreground hover:text-foreground"
+								? "bg-background text-foreground shadow-xs dark:bg-muted"
+								: "text-muted-foreground hover:bg-background/70 hover:text-foreground dark:hover:bg-muted/50"
 						)}
 						aria-label={option.title}
 						aria-pressed={value === option.value}
