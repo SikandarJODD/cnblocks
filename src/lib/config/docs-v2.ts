@@ -59,7 +59,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	installation: {
 		key: "installation",
-		path: "/v2-docs/installation",
+		path: "/docs/installation",
 		navTitle: "Installation",
 		group: "guide",
 		toc: true,
@@ -72,7 +72,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	mistTheme: {
 		key: "mistTheme",
-		path: "/v2-docs/mist-theme",
+		path: "/docs/mist-theme",
 		navTitle: "Mist Theme Setup",
 		group: "theme",
 		toc: true,
@@ -85,7 +85,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	veilTheme: {
 		key: "veilTheme",
-		path: "/v2-docs/veil-theme",
+		path: "/docs/veil-theme",
 		navTitle: "Veil Theme Setup",
 		group: "theme",
 		toc: true,
@@ -107,7 +107,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	// mcp: {
 	// 	key: "mcp",
-	// 	path: "/v2-docs/mcp",
+	// 	path: "/docs/mcp",
 	// 	navTitle: "MCP Server",
 	// 	group: "resources",
 	// 	toc: true,
@@ -120,7 +120,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	// },
 	sponsors: {
 		key: "sponsors",
-		path: "/v2-docs/sponsors",
+		path: "/docs/sponsors",
 		navTitle: "Sponsors",
 		group: "resources",
 		toc: true,

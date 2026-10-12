@@ -1,101 +1,77 @@
 <script lang="ts">
-	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
-	import { marked } from "marked";
-	const members = [
-		{
-			name: "Bhide Svelte",
-			role: "Svelte Developer",
-			avatar: "https://avatars.githubusercontent.com/u/93428946?v=4",
-			href: "https://github.com/SikandarJODD",
-		},
-		{
-			name: "Aidan Bleser",
-			role: "Creator of JSrepo",
-			avatar: "https://avatars.githubusercontent.com/u/117548273?v=4",
-			href: "https://github.com/ieedan",
-		},
-	];
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import {
+		H2,
+		Paragraph,
+		Strong,
+		Table,
+		Thead,
+		Tbody,
+		Tr,
+		Th,
+		Td,
+		Link,
+	} from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 
-	let overview_content = `## Overview
-  Svelte Shadcn Blocks consists of 2 main variants:
-
-1. **Normal** - A vibrant, bold design with a focus on marketing and UI components.
-2. **Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
-
-Each variant include **50+ blocks** that can be used in your projects. These blocks are designed to be easily customizable and integrate seamlessly with your Svelte applications.
-
-You can use these blocks to build landing pages, marketing sites, dashboards, and more.
-  `;
+	const pageMeta = docsV2PageMap.introduction;
 </script>
 
-<svelte:head>
-	<title>Shadcn Marketing Blocks</title>
-	<meta
-		name="description"
-		content="Welcome to Shadcn Marketing Blocks! This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and Shadcn Svelte."
-	/>
-	<meta name="keywords" content="svelte, shadcn, marketing blocks, installation, jsrepo" />
-</svelte:head>
+<SEOComponent
+	title={pageMeta.seo.title}
+	description={pageMeta.seo.description}
+	keywords={pageMeta.seo.keywords}
+/>
 
-<main class="space-y-6 xl:mb-24">
-	<div class="space-y-4">
-		<Breadcrumb.Root>
-			<Breadcrumb.List>
-				<Breadcrumb.Item>
-					<Breadcrumb.Link href="/">Docs</Breadcrumb.Link>
-				</Breadcrumb.Item>
-				<Breadcrumb.Separator />
-				<Breadcrumb.Item>
-					<Breadcrumb.Page>Introduction</Breadcrumb.Page>
-				</Breadcrumb.Item>
-			</Breadcrumb.List>
-		</Breadcrumb.Root>
-		<div class="space-y-3.5">
-			<h1 class="text-3xl font-bold -tracking-wide text-primary">Introduction</h1>
-			<p
-				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
-			>
-				Welcome to Shadcn Marketing Blocks!
-				<br />
-				This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and
-				Shadcn Svelte.
-			</p>
-			<p
-				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
-			>
-				This project is inspired by <a
-					href="https://tailark.com"
-					class="text-primary underline"
-					target="_blank">Tailark</a
-				>, this project is designed to bring a similarly smooth and efficient experience to
-				Svelte developers, with a focus on building landing and marketing pages
-				effortlessly.
-			</p>
-		</div>
-		<div class="prose dark:prose-invert prose-p:my-1 prose-li:my-1 prose-h2:my-3.5 max-w-none">
-			{@html marked(overview_content)}
-		</div>
-	</div>
-	<div class="grid grid-cols-2 gap-4 border-t py-4 md:grid-cols-6">
-		{#each members as member}
-			<a href={member.href} target="_blank" class="group">
-				<div
-					class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
-				>
-					<img
-						class="aspect-square rounded-full object-cover"
-						src={member.avatar}
-						alt={member.name}
-						height="460"
-						width="460"
-						loading="lazy"
-					/>
-				</div>
-				<span class="mt-2 block text-sm">{member.name}</span>
-				<span class="block text-xs text-muted-foreground group-hover:text-yellow-500"
-					>{member.role}</span
-				>
-			</a>
-		{/each}
-	</div>
-</main>
+<DocsPageShell
+	title="Introduction"
+	description="Everything you need to start using Svelte Shadcn Blocks."
+>
+	<section>
+		<H2 id="overview">Overview</H2>
+		<Paragraph class="mt-1">
+			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong
+				>Svelte 5</Strong
+			>, Shadcn-Svelte and Tailwind CSS
+		</Paragraph>
+	</section>
+
+	<section class="space-y-4">
+		<H2 id="variants">Available Variants</H2>
+		<Table>
+			<Thead>
+				<Tr>
+					<Th>Variant</Th>
+					<Th>Style</Th>
+					<Th>Best For</Th>
+				</Tr>
+			</Thead>
+			<Tbody>
+				<Tr>
+					<Td>Normal</Td>
+					<Td>Bold marketing visuals</Td>
+					<Td>Landing pages and campaigns</Td>
+				</Tr>
+				<Tr>
+					<Td>Mist</Td>
+					<Td>Minimal and documentation friendly</Td>
+					<Td>Content-heavy product websites</Td>
+				</Tr>
+				<Tr>
+					<Td>Veil</Td>
+					<Td>Polished modern SaaS look</Td>
+					<Td>Startup and product pages</Td>
+				</Tr>
+			</Tbody>
+		</Table>
+	</section>
+
+	<section>
+		<H2 id="quick-start">Quick Start</H2>
+		<Paragraph class="mt-1">
+			Start with <Link href="/docs/installation">Installation</Link> and continue with the theme
+			setup that matches your project.
+		</Paragraph>
+	</section>
+</DocsPageShell>

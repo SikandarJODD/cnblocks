@@ -37,9 +37,9 @@ That is **150+ blocks** across the library.
 
 - Website: [Live Preview](https://sv-blocks.vercel.app)
 - [Documentation](https://sv-blocks.vercel.app/v2-docs)
-- [Installation Guide](https://sv-blocks.vercel.app/v2-docs/installation)
-- [Mist Theme Setup](https://sv-blocks.vercel.app/v2-docs/mist-theme)
-- [Veil Theme Setup](https://sv-blocks.vercel.app/v2-docs/veil-theme)
+- [Installation Guide](https://sv-blocks.vercel.app/docs/installation)
+- [Mist Theme Setup](https://sv-blocks.vercel.app/docs/mist-theme)
+- [Veil Theme Setup](https://sv-blocks.vercel.app/docs/veil-theme)
 
 ## Quick Start
 

@@ -118,7 +118,7 @@
 	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
 	let activePreviewTheme = $derived(resolveScopedTheme());
 	let themeSetupHref = $derived(
-		activePreviewTheme === "veil" ? "/v2-docs/veil-theme" : "/v2-docs/mist-theme"
+		activePreviewTheme === "veil" ? "/docs/veil-theme" : "/docs/mist-theme"
 	);
 
 	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {

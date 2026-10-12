@@ -1,131 +1,56 @@
 <script lang="ts">
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import { H2, Paragraph, Steps, Step, Link } from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 	import DocsCodeBlock from "#lib/web/docs/DocsCodeBlock.svelte";
-	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
+
+	const pageMeta = docsV2PageMap.installation;
 </script>
 
-<svelte:head>
-	<title>Installation | Shadcn Marketing Blocks</title>
-	<meta
-		name="description"
-		content="Install & configure Marketing Blocks in your Svelte project using the CLI."
-	/>
-	<meta name="keywords" content="svelte, shadcn, marketing blocks, installation, jsrepo" />
-</svelte:head>
+<SEOComponent
+	title={pageMeta.seo.title}
+	description={pageMeta.seo.description}
+	keywords={pageMeta.seo.keywords}
+/>
 
-<main class="space-y-10 xl:mb-24">
-	<div class="space-y-4">
-		<Breadcrumb.Root>
-			<Breadcrumb.List>
-				<Breadcrumb.Item>
-					<Breadcrumb.Link href="/">Docs</Breadcrumb.Link>
-				</Breadcrumb.Item>
-				<Breadcrumb.Separator />
-				<Breadcrumb.Item>
-					<Breadcrumb.Page>Installation</Breadcrumb.Page>
-				</Breadcrumb.Item>
-			</Breadcrumb.List>
-		</Breadcrumb.Root>
-		<div class="space-y-3.5">
-			<h1 class="text-3xl font-bold -tracking-wide text-primary">Installation</h1>
-			<p class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-primary/50">
-				Install & configure Marketing Blocks in your Svelte project using the CLI.
-			</p>
-			<p class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-primary/50">
-				Here we are using <a
-					href="https://jsrepo.dev"
-					target="_blank"
-					rel="noopener"
-					class="text-yellow-500 underline underline-offset-2">jsrepo CLI</a
-				> to install the blocks.
-			</p>
-		</div>
-	</div>
-	<div>
-		<div class="relative">
-			<div
-				class="absolute flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 select-none dark:bg-neutral-800"
-			>
-				<span class="font-semibold text-primary">1</span>
-			</div>
-			<div class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900">
-				<div class="space-y-4 pt-1 pb-8 pl-8">
-					<h2 class="font-medium text-primary">Create a new Svelte project</h2>
-					<DocsCodeBlock fileName="Terminal" code="npx sv create my-app" lang="bash" />
-				</div>
-			</div>
-		</div>
-		<div class="relative">
-			<div
-				class="absolute flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 select-none dark:bg-neutral-800"
-			>
-				<span class="font-semibold text-primary">2</span>
-			</div>
-			<div class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900">
-				<div class="space-y-4 pt-1 pb-10 pl-8">
-					<h2 class="font-medium text-primary">Add Tailwind CSS</h2>
-					<DocsCodeBlock fileName="Terminal" code="npx sv add tailwindcss" lang="bash" />
-				</div>
-			</div>
-		</div>
-		<div class="relative">
-			<div
-				class="absolute flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 select-none dark:bg-neutral-800"
-			>
-				<span class="font-semibold text-primary">3</span>
-			</div>
-			<div class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900">
-				<div class="space-y-4 pt-1 pb-8 pl-8">
-					<h2 class="font-medium text-primary">Add Shadcn Svelte</h2>
-					<DocsCodeBlock
-						fileName="Terminal"
-						code="npx shadcn-svelte@next init"
-						lang="bash"
-					/>
-				</div>
-			</div>
-		</div>
-		<div class="relative">
-			<div
-				class="absolute flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 select-none dark:bg-neutral-800"
-			>
-				<span class="font-semibold text-primary">4</span>
-			</div>
-			<div class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900">
-				<div class="space-y-4 pt-1 pb-8 pl-8">
-					<h2 class="font-medium text-primary">Now Add Any blocks</h2>
-					<DocsCodeBlock
-						fileName="Terminal"
-						code="npx jsrepo add @sv/cnblocks/hero-one"
-						lang="bash"
-					/>
-				</div>
-			</div>
-		</div>
-		<div class="relative">
-			<div
-				class="absolute flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-background bg-neutral-300 select-none dark:bg-neutral-800"
-			>
-				<span class="font-semibold text-primary">5</span>
-			</div>
-			<div class="ml-[1.1rem] border-l border-neutral-200 dark:border-neutral-900">
-				<div class="space-y-4 pt-1 pl-8">
-					<h2 class="font-medium text-primary">Add path to save Component</h2>
-					<DocsCodeBlock
-						fileName="Terminal"
-						code={`┌  jsrepo v1.47.0
-│
-◇ Please enter a default path to install the blocks
-│ ./src/blocks
-│
-● Initializing @sv/cnblocks
-│
-◇ Fetched manifest from @sv/cnblocks
-│
-└ All done!`}
-						lang="bash"
-					/>
-				</div>
-			</div>
-		</div>
-	</div>
-</main>
+<DocsPageShell
+	title="Installation"
+	description="Install and configure Svelte Shadcn Blocks in a new or existing SvelteKit app."
+>
+	<section class="space-y-4">
+		<H2 id="steps">Setup Steps</H2>
+		<Steps>
+			<Step title="Create or open a sveltekit project">
+				<DocsCodeBlock fileName="Terminal" code="pnpm dlx sv create my-app" lang="bash" />
+			</Step>
+			<Step title="Add Tailwind CSS">
+				<DocsCodeBlock fileName="Terminal" code="pnpm dlx sv add tailwindcss" lang="bash" />
+			</Step>
+			<Step title="Initialize shadcn-svelte">
+				<DocsCodeBlock
+					fileName="Terminal"
+					code="pnpm dlx shadcn-svelte@latest init"
+					lang="bash"
+				/>
+			</Step>
+			<Step title="Install block using shadcn-svelte CLI">
+				<DocsCodeBlock
+					fileName="Terminal"
+					code={`pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/r/hero-one.json
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json`}
+					lang="bash"
+				/>
+			</Step>
+			<Step title="Or simply copy and paste components">
+				<Paragraph class="mt-0">
+					Open any preview route, copy the component code, and paste it into your app.
+					Start with <Link href="/preview/hero/one">Hero Block</Link>, <Link
+						href="/preview/mist/hero/one">Mist</Link
+					>, or <Link href="/preview/veil/hero/hero-one">Veil</Link>.
+				</Paragraph>
+			</Step>
+		</Steps>
+	</section>
+</DocsPageShell>

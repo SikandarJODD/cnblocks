@@ -1,70 +1,102 @@
 <script lang="ts">
+	import SEOComponent from "#lib/seo/SEO.svelte";
+	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import {
+		H2,
+		H3,
+		Paragraph,
+		Link,
+		UnorderedList,
+		ListItem,
+	} from "#lib/components/markdown/index.js";
+	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 	import Button from "#lib/components/ui/button/button.svelte";
 
-	let sponsors = [
+	const pageMeta = docsV2PageMap.sponsors;
+
+	const sponsors = [
+		{
+			name: "Hunter Johnston",
+			avatar: "https://github.com/huntabyte.png",
+			href: "https://github.com/huntabyte",
+		},
 		{
 			name: "Yashash Pugalia",
 			avatar: "https://avatars.githubusercontent.com/u/89068816?v=4",
 			href: "https://github.com/yashash-pugalia",
 		},
+		{
+			name: "Ever",
+			avatar: "https://avatars.githubusercontent.com/u/29817086?v=4",
+			href: "https://github.com/ruizdiazever",
+		},
 	];
 </script>
 
-<svelte:head>
-	<title>Sponsors | Shadcn Marketing Blocks</title>
-	<meta
-		name="description"
-		content="Welcome to Shadcn Marketing Blocks! This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and Shadcn Svelte."
-	/>
-	<meta name="keywords" content="svelte, shadcn, marketing blocks, installation, jsrepo" />
-</svelte:head>
+<SEOComponent
+	title={pageMeta.seo.title}
+	description={pageMeta.seo.description}
+	keywords={pageMeta.seo.keywords}
+/>
 
-<main class="space-y-6 xl:mb-24">
-	<div class="space-y-3">
-		<h1 class="text-3xl font-bold -tracking-wide text-primary">Sponsors</h1>
-		<div class="grid grid-cols-2 gap-4 border-t py-4 md:grid-cols-6">
-			{#each sponsors as member, index}
+<DocsPageShell
+	title="Sponsors"
+	description="Support development of Svelte Shadcn Blocks and help keep the project sustainable."
+>
+	<section>
+		<H2 id="current-sponsors">Current Sponsors</H2>
+		<div class="mt-2 grid grid-cols-2 gap-4 md:grid-cols-5">
+			{#each sponsors as sponsor}
 				<a
-					href={member.href}
+					href={sponsor.href}
 					target="_blank"
-					class="flex flex-col items-center justify-center space-y-1 rounded-xl"
+					rel="noopener noreferrer"
+					class="flex flex-col items-center justify-center rounded-xl border bg-card p-3"
 				>
-					<div
-						class="size-20 rounded-full border bg-secondary p-0.5 shadow shadow-zinc-950/5"
-					>
-						<img
-							class="aspect-square rounded-full object-cover"
-							src={member.avatar}
-							alt={member.name}
-							loading="lazy"
-						/>
-					</div>
-					<span class="mt-2 block text-center text-sm">{member.name}</span>
+					<img
+						class="size-24 rounded-full border object-cover"
+						src={sponsor.avatar}
+						alt={sponsor.name}
+						loading="lazy"
+					/>
+					<span class="mt-2 text-center text-sm font-medium">{sponsor.name}</span>
 				</a>
 			{/each}
 		</div>
-	</div>
-	<div class="space-y-4">
-		<div class="space-y-3.5">
-			<a href="#sponsor" id="sponsor" class="text-xl font-medium -tracking-wide text-primary">
-				Become a Sponsor | Share it on Social Media 😊
-			</a>
-			<p
-				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
+	</section>
+
+	<section>
+		<H2 id="how-to-support">How To Support</H2>
+		<UnorderedList class="mt-2">
+			<ListItem>Become a recurring sponsor on GitHub.</ListItem>
+			<ListItem>Share the project with your developer network.</ListItem>
+			<ListItem>Contribute docs, bug fixes, and component improvements.</ListItem>
+		</UnorderedList>
+		<div class="mt-6 flex flex-wrap gap-3">
+			<Button href="https://github.com/sponsors/SikandarJODD" target="_blank"
+				>Donate on GitHub</Button
 			>
-				Your support helps us to continue improving and maintaining the project.
-			</p>
-			<div class="space-x-2">
-				<Button href="https://github.com/sponsors/SikandarJODD" target="_blank"
-					>Donate on Github</Button
-				>
-				<Button
-					variant="outline"
-					target="_blank"
-					href="https://twitter.com/intent/tweet?text=I%E2%80%99m%20loving%20these%20free%20Svelte%20marketing%20components%21%0A%0ACheck%20them%20out%20https%3A%2F%2Fsv-blocks.vercel.app%0A%0AThanks%20%40Sikandar_Bhide"
-					>Share on Twitter</Button
-				>
-			</div>
+			<Button
+				variant="outline"
+				target="_blank"
+				href="https://twitter.com/intent/tweet?text=I%E2%80%99m%20using%20Svelte%20Shadcn%20Blocks%20for%20my%20marketing%20pages.%20Check%20it%20out%20https%3A%2F%2Fsv-blocks.vercel.app"
+			>
+				Share on Twitter
+			</Button>
 		</div>
-	</div>
-</main>
+	</section>
+
+	<!-- <section class="space-y-4">
+		<H3 id="feedback-and-requests">Feedback and Requests</H3>
+		<Paragraph>
+			For feature requests and sponsorship-related questions, open an issue or discussion on{" "}
+			<Link
+				href="https://github.com/SikandarJODD/cnblocks"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				GitHub
+			</Link>.
+		</Paragraph>
+	</section> -->
+</DocsPageShell>
