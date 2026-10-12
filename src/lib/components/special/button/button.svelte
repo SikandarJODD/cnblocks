@@ -25,6 +25,9 @@
 				lg: "h-10 rounded-md px-8",
 				extralg: "h-10 rounded-md px-8 md:h-12",
 				icon: "h-9 w-9",
+				"icon-xs": "size-6 rounded-[min(var(--radius-md),8px)] in-data-[slot=button-group]:rounded-md [&_svg:not([class*='size-'])]:size-3",
+				"icon-sm": "size-8 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-md",
+				"icon-lg": "size-10",
 			},
 		},
 		defaultVariants: {

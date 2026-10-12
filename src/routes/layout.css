@@ -183,6 +183,11 @@
 	html {
 		scroll-behavior: smooth;
 	}
+	@media (pointer: fine) {
+		html {
+			overscroll-behavior-y: none;
+		}
+	}
 	body {
 		@apply bg-background text-foreground antialiased;
 		font-synthesis-weight: none;

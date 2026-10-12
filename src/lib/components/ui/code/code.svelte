@@ -4,7 +4,7 @@
 	import type { CodeRootProps } from "./types";
 	import { useCode } from "./code.svelte.js";
 	import { box } from "svelte-toolbelt";
-	//   import "../../../../app.css";
+	  import "../../../../routes/layout.css";
 
 	let {
 		ref = $bindable(null),
@@ -32,7 +32,7 @@
 </div>
 
 <style lang="postcss">
-	@reference '../../../../app.css';
+	@reference '../../../../routes/layout.css';
 
 	:global(.dark) {
 		:global(.shiki, .shiki span) {
@@ -52,7 +52,7 @@
 	}
 
 	:global(pre.shiki) {
-		@apply overflow-x-auto rounded-lg bg-inherit py-4 text-xs sm:text-sm;
+		@apply overflow-x-auto rounded-lg bg-background py-4 text-xs sm:text-sm;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}

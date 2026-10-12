@@ -44,12 +44,13 @@
 				<span>components</span>
 			</div>
 
-			{#each code as item, index}
+			<div class="flex flex-col">
+				{#each code as item, index}
 				<Button
 					class={cn(
-						`flex w-full items-center justify-start gap-1.5 rounded-none border-l-2 border-transparent pl-6! text-xs hover:bg-neutral-200/70 hover:dark:bg-zinc-900 [&_svg:not([class*='size-'])]:size-3`,
+						`flex w-full items-center active:not-aria-[haspopup]:translate-y-0 justify-start gap-1.5 rounded-none pl-6! text-xs hover:bg-neutral-200/70 hover:dark:bg-zinc-900 [&_svg:not([class*='size-'])]:size-3 border-none`,
 						selectedIndex === index &&
-							"border-l-2 border-muted-foreground bg-neutral-200/40 dark:bg-zinc-800/50"
+							" bg-neutral-200/40 dark:bg-zinc-700/30"
 					)}
 					variant="ghost"
 					onclick={() => (selectedIndex = index)}
@@ -71,15 +72,16 @@
 					>
 				</Button>
 			{/each}
+			</div>
 		</div>
 	</div>
 	<div
-		class="relative no-scrollbar max-h-[550px] min-h-[32rem] w-full overflow-auto border-none sm:w-full"
+		class="relative no-scrollbar max-h-[550px] min-h-[32rem] w-full overflow-auto border-none sm:w-full bg-background"
 	>
 		<!-- <Code.Overflow> -->
 		<Code.Root
 			lang={selectedCode.lang}
-			class="relative no-scrollbar w-full rounded-none border-none"
+			class="relative no-scrollbar w-full rounded-none bg-background border-none"
 			code={selectedCode.filecode}
 			highlight={selectedCode.highlight}
 			hideLines={selectedCode.hideLines}

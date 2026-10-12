@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import { cn } from "#lib/utils.js";
-	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
+	import { Pane, PaneGroup, PaneResizer } from "paneforge";
 	import { MediaQuery } from "svelte/reactivity";
 	import Separator from "../ui/separator/separator.svelte";
 	import Button from "../ui/button/button.svelte";
@@ -67,7 +67,7 @@
 	);
 	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
 
-	let ref: PaneAPI | undefined = $state(undefined);
+	let ref: ReturnType<typeof Pane> | undefined = $state(undefined);
 
 	let large = new MediaQuery("min-width: 1024px");
 
@@ -512,7 +512,7 @@
 				{#if shouldRenderInIframe}
 					<PaneGroup direction="horizontal">
 						<Pane
-							bind:pane={ref}
+							bind:this={ref}
 							id={`block-${title}`}
 							order={1}
 							onResize={(size) => {
