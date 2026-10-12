@@ -42,7 +42,7 @@
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
-		"rounded-full duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
+		"flex h-8 items-center justify-center gap-2 rounded-full px-2.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background/70 data-[state=checked]:bg-background data-[state=checked]:shadow-xs dark:hover:bg-muted/50 dark:data-[state=checked]:bg-muted dark:data-[state=checked]:shadow-none";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
@@ -153,10 +153,8 @@
 	);
 </script>
 
-<section id="{category}-{title}" class="group w-full max-w-full min-w-0 overflow-hidden mb-6">
-	<div
-		class="relative  min-w-0 overflow-hidden rounded-2xl" 
-	>
+<section id="{category}-{title}" class="group mb-4 pb-2 w-full max-w-full min-w-0 overflow-hidden">
+	<div class="relative min-w-0 overflow-hidden rounded-2xl">
 		<div
 			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"
 		>
@@ -167,6 +165,8 @@
 							variant={mode === "preview" ? "secondary" : "ghost"}
 							size="sm"
 							onclick={() => (mode = "preview")}
+							aria-pressed={mode === "preview"}
+							data-state={mode === "preview" ? "checked" : "unchecked"}
 							class={radioItem}
 						>
 							<!-- <Eye class="size-3 sm:opacity-50" /> -->
@@ -198,6 +198,8 @@
 							variant={mode === "code" ? "secondary" : "ghost"}
 							size="sm"
 							onclick={() => (mode = "code")}
+							aria-pressed={mode === "code"}
+							data-state={mode === "code" ? "checked" : "unchecked"}
 							class={radioItem}
 						>
 							<svg
@@ -222,16 +224,16 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden h-4! my-auto lg:block" />
+					<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				{/if}
 				<Button variant="ghost" class="size-8" href={preview} target="_blank">
 					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
 				</Button>
-				<Separator orientation="vertical" class="hidden h-4! my-auto lg:block" />
+				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				<span class="hidden text-sm text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
-				<Separator orientation="vertical" class='h-4! my-auto'/>
+				<Separator orientation="vertical" class="my-auto h-4!" />
 				<span class="ml-0 text-sm capitalize">{category + " " + title}</span>
 			</div>
 
@@ -441,7 +443,7 @@
 					<PreviewInstallAdd {itemId} />
 
 					{#if !Array.isArray(displayedCode)}
-						<Separator orientation="vertical" class='h-4! my-auto'/>
+						<Separator orientation="vertical" class="my-auto h-4!" />
 
 						<CopyButton text={displayedCode.code} />
 					{/if}
@@ -462,7 +464,7 @@
 		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
 			<div
 				class={cn(
-					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 dark:border-muted bg-white dark:bg-transparent",
+					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-white dark:border-muted dark:bg-muted/50!",
 					mode === "code" && "hidden"
 				)}
 			>
@@ -497,7 +499,7 @@
 					<div
 						in:scale={{ start: 0.85 }}
 						class={cn(
-							"theme-container relative w-full overflow-hidden contain-[paint] bg-background",
+							"theme-container relative w-full overflow-hidden bg-background contain-[paint]",
 							category === "header" && "min-h-80 bg-background"
 						)}
 					>
@@ -506,7 +508,7 @@
 				{/if}
 			</div>
 
-			<div class="max-w-full min-w-0 overflow-hidden bg-secondary! dark:bg-transparent">
+			<div class="max-w-full min-w-0 overflow-hidden">
 				{#if mode === "code"}
 					<CodeEditor code={displayedCode} />
 				{/if}

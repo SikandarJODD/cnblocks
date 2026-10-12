@@ -105,7 +105,7 @@
 	<!-- {@render CopyButton()} -->
 	<!-- <CodeBlock code={code.code} /> -->
 	<div
-		class="code-editor relative mx-2 h-144 w-auto min-w-0 overflow-hidden rounded-xl border border-muted"
+		class="code-editor relative mx-1 h-144  w-auto min-w-0 overflow-hidden rounded-2xl border border-neutral-200/70 dark:border-muted"
 	>
 		<Code
 			class="h-full min-w-0 max-w-full overflow-hidden rounded-none border-none! outline-none"
