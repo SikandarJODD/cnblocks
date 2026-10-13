@@ -42,7 +42,7 @@
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
-		"flex h-8 items-center justify-center gap-2 rounded-full px-2.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background/70 data-[state=checked]:bg-background data-[state=checked]:shadow-xs dark:hover:bg-muted/50 dark:data-[state=checked]:bg-muted dark:data-[state=checked]:shadow-none";
+		"gap-1 rounded-full pr-3 pl-2.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background/70 data-[state=checked]:bg-background data-[state=checked]:shadow-xs dark:hover:bg-muted/50 dark:data-[state=checked]:bg-muted dark:data-[state=checked]:shadow-none";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
@@ -153,7 +153,7 @@
 	);
 </script>
 
-<section id="{category}-{title}" class="group mb-4 pb-2 w-full max-w-full min-w-0 overflow-hidden">
+<section id="{category}-{title}" class="group w-full max-w-full min-w-0 overflow-hidden pb-2">
 	<div class="relative min-w-0 overflow-hidden rounded-2xl">
 		<div
 			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"
@@ -226,15 +226,22 @@
 					</div>
 					<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				{/if}
-				<Button variant="ghost" class="size-8" href={preview} target="_blank">
-					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
+				<Button
+					variant="ghost"
+					class="size-7 transition-[color,background-color,box-shadow] duration-200 hover:bg-background data-[state=checked]:bg-background dark:hover:bg-muted"
+					href={preview}
+					target="_blank"
+				>
+					<Maximize strokeWidth={1.6} class="size-3.5! sm:opacity-80" />
 				</Button>
 				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
-				<span class="hidden text-sm text-muted-foreground lg:block"
+				<span class="hidden text-[13px] text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
 				<Separator orientation="vertical" class="my-auto h-4!" />
-				<span class="ml-0 text-sm capitalize">{category + " " + title}</span>
+				<span class="ml-0 font-sidebar-content text-[13px] font-light capitalize"
+					>{category + " " + title}</span
+				>
 			</div>
 
 			<div class="flex items-center gap-2">
@@ -374,60 +381,63 @@
 					<TooltipProvider delayDuration={120}>
 						<Tooltip>
 							<TooltipTrigger>
-								<Button
-									size="icon"
-									onclick={() => {
-										showIframeComp = !showIframeComp;
-									}}
-									class="relative h-8 w-8 cursor-pointer shadow-none"
-									variant="outline"
-									aria-label="Toggle Responsive UI"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="28"
-										height="28"
-										viewBox="0 0 24 24"
-										fill="none"
+								{#snippet child({ props })}
+									<Button
+										{...props}
+										size="icon-sm"
+										onclick={() => {
+											showIframeComp = !showIframeComp;
+										}}
+										class="relative size-7.5 cursor-pointer shadow-none"
+										variant="outline"
+										aria-label="Toggle Responsive UI"
 									>
-										<path
-											d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
-											class={showIframeComp
-												? "fill-green-500/10 stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-										<path
-											d="M10 3L10 21"
-											class={showIframeComp
-												? "stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-										<path
-											d="M5.5 7H6.5M5.5 10H6.5"
-											class={showIframeComp
-												? "stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-										<path
-											d="M17 10L15 12L17 14"
-											class={showIframeComp
-												? "stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-									</svg>
-								</Button>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="28"
+											height="28"
+											viewBox="0 0 24 24"
+											fill="none"
+										>
+											<path
+												d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
+												class={showIframeComp
+													? "fill-green-500/10 stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+											<path
+												d="M10 3L10 21"
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+											<path
+												d="M5.5 7H6.5M5.5 10H6.5"
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+											<path
+												d="M17 10L15 12L17 14"
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+										</svg>
+									</Button>
+								{/snippet}
 							</TooltipTrigger>
 							<TooltipContent align="center" class="px-2 py-1 text-[10px]"
 								>Responsive UI</TooltipContent
@@ -438,7 +448,7 @@
 				{#if code}
 					{#if mode === "code"}
 						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator orientation="vertical" class='my-auto h-4!'/>
+						<Separator orientation="vertical" class="my-auto h-4!" />
 					{/if}
 					<PreviewInstallAdd {itemId} />
 
@@ -497,7 +507,6 @@
 					</div>
 				{:else}
 					<div
-						in:scale={{ start: 0.85 }}
 						class={cn(
 							"theme-container relative w-full overflow-hidden bg-background contain-[paint]",
 							category === "header" && "min-h-80 bg-background"

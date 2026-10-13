@@ -16,7 +16,7 @@
 			class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
 		></div>
 	</section> -->
-	<section class='bg-muted dark:bg-muted/50 rounded-t-2xl'>
+	<section class="rounded-t-2xl">
 		{@render children()}
 	</section>
 	{#if visible}
@@ -25,7 +25,7 @@
 </div>
 
 {#snippet scrollToTop()}
-	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6 bottom-18 z-50">
+	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6.5 bottom-18 z-50">
 		<Button
 			size="icon"
 			variant="secondary"

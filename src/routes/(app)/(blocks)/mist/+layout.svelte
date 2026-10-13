@@ -9,7 +9,7 @@
 </script>
 
 <div>
-	<section class="rounded-t-2xl bg-muted dark:bg-muted/50">
+	<section class="rounded-t-2xl">
 		{@render children()}
 	</section>
 	{#if visible}
@@ -18,7 +18,7 @@
 </div>
 
 {#snippet scrollToTop()}
-	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6 bottom-18 z-50">
+	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-6.5 bottom-18 z-50">
 		<Button
 			size="icon"
 			variant="secondary"
