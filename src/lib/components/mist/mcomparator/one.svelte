@@ -1,5 +1,5 @@
 <script>
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 	import Check from "@lucide/svelte/icons/check";
 	import Sparkles from "@lucide/svelte/icons/sparkles";
 	import Star from "@lucide/svelte/icons/star";
@@ -50,25 +50,25 @@
 	];
 </script>
 
-<section class="bg-muted py-16 [--color-primary:var(--color-indigo-500)] md:py-32 dark:bg-muted/20">
+<section class="bg-muted py-16 md:py-20">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="w-full overflow-auto lg:overflow-visible">
 			<table class="w-[200vw] border-separate border-spacing-x-3 md:w-full">
-				<thead class="sticky top-0 bg-muted/95 dark:bg-transparent">
+				<thead class="sticky top-0 bg-muted/95">
 					<tr class="*:py-4 *:text-left *:font-medium">
 						<th class="lg:w-2/5"></th>
 						<th class="space-y-3">
 							<span class="block">Free</span>
 
-							<Button variant="neutral">Get Started</Button>
+							<Button href="#" variant="neutral">Get Started</Button>
 						</th>
 						<th class="space-y-3">
 							<span class="block">Pro</span>
-							<Button variant="mdefault">Get Started</Button>
+							<Button href="#" variant="neutral">Get Started</Button>
 						</th>
 						<th class="space-y-3">
 							<span class="block">Startup</span>
-							<Button variant="neutral">Get Started</Button>
+							<Button href="#" variant="neutral">Get Started</Button>
 						</th>
 					</tr>
 				</thead>
@@ -82,7 +82,7 @@
 						<td class="border-none px-4"></td>
 						<td></td>
 					</tr>
-					{#each tableData.slice(-4) as row}
+					{#each tableData.slice(-4) as row (row.feature)}
 						<tr class="*:border-b *:py-4">
 							<td class="text-muted-foreground">{row.feature}</td>
 							<td>
@@ -114,15 +114,17 @@
 							<span>AI Models</span>
 						</td>
 						<td></td>
-						<td class="border-none bg-muted px-4 dark:bg-transparent"></td>
+						<td class="border-none bg-muted px-4"></td>
 						<td></td>
 					</tr>
-					{#each tableData as row}
+					{#each tableData as row (row.feature)}
 						<tr class="*:border-b *:py-4">
 							<td class="text-muted-foreground">{row.feature}</td>
 							<td>
 								{#if row.free === true}
 									<Check class="size-3 text-primary" strokeWidth={3.5} />
+								{:else}
+									{row.free}
 								{/if}
 							</td>
 							<td>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 
 	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
@@ -64,7 +64,7 @@
 </script>
 
 <section>
-	<div class="bg-muted/50 py-24 dark:bg-muted/30">
+	<div class="bg-muted/50 py-24">
 		<div class="@container mx-auto w-full max-w-5xl px-6">
 			<div class="mb-12">
 				<h2 class="text-4xl font-semibold text-foreground">Meet Our Team</h2>
@@ -73,19 +73,21 @@
 					Together, we collaborate to deliver exceptional results and innovative solutions
 					for our clients.
 				</p>
-				<Button variant="outline" class="pr-2">
+				<Button href="#" variant="outline" class="pr-2">
 					We're hiring
 					<ChevronRight class="opacity-50" />
 				</Button>
 			</div>
 
 			<div class="grid gap-6 md:gap-y-10 @sm:grid-cols-2 @xl:grid-cols-3 @3xl:grid-cols-4">
-				{#each members as member, index}
+				{#each members as member (member.name)}
 					<HoverCard openDelay={300}>
 						<HoverCardTrigger
 							class="grid cursor-pointer grid-cols-[auto_1fr] items-center gap-2.5"
 						>
-							<Avatar class=" size-6 border border-transparent shadow ring-1">
+							<Avatar
+								class="size-6 border border-transparent shadow ring-1 ring-foreground/10"
+							>
 								<AvatarImage src={member.src} alt={member.name} />
 								<AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
 							</Avatar>
@@ -97,7 +99,7 @@
 							<div class="space-y-3">
 								<div class="flex justify-between">
 									<Avatar
-										class="size-10  rounded-(--radius) border border-transparent shadow ring-1"
+										class="size-10 rounded-(--radius) border border-transparent shadow ring-1 ring-foreground/10"
 									>
 										<AvatarImage src={member.src} alt={member.name} />
 										<AvatarFallback class="rounded-(--radius)"
@@ -117,7 +119,6 @@
 											fill="none"
 											viewBox="0 0 1200 1227"
 											><path
-												fill="#fff"
 												d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
 											/></svg
 										>

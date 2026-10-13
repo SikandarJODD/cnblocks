@@ -1,12 +1,15 @@
 <script lang="ts">
-	import { Card, CardHeader, CardTitle, CardDescription } from "#lib/components/ui/card/index.js";
-	import Button from "#lib/components/ui/button/button.svelte";
+	import {
+		Card,
+		CardHeader,
+		CardTitle,
+		CardDescription,
+	} from "#lib/components/ui/mist/card/index.js";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 	import Check from "@lucide/svelte/icons/check";
 </script>
 
-<div
-	class="relative bg-muted py-16 [--color-primary:var(--color-indigo-500)] md:py-32 dark:bg-muted/30"
->
+<div class="relative bg-muted py-16 md:py-32 dark:bg-muted/30">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="mx-auto max-w-2xl text-center">
 			<h2 class="text-3xl font-bold text-balance md:text-4xl lg:text-5xl">
@@ -39,7 +42,7 @@
 						</ul>
 					</div>
 					<div
-						class=" -mx-1 rounded-(--radius) bg-background shadow ring-1 @3xl:mx-0 @3xl:-my-3 dark:border-x"
+						class="-mx-1 rounded-(--radius) bg-background shadow ring-1 ring-foreground/5 @3xl:mx-0 @3xl:-my-3"
 					>
 						<div class="relative px-1 @3xl:px-0 @3xl:py-3">
 							<CardHeader class="p-8">
@@ -50,7 +53,7 @@
 								<CardDescription class="text-sm">Per editor</CardDescription>
 							</CardHeader>
 							<div class="-mx-1 border-y px-8 py-4 @3xl:mx-0">
-								<Button variant="mdefault" class="w-full">Get Started</Button>
+								<Button variant="default" class="w-full">Get Started</Button>
 							</div>
 
 							<ul role="list" class="space-y-3 p-8">
