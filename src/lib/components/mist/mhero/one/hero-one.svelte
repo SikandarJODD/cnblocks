@@ -3,6 +3,7 @@
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import CirclePlay from "@lucide/svelte/icons/circle-play";
 	import Header from "./header.svelte";
+	import TrustedLogos from "./trusted-logos.svelte";
 </script>
 
 <Header />
@@ -34,35 +35,7 @@
 
 					<div class="mt-10">
 						<p class="text-muted-foreground">Trusted by teams at :</p>
-						<div class="mt-6 grid max-w-sm grid-cols-3 gap-6">
-							<div class="flex">
-								<img
-									class="h-4 w-fit"
-									src="https://html.tailus.io/blocks/customers/column.svg"
-									alt="Column Logo"
-									height="16"
-									width="auto"
-								/>
-							</div>
-							<div class="flex">
-								<img
-									class="h-5 w-fit"
-									src="https://html.tailus.io/blocks/customers/nvidia.svg"
-									alt="Nvidia Logo"
-									height="20"
-									width="auto"
-								/>
-							</div>
-							<div class="flex">
-								<img
-									class="h-4 w-fit"
-									src="https://html.tailus.io/blocks/customers/github.svg"
-									alt="GitHub Logo"
-									height="16"
-									width="auto"
-								/>
-							</div>
-						</div>
+						<TrustedLogos />
 					</div>
 				</div>
 			</div>
@@ -74,7 +47,7 @@
 					class="relative h-full before:absolute before:-inset-x-4 before:top-0 before:bottom-7 before:skew-x-6 before:rounded-[calc(var(--radius)+1rem)] before:border before:border-foreground/5 before:bg-foreground/5"
 				>
 					<div
-						class="relative h-full -translate-y-12 skew-x-6 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-md ring-1 shadow-foreground/10"
+						class="relative h-full -translate-y-12 skew-x-6 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-md ring-1 shadow-foreground/10 ring-foreground/5"
 					>
 						<img
 							src="/mist/tailark.png"

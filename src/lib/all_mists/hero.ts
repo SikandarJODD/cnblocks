@@ -18,6 +18,7 @@ import HeroSixCode from "#lib/components/mist/mhero/six/hero-six.svelte?raw";
 
 import type { MistBlock } from "#lib/types/mists.js";
 import Header from "#lib/components/mist/mhero/one/header.svelte?raw";
+import TrustedLogos from "#lib/components/mist/mhero/one/trusted-logos.svelte?raw";
 
 export const all_mists_heros: MistBlock[] = [
 	{
@@ -39,6 +40,11 @@ export const all_mists_heros: MistBlock[] = [
 				code: Header,
 				lang: "svelte",
 				name: "header.svelte",
+			},
+			{
+				code: TrustedLogos,
+				lang: "svelte",
+				name: "trusted-logos.svelte",
 			},
 		],
 	},
