@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Button, { buttonVariants } from "#lib/components/ui/button/button.svelte";
-	import Input from "#lib/components/ui/input/input.svelte";
-	import Label from "#lib/components/ui/label/label.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
+	import Input from "#lib/components/ui/mist/input/input.svelte";
+	import Label from "#lib/components/ui/mist/label/label.svelte";
 </script>
 
-<section
-	class="flex min-h-screen bg-linear-to-b from-muted to-background px-4 py-16 [--color-primary:var(--color-indigo-500)] md:py-32"
->
+<section class="flex min-h-screen bg-linear-to-b from-muted to-background px-4 py-16 md:py-20">
 	<form action="" class="m-auto h-fit w-full max-w-92">
 		<div class="p-6">
 			<div>
@@ -58,12 +56,10 @@
 						name="email"
 						id="email"
 						placeholder="Your email"
-						class=" border-transparent ring-1 dark:border-input"
+						class="border-transparent ring-1 ring-foreground/15"
 					/>
 				</div>
-				<!-- You can use variant='default'  -->
-				<!-- I have added variant='mdefault' as new variant in button.svelte -->
-				<Button class="w-full" variant="mdefault" size="default">Send Reset Link</Button>
+				<Button class="w-full" variant="default" size="default">Send Reset Link</Button>
 			</div>
 		</div>
 		<div class="px-6">
