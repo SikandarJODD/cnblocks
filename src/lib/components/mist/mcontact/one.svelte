@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
-	import Card from "#lib/components/ui/card/card.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
+	import Card from "#lib/components/ui/mist/card/card.svelte";
 	import Input from "#lib/components/ui/input/input.svelte";
 	import Label from "#lib/components/ui/label/label.svelte";
 
@@ -101,7 +101,7 @@
 							<Label for="msg">Message</Label>
 							<Textarea id="msg" rows={3} placeholder="Enter your message" />
 						</div>
-						<Button variant="mdefault" size="default">Submit</Button>
+						<Button variant="default" size="default">Submit</Button>
 					</div>
 				</Card>
 			</form>
