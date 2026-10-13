@@ -49,7 +49,7 @@
 							>New</span
 						>
 						<span class="text-sm">Introduction Tailus UI Html</span>
-						<span class="block h-4 w-px bg-(--color-border)"></span>
+						<span class="block h-4 w-px bg-border"></span>
 
 						<ArrowRight class="size-4" />
 					</a>

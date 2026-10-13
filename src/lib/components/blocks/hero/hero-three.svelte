@@ -42,9 +42,7 @@
 <div>
 	<!-- Scroll below to see the snippet code  -->
 	{@render heroheader()}
-	<main
-		class="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]"
-	>
+	<main class="overflow-hidden">
 		<section>
 			<div class="relative mx-auto max-w-6xl px-6 pt-32 pb-20 lg:pt-48">
 				<div class="relative z-10 mx-auto max-w-4xl text-center">
@@ -95,7 +93,7 @@
 								class="absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-4xl border border-border/50 bg-background mask-[linear-gradient(to_bottom,#000_50%,transparent_90%)] p-2 sm:-translate-x-6"
 							>
 								<div
-									class="relative h-96 overflow-hidden rounded-3xl border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50"
+									class="relative h-96 overflow-hidden rounded-3xl border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,currentColor,currentColor_1px,transparent_1px,transparent_6px)] before:text-border before:opacity-50"
 								></div>
 							</div>
 							<div

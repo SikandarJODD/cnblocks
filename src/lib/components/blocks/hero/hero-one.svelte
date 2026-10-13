@@ -66,7 +66,7 @@
 		<section>
 			<div class="relative pt-24 md:pt-36">
 				<div
-					class="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"
+					class="absolute inset-0 -z-10 size-full bg-radial-[125%_125%_at_50%_100%] from-transparent from-0% to-background to-75%"
 				></div>
 				<div class="mx-auto max-w-7xl px-6">
 					<div class="text-center sm:mx-auto lg:mt-0 lg:mr-auto">
