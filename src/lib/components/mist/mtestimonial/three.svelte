@@ -31,10 +31,10 @@
 	];
 </script>
 
-<section class="[--color-primary:var(--color-indigo-500)]">
+<section>
 	<div class="py-24">
-		<div class="@container mx-auto w-full max-w-5xl px-6">
-			<div class="grid gap-6 @lg:grid-cols-2 @3xl:grid-cols-3 @3xl:gap-12">
+		<div class="mx-auto w-full max-w-5xl px-6">
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
 				{#each testimonials as testimonial}
 					<div>
 						<div class="flex gap-1">
@@ -51,7 +51,9 @@
 						</div>
 						<p class="my-4 text-foreground">{testimonial.content}</p>
 						<div class="flex items-center gap-2">
-							<Avatar class="size-6 border border-transparent shadow ring-1">
+							<Avatar
+								class="size-6 border border-transparent shadow ring-1 ring-foreground/10"
+							>
 								<AvatarImage src={testimonial.avatar} alt={testimonial.name} />
 								<AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
 							</Avatar>

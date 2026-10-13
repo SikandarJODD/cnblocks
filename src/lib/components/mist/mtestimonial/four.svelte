@@ -2,7 +2,7 @@
 	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 </script>
 
-<section class="[--color-primary:var(--color-indigo-500)]">
+<section>
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<blockquote
@@ -14,7 +14,9 @@
 					as stunning as they are user-friendly.
 				</p>
 				<footer class="mt-4 flex items-center gap-2">
-					<Avatar class=" size-6 border border-transparent shadow ring-1">
+					<Avatar
+						class="size-6 border border-transparent shadow ring-1 ring-foreground/10"
+					>
 						<AvatarImage
 							src="https://avatars.githubusercontent.com/u/68236786?v=4"
 							alt="Théo Balick"
