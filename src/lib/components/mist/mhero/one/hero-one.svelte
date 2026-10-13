@@ -6,7 +6,7 @@
 </script>
 
 <Header />
-<main class="overflow-hidden [--color-primary:var(--color-indigo-500)]">
+<main class="overflow-hidden">
 	<section class="bg-linear-to-b from-background to-muted">
 		<div class="relative py-36">
 			<div class="relative z-10 mx-auto w-full max-w-5xl px-6">

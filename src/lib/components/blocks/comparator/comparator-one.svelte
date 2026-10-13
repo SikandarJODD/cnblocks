@@ -178,7 +178,7 @@
 								{/if}
 							</td>
 							<td class="border-none bg-muted px-4 dark:bg-zinc-900">
-								<div class="-mb-3 border-b py-3">
+								<div class="-mb-3 border-b pb-3.5">
 									{#if typeof row.pro === "boolean" && row.pro}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
