@@ -13,7 +13,6 @@
 	});
 
 	let svgOptions = {
-		backgroundColor: "var(--color-background)",
 		color: "currentColor",
 		radius: 0.15,
 	};
@@ -132,8 +131,8 @@
 
 	<svg
 		{viewBox}
+		class="bg-background"
 		xmlns="http://www.w3.org/2000/svg"
-		style="background-color: {svgOptions.backgroundColor};"
 	>
 		{#each points as point, index}
 			<circle cx={point.x} cy={point.y} r={svgOptions.radius} fill={svgOptions.color} />

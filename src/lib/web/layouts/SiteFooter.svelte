@@ -5,7 +5,7 @@
 </script>
 
 <footer
-	class="mx-1 -mt-0.5 mb-1 rounded-t-2xl rounded-b-2xl border border-b-emerald-200 bg-linear-to-t from-emerald-100 from-10% via-white via-30% to-white to-35% py-20 dark:border-t-neutral-800 dark:border-b-muted dark:from-muted/50 dark:from-0% dark:via-background dark:via-50% dark:to-background dark:to-30%"
+	class="mx-1 -mt-0.5 mb-1 rounded-t-2xl rounded-b-2xl border bg-linear-to-t from-emerald-50 from-10% via-white via-30% to-white to-35% py-20 dark:border-t-neutral-800 dark:border-b-muted dark:from-muted/50 dark:from-0% dark:via-background dark:via-50% dark:to-background dark:to-30%"
 >
 	<div class="mx-auto max-w-7xl px-10 lg:px-6">
 		<a href="/" aria-label="home" class="-m-2 inline-block p-2 duration-200">

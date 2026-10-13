@@ -47,7 +47,7 @@
 
 				<div class="mb-6 border-t border-dashed sm:mb-0">
 					<div
-						class="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_0%,transparent_40%,var(--color-blue-600),var(--color-white)_100%)]"
+						class="absolute inset-0 bg-radial-[125%_125%_at_50%_0%] from-transparent from-40% via-blue-600 via-70% to-white"
 					></div>
 					<div class="aspect-76/59 p-1 px-6">
 						{@render dualModeImg({
@@ -73,7 +73,7 @@
 				<Card.Content>
 					<div class="relative mb-6 overflow-hidden sm:mb-0">
 						<div
-							class="absolute -inset-6 [background:radial-gradient(50%_50%_at_75%_50%,transparent,var(--color-background)_100%)]"
+							class="absolute -inset-6 bg-radial-[50%_50%_at_75%_50%] from-transparent to-background"
 						></div>
 						<div class="aspect-76/59 border">
 							{@render dualModeImg({
@@ -157,11 +157,11 @@
 					<div
 						class={cn("size-7 rounded-full border sm:size-8", {
 							"border-primary": circle.pattern === "none",
-							"border-primary bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_4px)]":
+							"border-primary bg-[repeating-linear-gradient(-45deg,currentColor,currentColor_1px,transparent_1px,transparent_4px)] text-border":
 								circle.pattern === "border",
-							"border-primary bg-background bg-[repeating-linear-gradient(-45deg,var(--color-primary),var(--color-primary)_1px,transparent_1px,transparent_4px)]":
+							"border-primary bg-background bg-[repeating-linear-gradient(-45deg,currentColor,currentColor_1px,transparent_1px,transparent_4px)] text-primary":
 								circle.pattern === "primary",
-							"z-1 border-blue-500 bg-background bg-[repeating-linear-gradient(-45deg,var(--color-blue-500),var(--color-blue-500)_1px,transparent_1px,transparent_4px)]":
+							"z-1 border-blue-500 bg-background bg-[repeating-linear-gradient(-45deg,currentColor,currentColor_1px,transparent_1px,transparent_4px)] text-blue-500":
 								circle.pattern === "blue",
 						})}
 					></div>
