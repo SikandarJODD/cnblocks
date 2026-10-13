@@ -107,7 +107,7 @@
 				{#each testimonialChunks as chunk, chunkIndex}
 					<div class="space-y-3 *:border-none *:shadow-none">
 						{#each chunk as { name, role, quote, image }, index}
-							<Card>
+							<Card class="bg-muted">
 								<CardContent class="grid grid-cols-[auto_1fr] gap-3 pt-6">
 									<Avatar class="size-9">
 										<AvatarImage

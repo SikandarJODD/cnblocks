@@ -31,7 +31,7 @@
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="flex flex-wrap justify-between gap-6">
 			<span class="order-last block text-center text-sm text-muted-foreground md:order-first"
-				>© {new Date().getFullYear()} Tailus UI, All rights reserved</span
+				>© {new Date().getFullYear()} Svelte Blocks, All rights reserved</span
 			>
 			<div class="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
 				{#each links as link, index}

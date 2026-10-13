@@ -15,7 +15,7 @@
 				<div class="mt-12 flex items-center justify-center gap-6">
 					<Avatar class="size-12">
 						<AvatarImage
-							src="https://tailus.io/images/reviews/shekinah.webp"
+							src="https://randomuser.me/api/portraits/women/44.jpg"
 							alt="Shekinah Tshiokufila"
 							height="400"
 							width="400"

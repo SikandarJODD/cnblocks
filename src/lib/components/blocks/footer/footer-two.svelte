@@ -172,7 +172,7 @@
 		</div>
 		<div class="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
 			<span class="order-last block text-center text-sm text-muted-foreground md:order-first"
-				>© {new Date().getFullYear()} Tailus UI, All rights reserved</span
+				>© {new Date().getFullYear()} Svelte Blocks, All rights reserved</span
 			>
 			<div class="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
 				<a

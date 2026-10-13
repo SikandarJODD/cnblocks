@@ -201,7 +201,7 @@
 			</a>
 		</div>
 		<span class="block text-center text-sm text-muted-foreground">
-			© {new Date().getFullYear()} Tailus UI, All rights reserved</span
+			© {new Date().getFullYear()} Svelte Blocks, All rights reserved</span
 		>
 	</div>
 </footer>

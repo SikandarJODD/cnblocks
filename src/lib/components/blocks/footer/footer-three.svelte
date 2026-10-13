@@ -326,7 +326,7 @@
 		</div>
 		<div class="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
 			<small class="order-last block text-center text-sm text-muted-foreground md:order-first"
-				>© {new Date().getFullYear()} Tailus UI, All rights reserved</small
+				>© {new Date().getFullYear()} Svelte Blocks, All rights reserved</small
 			>
 			<form action="">
 				<div class="relative">

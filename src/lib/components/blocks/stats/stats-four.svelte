@@ -56,7 +56,7 @@
 							height="20"
 							width="auto"
 						/> -->
-						<Spotify class="h-5 w-fit dark:invert" />
+						<Spotify class="h-14 w-fit dark:grayscale dark:invert" />
 					</div>
 				</blockquote>
 			</div>

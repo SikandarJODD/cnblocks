@@ -63,7 +63,7 @@
 				class="w-[200vw] border-separate border-spacing-x-3 md:w-full dark:[--color-muted:var(--color-zinc-900)]"
 			>
 				<thead class="sticky top-0 bg-background">
-					<tr class="*:py-4 *:text-left *:font-medium">
+					<tr class="*:py-4 *:font-medium [&>th:not(:first-child)]:text-center">
 						<th class="lg:w-2/5"></th>
 						<th class="space-y-3">
 							<span class="block">Free</span>
@@ -80,7 +80,7 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody class="text-caption text-sm">
+				<tbody class="text-caption text-sm [&>tr>td:not(:first-child)]:text-center">
 					<tr class="*:py-3">
 						<td class="flex items-center gap-2 font-medium">
 							<Cpu class="size-4" />

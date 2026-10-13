@@ -208,7 +208,7 @@
 			</div>
 		</div>
 		<div class="mt-16 flex items-center justify-between rounded-md bg-muted p-4 px-6 py-3">
-			<span class="text-title">&copy; tailus 2021 - Present</span>
+			<span class="text-title">&copy; Svelte Blocks 2021 - Present</span>
 			<a href="/" class="text-sm text-muted-foreground hover:text-primary"> Licence </a>
 		</div>
 	</div>

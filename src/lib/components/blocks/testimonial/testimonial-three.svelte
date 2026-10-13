@@ -11,7 +11,7 @@
 				<div class="mt-12 flex items-center gap-6">
 					<img
 						class="h-7 w-fit dark:invert"
-						src="https://html.tailus.io/blocks/customers/nvidia.svg"
+						src="https://cdn.simpleicons.org/nvidia/000000"
 						alt="Nvidia Logo"
 						height="20"
 						width="auto"
