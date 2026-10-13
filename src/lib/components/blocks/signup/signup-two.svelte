@@ -7,9 +7,9 @@
 <section class="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
 	<form
 		action=""
-		class="m-auto h-fit w-full max-w-sm overflow-hidden rounded-[calc(var(--radius)+.125rem)] border bg-muted shadow-md shadow-zinc-950/5 dark:[--color-muted:var(--color-zinc-900)]"
+		class="m-auto h-fit w-full max-w-sm overflow-hidden rounded-xl border bg-muted shadow-md shadow-zinc-950/5 dark:bg-zinc-900"
 	>
-		<div class="-m-px rounded-[calc(var(--radius)+.125rem)] border bg-card p-8 pb-6">
+		<div class="-m-px rounded-xl border bg-card p-8 pb-6">
 			<div class="text-center">
 				<a href="/" aria-label="go home" class="mx-auto block w-fit">
 					<svg

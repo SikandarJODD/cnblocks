@@ -20,7 +20,7 @@
 				<CardHeader>
 					<img
 						class="h-6 w-fit dark:invert"
-						src="https://html.tailus.io/blocks/customers/nike.svg"
+						src="https://cdn.simpleicons.org/nike/000000"
 						alt="Nike Logo"
 						height="24"
 						width="auto"

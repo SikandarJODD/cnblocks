@@ -15,10 +15,10 @@
 			</p>
 		</div>
 
-		<div
-			class="grid gap-4 [--color-card:var(--color-muted)] *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2 dark:[--color-muted:var(--color-zinc-900)]"
-		>
-			<Card class="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
+		<div class="grid gap-4 *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
+			<Card
+				class="grid grid-rows-[auto_1fr] gap-8 bg-muted sm:col-span-2 sm:p-6 lg:row-span-2 dark:bg-zinc-900"
+			>
 				<CardHeader>
 					<img
 						class="h-6 w-fit dark:invert"
@@ -60,7 +60,7 @@
 					</blockquote>
 				</CardContent>
 			</Card>
-			<Card class="md:col-span-2">
+			<Card class="bg-muted md:col-span-2 dark:bg-zinc-900">
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p class="text-xl font-medium">
@@ -89,7 +89,7 @@
 					</blockquote>
 				</CardContent>
 			</Card>
-			<Card>
+			<Card class="bg-muted dark:bg-zinc-900">
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p>
@@ -118,7 +118,7 @@
 					</blockquote>
 				</CardContent>
 			</Card>
-			<Card class="card variant-mixed">
+			<Card class="card variant-mixed bg-muted dark:bg-zinc-900">
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p>

@@ -101,13 +101,11 @@
 				<h2 class="text-title text-3xl font-semibold">Loved by the Community</h2>
 				<p class="text-body mt-6">Harum quae dolore orrupti aut temporibus ariatur.</p>
 			</div>
-			<div
-				class="mt-8 grid gap-3 [--color-card:var(--color-muted)] sm:grid-cols-2 md:mt-12 lg:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]"
-			>
+			<div class="mt-8 grid gap-3 sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
 				{#each testimonialChunks as chunk, chunkIndex}
 					<div class="space-y-3 *:border-none *:shadow-none">
 						{#each chunk as { name, role, quote, image }, index}
-							<Card class="bg-muted">
+							<Card class="bg-muted dark:bg-zinc-900">
 								<CardContent class="grid grid-cols-[auto_1fr] gap-3 pt-6">
 									<Avatar class="size-9">
 										<AvatarImage

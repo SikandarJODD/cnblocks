@@ -8,18 +8,16 @@
 			</p>
 		</div>
 
-		<div
-			class="grid gap-0.5 *:text-center md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]"
-		>
-			<div class="space-y-4 rounded-(--radius) bg-muted py-12">
+		<div class="grid gap-0.5 *:text-center md:grid-cols-3">
+			<div class="space-y-4 rounded-(--radius) bg-muted py-12 dark:bg-zinc-900">
 				<div class="text-5xl font-bold">+1200</div>
 				<p>Stars on GitHub</p>
 			</div>
-			<div class="space-y-4 rounded-(--radius) bg-muted py-12">
+			<div class="space-y-4 rounded-(--radius) bg-muted py-12 dark:bg-zinc-900">
 				<div class="text-5xl font-bold">56%</div>
 				<p>Conversion rate</p>
 			</div>
-			<div class="space-y-4 rounded-(--radius) bg-muted py-12">
+			<div class="space-y-4 rounded-(--radius) bg-muted py-12 dark:bg-zinc-900">
 				<div class="text-5xl font-bold">+500</div>
 				<p>Powered Apps</p>
 			</div>
