@@ -16,6 +16,10 @@
 		let path = page.url.pathname;
 		return path.includes("kit") || path.includes("mist");
 	});
+	let isHomePath = $derived.by(() => {
+		let path = page.url.pathname;
+		return path === "/";
+	});
 </script>
 
 <Sidebar.Provider>
@@ -24,7 +28,7 @@
 		<main
 			class={cn(
 				"min-w-0 flex-1 rounded-2xl border",
-				isDocsPath
+				isDocsPath || isHomePath
 					? "bg-none"
 					: isKitBlocksPath
 						? "bg-muted dark:bg-muted/50"
