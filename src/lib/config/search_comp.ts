@@ -1,4 +1,4 @@
-export let search_comp: SearchComp[] = [
+const kitSearchComponents: SearchComp[] = [
 	{
 		name: "Hero",
 		subcom: [
@@ -165,6 +165,11 @@ export let search_comp: SearchComp[] = [
 		],
 	},
 ];
+
+export const search_comp: SearchComp[] = kitSearchComponents.map((group) => ({
+	...group,
+	subcom: group.subcom.map((item) => ({ ...item, href: `/kit${item.href}` })),
+}));
 
 type SearchComp = {
 	name: string;

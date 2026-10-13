@@ -4,7 +4,7 @@
 	let navs: NavItem[] = [
 		{ name: "Home", url: "/" },
 		{ name: "Docs", url: "/docs/installation" },
-		{ name: "Blocks", url: "/hero" },
+		{ name: "Blocks", url: "/kit/hero" },
 		{ name: "Veil", url: "/veil", isNew: true },
 		{ name: "Mists", url: "/mist/hero", isNew: true },
 		{ name: "Templates", url: "/templates" },
@@ -37,52 +37,52 @@
 	let listItems: ListItemProps[] = [
 		{
 			title: "Hero",
-			href: "/hero",
+			href: "/kit/hero",
 			content: "9 blocks - bold and striking visuals.",
 		},
 		{
 			title: "Contact Us",
-			href: "/contact",
+			href: "/kit/contact",
 			content: "2 blocks - clean and simple layouts.",
 		},
 		{
 			title: "Features",
-			href: "/feature",
+			href: "/kit/feature",
 			content: "14 blocks - highlight key benefits.",
 		},
 		{
 			title: "Sign Up",
-			href: "/signup",
+			href: "/kit/signup",
 			content: "3 blocks - fast and easy signup.",
 		},
 		{
 			title: "Integrations",
-			href: "/integration",
+			href: "/kit/integration",
 			content: "8 blocks - connect with top tools.",
 		},
 		{
 			title: "Login",
-			href: "/login",
+			href: "/kit/login",
 			content: "3 blocks - modern, secure designs.",
 		},
 		{
 			title: "Testimonials",
-			href: "/testimonial",
+			href: "/kit/testimonial",
 			content: "6 blocks - trusted user feedback.",
 		},
 		{
 			title: "Forgot Password",
-			href: "/forgot-password",
+			href: "/kit/forgot-password",
 			content: "2 blocks - quick reset options.",
 		},
 		{
 			title: "Content",
-			href: "/content",
+			href: "/kit/content",
 			content: "7 blocks - engaging and informative.",
 		},
 		{
 			title: "FAQ",
-			href: "/faq",
+			href: "/kit/faq",
 			content: "4 blocks - clear and concise answers.",
 		},
 	];

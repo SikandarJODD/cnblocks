@@ -150,7 +150,7 @@
                 class="bg-foreground border p-0.5"
                 style="border-radius: calc(0.5rem + 0.125rem + 4px);"
               > -->
-							<Button href="/hero" size="lg" class="px-5 text-base">
+							<Button href="/kit/hero" size="lg" class="px-5 text-base">
 								<span class="text-nowrap">Explore Blocks</span>
 							</Button>
 							<!-- </div> -->

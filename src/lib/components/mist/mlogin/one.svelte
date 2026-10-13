@@ -116,7 +116,7 @@
 		<div class="px-6">
 			<p class="text-sm text-muted-foreground">
 				Don't have an account ?
-				<Button href="/signup" variant="link" class="px-2">Create account</Button>
+				<Button href="/mist/signup" variant="link" class="px-2">Create account</Button>
 			</p>
 		</div>
 	</form>

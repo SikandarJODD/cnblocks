@@ -25,7 +25,7 @@ const withTotal = (categories: CategoryItem[]) =>
 const kitCategories: CategoryItem[] = [
 	...category_blocks.map((category) => ({
 		title: category.title,
-		href: `/kit${category.href}`,
+		href: category.href,
 		count: category.length,
 	})),
 	{ title: "Testimonials", href: "/kit/testimonial", count: 6 },

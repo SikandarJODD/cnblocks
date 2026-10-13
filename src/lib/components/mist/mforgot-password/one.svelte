@@ -69,7 +69,7 @@
 		<div class="px-6">
 			<p class="text-sm text-muted-foreground">
 				You remember your password ?
-				<Button href="/login" variant="link" class="px-2">Sign In</Button>
+				<Button href="/mist/login" variant="link" class="px-2">Sign In</Button>
 			</p>
 		</div>
 	</form>

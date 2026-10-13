@@ -7,9 +7,9 @@
 	import LogoIcon from "./logo-icon.svelte";
 
 	const menuItems = [
-		{ name: "Features", href: "#link" },
-		{ name: "Pricing", href: "#link" },
-		{ name: "About", href: "#link" },
+		{ name: "Features", href: "#" },
+		{ name: "Pricing", href: "#" },
+		{ name: "About", href: "#" },
 	];
 
 	let menuState = $state(false);
@@ -111,7 +111,7 @@
 						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
 					>
 						<Button
-							href="#link"
+							href="#"
 							onclick={closeMenu}
 							variant="ghost"
 							size="sm"
@@ -120,7 +120,7 @@
 							Login
 						</Button>
 						<Button
-							href="#link"
+							href="#"
 							onclick={closeMenu}
 							size="sm"
 							class={cn(isScrolled && "lg:hidden")}
@@ -128,7 +128,7 @@
 							Sign Up
 						</Button>
 						<Button
-							href="#link"
+							href="#"
 							onclick={closeMenu}
 							size="sm"
 							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
