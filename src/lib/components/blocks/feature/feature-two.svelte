@@ -20,9 +20,9 @@
 		<div
 			class="mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16 lg:max-w-full lg:grid-cols-3"
 		>
-			<Card class="group border-0 bg-muted shadow-none dark:bg-zinc-900">
+		<Card variant="soft">
 				<CardHeader class="pb-3">
-					<CardDecorator surface="muted">
+					<CardDecorator>
 						<Zap class="size-6" aria-hidden={true} />
 					</CardDecorator>
 
@@ -37,9 +37,9 @@
 				</CardContent>
 			</Card>
 
-			<Card class="group border-0 bg-muted shadow-none dark:bg-zinc-900">
+		<Card variant="soft">
 				<CardHeader class="pb-3">
-					<CardDecorator surface="muted">
+					<CardDecorator>
 						<Settings2 class="size-6" aria-hidden={true} />
 					</CardDecorator>
 
@@ -54,9 +54,9 @@
 				</CardContent>
 			</Card>
 
-			<Card class="group border-0 bg-muted shadow-none dark:bg-zinc-900">
+		<Card variant="soft">
 				<CardHeader class="pb-3">
-					<CardDecorator surface="muted">
+					<CardDecorator>
 						<Sparkles class="size-6" aria-hidden={true} />
 					</CardDecorator>
 

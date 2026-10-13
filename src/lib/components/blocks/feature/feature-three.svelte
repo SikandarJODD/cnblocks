@@ -17,7 +17,7 @@
 			</p>
 		</div>
 		<Card
-			class="mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 *:text-center md:mt-16 lg:max-w-full lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+			class="mx-auto mt-8 grid max-w-sm divide-y overflow-hidden border-0 bg-transparent shadow-none *:text-center md:mt-16 lg:max-w-full lg:grid-cols-3 lg:divide-x lg:divide-y-0"
 		>
 			<div class="group shadow-zinc-950/5">
 				<CardHeader class="pb-3">
