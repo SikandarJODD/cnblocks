@@ -48,7 +48,7 @@
 
 <div
 	class={cn(
-		"relative w-full overflow-hidden rounded-xl border border-transparent bg-background p-6 shadow-md ring-1 inset-ring-1 shadow-foreground/5",
+		"relative w-full overflow-hidden rounded-xl border border-transparent bg-background p-6 shadow-md ring-1 ring-foreground/5 inset-ring-1 inset-ring-background shadow-foreground/5",
 		_class
 	)}
 >
@@ -63,18 +63,18 @@
 			New users by First user primary channel group (Default Channel Group)
 		</p>
 	</div>
-	<table class="w-max table-auto border-collapse lg:w-full" data-rounded="medium">
+	<table class="w-max table-auto border-collapse lg:w-full">
 		<thead class="bg-gray-950/5 dark:bg-background">
 			<tr class="*:border *:p-3 *:text-left *:text-sm *:font-medium">
-				<th class="rounded-l-[--card-radius]">#</th>
+				<th class="rounded-l-md">#</th>
 				<th>Date</th>
 				<th>Status</th>
 				<th>Customer</th>
-				<th class="rounded-r-[--card-radius]">Revenue</th>
+				<th class="rounded-r-md">Revenue</th>
 			</tr>
 		</thead>
 		<tbody class="text-sm">
-			{#each customers as customer, index}
+			{#each customers as customer (customer.id)}
 				<tr class="*:border *:p-2">
 					<td>{customer.id}</td>
 					<td>{customer.date}</td>
@@ -83,15 +83,16 @@
 							class={cn(
 								"rounded-full px-2 py-1 text-xs",
 								customer.statusVariant == "success" &&
-									"bg-lime-500/15 text-lime-800",
-								customer.statusVariant == "danger" && "bg-red-500/15 text-red-800",
+									"bg-lime-500/15 text-lime-800 dark:text-lime-300",
+								customer.statusVariant == "danger" &&
+									"bg-red-500/15 text-red-800 dark:text-red-300",
 								customer.statusVariant == "warning" &&
-									"bg-yellow-500/15 text-yellow-800"
+									"bg-yellow-500/15 text-yellow-800 dark:text-yellow-300"
 							)}>{customer.status}</span
 						>
 					</td>
 					<td>
-						<div class="text-title flex items-center gap-2">
+						<div class="flex items-center gap-2">
 							<div class="size-6 overflow-hidden rounded-full">
 								<img
 									src={customer.avatar}

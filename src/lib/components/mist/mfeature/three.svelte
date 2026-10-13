@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ToggleGroup, ToggleGroupItem } from "#lib/components/ui/toggle-group/index.js";
-	import Button from "#lib/components/ui/button/button.svelte";
-	import Card from "#lib/components/ui/card/card.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
+	import Card from "#lib/components/ui/mist/card/card.svelte";
 	import { cn } from "#lib/utils.js";
 
 	// Lucide Icons
@@ -18,9 +18,7 @@
 	};
 </script>
 
-<section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]"
->
+<section>
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div>
@@ -80,7 +78,7 @@
 				}
 			)}
 		>
-			<Button variant="mdefault" size="sm" class="rounded-sm">
+			<Button variant="default" size="sm" class="rounded-sm">
 				<Calendar1 class="size-3" />
 				<span class="text-sm font-medium">Schedule</span>
 			</Button>

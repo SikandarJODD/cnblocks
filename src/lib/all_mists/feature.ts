@@ -32,7 +32,7 @@ import FeatureTenCode from "#lib/components/mist/mfeature/ten.svelte?raw";
 import FeatureEleven from "#lib/components/mist/mfeature/eleven.svelte";
 import FeatureElevenCode from "#lib/components/mist/mfeature/eleven.svelte?raw";
 
-import CardCode from "#lib/components/ui/card/card.svelte?raw";
+import CardCode from "#lib/components/ui/mist/card/card.svelte?raw";
 
 import type { MistBlock } from "#lib/types/mists.js";
 
