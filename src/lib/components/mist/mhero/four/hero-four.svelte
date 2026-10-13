@@ -1,8 +1,11 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import { Button } from "#lib/components/ui/mist/button/index.js";
+	import TrustedLogos from "./trusted-logos.svelte";
+	import Header from "./header.svelte";
 </script>
 
-<main class="[--color-primary:var(--color-indigo-500)]">
+<Header />
+<main>
 	<section class="overflow-hidden">
 		<div class="py-20 md:py-36">
 			<div class="relative z-10 mx-auto max-w-5xl px-6">
@@ -18,8 +21,8 @@
 					<div
 						class="flex flex-col items-center justify-center gap-3 *:w-full sm:flex-row sm:*:w-auto"
 					>
-						<Button variant="mdefault" href="/" size="lg">Get Started</Button>
-						<Button href="/" size="lg" variant="outline">View Demo</Button>
+						<Button href="#link" size="lg">Get Started</Button>
+						<Button href="#link" size="lg" variant="outline">View Demo</Button>
 					</div>
 				</div>
 
@@ -33,7 +36,7 @@
 					/>
 
 					<div
-						class="relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl ring-1 shadow-black/15 sm:m-8 md:m-12"
+					class="relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl ring-1 shadow-black/15 ring-black/10 sm:m-8 md:m-12"
 					>
 						<img
 							src="/mist/tailark-2.png"
@@ -47,45 +50,7 @@
 
 				<div class="mt-8">
 					<p class="text-center text-muted-foreground">Trusted by teams at :</p>
-					<div class="mt-4 flex items-center justify-center gap-12">
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit"
-								src="https://html.tailus.io/blocks/customers/nvidia.svg"
-								alt="Nvidia Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit"
-								src="https://html.tailus.io/blocks/customers/column.svg"
-								alt="Column Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit"
-								src="https://html.tailus.io/blocks/customers/github.svg"
-								alt="GitHub Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit"
-								src="https://html.tailus.io/blocks/customers/nike.svg"
-								alt="Nike Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-					</div>
+					<TrustedLogos class="mt-4 justify-center gap-12" />
 				</div>
 			</div>
 		</div>
