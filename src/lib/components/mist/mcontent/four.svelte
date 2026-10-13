@@ -49,7 +49,7 @@
 
 				<div class="border-t">
 					<ul role="list" class="mt-8 space-y-2 text-muted-foreground">
-						{#each content as stat, index}
+						{#each content as stat (stat.label)}
 							<li class="-ml-0.5 flex items-center gap-1.5">
 								<ArrowRight class="size-4 opacity-50" />
 								<span class="font-medium text-foreground">{stat.value}</span>

@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <section>
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
@@ -24,7 +21,7 @@
 					/>
 
 					<div
-						class="relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl ring-1 shadow-black/15 sm:m-8 md:m-12"
+						class="relative m-4 overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-xl ring-1 ring-foreground/5 shadow-black/15 sm:m-8 md:m-12"
 					>
 						<img
 							src="/mist/tailark-3.png"

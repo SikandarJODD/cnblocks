@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import Calendar from "@lucide/svelte/icons/calendar";
 </script>
@@ -14,7 +14,7 @@
 				Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.
 			</p>
 			<div class="mt-8 flex gap-3">
-				<Button variant="mdefault" href="/" class="pr-2">
+				<Button variant="default" href="/" class="pr-2">
 					Try Mist for Free
 					<ChevronRight strokeWidth={2.5} class="size-3.5! opacity-50" />
 				</Button>
