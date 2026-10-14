@@ -57,9 +57,9 @@
 </script>
 
 <div
-	class="mx-1 flex min-h-70 flex-col overflow-hidden rounded-2xl border border-neutral-200/70 bg-background sm:flex-row dark:border-muted"
+	class="mx-1 flex min-h-100 flex-col overflow-hidden rounded-2xl border border-neutral-200/70 bg-background sm:flex-row dark:border-muted"
 >
-	<div class="w-full text-neutral-950 sm:w-64 dark:text-zinc-50">
+	<div class="mb-6 w-full text-neutral-950 sm:w-64 dark:text-zinc-50">
 		<!-- border-b -->
 		<div
 			class="flex h-11 items-center gap-1.5 px-4 font-mono text-xs text-neutral-600 dark:text-zinc-400"
@@ -161,7 +161,7 @@
 		>
 			{#if activeFile?.code}
 				<Code
-					class="h-auto scroll-fade overflow-visible rounded-none border-none bg-transparent! [&_pre.shiki]:rounded-none! [&_pre.shiki]:bg-muted! dark:[&_pre.shiki]:bg-muted/50!"
+					class="h-auto scroll-fade overflow-visible rounded-none border-none bg-transparent! [&_pre.shiki]:rounded-none! [&_pre.shiki]:bg-muted! dark:[&_pre.shiki]:bg-zinc-900/80!"
 					code={activeFile.code}
 					lang={activeFile.lang}
 					highlight={activeFile.highlight}

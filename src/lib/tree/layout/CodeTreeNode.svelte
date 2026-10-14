@@ -53,7 +53,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex w-full items-center gap-1.5 rounded-md px-1.5 py-1.5 text-left font-mono text-xs text-neutral-600 transition-colors hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+			class="flex w-full items-center gap-1.5 rounded-lg px-1.5 py-1.5 text-left font-mono text-xs text-neutral-600 transition-colors [corner-shape:superellipse(1.6)] hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
 			onclick={() => onToggleFolder(node.id)}
 			aria-expanded={isOpen}
 		>
@@ -68,9 +68,12 @@
 				/>
 			</span>
 			{#if isOpen}
-				<FolderOpen class="size-3.5 text-neutral-700 dark:text-zinc-300" />
+				<FolderOpen
+					strokeWidth={1.2}
+					class="size-3.5 text-neutral-700 dark:text-zinc-300"
+				/>
 			{:else}
-				<Folder class="size-3.5 text-neutral-700 dark:text-zinc-300" />
+				<Folder strokeWidth={1.2} class="size-3.5 text-neutral-700 dark:text-zinc-300" />
 			{/if}
 			<span class="truncate">{node.name}</span>
 		</button>
@@ -109,15 +112,15 @@
 {:else}
 	<div
 		class={cn(
-			"my-px flex items-center gap-1 rounded-md text-xs transition-colors",
+			"my-px flex items-center gap-1 rounded-md text-xs transition-colors [corner-shape:superellipse(1.6)]",
 			activeFileId === node.id
-				? "bg-neutral-200/80 text-neutral-950 dark:bg-zinc-800/70 dark:text-zinc-50"
-				: "text-neutral-600 hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+				? "bg-neutral-200/80 text-neutral-950 dark:bg-zinc-900 dark:text-zinc-50"
+				: "text-neutral-600 hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
 		)}
 	>
 		<button
 			type="button"
-			class="flex min-w-0 flex-1 items-center gap-1.5 px-1.5 py-1 text-left"
+			class="flex min-w-0 flex-1 items-center gap-1.5 px-1.5 py-1 text-left font-mono"
 			onclick={() => onSelectFile(node.id)}
 			aria-current={activeFileId === node.id ? "true" : undefined}
 		>
