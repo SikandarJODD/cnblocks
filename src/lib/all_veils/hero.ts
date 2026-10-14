@@ -25,6 +25,42 @@ import HeroFourCode from "#lib/components/veil/hero/hero-four.svelte?raw";
 import HeroFive from "#lib/components/veil/hero/hero-five.svelte";
 import HeroFiveCode from "#lib/components/veil/hero/hero-five.svelte?raw";
 
+const HeroOneFolderStructure = `# Folder structure
+
+I've simplified the layout to make it easier to browse.
+
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── veil/
+    │   │   ├── hero/
+    │   │   │   └── hero-one.svelte
+    │   │   └── header/
+    │   │       └── header-one.svelte
+    │   ├── ui/
+    │   │   └── veil/
+    │   │       ├── button/
+    │   │       │   ├── button.svelte
+    │   │       │   └── index.ts
+    │   │       └── card/
+    │   │           ├── card.svelte
+    │   │           └── index.ts
+    │   └── web/
+    │       └── Logo.svelte
+    └── svgs/
+        ├── index.ts
+        ├── claude.svelte
+        ├── clerk.svelte
+        ├── figma.svelte
+        ├── firebase.svelte
+        ├── linear.svelte
+        ├── slack.svelte
+        ├── supabase.svelte
+        ├── twilio.svelte
+        └── vercel.svelte
+`;
+
 export const all_veils_hero: MistBlock[] = [
 	{
 		slug: "hero-one",
@@ -33,42 +69,78 @@ export const all_veils_hero: MistBlock[] = [
 		preview: "/preview/veil/hero/hero-one",
 		previewMode: "inline",
 		itemId: "hero-one",
-		codeTree: createBlockCodeTreeFromCode([
-			{
-				path: "components/veil/hero/hero-one.svelte",
-				code: HeroOneCode,
-				lang: "svelte",
-			},
-			{
-				path: "components/veil/header/header-one.svelte",
-				code: HeaderOneCode,
-				lang: "svelte",
-			},
-			{
-				path: "components/ui/veil/button/button.svelte",
-				code: VeilButtonCode,
-				lang: "svelte",
-			},
-			{
-				path: "components/ui/veil/card/card.svelte",
-				code: VeilCardCode,
-				lang: "svelte",
-			},
-			{
-				path: "components/web/Logo.svelte",
-				code: LogoCode,
-				lang: "svelte",
-			},
-			{ path: "svgs/claude.svelte", code: ClaudeLogoCode, lang: "svelte" },
-			{ path: "svgs/clerk.svelte", code: ClerkLogoCode, lang: "svelte" },
-			{ path: "svgs/figma.svelte", code: FigmaLogoCode, lang: "svelte" },
-			{ path: "svgs/firebase.svelte", code: FirebaseLogoCode, lang: "svelte" },
-			{ path: "svgs/linear.svelte", code: LinearLogoCode, lang: "svelte" },
-			{ path: "svgs/slack.svelte", code: SlackLogoCode, lang: "svelte" },
-			{ path: "svgs/supabase.svelte", code: SupabaseLogoCode, lang: "svelte" },
-			{ path: "svgs/twilio.svelte", code: TwilioLogoCode, lang: "svelte" },
-			{ path: "svgs/vercel.svelte", code: VercelLogoCode, lang: "svelte" },
-		]),
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-one.svelte", code: HeroOneCode, lang: "svelte" },
+				{ path: "header-one.svelte", code: HeaderOneCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: HeroOneFolderStructure,
+					lang: "markdown",
+				},
+				{
+					path: "Logo.svelte",
+					code: LogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "ui/button.svelte",
+					code: VeilButtonCode,
+					lang: "svelte",
+				},
+				{
+					path: "ui/card.svelte",
+					code: VeilCardCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/claude.svelte",
+					code: ClaudeLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/clerk.svelte",
+					code: ClerkLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/figma.svelte",
+					code: FigmaLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/firebase.svelte",
+					code: FirebaseLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/linear.svelte",
+					code: LinearLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/slack.svelte",
+					code: SlackLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/supabase.svelte",
+					code: SupabaseLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/twilio.svelte",
+					code: TwilioLogoCode,
+					lang: "svelte",
+				},
+				{
+					path: "logos/vercel.svelte",
+					code: VercelLogoCode,
+					lang: "svelte",
+				},
+			],
+			{ defaultOpen: false }
+		),
 		component: HeroOne,
 	},
 	{

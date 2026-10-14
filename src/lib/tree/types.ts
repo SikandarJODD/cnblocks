@@ -59,6 +59,10 @@ export type BlockCodeFileInput = Omit<BlockCodeFile, "type" | "name"> & {
 	name?: string;
 };
 
+export type CreateBlockCodeTreeOptions = {
+	defaultOpen?: boolean | ((folderPath: string) => boolean);
+};
+
 export function isBlockCodeFile(node: BlockCodeNode): node is BlockCodeFile {
 	return node.type === "file";
 }
@@ -94,9 +98,11 @@ export function collectDefaultOpenFolderIds(nodes: BlockCodeNode[]): string[] {
 
 export function createBlockCodeTree(
 	defaultFileId: string,
-	files: BlockCodeFileInput[]
+	files: BlockCodeFileInput[],
+	options: CreateBlockCodeTreeOptions = {}
 ): BlockCodeTree {
 	const nodes: BlockCodeNode[] = [];
+	const { defaultOpen = true } = options;
 
 	for (const file of files) {
 		const segments = file.path.split("/").filter(Boolean);
@@ -118,7 +124,8 @@ export function createBlockCodeTree(
 					type: "folder",
 					id: `folder:${currentPath}`,
 					name: folderName,
-					defaultOpen: true,
+					defaultOpen:
+						typeof defaultOpen === "function" ? defaultOpen(currentPath) : defaultOpen,
 					children: [],
 				};
 
@@ -148,7 +155,8 @@ export function createBlockCodeTree(
 }
 
 export function createBlockCodeTreeFromCode(
-	code: BlockCodeInput | BlockCodeInput[] = []
+	code: BlockCodeInput | BlockCodeInput[] = [],
+	options: CreateBlockCodeTreeOptions = {}
 ): BlockCodeTree {
 	const inputs = Array.isArray(code) ? code : [code];
 	const files = inputs.map((file, index) => {
@@ -164,5 +172,5 @@ export function createBlockCodeTreeFromCode(
 		};
 	});
 
-	return createBlockCodeTree(files[0]?.id ?? "", files);
+	return createBlockCodeTree(files[0]?.id ?? "", files, options);
 }
