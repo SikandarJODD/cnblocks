@@ -57,14 +57,12 @@
 </script>
 
 <div
-	class="mx-1 flex min-h-[32rem] flex-col overflow-hidden rounded-2xl border border-neutral-200/70 sm:flex-row dark:border-muted"
+	class="mx-1 flex min-h-70 flex-col overflow-hidden rounded-2xl border border-neutral-200/70 bg-background sm:flex-row dark:border-muted"
 >
-	<div
-		class="w-full bg-secondary text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:w-64 dark:bg-zinc-900/25 dark:text-white"
-	>
+	<div class="w-full text-neutral-950 sm:w-64 dark:text-zinc-50">
 		<!-- border-b -->
 		<div
-			class="flex h-11 items-center gap-1.5 bg-secondary px-4 font-mono text-xs text-muted-foreground"
+			class="flex h-11 items-center gap-1.5 px-4 font-mono text-xs text-neutral-600 dark:text-zinc-400"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +79,7 @@
 			>
 			Files
 		</div>
-		<div class="no-scrollbar max-h-72 overflow-auto bg-secondary px-1.5 sm:max-h-172">
+		<div class="no-scrollbar max-h-72 overflow-auto px-1.5 sm:max-h-172">
 			{#each codeTree.nodes as node (node.id)}
 				<CodeTreeNode
 					{node}
@@ -96,7 +94,7 @@
 
 	<div class="relative min-w-0 flex-1">
 		<!-- border-b -->
-		<div class="flex h-11 items-center justify-between gap-3 bg-secondary pr-2 pl-4">
+		<div class="flex h-11 items-center justify-between gap-3 pr-2 pl-4">
 			<p
 				class="flex min-w-0 items-center gap-1.5 truncate font-mono text-xs text-muted-foreground"
 			>
@@ -159,11 +157,11 @@
 
 		<div
 			data-code-overflow
-			class="mr-0.5 mb-0.5 no-scrollbar max-h-172 overflow-y-auto overscroll-contain rounded-2xl border"
+			class="mr-0.5 mb-0.5 no-scrollbar max-h-172 overflow-y-auto overscroll-contain rounded-2xl"
 		>
 			{#if activeFile?.code}
 				<Code
-					class="h-auto scroll-fade overflow-visible rounded-none border-none bg-transparent [&_pre.shiki]:rounded-none!"
+					class="h-auto scroll-fade overflow-visible rounded-none border-none bg-transparent! [&_pre.shiki]:rounded-none! [&_pre.shiki]:bg-muted! dark:[&_pre.shiki]:bg-muted/50!"
 					code={activeFile.code}
 					lang={activeFile.lang}
 					highlight={activeFile.highlight}

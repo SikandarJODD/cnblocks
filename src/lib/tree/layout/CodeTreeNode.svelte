@@ -45,7 +45,7 @@
 	{:else if type === "css"}
 		<CSS class="size-3.5 shrink-0" />
 	{:else}
-		<File class="size-3.5 shrink-0 text-foreground/65" />
+		<File class="size-3.5 shrink-0 text-neutral-600 dark:text-zinc-400" />
 	{/if}
 {/snippet}
 
@@ -53,7 +53,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex w-full items-center gap-1.5 rounded-md px-1.5 py-1.5 text-left font-mono text-xs text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+			class="flex w-full items-center gap-1.5 rounded-md px-1.5 py-1.5 text-left font-mono text-xs text-neutral-600 transition-colors hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
 			onclick={() => onToggleFolder(node.id)}
 			aria-expanded={isOpen}
 		>
@@ -61,20 +61,25 @@
 				<ChevronRight
 					class={cn(
 						"size-3 transition-transform duration-150 ease-out",
-						isOpen ? "rotate-90 text-foreground/80" : "text-foreground/60"
+						isOpen
+							? "rotate-90 text-neutral-800 dark:text-zinc-200"
+							: "text-neutral-500 dark:text-zinc-500"
 					)}
 				/>
 			</span>
 			{#if isOpen}
-				<FolderOpen class="size-3.5 text-foreground/80" />
+				<FolderOpen class="size-3.5 text-neutral-700 dark:text-zinc-300" />
 			{:else}
-				<Folder class="size-3.5 text-foreground/80" />
+				<Folder class="size-3.5 text-neutral-700 dark:text-zinc-300" />
 			{/if}
 			<span class="truncate">{node.name}</span>
 		</button>
 
 		{#if isOpen}
-			<div transition:slide={{ duration: 150 }} class="ml-3.5 border-l border-border/60 pl-1">
+			<div
+				transition:slide={{ duration: 150 }}
+				class="ml-3.5 border-l border-neutral-200 pl-1 dark:border-zinc-800"
+			>
 				{#each node.children as child (child.id)}
 					<CodeTreeNode
 						node={child}
@@ -93,7 +98,7 @@
 		target="_blank"
 		rel="noreferrer"
 		aria-label={`Open ${node.externalLabel ?? node.name}`}
-		class="flex items-center gap-1.5 rounded-md px-1.5 text-xs text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+		class="flex items-center gap-1.5 rounded-md px-1.5 text-xs text-neutral-600 transition-colors hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
 	>
 		{@render FileIcon(node.name)}
 		<span class="min-w-0 flex-1 truncate py-1">{node.name}</span>
@@ -106,8 +111,8 @@
 		class={cn(
 			"my-px flex items-center gap-1 rounded-md text-xs transition-colors",
 			activeFileId === node.id
-				? "bg-accent text-foreground"
-				: "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
+				? "bg-neutral-200/80 text-neutral-950 dark:bg-zinc-800/70 dark:text-zinc-50"
+				: "text-neutral-600 hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
 		)}
 	>
 		<button
@@ -126,7 +131,7 @@
 				target="_blank"
 				rel="noreferrer"
 				aria-label={`Open ${node.externalLabel ?? node.name}`}
-				class="mr-1 inline-flex size-6 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+				class="mr-1 inline-flex size-6 shrink-0 items-center justify-center rounded-md text-neutral-600 transition-colors hover:bg-neutral-300/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-700 dark:hover:text-zinc-50"
 			>
 				<ExternalLink class="size-3" />
 			</a>
