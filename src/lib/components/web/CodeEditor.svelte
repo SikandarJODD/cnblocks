@@ -62,7 +62,7 @@
 					{#each code as item, index}
 						<Button
 							class={cn(
-								"flex w-full items-center justify-start gap-1.5 rounded-none py-2 pr-5.5 pl-12 text-xs hover:bg-neutral-200/70 dark:hover:bg-white/10",
+								"flex w-full items-center justify-start gap-1.5 rounded-none py-2 pr-5.5 pl-10 text-xs font-normal hover:bg-neutral-200/70 dark:hover:bg-white/10",
 								selectedIndex === index && "bg-neutral-200/70 dark:bg-zinc-800/50"
 							)}
 							variant="ghost"
@@ -96,7 +96,7 @@
 				<!-- <CodeBlock code={code[selectedIndex].code} /> -->
 				<Code
 					lang={code[selectedIndex]?.lang || "svelte"}
-					class="h-full min-w-0 max-w-full overflow-hidden rounded-none border-none!"
+					class="h-full max-w-full min-w-0 overflow-hidden rounded-none border-none!"
 					code={code[selectedIndex].code}
 					highlight={code[selectedIndex]?.highlight}
 				/>
@@ -106,11 +106,11 @@
 {:else}
 	<!-- <CodeBlock code={code.code} /> -->
 	<div
-		class="code-editor relative mx-1 h-144  w-auto min-w-0 overflow-hidden rounded-2xl border border-neutral-200/70 dark:border-muted"
+		class="code-editor relative mx-1 h-144 w-auto min-w-0 overflow-hidden rounded-2xl border border-neutral-200/70 dark:border-muted"
 	>
 		{@render CopyButton()}
 		<Code
-			class="h-full min-w-0 max-w-full overflow-hidden rounded-none border-none! outline-none"
+			class="h-full max-w-full min-w-0 overflow-hidden rounded-none border-none! outline-none"
 			lang={code?.lang || "svelte"}
 			code={code.code}
 			highlight={code?.highlight}
