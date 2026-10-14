@@ -7,16 +7,17 @@
 	import Palette from "@lucide/svelte/icons/palette";
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
 	import ImportAliasToggle from "./ImportAliasToggle.svelte";
-	import { transformCodeImports, type ImportAliasStyle } from "./import-alias";
+	import { transformCodeTreeImports, type ImportAliasStyle } from "./import-alias";
 	// import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
 	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
+	import CodeEditor from "#lib/tree/layout/CodeEditor.svelte";
+	import { createBlockCodeTreeFromCode, type BlockCodeSource } from "#lib/tree/types.js";
 
-	interface BlockPreviewProps {
+	type BlockPreviewProps = {
 		itemId?: string;
-		code: MistCode | MistCode[];
 		preview: string;
 		previewMode?: "inline" | "iframe";
 		title: string;
@@ -24,18 +25,12 @@
 		previewOnly?: boolean;
 		slug?: string;
 		component: Component;
-	}
-
-	export interface MistCode {
-		name?: string;
-		code: string;
-		lang?: SupportedLanguage;
-		highlight?: (number | [number, number])[];
-	}
+	} & BlockCodeSource;
 
 	let {
 		itemId,
 		code,
+		codeTree,
 		preview,
 		previewMode = "inline",
 		title = "Hero Section",
@@ -62,7 +57,11 @@
 		"sveltekit-import-alias-style",
 		"dollar"
 	);
-	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
+	let sourceCodeTree = $derived(codeTree ?? createBlockCodeTreeFromCode(code));
+	let displayedCodeTree = $derived(
+		transformCodeTreeImports(sourceCodeTree, importAliasStyle.current)
+	);
+	let hasCode = $derived(sourceCodeTree.nodes.length > 0);
 
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
 	let iframeResizeObserver: ResizeObserver | undefined;
@@ -74,9 +73,6 @@
 		TooltipProvider,
 		TooltipTrigger,
 	} from "#lib/components/ui/tooltip/index.js";
-	import CodeEditor from "./CodeEditor.svelte";
-	import type { SupportedLanguage } from "../ui/code/shiki";
-
 	type ScopedTheme = "veil" | "mist";
 
 	function resolveScopedTheme(): ScopedTheme | null {
@@ -183,7 +179,7 @@
 			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"
 		>
 			<div class="flex items-center gap-2">
-				{#if code}
+				{#if hasCode}
 					<div class="flex gap-0.5">
 						<Button
 							variant={mode === "preview" ? "secondary" : "ghost"}
@@ -477,7 +473,7 @@
 						</Tooltip>
 					</TooltipProvider>
 				{/if}
-				{#if code}
+				{#if hasCode}
 					{#if mode === "code"}
 						<ImportAliasToggle bind:value={importAliasStyle.current} />
 						<Separator orientation="vertical" class="my-auto h-4!" />
@@ -514,16 +510,16 @@
 						</svg>
 						<span>Theme Setup</span>
 					</Button>
-
-					<!-- {#if !Array.isArray(displayedCode)}
-						<Separator orientation="vertical" class="my-auto h-4!" />
-
-						<CopyButton text={displayedCode.code} />
-					{/if} -->
 				{/if}
 			</div>
 		</div>
-		<MobileBlockPreviewToolbar bind:mode {title} {preview} {itemId} code={displayedCode} />
+		<MobileBlockPreviewToolbar
+			bind:mode
+			{title}
+			{preview}
+			{itemId}
+			codeTree={displayedCodeTree}
+		/>
 	</div>
 
 	<div class="relative max-w-full min-w-0 overflow-hidden">
@@ -582,7 +578,7 @@
 
 			<div class="max-w-full min-w-0 overflow-hidden">
 				{#if mode === "code"}
-					<CodeEditor code={displayedCode} />
+					<CodeEditor codeTree={displayedCodeTree} />
 				{/if}
 			</div>
 		</div>

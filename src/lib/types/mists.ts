@@ -1,8 +1,9 @@
-import type { SupportedLanguage } from "#lib/components/ui/code/shiki.js";
+import type { BlockCodeSource } from "#lib/tree/types.js";
+import type { Component } from "svelte";
 
 export type PreviewMode = "inline" | "iframe";
 
-export interface MistBlock {
+type MistBlockBase = {
 	itemId?: string;
 	slug: string;
 	title: string;
@@ -10,13 +11,7 @@ export interface MistBlock {
 	preview: string;
 	previewMode?: PreviewMode;
 	previewHeight?: number;
-	code: MistCode | MistCode[];
-	component: any;
-}
+	component: Component;
+};
 
-export interface MistCode {
-	name?: string;
-	code: string;
-	lang?: SupportedLanguage;
-	highlight?: (number | [number, number])[];
-}
+export type MistBlock = MistBlockBase & BlockCodeSource;

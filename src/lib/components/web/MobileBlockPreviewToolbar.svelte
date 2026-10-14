@@ -9,25 +9,25 @@
 	import ExternalLink from "@lucide/svelte/icons/external-link";
 	import Eye from "@lucide/svelte/icons/eye";
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
-
-	type PreviewCode = { code: string } | { code: string }[];
+	import { flattenBlockCodeFiles, type BlockCodeTree } from "#lib/tree/types.js";
 
 	let {
 		mode = $bindable<"preview" | "code">("preview"),
 		title,
 		preview,
 		itemId,
-		code,
+		codeTree,
 	}: {
 		mode?: "preview" | "code";
 		title: string;
 		preview: string;
 		itemId?: string;
-		code: PreviewCode;
+		codeTree: BlockCodeTree;
 	} = $props();
 
 	const clipboard = new UseClipboard({ delay: 1500 });
-	let copyText = $derived(Array.isArray(code) ? undefined : code.code);
+	let files = $derived(flattenBlockCodeFiles(codeTree.nodes));
+	let copyText = $derived(files.length === 1 ? files[0].code : undefined);
 
 	function openPreview() {
 		window.open(preview, "_blank", "noopener,noreferrer");
