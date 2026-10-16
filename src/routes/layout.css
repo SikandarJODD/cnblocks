@@ -188,7 +188,7 @@
 		text-rendering: optimizeLegibility;
 	}
 	html {
-		@apply font-sans;
+		@apply font-sans text-[15px];
 	}
 }
 

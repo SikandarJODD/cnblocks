@@ -114,7 +114,8 @@
 			</Paragraph>
 		</section>
 
-		<section aria-label="Variants">
+		<section class="space-y-3" aria-labelledby="variants">
+			<H2 id="variants">Variants</H2>
 			<table
 				class="w-full border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
 			>
