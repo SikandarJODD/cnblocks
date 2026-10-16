@@ -538,7 +538,7 @@ export {
 				code={folderStructure}
 				lang="markdown"
 				hideLines={true}
-				class="rounded-none border-dashed border-ink/30 bg-transparent dark:border-emerald-400/40 [&_pre]:rounded-none"
+				class="rounded-none border-dashed border-ink/30 bg-transparent dark:border-emerald-400/40 [&_.shiki]:!text-ink/80 dark:[&_.shiki]:!text-emerald-400 [&_.shiki_span]:!text-ink/70 dark:[&_.shiki_span]:!text-emerald-400/80 [&_pre]:rounded-none"
 			/>
 		</section>
 
@@ -647,12 +647,12 @@ export {
 					<tbody>
 						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
 							<td
-								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
 								>Button</td
 							>
 							<td
 								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-								>$lib/components/ui/mist/button</td
+								>#lib/components/ui/mist/button</td
 							>
 							<td class="px-3 py-2.5 text-muted-foreground"
 								>Variant and size classes, anchor/button rendering</td
@@ -660,12 +660,12 @@ export {
 						</tr>
 						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
 							<td
-								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
 								>Card</td
 							>
 							<td
 								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-								>$lib/components/ui/mist/card</td
+								>#lib/components/ui/mist/card</td
 							>
 							<td class="px-3 py-2.5 text-muted-foreground"
 								>Root variants and all card composition primitives</td
@@ -673,12 +673,12 @@ export {
 						</tr>
 						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
 							<td
-								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
 								>Input</td
 							>
 							<td
 								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-								>$lib/components/ui/mist/input</td
+								>#lib/components/ui/mist/input</td
 							>
 							<td class="px-3 py-2.5 text-muted-foreground"
 								>Field styling, file input branch, focus/error states</td
@@ -686,12 +686,12 @@ export {
 						</tr>
 						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
 							<td
-								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
 								>Label</td
 							>
 							<td
 								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-								>$lib/components/ui/mist/label</td
+								>#lib/components/ui/mist/label</td
 							>
 							<td class="px-3 py-2.5 text-muted-foreground">
 								Form labels and disabled field states</td
@@ -699,12 +699,12 @@ export {
 						</tr>
 						<tr>
 							<td
-								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
 								>Textarea</td
 							>
 							<td
 								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-								>$lib/components/ui/mist/textarea</td
+								>#lib/components/ui/mist/textarea</td
 							>
 							<td class="px-3 py-2.5 text-muted-foreground">
 								Multiline field sizing, focus, and disabled states</td

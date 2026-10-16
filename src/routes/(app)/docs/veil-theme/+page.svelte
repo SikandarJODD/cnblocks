@@ -3,13 +3,7 @@
 	import Code from "#lib/components/ui/code/code.svelte";
 	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
-	import {
-		H1,
-		H2,
-		H3,
-		Paragraph,
-		Link,
-	} from "#lib/components/markdown/index.js";
+	import { H1, H2, H3, Paragraph, Link } from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
@@ -488,20 +482,20 @@ export {
 				code={folderStructure}
 				lang="markdown"
 				hideLines={true}
-				class="rounded-none border-dashed border-ink/30 bg-transparent dark:border-emerald-400/40 [&_pre]:rounded-none"
+				class="rounded-none border-dashed border-ink/30 bg-transparent dark:border-emerald-400/40 [&_.shiki]:!text-ink/70 dark:[&_.shiki]:!text-emerald-400 [&_.shiki_span]:!text-ink/70 dark:[&_.shiki_span]:!text-emerald-400/80 [&_pre]:rounded-none"
 			/>
 		</section>
 
-	<section>
-		<H2 id="theme-quickstart">Theme Quickstart</H2>
-		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Add the Veil tokens to <code class="rounded-sm bg-secondary px-1">themes.css</code> so
-			all Veil primitives resolve color, border, focus ring, and typography consistently.
-		</Paragraph>
-		<FrameCode
-			code={{
-				filename: "themes.css",
-				filecode: `[data-theme="veil"] .theme-container {
+		<section>
+			<H2 id="theme-quickstart">Theme Quickstart</H2>
+			<Paragraph class="mt-1 mb-6 text-muted-foreground">
+				Add the Veil tokens to <code class="rounded-sm bg-secondary px-1">themes.css</code> so
+				all Veil primitives resolve color, border, focus ring, and typography consistently.
+			</Paragraph>
+			<FrameCode
+				code={{
+					filename: "themes.css",
+					filecode: `[data-theme="veil"] .theme-container {
 	--radius: 0.625rem;
 
 	--background: oklch(0.9779 0.0042 56.38);
@@ -560,7 +554,7 @@ export {
 
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
 			}`,
-				lang: "css",
+					lang: "css",
 				}}
 			/>
 			<Paragraph class="mt-4">
@@ -574,143 +568,144 @@ export {
 					rel="noreferrer">Asar</Link
 				> for serif accents.
 			</Paragraph>
-	</section>
+		</section>
 
-	<section>
-		<H2 id="apply-theme">Apply Theme</H2>
-		<Paragraph class="mt-1 mb-4 text-muted-foreground">
-			Ensure your root body includes <code>theme-container</code> so the selected theme scope is
-			applied across the application.
-		</Paragraph>
-		<FrameCode
-			code={{
-				filename: "src/app.html",
-				filecode: `<body data-theme="veil" class="theme-container">
+		<section>
+			<H2 id="apply-theme">Apply Theme</H2>
+			<Paragraph class="mt-1 mb-4 text-muted-foreground">
+				Ensure your root body includes <code>theme-container</code> so the selected theme scope
+				is applied across the application.
+			</Paragraph>
+			<FrameCode
+				code={{
+					filename: "src/app.html",
+					filecode: `<body data-theme="veil" class="theme-container">
 	<!-- Your Application -->
 </body>`,
-				lang: "html",
-			}}
-		/>
-	</section>
+					lang: "html",
+				}}
+			/>
+		</section>
 
-	<section>
-		<H2 id="required-components">Required Components</H2>
-		<Paragraph class="mt-1 mb-4 text-muted-foreground">
-			After theme tokens are configured, update these four Veil primitives in your app.
-		</Paragraph>
-		<div class="mt-2 mb-6 w-full overflow-x-auto">
-			<table
-				class="w-full min-w-[42rem] border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
-			>
-				<thead>
-					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
-						<th
-							class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
-							>Component</th
-						>
-						<th
-							class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
-							>Import Path</th
-						>
-						<th class="px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:text-emerald-400"
-							>Update Scope</th
-						>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
-							>Button</td
-						>
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-							>$lib/components/ui/veil/button</td
-						>
-						<td class="px-3 py-2.5 text-muted-foreground"
-							>Variant and size classes, anchor/button rendering</td
-						>
-					</tr>
-					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
-							>Card</td
-						>
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-							>$lib/components/ui/veil/card</td
-						>
-						<td class="px-3 py-2.5 text-muted-foreground"
-							>Root variants and all card composition primitives</td
-						>
-					</tr>
-					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
-							>Input</td
-						>
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-							>$lib/components/ui/veil/input</td
-						>
-						<td class="px-3 py-2.5 text-muted-foreground"
-							>Field styling, file input branch, focus/error states</td
-						>
-					</tr>
-					<tr>
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
-							>Textarea</td
-						>
-						<td
-							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
-							>$lib/components/ui/veil/textarea</td
-						>
-						<td class="px-3 py-2.5 text-muted-foreground"
-							>Multiline field sizing, focus/error/disabled states</td
-						>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
+		<section>
+			<H2 id="required-components">Required Components</H2>
+			<Paragraph class="mt-1 mb-4 text-muted-foreground">
+				After theme tokens are configured, update these four Veil primitives in your app.
+			</Paragraph>
+			<div class="mt-2 mb-6 w-full overflow-x-auto">
+				<table
+					class="w-full min-w-[42rem] border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
+				>
+					<thead>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<th
+								class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+								>Component</th
+							>
+							<th
+								class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+								>Import Path</th
+							>
+							<th
+								class="px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:text-emerald-400"
+								>Update Scope</th
+							>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
+								>Button</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>#lib/components/ui/veil/button</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Variant and size classes, anchor/button rendering</td
+							>
+						</tr>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
+								>Card</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>#lib/components/ui/veil/card</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Root variants and all card composition primitives</td
+							>
+						</tr>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
+								>Input</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>#lib/components/ui/veil/input</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Field styling, file input branch, focus/error states</td
+							>
+						</tr>
+						<tr>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-gmono dark:border-emerald-400/40"
+								>Textarea</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>#lib/components/ui/veil/textarea</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Multiline field sizing, focus/error/disabled states</td
+							>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-	<section>
-		<H2 id="button-component">Button Component</H2>
-		<Paragraph class="mt-1 mb-4 text-muted-foreground">
-			Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
-		</Paragraph>
-		<H3 id="button-usage">Usage</H3>
-		<FrameCode
-			code={{
-				filename: "button-usage.svelte",
-				filecode: `\<\script lang="ts"\>
+		<section>
+			<H2 id="button-component">Button Component</H2>
+			<Paragraph class="mt-1 mb-4 text-muted-foreground">
+				Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
+			</Paragraph>
+			<H3 id="button-usage">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "button-usage.svelte",
+					filecode: `\<\script lang="ts"\>
 	import { Button } from "#lib/components/ui/veil/button/index.js";
 \<\/script\>
 
 <Button variant="default">Default Button</Button>
 <Button variant="outline">Outline Button</Button>
 <Button size="lg">Large Button</Button>`,
-				lang: "svelte",
-			}}
-		/>
-		<H3 id="button-source">Source</H3>
-		<MultipleCode code={buttonSourceCode} />
-	</section>
+					lang: "svelte",
+				}}
+			/>
+			<H3 id="button-source">Source</H3>
+			<MultipleCode code={buttonSourceCode} />
+		</section>
 
-	<section>
-		<H2 id="card-component">Card Component</H2>
-		<Paragraph class="mt-1 mb-4 text-muted-foreground">
-			Veil card supports four variants: <code>default</code>, <code>soft</code>,
-			<code>mixed</code>, and <code>outline</code>, with composition primitives for
-			header/content/footer layouts.
-		</Paragraph>
-		<H3 id="card-usage">Usage</H3>
-		<div>
-			<FrameCode
-				code={{
-					filename: "card-usage.svelte",
-					filecode: `\<\script lang="ts"\>
+		<section>
+			<H2 id="card-component">Card Component</H2>
+			<Paragraph class="mt-1 mb-4 text-muted-foreground">
+				Veil card supports four variants: <code>default</code>, <code>soft</code>,
+				<code>mixed</code>, and <code>outline</code>, with composition primitives for
+				header/content/footer layouts.
+			</Paragraph>
+			<H3 id="card-usage">Usage</H3>
+			<div>
+				<FrameCode
+					code={{
+						filename: "card-usage.svelte",
+						filecode: `\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/veil/card/index.js";
 \<\/script\>
 
@@ -727,70 +722,70 @@ export {
 	</CardHeader>
 	<CardContent>...</CardContent>
 </Card>`,
-					lang: "svelte",
-				}}
-			/>
-		</div>
-		<H3 id="card-source">Source</H3>
-		<MultipleCode code={cardSourceCode} />
-	</section>
+						lang: "svelte",
+					}}
+				/>
+			</div>
+			<H3 id="card-source">Source</H3>
+			<MultipleCode code={cardSourceCode} />
+		</section>
 
-	<section>
-		<H2 id="input-component">Input Component</H2>
-		<Paragraph class="mt-1 mb-4 text-muted-foreground">
-			Veil input covers standard and file fields while preserving unified focus and invalid
-			states.
-		</Paragraph>
-		<H3 id="input-usage">Usage</H3>
-		<FrameCode
-			code={{
-				filename: "input-usage.svelte",
-				filecode: `\<\script lang="ts"\>
+		<section>
+			<H2 id="input-component">Input Component</H2>
+			<Paragraph class="mt-1 mb-4 text-muted-foreground">
+				Veil input covers standard and file fields while preserving unified focus and
+				invalid states.
+			</Paragraph>
+			<H3 id="input-usage">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "input-usage.svelte",
+					filecode: `\<\script lang="ts"\>
 	import { Input } from "#lib/components/ui/veil/input/index.js";
 \<\/script\>
 
 <Input type="email" placeholder="you@example.com" />
 <Input aria-invalid="true" placeholder="Invalid state" />
 <Input type="file" />`,
-				lang: "svelte",
-			}}
-		/>
-		<H3 id="input-source">Source</H3>
-		<MultipleCode code={inputSourceCode} />
-	</section>
+					lang: "svelte",
+				}}
+			/>
+			<H3 id="input-source">Source</H3>
+			<MultipleCode code={inputSourceCode} />
+		</section>
 
-	<section>
-		<H2 id="textarea-component">Textarea Component</H2>
-		<Paragraph class="mt-1 mb-4 text-muted-foreground">
-			Veil textarea shares input tokens, adds multiline sizing, and keeps focus/validation
-			states aligned with other form controls.
-		</Paragraph>
-		<H3 id="textarea-usage">Usage</H3>
-		<div>
-			<FrameCode
-				code={{
-					filename: "textarea-usage.svelte",
-					filecode: `\<\script lang="ts"\>
+		<section>
+			<H2 id="textarea-component">Textarea Component</H2>
+			<Paragraph class="mt-1 mb-4 text-muted-foreground">
+				Veil textarea shares input tokens, adds multiline sizing, and keeps focus/validation
+				states aligned with other form controls.
+			</Paragraph>
+			<H3 id="textarea-usage">Usage</H3>
+			<div>
+				<FrameCode
+					code={{
+						filename: "textarea-usage.svelte",
+						filecode: `\<\script lang="ts"\>
 	import { Textarea } from "#lib/components/ui/veil/textarea/index.js";
 \<\/script\>
 
 <Textarea placeholder="Enter details..." />
 <Textarea aria-invalid="true" placeholder="Invalid state" />`,
-					lang: "svelte",
-				}}
-			/>
-		</div>
-		<H3 id="textarea-source">Source</H3>
-		<MultipleCode code={textareaSourceCode} />
-	</section>
+						lang: "svelte",
+					}}
+				/>
+			</div>
+			<H3 id="textarea-source">Source</H3>
+			<MultipleCode code={textareaSourceCode} />
+		</section>
 
-	<section class="space-y-3">
-		<H2 id="whats-next">What’s next?</H2>
-		<Paragraph class="max-w-prose leading-relaxed">
-			Explore the <Link href="/veil/hero">Veil blocks</Link>, or browse the <Link
-				href="/docs/mist-theme">Mist theme setup</Link
-			>.
-		</Paragraph>
-	</section>
+		<section class="space-y-3">
+			<H2 id="whats-next">What’s next?</H2>
+			<Paragraph class="max-w-prose leading-relaxed">
+				Explore the <Link href="/veil/hero">Veil blocks</Link>, or browse the <Link
+					href="/docs/mist-theme">Mist theme setup</Link
+				>.
+			</Paragraph>
+		</section>
 	</article>
 </div>
