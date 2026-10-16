@@ -526,7 +526,7 @@
 		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
 			<div
 				class={cn(
-					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-white dark:border-muted dark:bg-muted/50!",
+					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-muted! dark:border-muted dark:bg-muted/50!",
 					mode === "code" && "hidden"
 				)}
 			>
@@ -538,7 +538,7 @@
 							bind:this={iframeRef}
 							{title}
 							height={iframeHeight}
-							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! duration-200 will-change-auto"
+							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! border-r duration-200 will-change-auto dark:border-muted"
 							src={preview}
 							id={`block-${title}`}
 							style="--iframe-height: {iframeHeight}px;"

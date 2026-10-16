@@ -79,9 +79,9 @@ export const primaryNavigation: NavigationItem[] = [
 
 export const docsNavigation: NavigationItem[] = [
 	{ title: "Introduction", href: "/docs" },
-	{ title: "Quick Setup", href: "/docs/installation" },
-	{ title: "Mist Theme", href: "/docs/mist-theme" },
-	{ title: "Veil Theme", href: "/docs/veil-theme" },
+	{ title: "Installation", href: "/docs/installation" },
+	{ title: "Mist Theme Setup", href: "/docs/mist-theme" },
+	{ title: "Veil Theme Setup", href: "/docs/veil-theme" },
 ];
 
 export function getBlockLibrary(pathname: string) {
