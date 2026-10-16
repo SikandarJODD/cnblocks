@@ -29,8 +29,34 @@ import HeroSixMistKitLogoCode from "#lib/components/mist/mhero/six/mist-kit-logo
 import HeroSixTrustedLogosCode from "#lib/components/mist/mhero/six/trusted-logos.svelte?raw";
 
 import type { MistBlock } from "#lib/types/mists.js";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
+import { createMistFolderStructure } from "./simple-code-tree.js";
 import Header from "#lib/components/mist/mhero/one/header.svelte?raw";
 import TrustedLogos from "#lib/components/mist/mhero/one/trusted-logos.svelte?raw";
+import MistButtonCode from "#lib/components/ui/mist/button/button.svelte?raw";
+import SpotifyLogoCode from "#lib/svgs/spotify.svelte?raw";
+import SupabaseFullLogoCode from "#lib/svgs/supabase-full.svelte?raw";
+import VercelFullLogoCode from "#lib/svgs/vercel-full.svelte?raw";
+
+function createHeroFolderStructure(folderName: string, fileNames: string[]) {
+	const sourcePaths = fileNames.map((fileName) => {
+		if (fileName === "ui/button.svelte") {
+			return "components/ui/mist/button/button.svelte";
+		}
+
+		if (fileName.startsWith("logos/")) {
+			return `svgs/${fileName.slice(6)}`;
+		}
+
+		return `components/mist/mhero/${folderName}/${fileName}`;
+	});
+
+	if (fileNames.includes("ui/button.svelte")) {
+		sourcePaths.push("components/ui/mist/button/index.ts");
+	}
+
+	return createMistFolderStructure(sourcePaths);
+}
 
 export const all_mists_heros: MistBlock[] = [
 	{
@@ -42,23 +68,29 @@ export const all_mists_heros: MistBlock[] = [
 
 		itemId: "hero-one",
 		component: HeroOne,
-		code: [
-			{
-				code: HeroOneCode,
-				lang: "svelte",
-				name: "hero.svelte",
-			},
-			{
-				code: Header,
-				lang: "svelte",
-				name: "header.svelte",
-			},
-			{
-				code: TrustedLogos,
-				lang: "svelte",
-				name: "trusted-logos.svelte",
-			},
-		],
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero.svelte", code: HeroOneCode, lang: "svelte" },
+				{ path: "header.svelte", code: Header, lang: "svelte" },
+				{ path: "trusted-logos.svelte", code: TrustedLogos, lang: "svelte" },
+				{ path: "logos/spotify.svelte", code: SpotifyLogoCode, lang: "svelte" },
+				{ path: "logos/supabase-full.svelte", code: SupabaseFullLogoCode, lang: "svelte" },
+				{ path: "logos/vercel-full.svelte", code: VercelFullLogoCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createHeroFolderStructure("one", [
+						"hero-one.svelte",
+						"header.svelte",
+						"trusted-logos.svelte",
+						"logos/spotify.svelte",
+						"logos/supabase-full.svelte",
+						"logos/vercel-full.svelte",
+					]),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 	},
 	{
 		slug: "two",
@@ -69,23 +101,25 @@ export const all_mists_heros: MistBlock[] = [
 
 		itemId: "hero-two",
 		component: HeroTwo,
-		code: [
-			{
-				code: HeroTwoCode,
-				lang: "svelte",
-				name: "hero.svelte",
-			},
-			{
-				code: HeroTwoHeaderCode,
-				lang: "svelte",
-				name: "header.svelte",
-			},
-			{
-				code: HeroTwoLogoCode,
-				lang: "svelte",
-				name: "logo-icon.svelte",
-			},
-		],
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero.svelte", code: HeroTwoCode, lang: "svelte" },
+				{ path: "header.svelte", code: HeroTwoHeaderCode, lang: "svelte" },
+				{ path: "logo-icon.svelte", code: HeroTwoLogoCode, lang: "svelte" },
+				{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createHeroFolderStructure("two", [
+						"hero-two.svelte",
+						"header.svelte",
+						"logo-icon.svelte",
+						"ui/button.svelte",
+					]),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 	},
 	{
 		slug: "three",
@@ -96,28 +130,27 @@ export const all_mists_heros: MistBlock[] = [
 
 		itemId: "hero-three",
 		component: HeroThree,
-		code: [
-			{
-				code: HeroThreeCode,
-				lang: "svelte",
-				name: "hero.svelte",
-			},
-			{
-				code: HeroThreeHeaderCode,
-				lang: "svelte",
-				name: "header.svelte",
-			},
-			{
-				code: HeroThreeTrustedLogosCode,
-				lang: "svelte",
-				name: "trusted-logos.svelte",
-			},
-			{
-				code: HeroThreeLogoCode,
-				lang: "svelte",
-				name: "logo-icon.svelte",
-			},
-		],
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero.svelte", code: HeroThreeCode, lang: "svelte" },
+				{ path: "header.svelte", code: HeroThreeHeaderCode, lang: "svelte" },
+				{ path: "trusted-logos.svelte", code: HeroThreeTrustedLogosCode, lang: "svelte" },
+				{ path: "logo-icon.svelte", code: HeroThreeLogoCode, lang: "svelte" },
+				{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createHeroFolderStructure("three", [
+						"hero-three.svelte",
+						"header.svelte",
+						"trusted-logos.svelte",
+						"logo-icon.svelte",
+						"ui/button.svelte",
+					]),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 	},
 	{
 		slug: "four",
@@ -128,28 +161,27 @@ export const all_mists_heros: MistBlock[] = [
 
 		itemId: "hero-four",
 		component: HeroFour,
-		code: [
-			{
-				code: HeroFourCode,
-				lang: "svelte",
-				name: "hero.svelte",
-			},
-			{
-				code: HeroFourHeaderCode,
-				lang: "svelte",
-				name: "header.svelte",
-			},
-			{
-				code: HeroFourTrustedLogosCode,
-				lang: "svelte",
-				name: "trusted-logos.svelte",
-			},
-			{
-				code: HeroFourLogoCode,
-				lang: "svelte",
-				name: "logo-icon.svelte",
-			},
-		],
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero.svelte", code: HeroFourCode, lang: "svelte" },
+				{ path: "header.svelte", code: HeroFourHeaderCode, lang: "svelte" },
+				{ path: "trusted-logos.svelte", code: HeroFourTrustedLogosCode, lang: "svelte" },
+				{ path: "logo-icon.svelte", code: HeroFourLogoCode, lang: "svelte" },
+				{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createHeroFolderStructure("four", [
+						"hero-four.svelte",
+						"header.svelte",
+						"trusted-logos.svelte",
+						"logo-icon.svelte",
+						"ui/button.svelte",
+					]),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 	},
 	{
 		slug: "five",
@@ -160,11 +192,25 @@ export const all_mists_heros: MistBlock[] = [
 
 		itemId: "hero-five",
 		component: HeroFive,
-		code: [
-			{ code: HeroFiveCode, lang: "svelte", name: "hero.svelte" },
-			{ code: HeroFiveTrustedLogosCode, lang: "svelte", name: "trusted-logos.svelte" },
-			{ code: HeroFiveMistKitLogoCode, lang: "svelte", name: "mist-kit-logo.svelte" },
-		],
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero.svelte", code: HeroFiveCode, lang: "svelte" },
+				{ path: "trusted-logos.svelte", code: HeroFiveTrustedLogosCode, lang: "svelte" },
+				{ path: "mist-kit-logo.svelte", code: HeroFiveMistKitLogoCode, lang: "svelte" },
+				{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createHeroFolderStructure("five", [
+						"hero-five.svelte",
+						"trusted-logos.svelte",
+						"mist-kit-logo.svelte",
+						"ui/button.svelte",
+					]),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 	},
 	{
 		slug: "six",
@@ -175,10 +221,24 @@ export const all_mists_heros: MistBlock[] = [
 
 		itemId: "hero-six",
 		component: HeroSix,
-		code: [
-			{ code: HeroSixCode, lang: "svelte", name: "hero.svelte" },
-			{ code: HeroSixTrustedLogosCode, lang: "svelte", name: "trusted-logos.svelte" },
-			{ code: HeroSixMistKitLogoCode, lang: "svelte", name: "mist-kit-logo.svelte" },
-		],
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero.svelte", code: HeroSixCode, lang: "svelte" },
+				{ path: "trusted-logos.svelte", code: HeroSixTrustedLogosCode, lang: "svelte" },
+				{ path: "mist-kit-logo.svelte", code: HeroSixMistKitLogoCode, lang: "svelte" },
+				{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createHeroFolderStructure("six", [
+						"hero-six.svelte",
+						"trusted-logos.svelte",
+						"mist-kit-logo.svelte",
+						"ui/button.svelte",
+					]),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 	},
 ];

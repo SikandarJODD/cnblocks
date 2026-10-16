@@ -7,6 +7,10 @@ import ContentThree from "#lib/components/mist/mcontent/three.svelte";
 import ContentThreeCode from "#lib/components/mist/mcontent/three.svelte?raw";
 import ContentFour from "#lib/components/mist/mcontent/four.svelte";
 import ContentFourCode from "#lib/components/mist/mcontent/four.svelte?raw";
+import MistButtonCode from "#lib/components/ui/mist/button/button.svelte?raw";
+import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
+
+const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mcontent");
 
 export const all_mists_content: MistBlock[] = [
 	{
@@ -16,10 +20,10 @@ export const all_mists_content: MistBlock[] = [
 		preview: "/preview/mist/content/one",
 
 		itemId: "content-one",
-		code: {
-			code: ContentOneCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "one.svelte", code: ContentOneCode, lang: "svelte" },
+			{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+		]),
 		component: ContentOne,
 	},
 	{
@@ -29,10 +33,10 @@ export const all_mists_content: MistBlock[] = [
 		preview: "/preview/mist/content/two",
 
 		itemId: "content-two",
-		code: {
-			code: ContentTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "two.svelte", code: ContentTwoCode, lang: "svelte" },
+			{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+		]),
 		component: ContentTwo,
 	},
 	{
@@ -42,10 +46,9 @@ export const all_mists_content: MistBlock[] = [
 		preview: "/preview/mist/content/three",
 
 		itemId: "content-three",
-		code: {
-			code: ContentThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "three.svelte", code: ContentThreeCode, lang: "svelte" },
+		]),
 		component: ContentThree,
 	},
 	{
@@ -55,10 +58,9 @@ export const all_mists_content: MistBlock[] = [
 		preview: "/preview/mist/content/four",
 
 		itemId: "content-four",
-		code: {
-			code: ContentFourCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "four.svelte", code: ContentFourCode, lang: "svelte" },
+		]),
 		component: ContentFour,
 	},
 ];

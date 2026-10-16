@@ -8,6 +8,10 @@ import StatsOneCode from "#lib/components/mist/mstats/one.svelte?raw";
 import StatsTwoCode from "#lib/components/mist/mstats/two.svelte?raw";
 import StatsThreeCode from "#lib/components/mist/mstats/three.svelte?raw";
 import StatsFourCode from "#lib/components/mist/mstats/four.svelte?raw";
+import MistCardCode from "#lib/components/ui/mist/card/card.svelte?raw";
+import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
+
+const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mstats");
 
 export const all_mists_stats: MistBlock[] = [
 	{
@@ -17,10 +21,10 @@ export const all_mists_stats: MistBlock[] = [
 		preview: "/preview/mist/stats/one",
 
 		itemId: "stats-one",
-		code: {
-			code: StatsOneCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "one.svelte", code: StatsOneCode, lang: "svelte" },
+			{ path: "ui/card.svelte", code: MistCardCode, lang: "svelte" },
+		]),
 		component: StatsOne,
 	},
 	{
@@ -30,10 +34,9 @@ export const all_mists_stats: MistBlock[] = [
 		preview: "/preview/mist/stats/two",
 
 		itemId: "stats-two",
-		code: {
-			code: StatsTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "two.svelte", code: StatsTwoCode, lang: "svelte" },
+		]),
 		component: StatsTwo,
 	},
 	{
@@ -43,10 +46,9 @@ export const all_mists_stats: MistBlock[] = [
 		preview: "/preview/mist/stats/three",
 
 		itemId: "stats-three",
-		code: {
-			code: StatsThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "three.svelte", code: StatsThreeCode, lang: "svelte" },
+		]),
 		component: StatsThree,
 	},
 	{
@@ -56,10 +58,9 @@ export const all_mists_stats: MistBlock[] = [
 		preview: "/preview/mist/stats/four",
 
 		itemId: "stats-four",
-		code: {
-			code: StatsFourCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "four.svelte", code: StatsFourCode, lang: "svelte" },
+		]),
 		component: StatsFour,
 	},
 ];

@@ -7,6 +7,9 @@ import FooterThree from "#lib/components/mist/mfooter/three.svelte";
 import FooterThreeCode from "#lib/components/mist/mfooter/three.svelte?raw";
 import FooterFour from "#lib/components/mist/mfooter/four.svelte";
 import FooterFourCode from "#lib/components/mist/mfooter/four.svelte?raw";
+import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
+
+const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mfooter");
 
 export const all_mists_footer: MistBlock[] = [
 	{
@@ -16,10 +19,9 @@ export const all_mists_footer: MistBlock[] = [
 		preview: "/preview/mist/footer/one",
 
 		itemId: "footer-one",
-		code: {
-			code: FooterOneCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "one.svelte", code: FooterOneCode, lang: "svelte" },
+		]),
 		component: FooterOne,
 	},
 	{
@@ -29,10 +31,9 @@ export const all_mists_footer: MistBlock[] = [
 		preview: "/preview/mist/footer/two",
 
 		itemId: "footer-two",
-		code: {
-			code: FooterTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "two.svelte", code: FooterTwoCode, lang: "svelte" },
+		]),
 		component: FooterTwo,
 	},
 	{
@@ -42,10 +43,9 @@ export const all_mists_footer: MistBlock[] = [
 		preview: "/preview/mist/footer/three",
 
 		itemId: "footer-three",
-		code: {
-			code: FooterThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "three.svelte", code: FooterThreeCode, lang: "svelte" },
+		]),
 		component: FooterThree,
 	},
 	{
@@ -55,10 +55,9 @@ export const all_mists_footer: MistBlock[] = [
 		preview: "/preview/mist/footer/four",
 
 		itemId: "footer-four",
-		code: {
-			code: FooterFourCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "four.svelte", code: FooterFourCode, lang: "svelte" },
+		]),
 		component: FooterFour,
 	},
 ];

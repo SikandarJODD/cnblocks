@@ -1,6 +1,10 @@
 import type { MistBlock } from "#lib/types/mists.js";
 import ComparatorOne from "#lib/components/mist/mcomparator/one.svelte";
 import ComparatorOneCode from "#lib/components/mist/mcomparator/one.svelte?raw";
+import MistButtonCode from "#lib/components/ui/mist/button/button.svelte?raw";
+import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
+
+const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mcomparator");
 
 export const all_mists_comparator: MistBlock[] = [
 	{
@@ -10,12 +14,10 @@ export const all_mists_comparator: MistBlock[] = [
 		preview: "/preview/mist/comparator/one",
 
 		itemId: "comparator-one",
-		code: [
-			{
-				code: ComparatorOneCode,
-				lang: "svelte",
-			},
-		],
+		codeTree: createSimpleMistCodeTree([
+			{ path: "one.svelte", code: ComparatorOneCode, lang: "svelte" },
+			{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+		]),
 		component: ComparatorOne,
 	},
 ];
