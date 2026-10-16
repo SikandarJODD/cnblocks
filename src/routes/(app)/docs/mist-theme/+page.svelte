@@ -1,22 +1,18 @@
 <script lang="ts">
-	import SEOComponent from "#lib/seo/SEO.svelte";
-	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import { page } from "$app/state";
 	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
-	import {
-		H2,
-		H3,
-		Paragraph,
-		Table,
-		Thead,
-		Tbody,
-		Tr,
-		Th,
-		Td,
-	} from "#lib/components/markdown/index.js";
+	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
 	const pageMeta = docsV2PageMap.mistTheme;
+	const title = "Mist Theme Setup | Svelte Marketing Blocks";
+	const description =
+		"Apply Mist theme tokens and update button, card, input, label, and textarea primitives for clean Svelte interfaces.";
+
+	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
+	let socialImage = $derived(`${page.url.origin}/og.png`);
 
 	const buttonSourceCode = [
 		{
@@ -304,37 +300,234 @@ export {
 };`,
 		},
 	] satisfies CodeBlock[];
+
+	const inputSourceCode = [
+		{
+			filename: "input.svelte",
+			lang: "svelte",
+			filecode: `\<\script lang="ts"\>
+	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from "svelte/elements";
+	import type { WithElementRef } from "bits-ui";
+	import { cn } from "#lib/utils.js";
+
+	type InputType = Exclude<HTMLInputTypeAttribute, "file">;
+
+	type Props = WithElementRef<
+		Omit<HTMLInputAttributes, "type"> &
+			({ type: "file"; files?: FileList } | { type?: InputType; files?: undefined })
+	>;
+
+	let {
+		ref = $bindable(null),
+		value = $bindable(),
+		type,
+		files = $bindable(),
+		class: className,
+		"data-slot": dataSlot = "input",
+		...restProps
+	}: Props = $props();
+\<\/script\>
+
+{#if type === "file"}
+	<input
+		bind:this={ref}
+		data-slot={dataSlot}
+		class={cn(
+			"flex h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-[3px] aria-invalid:ring-destructive/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:aria-invalid:ring-destructive/40",
+			className
+		)}
+		type="file"
+		bind:files
+		bind:value
+		{...restProps}
+	/>
+{:else}
+	<input
+		bind:this={ref}
+		data-slot={dataSlot}
+		class={cn(
+			"flex h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-[3px] aria-invalid:ring-destructive/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:aria-invalid:ring-destructive/40",
+			className
+		)}
+		{type}
+		bind:value
+		{...restProps}
+	/>
+{/if}`,
+		},
+		{
+			filename: "index.ts",
+			lang: "typescript",
+			filecode: `import Root from "./input.svelte";
+
+export {
+	Root,
+	//
+	Root as Input,
+};`,
+		},
+	] satisfies CodeBlock[];
+
+	const labelSourceCode = [
+		{
+			filename: "label.svelte",
+			lang: "svelte",
+			filecode: `\<\script lang="ts"\>
+	import type { WithElementRef } from "bits-ui";
+	import type { HTMLLabelAttributes } from "svelte/elements";
+	import { cn } from "#lib/utils.js";
+
+	let {
+		ref = $bindable(null),
+		class: className,
+		children,
+		...restProps
+	}: WithElementRef<HTMLLabelAttributes> = $props();
+\<\/script\>
+
+<label
+	bind:this={ref}
+	data-slot="label"
+	class={cn(
+		"block select-none text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50",
+		className
+	)}
+	{...restProps}
+>
+	{@render children?.()}
+</label>`,
+		},
+		{
+			filename: "index.ts",
+			lang: "typescript",
+			filecode: `import Root from "./label.svelte";
+
+export {
+	Root,
+	//
+	Root as Label,
+};`,
+		},
+	] satisfies CodeBlock[];
+
+	const textareaSourceCode = [
+		{
+			filename: "textarea.svelte",
+			lang: "svelte",
+			filecode: `\<\script lang="ts"\>
+	import type { WithElementRef, WithoutChildren } from "bits-ui";
+	import type { HTMLTextareaAttributes } from "svelte/elements";
+	import { cn } from "#lib/utils.js";
+
+	let {
+		ref = $bindable(null),
+		value = $bindable(),
+		class: className,
+		...restProps
+	}: WithoutChildren<WithElementRef<HTMLTextareaAttributes>> = $props();
+\<\/script\>
+
+<textarea
+	bind:this={ref}
+	bind:value
+	class={cn(
+		"flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+		className
+	)}
+	{...restProps}
+></textarea>`,
+		},
+		{
+			filename: "index.ts",
+			lang: "typescript",
+			filecode: `import Root from "./textarea.svelte";
+
+export {
+	Root,
+	//
+	Root as Textarea,
+};`,
+		},
+	] satisfies CodeBlock[];
 </script>
 
-<SEOComponent
-	title={pageMeta.seo.title}
-	description={pageMeta.seo.description}
+<MetaTags
+	{title}
+	{description}
+	{canonical}
 	keywords={pageMeta.seo.keywords}
+	robots="index,follow"
+	additionalRobotsProps={{ maxSnippet: -1, maxImagePreview: "large", maxVideoPreview: -1 }}
+	openGraph={{
+		type: "website",
+		url: canonical,
+		title,
+		description,
+		siteName: "Svelte Marketing Blocks",
+		images: [
+			{
+				url: socialImage,
+				width: 1200,
+				height: 630,
+				alt: "Mist theme setup for Svelte Marketing Blocks",
+			},
+		],
+	}}
+	twitter={{
+		cardType: "summary_large_image",
+		site: "@Sikandar_Bhide",
+		creator: "@Sikandar_Bhide",
+		title,
+		description,
+		image: socialImage,
+		imageAlt: "Mist theme setup for Svelte Marketing Blocks",
+	}}
 />
 
-<!--
-	description="Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Shadcn Svelte."
+<JsonLd
+	schema={{
+		"@type": "TechArticle",
+		headline: title,
+		description,
+		url: canonical,
+		isPartOf: {
+			"@type": "WebSite",
+			name: "Svelte Marketing Blocks",
+			url: page.url.origin,
+		},
+	}}
+/>
 
- -->
-
-<DocsPageShell
-	title="Mist Theme Setup"
-	description="Apply Mist theme tokens and update button and card primitives for documentation-style UI styling."
->
-	<section>
-		<H2 id="theme-quickstart">Theme Quickstart</H2>
-		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Add the Mist theme variables to your global stylesheet <code
-				class="rounded-sm bg-secondary px-1">app.css</code
+<div class="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
+	<article
+		class="min-w-0 space-y-12 [&_h2]:font-gmono [&_h2]:font-normal [&_h3]:font-gmono [&_h3]:font-normal"
+	>
+		<header class="space-y-3">
+			<H1
+				id="mist-theme-setup"
+				class="font-gmono text-3xl font-normal tracking-tight sm:text-4xl"
 			>
-			or <code class="rounded-sm bg-secondary px-1">layout.css</code> so Mist primitives resolve
-			color, border, and contrast consistently.
-		</Paragraph>
-		<FrameCode
-			code={{
-				filename: "layout.css",
-				lang: "css",
-				filecode: `[data-theme="mist"] .theme-container {
+				Mist Theme Setup
+			</H1>
+			<Paragraph class="max-w-prose text-lg leading-relaxed text-pretty">
+				{description}
+			</Paragraph>
+		</header>
+
+		<section>
+			<H2 id="theme-quickstart">Theme Quickstart</H2>
+			<Paragraph class="mt-1 mb-6 text-muted-foreground">
+				Add the Mist theme variables to your global stylesheet <code
+					class="rounded-sm bg-secondary px-1">app.css</code
+				>
+				or <code class="rounded-sm bg-secondary px-1">layout.css</code> so Mist primitives resolve
+				color, border, and contrast consistently.
+			</Paragraph>
+			<FrameCode
+				code={{
+					filename: "layout.css",
+					lang: "css",
+					filecode: `[data-theme="mist"] .theme-container {
 	--radius: 0.625rem;
 	--background: var(--color-white);
 	--foreground: var(--color-zinc-950);
@@ -379,92 +572,157 @@ export {
 
 	@apply *:text-foreground;
 			}`,
-			}}
-		/>
-	</section>
+				}}
+			/>
+		</section>
 
-	<section>
-		<H2 id="apply-theme">Apply Theme</H2>
-		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Ensure your root body includes <code>theme-container</code> so the selected Mist theme is
-			applied across the application.
-		</Paragraph>
-		<FrameCode
-			code={{
-				filename: "src/app.html",
-				lang: "html",
-				filecode: `<body data-theme="mist" class="theme-container">
+		<section>
+			<H2 id="apply-theme">Apply Theme</H2>
+			<Paragraph class="mt-1 mb-6 text-muted-foreground">
+				Ensure your root body includes <code>theme-container</code> so the selected Mist theme
+				is applied across the application.
+			</Paragraph>
+			<FrameCode
+				code={{
+					filename: "src/app.html",
+					lang: "html",
+					filecode: `<body data-theme="mist" class="theme-container">
 	<!-- Your Application -->
 </body>`,
-			}}
-		/>
-	</section>
+				}}
+			/>
+		</section>
 
-	<section>
-		<H2 id="required-components">Required Components</H2>
-		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			After theme tokens are configured, update these Mist primitives in your app.
-		</Paragraph>
-		<Table
-			wrapperClass="mt-2 mb-6"
-			class="text-sm [&_code]:text-[0.7rem] [&_td]:px-3 [&_td]:py-2.5 [&_th]:h-11 [&_th]:px-3"
-		>
-			<Thead>
-				<Tr>
-					<Th class="border-r">Component</Th>
-					<Th class="border-r">Import Path</Th>
-					<Th>Update Scope</Th>
-				</Tr>
-			</Thead>
-			<Tbody>
-				<Tr>
-					<Td class="border-r">Button</Td>
-					<Td class="border-r font-mono text-xs">$lib/components/ui/mist/button</Td>
-					<Td>Variant and size classes, anchor/button rendering</Td>
-				</Tr>
-				<Tr>
-					<Td class="border-r">Card</Td>
-					<Td class="border-r font-mono text-xs">$lib/components/ui/mist/card</Td>
-					<Td>Root variants and all card composition primitives</Td>
-				</Tr>
-			</Tbody>
-		</Table>
-	</section>
+		<section>
+			<H2 id="required-components">Required Components</H2>
+			<Paragraph class="mt-1 mb-6 text-muted-foreground">
+				After theme tokens are configured, update these five Mist primitives in your app.
+			</Paragraph>
+			<div class="mt-2 mb-6 w-full overflow-x-auto">
+				<table
+					class="w-full min-w-[42rem] border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
+				>
+					<thead>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<th
+								class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+								>Component</th
+							>
+							<th
+								class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+								>Import Path</th
+							>
+							<th
+								class="px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:text-emerald-400"
+								>Update Scope</th
+							>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								>Button</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>$lib/components/ui/mist/button</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Variant and size classes, anchor/button rendering</td
+							>
+						</tr>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								>Card</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>$lib/components/ui/mist/card</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Root variants and all card composition primitives</td
+							>
+						</tr>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								>Input</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>$lib/components/ui/mist/input</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground"
+								>Field styling, file input branch, focus/error states</td
+							>
+						</tr>
+						<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								>Label</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>$lib/components/ui/mist/label</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground">
+								Form labels and disabled field states</td
+							>
+						</tr>
+						<tr>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+								>Textarea</td
+							>
+							<td
+								class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+								>$lib/components/ui/mist/textarea</td
+							>
+							<td class="px-3 py-2.5 text-muted-foreground">
+								Multiline field sizing, focus, and disabled states</td
+							>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-	<section>
-		<H2 id="button-component">Button Component</H2>
-		<Paragraph class="mt-1 mb-6">
-			Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
-			the standard shadcn-like variants.
-		</Paragraph>
-		<H3 id="button-usage" class="mb-2">Usage</H3>
-		<FrameCode
-			code={{
-				filename: "button-usage.svelte",
-				lang: "svelte",
-				filecode: `\<\script lang="ts"\>
+		<section>
+			<H2 id="button-component">Button Component</H2>
+			<Paragraph class="mt-1 mb-6">
+				Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
+				the standard shadcn-like variants.
+			</Paragraph>
+			<H3 id="button-usage" class="mb-2">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "button-usage.svelte",
+					lang: "svelte",
+					filecode: `\<\script lang="ts"\>
 	import { Button } from "#lib/components/ui/mist/button/index.js";
 \<\/script\>
 
 <Button variant="neutral">Neutral Button</Button>`,
-			}}
-		/>
-		<H3 id="button-source" class="mb-2">Source</H3>
-		<MultipleCode code={buttonSourceCode} />
-	</section>
+				}}
+			/>
+			<H3 id="button-source" class="mb-2">Source</H3>
+			<MultipleCode code={buttonSourceCode} />
+		</section>
 
-	<section>
-		<H2 id="card-component">Card Component</H2>
-		<Paragraph class="mt-1 mb-6">
-			Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections
-			commonly used across documentation-style layouts.
-		</Paragraph>
-		<H3 id="card-usage" class="mb-2">Usage</H3>
-		<FrameCode
-			code={{
-				filename: "card-usage.svelte",
-				lang: "svelte",
-				filecode: `\<\script lang="ts"\>
+		<section>
+			<H2 id="card-component">Card Component</H2>
+			<Paragraph class="mt-1 mb-6">
+				Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections
+				commonly used across documentation-style layouts.
+			</Paragraph>
+			<H3 id="card-usage" class="mb-2">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "card-usage.svelte",
+					lang: "svelte",
+					filecode: `\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/mist/card/index.js";
 \<\/script\>
 
@@ -481,9 +739,86 @@ export {
 	</CardHeader>
 	<CardContent>...</CardContent>
 </Card>`,
-			}}
-		/>
-		<H3 id="card-source" class="mb-2">Source</H3>
-		<MultipleCode code={cardSourceCode} />
-	</section>
-</DocsPageShell>
+				}}
+			/>
+			<H3 id="card-source" class="mb-2">Source</H3>
+			<MultipleCode code={cardSourceCode} />
+		</section>
+
+		<section>
+			<H2 id="input-component">Input Component</H2>
+			<Paragraph class="mt-1 mb-6">
+				Mist input supports standard and file fields with consistent focus, invalid, and
+				disabled states.
+			</Paragraph>
+			<H3 id="input-usage" class="mb-2">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "input-usage.svelte",
+					lang: "svelte",
+					filecode: `\<\script lang="ts"\>
+	import { Input } from "#lib/components/ui/mist/input/index.js";
+\<\/script\>
+
+<Input type="email" placeholder="you@example.com" />
+<Input aria-invalid="true" placeholder="Invalid state" />
+<Input type="file" />`,
+				}}
+			/>
+			<H3 id="input-source" class="mb-2">Source</H3>
+			<MultipleCode code={inputSourceCode} />
+		</section>
+
+		<section>
+			<H2 id="label-component">Label Component</H2>
+			<Paragraph class="mt-1 mb-6">
+				Mist label keeps form text clear and reflects disabled field states.
+			</Paragraph>
+			<H3 id="label-usage" class="mb-2">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "label-usage.svelte",
+					lang: "svelte",
+					filecode: `\<\script lang="ts"\>
+	import { Label } from "#lib/components/ui/mist/label/index.js";
+\<\/script\>
+
+<Label for="email">Email address</Label>`,
+				}}
+			/>
+			<H3 id="label-source" class="mb-2">Source</H3>
+			<MultipleCode code={labelSourceCode} />
+		</section>
+
+		<section>
+			<H2 id="textarea-component">Textarea Component</H2>
+			<Paragraph class="mt-1 mb-6">
+				Mist textarea provides a simple multiline field with matching focus and disabled
+				states.
+			</Paragraph>
+			<H3 id="textarea-usage" class="mb-2">Usage</H3>
+			<FrameCode
+				code={{
+					filename: "textarea-usage.svelte",
+					lang: "svelte",
+					filecode: `\<\script lang="ts"\>
+	import { Textarea } from "#lib/components/ui/mist/textarea/index.js";
+\<\/script\>
+
+<Textarea placeholder="Enter details..." />`,
+				}}
+			/>
+			<H3 id="textarea-source" class="mb-2">Source</H3>
+			<MultipleCode code={textareaSourceCode} />
+		</section>
+
+		<section class="space-y-3">
+			<H2 id="whats-next">What’s next?</H2>
+			<Paragraph class="max-w-prose leading-relaxed">
+				Explore the <Link href="/mist/hero">Mist blocks</Link>, or continue with the <Link
+					href="/docs/veil-theme">Veil theme setup</Link
+				>.
+			</Paragraph>
+		</section>
+	</article>
+</div>

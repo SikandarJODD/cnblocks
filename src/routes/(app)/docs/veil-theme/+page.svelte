@@ -1,23 +1,25 @@
 <script lang="ts">
-	import SEOComponent from "#lib/seo/SEO.svelte";
-	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import { page } from "$app/state";
 	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import {
+		H1,
 		H2,
 		H3,
 		Paragraph,
 		Link,
-		Table,
-		Thead,
-		Tbody,
-		Tr,
-		Th,
-		Td,
 	} from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
 	const pageMeta = docsV2PageMap.veilTheme;
+	const title = "Veil Theme Setup | Svelte Marketing Blocks";
+	const description =
+		"Apply Veil theme tokens and update button, card, input, and textarea primitives for polished Svelte interfaces.";
+
+	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
+	let socialImage = $derived(`${page.url.origin}/og.png`);
+
 	const buttonSourceCode = [
 		{
 			filename: "button.svelte",
@@ -400,16 +402,69 @@ export {
 	] satisfies CodeBlock[];
 </script>
 
-<SEOComponent
-	title={pageMeta.seo.title}
-	description={pageMeta.seo.description}
+<MetaTags
+	{title}
+	{description}
+	{canonical}
 	keywords={pageMeta.seo.keywords}
+	robots="index,follow"
+	additionalRobotsProps={{ maxSnippet: -1, maxImagePreview: "large", maxVideoPreview: -1 }}
+	openGraph={{
+		type: "website",
+		url: canonical,
+		title,
+		description,
+		siteName: "Svelte Marketing Blocks",
+		images: [
+			{
+				url: socialImage,
+				width: 1200,
+				height: 630,
+				alt: "Veil theme setup for Svelte Marketing Blocks",
+			},
+		],
+	}}
+	twitter={{
+		cardType: "summary_large_image",
+		site: "@Sikandar_Bhide",
+		creator: "@Sikandar_Bhide",
+		title,
+		description,
+		image: socialImage,
+		imageAlt: "Veil theme setup for Svelte Marketing Blocks",
+	}}
 />
 
-<DocsPageShell
-	title="Veil Theme Setup"
-	description="Apply Veil theme tokens and update button, card, input, and textarea primitives for consistent UI styling."
->
+<JsonLd
+	schema={{
+		"@type": "TechArticle",
+		headline: title,
+		description,
+		url: canonical,
+		isPartOf: {
+			"@type": "WebSite",
+			name: "Svelte Marketing Blocks",
+			url: page.url.origin,
+		},
+	}}
+/>
+
+<div class="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
+	<article
+		class="min-w-0 space-y-12 [&_h2]:font-gmono [&_h2]:font-normal [&_h3]:font-gmono [&_h3]:font-normal"
+	>
+		<header class="space-y-3">
+			<H1
+				id="veil-theme-setup"
+				class="font-gmono text-3xl font-normal tracking-tight sm:text-4xl"
+			>
+				Veil Theme Setup
+			</H1>
+			<Paragraph class="max-w-prose text-lg leading-relaxed text-pretty">
+				{description}
+			</Paragraph>
+		</header>
+
 	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
 		<Paragraph class="mt-1 mb-6 text-muted-foreground">
@@ -483,35 +538,19 @@ export {
 	@apply *:text-foreground selection:bg-muted selection:text-primary;
 			}`,
 				lang: "css",
-			}}
-		/>
-		<!-- <Paragraph>
-			Veil uses Geist as the primary sans font.
-			<Link href="https://fonts.google.com/specimen/Geist" target="_blank" rel="noreferrer">
-				Geist on Google Fonts
-			</Link>
-		</Paragraph>
-		<Paragraph>
-			Veil uses Asar as the serif accent font.
-			<Link href="https://fonts.google.com/specimen/Asar" target="_blank" rel="noreferrer">
-				Asar on Google Fonts
-			</Link>
-		</Paragraph> -->
-		<Paragraph>Veil Theme uses Geist, Asar font.</Paragraph>
-		<Paragraph
-			>Gesit Font : <Link
-				href="https://fonts.google.com/specimen/Geist"
-				target="_blank"
-				rel="noreferrer">Geist on Google Fonts</Link
-			>
-		</Paragraph>
-		<Paragraph
-			>Asar Font : <Link
-				href="https://fonts.google.com/specimen/Asar"
-				target="_blank"
-				rel="noreferrer">Asar on Google Fonts</Link
-			>
-		</Paragraph>
+				}}
+			/>
+			<Paragraph class="mt-4">
+				Veil uses <Link
+					href="https://fonts.google.com/specimen/Geist"
+					target="_blank"
+					rel="noreferrer">Geist</Link
+				> for interface text and <Link
+					href="https://fonts.google.com/specimen/Asar"
+					target="_blank"
+					rel="noreferrer">Asar</Link
+				> for serif accents.
+			</Paragraph>
 	</section>
 
 	<section>
@@ -536,40 +575,81 @@ export {
 		<Paragraph class="mt-1 mb-4 text-muted-foreground">
 			After theme tokens are configured, update these four Veil primitives in your app.
 		</Paragraph>
-		<Table
-			wrapperClass="mt-2 mb-6"
-			class="text-sm [&_code]:text-[0.7rem] [&_td]:px-3 [&_td]:py-2.5  [&_th]:h-11 [&_th]:px-3 "
-		>
-			<Thead>
-				<Tr>
-					<Th class="border-r">Component</Th>
-					<Th class="border-r">Import Path</Th>
-					<Th>Update Scope</Th>
-				</Tr>
-			</Thead>
-			<Tbody>
-				<Tr class="">
-					<Td class="border-r">Button</Td>
-					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/button</Td>
-					<Td>Variant and size classes, anchor/button rendering</Td>
-				</Tr>
-				<Tr class="">
-					<Td class="border-r">Card</Td>
-					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/card</Td>
-					<Td>Root variants and all card composition primitives</Td>
-				</Tr>
-				<Tr class="">
-					<Td class="border-r">Input</Td>
-					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/input</Td>
-					<Td>Field styling, file input branch, focus/error states</Td>
-				</Tr>
-				<Tr class="">
-					<Td class="border-r">Textarea</Td>
-					<Td class="border-r font-mono text-xs">$lib/components/ui/veil/textarea</Td>
-					<Td>Multiline field sizing, focus/error/disabled states</Td>
-				</Tr>
-			</Tbody>
-		</Table>
+		<div class="mt-2 mb-6 w-full overflow-x-auto">
+			<table
+				class="w-full min-w-[42rem] border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
+			>
+				<thead>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<th
+							class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Component</th
+						>
+						<th
+							class="border-r border-dashed border-ink/30 px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Import Path</th
+						>
+						<th class="px-3 py-2 text-left font-gmono font-normal text-ink/80 dark:text-emerald-400"
+							>Update Scope</th
+						>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+							>Button</td
+						>
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+							>$lib/components/ui/veil/button</td
+						>
+						<td class="px-3 py-2.5 text-muted-foreground"
+							>Variant and size classes, anchor/button rendering</td
+						>
+					</tr>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+							>Card</td
+						>
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+							>$lib/components/ui/veil/card</td
+						>
+						<td class="px-3 py-2.5 text-muted-foreground"
+							>Root variants and all card composition primitives</td
+						>
+					</tr>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+							>Input</td
+						>
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+							>$lib/components/ui/veil/input</td
+						>
+						<td class="px-3 py-2.5 text-muted-foreground"
+							>Field styling, file input branch, focus/error states</td
+						>
+					</tr>
+					<tr>
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 dark:border-emerald-400/40"
+							>Textarea</td
+						>
+						<td
+							class="border-r border-dashed border-ink/30 px-3 py-2.5 font-mono text-xs text-muted-foreground dark:border-emerald-400/40"
+							>$lib/components/ui/veil/textarea</td
+						>
+						<td class="px-3 py-2.5 text-muted-foreground"
+							>Multiline field sizing, focus/error/disabled states</td
+						>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</section>
 
 	<section>
@@ -680,4 +760,14 @@ export {
 		<H3 id="textarea-source">Source</H3>
 		<MultipleCode code={textareaSourceCode} />
 	</section>
-</DocsPageShell>
+
+	<section class="space-y-3">
+		<H2 id="whats-next">What’s next?</H2>
+		<Paragraph class="max-w-prose leading-relaxed">
+			Explore the <Link href="/veil/hero">Veil blocks</Link>, or browse the <Link
+				href="/docs/mist-theme">Mist theme setup</Link
+			>.
+		</Paragraph>
+	</section>
+	</article>
+</div>
