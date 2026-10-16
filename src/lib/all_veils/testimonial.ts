@@ -8,6 +8,44 @@ import TestimonialThree from "#lib/components/veil/testimonial/testimonial-three
 import TestimonialThreeCode from "#lib/components/veil/testimonial/testimonial-three.svelte?raw";
 import TestimonialFour from "#lib/components/veil/testimonial/testimonial-four.svelte";
 import TestimonialFourCode from "#lib/components/veil/testimonial/testimonial-four.svelte?raw";
+import VeilCardCode from "#lib/components/ui/veil/card/card.svelte?raw";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
+
+function createTestimonialCodeTree(fileName: string, code: string, includeCard = false) {
+	const componentsTree = includeCard
+		? `        ├── veil/
+        │   └── testimonial/
+        │       └── ${fileName}
+        └── ui/
+            └── veil/
+                └── card/
+                    ├── card.svelte
+                    └── index.ts`
+		: `        └── veil/
+            └── testimonial/
+                └── ${fileName}`;
+	const folderStructure = `# Folder structure
+
+I've simplified the layout to make it easier to browse.
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+${componentsTree}
+`;
+
+	return createBlockCodeTreeFromCode(
+		[
+			{ path: fileName, code, lang: "svelte" },
+			...(includeCard
+				? [{ path: "ui/card.svelte", code: VeilCardCode, lang: "svelte" as const }]
+				: []),
+			{ path: "folder-structure.md", code: folderStructure, lang: "markdown" },
+		],
+		{ defaultOpen: false }
+	);
+}
 
 export const all_veils_testimonial: MistBlock[] = [
 	{
@@ -16,10 +54,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		title: "Testimonial One",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-one",
-		code: {
-			code: TestimonialOneCode,
-			lang: "svelte",
-		},
+		codeTree: createTestimonialCodeTree("testimonial-one.svelte", TestimonialOneCode),
 		component: TestimonialOne,
 	},
 	{
@@ -28,10 +63,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		title: "Testimonial Two",
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-two",
-		code: {
-			code: TestimonialTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createTestimonialCodeTree("testimonial-two.svelte", TestimonialTwoCode, true),
 		component: TestimonialTwo,
 	},
 	{
@@ -40,10 +72,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-three",
 		itemId: "testimonial-three",
-		code: {
-			code: TestimonialThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createTestimonialCodeTree("testimonial-three.svelte", TestimonialThreeCode),
 		component: TestimonialThree,
 	},
 	{
@@ -52,10 +81,7 @@ export const all_veils_testimonial: MistBlock[] = [
 		category: "testimonial",
 		preview: "/preview/veil/testimonial/testimonial-four",
 		itemId: "testimonial-four",
-		code: {
-			code: TestimonialFourCode,
-			lang: "svelte",
-		},
+		codeTree: createTestimonialCodeTree("testimonial-four.svelte", TestimonialFourCode),
 		component: TestimonialFour,
 	},
 ];

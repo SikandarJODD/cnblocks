@@ -12,6 +12,95 @@ import FooterFive from "#lib/components/veil/footer/footer-five.svelte";
 import FooterFiveCode from "#lib/components/veil/footer/footer-five.svelte?raw";
 import FooterSix from "#lib/components/veil/footer/footer-six.svelte";
 import FooterSixCode from "#lib/components/veil/footer/footer-six.svelte?raw";
+import SocialMediaOneCode from "#lib/components/veil/footer/social-media-one.svelte?raw";
+import ThemeSwitcherCode from "#lib/components/veil/footer/theme-switcher.svelte?raw";
+import GithubIconCode from "#lib/components/icons/github.svelte?raw";
+import LinkedinIconCode from "#lib/components/icons/linkedin.svelte?raw";
+import TwitterIconCode from "#lib/components/icons/twitter.svelte?raw";
+import YoutubeIconCode from "#lib/components/icons/youtube.svelte?raw";
+import VeilButtonCode from "#lib/components/ui/veil/button/button.svelte?raw";
+import LogoCode from "#lib/components/web/Logo.svelte?raw";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
+
+type FooterCodeTreeOptions = {
+	standardIcons?: boolean;
+	socialMedia?: boolean;
+	themeSwitcher?: boolean;
+};
+
+const standardIconCodeFiles = [
+	{ path: "icons/github.svelte", code: GithubIconCode, lang: "svelte" },
+	{ path: "icons/linkedin.svelte", code: LinkedinIconCode, lang: "svelte" },
+	{ path: "icons/twitter.svelte", code: TwitterIconCode, lang: "svelte" },
+] as const;
+
+const socialMediaIconCodeFiles = [
+	{ path: "icons/linkedin.svelte", code: LinkedinIconCode, lang: "svelte" },
+	{ path: "icons/twitter.svelte", code: TwitterIconCode, lang: "svelte" },
+	{ path: "icons/youtube.svelte", code: YoutubeIconCode, lang: "svelte" },
+] as const;
+
+function createFooterCodeTree(
+	fileName: string,
+	code: string,
+	{ standardIcons = false, socialMedia = false, themeSwitcher = false }: FooterCodeTreeOptions = {}
+) {
+	const hasIcons = standardIcons || socialMedia;
+	const hasButton = socialMedia || themeSwitcher;
+	const footerFiles = socialMedia || themeSwitcher
+		? `        │   └── footer/
+        │       ├── ${fileName}
+${socialMedia ? "        │       ├── social-media-one.svelte\n" : ""}${themeSwitcher ? "        │       └── theme-switcher.svelte" : ""}`
+		: `        │   └── footer/
+        │       └── ${fileName}`;
+	const iconsTree = hasIcons
+		? `        ├── icons/
+        │   ├── index.ts
+${standardIcons ? "        │   ├── github.svelte\n" : ""}        │   ├── linkedin.svelte
+${socialMedia ? "        │   ├── twitter.svelte\n        │   └── youtube.svelte\n" : "        │   └── twitter.svelte\n"}`
+		: "";
+	const buttonTree = hasButton
+		? `        ├── ui/
+        │   └── veil/
+        │       └── button/
+        │           ├── button.svelte
+        │           └── index.ts
+`
+		: "";
+	const folderStructure = `# Folder structure
+
+I've simplified the layout to make it easier to browse.
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+${iconsTree}        ├── veil/
+${footerFiles}
+${buttonTree}        └── web/
+            └── Logo.svelte
+`;
+
+	return createBlockCodeTreeFromCode(
+		[
+			{ path: fileName, code, lang: "svelte" },
+			...(socialMedia
+				? [{ path: "footer/social-media-one.svelte", code: SocialMediaOneCode, lang: "svelte" as const }]
+				: []),
+			...(themeSwitcher
+				? [{ path: "footer/theme-switcher.svelte", code: ThemeSwitcherCode, lang: "svelte" as const }]
+				: []),
+			{ path: "Logo.svelte", code: LogoCode, lang: "svelte" },
+			...(hasButton
+				? [{ path: "ui/button.svelte", code: VeilButtonCode, lang: "svelte" as const }]
+				: []),
+			...(standardIcons ? standardIconCodeFiles : []),
+			...(socialMedia ? socialMediaIconCodeFiles : []),
+			{ path: "folder-structure.md", code: folderStructure, lang: "markdown" },
+		],
+		{ defaultOpen: false }
+	);
+}
 
 export const all_veils_footer: MistBlock[] = [
 	{
@@ -20,10 +109,7 @@ export const all_veils_footer: MistBlock[] = [
 		category: "footer",
 		preview: "/preview/veil/footer/footer-one",
 		itemId: "footer-one",
-		code: {
-			code: FooterOneCode,
-			lang: "svelte",
-		},
+		codeTree: createFooterCodeTree("footer-one.svelte", FooterOneCode),
 		component: FooterOne,
 	},
 	{
@@ -32,10 +118,9 @@ export const all_veils_footer: MistBlock[] = [
 		category: "footer",
 		preview: "/preview/veil/footer/footer-two",
 		itemId: "footer-two",
-		code: {
-			code: FooterTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createFooterCodeTree("footer-two.svelte", FooterTwoCode, {
+			standardIcons: true,
+		}),
 		component: FooterTwo,
 	},
 	{
@@ -44,10 +129,7 @@ export const all_veils_footer: MistBlock[] = [
 		category: "footer",
 		preview: "/preview/veil/footer/footer-three",
 		itemId: "footer-three",
-		code: {
-			code: FooterThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createFooterCodeTree("footer-three.svelte", FooterThreeCode),
 		component: FooterThree,
 	},
 	{
@@ -56,10 +138,9 @@ export const all_veils_footer: MistBlock[] = [
 		category: "footer",
 		preview: "/preview/veil/footer/footer-four",
 		itemId: "footer-four",
-		code: {
-			code: FooterFourCode,
-			lang: "svelte",
-		},
+		codeTree: createFooterCodeTree("footer-four.svelte", FooterFourCode, {
+			standardIcons: true,
+		}),
 		component: FooterFour,
 	},
 	{
@@ -68,10 +149,9 @@ export const all_veils_footer: MistBlock[] = [
 		category: "footer",
 		preview: "/preview/veil/footer/footer-five",
 		itemId: "footer-five",
-		code: {
-			code: FooterFiveCode,
-			lang: "svelte",
-		},
+		codeTree: createFooterCodeTree("footer-five.svelte", FooterFiveCode, {
+			themeSwitcher: true,
+		}),
 		component: FooterFive,
 	},
 	{
@@ -80,10 +160,10 @@ export const all_veils_footer: MistBlock[] = [
 		category: "footer",
 		preview: "/preview/veil/footer/footer-six",
 		itemId: "footer-six",
-		code: {
-			code: FooterSixCode,
-			lang: "svelte",
-		},
+		codeTree: createFooterCodeTree("footer-six.svelte", FooterSixCode, {
+			socialMedia: true,
+			themeSwitcher: true,
+		}),
 		component: FooterSix,
 	},
 ];
