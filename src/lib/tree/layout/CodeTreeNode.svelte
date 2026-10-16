@@ -1,5 +1,10 @@
 <script lang="ts">
-	import { CSS, Svelte as SvelteIcon, TypeScript } from "#lib/components/icons/index.js";
+	import {
+		CSS,
+		Markdown,
+		Svelte as SvelteIcon,
+		TypeScript,
+	} from "#lib/components/icons/index.js";
 	import type { BlockCodeNode } from "#lib/tree/types.js";
 	import { cn } from "#lib/utils.js";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
@@ -32,6 +37,7 @@
 		if (lowerName.endsWith(".svelte")) return "svelte";
 		if (lowerName.endsWith(".ts") || lowerName.endsWith(".tsx")) return "typescript";
 		if (lowerName.endsWith(".css")) return "css";
+		if (lowerName.endsWith(".md")) return "markdown";
 		return "file";
 	}
 </script>
@@ -44,6 +50,8 @@
 		<TypeScript class="size-3.5 shrink-0" />
 	{:else if type === "css"}
 		<CSS class="size-3.5 shrink-0" />
+	{:else if type === "markdown"}
+		<Markdown class="size-3.5 shrink-0" />
 	{:else}
 		<File class="size-3.5 shrink-0 text-neutral-600 dark:text-zinc-400" />
 	{/if}
@@ -53,7 +61,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex w-full items-center gap-1.5 rounded-lg px-1.5 py-1.5 text-left font-mono text-xs text-neutral-600 transition-colors [corner-shape:superellipse(1.6)] hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
+			class="flex w-full cursor-pointer items-center gap-1.5 rounded-md px-1.5 py-1.5 text-left font-mono text-xs text-neutral-600 transition-colors [corner-shape:superellipse(1.4)] hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
 			onclick={() => onToggleFolder(node.id)}
 			aria-expanded={isOpen}
 		>
@@ -69,11 +77,11 @@
 			</span>
 			{#if isOpen}
 				<FolderOpen
-					strokeWidth={1.2}
+					strokeWidth={1.4}
 					class="size-3.5 text-neutral-700 dark:text-zinc-300"
 				/>
 			{:else}
-				<Folder strokeWidth={1.2} class="size-3.5 text-neutral-700 dark:text-zinc-300" />
+				<Folder strokeWidth={1.4} class="size-3.5 text-neutral-700 dark:text-zinc-300" />
 			{/if}
 			<span class="truncate">{node.name}</span>
 		</button>
@@ -120,7 +128,7 @@
 	>
 		<button
 			type="button"
-			class="flex min-w-0 flex-1 items-center gap-1.5 px-1.5 py-1 text-left font-mono"
+			class="flex min-w-0 flex-1 cursor-pointer items-center gap-1.5 px-1.5 py-1.5 text-left font-mono"
 			onclick={() => onSelectFile(node.id)}
 			aria-current={activeFileId === node.id ? "true" : undefined}
 		>

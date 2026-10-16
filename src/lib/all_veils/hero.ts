@@ -74,11 +74,6 @@ export const all_veils_hero: MistBlock[] = [
 				{ path: "hero-one.svelte", code: HeroOneCode, lang: "svelte" },
 				{ path: "header-one.svelte", code: HeaderOneCode, lang: "svelte" },
 				{
-					path: "folder-structure.md",
-					code: HeroOneFolderStructure,
-					lang: "markdown",
-				},
-				{
 					path: "Logo.svelte",
 					code: LogoCode,
 					lang: "svelte",
@@ -137,6 +132,11 @@ export const all_veils_hero: MistBlock[] = [
 					path: "logos/vercel.svelte",
 					code: VercelLogoCode,
 					lang: "svelte",
+				},
+				{
+					path: "folder-structure.md",
+					code: HeroOneFolderStructure,
+					lang: "markdown",
 				},
 			],
 			{ defaultOpen: false }

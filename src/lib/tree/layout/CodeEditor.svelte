@@ -157,7 +157,7 @@
 
 		<div
 			data-code-overflow
-			class="mr-0.5 mb-0.5 no-scrollbar max-h-172 overflow-y-auto overscroll-contain rounded-2xl"
+			class="mr-0.5 mb-0.5 no-scrollbar max-h-172 overflow-y-auto overscroll-contain rounded-2xl border [corner-shape:superellipse(1.2)]"
 		>
 			{#if activeFile?.code}
 				<Code
