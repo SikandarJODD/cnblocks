@@ -46,14 +46,14 @@ const docsKeywords = [
 export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	introduction: {
 		key: "introduction",
-		path: "/v2-docs",
+		path: "/docs",
 		navTitle: "Introduction",
 		group: "guide",
 		toc: true,
 		seo: {
-			title: "Docs Introduction",
+			title: "Svelte Marketing Blocks documentation",
 			description:
-				"Overview of Svelte Shadcn Blocks, supported variants, and how to get started quickly.",
+				"Learn how to use accessible, responsive Svelte Marketing Blocks built with Svelte 5, Tailwind CSS, and shadcn-svelte.",
 			keywords: [...docsKeywords, "introduction", "overview"],
 		},
 	},

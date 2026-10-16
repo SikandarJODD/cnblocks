@@ -1,77 +1,161 @@
 <script lang="ts">
-	import SEOComponent from "#lib/seo/SEO.svelte";
-	import DocsPageShell from "#lib/components/layout/DocsPageShell.svelte";
+	import { page } from "$app/state";
+	import Sponsors from "#lib/components/base/sponsors/sponsors.svelte";
+	import { getDocsLayoutContext } from "#lib/components/layout/docs-layout-context.js";
 	import {
+		H1,
 		H2,
-		Paragraph,
-		Strong,
-		Table,
-		Thead,
-		Tbody,
-		Tr,
-		Th,
-		Td,
 		Link,
+		ListItem,
+		Paragraph,
+		UnorderedList,
 	} from "#lib/components/markdown/index.js";
-	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import { JsonLd, MetaTags } from "svelte-meta-tags";
+	import { FaviconLink } from "#lib/components/ui/favicon-link/index.ts";
 
-	const pageMeta = docsV2PageMap.introduction;
+	const title = "Introduction | Svelte Marketing Blocks";
+	const description =
+		"Learn how to use Svelte Marketing Blocks: accessible, responsive, copy-and-paste sections built with Svelte 5, Tailwind CSS, and shadcn-svelte.";
+	const keywords = [
+		"Svelte Marketing Blocks",
+		"Svelte 5 components",
+		"SvelteKit blocks",
+		"shadcn-svelte",
+		"Tailwind CSS components",
+		"Svelte landing page components",
+		"Svelte UI blocks",
+	];
+
+	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
+	let socialImage = $derived(`${page.url.origin}/og.png`);
 </script>
 
-<SEOComponent
-	title={pageMeta.seo.title}
-	description={pageMeta.seo.description}
-	keywords={pageMeta.seo.keywords}
+<MetaTags
+	{title}
+	{description}
+	{canonical}
+	{keywords}
+	robots="index,follow"
+	additionalRobotsProps={{ maxSnippet: -1, maxImagePreview: "large", maxVideoPreview: -1 }}
+	openGraph={{
+		type: "website",
+		url: canonical,
+		title,
+		description,
+		siteName: "Svelte Marketing Blocks",
+		images: [
+			{
+				url: socialImage,
+				width: 1200,
+				height: 630,
+				alt: "Svelte Marketing Blocks documentation",
+			},
+		],
+	}}
+	twitter={{
+		cardType: "summary_large_image",
+		site: "@Sikandar_Bhide",
+		creator: "@Sikandar_Bhide",
+		title,
+		description,
+		image: socialImage,
+		imageAlt: "Svelte Marketing Blocks documentation",
+	}}
 />
 
-<DocsPageShell
-	title="Introduction"
-	description="Everything you need to start using Svelte Shadcn Blocks."
->
-	<section>
-		<H2 id="overview">Overview</H2>
-		<Paragraph class="mt-1">
-			Svelte Shadcn Blocks ships production-ready UI blocks built with <Strong
-				>Svelte 5</Strong
-			>, Shadcn-Svelte and Tailwind CSS
-		</Paragraph>
-	</section>
+<JsonLd
+	schema={{
+		"@type": "WebPage",
+		name: title,
+		description,
+		url: canonical,
+		isPartOf: {
+			"@type": "WebSite",
+			name: "Svelte Marketing Blocks",
+			url: page.url.origin,
+		},
+	}}
+/>
 
-	<section class="space-y-4">
-		<H2 id="variants">Available Variants</H2>
-		<Table>
-			<Thead>
-				<Tr>
-					<Th>Variant</Th>
-					<Th>Style</Th>
-					<Th>Best For</Th>
-				</Tr>
-			</Thead>
-			<Tbody>
-				<Tr>
-					<Td>Normal</Td>
-					<Td>Bold marketing visuals</Td>
-					<Td>Landing pages and campaigns</Td>
-				</Tr>
-				<Tr>
-					<Td>Mist</Td>
-					<Td>Minimal and documentation friendly</Td>
-					<Td>Content-heavy product websites</Td>
-				</Tr>
-				<Tr>
-					<Td>Veil</Td>
-					<Td>Polished modern SaaS look</Td>
-					<Td>Startup and product pages</Td>
-				</Tr>
-			</Tbody>
-		</Table>
-	</section>
+<div class="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
+	<article class="min-w-0 space-y-12">
+		<header class="space-y-3">
+			<H1 id="introduction" class="font-display text-3xl tracking-tight sm:text-4xl">
+				Introduction
+			</H1>
+			<Paragraph class="max-w-prose leading-relaxed text-pretty">
+				Accessible, responsive marketing sections for Svelte 5, built with Tailwind CSS and
+				shadcn-svelte.
+			</Paragraph>
+		</header>
 
-	<section>
-		<H2 id="quick-start">Quick Start</H2>
-		<Paragraph class="mt-1">
-			Start with <Link href="/docs/installation">Installation</Link> and continue with the theme
-			setup that matches your project.
-		</Paragraph>
-	</section>
-</DocsPageShell>
+		<section class="space-y-3">
+			<H2 id="credits">Credits</H2>
+			<Paragraph class="max-w-prose leading-relaxed">
+				Inspired by <FaviconLink
+					href="https://tailark.com"
+					target="_blank"
+					rel="noreferrer"
+					faviconSrc="https://www.google.com/s2/favicons?domain=tailark.com&sz=128"
+				>
+					Tailark
+				</FaviconLink>
+				and adapted for Svelte.
+			</Paragraph>
+			<Paragraph class="max-w-prose leading-relaxed">
+				Built with <FaviconLink
+					href="https://www.shadcn-svelte.com"
+					target="_blank"
+					rel="noreferrer"
+				>
+					shadcn-svelte
+				</FaviconLink>
+				and Tailwind CSS.
+			</Paragraph>
+		</section>
+
+		<section aria-label="Variants">
+			<table
+				class="w-full border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
+			>
+				<tbody>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Normal</td
+						>
+						<td class="px-3 py-2 font-gmono text-muted-foreground">Bold marketing visuals.</td>
+					</tr>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Mist</td
+						>
+						<td class="px-3 py-2 font-gmono text-muted-foreground">
+							Quiet, content-focused layouts.
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Veil</td
+						>
+						<td class="px-3 py-2 font-gmono text-muted-foreground">
+							Polished SaaS and product sections.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="space-y-3">
+			<H2 id="quick-start">Quick start</H2>
+			<Paragraph class="max-w-prose leading-relaxed">
+				Begin with <Link href="/docs/installation">installation</Link>, then choose the
+				theme that fits your project.
+			</Paragraph>
+		</section>
+
+		<Sponsors />
+	</article>
+</div>
