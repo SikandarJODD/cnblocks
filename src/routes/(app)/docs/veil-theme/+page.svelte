@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import Code from "#lib/components/ui/code/code.svelte";
 	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import {
@@ -19,6 +20,18 @@
 
 	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
 	let socialImage = $derived(`${page.url.origin}/og.png`);
+	const folderStructure = `src/
+├── lib/
+│   └── components/
+│       └── ui/
+│           └── veil/
+│               ├── button/
+│               ├── card/
+│               ├── input/
+│               └── textarea/
+└── routes/
+    ├── layout.css
+    └── themes.css`;
 
 	const buttonSourceCode = [
 		{
@@ -465,19 +478,29 @@ export {
 			</Paragraph>
 		</header>
 
+		<section>
+			<H2 id="folder-structure">Folder structure</H2>
+			<Paragraph class="mt-1 mb-6 text-muted-foreground">
+				Keep the Veil primitives together under <code>ui/veil</code>, and import
+				<code>themes.css</code> from <code>layout.css</code>.
+			</Paragraph>
+			<Code
+				code={folderStructure}
+				lang="markdown"
+				hideLines={true}
+				class="rounded-none border-dashed border-ink/30 bg-transparent dark:border-emerald-400/40 [&_pre]:rounded-none"
+			/>
+		</section>
+
 	<section>
 		<H2 id="theme-quickstart">Theme Quickstart</H2>
 		<Paragraph class="mt-1 mb-6 text-muted-foreground">
-			Add the Veil tokens to your global stylesheet <code class="rounded-sm bg-secondary px-1"
-				>app.css</code
-			>
-			or
-			<code class="rounded-sm bg-secondary px-1">layout.css</code> so all Veil primitives resolve
-			color, border, focus ring, and typography consistently.
+			Add the Veil tokens to <code class="rounded-sm bg-secondary px-1">themes.css</code> so
+			all Veil primitives resolve color, border, focus ring, and typography consistently.
 		</Paragraph>
 		<FrameCode
 			code={{
-				filename: "layout.css",
+				filename: "themes.css",
 				filecode: `[data-theme="veil"] .theme-container {
 	--radius: 0.625rem;
 

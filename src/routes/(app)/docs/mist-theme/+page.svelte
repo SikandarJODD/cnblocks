@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import Code from "#lib/components/ui/code/code.svelte";
 	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
 	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
@@ -13,6 +14,19 @@
 
 	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
 	let socialImage = $derived(`${page.url.origin}/og.png`);
+	const folderStructure = `src/
+├── lib/
+│   └── components/
+│       └── ui/
+│           └── mist/
+│               ├── button/
+│               ├── card/
+│               ├── input/
+│               ├── label/
+│               └── textarea/
+└── routes/
+    ├── layout.css
+    └── themes.css`;
 
 	const buttonSourceCode = [
 		{
@@ -515,17 +529,29 @@ export {
 		</header>
 
 		<section>
+			<H2 id="folder-structure">Folder structure</H2>
+			<Paragraph class="mt-1 mb-6 text-muted-foreground">
+				Keep the Mist primitives together under <code>ui/mist</code>, and import
+				<code>themes.css</code> from <code>layout.css</code>.
+			</Paragraph>
+			<Code
+				code={folderStructure}
+				lang="markdown"
+				hideLines={true}
+				class="rounded-none border-dashed border-ink/30 bg-transparent dark:border-emerald-400/40 [&_pre]:rounded-none"
+			/>
+		</section>
+
+		<section>
 			<H2 id="theme-quickstart">Theme Quickstart</H2>
 			<Paragraph class="mt-1 mb-6 text-muted-foreground">
-				Add the Mist theme variables to your global stylesheet <code
-					class="rounded-sm bg-secondary px-1">app.css</code
-				>
-				or <code class="rounded-sm bg-secondary px-1">layout.css</code> so Mist primitives resolve
-				color, border, and contrast consistently.
+				Add the Mist theme variables to <code class="rounded-sm bg-secondary px-1"
+					>themes.css</code
+				> so Mist primitives resolve color, border, and contrast consistently.
 			</Paragraph>
 			<FrameCode
 				code={{
-					filename: "layout.css",
+					filename: "themes.css",
 					lang: "css",
 					filecode: `[data-theme="mist"] .theme-container {
 	--radius: 0.625rem;
