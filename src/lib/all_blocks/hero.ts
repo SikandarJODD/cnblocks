@@ -1,8 +1,6 @@
 import type { Block } from "../../types/blocks";
-import { numToString } from "#lib";
 import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
 
-// Components
 import HeroOne from "#lib/components/blocks/hero/hero-one.svelte";
 import HeroTwo from "#lib/components/blocks/hero/hero-two.svelte";
 import HeroThree from "#lib/components/blocks/hero/hero-three.svelte";
@@ -12,8 +10,6 @@ import HeroSix from "#lib/components/blocks/hero/hero-six.svelte";
 import HeroSeven from "#lib/components/blocks/hero/hero-seven.svelte";
 import HeroEight from "#lib/components/blocks/hero/hero-eight.svelte";
 import HeroNine from "#lib/components/blocks/hero/hero-nine.svelte";
-
-// Code
 import HeroOneCode from "#lib/components/blocks/hero/hero-one.svelte?raw";
 import HeroTwoCode from "#lib/components/blocks/hero/hero-two.svelte?raw";
 import HeroThreeCode from "#lib/components/blocks/hero/hero-three.svelte?raw";
@@ -34,134 +30,425 @@ import SpotifyCode from "#lib/svgs/spotify.svelte?raw";
 import SupabaseFullCode from "#lib/svgs/supabase-full.svelte?raw";
 import VercelFullCode from "#lib/svgs/vercel-full.svelte?raw";
 
-const codes = [
-	HeroOneCode,
-	HeroTwoCode,
-	HeroThreeCode,
-	HeroFourCode,
-	HeroFiveCode,
-	HeroSixCode,
-	HeroSevenCode,
-	HeroEightCode,
-	HeroNineCode,
-];
-const components = [
-	HeroOne,
-	HeroTwo,
-	HeroThree,
-	HeroFour,
-	HeroFive,
-	HeroSix,
-	HeroSeven,
-	HeroEight,
-	HeroNine,
-];
-
-const svgCodes = {
-	beacon: BeaconCode,
-	bolt: BoltCode,
-	cisco: CiscoCode,
-	claude: ClaudeCode,
-	figma: FigmaCode,
-	"firebase-full": FirebaseFullCode,
-	hulu: HuluCode,
-	spotify: SpotifyCode,
-	"supabase-full": SupabaseFullCode,
-	"vercel-full": VercelFullCode,
-};
-
-type SvgName = keyof typeof svgCodes;
-
-const allHeroSvgs: SvgName[] = [
-	"beacon",
-	"bolt",
-	"cisco",
-	"claude",
-	"figma",
-	"firebase-full",
-	"hulu",
-	"spotify",
-	"supabase-full",
-	"vercel-full",
-];
-
-const heroTwoSvgs: SvgName[] = allHeroSvgs.filter(
-	(name) => name !== "cisco" && name !== "figma"
-);
-
-const heroDependencies = [
-	{ magic: false, svgs: allHeroSvgs },
-	{ magic: false, svgs: heroTwoSvgs },
-	{ magic: true, svgs: allHeroSvgs },
-	{ magic: true, svgs: allHeroSvgs },
-	{ magic: true, svgs: allHeroSvgs },
-	{ magic: false, svgs: [] },
-	{ magic: false, svgs: [] },
-	{ magic: false, svgs: allHeroSvgs },
-	{ magic: false, svgs: allHeroSvgs },
-];
-
-function createFolderStructure(
-	fileName: string,
-	dependencies: (typeof heroDependencies)[number]
-) {
-	const hasSvgs = dependencies.svgs.length > 0;
-	const rootBranch = hasSvgs ? "\u251c\u2500\u2500" : "\u2514\u2500\u2500";
-	const componentIndent = hasSvgs ? "\u2502   " : "    ";
-	const magicFolders = dependencies.magic
-		? `    ${componentIndent}\u251c\u2500\u2500 magic/\n    ${componentIndent}\u2502   \u251c\u2500\u2500 marquee/\n    ${componentIndent}\u2502   \u2514\u2500\u2500 progressive-blur/\n`
-		: "";
-	const svgFiles = ["index.ts", ...dependencies.svgs.map((name) => `${name}.svelte`)];
-	const svgFolder = hasSvgs
-		? `\u2514\u2500\u2500 svgs/\n${svgFiles
-				.map((name, index) => {
-					const branch = index === svgFiles.length - 1 ? "\u2514\u2500\u2500" : "\u251c\u2500\u2500";
-					return `        ${branch} ${name}`;
-				})
-				.join("\n")}\n`
-		: "";
-
-	return `# Folder structure
+const HeroOneFolderStructure = `# Folder structure
 
 Here is the original folder structure:
 
     src/lib/
-    ${rootBranch} components/
-    ${componentIndent}\u251c\u2500\u2500 blocks/
-    ${componentIndent}\u2502   \u2514\u2500\u2500 hero/
-    ${componentIndent}\u2502       \u2514\u2500\u2500 ${fileName}
-${magicFolders}    ${componentIndent}\u2514\u2500\u2500 ui/
-    ${componentIndent}    \u2514\u2500\u2500 button/
-    ${svgFolder}`;
-}
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-one.svelte
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── cisco.svelte
+        ├── claude.svelte
+        ├── figma.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
 
-export let hero: Block[] = components.map((component, index) => {
-	const title = numToString(index + 1);
-	const fileName = `hero-${title}.svelte`;
+const HeroTwoFolderStructure = `# Folder structure
 
-	return {
-		itemId: `hero-${title}`,
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-two.svelte
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── claude.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
+
+const HeroThreeFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-three.svelte
+    │   ├── magic/
+    │   │   ├── marquee/
+    │   │   └── progressive-blur/
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── cisco.svelte
+        ├── claude.svelte
+        ├── figma.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
+
+const HeroFourFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-four.svelte
+    │   ├── magic/
+    │   │   ├── marquee/
+    │   │   └── progressive-blur/
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── cisco.svelte
+        ├── claude.svelte
+        ├── figma.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
+
+const HeroFiveFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-five.svelte
+    │   ├── magic/
+    │   │   ├── marquee/
+    │   │   └── progressive-blur/
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── cisco.svelte
+        ├── claude.svelte
+        ├── figma.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
+
+const HeroSixFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+        ├── blocks/
+        │   └── hero/
+        │       └── hero-six.svelte
+        └── ui/
+            └── button/
+`;
+
+const HeroSevenFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+        ├── blocks/
+        │   └── hero/
+        │       └── hero-seven.svelte
+        └── ui/
+            └── button/
+`;
+
+const HeroEightFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-eight.svelte
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── cisco.svelte
+        ├── claude.svelte
+        ├── figma.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
+
+const HeroNineFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    ├── components/
+    │   ├── blocks/
+    │   │   └── hero/
+    │   │       └── hero-nine.svelte
+    │   └── ui/
+    │       └── button/
+    └── svgs/
+        ├── index.ts
+        ├── beacon.svelte
+        ├── bolt.svelte
+        ├── cisco.svelte
+        ├── claude.svelte
+        ├── figma.svelte
+        ├── firebase-full.svelte
+        ├── hulu.svelte
+        ├── spotify.svelte
+        ├── supabase-full.svelte
+        └── vercel-full.svelte
+`;
+
+export const hero: Block[] = [
+	{
+		itemId: "hero-one",
 		slug: "hero",
-		title,
+		title: "one",
 		category: "hero",
-		preview: `/preview/hero/${title}`,
+		preview: "/preview/hero/one",
 		previewMode: "inline",
 		codeTree: createBlockCodeTreeFromCode(
 			[
-				{ path: fileName, code: codes[index], lang: "svelte" },
-				...heroDependencies[index].svgs.map((name) => ({
-					path: `svgs/${name}.svelte`,
-					code: svgCodes[name],
-					lang: "svelte" as const,
-				})),
-				{
-					path: "folder-structure.md",
-					code: createFolderStructure(fileName, heroDependencies[index]),
-					lang: "markdown",
-				},
+				{ path: "hero-one.svelte", code: HeroOneCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/figma.svelte", code: FigmaCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroOneFolderStructure, lang: "markdown" },
 			],
 			{ defaultOpen: false }
 		),
-		component,
-	};
-});
+		component: HeroOne,
+	},
+	{
+		itemId: "hero-two",
+		slug: "hero",
+		title: "two",
+		category: "hero",
+		preview: "/preview/hero/two",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-two.svelte", code: HeroTwoCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroTwoFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroTwo,
+	},
+	{
+		itemId: "hero-three",
+		slug: "hero",
+		title: "three",
+		category: "hero",
+		preview: "/preview/hero/three",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-three.svelte", code: HeroThreeCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/figma.svelte", code: FigmaCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroThreeFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroThree,
+	},
+	{
+		itemId: "hero-four",
+		slug: "hero",
+		title: "four",
+		category: "hero",
+		preview: "/preview/hero/four",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-four.svelte", code: HeroFourCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/figma.svelte", code: FigmaCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroFourFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroFour,
+	},
+	{
+		itemId: "hero-five",
+		slug: "hero",
+		title: "five",
+		category: "hero",
+		preview: "/preview/hero/five",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-five.svelte", code: HeroFiveCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/figma.svelte", code: FigmaCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroFiveFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroFive,
+	},
+	{
+		itemId: "hero-six",
+		slug: "hero",
+		title: "six",
+		category: "hero",
+		preview: "/preview/hero/six",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-six.svelte", code: HeroSixCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroSixFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroSix,
+	},
+	{
+		itemId: "hero-seven",
+		slug: "hero",
+		title: "seven",
+		category: "hero",
+		preview: "/preview/hero/seven",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-seven.svelte", code: HeroSevenCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroSevenFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroSeven,
+	},
+	{
+		itemId: "hero-eight",
+		slug: "hero",
+		title: "eight",
+		category: "hero",
+		preview: "/preview/hero/eight",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-eight.svelte", code: HeroEightCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/figma.svelte", code: FigmaCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroEightFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroEight,
+	},
+	{
+		itemId: "hero-nine",
+		slug: "hero",
+		title: "nine",
+		category: "hero",
+		preview: "/preview/hero/nine",
+		previewMode: "inline",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "hero-nine.svelte", code: HeroNineCode, lang: "svelte" },
+				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
+				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
+				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
+				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
+				{ path: "svgs/figma.svelte", code: FigmaCode, lang: "svelte" },
+				{ path: "svgs/firebase-full.svelte", code: FirebaseFullCode, lang: "svelte" },
+				{ path: "svgs/hulu.svelte", code: HuluCode, lang: "svelte" },
+				{ path: "svgs/spotify.svelte", code: SpotifyCode, lang: "svelte" },
+				{ path: "svgs/supabase-full.svelte", code: SupabaseFullCode, lang: "svelte" },
+				{ path: "svgs/vercel-full.svelte", code: VercelFullCode, lang: "svelte" },
+				{ path: "folder-structure.md", code: HeroNineFolderStructure, lang: "markdown" },
+			],
+			{ defaultOpen: false }
+		),
+		component: HeroNine,
+	},
+];
