@@ -8,6 +8,7 @@
 		Link,
 		ListItem,
 		Paragraph,
+		Strong,
 		UnorderedList,
 	} from "#lib/components/markdown/index.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
@@ -15,7 +16,7 @@
 
 	const title = "Introduction | Svelte Marketing Blocks";
 	const description =
-		"Learn how to use Svelte Marketing Blocks: accessible, responsive, copy-and-paste sections built with Svelte 5, Tailwind CSS, and shadcn-svelte.";
+		"Svelte Marketing Blocks provides accessible, responsive, and production-ready building blocks for creating polished Svelte websites.";
 	const keywords = [
 		"Svelte Marketing Blocks",
 		"Svelte 5 components",
@@ -80,18 +81,21 @@
 <div class="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
 	<article class="min-w-0 space-y-12">
 		<header class="space-y-3">
-			<H1 id="introduction" class="font-display text-3xl tracking-tight sm:text-4xl">
+			<H1
+				id="introduction"
+				class="font-gmono text-3xl font-normal tracking-tight sm:text-4xl"
+			>
 				Introduction
 			</H1>
-			<Paragraph class="max-w-prose leading-relaxed text-pretty">
-				Accessible, responsive marketing sections for Svelte 5, built with Tailwind CSS and
-				shadcn-svelte.
+			<Paragraph class="max-w-prose text-lg leading-relaxed text-pretty">
+				Svelte Marketing Blocks provides accessible, responsive, and production-ready
+				building blocks for creating polished Svelte websites.
 			</Paragraph>
 		</header>
 
 		<section class="space-y-3">
-			<H2 id="credits">Credits</H2>
-			<Paragraph class="max-w-prose leading-relaxed">
+			<H2 id="credits" class="font-gmono font-normal">Credits</H2>
+			<Paragraph class="max-w-prose">
 				Inspired by <FaviconLink
 					href="https://tailark.com"
 					target="_blank"
@@ -99,10 +103,16 @@
 					faviconSrc="https://www.google.com/s2/favicons?domain=tailark.com&sz=128"
 				>
 					Tailark
-				</FaviconLink>
-				and adapted for Svelte.
+				</FaviconLink>. Built for Svelte by <FaviconLink
+					href="https://x.com/MeschacIrung"
+					target="_blank"
+					rel="noreferrer"
+					faviconSrc="https://www.google.com/s2/favicons?domain=irung.me&sz=128"
+				>
+					Méschac Irung
+				</FaviconLink>.
 			</Paragraph>
-			<Paragraph class="max-w-prose leading-relaxed">
+			<!-- <Paragraph class="max-w-prose leading-relaxed">
 				Built with <FaviconLink
 					href="https://www.shadcn-svelte.com"
 					target="_blank"
@@ -111,11 +121,11 @@
 					shadcn-svelte
 				</FaviconLink>
 				and Tailwind CSS.
-			</Paragraph>
+			</Paragraph> -->
 		</section>
 
 		<section class="space-y-3" aria-labelledby="variants">
-			<H2 id="variants">Variants</H2>
+			<H2 id="variants" class="font-gmono font-normal">Blocks Variants</H2>
 			<table
 				class="w-full border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
 			>
@@ -125,7 +135,9 @@
 							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
 							>Normal</td
 						>
-						<td class="px-3 py-2 font-gmono text-muted-foreground">Bold marketing visuals.</td>
+						<td class="px-3 py-2 font-gmono text-muted-foreground"
+							>Bold marketing visuals.</td
+						>
 					</tr>
 					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
 						<td
@@ -150,11 +162,34 @@
 		</section>
 
 		<section class="space-y-3">
-			<H2 id="quick-start">Quick start</H2>
+			<H2 id="quick-start" class="font-gmono font-normal">Quick start</H2>
 			<Paragraph class="max-w-prose leading-relaxed">
 				Begin with <Link href="/docs/installation">installation</Link>, then choose the
 				theme that fits your project.
 			</Paragraph>
+		</section>
+
+		<section class="space-y-3">
+			<H2 id="features" class="font-gmono font-normal">Features</H2>
+			<UnorderedList>
+				<ListItem>
+					<Strong>200+ marketing blocks.</Strong> Find ready-made sections for every part of your
+					marketing site.
+				</ListItem>
+				<ListItem>
+					<Strong>Sections, pages, and templates.</Strong> Start with a single block or a complete
+					layout.
+				</ListItem>
+				<ListItem>
+					<Strong>Install your way.</Strong> Use the shadcn CLI or copy and paste the source code.
+				</ListItem>
+				<ListItem>
+					<Strong>Responsive by default.</Strong> Each block works across mobile, tablet, and desktop.
+				</ListItem>
+				<ListItem>
+					<Strong>Free and open source.</Strong> Use and customize the blocks in your own projects.
+				</ListItem>
+			</UnorderedList>
 		</section>
 
 		<Sponsors />

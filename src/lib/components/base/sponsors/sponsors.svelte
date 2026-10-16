@@ -76,7 +76,7 @@
 
 <section class="space-y-5" aria-labelledby="sponsors">
 	<div class="space-y-2">
-		<h2 id="sponsors" class="scroll-m-20 text-2xl font-medium text-foreground">Sponsors</h2>
+		<h2 id="sponsors" class="scroll-m-20 font-gmono text-2xl text-foreground">Sponsors</h2>
 		<p class="text-base leading-relaxed text-muted-foreground">
 			Thankyouu everyone for supporting my work.
 		</p>
@@ -115,7 +115,9 @@
 	</ul>
 
 	<div class=" mt-8">
-		<Button href={sponsorUrl} class="rounded-xl font-gmono [corner-shape:superellipse(1.4)]"
+		<Button
+			href={sponsorUrl}
+			class="rounded-xl px-5 font-gmono [corner-shape:superellipse(1.4)]"
 			>Sponsor my work</Button
 		>
 	</div>
