@@ -103,21 +103,17 @@
 					faviconSrc="https://www.google.com/s2/favicons?domain=tailark.com&sz=128"
 				>
 					Tailark
-				</FaviconLink>. Built by <FaviconLink
+				</FaviconLink>.
+			</Paragraph>
+			<Paragraph class="max-w-prose">
+				Originally created by <FaviconLink
 					href="https://x.com/MeschacIrung"
 					target="_blank"
 					rel="noreferrer"
 					faviconSrc="https://www.google.com/s2/favicons?domain=irung.me&sz=128"
 				>
 					Méschac Irung
-				</FaviconLink>
-			</Paragraph>
-		</section>
-
-		<section class="space-y-3">
-			<H2 id="credits" class="font-gmono font-normal">Svelte Port</H2>
-			<Paragraph class="max-w-prose">
-				Ported to Svelte by <FaviconLink
+				</FaviconLink> and ported to Svelte by <FaviconLink
 					href="https://bhide.dev?utm_source=svelte-marketing-blocks"
 					target="_blank"
 					rel="noreferrer"
