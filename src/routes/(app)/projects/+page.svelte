@@ -172,23 +172,23 @@
 	}}
 />
 
-<div class="mx-auto w-full max-w-5xl px-5 py-8 sm:px-8 sm:py-12">
+<div class="m-1 mx-auto w-full max-w-5xl px-4 py-8 sm:px-8 sm:py-12">
 	<article class="min-w-0 space-y-10">
 		<header class="mx-auto max-w-2xl space-y-3 text-center">
 			<H1 class="font-gmono text-3xl font-normal tracking-tight sm:text-4xl">
 				Projects &amp; Libraries
 			</H1>
 			<Paragraph class="text-base leading-relaxed text-pretty sm:text-lg">
-				Open-source Svelte projects, component collections, and tools. All built by
+				Open-Source Svelte projects, Component collections, and tools.
+				<br />
+				All built by
 				<FaviconLink
 					href="https://bhide.dev?utm_source=svelte-marketing-blocks"
 					target="_blank"
 					rel="noreferrer"
-					faviconSrc="https://www.google.com/s2/favicons?domain=bhide.dev&sz=128"
-					class="rounded-sm bg-ink/10 px-1.5 text-ink/80 transition-all duration-200 hover:text-ink dark:bg-[oklch(0.654_0.234_34.196)]/15 dark:text-[oklch(0.654_0.234_34.196)] dark:hover:bg-[oklch(0.654_0.234_34.196)]/25 dark:hover:text-[oklch(0.72_0.19_34.196)]"
 				>
 					Bhide Svelte
-				</FaviconLink>.
+				</FaviconLink>
 			</Paragraph>
 		</header>
 

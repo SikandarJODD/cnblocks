@@ -2,7 +2,7 @@
 	import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
 	import Github from "#lib/components/logos/github.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { Card } from "#lib/components/ui/card/index.js";
+	import * as Card from "#lib/components/ui/card/index.js";
 
 	type Props = {
 		name: string;
@@ -14,26 +14,30 @@
 	let { name, description, href, source }: Props = $props();
 </script>
 
-<Card
+<Card.Root
 	role="article"
-	class="flex h-full flex-col rounded-lg p-4 shadow-none transition-colors hover:bg-muted/40"
+	class="flex h-full flex-col rounded-lg shadow-none transition-colors hover:bg-muted/40"
 >
-	<h3 class="font-gmono text-base font-normal tracking-tight text-foreground">{name}</h3>
-	<p class="mt-1.5 text-sm leading-normal text-pretty text-muted-foreground">{description}</p>
+	<Card.Header class="gap-1 p-3 pb-0">
+		<Card.Title role="heading" aria-level={3}>{name}</Card.Title>
+		<Card.Description class="leading-normal text-pretty">{description}</Card.Description>
+	</Card.Header>
 
-	<div class="mt-3 flex items-center gap-1">
+	<Card.Content class="mt-auto flex-row gap-1 p-3 pt-3">
 		<Button
 			variant="secondary"
+			size="sm"
 			{href}
 			target="_blank"
 			rel="noopener noreferrer"
 			aria-label={`Visit ${name}`}
 		>
 			Visit
-			<ArrowUpRight data-icon="inline-end" aria-hidden="true" />
+			<ArrowUpRight strokeWidth={1.6} data-icon="inline-end" aria-hidden="true" />
 		</Button>
 		<Button
 			variant="ghost"
+			size="sm"
 			class="text-muted-foreground hover:text-foreground"
 			href={source}
 			target="_blank"
@@ -43,5 +47,5 @@
 			<Github />
 			GitHub
 		</Button>
-	</div>
-</Card>
+	</Card.Content>
+</Card.Root>
