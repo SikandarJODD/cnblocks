@@ -20,20 +20,26 @@
 			class="mx-auto mt-8 w-full max-w-4xl rounded-xl border object-cover"
 		/>
 
-		<div class="mx-auto mt-8 grid max-w-4xl gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
-			<div>
+		<div class="mx-auto mt-8 grid max-w-4xl gap-2 text-left sm:grid-cols-2 lg:grid-cols-3">
+			<div
+				class="rounded-xl border border-transparent bg-foreground/[0.025] p-4 transition-colors duration-150 hover:bg-foreground/5 dark:bg-foreground/5 dark:hover:bg-foreground/10"
+			>
 				<h3 class="text-lg font-medium">Free and open source</h3>
 				<p class="mt-2 text-base leading-6 text-muted-foreground">
 					Use and customize every block under the MIT license.
 				</p>
 			</div>
-			<div>
+			<div
+				class="rounded-xl border border-transparent bg-foreground/[0.025] p-4 transition-colors duration-150 hover:bg-foreground/5 dark:bg-foreground/5 dark:hover:bg-foreground/10"
+			>
 				<h3 class="text-lg font-medium">Responsive and accessible</h3>
 				<p class="mt-2 text-base leading-6 text-muted-foreground">
 					Built for different screen sizes and accessible interactions.
 				</p>
 			</div>
-			<div>
+			<div
+				class="rounded-xl border border-transparent bg-foreground/[0.025] p-4 transition-colors duration-150 hover:bg-foreground/5 dark:bg-foreground/5 dark:hover:bg-foreground/10"
+			>
 				<h3 class="text-lg font-medium">Light and dark mode</h3>
 				<p class="mt-2 text-base leading-6 text-muted-foreground">
 					Theme-aware styles that work across both color modes.

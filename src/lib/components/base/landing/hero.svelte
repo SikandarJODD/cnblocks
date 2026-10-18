@@ -3,7 +3,9 @@
 	import { FaviconLink } from "#lib/components/ui/favicon-link/index.js";
 </script>
 
-<section class="flex min-h-[38vh] items-center font-docs">
+<section
+	class="m-1 flex min-h-[38vh] items-center rounded-2xl border border-ink/10 bg-ink-dim/10 font-docs dark:border-muted dark:bg-background"
+>
 	<div class="w-full px-6 py-10 md:px-10">
 		<div class="max-w-6xl">
 			<h1 class="text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
@@ -39,12 +41,14 @@
 				</FaviconLink>
 			</p>
 			<div class="mt-6 flex flex-wrap gap-3">
-				<Button href="/kit/hero" size="lg" class="rounded-full px-6">Explore blocks</Button>
+				<Button href="/kit/hero" size="lg" class="rounded-full px-6 text-base"
+					>Explore blocks</Button
+				>
 				<Button
 					href="/docs/installation"
 					size="lg"
 					variant="outline"
-					class="rounded-full px-6">Get started</Button
+					class="rounded-full px-6 text-base">Get started</Button
 				>
 			</div>
 		</div>
