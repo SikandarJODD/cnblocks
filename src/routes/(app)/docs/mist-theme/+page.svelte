@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import Code from "#lib/components/ui/code/code.svelte";
-	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
-	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
+	import { CodeFiles, FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
@@ -721,20 +720,28 @@ export {
 				Mist button adds a <code>neutral</code> variant for bold monochrome actions while keeping
 				the standard shadcn-like variants.
 			</Paragraph>
-			<H3 id="button-usage" class="mb-2">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "button-usage.svelte",
-					lang: "svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="button-source">Source</H3>
+					<CodeFiles files={buttonSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="button-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "button-usage.svelte",
+								lang: "svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Button } from "#lib/components/ui/mist/button/index.js";
 \<\/script\>
 
 <Button variant="neutral">Neutral Button</Button>`,
-				}}
-			/>
-			<H3 id="button-source" class="mb-2">Source</H3>
-			<MultipleCode code={buttonSourceCode} />
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -743,12 +750,19 @@ export {
 				Mist card adds <code>soft</code> and <code>mixed</code> variants to support subtle sections
 				commonly used across documentation-style layouts.
 			</Paragraph>
-			<H3 id="card-usage" class="mb-2">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "card-usage.svelte",
-					lang: "svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="card-source">Source</H3>
+					<CodeFiles files={cardSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="card-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "card-usage.svelte",
+								lang: "svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/mist/card/index.js";
 \<\/script\>
 
@@ -765,10 +779,11 @@ export {
 	</CardHeader>
 	<CardContent>...</CardContent>
 </Card>`,
-				}}
-			/>
-			<H3 id="card-source" class="mb-2">Source</H3>
-			<MultipleCode code={cardSourceCode} />
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -777,22 +792,30 @@ export {
 				Mist input supports standard and file fields with consistent focus, invalid, and
 				disabled states.
 			</Paragraph>
-			<H3 id="input-usage" class="mb-2">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "input-usage.svelte",
-					lang: "svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="input-source">Source</H3>
+					<CodeFiles files={inputSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="input-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "input-usage.svelte",
+								lang: "svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Input } from "#lib/components/ui/mist/input/index.js";
 \<\/script\>
 
 <Input type="email" placeholder="you@example.com" />
 <Input aria-invalid="true" placeholder="Invalid state" />
 <Input type="file" />`,
-				}}
-			/>
-			<H3 id="input-source" class="mb-2">Source</H3>
-			<MultipleCode code={inputSourceCode} />
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -800,20 +823,28 @@ export {
 			<Paragraph class="mt-1 mb-6">
 				Mist label keeps form text clear and reflects disabled field states.
 			</Paragraph>
-			<H3 id="label-usage" class="mb-2">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "label-usage.svelte",
-					lang: "svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="label-source">Source</H3>
+					<CodeFiles files={labelSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="label-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "label-usage.svelte",
+								lang: "svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Label } from "#lib/components/ui/mist/label/index.js";
 \<\/script\>
 
 <Label for="email">Email address</Label>`,
-				}}
-			/>
-			<H3 id="label-source" class="mb-2">Source</H3>
-			<MultipleCode code={labelSourceCode} />
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -822,20 +853,28 @@ export {
 				Mist textarea provides a simple multiline field with matching focus and disabled
 				states.
 			</Paragraph>
-			<H3 id="textarea-usage" class="mb-2">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "textarea-usage.svelte",
-					lang: "svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="textarea-source">Source</H3>
+					<CodeFiles files={textareaSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="textarea-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "textarea-usage.svelte",
+								lang: "svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Textarea } from "#lib/components/ui/mist/textarea/index.js";
 \<\/script\>
 
 <Textarea placeholder="Enter details..." />`,
-				}}
-			/>
-			<H3 id="textarea-source" class="mb-2">Source</H3>
-			<MultipleCode code={textareaSourceCode} />
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section class="space-y-3">

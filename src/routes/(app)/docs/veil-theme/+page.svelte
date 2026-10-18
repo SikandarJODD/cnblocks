@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import Code from "#lib/components/ui/code/code.svelte";
-	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
-	import MultipleCode from "#lib/components/ui/code/multiple-code.svelte";
+	import { CodeFiles, FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import { H1, H2, H3, Paragraph, Link } from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
@@ -675,22 +674,30 @@ export {
 			<Paragraph class="mt-1 mb-4 text-muted-foreground">
 				Veil button uses rounded-full geometry, compact sizing, and contrast-aware variants.
 			</Paragraph>
-			<H3 id="button-usage">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "button-usage.svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="button-source">Source</H3>
+					<CodeFiles files={buttonSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="button-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "button-usage.svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Button } from "#lib/components/ui/veil/button/index.js";
 \<\/script\>
 
 <Button variant="default">Default Button</Button>
 <Button variant="outline">Outline Button</Button>
 <Button size="lg">Large Button</Button>`,
-					lang: "svelte",
-				}}
-			/>
-			<H3 id="button-source">Source</H3>
-			<MultipleCode code={buttonSourceCode} />
+								lang: "svelte",
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -700,12 +707,19 @@ export {
 				<code>mixed</code>, and <code>outline</code>, with composition primitives for
 				header/content/footer layouts.
 			</Paragraph>
-			<H3 id="card-usage">Usage</H3>
-			<div>
-				<FrameCode
-					code={{
-						filename: "card-usage.svelte",
-						filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="card-source">Source</H3>
+					<CodeFiles files={cardSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="card-usage">Usage</H3>
+					<div>
+						<CodeFiles
+							files={[
+								{
+									filename: "card-usage.svelte",
+									filecode: `\<\script lang="ts"\>
 	import { Card, CardContent, CardHeader, CardTitle } from "#lib/components/ui/veil/card/index.js";
 \<\/script\>
 
@@ -722,12 +736,13 @@ export {
 	</CardHeader>
 	<CardContent>...</CardContent>
 </Card>`,
-						lang: "svelte",
-					}}
-				/>
+									lang: "svelte",
+								},
+							]}
+						/>
+					</div>
+				</div>
 			</div>
-			<H3 id="card-source">Source</H3>
-			<MultipleCode code={cardSourceCode} />
 		</section>
 
 		<section>
@@ -736,22 +751,30 @@ export {
 				Veil input covers standard and file fields while preserving unified focus and
 				invalid states.
 			</Paragraph>
-			<H3 id="input-usage">Usage</H3>
-			<FrameCode
-				code={{
-					filename: "input-usage.svelte",
-					filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="input-source">Source</H3>
+					<CodeFiles files={inputSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="input-usage">Usage</H3>
+					<CodeFiles
+						files={[
+							{
+								filename: "input-usage.svelte",
+								filecode: `\<\script lang="ts"\>
 	import { Input } from "#lib/components/ui/veil/input/index.js";
 \<\/script\>
 
 <Input type="email" placeholder="you@example.com" />
 <Input aria-invalid="true" placeholder="Invalid state" />
 <Input type="file" />`,
-					lang: "svelte",
-				}}
-			/>
-			<H3 id="input-source">Source</H3>
-			<MultipleCode code={inputSourceCode} />
+								lang: "svelte",
+							},
+						]}
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -760,23 +783,31 @@ export {
 				Veil textarea shares input tokens, adds multiline sizing, and keeps focus/validation
 				states aligned with other form controls.
 			</Paragraph>
-			<H3 id="textarea-usage">Usage</H3>
-			<div>
-				<FrameCode
-					code={{
-						filename: "textarea-usage.svelte",
-						filecode: `\<\script lang="ts"\>
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="textarea-source">Source</H3>
+					<CodeFiles files={textareaSourceCode} />
+				</div>
+				<div class="space-y-2">
+					<H3 id="textarea-usage">Usage</H3>
+					<div>
+						<CodeFiles
+							files={[
+								{
+									filename: "textarea-usage.svelte",
+									filecode: `\<\script lang="ts"\>
 	import { Textarea } from "#lib/components/ui/veil/textarea/index.js";
 \<\/script\>
 
 <Textarea placeholder="Enter details..." />
 <Textarea aria-invalid="true" placeholder="Invalid state" />`,
-						lang: "svelte",
-					}}
-				/>
+									lang: "svelte",
+								},
+							]}
+						/>
+					</div>
+				</div>
 			</div>
-			<H3 id="textarea-source">Source</H3>
-			<MultipleCode code={textareaSourceCode} />
 		</section>
 
 		<section class="space-y-3">
