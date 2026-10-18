@@ -2,6 +2,7 @@
 	import { page } from "$app/state";
 	import * as Add from "#lib/components/ui/add/index.js";
 	import { AGENTS, type Agent } from "#lib/components/ui/add/index.js";
+	import { projectUrl } from "#lib/config/seo.js";
 	import { cn } from "#lib/utils.js";
 	import { getRegistryItemUrl } from "#lib/utils/registry-url.js";
 	import { PersistedState } from "runed";
@@ -33,7 +34,7 @@
 
 	let installUrl = $derived(
 		itemId
-			? getRegistryItemUrl(page.url.origin, page.url.pathname, itemId, newRegistryPath)
+			? getRegistryItemUrl(projectUrl, page.url.pathname, itemId, newRegistryPath)
 			: ""
 	);
 

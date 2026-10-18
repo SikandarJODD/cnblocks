@@ -155,6 +155,7 @@
 {#snippet AIAssistantIllustration()}
 	<Card
 		aria-hidden
+		inert
 		class="p-4"
 	>
 		<div class="ml-auto w-fit max-w-3/4">

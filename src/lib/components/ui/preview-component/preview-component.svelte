@@ -61,6 +61,7 @@
 						<Button
 							variant="secondary"
 							size="icon"
+							aria-label="Retry preview"
 							onclick={handleRetry}
 							class="absolute top-1.5 right-1.5 z-30"
 						>

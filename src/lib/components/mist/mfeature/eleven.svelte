@@ -58,7 +58,7 @@
 </section>
 
 {#snippet AIAssistantIllustration()}
-	<Card aria-hidden class="relative space-y-4 p-6">
+	<Card aria-hidden inert class="relative space-y-4 p-6">
 		<div class="w-fit">
 			<Sparkles class="size-3.5 fill-purple-300 stroke-purple-300" />
 			<p class="mt-2 line-clamp-2 text-sm">

@@ -3,6 +3,7 @@
 	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
 	import { PMCommand } from "#lib/components/ui/pm-command/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import { projectUrl } from "#lib/config/seo.js";
 	import type { Agent } from "package-manager-detector";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
@@ -11,8 +12,8 @@
 	const description =
 		"Install and configure Svelte Shadcn Blocks in a new or existing SvelteKit app.";
 
-	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
-	let socialImage = $derived(`${page.url.origin}/og.png`);
+	let canonical = $derived(`${projectUrl}${page.url.pathname}`);
+	let socialImage = $derived(`${projectUrl}/og.png`);
 	let agent = $state<Agent>("pnpm");
 </script>
 
@@ -58,7 +59,7 @@
 		isPartOf: {
 			"@type": "WebSite",
 			name: "Svelte Marketing Blocks",
-			url: page.url.origin,
+			url: projectUrl,
 		},
 	}}
 />

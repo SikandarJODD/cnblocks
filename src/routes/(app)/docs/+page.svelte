@@ -13,6 +13,7 @@
 	} from "#lib/components/markdown/index.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
 	import { FaviconLink } from "#lib/components/ui/favicon-link/index.ts";
+	import { projectUrl } from "#lib/config/seo.js";
 
 	const title = "Introduction | Svelte Marketing Blocks";
 	const description =
@@ -27,8 +28,8 @@
 		"Svelte UI blocks",
 	];
 
-	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
-	let socialImage = $derived(`${page.url.origin}/og.png`);
+	let canonical = $derived(`${projectUrl}${page.url.pathname}`);
+	let socialImage = $derived(`${projectUrl}/og.png`);
 </script>
 
 <MetaTags
@@ -73,7 +74,7 @@
 		isPartOf: {
 			"@type": "WebSite",
 			name: "Svelte Marketing Blocks",
-			url: page.url.origin,
+			url: projectUrl,
 		},
 	}}
 />

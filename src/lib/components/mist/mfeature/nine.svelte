@@ -166,6 +166,7 @@
 {#snippet AIAssistantIllustration()}
 	<Card
 		aria-hidden
+		inert
 		class="aspect-video p-4"
 	>
 		<div class="w-fit">

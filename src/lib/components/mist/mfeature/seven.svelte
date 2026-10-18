@@ -170,6 +170,7 @@
 {#snippet AIAssistantIllustration()}
 	<Card
 		aria-hidden
+		inert
 		class="mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover/assistant:translate-y-0"
 	>
 		<div class="w-fit">

@@ -80,7 +80,7 @@
 </Button>
 
 <Command.Dialog bind:open>
-	<Command.Input placeholder="Search components…" />
+	<Command.Input aria-label="Search components" placeholder="Search components…" />
 	<div class="mt-3 flex gap-1 border-b px-0 pb-3">
 		{#each libraryFilters as filter}
 			<Button

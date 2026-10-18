@@ -4,6 +4,7 @@
 	import { CodeFiles, FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
 	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import { projectUrl } from "#lib/config/seo.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
 	const pageMeta = docsV2PageMap.mistTheme;
@@ -11,8 +12,8 @@
 	const description =
 		"Apply Mist theme tokens and update button, card, input, label, and textarea primitives for clean Svelte interfaces.";
 
-	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
-	let socialImage = $derived(`${page.url.origin}/og.png`);
+	let canonical = $derived(`${projectUrl}${page.url.pathname}`);
+	let socialImage = $derived(`${projectUrl}/og.png`);
 	const folderStructure = `src/
 ├── lib/
 │   └── components/
@@ -506,7 +507,7 @@ export {
 		isPartOf: {
 			"@type": "WebSite",
 			name: "Svelte Marketing Blocks",
-			url: page.url.origin,
+			url: projectUrl,
 		},
 	}}
 />

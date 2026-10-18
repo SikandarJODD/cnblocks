@@ -96,7 +96,7 @@
 				</ToggleGroupItem>
 			</ToggleGroup>
 			<span class="block h-4 w-px bg-border"></span>
-			<Button size="icon" class="size-8" variant="ghost">
+			<Button size="icon" class="size-8" variant="ghost" aria-label="More options">
 				<Ellipsis class="size-3" />
 			</Button>
 		</div>

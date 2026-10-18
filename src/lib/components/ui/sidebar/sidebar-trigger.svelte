@@ -25,6 +25,7 @@
 	size="icon-sm"
 	class={cn(className)}
 	type="button"
+	aria-label="Toggle sidebar"
 	onclick={(e) => {
 		onclick?.(e);
 		sidebar.toggle();

@@ -22,6 +22,7 @@
 		<Button
 			size="icon"
 			variant="secondary"
+			aria-label="Scroll to top"
 			class="cursor-pointer rounded-full"
 			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>

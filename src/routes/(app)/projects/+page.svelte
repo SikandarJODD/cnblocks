@@ -3,6 +3,7 @@
 	import { LibraryCard, ProjectCard } from "#lib/components/base/project/index.js";
 	import { H1, H2, Paragraph } from "#lib/components/markdown/index.js";
 	import { FaviconLink } from "#lib/components/ui/favicon-link/index.js";
+	import { projectUrl } from "#lib/config/seo.js";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
 	type Project = {
@@ -109,8 +110,8 @@
 	const withUtmSource = (href: string) =>
 		`${href}${href.includes("?") ? "&" : "?"}utm_source=svelte-marketing-blocks`;
 
-	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
-	let socialImage = $derived(`${page.url.origin}/og.png`);
+	let canonical = $derived(`${projectUrl}${page.url.pathname}`);
+	let socialImage = $derived(`${projectUrl}/og.png`);
 	const items = [...projects, ...libraries];
 </script>
 
@@ -156,7 +157,7 @@
 		isPartOf: {
 			"@type": "WebSite",
 			name: "Svelte Marketing Blocks",
-			url: page.url.origin,
+			url: projectUrl,
 		},
 		mainEntity: {
 			"@type": "ItemList",

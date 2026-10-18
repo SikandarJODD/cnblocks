@@ -2,13 +2,13 @@
 
 ## Launch blockers
 
-- [ ] Replace `page.url.origin` with the production site URL for canonical, Open Graph, Twitter, and JSON-LD metadata.
+- [x] Replace `page.url.origin` with the production site URL for canonical, Open Graph, Twitter, and JSON-LD metadata.
 - [ ] Regenerate `sitemap.xml`: remove preview/dead URLs and include every public Kit, Mist, Veil, and docs route.
 - [ ] Make `/mist` useful or redirect it; complete `/templates` and restore metadata on `/docs/mcp`.
 - [ ] Fix Veil dark-mode popover colors.
-- [ ] Add accessible names to sidebar, scroll-to-top, retry, search, and block icon controls.
+- [x] Add accessible names to sidebar, scroll-to-top, retry, search, and block icon controls.
 - [ ] Remove or remap the unmodified global `d` keyboard shortcut.
-- [ ] Fix focusable controls inside `aria-hidden` Mist illustrations.
+- [x] Fix focusable controls inside `aria-hidden` Mist illustrations.
 - [ ] Decide whether forms are demos or functional; label demos clearly or add submit, loading, error, and success states.
 
 ## Registry reliability

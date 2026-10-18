@@ -7,7 +7,13 @@
 
 <Sidebar.Header class="px-0 pt-0 pb-1">
 	<div class="flex h-8 items-center justify-between gap-1">
-		<Button size="icon-sm" variant="ghost" href="/" class="rounded-md p-0">
+		<Button
+			size="icon-sm"
+			variant="ghost"
+			href="/"
+			class="rounded-md p-0"
+			aria-label="Go to homepage"
+		>
 			<Logo />
 		</Button>
 		<div class="flex items-center gap-0">
