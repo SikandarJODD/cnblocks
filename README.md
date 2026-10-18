@@ -1,30 +1,30 @@
-# Svelte Shadcn Blocks
+# Svelte Blocks for shadcn-svelte
 
 ![Svelte Shadcn Blocks](https://sv-blocks.vercel.app/og.png)
 
-Production-ready Svelte blocks based on shadcn-svelte and Tailwind CSS, inspired by Tailark. Perfect for marketing sites, product pages, documentation, and SaaS landing pages.
+200+ production-ready marketing blocks for building polished, accessible Svelte landing pages.
 
-## 3 Variants
+## 3 variants
 
-| Variant | Style                                 | Block Count | Visit                                                 |
-| ------- | ------------------------------------- | ----------- | ----------------------------------------------------- |
-| Normal  | Bold marketing visuals                | 50+         | [Explore](https://sv-blocks.vercel.app/integration)   |
-| Mist    | Minimal, documentation-friendly style | 50+         | [Explore](https://sv-blocks.vercel.app/mist/feature)  |
-| Veil    | Polished modern SaaS style            | 60 new      | [Explore](https://sv-blocks.vercel.app/veil/features) |
+| Variant | Design direction                                                           | Blocks | Browse                                            |
+| ------- | -------------------------------------------------------------------------- | -----: | ------------------------------------------------- |
+| Kit     | Versatile marketing sections with bold layouts and visuals                 |     81 | [Explore](https://sv-blocks.vercel.app/kit/hero)  |
+| Mist    | Clean, restrained sections for product, marketing, and documentation sites |     51 | [Explore](https://sv-blocks.vercel.app/mist/hero) |
+| Veil    | Refined SaaS sections with stronger contrast and polished details          |     60 | [Explore](https://sv-blocks.vercel.app/veil/hero) |
 
 ## Features
 
-- 200+ ready-to-use blocks across Normal, Mist, and Veil
-- Svelte 5 + SvelteKit-friendly structure
-- Tailwind CSS v4 and shadcn-svelte based
-- Responsive and theme-aware components
-- CLI install flow via shadcn-svelte and jsrepo
-- MIT licensed and open source
+- 200+ marketing and application blocks across three visual variants
+- Built for Svelte 5, shadcn-svelte, and Tailwind CSS v4
+- Responsive layouts with light and dark mode support
+- Live previews and copy-ready source code
+- Install individual blocks through the shadcn-svelte CLI
+- Free and open source under the MIT License
 
 ## Preview and Docs
 
-- Website: [Live Preview](https://sv-blocks.vercel.app)
-- [Documentation](https://sv-blocks.vercel.app/v2-docs)
+- [Live Preview](https://sv-blocks.vercel.app)
+- [Documentation](https://sv-blocks.vercel.app/docs)
 - [Installation Guide](https://sv-blocks.vercel.app/docs/installation)
 - [Mist Theme Setup](https://sv-blocks.vercel.app/docs/mist-theme)
 - [Veil Theme Setup](https://sv-blocks.vercel.app/docs/veil-theme)
