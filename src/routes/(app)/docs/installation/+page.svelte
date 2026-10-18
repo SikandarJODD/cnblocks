@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { H1, H2, Link, Paragraph, Steps, Step } from "#lib/components/markdown/index.js";
-	import { FrameCode, type CodeBlock } from "#lib/components/ui/code/index.ts";
+	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
+	import { PMCommand } from "#lib/components/ui/pm-command/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
+	import type { Agent } from "package-manager-detector";
 	import { JsonLd, MetaTags } from "svelte-meta-tags";
 
 	const pageMeta = docsV2PageMap.installation;
@@ -12,35 +13,7 @@
 
 	let canonical = $derived(`${page.url.origin}${page.url.pathname}`);
 	let socialImage = $derived(`${page.url.origin}/og.png`);
-
-	const commands = {
-		createProject: {
-			filename: "Terminal",
-			filecode: "pnpm dlx sv create my-app",
-			lang: "bash",
-			hideLines: true,
-		},
-		addTailwind: {
-			filename: "Terminal",
-			filecode: "pnpm dlx sv add tailwindcss",
-			lang: "bash",
-			hideLines: true,
-		},
-		initializeShadcn: {
-			filename: "Terminal",
-			filecode: "pnpm dlx shadcn-svelte@latest init",
-			lang: "bash",
-			hideLines: true,
-		},
-		installBlock: {
-			filename: "Terminal",
-			filecode: `pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/r/hero-one.json
-pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
-pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json`,
-			lang: "bash",
-			hideLines: true,
-		},
-	} satisfies Record<string, CodeBlock>;
+	let agent = $state<Agent>("pnpm");
 </script>
 
 <MetaTags
@@ -91,7 +64,9 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json`,
 />
 
 <div class="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
-	<article class="min-w-0 space-y-12">
+	<article
+		class="min-w-0 space-y-12 [&_h2]:font-gmono [&_h2]:font-normal [&_h3]:font-gmono [&_h3]:font-normal"
+	>
 		<header class="space-y-3">
 			<H1
 				id="installation"
@@ -104,27 +79,82 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json`,
 			</Paragraph>
 		</header>
 
-		<section class="space-y-4">
-			<H2 id="steps" class="font-gmono font-normal">Setup Steps</H2>
-			<Steps>
-				<Step title="Create or open a sveltekit project">
-					<FrameCode code={commands.createProject} />
-				</Step>
-				<Step title="Add Tailwind CSS">
-					<FrameCode code={commands.addTailwind} />
-				</Step>
-				<Step title="Initialize shadcn-svelte">
-					<FrameCode code={commands.initializeShadcn} />
-				</Step>
-				<Step title="Install block using shadcn-svelte CLI">
-					<FrameCode code={commands.installBlock} />
-				</Step>
-				<Step title="Or simply copy and paste components">
-					<Paragraph class="mt-0">
-						Copy a component from its preview and paste it into your app.
-					</Paragraph>
-				</Step>
-			</Steps>
+		<section>
+			<H2 id="create-project">1. Create a SvelteKit project</H2>
+			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
+				Create a new app, or continue with an existing SvelteKit project.
+			</Paragraph>
+			<PMCommand bind:agent command="execute" args={["sv", "create", "my-app"]} />
+		</section>
+
+		<section>
+			<H2 id="add-tailwind">2. Add Tailwind CSS</H2>
+			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
+				Configure Tailwind CSS using the official Svelte CLI add-on.
+			</Paragraph>
+			<PMCommand bind:agent command="execute" args={["sv", "add", "tailwindcss"]} />
+		</section>
+
+		<section>
+			<H2 id="initialize-shadcn">3. Initialize shadcn-svelte</H2>
+			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
+				Set up shadcn-svelte and choose the configuration that fits your project.
+			</Paragraph>
+			<PMCommand bind:agent command="execute" args={["shadcn-svelte@latest", "init"]} />
+		</section>
+
+		<section>
+			<H2 id="install-block">4. Install a block</H2>
+			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
+				Choose the registry that matches the block family you want to use.
+			</Paragraph>
+
+			<div class="space-y-6">
+				<div class="space-y-2">
+					<H3 id="kit-block">Kit</H3>
+					<PMCommand
+						bind:agent
+						command="execute"
+						args={[
+							"shadcn-svelte@latest",
+							"add",
+							"https://sv-blocks.vercel.app/r/hero-one.json",
+						]}
+					/>
+				</div>
+				<div class="space-y-2">
+					<H3 id="mist-block">Mist</H3>
+					<PMCommand
+						bind:agent
+						command="execute"
+						args={[
+							"shadcn-svelte@latest",
+							"add",
+							"https://sv-blocks.vercel.app/m/hero-one.json",
+						]}
+					/>
+				</div>
+				<div class="space-y-2">
+					<H3 id="veil-block">Veil</H3>
+					<PMCommand
+						bind:agent
+						command="execute"
+						args={[
+							"shadcn-svelte@latest",
+							"add",
+							"https://sv-blocks.vercel.app/v/hero-one.json",
+						]}
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<H2 id="copy-and-paste">Copy and paste instead</H2>
+			<Paragraph class="mt-1 max-w-prose text-muted-foreground">
+				Prefer not to use the CLI? Copy a component from its preview and paste it directly
+				into your app.
+			</Paragraph>
 		</section>
 
 		<section class="space-y-3">

@@ -103,25 +103,29 @@
 					faviconSrc="https://www.google.com/s2/favicons?domain=tailark.com&sz=128"
 				>
 					Tailark
-				</FaviconLink>. Built for Svelte by <FaviconLink
+				</FaviconLink>. Built by <FaviconLink
 					href="https://x.com/MeschacIrung"
 					target="_blank"
 					rel="noreferrer"
 					faviconSrc="https://www.google.com/s2/favicons?domain=irung.me&sz=128"
 				>
 					Méschac Irung
-				</FaviconLink>.
+				</FaviconLink>
 			</Paragraph>
-			<!-- <Paragraph class="max-w-prose leading-relaxed">
-				Built with <FaviconLink
-					href="https://www.shadcn-svelte.com"
+		</section>
+
+		<section class="space-y-3">
+			<H2 id="credits" class="font-gmono font-normal">Svelte Port</H2>
+			<Paragraph class="max-w-prose">
+				Ported to Svelte by <FaviconLink
+					href="https://bhide.dev?utm_source=svelte-marketing-blocks"
 					target="_blank"
 					rel="noreferrer"
+					class="rounded-sm bg-ink/10 px-1.5 text-ink/80 transition-all duration-200 hover:text-ink dark:bg-amber-600/20 dark:text-amber-600 dark:hover:bg-amber-600/15"
 				>
-					shadcn-svelte
+					Bhide Svelte
 				</FaviconLink>
-				and Tailwind CSS.
-			</Paragraph> -->
+			</Paragraph>
 		</section>
 
 		<section class="space-y-3" aria-labelledby="variants">
@@ -173,18 +177,20 @@
 			<H2 id="features" class="font-gmono font-normal">Features</H2>
 			<UnorderedList>
 				<ListItem>
-					<Strong>200+ marketing blocks.</Strong> Find ready-made sections for every part of your
-					marketing site.
+					<Strong>200+ marketing blocks.</Strong> Find ready-made sections for every part of
+					your marketing site.
 				</ListItem>
 				<ListItem>
 					<Strong>Sections, pages, and templates.</Strong> Start with a single block or a complete
 					layout.
 				</ListItem>
 				<ListItem>
-					<Strong>Install your way.</Strong> Use the shadcn CLI or copy and paste the source code.
+					<Strong>Install your way.</Strong> Use the shadcn CLI or copy and paste the source
+					code.
 				</ListItem>
 				<ListItem>
-					<Strong>Responsive by default.</Strong> Each block works across mobile, tablet, and desktop.
+					<Strong>Responsive by default.</Strong> Each block works across mobile, tablet, and
+					desktop.
 				</ListItem>
 				<ListItem>
 					<Strong>Free and open source.</Strong> Use and customize the blocks in your own projects.
