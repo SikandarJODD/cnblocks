@@ -150,7 +150,10 @@
 	);
 </script>
 
-<section id="{category}-{title}" class="group w-full max-w-full min-w-0 overflow-hidden pb-2">
+<section
+	id={itemId ?? `${category}-${title}`}
+	class="group w-full max-w-full min-w-0 scroll-mt-10 overflow-hidden pb-2"
+>
 	<div class="relative min-w-0 overflow-hidden rounded-2xl">
 		<div
 			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"

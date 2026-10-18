@@ -130,17 +130,8 @@
 	);
 </script>
 
-<section {id} class="group">
+<section {id} class="group scroll-mt-10">
 	<div class="relative">
-		<!-- <div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
-			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-		</div> -->
-
 		<div class="relative mx-auto max-w-7xl">
 			<div class="relative border-b px-5 py-5 sm:px-6 sm:py-4 lg:px-7">
 				<DecorIcon
@@ -547,12 +538,6 @@
 	</div>
 
 	<div class="relative">
-		<!-- <div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
-			<div class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"></div>
-			<div class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"></div>
-		</div> -->
-
-		<!-- lg:border-x -->
 		<div
 			class="relative mx-auto max-w-7xl border-b px-4 lg:px-0"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}

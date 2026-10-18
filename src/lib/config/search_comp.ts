@@ -1,4 +1,4 @@
-const kitSearchComponents: SearchComp[] = [
+const kitSearchComponents = [
 	{
 		name: "Hero",
 		subcom: [
@@ -166,17 +166,288 @@ const kitSearchComponents: SearchComp[] = [
 	},
 ];
 
-export const search_comp: SearchComp[] = kitSearchComponents.map((group) => ({
+const kitComponents: SearchComp[] = kitSearchComponents.map((group) => ({
 	...group,
-	subcom: group.subcom.map((item) => ({ ...item, href: `/kit${item.href}` })),
+	subcom: group.subcom.map((item) => ({
+		...item,
+		href: `/kit${item.href}`,
+		library: "kit" as const,
+	})),
 }));
 
-type SearchComp = {
+const numberWords = [
+	"One",
+	"Two",
+	"Three",
+	"Four",
+	"Five",
+	"Six",
+	"Seven",
+	"Eight",
+	"Nine",
+	"Ten",
+	"Eleven",
+] as const;
+
+function numberedItems(
+	name: string,
+	count: number,
+	href: string,
+	library: SearchLibrary,
+	slugPrefix?: string
+): SubComp[] {
+	return Array.from({ length: count }, (_, index) => {
+		const number = numberWords[index] ?? String(index + 1);
+		const slug = slugPrefix ? `${slugPrefix}-${number.toLowerCase()}` : number.toLowerCase();
+
+		return { name: `${name} ${number}`, href: `${href}#${slug}`, library };
+	});
+}
+
+const mistSearchComponents: SearchComp[] = [
+	{
+		name: "Hero",
+		subcom: numberedItems("Hero", 6, "/mist/hero", "mist", "hero"),
+	},
+	{
+		name: "Features",
+		subcom: numberedItems("Feature", 11, "/mist/feature", "mist", "feature"),
+	},
+	{
+		name: "Content",
+		subcom: numberedItems("Content", 4, "/mist/content", "mist", "content"),
+	},
+	{
+		name: "Integration",
+		subcom: [
+			{
+				name: "Simple Integration List",
+				href: "/mist/integrations#integration-one",
+				library: "mist",
+			},
+			{
+				name: "Centered Integration List",
+				href: "/mist/integrations#integration-two",
+				library: "mist",
+			},
+			{
+				name: "Integration Cards Grid",
+				href: "/mist/integrations#integration-three",
+				library: "mist",
+			},
+		],
+	},
+	{
+		name: "Stats",
+		subcom: numberedItems("Stats", 4, "/mist/stats", "mist", "stats"),
+	},
+	{
+		name: "CTA",
+		subcom: numberedItems("CTA", 3, "/mist/cta", "mist", "cta"),
+	},
+	{
+		name: "Pricing",
+		subcom: numberedItems("Pricing", 2, "/mist/pricing", "mist", "pricing"),
+	},
+	{
+		name: "Team",
+		subcom: numberedItems("Team", 2, "/mist/team", "mist", "team"),
+	},
+	{
+		name: "Comparator",
+		subcom: [
+			{
+				name: "Basic Comparison Table",
+				href: "/mist/comparator#comparator-one",
+				library: "mist",
+			},
+		],
+	},
+	{
+		name: "Logo Cloud",
+		subcom: numberedItems("Logo Cloud", 2, "/mist/logocloud", "mist", "logocloud"),
+	},
+	{
+		name: "Footer",
+		subcom: numberedItems("Footer", 4, "/mist/footer", "mist", "footer"),
+	},
+	{
+		name: "Contact",
+		subcom: [
+			{
+				name: "Contact Form One",
+				href: "/mist/contact#contact-one",
+				library: "mist",
+			},
+		],
+	},
+	{
+		name: "Signup",
+		subcom: numberedItems("Signup", 1, "/mist/signup", "mist", "signup"),
+	},
+	{
+		name: "Login",
+		subcom: numberedItems("Login", 1, "/mist/login", "mist", "login"),
+	},
+	{
+		name: "Forgot Password",
+		subcom: numberedItems(
+			"Forgot Password",
+			1,
+			"/mist/forgot-password",
+			"mist",
+			"forgot-password"
+		),
+	},
+	{
+		name: "Testimonials",
+		subcom: [
+			{
+				name: "Simple Testimonial",
+				href: "/mist/testimonials#testimonial-one",
+				library: "mist",
+			},
+			{
+				name: "Grid Testimonials",
+				href: "/mist/testimonials#testimonial-two",
+				library: "mist",
+			},
+			{
+				name: "Star Rating Testimonials",
+				href: "/mist/testimonials#testimonial-three",
+				library: "mist",
+			},
+			{
+				name: "Avatar Testimonial",
+				href: "/mist/testimonials#testimonial-four",
+				library: "mist",
+			},
+			{
+				name: "Centered Quote Testimonial",
+				href: "/mist/testimonials#testimonial-five",
+				library: "mist",
+			},
+		],
+	},
+];
+
+const veilSearchComponents: SearchComp[] = [
+	{
+		name: "Hero",
+		subcom: numberedItems("Hero", 5, "/veil/hero", "veil", "hero"),
+	},
+	{
+		name: "Header",
+		subcom: numberedItems("Header", 4, "/veil/header", "veil", "header"),
+	},
+	{
+		name: "Features",
+		subcom: numberedItems("Features", 3, "/veil/features", "veil", "features"),
+	},
+	{
+		name: "Content",
+		subcom: numberedItems("Content", 3, "/veil/content", "veil", "content"),
+	},
+	{
+		name: "Integration",
+		subcom: numberedItems("Integration", 2, "/veil/integration", "veil", "integration"),
+	},
+	{
+		name: "CTA",
+		subcom: numberedItems(
+			"Call To Action",
+			4,
+			"/veil/call-to-action",
+			"veil",
+			"call-to-action"
+		),
+	},
+	{
+		name: "Stats",
+		subcom: numberedItems("Stats", 4, "/veil/stats", "veil", "stats"),
+	},
+	{
+		name: "Pricing",
+		subcom: numberedItems("Pricing", 3, "/veil/pricing", "veil", "pricing"),
+	},
+	{
+		name: "Testimonials",
+		subcom: numberedItems("Testimonial", 4, "/veil/testimonial", "veil", "testimonial"),
+	},
+	{
+		name: "Team",
+		subcom: numberedItems("Team", 2, "/veil/team", "veil", "team"),
+	},
+	{
+		name: "Logo Cloud",
+		subcom: numberedItems("Logo Cloud", 2, "/veil/logo-cloud", "veil", "logo-cloud"),
+	},
+	{
+		name: "FAQ",
+		subcom: numberedItems("FAQs", 4, "/veil/faqs", "veil", "faqs"),
+	},
+	{
+		name: "Contact",
+		subcom: numberedItems("Contact", 2, "/veil/contact", "veil", "contact"),
+	},
+	{
+		name: "Signup",
+		subcom: numberedItems("Signup", 3, "/veil/signup", "veil", "signup"),
+	},
+	{
+		name: "Login",
+		subcom: numberedItems("Login", 3, "/veil/login", "veil", "login"),
+	},
+	{
+		name: "Forgot Password",
+		subcom: numberedItems(
+			"Forgot Password",
+			3,
+			"/veil/forgot-password",
+			"veil",
+			"forgot-password"
+		),
+	},
+	{
+		name: "Comparator",
+		subcom: numberedItems("Comparator", 3, "/veil/comparator", "veil", "comparator"),
+	},
+	{
+		name: "Footer",
+		subcom: numberedItems("Footer", 6, "/veil/footer", "veil", "footer"),
+	},
+];
+
+function mergeSearchComponents(groups: SearchComp[]): SearchComp[] {
+	const merged = new Map<string, SearchComp>();
+
+	for (const group of groups) {
+		const existing = merged.get(group.name);
+		if (existing) {
+			existing.subcom.push(...group.subcom);
+		} else {
+			merged.set(group.name, { ...group, subcom: [...group.subcom] });
+		}
+	}
+
+	return [...merged.values()];
+}
+
+export const search_comp = mergeSearchComponents([
+	...kitComponents,
+	...mistSearchComponents,
+	...veilSearchComponents,
+]);
+
+export type SearchLibrary = "kit" | "mist" | "veil";
+
+export type SearchComp = {
 	name: string;
 	subcom: SubComp[];
 };
 
-type SubComp = {
+export type SubComp = {
 	name: string;
 	href: string;
+	library: SearchLibrary;
 };

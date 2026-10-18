@@ -191,7 +191,7 @@
 	}
 	html {
 		@apply font-sans text-[15px];
-		scroll-behavior: smooth;
+		scroll-behavior: auto;
 	}
 	@media (pointer: fine) {
 		html {

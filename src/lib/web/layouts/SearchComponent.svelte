@@ -8,19 +8,19 @@
 	import { onMount } from "svelte";
 	let open = $state(false);
 
-	onMount(() => {
-		function handleKeydown(e: KeyboardEvent) {
-			if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-				e.preventDefault();
-				open = true;
-			}
-		}
-		document.addEventListener("keydown", handleKeydown);
+	// onMount(() => {
+	// 	function handleKeydown(e: KeyboardEvent) {
+	// 		if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+	// 			e.preventDefault();
+	// 			open = true;
+	// 		}
+	// 	}
+	// 	document.addEventListener("keydown", handleKeydown);
 
-		return () => {
-			document.removeEventListener("keydown", handleKeydown);
-		};
-	});
+	// 	return () => {
+	// 		document.removeEventListener("keydown", handleKeydown);
+	// 	};
+	// });
 
 	function runCommand(cmd: () => void) {
 		open = false;
@@ -46,7 +46,7 @@
 				{#each navItem.subcom as item}
 					<Command.Item
 						class="capitalize"
-						value={item.name}
+						value={`${item.name} ${item.library}`}
 						onSelect={() =>
 							runCommand(() => {
 								item.href && goto(item.href);
