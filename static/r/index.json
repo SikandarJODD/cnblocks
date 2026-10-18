@@ -461,9 +461,9 @@
 		"relativeUrl": "forgot-password-two.json"
 	},
 	{
-		"name": "hero-header-eight",
+		"name": "header-eight",
 		"type": "registry:block",
-		"description": "Navigation header with dropdown menus",
+		"description": "Navigation header for Hero Eight",
 		"dependencies": [],
 		"devDependencies": [
 			"@lucide/svelte"
@@ -471,12 +471,12 @@
 		"registryDependencies": [
 			"button"
 		],
-		"relativeUrl": "hero-header-eight.json"
+		"relativeUrl": "header-eight.json"
 	},
 	{
-		"name": "hero-header-nine",
+		"name": "header-nine",
 		"type": "registry:block",
-		"description": "Header with mega menu navigation",
+		"description": "Navigation header for Hero Nine",
 		"dependencies": [],
 		"devDependencies": [
 			"@lucide/svelte"
@@ -484,12 +484,12 @@
 		"registryDependencies": [
 			"button"
 		],
-		"relativeUrl": "hero-header-nine.json"
+		"relativeUrl": "header-nine.json"
 	},
 	{
-		"name": "hero-header-seven",
+		"name": "header-seven",
 		"type": "registry:block",
-		"description": "Transparent header with centered logo",
+		"description": "Navigation header for Hero Seven",
 		"dependencies": [],
 		"devDependencies": [
 			"@lucide/svelte"
@@ -497,10 +497,10 @@
 		"registryDependencies": [
 			"button"
 		],
-		"relativeUrl": "hero-header-seven.json"
+		"relativeUrl": "header-seven.json"
 	},
 	{
-		"name": "hero-header",
+		"name": "header",
 		"type": "registry:block",
 		"description": "Standard navigation header with logo and links",
 		"dependencies": [],
@@ -510,7 +510,72 @@
 		"registryDependencies": [
 			"button"
 		],
-		"relativeUrl": "hero-header.json"
+		"relativeUrl": "header.json"
+	},
+	{
+		"name": "header-two",
+		"type": "registry:block",
+		"description": "Navigation header for Hero Two",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "header-two.json"
+	},
+	{
+		"name": "header-three",
+		"type": "registry:block",
+		"description": "Navigation header for Hero Three",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "header-three.json"
+	},
+	{
+		"name": "header-four",
+		"type": "registry:block",
+		"description": "Navigation header for Hero Four",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "header-four.json"
+	},
+	{
+		"name": "header-five",
+		"type": "registry:block",
+		"description": "Navigation header for Hero Five",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "header-five.json"
+	},
+	{
+		"name": "header-six",
+		"type": "registry:block",
+		"description": "Navigation header for Hero Six",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "header-six.json"
 	},
 	{
 		"name": "hero-eight",
@@ -522,6 +587,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header-eight",
 			"local:svgs"
 		],
 		"relativeUrl": "hero-eight.json"
@@ -536,6 +602,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header-five",
 			"local:marquee",
 			"local:progressive-blur",
 			"local:svgs"
@@ -552,6 +619,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header-four",
 			"local:marquee",
 			"local:progressive-blur",
 			"local:svgs"
@@ -568,6 +636,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header-nine",
 			"local:svgs"
 		],
 		"relativeUrl": "hero-nine.json"
@@ -582,6 +651,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header",
 			"local:svgs"
 		],
 		"relativeUrl": "hero-one.json"
@@ -596,7 +666,8 @@
 			"swiper"
 		],
 		"registryDependencies": [
-			"button"
+			"button",
+			"local:header-seven"
 		],
 		"relativeUrl": "hero-seven.json"
 	},
@@ -609,7 +680,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"button",
+			"local:header-six"
 		],
 		"relativeUrl": "hero-six.json"
 	},
@@ -623,6 +695,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header-three",
 			"local:marquee",
 			"local:progressive-blur",
 			"local:svgs"
@@ -639,6 +712,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:header-two",
 			"local:svgs"
 		],
 		"relativeUrl": "hero-two.json"
