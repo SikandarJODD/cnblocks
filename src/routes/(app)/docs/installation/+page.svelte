@@ -84,7 +84,12 @@
 			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
 				Create a new app, or continue with an existing SvelteKit project.
 			</Paragraph>
-			<PMCommand bind:agent command="execute" args={["sv", "create", "my-app"]} />
+			<PMCommand
+				bind:agent
+				command="execute"
+				variant="secondary"
+				args={["sv", "create", "my-app"]}
+			/>
 		</section>
 
 		<section>
@@ -92,7 +97,12 @@
 			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
 				Configure Tailwind CSS using the official Svelte CLI add-on.
 			</Paragraph>
-			<PMCommand bind:agent command="execute" args={["sv", "add", "tailwindcss"]} />
+			<PMCommand
+				bind:agent
+				command="execute"
+				variant="secondary"
+				args={["sv", "add", "tailwindcss"]}
+			/>
 		</section>
 
 		<section>
@@ -100,7 +110,12 @@
 			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
 				Set up shadcn-svelte and choose the configuration that fits your project.
 			</Paragraph>
-			<PMCommand bind:agent command="execute" args={["shadcn-svelte@latest", "init"]} />
+			<PMCommand
+				bind:agent
+				command="execute"
+				variant="secondary"
+				args={["shadcn-svelte@latest", "init"]}
+			/>
 		</section>
 
 		<section>
@@ -115,6 +130,7 @@
 					<PMCommand
 						bind:agent
 						command="execute"
+						variant="secondary"
 						args={[
 							"shadcn-svelte@latest",
 							"add",
@@ -127,6 +143,7 @@
 					<PMCommand
 						bind:agent
 						command="execute"
+						variant="secondary"
 						args={[
 							"shadcn-svelte@latest",
 							"add",
@@ -139,6 +156,7 @@
 					<PMCommand
 						bind:agent
 						command="execute"
+						variant="secondary"
 						args={[
 							"shadcn-svelte@latest",
 							"add",

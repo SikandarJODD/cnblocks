@@ -88,8 +88,8 @@
 				Introduction
 			</H1>
 			<Paragraph class="max-w-prose text-lg leading-relaxed text-pretty">
-				Svelte Marketing Blocks provides accessible, responsive, and production-ready
-				building blocks for creating polished Svelte websites.
+				Svelte Marketing Blocks is a collection of accessible, responsive blocks designed
+				for high-quality landing pages and product experiences.
 			</Paragraph>
 		</header>
 
