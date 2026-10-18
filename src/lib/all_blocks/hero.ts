@@ -276,7 +276,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-one.svelte", code: HeroOneCode, lang: "svelte" },
-				{ path: "header/header.svelte", code: HeaderCode, lang: "svelte" },
+				{ path: "header.svelte", code: HeaderCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -303,7 +303,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-two.svelte", code: HeroTwoCode, lang: "svelte" },
-				{ path: "header/header-two.svelte", code: HeaderTwoCode, lang: "svelte" },
+				{ path: "header-two.svelte", code: HeaderTwoCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
@@ -328,7 +328,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-three.svelte", code: HeroThreeCode, lang: "svelte" },
-				{ path: "header/header-three.svelte", code: HeaderThreeCode, lang: "svelte" },
+				{ path: "header-three.svelte", code: HeaderThreeCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -355,7 +355,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-four.svelte", code: HeroFourCode, lang: "svelte" },
-				{ path: "header/header-four.svelte", code: HeaderFourCode, lang: "svelte" },
+				{ path: "header-four.svelte", code: HeaderFourCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -382,7 +382,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-five.svelte", code: HeroFiveCode, lang: "svelte" },
-				{ path: "header/header-five.svelte", code: HeaderFiveCode, lang: "svelte" },
+				{ path: "header-five.svelte", code: HeaderFiveCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -409,7 +409,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-six.svelte", code: HeroSixCode, lang: "svelte" },
-				{ path: "header/header-six.svelte", code: HeaderSixCode, lang: "svelte" },
+				{ path: "header-six.svelte", code: HeaderSixCode, lang: "svelte" },
 				{ path: "folder-structure.md", code: HeroSixFolderStructure, lang: "markdown" },
 			],
 			{ defaultOpen: false }
@@ -426,7 +426,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-seven.svelte", code: HeroSevenCode, lang: "svelte" },
-				{ path: "header/header-seven.svelte", code: HeaderSevenCode, lang: "svelte" },
+				{ path: "header-seven.svelte", code: HeaderSevenCode, lang: "svelte" },
 				{ path: "folder-structure.md", code: HeroSevenFolderStructure, lang: "markdown" },
 			],
 			{ defaultOpen: false }
@@ -443,7 +443,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-eight.svelte", code: HeroEightCode, lang: "svelte" },
-				{ path: "header/header-eight.svelte", code: HeaderEightCode, lang: "svelte" },
+				{ path: "header-eight.svelte", code: HeaderEightCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -470,7 +470,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-nine.svelte", code: HeroNineCode, lang: "svelte" },
-				{ path: "header/header-nine.svelte", code: HeaderNineCode, lang: "svelte" },
+				{ path: "header-nine.svelte", code: HeaderNineCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
