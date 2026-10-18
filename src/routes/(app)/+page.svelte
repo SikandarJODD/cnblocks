@@ -1,4 +1,5 @@
 <script>
+	import LandingHero from "#lib/components/base/landing/hero.svelte";
 	import FeatureSection from "#lib/web/layouts/FeatureSection.svelte";
 	import FeatureSectionTwo from "#lib/web/layouts/FeatureSectionTwo.svelte";
 	import SiteHero from "#lib/web/layouts/SiteHero.svelte";
@@ -61,6 +62,7 @@
     </div>
   </div>
 </section> -->
-<SiteHero />
-<FeatureSection />
+<!-- <SiteHero /> -->
+<!-- <FeatureSection /> -->
 <!-- <FeatureSectionTwo /> -->
+<LandingHero />

@@ -4,11 +4,11 @@
 	import SidebarSearch from "./sidebar-search.svelte";
 </script>
 
-<Sidebar.Header class="p-2">
+<Sidebar.Header class="px-0 pt-0 pb-1">
 	<div class="flex h-8 items-center gap-1">
 		<a
 			href="/"
-			class="ring-sidebar-ring mr-auto flex size-7 items-center justify-center rounded-md outline-none focus-visible:ring-2 [&_svg]:size-4"
+			class="mr-auto flex size-7 items-center justify-center rounded-md ring-sidebar-ring outline-none focus-visible:ring-2 [&_svg]:size-4"
 			aria-label="cnblocks home"
 		>
 			<Logo />
