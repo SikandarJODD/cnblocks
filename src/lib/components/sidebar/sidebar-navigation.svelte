@@ -30,13 +30,13 @@
 					{/snippet}
 				</Sidebar.MenuButton>
 
-				<Sidebar.MenuSub class="mx-0 mt-0.5 gap-0 border-l-0 pl-2 pr-0 py-0">
+				<Sidebar.MenuSub class="mx-0 mt-0.5 gap-0 border-l-0 py-0 pr-0 pl-2">
 					{#each blockLibraries as library}
 						<Sidebar.MenuSubItem>
 							<Sidebar.MenuSubButton
 								href={library.href}
 								isActive={activeLibrary?.key === library.key}
-								class="h-6 px-2 text-xs! font-mono! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 dark:hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
+								class="h-6 pr-1 pl-2 font-mono! text-xs! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
 							>
 								<span>{library.title}</span>
 								<Kbd.Root class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums">
@@ -51,13 +51,22 @@
 			{#each primaryNavigation as item}
 				<Sidebar.MenuItem>
 					<Sidebar.MenuButton
-						class="h-7 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
-						isActive={isCurrentPath(pathname, item.href)}
+						class="h-7 pr-1 pl-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+						isActive={!item.coming_soon && isCurrentPath(pathname, item.href)}
 					>
 						{#snippet child({ props })}
-							<a href={item.href} {...props}>
-								<span>{item.title}</span>
-							</a>
+							{#if item.coming_soon}
+								<div {...props}>
+									<span>{item.title}</span>
+									<span class="ms-auto text-[10px] text-muted-foreground/60"
+										>Coming soon..</span
+									>
+								</div>
+							{:else}
+								<a href={item.href} {...props}>
+									<span>{item.title}</span>
+								</a>
+							{/if}
 						{/snippet}
 					</Sidebar.MenuButton>
 				</Sidebar.MenuItem>
@@ -68,50 +77,55 @@
 
 {#if activeLibrary}
 	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-4">
-		<Sidebar.GroupLabel class="mb-1 h-6 px-1 text-xs font-mono uppercase text-ink/70 dark:text-muted-foreground/80">
+		<Sidebar.GroupLabel
+			class="mb-1 h-6 px-1 font-mono text-xs text-ink/70 uppercase dark:text-muted-foreground/80"
+		>
 			Categories
 		</Sidebar.GroupLabel>
 		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
-			<div class="scroll-fade-effect-y no-scrollbar h-full overflow-y-auto pb-6">
+			<div class="no-scrollbar h-full overflow-y-auto scroll-fade-effect-y pb-6">
 				<Sidebar.Menu class="gap-1">
-				{#each activeLibrary.categories as category}
-					<Sidebar.MenuItem>
-						<Sidebar.MenuButton
-							class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
-							isActive={pathname === category.href}
-						>
-							{#snippet child({ props })}
-								<a href={category.href} {...props}>
-									<span>{category.title}</span>
-								</a>
-							{/snippet}
-						</Sidebar.MenuButton>
-					</Sidebar.MenuItem>
-				{/each}
+					{#each activeLibrary.categories as category}
+						<Sidebar.MenuItem>
+							<Sidebar.MenuButton
+								class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+								isActive={pathname === category.href}
+							>
+								{#snippet child({ props })}
+									<a href={category.href} {...props}>
+										<span>{category.title}</span>
+									</a>
+								{/snippet}
+							</Sidebar.MenuButton>
+						</Sidebar.MenuItem>
+					{/each}
 				</Sidebar.Menu>
 			</div>
 		</Sidebar.GroupContent>
 	</Sidebar.Group>
 {:else if docsActive}
 	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-2">
-		<Sidebar.GroupLabel class="mb-1 h-6 px-1 text-xs font-mono uppercase text-ink/70 dark:text-muted-foreground/80 ">Docs</Sidebar.GroupLabel>
+		<Sidebar.GroupLabel
+			class="mb-1 h-6 px-1 font-mono text-xs text-ink/70 uppercase dark:text-muted-foreground/80 "
+			>Docs</Sidebar.GroupLabel
+		>
 		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
-			<div class="scroll-fade-effect-y no-scrollbar h-full overflow-y-auto pb-6">
+			<div class="no-scrollbar h-full overflow-y-auto scroll-fade-effect-y pb-6">
 				<Sidebar.Menu class="gap-1">
-				{#each docsNavigation as item}
-					<Sidebar.MenuItem>
-						<Sidebar.MenuButton
-							class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
-							isActive={pathname === item.href}
-						>
-							{#snippet child({ props })}
-								<a href={item.href} {...props}>
-									<span>{item.title}</span>
-								</a>
-							{/snippet}
-						</Sidebar.MenuButton>
-					</Sidebar.MenuItem>
-				{/each}
+					{#each docsNavigation as item}
+						<Sidebar.MenuItem>
+							<Sidebar.MenuButton
+								class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+								isActive={pathname === item.href}
+							>
+								{#snippet child({ props })}
+									<a href={item.href} {...props}>
+										<span>{item.title}</span>
+									</a>
+								{/snippet}
+							</Sidebar.MenuButton>
+						</Sidebar.MenuItem>
+					{/each}
 				</Sidebar.Menu>
 			</div>
 		</Sidebar.GroupContent>

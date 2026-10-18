@@ -18,7 +18,7 @@
 	});
 	let isHomePath = $derived.by(() => {
 		let path = page.url.pathname;
-		return path === "/";
+		return path === "/" || path.includes("projects");
 	});
 </script>
 

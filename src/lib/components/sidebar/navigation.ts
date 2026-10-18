@@ -7,6 +7,7 @@ import {
 export type NavigationItem = {
 	title: string;
 	href: string;
+	coming_soon?: boolean;
 };
 
 export type CategoryItem = NavigationItem & {
@@ -71,8 +72,8 @@ export const blockLibraries: BlockLibrary[] = [
 ];
 
 export const primaryNavigation: NavigationItem[] = [
-	{ title: "Pages", href: "/" },
-	{ title: "Templates", href: "/templates" },
+	{ title: "Pages", href: "/", coming_soon: true },
+	{ title: "Templates", href: "/templates", coming_soon: true },
 	{ title: "Docs", href: "/docs" },
 	{ title: "More Projects", href: "/projects" },
 ];
