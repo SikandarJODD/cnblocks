@@ -20,7 +20,7 @@
 <Button
 	variant="ghost"
 	size="icon-sm"
-	class={cn("size-7 text-muted-foreground", className)}
+	class={cn("size-8 text-muted-foreground", className)}
 	aria-label="Search components"
 	onclick={() => (open = true)}
 >

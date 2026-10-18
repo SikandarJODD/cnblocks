@@ -1,12 +1,12 @@
-<section class="border-t px-6 py-16 font-docs md:px-10">
+<section class="m-1 rounded-2xl border px-6 py-16 font-docs md:px-10">
 	<div class="mx-auto max-w-5xl">
 		<div class="mx-auto max-w-2xl text-center">
 			<h2 class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-				See every block before you ship
+				Ship polished pages without starting from scratch
 			</h2>
 			<p class="mt-3 text-lg text-muted-foreground">
-				Browse complete previews, inspect the source, and choose the right block for your
-				project.
+				Choose from three design styles, customize the source, and install only the blocks
+				you need.
 			</p>
 		</div>
 
