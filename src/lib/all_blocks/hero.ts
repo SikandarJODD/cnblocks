@@ -19,6 +19,15 @@ import HeroSixCode from "#lib/components/blocks/hero/hero-six.svelte?raw";
 import HeroSevenCode from "#lib/components/blocks/hero/hero-seven.svelte?raw";
 import HeroEightCode from "#lib/components/blocks/hero/hero-eight.svelte?raw";
 import HeroNineCode from "#lib/components/blocks/hero/hero-nine.svelte?raw";
+import HeaderCode from "#lib/components/blocks/header/header.svelte?raw";
+import HeaderTwoCode from "#lib/components/blocks/header/header-two.svelte?raw";
+import HeaderThreeCode from "#lib/components/blocks/header/header-three.svelte?raw";
+import HeaderFourCode from "#lib/components/blocks/header/header-four.svelte?raw";
+import HeaderFiveCode from "#lib/components/blocks/header/header-five.svelte?raw";
+import HeaderSixCode from "#lib/components/blocks/header/header-six.svelte?raw";
+import HeaderSevenCode from "#lib/components/blocks/header/header-seven.svelte?raw";
+import HeaderEightCode from "#lib/components/blocks/header/header-eight.svelte?raw";
+import HeaderNineCode from "#lib/components/blocks/header/header-nine.svelte?raw";
 import BeaconCode from "#lib/svgs/beacon.svelte?raw";
 import BoltCode from "#lib/svgs/bolt.svelte?raw";
 import CiscoCode from "#lib/svgs/cisco.svelte?raw";
@@ -37,6 +46,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header.svelte
     │   │   └── hero/
     │   │       └── hero-one.svelte
     │   └── ui/
@@ -62,6 +73,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header-two.svelte
     │   │   └── hero/
     │   │       └── hero-two.svelte
     │   └── ui/
@@ -85,6 +98,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header-three.svelte
     │   │   └── hero/
     │   │       └── hero-three.svelte
     │   ├── magic/
@@ -113,6 +128,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header-four.svelte
     │   │   └── hero/
     │   │       └── hero-four.svelte
     │   ├── magic/
@@ -141,6 +158,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header-five.svelte
     │   │   └── hero/
     │   │       └── hero-five.svelte
     │   ├── magic/
@@ -169,6 +188,8 @@ Here is the original folder structure:
     src/lib/
     └── components/
         ├── blocks/
+        │   ├── header/
+        │   │   └── header-six.svelte
         │   └── hero/
         │       └── hero-six.svelte
         └── ui/
@@ -182,6 +203,8 @@ Here is the original folder structure:
     src/lib/
     └── components/
         ├── blocks/
+        │   ├── header/
+        │   │   └── header-seven.svelte
         │   └── hero/
         │       └── hero-seven.svelte
         └── ui/
@@ -195,6 +218,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header-eight.svelte
     │   │   └── hero/
     │   │       └── hero-eight.svelte
     │   └── ui/
@@ -220,6 +245,8 @@ Here is the original folder structure:
     src/lib/
     ├── components/
     │   ├── blocks/
+    │   │   ├── header/
+    │   │   │   └── header-nine.svelte
     │   │   └── hero/
     │   │       └── hero-nine.svelte
     │   └── ui/
@@ -249,6 +276,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-one.svelte", code: HeroOneCode, lang: "svelte" },
+				{ path: "header/header.svelte", code: HeaderCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -275,6 +303,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-two.svelte", code: HeroTwoCode, lang: "svelte" },
+				{ path: "header/header-two.svelte", code: HeaderTwoCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/claude.svelte", code: ClaudeCode, lang: "svelte" },
@@ -299,6 +328,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-three.svelte", code: HeroThreeCode, lang: "svelte" },
+				{ path: "header/header-three.svelte", code: HeaderThreeCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -325,6 +355,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-four.svelte", code: HeroFourCode, lang: "svelte" },
+				{ path: "header/header-four.svelte", code: HeaderFourCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -351,6 +382,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-five.svelte", code: HeroFiveCode, lang: "svelte" },
+				{ path: "header/header-five.svelte", code: HeaderFiveCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -377,6 +409,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-six.svelte", code: HeroSixCode, lang: "svelte" },
+				{ path: "header/header-six.svelte", code: HeaderSixCode, lang: "svelte" },
 				{ path: "folder-structure.md", code: HeroSixFolderStructure, lang: "markdown" },
 			],
 			{ defaultOpen: false }
@@ -393,6 +426,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-seven.svelte", code: HeroSevenCode, lang: "svelte" },
+				{ path: "header/header-seven.svelte", code: HeaderSevenCode, lang: "svelte" },
 				{ path: "folder-structure.md", code: HeroSevenFolderStructure, lang: "markdown" },
 			],
 			{ defaultOpen: false }
@@ -409,6 +443,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-eight.svelte", code: HeroEightCode, lang: "svelte" },
+				{ path: "header/header-eight.svelte", code: HeaderEightCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },
@@ -435,6 +470,7 @@ export const hero: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "hero-nine.svelte", code: HeroNineCode, lang: "svelte" },
+				{ path: "header/header-nine.svelte", code: HeaderNineCode, lang: "svelte" },
 				{ path: "svgs/beacon.svelte", code: BeaconCode, lang: "svelte" },
 				{ path: "svgs/bolt.svelte", code: BoltCode, lang: "svelte" },
 				{ path: "svgs/cisco.svelte", code: CiscoCode, lang: "svelte" },

@@ -609,52 +609,52 @@
 			]
 		},
 		{
-			"name": "hero-header-eight",
+			"name": "header-eight",
 			"type": "registry:block",
-			"description": "Navigation header with dropdown menus",
+			"description": "Navigation header for Hero Eight",
 			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
-					"path": "src/lib/components/blocks/header/hero-header-eight.svelte",
+					"path": "src/lib/components/blocks/header/header-eight.svelte",
 					"type": "registry:component",
-					"target": "blocks/header/hero-header-eight.svelte"
+					"target": "blocks/header/header-eight.svelte"
 				}
 			]
 		},
 		{
-			"name": "hero-header-nine",
+			"name": "header-nine",
 			"type": "registry:block",
-			"description": "Header with mega menu navigation",
+			"description": "Navigation header for Hero Nine",
 			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
-					"path": "src/lib/components/blocks/header/hero-header-nine.svelte",
+					"path": "src/lib/components/blocks/header/header-nine.svelte",
 					"type": "registry:component",
-					"target": "blocks/header/hero-header-nine.svelte"
+					"target": "blocks/header/header-nine.svelte"
 				}
 			]
 		},
 		{
-			"name": "hero-header-seven",
+			"name": "header-seven",
 			"type": "registry:block",
-			"description": "Transparent header with centered logo",
+			"description": "Navigation header for Hero Seven",
 			"registryDependencies": ["button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
-					"path": "src/lib/components/blocks/header/hero-header-seven.svelte",
+					"path": "src/lib/components/blocks/header/header-seven.svelte",
 					"type": "registry:component",
-					"target": "blocks/header/hero-header-seven.svelte"
+					"target": "blocks/header/header-seven.svelte"
 				}
 			]
 		},
 		{
-			"name": "hero-header",
+			"name": "header",
 			"type": "registry:block",
 			"description": "Standard navigation header with logo and links",
 			"registryDependencies": ["button"],
@@ -662,9 +662,84 @@
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
 				{
-					"path": "src/lib/components/blocks/header/hero-header.svelte",
+					"path": "src/lib/components/blocks/header/header.svelte",
 					"type": "registry:component",
-					"target": "blocks/header/hero-header.svelte"
+					"target": "blocks/header/header.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-two",
+			"type": "registry:block",
+			"description": "Navigation header for Hero Two",
+			"registryDependencies": ["button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/blocks/header/header-two.svelte",
+					"type": "registry:component",
+					"target": "blocks/header/header-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-three",
+			"type": "registry:block",
+			"description": "Navigation header for Hero Three",
+			"registryDependencies": ["button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/blocks/header/header-three.svelte",
+					"type": "registry:component",
+					"target": "blocks/header/header-three.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-four",
+			"type": "registry:block",
+			"description": "Navigation header for Hero Four",
+			"registryDependencies": ["button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/blocks/header/header-four.svelte",
+					"type": "registry:component",
+					"target": "blocks/header/header-four.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-five",
+			"type": "registry:block",
+			"description": "Navigation header for Hero Five",
+			"registryDependencies": ["button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/blocks/header/header-five.svelte",
+					"type": "registry:component",
+					"target": "blocks/header/header-five.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-six",
+			"type": "registry:block",
+			"description": "Navigation header for Hero Six",
+			"registryDependencies": ["button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/blocks/header/header-six.svelte",
+					"type": "registry:component",
+					"target": "blocks/header/header-six.svelte"
 				}
 			]
 		},
@@ -672,7 +747,7 @@
 			"name": "hero-eight",
 			"type": "registry:block",
 			"description": "Hero with video background and overlay",
-			"registryDependencies": ["button", "local:svgs"],
+			"registryDependencies": ["button", "local:header-eight", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -689,6 +764,7 @@
 			"description": "Hero section with app mockup image",
 			"registryDependencies": [
 				"button",
+				"local:header-five",
 				"local:marquee",
 				"local:progressive-blur",
 				"local:svgs"
@@ -709,6 +785,7 @@
 			"description": "Split hero with image on right side",
 			"registryDependencies": [
 				"button",
+				"local:header-four",
 				"local:marquee",
 				"local:progressive-blur",
 				"local:svgs"
@@ -727,7 +804,7 @@
 			"name": "hero-nine",
 			"type": "registry:block",
 			"description": "Hero with animated background elements",
-			"registryDependencies": ["button", "local:svgs"],
+			"registryDependencies": ["button", "local:header-nine", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -742,7 +819,7 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Classic centered hero with headline and CTA",
-			"registryDependencies": ["button", "local:svgs"],
+			"registryDependencies": ["button", "local:header", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -757,7 +834,7 @@
 			"name": "hero-seven",
 			"type": "registry:block",
 			"description": "Hero with gradient background and stats",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["button", "local:header-seven"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte", "swiper"],
 			"files": [
@@ -772,7 +849,7 @@
 			"name": "hero-six",
 			"type": "registry:block",
 			"description": "Hero section with logo cloud below",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["button", "local:header-six"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -789,6 +866,7 @@
 			"description": "Hero with background image and overlay",
 			"registryDependencies": [
 				"button",
+				"local:header-three",
 				"local:marquee",
 				"local:progressive-blur",
 				"local:svgs"
@@ -807,7 +885,7 @@
 			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Two-column hero with image carousel",
-			"registryDependencies": ["button", "local:svgs"],
+			"registryDependencies": ["button", "local:header-two", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
