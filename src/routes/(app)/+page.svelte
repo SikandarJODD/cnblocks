@@ -1,4 +1,5 @@
 <script>
+	import FeatureShowcase from "#lib/components/base/landing/feature-showcase.svelte";
 	import LandingHero from "#lib/components/base/landing/hero.svelte";
 	import FeatureSection from "#lib/web/layouts/FeatureSection.svelte";
 	import FeatureSectionTwo from "#lib/web/layouts/FeatureSectionTwo.svelte";
@@ -66,3 +67,4 @@
 <!-- <FeatureSection /> -->
 <!-- <FeatureSectionTwo /> -->
 <LandingHero />
+<FeatureShowcase />
