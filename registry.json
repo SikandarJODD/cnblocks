@@ -432,7 +432,7 @@
 			"name": "feature-ten",
 			"type": "registry:block",
 			"description": "Feature block with centered image and cards",
-			"registryDependencies": ["card", "feature-card"],
+			"registryDependencies": ["card", "local:feature-card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [

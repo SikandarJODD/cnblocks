@@ -11,10 +11,188 @@
 	},
 	"items": [
 		{
+			"name": "button",
+			"type": "registry:ui",
+			"description": "Mist button primitive",
+			"dependencies": ["bits-ui", "tailwind-variants"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/mist/button/button.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/button/button.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/button/index.ts",
+					"type": "registry:ui",
+					"target": "ui/mist/button/index.ts"
+				}
+			]
+		},
+		{
+			"name": "card",
+			"type": "registry:ui",
+			"description": "Mist card primitive",
+			"dependencies": ["bits-ui", "tailwind-variants"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/mist/card/card.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/card/card.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/card/card-content.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/card/card-content.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/card/card-description.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/card/card-description.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/card/card-footer.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/card/card-footer.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/card/card-header.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/card/card-header.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/card/card-title.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/card/card-title.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/card/index.ts",
+					"type": "registry:ui",
+					"target": "ui/mist/card/index.ts"
+				}
+			]
+		},
+		{
+			"name": "input",
+			"type": "registry:ui",
+			"description": "Mist input primitive",
+			"dependencies": ["bits-ui"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/mist/input/input.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/input/input.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/input/index.ts",
+					"type": "registry:ui",
+					"target": "ui/mist/input/index.ts"
+				}
+			]
+		},
+		{
+			"name": "label",
+			"type": "registry:ui",
+			"description": "Mist label primitive",
+			"dependencies": ["bits-ui"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/mist/label/label.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/label/label.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/label/index.ts",
+					"type": "registry:ui",
+					"target": "ui/mist/label/index.ts"
+				}
+			]
+		},
+		{
+			"name": "textarea",
+			"type": "registry:ui",
+			"description": "Mist textarea primitive",
+			"dependencies": ["bits-ui"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/mist/textarea/textarea.svelte",
+					"type": "registry:ui",
+					"target": "ui/mist/textarea/textarea.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mist/textarea/index.ts",
+					"type": "registry:ui",
+					"target": "ui/mist/textarea/index.ts"
+				}
+			]
+		},
+		{
+			"name": "mist-theme",
+			"type": "registry:theme",
+			"description": "Mist color tokens and UI primitives",
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"local:label",
+				"local:textarea"
+			],
+			"cssVars": {
+				"light": {
+					"radius": "0.625rem",
+					"background": "oklch(1 0 0)",
+					"foreground": "oklch(0.141 0.005 285.823)",
+					"card": "oklch(1 0 0)",
+					"card-foreground": "oklch(0.141 0.005 285.823)",
+					"popover": "oklch(1 0 0)",
+					"popover-foreground": "oklch(0.141 0.005 285.823)",
+					"primary": "oklch(0.585 0.233 277.117)",
+					"primary-foreground": "oklch(1 0 0)",
+					"secondary": "oklch(0.93 0.034 272.788)",
+					"secondary-foreground": "oklch(0.511 0.262 276.966)",
+					"muted": "oklch(0.967 0.001 286.375)",
+					"muted-foreground": "oklch(0.442 0.017 285.786)",
+					"accent": "oklch(0.37 0.013 285.805)",
+					"accent-foreground": "oklch(1 0 0)",
+					"destructive": "oklch(0.577 0.245 27.325)",
+					"destructive-foreground": "oklch(1 0 0)",
+					"border": "oklch(0.92 0.004 286.32)",
+					"input": "oklch(0.92 0.004 286.32)",
+					"ring": "oklch(0.585 0.233 277.117)"
+				},
+				"dark": {
+					"radius": "0.625rem",
+					"background": "oklch(0.141 0.005 285.823)",
+					"foreground": "oklch(0.985 0 0)",
+					"card": "oklch(0.21 0.006 285.885)",
+					"card-foreground": "oklch(0.985 0 0)",
+					"popover": "oklch(0.21 0.006 285.885)",
+					"popover-foreground": "oklch(0.985 0 0)",
+					"primary": "oklch(0.673 0.182 276.935)",
+					"primary-foreground": "oklch(0.141 0.005 285.823)",
+					"secondary": "oklch(0.257 0.09 281.288)",
+					"secondary-foreground": "oklch(0.87 0.065 274.039)",
+					"muted": "oklch(0.21 0.006 285.885)",
+					"muted-foreground": "oklch(0.705 0.015 286.067)",
+					"accent": "oklch(0.92 0.004 286.32)",
+					"accent-foreground": "oklch(0.141 0.005 285.823)",
+					"destructive": "oklch(0.637 0.237 25.331)",
+					"destructive-foreground": "oklch(1 0 0)",
+					"border": "oklch(0.274 0.006 286.033)",
+					"input": "oklch(0.274 0.006 286.033)",
+					"ring": "oklch(0.673 0.182 276.935)"
+				}
+			}
+		},
+		{
 			"name": "comparator-one",
 			"type": "registry:block",
 			"description": "Mist-style before/after image comparison",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -29,7 +207,7 @@
 			"name": "contact-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal contact form",
-			"registryDependencies": ["button", "card", "input", "label", "select", "textarea"],
+			"registryDependencies": ["local:button", "local:card", "input", "label", "select", "textarea"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -59,7 +237,7 @@
 			"name": "content-one",
 			"type": "registry:block",
 			"description": "Mist-style simple content block",
-			"registryDependencies": ["button", "toggle-group"],
+			"registryDependencies": ["local:button", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -89,7 +267,7 @@
 			"name": "content-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column content",
-			"registryDependencies": ["button", "toggle-group"],
+			"registryDependencies": ["local:button", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -104,7 +282,7 @@
 			"name": "cta-one",
 			"type": "registry:block",
 			"description": "Mist-style centered CTA block",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -119,7 +297,7 @@
 			"name": "cta-three",
 			"type": "registry:block",
 			"description": "Mist-style CTA with background",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -134,7 +312,7 @@
 			"name": "cta-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column CTA",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -149,7 +327,7 @@
 			"name": "feature-eight",
 			"type": "registry:block",
 			"description": "Mist-style feature with icon grid",
-			"registryDependencies": ["card"],
+			"registryDependencies": ["local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -164,7 +342,7 @@
 			"name": "feature-eleven",
 			"type": "registry:block",
 			"description": "Mist-style feature with alternating rows",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -194,7 +372,7 @@
 			"name": "feature-five",
 			"type": "registry:block",
 			"description": "Mist-style feature with bullet points",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -209,7 +387,7 @@
 			"name": "feature-four",
 			"type": "registry:block",
 			"description": "Mist-style four-column feature grid",
-			"registryDependencies": ["button", "card", "toggle-group"],
+			"registryDependencies": ["local:button", "local:card", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -224,7 +402,7 @@
 			"name": "feature-nine",
 			"type": "registry:block",
 			"description": "Mist-style feature with checkmarks",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -239,7 +417,7 @@
 			"name": "feature-one",
 			"type": "registry:block",
 			"description": "Mist-style simple feature grid",
-			"registryDependencies": ["card", "local:feature-table"],
+			"registryDependencies": ["local:card", "local:feature-table"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -254,7 +432,7 @@
 			"name": "feature-seven",
 			"type": "registry:block",
 			"description": "Mist-style feature with tabs",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -269,7 +447,7 @@
 			"name": "feature-six",
 			"type": "registry:block",
 			"description": "Mist-style six-column feature grid",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -284,7 +462,7 @@
 			"name": "feature-ten",
 			"type": "registry:block",
 			"description": "Mist-style feature with centered image",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -299,7 +477,7 @@
 			"name": "feature-three",
 			"type": "registry:block",
 			"description": "Mist-style three-column feature cards",
-			"registryDependencies": ["button", "card", "toggle-group"],
+			"registryDependencies": ["local:button", "local:card", "toggle-group"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -314,7 +492,7 @@
 			"name": "feature-two",
 			"type": "registry:block",
 			"description": "Mist-style feature with side image",
-			"registryDependencies": ["card"],
+			"registryDependencies": ["local:card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -389,7 +567,7 @@
 			"name": "forgot-password-one",
 			"type": "registry:block",
 			"description": "Mist-style password reset form",
-			"registryDependencies": ["button", "input", "label"],
+			"registryDependencies": ["local:button", "local:input", "local:label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -404,7 +582,7 @@
 			"name": "hero-five",
 			"type": "registry:block",
 			"description": "Mist-style hero with app mockup",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -412,6 +590,16 @@
 					"path": "src/lib/components/mist/mhero/five/hero-five.svelte",
 					"type": "registry:component",
 					"target": "mist/mhero/five/hero-five.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/five/mist-kit-logo.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/five/mist-kit-logo.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/five/trusted-logos.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/five/trusted-logos.svelte"
 				}
 			]
 		},
@@ -419,7 +607,7 @@
 			"name": "hero-four",
 			"type": "registry:block",
 			"description": "Mist-style split hero with image",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -427,6 +615,16 @@
 					"path": "src/lib/components/mist/mhero/four/header.svelte",
 					"type": "registry:component",
 					"target": "mist/mhero/four/header.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/four/logo-icon.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/four/logo-icon.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/four/trusted-logos.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/four/trusted-logos.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/four/hero-four.svelte",
@@ -449,6 +647,11 @@
 					"target": "mist/mhero/one/header.svelte"
 				},
 				{
+					"path": "src/lib/components/mist/mhero/one/trusted-logos.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/one/trusted-logos.svelte"
+				},
+				{
 					"path": "src/lib/components/mist/mhero/one/hero-one.svelte",
 					"type": "registry:component",
 					"target": "mist/mhero/one/hero-one.svelte"
@@ -459,7 +662,7 @@
 			"name": "hero-six",
 			"type": "registry:block",
 			"description": "Mist-style hero with logo cloud",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -467,6 +670,16 @@
 					"path": "src/lib/components/mist/mhero/six/hero-six.svelte",
 					"type": "registry:component",
 					"target": "mist/mhero/six/hero-six.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/six/mist-kit-logo.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/six/mist-kit-logo.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/six/trusted-logos.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/six/trusted-logos.svelte"
 				}
 			]
 		},
@@ -474,7 +687,7 @@
 			"name": "hero-three",
 			"type": "registry:block",
 			"description": "Mist-style hero with background",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -482,6 +695,16 @@
 					"path": "src/lib/components/mist/mhero/three/header.svelte",
 					"type": "registry:component",
 					"target": "mist/mhero/three/header.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/three/logo-icon.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/three/logo-icon.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/three/trusted-logos.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/three/trusted-logos.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/three/hero-three.svelte",
@@ -494,7 +717,7 @@
 			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Mist-style two-column hero",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -502,6 +725,11 @@
 					"path": "src/lib/components/mist/mhero/two/header.svelte",
 					"type": "registry:component",
 					"target": "mist/mhero/two/header.svelte"
+				},
+				{
+					"path": "src/lib/components/mist/mhero/two/logo-icon.svelte",
+					"type": "registry:component",
+					"target": "mist/mhero/two/logo-icon.svelte"
 				},
 				{
 					"path": "src/lib/components/mist/mhero/two/hero-two.svelte",
@@ -597,7 +825,7 @@
 			"name": "login-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal login form",
-			"registryDependencies": ["button", "input", "label"],
+			"registryDependencies": ["local:button", "local:input", "label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -754,7 +982,7 @@
 			"name": "pricing-one",
 			"type": "registry:block",
 			"description": "Mist-style simple pricing cards",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -769,7 +997,7 @@
 			"name": "pricing-two",
 			"type": "registry:block",
 			"description": "Mist-style pricing with toggle",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -784,7 +1012,7 @@
 			"name": "signup-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal signup form",
-			"registryDependencies": ["button", "input", "label"],
+			"registryDependencies": ["local:button", "local:input", "local:label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -814,7 +1042,7 @@
 			"name": "stats-one",
 			"type": "registry:block",
 			"description": "Mist-style simple stats row",
-			"registryDependencies": ["card"],
+			"registryDependencies": ["local:card"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -859,7 +1087,7 @@
 			"name": "team-one",
 			"type": "registry:block",
 			"description": "Mist-style team member grid",
-			"registryDependencies": ["avatar", "button"],
+			"registryDependencies": ["avatar", "local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -874,7 +1102,7 @@
 			"name": "team-two",
 			"type": "registry:block",
 			"description": "Mist-style team with social links",
-			"registryDependencies": ["avatar", "button", "hover-card"],
+			"registryDependencies": ["avatar", "local:button", "hover-card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
