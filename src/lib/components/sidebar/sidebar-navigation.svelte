@@ -135,6 +135,17 @@
 							</Sidebar.MenuButton>
 						</Sidebar.MenuItem>
 					{/each}
+					<Sidebar.MenuItem>
+						<Sidebar.MenuButton
+							class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+						>
+							{#snippet child({ props })}
+								<a href="/llms.txt" {...props}>
+									<span>LLM Index</span>
+								</a>
+							{/snippet}
+						</Sidebar.MenuButton>
+					</Sidebar.MenuItem>
 				</Sidebar.Menu>
 			</div>
 		</Sidebar.GroupContent>

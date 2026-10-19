@@ -410,6 +410,10 @@ export {
 	] satisfies CodeBlock[];
 </script>
 
+<svelte:head>
+	<link rel="alternate" type="text/markdown" href="/docs/veil-theme.md" title="Markdown" />
+</svelte:head>
+
 <MetaTags
 	{title}
 	{description}

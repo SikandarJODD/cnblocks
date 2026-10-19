@@ -17,6 +17,10 @@
 	// const pageMeta = docsV2PageMap.mcp;
 </script>
 
+<svelte:head>
+	<link rel="alternate" type="text/markdown" href="/docs/mcp.md" title="Markdown" />
+</svelte:head>
+
 <!-- <SEOComponent
 	title={pageMeta.seo.title}
 	description={pageMeta.seo.description}

@@ -466,6 +466,10 @@ export {
 	] satisfies CodeBlock[];
 </script>
 
+<svelte:head>
+	<link rel="alternate" type="text/markdown" href="/docs/mist-theme.md" title="Markdown" />
+</svelte:head>
+
 <MetaTags
 	{title}
 	{description}

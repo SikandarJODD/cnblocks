@@ -40,10 +40,10 @@
 
 ## AI-readable docs
 
-- [ ] Add a prerendered `/llms.txt` containing a short, curated project and documentation index.
-- [ ] Generate Markdown versions of installation, Mist, Veil, and MCP docs from the same content source.
-- [ ] Link `/r/index.json`, `/m/index.json`, and `/v/index.json` from `llms.txt`.
-- [ ] Add Markdown alternate links to documentation pages.
+- [x] Add a prerendered `/llms.txt` containing a short, curated project and documentation index.
+- [x] Generate Markdown versions of installation, Mist, Veil, and MCP docs from the same content source.
+- [x] Link `/r/index.json`, `/m/index.json`, and `/v/index.json` from `llms.txt`.
+- [x] Add Markdown alternate links to documentation pages.
 
 ## Release verification
 

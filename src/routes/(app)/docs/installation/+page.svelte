@@ -17,6 +17,10 @@
 	let agent = $state<Agent>("pnpm");
 </script>
 
+<svelte:head>
+	<link rel="alternate" type="text/markdown" href="/docs/installation.md" title="Markdown" />
+</svelte:head>
+
 <MetaTags
 	{title}
 	{description}
