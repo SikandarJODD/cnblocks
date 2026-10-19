@@ -4,8 +4,8 @@
 	"type": "registry:block",
 	"description": "Veil Login component, variant Three.",
 	"registryDependencies": [
-		"button",
-		"input",
+		"./button.json",
+		"./input.json",
 		"label",
 		"./svgs.json"
 	],

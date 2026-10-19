@@ -327,7 +327,7 @@
 		],
 		"registryDependencies": [
 			"card",
-			"feature-card"
+			"local:feature-card"
 		],
 		"relativeUrl": "feature-ten.json"
 	},

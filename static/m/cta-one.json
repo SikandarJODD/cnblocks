@@ -4,7 +4,7 @@
 	"type": "registry:block",
 	"description": "Mist-style centered CTA block",
 	"registryDependencies": [
-		"button"
+		"./button.json"
 	],
 	"files": [
 		{

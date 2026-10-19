@@ -7,7 +7,7 @@
 		"@lucide/svelte"
 	],
 	"registryDependencies": [
-		"button",
+		"./button.json",
 		"./theme-switcher.json"
 	],
 	"files": [

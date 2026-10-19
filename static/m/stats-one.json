@@ -4,7 +4,7 @@
 	"type": "registry:block",
 	"description": "Mist-style simple stats row",
 	"registryDependencies": [
-		"card"
+		"./card.json"
 	],
 	"files": [
 		{

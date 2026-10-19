@@ -7,7 +7,7 @@
 		"@lucide/svelte"
 	],
 	"registryDependencies": [
-		"card"
+		"./card.json"
 	],
 	"files": [
 		{

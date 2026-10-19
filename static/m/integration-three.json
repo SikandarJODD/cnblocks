@@ -5,12 +5,12 @@
 	"description": "Mist-style integration with icons",
 	"registryDependencies": [
 		"./integration-card.json",
-		"logo-gemini",
-		"logo-google-palm",
-		"logo-magic-ui",
-		"logo-media-wiki",
-		"logo-replit",
-		"logo-vscodium"
+		"./logo-gemini.json",
+		"./logo-google-palm.json",
+		"./logo-magic-ui.json",
+		"./logo-media-wiki.json",
+		"./logo-replit.json",
+		"./logo-vscodium.json"
 	],
 	"files": [
 		{

@@ -4,9 +4,9 @@
 	"type": "registry:block",
 	"description": "Veil Signup component, variant One.",
 	"registryDependencies": [
-		"button",
-		"card",
-		"input",
+		"./button.json",
+		"./card.json",
+		"./input.json",
 		"label",
 		"./svgs.json"
 	],

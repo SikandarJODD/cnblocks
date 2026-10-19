@@ -7,8 +7,8 @@
 		"@lucide/svelte"
 	],
 	"registryDependencies": [
-		"button",
-		"card",
+		"./button.json",
+		"./card.json",
 		"./header-one.json",
 		"./svgs.json"
 	],

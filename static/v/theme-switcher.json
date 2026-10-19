@@ -8,7 +8,7 @@
 		"mode-watcher"
 	],
 	"registryDependencies": [
-		"button"
+		"./button.json"
 	],
 	"files": [
 		{

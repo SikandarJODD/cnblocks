@@ -8,7 +8,7 @@
 	],
 	"registryDependencies": [
 		"card",
-		"feature-card"
+		"./feature-card.json"
 	],
 	"files": [
 		{

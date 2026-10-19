@@ -1,0 +1,60 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mist-theme",
+	"type": "registry:theme",
+	"description": "Mist color tokens and UI primitives",
+	"registryDependencies": [
+		"./button.json",
+		"./card.json",
+		"./input.json",
+		"./label.json",
+		"./textarea.json"
+	],
+	"cssVars": {
+		"light": {
+			"radius": "0.625rem",
+			"background": "oklch(1 0 0)",
+			"foreground": "oklch(0.141 0.005 285.823)",
+			"card": "oklch(1 0 0)",
+			"card-foreground": "oklch(0.141 0.005 285.823)",
+			"popover": "oklch(1 0 0)",
+			"popover-foreground": "oklch(0.141 0.005 285.823)",
+			"primary": "oklch(0.585 0.233 277.117)",
+			"primary-foreground": "oklch(1 0 0)",
+			"secondary": "oklch(0.93 0.034 272.788)",
+			"secondary-foreground": "oklch(0.511 0.262 276.966)",
+			"muted": "oklch(0.967 0.001 286.375)",
+			"muted-foreground": "oklch(0.442 0.017 285.786)",
+			"accent": "oklch(0.37 0.013 285.805)",
+			"accent-foreground": "oklch(1 0 0)",
+			"destructive": "oklch(0.577 0.245 27.325)",
+			"destructive-foreground": "oklch(1 0 0)",
+			"border": "oklch(0.92 0.004 286.32)",
+			"input": "oklch(0.92 0.004 286.32)",
+			"ring": "oklch(0.585 0.233 277.117)"
+		},
+		"dark": {
+			"radius": "0.625rem",
+			"background": "oklch(0.141 0.005 285.823)",
+			"foreground": "oklch(0.985 0 0)",
+			"card": "oklch(0.21 0.006 285.885)",
+			"card-foreground": "oklch(0.985 0 0)",
+			"popover": "oklch(0.21 0.006 285.885)",
+			"popover-foreground": "oklch(0.985 0 0)",
+			"primary": "oklch(0.673 0.182 276.935)",
+			"primary-foreground": "oklch(0.141 0.005 285.823)",
+			"secondary": "oklch(0.257 0.09 281.288)",
+			"secondary-foreground": "oklch(0.87 0.065 274.039)",
+			"muted": "oklch(0.21 0.006 285.885)",
+			"muted-foreground": "oklch(0.705 0.015 286.067)",
+			"accent": "oklch(0.92 0.004 286.32)",
+			"accent-foreground": "oklch(0.141 0.005 285.823)",
+			"destructive": "oklch(0.637 0.237 25.331)",
+			"destructive-foreground": "oklch(1 0 0)",
+			"border": "oklch(0.274 0.006 286.033)",
+			"input": "oklch(0.274 0.006 286.033)",
+			"ring": "oklch(0.673 0.182 276.935)"
+		}
+	},
+	"files": []
+}

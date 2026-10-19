@@ -14,6 +14,7 @@
 			"name": "button",
 			"type": "registry:ui",
 			"description": "Mist button primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui", "tailwind-variants"],
 			"devDependencies": [],
 			"files": [
@@ -33,6 +34,7 @@
 			"name": "card",
 			"type": "registry:ui",
 			"description": "Mist card primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui", "tailwind-variants"],
 			"devDependencies": [],
 			"files": [
@@ -77,6 +79,7 @@
 			"name": "input",
 			"type": "registry:ui",
 			"description": "Mist input primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui"],
 			"devDependencies": [],
 			"files": [
@@ -96,6 +99,7 @@
 			"name": "label",
 			"type": "registry:ui",
 			"description": "Mist label primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui"],
 			"devDependencies": [],
 			"files": [
@@ -115,6 +119,7 @@
 			"name": "textarea",
 			"type": "registry:ui",
 			"description": "Mist textarea primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui"],
 			"devDependencies": [],
 			"files": [
@@ -141,6 +146,7 @@
 				"local:label",
 				"local:textarea"
 			],
+			"files": [],
 			"cssVars": {
 				"light": {
 					"radius": "0.625rem",
@@ -207,7 +213,14 @@
 			"name": "contact-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal contact form",
-			"registryDependencies": ["local:button", "local:card", "input", "label", "select", "textarea"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"local:label",
+				"select",
+				"local:textarea"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -637,7 +650,7 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Mist-style centered hero with CTA",
-			"registryDependencies": ["button"],
+			"registryDependencies": ["local:button"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -742,7 +755,7 @@
 			"name": "integration-card",
 			"type": "registry:block",
 			"description": "Mist-style integration logo card",
-			"registryDependencies": ["button", "card"],
+			"registryDependencies": ["local:button", "local:card"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -758,12 +771,12 @@
 			"type": "registry:block",
 			"description": "Mist-style integration grid",
 			"registryDependencies": [
-				"logo-gemini",
-				"logo-google-palm",
-				"logo-magic-ui",
-				"logo-media-wiki",
-				"logo-replit",
-				"logo-vscodium"
+				"local:logo-gemini",
+				"local:logo-google-palm",
+				"local:logo-magic-ui",
+				"local:logo-media-wiki",
+				"local:logo-replit",
+				"local:logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -781,12 +794,12 @@
 			"description": "Mist-style integration with icons",
 			"registryDependencies": [
 				"local:integration-card",
-				"logo-gemini",
-				"logo-google-palm",
-				"logo-magic-ui",
-				"logo-media-wiki",
-				"logo-replit",
-				"logo-vscodium"
+				"local:logo-gemini",
+				"local:logo-google-palm",
+				"local:logo-magic-ui",
+				"local:logo-media-wiki",
+				"local:logo-replit",
+				"local:logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -803,13 +816,13 @@
 			"type": "registry:block",
 			"description": "Mist-style integration marquee",
 			"registryDependencies": [
-				"button",
-				"logo-gemini",
-				"logo-google-palm",
-				"logo-magic-ui",
-				"logo-media-wiki",
-				"logo-replit",
-				"logo-vscodium"
+				"local:button",
+				"local:logo-gemini",
+				"local:logo-google-palm",
+				"local:logo-magic-ui",
+				"local:logo-media-wiki",
+				"local:logo-replit",
+				"local:logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],
@@ -825,7 +838,7 @@
 			"name": "login-one",
 			"type": "registry:block",
 			"description": "Mist-style minimal login form",
-			"registryDependencies": ["local:button", "local:input", "label"],
+			"registryDependencies": ["local:button", "local:input", "local:label"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -901,12 +914,12 @@
 			"type": "registry:block",
 			"description": "Mist-style logo collection utilities",
 			"registryDependencies": [
-				"logo-gemini",
-				"logo-google-palm",
-				"logo-magic-ui",
-				"logo-media-wiki",
-				"logo-replit",
-				"logo-vscodium"
+				"local:logo-gemini",
+				"local:logo-google-palm",
+				"local:logo-magic-ui",
+				"local:logo-media-wiki",
+				"local:logo-replit",
+				"local:logo-vscodium"
 			],
 			"dependencies": [],
 			"devDependencies": [],

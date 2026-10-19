@@ -5,7 +5,7 @@
 	"description": "Veil FAQs component, variant One.",
 	"registryDependencies": [
 		"accordion",
-		"card"
+		"./card.json"
 	],
 	"files": [
 		{

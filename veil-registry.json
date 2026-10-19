@@ -14,6 +14,7 @@
 			"name": "button",
 			"type": "registry:ui",
 			"description": "Veil button primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui", "tailwind-variants"],
 			"devDependencies": [],
 			"files": [
@@ -33,6 +34,7 @@
 			"name": "card",
 			"type": "registry:ui",
 			"description": "Veil card primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui", "tailwind-variants"],
 			"devDependencies": [],
 			"files": [
@@ -77,6 +79,7 @@
 			"name": "input",
 			"type": "registry:ui",
 			"description": "Veil input primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui"],
 			"devDependencies": [],
 			"files": [
@@ -96,6 +99,7 @@
 			"name": "textarea",
 			"type": "registry:ui",
 			"description": "Veil textarea primitive",
+			"registryDependencies": [],
 			"dependencies": ["bits-ui"],
 			"devDependencies": [],
 			"files": [
@@ -115,13 +119,9 @@
 			"name": "veil-theme",
 			"type": "registry:theme",
 			"description": "Veil color, typography, and UI primitives",
-			"registryDependencies": [
-				"local:button",
-				"local:card",
-				"local:input",
-				"local:textarea"
-			],
+			"registryDependencies": ["local:button", "local:card", "local:input", "local:textarea"],
 			"dependencies": ["@fontsource/asar", "@fontsource-variable/geist"],
+			"files": [],
 			"cssVars": {
 				"theme": {
 					"font-sans": "\"Geist Variable\", sans-serif",
@@ -177,7 +177,12 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant One.",
-			"registryDependencies": ["local:button", "local:card", "local:header-one", "local:svgs"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:header-one",
+				"local:svgs"
+			],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -192,7 +197,12 @@
 			"name": "hero-two",
 			"type": "registry:block",
 			"description": "Veil Hero component, variant Two.",
-			"registryDependencies": ["local:button", "local:card", "local:header-two", "local:svgs"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:header-two",
+				"local:svgs"
+			],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -786,7 +796,13 @@
 			"name": "contact-one",
 			"type": "registry:block",
 			"description": "Veil Contact component, variant One.",
-			"registryDependencies": ["local:button", "local:card", "local:input", "label", "local:textarea"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"label",
+				"local:textarea"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -801,7 +817,14 @@
 			"name": "contact-two",
 			"type": "registry:block",
 			"description": "Veil Contact component, variant Two.",
-			"registryDependencies": ["local:button", "local:card", "local:input", "label", "select", "local:textarea"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"label",
+				"select",
+				"local:textarea"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -816,7 +839,13 @@
 			"name": "signup-one",
 			"type": "registry:block",
 			"description": "Veil Signup component, variant One.",
-			"registryDependencies": ["local:button", "local:card", "local:input", "label", "local:svgs"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"label",
+				"local:svgs"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -861,7 +890,13 @@
 			"name": "login-one",
 			"type": "registry:block",
 			"description": "Veil Login component, variant One.",
-			"registryDependencies": ["local:button", "local:card", "local:input", "label", "local:svgs"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"label",
+				"local:svgs"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -906,7 +941,13 @@
 			"name": "forgot-password-one",
 			"type": "registry:block",
 			"description": "Veil Forgot Password component, variant One.",
-			"registryDependencies": ["local:button", "local:card", "local:input", "label", "local:svgs"],
+			"registryDependencies": [
+				"local:button",
+				"local:card",
+				"local:input",
+				"label",
+				"local:svgs"
+			],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [

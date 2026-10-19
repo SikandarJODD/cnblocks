@@ -1,0 +1,67 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "veil-theme",
+	"type": "registry:theme",
+	"description": "Veil color, typography, and UI primitives",
+	"dependencies": [
+		"@fontsource/asar",
+		"@fontsource-variable/geist"
+	],
+	"registryDependencies": [
+		"./button.json",
+		"./card.json",
+		"./input.json",
+		"./textarea.json"
+	],
+	"cssVars": {
+		"theme": {
+			"font-sans": "\"Geist Variable\", sans-serif",
+			"font-serif": "\"Asar\", serif"
+		},
+		"light": {
+			"radius": "0.625rem",
+			"background": "oklch(0.9779 0.0042 56.38)",
+			"foreground": "oklch(0.3421 0.0379 61.15)",
+			"card": "oklch(1 0 0)",
+			"card-foreground": "oklch(0.3421 0.0379 61.15)",
+			"popover": "oklch(1 0 0)",
+			"popover-foreground": "oklch(0.3421 0.0379 61.15)",
+			"primary": "oklch(0.5967 0.0558 61.59)",
+			"primary-foreground": "oklch(0.1448 0 0)",
+			"secondary": "oklch(0.5967 0.0558 61.59 / 15%)",
+			"secondary-foreground": "oklch(0.3421 0.0379 61.15)",
+			"muted": "oklch(0.3421 0.0379 61.15 / 5%)",
+			"muted-foreground": "oklch(0.4563 0.0061 48.59)",
+			"accent": "oklch(0.9068 0.0112 89.73)",
+			"accent-foreground": "oklch(0.3467 0.0231 86.12)",
+			"destructive": "oklch(0.577 0.245 27.325)",
+			"destructive-foreground": "oklch(1 0 0)",
+			"border": "oklch(0.3421 0.0379 61.15 / 7.5%)",
+			"input": "oklch(0.3421 0.0379 61.15 / 20%)",
+			"ring": "oklch(0.5967 0.0558 61.59)"
+		},
+		"dark": {
+			"radius": "0.625rem",
+			"background": "oklch(0.1448 0 0)",
+			"foreground": "oklch(0.9027 0.0137 60.56)",
+			"card": "oklch(0.1924 0.0016 17.3)",
+			"card-foreground": "oklch(0.9027 0.0137 60.56)",
+			"popover": "oklch(0.1924 0.0016 17.3)",
+			"popover-foreground": "oklch(0.9027 0.0137 60.56)",
+			"primary": "oklch(0.5967 0.0558 61.59)",
+			"primary-foreground": "oklch(1 0 0)",
+			"secondary": "oklch(0.5967 0.0558 61.59 / 10%)",
+			"secondary-foreground": "oklch(0.9027 0.0137 60.56)",
+			"muted": "oklch(0.1448 0 0)",
+			"muted-foreground": "oklch(0.7262 0.0037 67.77)",
+			"accent": "oklch(0.37 0.013 285.805)",
+			"accent-foreground": "oklch(1 0 0)",
+			"destructive": "oklch(0.577 0.245 27.325)",
+			"destructive-foreground": "oklch(1 0 0)",
+			"border": "oklch(0.9027 0.0137 60.56 / 7.5%)",
+			"input": "oklch(0.9027 0.0137 60.56 / 15%)",
+			"ring": "oklch(0.5967 0.0558 61.59)"
+		}
+	},
+	"files": []
+}

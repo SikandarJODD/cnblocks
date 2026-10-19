@@ -4,11 +4,11 @@
 	"type": "registry:block",
 	"description": "Veil Contact component, variant One.",
 	"registryDependencies": [
-		"button",
-		"card",
-		"input",
+		"./button.json",
+		"./card.json",
+		"./input.json",
 		"label",
-		"textarea"
+		"./textarea.json"
 	],
 	"files": [
 		{

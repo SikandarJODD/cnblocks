@@ -13,12 +13,12 @@
 
 ## Registry reliability
 
-- [ ] Change `feature-ten -> feature-card` to a local registry dependency.
-- [ ] Add the 10 missing Mist hero helper files to `mist-registry.json`.
-- [ ] Add installable Mist UI primitives: button, card, input, label, and textarea.
-- [ ] Add installable Veil UI primitives: button, card, input, and textarea.
-- [ ] Create `mist-theme` and `veil-theme` registry items containing primitives and theme tokens.
-- [ ] Convert internal Mist dependencies to `local:` dependencies.
+- [x] Change `feature-ten -> feature-card` to a local registry dependency.
+- [x] Add the 10 missing Mist hero helper files to `mist-registry.json`.
+- [x] Add installable Mist UI primitives: button, card, input, label, and textarea.
+- [x] Add installable Veil UI primitives: button, card, input, and textarea.
+- [x] Create `mist-theme` and `veil-theme` registry items containing primitives and theme tokens.
+- [x] Convert internal Mist dependencies to `local:` dependencies.
 - [ ] Rebuild and commit the stale `static/m` registry output.
 - [ ] Add clean-project install tests for representative Kit, Mist, and Veil blocks.
 

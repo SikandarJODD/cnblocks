@@ -4,7 +4,7 @@
 	"type": "registry:block",
 	"description": "Veil Testimonial component, variant Two.",
 	"registryDependencies": [
-		"card"
+		"./card.json"
 	],
 	"files": [
 		{
