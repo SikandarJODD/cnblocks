@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import CategoryIntro from "#lib/components/web/CategoryIntro.svelte";
+	import CategorySEO from "#lib/seo/CategorySEO.svelte";
 	import { scrollY } from "svelte/reactivity/window";
 	import Button from "#lib/components/ui/button/button.svelte";
 	import { getCategoryContent } from "#lib/config/category-content.js";
@@ -14,6 +15,13 @@
 </script>
 
 <div>
+	{#if categoryContent}
+		<CategorySEO
+			category="Kit"
+			name={categoryContent.name}
+			description={categoryContent.description}
+		/>
+	{/if}
 	<!-- <CategoryNavigation />
 	<section>
 		<div

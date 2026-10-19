@@ -1,11 +1,8 @@
 <script>
 	import { testimonials } from "#lib/all_blocks/testimonial.js";
 	import BlockPreview from "#lib/components/web/BlockPreview.svelte";
-	import { seoMetaTags } from "#lib/config/seo.js";
-	import { MetaTags } from "svelte-meta-tags";
 </script>
 
-<MetaTags {...seoMetaTags} title="Testiomonial" />
 
 <!-- <section>
 	<div
