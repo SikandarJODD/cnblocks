@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_pricing } from "#lib/all_mists/pricing.js";
-
-	const block = all_mists_pricing.find((item) => item.slug === "one");
-
-	if (!block) {
-		throw new Error("Missing preview block for one in all_mists_pricing");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mpricing/one.svelte";
 </script>
 
 <PreviewComponent />

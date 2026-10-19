@@ -1,8 +1,8 @@
 <script>
-	import { all_mists_contact } from "#lib/all_mists/contact.js";
+	import { mistContactBlocks } from "#lib/config/mist-blocks.js";
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
-{#each all_mists_contact as block}
+{#each mistContactBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

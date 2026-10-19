@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { all_mists_testimonial } from "#lib/all_mists/testimonial.js";
+	import { mistTestimonialBlocks } from "#lib/config/mist-blocks.js";
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
 
-{#each all_mists_testimonial as block}
+{#each mistTestimonialBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

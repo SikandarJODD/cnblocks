@@ -10,11 +10,16 @@
 	import { transformCodeTreeImports, type ImportAliasStyle } from "./import-alias";
 	// import { CopyButton } from "../ui/copy-button";
 	import { scale } from "svelte/transition";
-	import { onDestroy, type Component } from "svelte";
+	import { onDestroy, untrack, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
 	import CodeEditor from "#lib/tree/layout/CodeEditor.svelte";
-	import { createBlockCodeTreeFromCode, type BlockCodeSource } from "#lib/tree/types.js";
+	import {
+		createBlockCodeTreeFromCode,
+		type BlockCodeInput,
+		type BlockCodeTree,
+	} from "#lib/tree/types.js";
+	import type { MistBlock } from "#lib/types/mists.js";
 
 	type BlockPreviewProps = {
 		itemId?: string;
@@ -24,8 +29,11 @@
 		category: string;
 		previewOnly?: boolean;
 		slug?: string;
-		component: Component;
-	} & BlockCodeSource;
+		component?: Component;
+		code?: BlockCodeInput | BlockCodeInput[];
+		codeTree?: BlockCodeTree;
+		loadBlock?: () => Promise<MistBlock>;
+	};
 
 	let {
 		itemId,
@@ -38,6 +46,7 @@
 		slug,
 		previewOnly,
 		component: BlockComponent,
+		loadBlock,
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
@@ -53,19 +62,29 @@
 	let mode = $state<"preview" | "code">("preview");
 	let iframeHeight = $state(0);
 	let isLoading = $state(true);
+	let isCodeLoading = $state(false);
+	let codeLoadError = $state<string | null>(null);
+	let loadedCode = $state<BlockCodeInput | BlockCodeInput[] | undefined>(
+		untrack(() => code)
+	);
+	let loadedCodeTree = $state<BlockCodeTree | undefined>(untrack(() => codeTree));
+	let codeLoadPromise: Promise<void> | undefined;
 	let importAliasStyle = new PersistedState<ImportAliasStyle>(
 		"sveltekit-import-alias-style",
 		"dollar"
 	);
-	let sourceCodeTree = $derived(codeTree ?? createBlockCodeTreeFromCode(code));
+	let sourceCodeTree = $derived(
+		loadedCodeTree ?? createBlockCodeTreeFromCode(loadedCode)
+	);
 	let displayedCodeTree = $derived(
 		transformCodeTreeImports(sourceCodeTree, importAliasStyle.current)
 	);
-	let hasCode = $derived(sourceCodeTree.nodes.length > 0);
+	let hasCode = $derived(Boolean(loadBlock) || sourceCodeTree.nodes.length > 0);
 
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
 	let iframeResizeObserver: ResizeObserver | undefined;
 	let removeIframeWheelListener: (() => void) | undefined;
+	let removeIframeShortcutListener: (() => void) | undefined;
 
 	import {
 		Tooltip,
@@ -83,8 +102,8 @@
 		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
 	}
 
-	let showIframeComp = $derived(previewMode === "iframe");
-	let forcesIframe = $derived(previewMode === "iframe");
+	let showIframeComp = $derived(previewMode === "iframe" || !BlockComponent);
+	let forcesIframe = $derived(previewMode === "iframe" || !BlockComponent);
 	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
 	let activePreviewTheme = $derived(resolveScopedTheme());
 	let themeSetupHref = $derived(
@@ -96,11 +115,45 @@
 		iframeHeight = 0;
 	}
 
+	async function loadCode() {
+		if (loadedCode || loadedCodeTree || !loadBlock) return;
+		if (codeLoadPromise) return codeLoadPromise;
+
+		codeLoadPromise = (async () => {
+			isCodeLoading = true;
+			codeLoadError = null;
+
+			try {
+				const block = await loadBlock();
+				loadedCode = block.code;
+				loadedCodeTree = block.codeTree;
+			} catch (error) {
+				codeLoadError = error instanceof Error ? error.message : "Unable to load code";
+			} finally {
+				isCodeLoading = false;
+				codeLoadPromise = undefined;
+			}
+		})();
+
+		return codeLoadPromise;
+	}
+
+	function showCode() {
+		mode = "code";
+		void loadCode();
+	}
+
+	$effect(() => {
+		if (mode === "code") void loadCode();
+	});
+
 	function cleanupIframe() {
 		iframeResizeObserver?.disconnect();
 		iframeResizeObserver = undefined;
 		removeIframeWheelListener?.();
 		removeIframeWheelListener = undefined;
+		removeIframeShortcutListener?.();
+		removeIframeShortcutListener = undefined;
 	}
 
 	function setupIframeAutoHeight(iframe: HTMLIFrameElement | null) {
@@ -146,6 +199,42 @@
 		iframeWindow.addEventListener("wheel", forwardWheelToPage, { passive: false });
 		removeIframeWheelListener = () =>
 			iframeWindow.removeEventListener("wheel", forwardWheelToPage);
+
+		const forwardShortcutToPage = (event: KeyboardEvent) => {
+			const target = event.target as HTMLElement | null;
+			const isEditable =
+			target?.isContentEditable ||
+			["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName ?? "");
+			const isSidebarShortcut =
+				event.key === "b" &&
+				!event.metaKey &&
+				!event.ctrlKey &&
+				!event.altKey &&
+				!isEditable;
+			const isSearchShortcut =
+				event.key.toLowerCase() === "k" && (event.metaKey || event.ctrlKey);
+
+			if (!isSidebarShortcut && !isSearchShortcut) return;
+
+			const forwardedEvent = new KeyboardEvent("keydown", {
+				key: event.key,
+				code: event.code,
+				location: event.location,
+				ctrlKey: event.ctrlKey,
+				metaKey: event.metaKey,
+				shiftKey: event.shiftKey,
+				altKey: event.altKey,
+				repeat: event.repeat,
+				bubbles: true,
+				cancelable: true,
+			});
+
+			if (!window.dispatchEvent(forwardedEvent)) event.preventDefault();
+		};
+
+		iframeWindow.addEventListener("keydown", forwardShortcutToPage);
+		removeIframeShortcutListener = () =>
+			iframeWindow.removeEventListener("keydown", forwardShortcutToPage);
 		syncHeight();
 	}
 
@@ -222,7 +311,7 @@
 
 						<Button
 							variant={mode === "code" ? "secondary" : "ghost"}
-							onclick={() => (mode = "code")}
+							onclick={showCode}
 							aria-pressed={mode === "code"}
 							data-state={mode === "code" ? "checked" : "unchecked"}
 							size="sm"
@@ -529,9 +618,12 @@
 		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
 			<div
 				class={cn(
-					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-muted! dark:border-muted dark:bg-muted/50!",
-					mode === "code" && "hidden"
+					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-muted! transition-opacity duration-150 ease-out motion-reduce:transition-none dark:border-muted dark:bg-muted/50!",
+					mode === "code"
+						? "pointer-events-none invisible absolute inset-x-0 top-0 opacity-0"
+						: "relative visible opacity-100"
 				)}
+				aria-hidden={mode === "code"}
 			>
 				{#if shouldRenderInIframe}
 					<div class="h-fit" style:width={`${width}%`}>
@@ -541,7 +633,10 @@
 							bind:this={iframeRef}
 							{title}
 							height={iframeHeight}
-							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! border-r transition-[opacity,filter] duration-200 will-change-auto motion-reduce:transition-none dark:border-muted"
+							class={cn(
+								"no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! border-r transition-opacity duration-150 ease-out motion-reduce:transition-none dark:border-muted",
+								isLoading ? "opacity-0" : "opacity-100"
+							)}
 							src={preview}
 							id={`block-${title}`}
 							style="--iframe-height: {iframeHeight}px;"
@@ -550,15 +645,17 @@
 								setupIframeAutoHeight(iframeRef);
 							}}
 						></iframe>
-						{#if isLoading}
+						<div
+							class={cn(
+								"absolute inset-0 right-2 flex items-center justify-center border-x bg-background transition-opacity duration-150 ease-out motion-reduce:transition-none",
+								isLoading ? "opacity-100" : "pointer-events-none opacity-0"
+							)}
+							aria-hidden={!isLoading}
+						>
 							<div
-								class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
-							>
-								<div
-									class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
-								></div>
-							</div>
-						{/if}
+								class="size-6 animate-spin rounded-full border border-primary border-t-transparent motion-reduce:animate-none"
+							></div>
+						</div>
 					</div>
 				{:else if activePreviewTheme}
 					<div data-theme={activePreviewTheme}>
@@ -569,19 +666,44 @@
 								category === "header" && "min-h-80 bg-background"
 							)}
 						>
-							<BlockComponent></BlockComponent>
+							{#if BlockComponent}
+								<BlockComponent></BlockComponent>
+							{/if}
 						</div>
 					</div>
 				{:else}
 					<div in:scale={{ start: 0.85 }} class="w-full overflow-hidden bg-background">
-						<BlockComponent></BlockComponent>
+						{#if BlockComponent}
+							<BlockComponent></BlockComponent>
+						{/if}
 					</div>
 				{/if}
 			</div>
 
 			<div class="max-w-full min-w-0 overflow-hidden">
 				{#if mode === "code"}
-					<CodeEditor codeTree={displayedCodeTree} />
+					{#if isCodeLoading}
+						<div
+							class="animate-in fade-in-0 flex min-h-80 items-center justify-center text-sm text-muted-foreground duration-150 ease-out motion-reduce:animate-none"
+						>
+							Loading code…
+						</div>
+					{:else if codeLoadError}
+						<div
+							class="animate-in fade-in-0 flex min-h-80 flex-col items-center justify-center gap-3 text-sm duration-150 ease-out motion-reduce:animate-none"
+						>
+							<p class="text-destructive">{codeLoadError}</p>
+							<Button variant="outline" size="sm" onclick={() => void loadCode()}>
+								Try again
+							</Button>
+						</div>
+					{:else}
+						<div
+							class="animate-in fade-in-0 duration-150 ease-out motion-reduce:animate-none"
+						>
+							<CodeEditor codeTree={displayedCodeTree} />
+						</div>
+					{/if}
 				{/if}
 			</div>
 		</div>

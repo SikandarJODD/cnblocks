@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_stats } from "#lib/all_mists/stats.js";
-
-	const block = all_mists_stats.find((item) => item.slug === "one");
-
-	if (!block) {
-		throw new Error("Missing preview block for one in all_mists_stats");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mstats/one.svelte";
 </script>
 
 <PreviewComponent />

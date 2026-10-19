@@ -1,9 +1,9 @@
 <script>
-	import { all_mists_integrations } from "#lib/all_mists/integrations.js";
+	import { mistIntegrationBlocks } from "#lib/config/mist-blocks.js";
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
 
-{#each all_mists_integrations as block}
+{#each mistIntegrationBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

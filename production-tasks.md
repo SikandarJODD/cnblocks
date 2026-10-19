@@ -35,7 +35,7 @@
 - [x] Optimize the 2.3 MB homepage image and correct its width/height ratio.
 - [ ] Lazy-load block components and raw code to reduce the 544 KB feature chunk.
 - [ ] Load only required font families and subsets.
-- [ ] Replace `transition-all`, layout-property animations, and missing reduced-motion handling.
+- [x] Replace `transition-all`, layout-property animations, and missing reduced-motion handling.
 - [ ] Fix undersized touch targets, `100vh` auth layouts, and missing autocomplete attributes.
 
 ## AI-readable docs

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
-	import { all_mists_forgot_password } from "#lib/all_mists/forgot_password.js";
+	import { mistForgotPasswordBlocks } from "#lib/config/mist-blocks.js";
 </script>
 
 
-{#each all_mists_forgot_password as block}
+{#each mistForgotPasswordBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

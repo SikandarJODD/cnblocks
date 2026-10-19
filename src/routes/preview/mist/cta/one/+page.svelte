@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_cta } from "#lib/all_mists/cta.js";
-
-	const block = all_mists_cta.find((item) => item.slug === "one");
-
-	if (!block) {
-		throw new Error("Missing preview block for one in all_mists_cta");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mcta/one.svelte";
 </script>
 
 <PreviewComponent />

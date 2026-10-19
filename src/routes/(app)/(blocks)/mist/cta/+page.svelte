@@ -1,8 +1,8 @@
 <script>
-	import { all_mists_cta } from "#lib/all_mists/cta.js";
+	import { mistCtaBlocks } from "#lib/config/mist-blocks.js";
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
-{#each all_mists_cta as block}
+{#each mistCtaBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

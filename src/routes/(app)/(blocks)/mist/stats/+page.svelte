@@ -1,9 +1,9 @@
 <script>
-	import { all_mists_stats } from "#lib/all_mists/stats.js";
+	import { mistStatsBlocks } from "#lib/config/mist-blocks.js";
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
 
-{#each all_mists_stats as block}
+{#each mistStatsBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

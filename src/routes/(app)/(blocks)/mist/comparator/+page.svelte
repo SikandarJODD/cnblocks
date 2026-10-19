@@ -1,8 +1,8 @@
 <script>
-	import { all_mists_comparator } from "#lib/all_mists/comparator.js";
+	import { mistComparatorBlocks } from "#lib/config/mist-blocks.js";
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
-{#each all_mists_comparator as block}
+{#each mistComparatorBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}
