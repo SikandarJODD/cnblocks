@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { page } from "$app/state";
+	import CategoryIntro from "#lib/components/web/CategoryIntro.svelte";
+	import { getCategoryContent } from "#lib/config/category-content.js";
 	import { scrollY } from "svelte/reactivity/window";
 	import Button from "#lib/components/ui/button/button.svelte";
 	import type { Snippet } from "svelte";
@@ -6,10 +9,18 @@
 
 	let { children }: { children: Snippet } = $props();
 	let visible = $derived(typeof scrollY.current === "undefined" ? 600 : scrollY.current > 1200);
+	let categoryContent = $derived(getCategoryContent(page.url.pathname));
 </script>
 
 <div>
 	<section class="rounded-t-2xl">
+		{#if categoryContent}
+			<CategoryIntro
+				category="Mist"
+				name={categoryContent.name}
+				description={categoryContent.description}
+			/>
+		{/if}
 		{@render children()}
 	</section>
 	{#if visible}
