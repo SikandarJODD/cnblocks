@@ -13,8 +13,8 @@
 		<img
 			src="/images/feature.png"
 			alt="Svelte Shadcn Blocks gallery showing a full block preview"
-			width="2552"
-			height="1912"
+			width="2430"
+			height="1800"
 			loading="lazy"
 			decoding="async"
 			class="mx-auto mt-8 w-full max-w-4xl rounded-xl border object-cover"
