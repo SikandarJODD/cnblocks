@@ -10,11 +10,11 @@
 
 ## Main Page
 
-- [ ] Remove the border, rounded corners, and shadow from the main page on mobile.
-- [ ] Improve the line height of the “Originally created by” text in the hero.
-- [ ] Increase the sidebar-trigger and search icon sizes slightly.
-- [ ] Add “sv-blocks” at the top center in a small cursive font.
-- [ ] Add a light/dark-mode toggle button to the top-right corner of the main page.
+- [x] Remove the border, rounded corners, and shadow from the main page on mobile.
+- [x] Improve the line height of the “Originally created by” text in the hero.
+- [x] Increase the sidebar-trigger and search icon sizes slightly.
+- [x] Add “sv-blocks” at the top center in a small cursive font.
+- [x] Add a light/dark-mode toggle button to the top-right corner of the main page.
 
 ## Blocks Page
 

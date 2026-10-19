@@ -5,7 +5,7 @@
 </script>
 
 <section
-	class="relative m-1 flex min-h-[38vh] items-center rounded-2xl border border-ink/10 bg-ink-dim/10 font-docs dark:border-muted dark:bg-background"
+	class="relative flex min-h-[38vh] items-center border-0 border-ink/10 bg-ink-dim/10 font-docs shadow-none md:m-1 md:rounded-2xl md:border dark:border-muted dark:bg-background"
 >
 	<div class="w-full px-6 py-10 md:px-10">
 		<div class="max-w-6xl">
@@ -25,7 +25,7 @@
 				<span class="font-gmono text-foreground">200+</span> Free and Open-Source UI and Marketing
 				blocks for building responsive Svelte websites.
 			</p> -->
-			<p class="mt-6 text-lg text-muted-foreground">
+			<p class="mt-6 text-lg leading-9 text-muted-foreground md:leading-normal">
 				Originally created by <FaviconLink
 					href="https://x.com/MeschacIrung"
 					target="_blank"
