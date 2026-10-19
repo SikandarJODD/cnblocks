@@ -7,22 +7,33 @@
 	import SidebarSupportCard from "./sidebar-support-card.svelte";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
+	const sidebar = Sidebar.useSidebar();
+
+	function closeMobileSidebar() {
+		if (sidebar.isMobile) sidebar.setOpenMobile(false);
+	}
 </script>
 
-<Sidebar.Root bind:ref variant="inset" collapsible="offcanvas" {...restProps}>
+<Sidebar.Root
+	bind:ref
+	variant="inset"
+	collapsible="offcanvas"
+	class="[&[data-mobile=true]]:px-2 [&[data-mobile=true]]:pt-2"
+	{...restProps}
+>
 	<SidebarHeader />
 	<Sidebar.Content class="gap-0 overflow-hidden">
 		<SidebarNavigation />
 	</Sidebar.Content>
 	<!-- <SidebarSupportCard /> -->
-	<p class="px-2 pb-1 text-xs text-muted-foreground">
+	<p class="px-2 pb-3 text-xs text-muted-foreground md:px-0 md:px-2 md:text-xs">
 		Ported by
 		<a
 			href="https://bhide.dev?utm_source=sv-blocks&utm_medium=referral"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="font-cursive text-[13px] text-ink/80 hover:underline dark:text-emerald-500"
-			>Bhide Svelte</a
+			onclick={closeMobileSidebar}>Bhide Svelte</a
 		>
 	</p>
 	<SidebarFooter />

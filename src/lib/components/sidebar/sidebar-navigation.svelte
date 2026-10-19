@@ -13,6 +13,11 @@
 	const pathname = $derived(page.url.pathname);
 	const activeLibrary = $derived(getBlockLibrary(pathname));
 	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
+	const sidebar = Sidebar.useSidebar();
+
+	function closeMobileSidebar() {
+		if (sidebar.isMobile) sidebar.setOpenMobile(false);
+	}
 </script>
 
 <Sidebar.Group class="px-0 pt-0">
@@ -20,11 +25,11 @@
 		<Sidebar.Menu class="gap-0">
 			<Sidebar.MenuItem>
 				<Sidebar.MenuButton
-					class="h-7 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+					class="h-7 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-7 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 					isActive={Boolean(activeLibrary)}
 				>
 					{#snippet child({ props })}
-						<a href="/kit/hero" {...props}>
+						<a href="/kit/hero" {...props} onclick={closeMobileSidebar}>
 							<span>Blocks</span>
 						</a>
 					{/snippet}
@@ -35,16 +40,18 @@
 						<Sidebar.MenuSubItem>
 							{#if library.coming_soon}
 								<div
-									class="flex h-6 items-center pr-1 pl-2 font-mono text-xs font-normal text-muted-foreground/60"
+									class="flex h-8 items-center pr-1 pl-2 font-mono text-sm font-normal text-muted-foreground/60 md:h-6 md:text-xs"
 								>
 									<span>{library.title}</span>
-									<span class="ms-auto text-[10px]">Coming soon..</span>
+									<span class="ms-auto text-xs md:text-[10px]">Coming soon..</span
+									>
 								</div>
 							{:else}
 								<Sidebar.MenuSubButton
 									href={library.href}
 									isActive={activeLibrary?.key === library.key}
-									class="h-6 pr-1 pl-2 font-mono! text-xs! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
+									onclick={closeMobileSidebar}
+									class="h-8 touch-manipulation pr-1 pl-2 font-mono! text-sm! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent md:h-6 md:text-xs! dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
 								>
 									<span>{library.title}</span>
 									<Kbd.Root
@@ -62,19 +69,20 @@
 			{#each primaryNavigation as item}
 				<Sidebar.MenuItem>
 					<Sidebar.MenuButton
-						class="h-7 pr-1 pl-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+						class="h-8 touch-manipulation pr-1 pl-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-7 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 						isActive={!item.coming_soon && isCurrentPath(pathname, item.href)}
 					>
 						{#snippet child({ props })}
 							{#if item.coming_soon}
 								<div {...props}>
 									<span>{item.title}</span>
-									<span class="ms-auto text-[10px] text-muted-foreground/60"
+									<span
+										class="ms-auto text-xs text-muted-foreground/60 md:text-[10px]"
 										>Coming soon..</span
 									>
 								</div>
 							{:else}
-								<a href={item.href} {...props}>
+								<a href={item.href} {...props} onclick={closeMobileSidebar}>
 									<span>{item.title}</span>
 								</a>
 							{/if}
@@ -87,23 +95,23 @@
 </Sidebar.Group>
 
 {#if activeLibrary}
-	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-4">
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-1 md:pt-4">
 		<Sidebar.GroupLabel
-			class="mb-1 h-6 px-1 font-mono text-xs text-ink/70 uppercase dark:text-muted-foreground/80"
+			class="h-6 px-1 font-mono text-sm text-ink/70 uppercase md:mb-1 md:text-xs dark:text-muted-foreground/80"
 		>
 			Categories
 		</Sidebar.GroupLabel>
 		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
 			<div class="no-scrollbar h-full overflow-y-auto scroll-fade-effect-y pb-6">
-				<Sidebar.Menu class="gap-1">
+				<Sidebar.Menu class="gap-0 md:gap-1">
 					{#each activeLibrary.categories as category}
 						<Sidebar.MenuItem>
 							<Sidebar.MenuButton
-								class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+								class="h-8 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-6 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 								isActive={pathname === category.href}
 							>
 								{#snippet child({ props })}
-									<a href={category.href} {...props}>
+									<a href={category.href} {...props} onclick={closeMobileSidebar}>
 										<span>{category.title}</span>
 									</a>
 								{/snippet}
@@ -115,22 +123,22 @@
 		</Sidebar.GroupContent>
 	</Sidebar.Group>
 {:else if docsActive}
-	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-2">
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-1 md:pt-2">
 		<Sidebar.GroupLabel
-			class="mb-1 h-6 px-1 font-mono text-xs text-ink/70 uppercase dark:text-muted-foreground/80 "
+			class="h-6 px-1 font-mono text-sm text-ink/70 uppercase md:mb-1 md:text-xs dark:text-muted-foreground/80 "
 			>Docs</Sidebar.GroupLabel
 		>
 		<Sidebar.GroupContent class="min-h-0 flex-1 overflow-hidden">
 			<div class="no-scrollbar h-full overflow-y-auto scroll-fade-effect-y pb-6">
-				<Sidebar.Menu class="gap-1">
+				<Sidebar.Menu class="gap-0 md:gap-1">
 					{#each docsNavigation as item}
 						<Sidebar.MenuItem>
 							<Sidebar.MenuButton
-								class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+								class="h-9 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-6 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 								isActive={pathname === item.href}
 							>
 								{#snippet child({ props })}
-									<a href={item.href} {...props}>
+									<a href={item.href} {...props} onclick={closeMobileSidebar}>
 										<span>{item.title}</span>
 									</a>
 								{/snippet}
@@ -139,10 +147,10 @@
 					{/each}
 					<Sidebar.MenuItem>
 						<Sidebar.MenuButton
-							class="h-6 px-2 text-[13px] font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent data-active:bg-transparent data-active:font-medium data-active:text-primary"
+							class="h-9 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-6 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 						>
 							{#snippet child({ props })}
-								<a href="/llms.txt" {...props}>
+								<a href="/llms.txt" {...props} onclick={closeMobileSidebar}>
 									<span>LLM Index</span>
 								</a>
 							{/snippet}
