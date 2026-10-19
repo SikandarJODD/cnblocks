@@ -27,8 +27,8 @@
 - [x] Use one verified block count everywhere; remove the current 50+/150+/200+ mismatch.
 - [ ] Keep one homepage `<h1>` and strengthen its supporting product copy.
 - [x] Add unique title, description, canonical, and social metadata to category pages.
-- [ ] Add homepage `WebSite` and `CollectionPage`/`ItemList` structured data.
-- [ ] Add `theme-color`, `color-scheme`, and an Apple touch icon.
+- [x] Add homepage `WebSite` and `CollectionPage`/`ItemList` structured data.
+- [x] Add `theme-color`, `color-scheme`, and an Apple touch icon.
 
 ## Performance and polish
 

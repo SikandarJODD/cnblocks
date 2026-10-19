@@ -5,19 +5,23 @@
 	import FeatureSection from "#lib/web/layouts/FeatureSection.svelte";
 	import FeatureSectionTwo from "#lib/web/layouts/FeatureSectionTwo.svelte";
 	import SiteHero from "#lib/web/layouts/SiteHero.svelte";
+	import { JsonLd } from "svelte-meta-tags";
+
+	const homepageDescription =
+		"Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon.";
 </script>
 
 <svelte:head>
 	<title>Svelte Shadcn Blocks - 200+ UI & Marketing Blocks</title>
 	<meta
 		name="description"
-		content="Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon."
+		content={homepageDescription}
 	/>
 
 	<meta property="og:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
 	<meta
 		property="og:description"
-		content="Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon."
+		content={homepageDescription}
 	/>
 	<meta property="og:image" content={`${projectUrl}/og.png`} />
 	<meta property="og:url" content={projectUrl} />
@@ -26,7 +30,7 @@
 	<meta name="twitter:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
 	<meta
 		name="twitter:description"
-		content="Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon."
+		content={homepageDescription}
 	/>
 	<meta name="twitter:image" content={`${projectUrl}/og.png`} />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -38,6 +42,62 @@
 	<meta name="author" content="Sikandar_Bhide" />
 	<link rel="canonical" href={projectUrl} />
 </svelte:head>
+
+<JsonLd
+	schema={{
+		"@type": "WebSite",
+		"@id": `${projectUrl}/#website`,
+		name: "Svelte Shadcn Blocks",
+		description: homepageDescription,
+		url: projectUrl,
+		inLanguage: "en",
+	}}
+/>
+
+<JsonLd
+	schema={{
+		"@type": "CollectionPage",
+		"@id": `${projectUrl}/#webpage`,
+		name: "Svelte UI and Marketing Block Collections",
+		description: homepageDescription,
+		url: projectUrl,
+		inLanguage: "en",
+		isPartOf: {
+			"@id": `${projectUrl}/#website`,
+		},
+		mainEntity: {
+			"@type": "ItemList",
+			name: "Svelte block collections",
+			numberOfItems: 4,
+			itemListElement: [
+				{
+					"@type": "ListItem",
+					position: 1,
+					name: "Kit blocks",
+					url: `${projectUrl}/kit/hero`,
+				},
+				{
+					"@type": "ListItem",
+					position: 2,
+					name: "Mist blocks",
+					url: `${projectUrl}/mist/hero`,
+				},
+				{
+					"@type": "ListItem",
+					position: 3,
+					name: "Veil blocks",
+					url: `${projectUrl}/veil`,
+				},
+				{
+					"@type": "ListItem",
+					position: 4,
+					name: "Dusk blocks",
+					description: "A new collection of 40 Svelte blocks coming soon.",
+				},
+			],
+		},
+	}}
+/>
 
 <!-- <section>
   <div
