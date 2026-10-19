@@ -8,7 +8,7 @@
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
 	import { transformCodeTreeImports, type ImportAliasStyle } from "./import-alias";
 	// import { CopyButton } from "../ui/copy-button";
-	import { scale } from "svelte/transition";
+	import { scale, slide } from "svelte/transition";
 	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
@@ -447,8 +447,13 @@
 				{/if}
 				{#if hasCode}
 					{#if mode === "code"}
-						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator orientation="vertical" class="my-auto h-4!" />
+						<div
+							in:slide|global={{ axis: "x", duration: 150 }}
+							class="flex items-center gap-2"
+						>
+							<ImportAliasToggle bind:value={importAliasStyle.current} />
+							<Separator orientation="vertical" class="my-auto h-4!" />
+						</div>
 					{/if}
 					<PreviewInstallAdd {itemId} />
 				{/if}
@@ -464,11 +469,11 @@
 		/>
 	</div>
 
-	<div class="relative max-w-full min-w-0 overflow-hidden">
+	<div class="relative max-w-full min-w-0 overflow-hidden px-2 md:px-0">
 		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
 			<div
 				class={cn(
-					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-white dark:border-muted dark:bg-muted/50!",
+					"mx-0 overflow-hidden rounded-2xl border border-neutral-200/70 bg-white md:mx-1 dark:border-muted dark:bg-muted/50!",
 					mode === "code" && "hidden"
 				)}
 			>

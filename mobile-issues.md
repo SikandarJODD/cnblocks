@@ -18,6 +18,6 @@
 
 ## Blocks Page
 
-- [ ] Remove horizontal padding from the Mist and standard block previews.
-- [ ] Use the existing preview and code icons in both block-preview variants.
-- [ ] Use `ui/dropdown`, make it more compact, and remove the dropdown-content shadow.
+- [x] Add horizontal padding to the Mist and standard block previews.
+- [x] Use the existing preview and code icons in both mobile toolbar buttons.
+- [x] Use `ui/dropdown`, make it more compact, and remove the dropdown-content shadow inside mobile preview toolbar.

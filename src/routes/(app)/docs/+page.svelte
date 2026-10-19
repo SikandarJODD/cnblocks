@@ -104,9 +104,9 @@
 					faviconSrc="https://www.google.com/s2/favicons?domain=tailark.com&sz=128"
 				>
 					Tailark
-				</FaviconLink>.
+				</FaviconLink>
 			</Paragraph>
-			<Paragraph class="max-w-prose">
+			<Paragraph class="max-w-prose leading-7 lg:leading-normal!">
 				Originally created by <FaviconLink
 					href="https://x.com/MeschacIrung"
 					target="_blank"
@@ -118,7 +118,7 @@
 					href="https://bhide.dev?utm_source=svelte-marketing-blocks"
 					target="_blank"
 					rel="noreferrer"
-					class="rounded-sm bg-ink/10 px-1.5 text-ink/80 transition-colors duration-200 hover:text-ink dark:bg-[oklch(0.654_0.234_34.196)]/15 dark:text-[oklch(0.654_0.234_34.196)] dark:hover:bg-[oklch(0.654_0.234_34.196)]/25 dark:hover:text-[oklch(0.72_0.19_34.196)]"
+					class="rounded-sm text-ink/80 transition-colors duration-200 hover:text-ink lg:bg-ink/10 lg:px-1.5 dark:text-[oklch(0.654_0.234_34.196)] dark:hover:bg-[oklch(0.654_0.234_34.196)]/25 dark:hover:text-[oklch(0.72_0.19_34.196)] lg:dark:bg-[oklch(0.654_0.234_34.196)]/15"
 				>
 					Bhide Svelte
 				</FaviconLink>
