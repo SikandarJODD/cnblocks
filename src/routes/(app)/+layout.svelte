@@ -40,10 +40,8 @@
 						: "bg-white dark:bg-muted/50"
 			)}
 		>
-			{#if isLandingPage}
-				<MobileHeader />
-			{/if}
-			<SidebarCollapsedToolbar showOnMobile={!isLandingPage} />
+			<MobileHeader />
+			<SidebarCollapsedToolbar showOnMobile={false} />
 			<!-- <Header /> -->
 			{@render children()}
 			{#if !isDocsPath}

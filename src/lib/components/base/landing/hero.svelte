@@ -17,28 +17,28 @@
 			>
 				200+ UI & Marketing Blocks for Svelte
 			</h1>
-			<p class="mt-4 max-w-3xl text-lg text-muted-foreground">
+			<!-- <p class="mt-4 max-w-3xl text-lg text-muted-foreground">
 				Including 40 new blocks from the Dusk collection, coming soon.
-			</p>
+			</p> -->
 
 			<!-- <p class="mt-4 text-xl! text-muted-foreground">
 				<span class="font-gmono text-foreground">200+</span> Free and Open-Source UI and Marketing
 				blocks for building responsive Svelte websites.
 			</p> -->
-			<p class="mt-6 text-lg leading-9 text-muted-foreground md:leading-normal">
+			<p class="mt-6 text-lg leading-8 text-muted-foreground md:leading-normal">
 				Originally created by <FaviconLink
 					href="https://x.com/MeschacIrung"
 					target="_blank"
 					rel="noreferrer"
 					faviconSrc="https://www.google.com/s2/favicons?domain=irung.me&sz=128"
-					class="rounded-full bg-muted pr-2.5 pl-1.5"
+					class="rounded-full lg:bg-muted lg:pr-2.5 lg:pl-1.5"
 				>
 					Méschac Irung
 				</FaviconLink> and ported to Svelte by <FaviconLink
 					href="https://bhide.dev?utm_source=svelte-marketing-blocks"
 					target="_blank"
 					rel="noreferrer"
-					class="rounded-full bg-ink/10 pr-2.5 pl-1.5 text-ink/80 transition-colors duration-200 hover:text-ink dark:bg-[oklch(0.654_0.234_34.196)]/15 dark:text-[oklch(0.654_0.234_34.196)] dark:hover:bg-[oklch(0.654_0.234_34.196)]/25 dark:hover:text-[oklch(0.72_0.19_34.196)]"
+					class="rounded-full text-ink/80 transition-colors duration-200 hover:text-ink lg:bg-ink/10 lg:pr-2.5 lg:pl-1.5 dark:text-primary dark:hover:bg-[oklch(0.654_0.234_34.196)]/25 dark:hover:text-[oklch(0.72_0.19_34.196)] lg:dark:bg-[oklch(0.654_0.234_34.196)]/15 lg:dark:text-[oklch(0.654_0.234_34.196)]"
 					imageClass="rounded-full"
 				>
 					Bhide Svelte

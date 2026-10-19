@@ -3,7 +3,12 @@
 	import { mode, toggleMode } from "mode-watcher";
 </script>
 
-<Button onclick={toggleMode} class="cursor-pointer rounded-full" variant="ghost" size="icon">
+<Button
+	onclick={toggleMode}
+	class="cursor-pointer rounded-full active:not-aria-[haspopup]:translate-y-0"
+	variant="ghost"
+	size="icon"
+>
 	<!-- Sun Icon -->
 	{#if mode.current === "light"}
 		<svg

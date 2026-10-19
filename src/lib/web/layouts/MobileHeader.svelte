@@ -4,11 +4,11 @@
 	import ThemeToggle from "./ThemeToggle.svelte";
 </script>
 
-<header class="relative flex h-10 shrink-0 items-center justify-between px-2 md:hidden">
+<header
+	class="sticky top-0 z-20 flex h-12 shrink-0 items-center justify-between bg-background/80 px-2 backdrop-blur-md md:hidden"
+>
 	<div class="flex items-center">
-		<Sidebar.Trigger
-			class="size-9 touch-manipulation text-muted-foreground [&_svg]:size-6"
-		/>
+		<Sidebar.Trigger class="size-9 touch-manipulation text-muted-foreground [&_svg]:size-6" />
 		<SidebarSearch class="size-9 [&_svg]:size-5!" />
 	</div>
 
@@ -20,7 +20,7 @@
 		sv-blocks
 	</a>
 
-	<div class="ms-auto [&_button]:size-9 [&_svg]:size-5!">
+	<div class="ms-auto mr-2 [&_button]:size-8 [&_svg]:size-4!">
 		<ThemeToggle />
 	</div>
 </header>
