@@ -40,7 +40,7 @@
 						<Sidebar.MenuSubItem>
 							{#if library.coming_soon}
 								<div
-									class="flex h-8 items-center pr-1 pl-2 font-mono text-sm font-normal text-muted-foreground/60 md:h-6 md:text-xs"
+									class="flex h-8 items-center pr-1 pl-2 font-mono text-xs font-normal text-muted-foreground/60 md:h-6 md:text-xs"
 								>
 									<span>{library.title}</span>
 									<span class="ms-auto text-xs md:text-[10px]">Coming soon..</span
@@ -50,8 +50,7 @@
 								<Sidebar.MenuSubButton
 									href={library.href}
 									isActive={activeLibrary?.key === library.key}
-									onclick={closeMobileSidebar}
-									class="h-8 touch-manipulation pr-1 pl-2 font-mono! text-sm! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent md:h-6 md:text-xs! dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
+									class="h-8 touch-manipulation pr-1 pl-2 font-mono! text-xs! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent md:h-6 md:text-xs! dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
 								>
 									<span>{library.title}</span>
 									<Kbd.Root
@@ -82,7 +81,11 @@
 									>
 								</div>
 							{:else}
-								<a href={item.href} {...props} onclick={closeMobileSidebar}>
+								<a
+									href={item.href}
+									{...props}
+									onclick={item.href === "/docs" ? undefined : closeMobileSidebar}
+								>
 									<span>{item.title}</span>
 								</a>
 							{/if}

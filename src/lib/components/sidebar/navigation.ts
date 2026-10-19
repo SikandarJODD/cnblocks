@@ -69,19 +69,19 @@ export const blockLibraries: BlockLibrary[] = [
 		categories: veilCategories,
 		count: withTotal(veilCategories),
 	},
-	{
-		key: "dusk",
-		title: "Dusk",
-		href: "/dusk",
-		coming_soon: true,
-		categories: [],
-		count: 40,
-	},
+	// {
+	// 	key: "dusk",
+	// 	title: "Dusk",
+	// 	href: "/dusk",
+	// 	coming_soon: true,
+	// 	categories: [],
+	// 	count: 40,
+	// },
 ];
 
 export const primaryNavigation: NavigationItem[] = [
 	{ title: "Pages", href: "/", coming_soon: true },
-	{ title: "Templates", href: "/templates", coming_soon: true },
+	// { title: "Templates", href: "/templates", coming_soon: true },
 	{ title: "Docs", href: "/docs" },
 	{ title: "More Projects", href: "/projects" },
 ];

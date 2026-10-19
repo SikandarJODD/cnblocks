@@ -26,7 +26,7 @@
 		<SidebarNavigation />
 	</Sidebar.Content>
 	<!-- <SidebarSupportCard /> -->
-	<p class="px-2 pb-3 text-xs text-muted-foreground md:px-0 md:px-2 md:text-xs">
+	<p class="px-2 pb-3 text-xs text-muted-foreground md:text-xs">
 		Ported by
 		<a
 			href="https://bhide.dev?utm_source=sv-blocks&utm_medium=referral"

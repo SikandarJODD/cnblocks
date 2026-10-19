@@ -6,7 +6,7 @@
 - [x] Increase the mobile sidebar font size.
 - [x] Increase the search, close-sidebar, and main-logo icon sizes on mobile.
 - [x] Increase the GitHub, X/Twitter, and light/dark-mode icon sizes in the mobile sidebar footer.
-- [x] Close the sidebar when clicking a link in the mobile sidebar.
+- [x] Close the mobile sidebar for category/content links, but keep it open for Kit, Mist, Veil, and Docs.
 
 ## Main Page
 

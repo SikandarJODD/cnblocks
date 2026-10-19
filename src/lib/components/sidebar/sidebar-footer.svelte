@@ -51,9 +51,7 @@
 				/>
 			</svg>
 		</a>
-		<div
-			class="ms-auto [&_button]:size-10 [&_button]:touch-manipulation md:[&_button]:size-8 [&_svg]:size-[18px]! md:[&_svg]:size-[1.2rem]!"
-		>
+		<div class="ms-auto [&_button]:size-10 [&_button]:touch-manipulation md:[&_button]:size-8">
 			<ThemeToggle />
 		</div>
 	</div>

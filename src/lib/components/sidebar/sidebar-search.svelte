@@ -72,11 +72,11 @@
 	bind:ref={triggerRef}
 	variant="ghost"
 	size="icon-sm"
-	class={cn("size-10 touch-manipulation text-muted-foreground md:size-8", className)}
+	class={cn("size-7 touch-manipulation text-muted-foreground md:size-7", className)}
 	aria-label="Search components"
 	onclick={showSearch}
 >
-	<SearchIcon class="size-[18px] md:size-4" />
+	<SearchIcon class="size-4 md:size-4" />
 </Button>
 
 <Command.Dialog bind:open>

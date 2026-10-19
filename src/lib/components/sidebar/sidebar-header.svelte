@@ -17,7 +17,7 @@
 			size="icon-sm"
 			variant="ghost"
 			href="/"
-			class="size-10 touch-manipulation rounded-md p-0 md:size-8 [&_svg]:size-[22px]"
+			class="size-8 touch-manipulation rounded-md p-0 md:size-7"
 			aria-label="Go to homepage"
 			onclick={closeMobileSidebar}
 		>
@@ -25,9 +25,7 @@
 		</Button>
 		<div class="flex items-center gap-0">
 			<SidebarSearch />
-			<Sidebar.Trigger
-				class="size-10 touch-manipulation text-muted-foreground md:size-8 [&_svg]:size-6 md:[&_svg]:size-6"
-			/>
+			<Sidebar.Trigger class="size-7 touch-manipulation text-muted-foreground md:size-7" />
 		</div>
 	</div>
 </Sidebar.Header>
