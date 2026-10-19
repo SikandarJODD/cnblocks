@@ -3,10 +3,10 @@ import type { MetaTagsProps } from "svelte-meta-tags";
 export const projectUrl = "https://sv-blocks.vercel.app";
 
 export let seoMetaTags: MetaTagsProps = {
-	title: "Svelte Shadcn Blocks - 50+ Marketing UI Components",
+	title: "Svelte Shadcn Blocks - 200+ UI & Marketing Blocks",
 	titleTemplate: "%s | Svelte Shadcn Blocks",
 	description:
-		"Build beautiful websites faster with 50+ ready-to-use marketing UI components built with Svelte, Tailwind CSS, and Shadcn. Perfect for SaaS, startups, portfolios, and landing pages.",
+		"Build beautiful websites faster with 200+ UI and marketing blocks built with Svelte, Tailwind CSS, and shadcn-svelte, including 40 new Dusk blocks coming soon.",
 	keywords: [
 		"Svelte UI components",
 		"Svelte marketing components",
@@ -61,7 +61,7 @@ export let seoMetaTags: MetaTagsProps = {
 	],
 	twitter: {
 		cardType: "summary_large_image",
-		title: "Svelte Shadcn Blocks - 50+ Marketing UI Components",
+		title: "Svelte Shadcn Blocks - 200+ UI & Marketing Blocks",
 		description:
 			"Supercharge your Svelte projects with reusable, customizable, and aesthetic marketing components powered by Tailwind CSS and Shadcn.",
 		image: `${projectUrl}/og.png`,
@@ -71,9 +71,9 @@ export let seoMetaTags: MetaTagsProps = {
 	openGraph: {
 		url: projectUrl,
 		type: "website",
-		title: "Svelte Shadcn Blocks - 50+ Marketing UI Components",
+		title: "Svelte Shadcn Blocks - 200+ UI & Marketing Blocks",
 		description:
-			"A collection of 50+ elegant, responsive, and copy-paste ready UI blocks for marketing websites. Designed with Tailwind CSS and powered by Svelte + Shadcn.",
+			"A collection of 200+ responsive, copy-ready UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon.",
 		siteName: "Svelte Shadcn Blocks",
 		images: [
 			{

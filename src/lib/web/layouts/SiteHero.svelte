@@ -134,7 +134,7 @@
 								>
 							</div>
 							Svelte Shadcn Blocks<br />
-							150+ UI & Marketing Blocks
+							200+ UI & Marketing Blocks
 						</h1>
 						<p
 							class="mx-auto mt-6 max-w-3xl text-sm text-balance text-muted-foreground md:mt-10 md:text-lg"

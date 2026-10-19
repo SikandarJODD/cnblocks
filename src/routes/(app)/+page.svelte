@@ -8,25 +8,25 @@
 </script>
 
 <svelte:head>
-	<title>Svelte Shadcn Blocks - 150+ UI & Marketing Blocks</title>
+	<title>Svelte Shadcn Blocks - 200+ UI & Marketing Blocks</title>
 	<meta
 		name="description"
-		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
+		content="Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon."
 	/>
 
-	<meta property="og:title" content="Svelte Shadcn Blocks - 50+ UI & Marketing Blocks" />
+	<meta property="og:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
 	<meta
 		property="og:description"
-		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
+		content="Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon."
 	/>
 	<meta property="og:image" content={`${projectUrl}/og.png`} />
 	<meta property="og:url" content={projectUrl} />
 	<meta property="og:type" content="website" />
 
-	<meta name="twitter:title" content="Svelte Shadcn Blocks - 50+ UI & Marketing Blocks" />
+	<meta name="twitter:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
 	<meta
 		name="twitter:description"
-		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
+		content="Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon."
 	/>
 	<meta name="twitter:image" content={`${projectUrl}/og.png`} />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -48,7 +48,7 @@
         Svelte Shadcn Blocks
       </h1>
       <h2 class="text-balance text-3xl sm:mt-1 font-bold sm:text-4xl">
-        50+ Pre-built UI & Marketing Blocks
+        200+ Pre-built UI & Marketing Blocks
       </h2>
       <p class="mb-6 mt-3 text-base font-montserrat text-muted-foreground">
         Speed up your workflow with responsive, pre-built UI blocks designed for

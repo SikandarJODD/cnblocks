@@ -2,19 +2,20 @@
 
 ![Svelte Shadcn Blocks](https://sv-blocks.vercel.app/og.png)
 
-200+ production-ready marketing blocks for building polished, accessible Svelte landing pages.
+200+ production-ready marketing blocks for building polished, accessible Svelte landing pages, including 40 new Dusk blocks coming soon.
 
-## 3 variants
+## Collections
 
 | Variant | Design direction                                                           | Blocks | Browse                                            |
 | ------- | -------------------------------------------------------------------------- | -----: | ------------------------------------------------- |
 | Kit     | Versatile marketing sections with bold layouts and visuals                 |     81 | [Explore](https://sv-blocks.vercel.app/kit/hero)  |
 | Mist    | Clean, restrained sections for product, marketing, and documentation sites |     51 | [Explore](https://sv-blocks.vercel.app/mist/hero) |
 | Veil    | Refined SaaS sections with stronger contrast and polished details          |     60 | [Explore](https://sv-blocks.vercel.app/veil/hero) |
+| Dusk    | A new collection of UI and marketing blocks                               |     40 | Coming soon                                        |
 
 ## Features
 
-- 200+ marketing and application blocks across three visual variants
+- 200+ marketing and application blocks across four collections, including Dusk coming soon
 - Built for Svelte 5, shadcn-svelte, and Tailwind CSS v4
 - Responsive layouts with light and dark mode support
 - Live previews and copy-ready source code

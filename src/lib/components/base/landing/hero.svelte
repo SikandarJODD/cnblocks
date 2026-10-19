@@ -15,8 +15,11 @@
 			<h1
 				class="mt-3 font-gmono text-3xl font-semibold tracking-tight text-balance text-ink sm:text-5xl dark:text-emerald-500"
 			>
-				200+ UI & Marketing Components for Svelte
+				200+ UI & Marketing Blocks for Svelte
 			</h1>
+			<p class="mt-4 max-w-3xl text-lg text-muted-foreground">
+				Including 40 new blocks from the Dusk collection, coming soon.
+			</p>
 
 			<!-- <p class="mt-4 text-xl! text-muted-foreground">
 				<span class="font-gmono text-foreground">200+</span> Free and Open-Source UI and Marketing

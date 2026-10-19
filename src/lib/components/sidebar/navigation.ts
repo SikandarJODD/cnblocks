@@ -15,7 +15,7 @@ export type CategoryItem = NavigationItem & {
 };
 
 export type BlockLibrary = NavigationItem & {
-	key: "kit" | "mist" | "veil";
+	key: "kit" | "mist" | "veil" | "dusk";
 	categories: CategoryItem[];
 	count: number;
 };
@@ -68,6 +68,14 @@ export const blockLibraries: BlockLibrary[] = [
 		href: "/veil/hero",
 		categories: veilCategories,
 		count: withTotal(veilCategories),
+	},
+	{
+		key: "dusk",
+		title: "Dusk",
+		href: "/dusk",
+		coming_soon: true,
+		categories: [],
+		count: 40,
 	},
 ];
 
