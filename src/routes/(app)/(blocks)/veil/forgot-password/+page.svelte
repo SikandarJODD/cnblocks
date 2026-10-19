@@ -3,7 +3,6 @@
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
-
 {#each all_veils_forgot_password as block}
 	<MistBlockPreview {...block} />
 {/each}

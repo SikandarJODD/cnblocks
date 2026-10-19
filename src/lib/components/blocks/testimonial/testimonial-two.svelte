@@ -15,7 +15,9 @@
 			</p>
 		</div>
 
-		<div class="grid gap-4 *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
+		<div
+			class="grid gap-4 *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2"
+		>
 			<Card
 				class="grid grid-rows-[auto_1fr] gap-8 bg-muted sm:col-span-2 sm:p-6 lg:row-span-2 dark:bg-zinc-900"
 			>

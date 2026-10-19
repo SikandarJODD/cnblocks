@@ -50,7 +50,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-one",
 		component: FeatureOne,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "one.svelte", code: FeatureOneCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "one.svelte",
+				code: FeatureOneCode,
+				lang: "svelte",
+			},
 			{ path: "feature-table.svelte", code: FeatureTable, lang: "svelte" },
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 		]),
@@ -64,7 +69,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-two",
 		component: FeatureTwo,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "two.svelte", code: FeatureTwoCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "two.svelte",
+				code: FeatureTwoCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 		]),
 	},
@@ -77,7 +87,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-three",
 		component: FeatureThree,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "three.svelte", code: FeatureThreeCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "three.svelte",
+				code: FeatureThreeCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),
@@ -91,7 +106,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-four",
 		component: FeatureFour,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "four.svelte", code: FeatureFourCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "four.svelte",
+				code: FeatureFourCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),
@@ -105,7 +125,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-five",
 		component: FeatureFive,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "five.svelte", code: FeatureFiveCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "five.svelte",
+				code: FeatureFiveCode,
+				lang: "svelte",
+			},
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),
 	},
@@ -118,7 +143,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-six",
 		component: FeatureSix,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "six.svelte", code: FeatureSixCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "six.svelte",
+				code: FeatureSixCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),
@@ -132,7 +162,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-seven",
 		component: FeatureSeven,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "seven.svelte", code: FeatureSevenCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "seven.svelte",
+				code: FeatureSevenCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),
@@ -146,7 +181,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-eight",
 		component: FeatureEight,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "eight.svelte", code: FeatureEightCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "eight.svelte",
+				code: FeatureEightCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 		]),
 	},
@@ -159,7 +199,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-nine",
 		component: FeatureNine,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "nine.svelte", code: FeatureNineCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "nine.svelte",
+				code: FeatureNineCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),
@@ -173,7 +218,12 @@ export const all_mists_features: MistBlock[] = [
 		itemId: "feature-ten",
 		component: FeatureTen,
 		codeTree: createSimpleMistCodeTree([
-			{ path: "feature.svelte", folderName: "ten.svelte", code: FeatureTenCode, lang: "svelte" },
+			{
+				path: "feature.svelte",
+				folderName: "ten.svelte",
+				code: FeatureTenCode,
+				lang: "svelte",
+			},
 			{ path: "ui/card.svelte", code: CardCode, lang: "svelte", highlight: [10] },
 			{ path: "ui/button.svelte", code: ButtonCode, lang: "svelte" },
 		]),

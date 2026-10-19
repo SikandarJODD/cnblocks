@@ -33,9 +33,7 @@
 			</p>
 		</div>
 
-		<div
-			class="mt-8 grid gap-6 *:border-none *:shadow-none md:mt-20 md:grid-cols-3"
-		>
+		<div class="mt-8 grid gap-6 *:border-none *:shadow-none md:mt-20 md:grid-cols-3">
 			<Card.Root class="flex flex-col bg-muted dark:bg-zinc-900">
 				<Card.Header>
 					<Card.Title class="font-medium">Free</Card.Title>

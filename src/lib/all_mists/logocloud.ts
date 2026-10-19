@@ -12,10 +12,30 @@ import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
 const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mlogocloud");
 
 const logoCodeFiles = [
-	{ path: "logos/hulu.svelte", sourcePath: "svgs/hulu.svelte", code: HuluLogoCode, lang: "svelte" },
-	{ path: "logos/spotify.svelte", sourcePath: "svgs/spotify.svelte", code: SpotifyLogoCode, lang: "svelte" },
-	{ path: "logos/supabase-full.svelte", sourcePath: "svgs/supabase-full.svelte", code: SupabaseFullLogoCode, lang: "svelte" },
-	{ path: "logos/vercel-full.svelte", sourcePath: "svgs/vercel-full.svelte", code: VercelFullLogoCode, lang: "svelte" },
+	{
+		path: "logos/hulu.svelte",
+		sourcePath: "svgs/hulu.svelte",
+		code: HuluLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/spotify.svelte",
+		sourcePath: "svgs/spotify.svelte",
+		code: SpotifyLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/supabase-full.svelte",
+		sourcePath: "svgs/supabase-full.svelte",
+		code: SupabaseFullLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/vercel-full.svelte",
+		sourcePath: "svgs/vercel-full.svelte",
+		code: VercelFullLogoCode,
+		lang: "svelte",
+	},
 ] as const;
 
 export const all_mists_logocloud: MistBlock[] = [

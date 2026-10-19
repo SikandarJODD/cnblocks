@@ -48,4 +48,3 @@ Registry indexes:
 - Kit: https://sv-blocks.vercel.app/r/index.json
 - Mist: https://sv-blocks.vercel.app/m/index.json
 - Veil: https://sv-blocks.vercel.app/v/index.json
-

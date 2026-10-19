@@ -16,7 +16,7 @@ Set the theme name and scope on the root body element in `src/app.html`:
 
 ```html
 <body data-theme="mist" class="theme-container">
-	<div style="display: contents">%sveltekit.body%</div>
+  <div style="display: contents">%sveltekit.body%</div>
 </body>
 ```
 
@@ -34,7 +34,7 @@ Import components from their Mist paths. Example:
 
 ```svelte
 <script lang="ts">
-	import { Button } from "$lib/components/ui/mist/button/index.js";
+  import { Button } from "$lib/components/ui/mist/button/index.js";
 </script>
 
 <Button variant="neutral">Continue</Button>
@@ -51,4 +51,3 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
 ```
 
 Registry index: https://sv-blocks.vercel.app/m/index.json
-

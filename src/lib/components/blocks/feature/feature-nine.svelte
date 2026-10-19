@@ -129,11 +129,7 @@
 {#snippet Map()}
 	{@const viewBox = "0 0 120 60"}
 
-	<svg
-		{viewBox}
-		class="bg-background"
-		xmlns="http://www.w3.org/2000/svg"
-	>
+	<svg {viewBox} class="bg-background" xmlns="http://www.w3.org/2000/svg">
 		{#each points as point, index}
 			<circle cx={point.x} cy={point.y} r={svgOptions.radius} fill={svgOptions.color} />
 		{/each}

@@ -64,18 +64,14 @@
 	let isLoading = $state(true);
 	let isCodeLoading = $state(false);
 	let codeLoadError = $state<string | null>(null);
-	let loadedCode = $state<BlockCodeInput | BlockCodeInput[] | undefined>(
-		untrack(() => code)
-	);
+	let loadedCode = $state<BlockCodeInput | BlockCodeInput[] | undefined>(untrack(() => code));
 	let loadedCodeTree = $state<BlockCodeTree | undefined>(untrack(() => codeTree));
 	let codeLoadPromise: Promise<void> | undefined;
 	let importAliasStyle = new PersistedState<ImportAliasStyle>(
 		"sveltekit-import-alias-style",
 		"dollar"
 	);
-	let sourceCodeTree = $derived(
-		loadedCodeTree ?? createBlockCodeTreeFromCode(loadedCode)
-	);
+	let sourceCodeTree = $derived(loadedCodeTree ?? createBlockCodeTreeFromCode(loadedCode));
 	let displayedCodeTree = $derived(
 		transformCodeTreeImports(sourceCodeTree, importAliasStyle.current)
 	);
@@ -203,8 +199,8 @@
 		const forwardShortcutToPage = (event: KeyboardEvent) => {
 			const target = event.target as HTMLElement | null;
 			const isEditable =
-			target?.isContentEditable ||
-			["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName ?? "");
+				target?.isContentEditable ||
+				["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName ?? "");
 			const isSidebarShortcut =
 				event.key === "b" &&
 				!event.metaKey &&
@@ -621,7 +617,7 @@
 					"mx-1 overflow-hidden rounded-2xl border border-neutral-200/70 bg-muted! transition-opacity duration-150 ease-out motion-reduce:transition-none dark:border-muted dark:bg-muted/50!",
 					mode === "code"
 						? "pointer-events-none invisible absolute inset-x-0 top-0 opacity-0"
-						: "relative visible opacity-100"
+						: "visible relative opacity-100"
 				)}
 				aria-hidden={mode === "code"}
 			>
@@ -684,13 +680,13 @@
 				{#if mode === "code"}
 					{#if isCodeLoading}
 						<div
-							class="animate-in fade-in-0 flex min-h-80 items-center justify-center text-sm text-muted-foreground duration-150 ease-out motion-reduce:animate-none"
+							class="flex min-h-80 animate-in items-center justify-center text-sm text-muted-foreground duration-150 ease-out fade-in-0 motion-reduce:animate-none"
 						>
 							Loading code…
 						</div>
 					{:else if codeLoadError}
 						<div
-							class="animate-in fade-in-0 flex min-h-80 flex-col items-center justify-center gap-3 text-sm duration-150 ease-out motion-reduce:animate-none"
+							class="flex min-h-80 animate-in flex-col items-center justify-center gap-3 text-sm duration-150 ease-out fade-in-0 motion-reduce:animate-none"
 						>
 							<p class="text-destructive">{codeLoadError}</p>
 							<Button variant="outline" size="sm" onclick={() => void loadCode()}>
@@ -699,7 +695,7 @@
 						</div>
 					{:else}
 						<div
-							class="animate-in fade-in-0 duration-150 ease-out motion-reduce:animate-none"
+							class="animate-in duration-150 ease-out fade-in-0 motion-reduce:animate-none"
 						>
 							<CodeEditor codeTree={displayedCodeTree} />
 						</div>

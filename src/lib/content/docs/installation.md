@@ -53,4 +53,3 @@ The CLI copies the block and its dependencies into your project. You own the gen
 - Mist theme setup: https://sv-blocks.vercel.app/docs/mist-theme.md
 - Veil theme setup: https://sv-blocks.vercel.app/docs/veil-theme.md
 - Browse Kit blocks: https://sv-blocks.vercel.app/kit/hero
-

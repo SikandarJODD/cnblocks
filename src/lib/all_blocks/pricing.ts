@@ -132,7 +132,11 @@ export const pricing: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "pricing-three.svelte", code: PricingThreeCode, lang: "svelte" },
-				{ path: "folder-structure.md", code: PricingThreeFolderStructure, lang: "markdown" },
+				{
+					path: "folder-structure.md",
+					code: PricingThreeFolderStructure,
+					lang: "markdown",
+				},
 			],
 			{ defaultOpen: false }
 		),

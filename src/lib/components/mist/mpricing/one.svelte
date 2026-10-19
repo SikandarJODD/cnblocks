@@ -52,7 +52,11 @@
 						<div class="mt-6 flex items-center gap-8 **:fill-foreground">
 							<VercelFull class="h-5 w-[76px]" />
 							<Spotify aria-label="Spotify" role="img" class="h-[22px] w-[73px]" />
-							<SupabaseFull aria-label="Supabase" role="img" class="h-[22px] w-auto" />
+							<SupabaseFull
+								aria-label="Supabase"
+								role="img"
+								class="h-[22px] w-auto"
+							/>
 						</div>
 					</div>
 				</div>

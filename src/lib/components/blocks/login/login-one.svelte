@@ -5,10 +5,7 @@
 </script>
 
 <section class="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
-	<form
-		action=""
-		class="m-auto h-fit w-full max-w-sm rounded-xl border bg-card p-0.5 shadow-md"
-	>
+	<form action="" class="m-auto h-fit w-full max-w-sm rounded-xl border bg-card p-0.5 shadow-md">
 		<div class="p-8 pb-6">
 			<div>
 				<a href="/" aria-label="go home">

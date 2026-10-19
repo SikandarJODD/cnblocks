@@ -98,8 +98,7 @@ export const mistFooterBlocks = createMistBlocks(
 export const mistForgotPasswordBlocks = createMistBlocks(
 	"forgot-password",
 	[["one", "Forgot Password One"]],
-	async () =>
-		(await import("#lib/all_mists/forgot_password.js")).all_mists_forgot_password
+	async () => (await import("#lib/all_mists/forgot_password.js")).all_mists_forgot_password
 );
 
 export const mistHeroBlocks = createMistBlocks(

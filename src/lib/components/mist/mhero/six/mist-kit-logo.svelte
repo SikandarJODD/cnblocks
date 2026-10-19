@@ -13,6 +13,10 @@
 	)}
 >
 	<BookOpen class="size-6 mask-b-from-25% fill-white stroke-white drop-shadow-sm" />
-	<BookOpen class="absolute inset-0 m-auto size-6 fill-white stroke-white opacity-65 drop-shadow-sm" />
-	<div class="absolute inset-2 z-1 m-auto h-4.5 w-px translate-y-px rounded-full bg-black/10"></div>
+	<BookOpen
+		class="absolute inset-0 m-auto size-6 fill-white stroke-white opacity-65 drop-shadow-sm"
+	/>
+	<div
+		class="absolute inset-2 z-1 m-auto h-4.5 w-px translate-y-px rounded-full bg-black/10"
+	></div>
 </div>

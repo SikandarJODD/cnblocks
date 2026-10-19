@@ -7,8 +7,25 @@
 	aria-hidden="true"
 	focusable="false"
 >
-	<path d="M22 18c0 2.8-1.2 4-4 4s-4-1.2-4-4 1.2-4 4-4 4 1.2 4 4Z" stroke="currentColor" stroke-width="1.5" />
-	<path d="M22 10c0 2.8-1.2 4-4 4s-4-1.2-4-4 1.2-4 4-4 4 1.2 4 4Z" stroke="currentColor" stroke-width="1.5" />
-	<path d="M14 18c0 2.8-1.2 4-4 4s-4-1.2-4-4 1.2-4 4-4 4 1.2 4 4Z" stroke="currentColor" stroke-width="1.5" />
-	<path d="M10 6c0 2.8-1.2 4-4 4S2 8.8 2 6s1.2-4 4-4 4 1.2 4 4Z" stroke="currentColor" stroke-width="1.5" opacity=".4" />
+	<path
+		d="M22 18c0 2.8-1.2 4-4 4s-4-1.2-4-4 1.2-4 4-4 4 1.2 4 4Z"
+		stroke="currentColor"
+		stroke-width="1.5"
+	/>
+	<path
+		d="M22 10c0 2.8-1.2 4-4 4s-4-1.2-4-4 1.2-4 4-4 4 1.2 4 4Z"
+		stroke="currentColor"
+		stroke-width="1.5"
+	/>
+	<path
+		d="M14 18c0 2.8-1.2 4-4 4s-4-1.2-4-4 1.2-4 4-4 4 1.2 4 4Z"
+		stroke="currentColor"
+		stroke-width="1.5"
+	/>
+	<path
+		d="M10 6c0 2.8-1.2 4-4 4S2 8.8 2 6s1.2-4 4-4 4 1.2 4 4Z"
+		stroke="currentColor"
+		stroke-width="1.5"
+		opacity=".4"
+	/>
 </svg>

@@ -105,7 +105,7 @@
 				</a>
 			</div>
 			<div
-				class="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-[opacity,filter] duration-500 group-hover:opacity-50 group-hover:blur-xs motion-reduce:transition-none sm:gap-x-16 sm:gap-y-14 md:grid-cols-4 **:fill-foreground"
+				class="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-[opacity,filter] duration-500 **:fill-foreground group-hover:opacity-50 group-hover:blur-xs motion-reduce:transition-none sm:gap-x-16 sm:gap-y-14 md:grid-cols-4"
 			>
 				<div class="flex items-center">
 					<Bolt class="mx-auto h-5 w-full" />

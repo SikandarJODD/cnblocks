@@ -3,7 +3,6 @@
 	import { mistSignupBlocks } from "#lib/config/mist-blocks.js";
 </script>
 
-
 {#each mistSignupBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

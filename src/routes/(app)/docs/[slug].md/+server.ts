@@ -1,8 +1,4 @@
-import {
-	isMarkdownDocSlug,
-	markdownDocs,
-	markdownDocSlugs,
-} from "#lib/content/docs/index.js";
+import { isMarkdownDocSlug, markdownDocs, markdownDocSlugs } from "#lib/content/docs/index.js";
 import { error } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types.js";
 
@@ -22,4 +18,3 @@ export const GET: RequestHandler = ({ params }) => {
 		},
 	});
 };
-

@@ -13,25 +13,16 @@
 
 <svelte:head>
 	<title>Svelte Shadcn Blocks - 200+ UI & Marketing Blocks</title>
-	<meta
-		name="description"
-		content={homepageDescription}
-	/>
+	<meta name="description" content={homepageDescription} />
 
 	<meta property="og:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
-	<meta
-		property="og:description"
-		content={homepageDescription}
-	/>
+	<meta property="og:description" content={homepageDescription} />
 	<meta property="og:image" content={`${projectUrl}/og.png`} />
 	<meta property="og:url" content={projectUrl} />
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
-	<meta
-		name="twitter:description"
-		content={homepageDescription}
-	/>
+	<meta name="twitter:description" content={homepageDescription} />
 	<meta name="twitter:image" content={`${projectUrl}/og.png`} />
 	<meta name="twitter:card" content="summary_large_image" />
 

@@ -9,7 +9,7 @@
 			href="https://x.com/Sikandar_Bhide"
 			target="_blank"
 			rel="noreferrer"
-			class="ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex size-8 items-center justify-center rounded-md text-muted-foreground outline-none focus-visible:ring-2"
+			class="flex size-8 items-center justify-center rounded-md text-muted-foreground ring-sidebar-ring outline-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2"
 			aria-label="Follow on X"
 		>
 			<svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -22,7 +22,7 @@
 			href="https://github.com/SikandarJODD/cnblocks"
 			target="_blank"
 			rel="noreferrer"
-			class="ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex size-8 items-center justify-center rounded-md text-muted-foreground outline-none focus-visible:ring-2"
+			class="flex size-8 items-center justify-center rounded-md text-muted-foreground ring-sidebar-ring outline-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2"
 			aria-label="View cnblocks on GitHub"
 		>
 			<svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="currentColor">

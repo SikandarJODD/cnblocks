@@ -4,7 +4,7 @@ import Overflow from "./code-overflow.svelte";
 import CopyButton from "./code-copy-button.svelte";
 import CodeFiles from "./code-files.svelte";
 import MultipleCode from "./multiple-code.svelte";
-import FrameCode from './frame-single.svelte';
+import FrameCode from "./frame-single.svelte";
 
 import type { CodeCopyButtonProps, CodeRootProps } from "./types";
 import type { SupportedLanguage } from "./shiki";

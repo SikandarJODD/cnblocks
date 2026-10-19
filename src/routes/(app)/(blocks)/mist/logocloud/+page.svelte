@@ -3,7 +3,6 @@
 	import MistBlockPreview from "#lib/components/web/MistBlockPreview.svelte";
 </script>
 
-
 {#each mistLogoCloudBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

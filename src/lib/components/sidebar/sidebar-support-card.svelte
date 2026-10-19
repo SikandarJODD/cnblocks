@@ -5,7 +5,7 @@
 
 <div class="px-0 pb-0">
 	<div
-		class="rounded-xl border border-sidebar-border/70 bg-white dark:bg-sidebar-accent/40 p-2.5 [corner-shape:superellipse(1.4)]"
+		class="rounded-xl border border-sidebar-border/70 bg-white p-2.5 [corner-shape:superellipse(1.4)] dark:bg-sidebar-accent/40"
 	>
 		<p class="text-xs font-medium text-foreground">Support the project</p>
 		<p class="mt-0.5 text-[11px] leading-4 text-muted-foreground">
@@ -17,7 +17,7 @@
 			rel="noopener noreferrer"
 			variant="secondary"
 			size="sm"
-			class="mt-2 text-xs w-full rounded-full"
+			class="mt-2 w-full rounded-full text-xs"
 		>
 			<!-- <HeartIcon class="size-3" /> -->
 			Support on GitHub

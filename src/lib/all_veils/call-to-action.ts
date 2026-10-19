@@ -82,10 +82,7 @@ export const all_veils_call_to_action: MistBlock[] = [
 		category: "call-to-action",
 		preview: "/preview/veil/call-to-action/call-to-action-three",
 		itemId: "call-to-action-three",
-		codeTree: createCallToActionCodeTree(
-			"call-to-action-three.svelte",
-			CallToActionThreeCode
-		),
+		codeTree: createCallToActionCodeTree("call-to-action-three.svelte", CallToActionThreeCode),
 		component: CallToActionThree,
 	},
 	{

@@ -17,4 +17,3 @@ export const markdownDocSlugs = Object.keys(markdownDocs) as MarkdownDocSlug[];
 export function isMarkdownDocSlug(slug: string): slug is MarkdownDocSlug {
 	return slug in markdownDocs;
 }
-

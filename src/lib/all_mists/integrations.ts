@@ -17,12 +17,42 @@ import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
 const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mintegration");
 
 const integrationLogoCodeFiles = [
-	{ path: "logos/gemini.svelte", sourcePath: "components/mist/mlogos/Gemini.svelte", code: GeminiLogoCode, lang: "svelte" },
-	{ path: "logos/google-palm.svelte", sourcePath: "components/mist/mlogos/GooglePaLM.svelte", code: GooglePaLMLogoCode, lang: "svelte" },
-	{ path: "logos/magic-ui.svelte", sourcePath: "components/mist/mlogos/MagicUI.svelte", code: MagicUILogoCode, lang: "svelte" },
-	{ path: "logos/media-wiki.svelte", sourcePath: "components/mist/mlogos/MediaWiki.svelte", code: MediaWikiLogoCode, lang: "svelte" },
-	{ path: "logos/replit.svelte", sourcePath: "components/mist/mlogos/Replit.svelte", code: ReplitLogoCode, lang: "svelte" },
-	{ path: "logos/vs-codium.svelte", sourcePath: "components/mist/mlogos/VSCodium.svelte", code: VSCodiumLogoCode, lang: "svelte" },
+	{
+		path: "logos/gemini.svelte",
+		sourcePath: "components/mist/mlogos/Gemini.svelte",
+		code: GeminiLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/google-palm.svelte",
+		sourcePath: "components/mist/mlogos/GooglePaLM.svelte",
+		code: GooglePaLMLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/magic-ui.svelte",
+		sourcePath: "components/mist/mlogos/MagicUI.svelte",
+		code: MagicUILogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/media-wiki.svelte",
+		sourcePath: "components/mist/mlogos/MediaWiki.svelte",
+		code: MediaWikiLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/replit.svelte",
+		sourcePath: "components/mist/mlogos/Replit.svelte",
+		code: ReplitLogoCode,
+		lang: "svelte",
+	},
+	{
+		path: "logos/vs-codium.svelte",
+		sourcePath: "components/mist/mlogos/VSCodium.svelte",
+		code: VSCodiumLogoCode,
+		lang: "svelte",
+	},
 ] as const;
 
 export const all_mists_integrations: MistBlock[] = [

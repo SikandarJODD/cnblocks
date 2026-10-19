@@ -30,7 +30,7 @@
 
 				<div class="relative mt-16 -mr-56 sm:mr-0">
 					<div
-					class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg ring-1 shadow-black/10 ring-black/10"
+						class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg ring-1 shadow-black/10 ring-black/10"
 					>
 						<img
 							src="/mist/tailark-2.png"

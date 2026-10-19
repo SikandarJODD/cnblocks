@@ -252,7 +252,11 @@ export const integration: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "integration-two.svelte", code: IntegrationTwoCode, lang: "svelte" },
-				{ path: "card/integration-cardv2.svelte", code: IntegrationCardTwoCode, lang: "svelte" },
+				{
+					path: "card/integration-cardv2.svelte",
+					code: IntegrationCardTwoCode,
+					lang: "svelte",
+				},
 				{ path: "logos/Gemini.svelte", code: GeminiCode, lang: "svelte" },
 				{ path: "logos/GooglePaLM.svelte", code: GooglePaLMCode, lang: "svelte" },
 				{ path: "logos/MagicUI.svelte", code: MagicUICode, lang: "svelte" },
@@ -279,7 +283,11 @@ export const integration: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "integration-three.svelte", code: IntegrationThreeCode, lang: "svelte" },
-				{ path: "card/integration-cardv3.svelte", code: IntegrationCardThreeCode, lang: "svelte" },
+				{
+					path: "card/integration-cardv3.svelte",
+					code: IntegrationCardThreeCode,
+					lang: "svelte",
+				},
 				{ path: "logos/Gemini.svelte", code: GeminiCode, lang: "svelte" },
 				{ path: "logos/GooglePaLM.svelte", code: GooglePaLMCode, lang: "svelte" },
 				{ path: "logos/MagicUI.svelte", code: MagicUICode, lang: "svelte" },
@@ -306,7 +314,11 @@ export const integration: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "integration-four.svelte", code: IntegrationFourCode, lang: "svelte" },
-				{ path: "card/integration-cardv4.svelte", code: IntegrationCardFourCode, lang: "svelte" },
+				{
+					path: "card/integration-cardv4.svelte",
+					code: IntegrationCardFourCode,
+					lang: "svelte",
+				},
 				{ path: "logos/Gemini.svelte", code: GeminiCode, lang: "svelte" },
 				{ path: "logos/GooglePaLM.svelte", code: GooglePaLMCode, lang: "svelte" },
 				{ path: "logos/MagicUI.svelte", code: MagicUICode, lang: "svelte" },
@@ -333,7 +345,11 @@ export const integration: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "integration-five.svelte", code: IntegrationFiveCode, lang: "svelte" },
-				{ path: "card/integration-cardv5.svelte", code: IntegrationCardFiveCode, lang: "svelte" },
+				{
+					path: "card/integration-cardv5.svelte",
+					code: IntegrationCardFiveCode,
+					lang: "svelte",
+				},
 				{ path: "logos/Gemini.svelte", code: GeminiCode, lang: "svelte" },
 				{ path: "logos/GooglePaLM.svelte", code: GooglePaLMCode, lang: "svelte" },
 				{ path: "logos/MagicUI.svelte", code: MagicUICode, lang: "svelte" },
@@ -383,7 +399,11 @@ export const integration: Block[] = [
 		codeTree: createBlockCodeTreeFromCode(
 			[
 				{ path: "integration-seven.svelte", code: IntegrationSevenCode, lang: "svelte" },
-				{ path: "card/integration-cardv7.svelte", code: IntegrationCardSevenCode, lang: "svelte" },
+				{
+					path: "card/integration-cardv7.svelte",
+					code: IntegrationCardSevenCode,
+					lang: "svelte",
+				},
 				{ path: "logos/Gemini.svelte", code: GeminiCode, lang: "svelte" },
 				{ path: "logos/GooglePaLM.svelte", code: GooglePaLMCode, lang: "svelte" },
 				{ path: "logos/MagicUI.svelte", code: MagicUICode, lang: "svelte" },

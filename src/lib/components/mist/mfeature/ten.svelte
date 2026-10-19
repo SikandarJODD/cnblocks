@@ -153,11 +153,7 @@
 {/snippet}
 
 {#snippet AIAssistantIllustration()}
-	<Card
-		aria-hidden
-		inert
-		class="p-4"
-	>
+	<Card aria-hidden inert class="p-4">
 		<div class="ml-auto w-fit max-w-3/4">
 			<p
 				class="mb-2 rounded-t-2xl rounded-r-2xl rounded-bl-2xl border border-foreground/5 bg-foreground/5 p-4 text-sm"

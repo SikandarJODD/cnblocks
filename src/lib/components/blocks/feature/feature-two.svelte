@@ -20,7 +20,7 @@
 		<div
 			class="mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16 lg:max-w-full lg:grid-cols-3"
 		>
-		<Card variant="soft">
+			<Card variant="soft">
 				<CardHeader class="pb-3">
 					<CardDecorator>
 						<Zap class="size-6" aria-hidden={true} />
@@ -37,7 +37,7 @@
 				</CardContent>
 			</Card>
 
-		<Card variant="soft">
+			<Card variant="soft">
 				<CardHeader class="pb-3">
 					<CardDecorator>
 						<Settings2 class="size-6" aria-hidden={true} />
@@ -54,7 +54,7 @@
 				</CardContent>
 			</Card>
 
-		<Card variant="soft">
+			<Card variant="soft">
 				<CardHeader class="pb-3">
 					<CardDecorator>
 						<Sparkles class="size-6" aria-hidden={true} />

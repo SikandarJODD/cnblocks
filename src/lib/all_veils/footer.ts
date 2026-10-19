@@ -43,15 +43,20 @@ const socialMediaIconCodeFiles = [
 function createFooterCodeTree(
 	fileName: string,
 	code: string,
-	{ standardIcons = false, socialMedia = false, themeSwitcher = false }: FooterCodeTreeOptions = {}
+	{
+		standardIcons = false,
+		socialMedia = false,
+		themeSwitcher = false,
+	}: FooterCodeTreeOptions = {}
 ) {
 	const hasIcons = standardIcons || socialMedia;
 	const hasButton = socialMedia || themeSwitcher;
-	const footerFiles = socialMedia || themeSwitcher
-		? `        │   └── footer/
+	const footerFiles =
+		socialMedia || themeSwitcher
+			? `        │   └── footer/
         │       ├── ${fileName}
 ${socialMedia ? "        │       ├── social-media-one.svelte\n" : ""}${themeSwitcher ? "        │       └── theme-switcher.svelte" : ""}`
-		: `        │   └── footer/
+			: `        │   └── footer/
         │       └── ${fileName}`;
 	const iconsTree = hasIcons
 		? `        ├── icons/
@@ -85,10 +90,22 @@ ${buttonTree}        └── web/
 		[
 			{ path: fileName, code, lang: "svelte" },
 			...(socialMedia
-				? [{ path: "footer/social-media-one.svelte", code: SocialMediaOneCode, lang: "svelte" as const }]
+				? [
+						{
+							path: "footer/social-media-one.svelte",
+							code: SocialMediaOneCode,
+							lang: "svelte" as const,
+						},
+					]
 				: []),
 			...(themeSwitcher
-				? [{ path: "footer/theme-switcher.svelte", code: ThemeSwitcherCode, lang: "svelte" as const }]
+				? [
+						{
+							path: "footer/theme-switcher.svelte",
+							code: ThemeSwitcherCode,
+							lang: "svelte" as const,
+						},
+					]
 				: []),
 			{ path: "Logo.svelte", code: LogoCode, lang: "svelte" },
 			...(hasButton

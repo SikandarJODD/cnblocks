@@ -48,7 +48,7 @@
 
 <div
 	class={cn(
-		"relative w-full overflow-hidden rounded-xl border border-transparent bg-background p-6 shadow-md ring-1 ring-foreground/5 inset-ring-1 inset-ring-background shadow-foreground/5",
+		"relative w-full overflow-hidden rounded-xl border border-transparent bg-background p-6 shadow-md ring-1 inset-ring-1 shadow-foreground/5 ring-foreground/5 inset-ring-background",
 		_class
 	)}
 >

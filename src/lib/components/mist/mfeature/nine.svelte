@@ -164,11 +164,7 @@
 {/snippet}
 
 {#snippet AIAssistantIllustration()}
-	<Card
-		aria-hidden
-		inert
-		class="aspect-video p-4"
-	>
+	<Card aria-hidden inert class="aspect-video p-4">
 		<div class="w-fit">
 			<Sparkles class="size-3.5 fill-purple-300 stroke-purple-300" />
 			<p class="mt-2 line-clamp-2 text-sm">

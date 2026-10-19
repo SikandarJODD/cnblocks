@@ -70,7 +70,8 @@
 					>
 					<h3 class="mt-4 text-lg font-semibold text-foreground">Free & Open Source</h3>
 					<p class="mt-3 text-base/normal text-muted-foreground">
-						200+ free, customizable blocks under the MIT License, including Dusk coming soon.
+						200+ free, customizable blocks under the MIT License, including Dusk coming
+						soon.
 					</p>
 				</Card>
 

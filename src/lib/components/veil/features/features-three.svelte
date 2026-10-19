@@ -9,10 +9,7 @@
 	import { Clerk, Firebase, Linear, Slack, Supabase, Vercel } from "#lib/svgs/index.js";
 
 	type Feature =
-		| "seamless-integrations"
-		| "real-time-sync"
-		| "developer-first"
-		| "enterprise-ready";
+		"seamless-integrations" | "real-time-sync" | "developer-first" | "enterprise-ready";
 
 	let feature = $state<Feature>("seamless-integrations");
 </script>

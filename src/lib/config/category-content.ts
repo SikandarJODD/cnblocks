@@ -18,7 +18,8 @@ const categoryContent: Record<string, CategoryContent> = {
 	},
 	content: {
 		name: "Content",
-		description: "Content blocks present text, articles, and product details in a clear layout.",
+		description:
+			"Content blocks present text, articles, and product details in a clear layout.",
 	},
 	integration: {
 		name: "Integration",

@@ -4,12 +4,7 @@
 
 	type Props = HTMLAnchorAttributes & HTMLButtonAttributes;
 
-	let {
-		class: className = "",
-		href = "",
-		children,
-		...restProps
-	}: Props = $props();
+	let { class: className = "", href = "", children, ...restProps }: Props = $props();
 </script>
 
 {#if href}

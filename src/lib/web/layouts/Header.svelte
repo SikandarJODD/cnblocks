@@ -273,7 +273,7 @@
 												<p
 													class="text-sm leading-tight text-muted-foreground"
 												>
-											200+ UI & Marketing Blocks
+													200+ UI & Marketing Blocks
 												</p>
 											</NavigationMenu.Link>
 										</li>

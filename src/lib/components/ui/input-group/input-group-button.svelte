@@ -2,7 +2,7 @@
 	import { tv, type VariantProps } from "tailwind-variants";
 
 	const inputGroupButtonVariants = tv({
-		base: "gap-2 text-sm flex items-center shadow-none",
+		base: "flex items-center gap-2 text-sm shadow-none",
 		variants: {
 			size: {
 				xs: "h-6 gap-1 rounded-[calc(var(--radius)_-_5px)] px-1.5 [&>svg:not([class*='size-'])]:size-3.5",

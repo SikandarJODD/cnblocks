@@ -66,7 +66,7 @@
 
 							<div
 								aria-hidden={true}
-									class="absolute -inset-16 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-size-[24px_24px] text-zinc-400 sm:-inset-32 dark:text-white/20"
+								class="absolute -inset-16 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-size-[24px_24px] text-zinc-400 sm:-inset-32 dark:text-white/20"
 							></div>
 							<div
 								aria-hidden={true}
@@ -74,11 +74,11 @@
 							></div>
 							<div
 								aria-hidden={true}
-									class="absolute inset-0 z-2 size-full items-center bg-radial-[125%_125%_at_50%_10%] from-transparent from-40% to-background to-100% px-5 py-24"
+								class="absolute inset-0 z-2 size-full items-center bg-radial-[125%_125%_at_50%_10%] from-transparent from-40% to-background to-100% px-5 py-24"
 							></div>
 							<div
 								aria-hidden={true}
-									class="absolute inset-0 z-2 size-full items-center bg-radial-[125%_125%_at_50%_10%] from-transparent from-40% to-background to-100% px-5 py-24"
+								class="absolute inset-0 z-2 size-full items-center bg-radial-[125%_125%_at_50%_10%] from-transparent from-40% to-background to-100% px-5 py-24"
 							></div>
 
 							<img

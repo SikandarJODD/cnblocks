@@ -76,7 +76,7 @@
 				}
 			)}
 		>
-				<Button variant="default" size="sm" class="rounded-sm">
+			<Button variant="default" size="sm" class="rounded-sm">
 				<Calendar1 class="size-3" />
 				<span class="text-sm font-medium">Schedule</span>
 			</Button>

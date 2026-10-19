@@ -1,7 +1,4 @@
-import {
-	createBlockCodeTreeFromCode,
-	type BlockCodeInput,
-} from "#lib/tree/types.js";
+import { createBlockCodeTreeFromCode, type BlockCodeInput } from "#lib/tree/types.js";
 
 type MistCodeFile = BlockCodeInput & {
 	folderName?: string;
@@ -76,7 +73,8 @@ function resolveSourcePath(sourceDirectory: string, file: MistCodeFile) {
 	if (path.startsWith("ui/")) {
 		const uiPath = path.slice(3);
 		const segments = uiPath.split("/");
-		const componentName = segments.length === 1 ? segments[0].replace(/\.svelte$/, "") : segments[0];
+		const componentName =
+			segments.length === 1 ? segments[0].replace(/\.svelte$/, "") : segments[0];
 		const fileName = segments.length === 1 ? segments[0] : segments.slice(1).join("/");
 		return `components/ui/mist/${componentName}/${fileName}`;
 	}

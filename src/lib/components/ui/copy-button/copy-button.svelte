@@ -28,7 +28,7 @@
 	{...restProps}
 	{variant}
 	{size}
-	class={cn('group', className)}
+	class={cn("group", className)}
 	type="button"
 	name="copy"
 	onclick={async () => {

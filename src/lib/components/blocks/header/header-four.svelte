@@ -80,9 +80,7 @@
 					]}
 				>
 					<div class="lg:pr-4">
-						<ul
-							class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm"
-						>
+						<ul class="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
 							{#each menuItems as item, index}
 								<li>
 									<a

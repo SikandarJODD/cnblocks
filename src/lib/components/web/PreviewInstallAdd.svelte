@@ -33,9 +33,7 @@
 	});
 
 	let installUrl = $derived(
-		itemId
-			? getRegistryItemUrl(projectUrl, page.url.pathname, itemId, newRegistryPath)
-			: ""
+		itemId ? getRegistryItemUrl(projectUrl, page.url.pathname, itemId, newRegistryPath) : ""
 	);
 
 	let showRegistryOptions = $derived(registryOptions.length > 1);
@@ -50,7 +48,7 @@
 				<Add.Button class="h-8 min-w-0 md:pr-2 md:pl-2 [&>div]:size-8" />
 				<Add.GroupSeparator />
 				<Add.Dropdown class="size-8">
-					<Add.DropdownContent class='shadow-none'>
+					<Add.DropdownContent class="shadow-none">
 						{#each AGENTS as addAgent (addAgent)}
 							<Add.DropdownAgentOption agent={addAgent} />
 						{/each}

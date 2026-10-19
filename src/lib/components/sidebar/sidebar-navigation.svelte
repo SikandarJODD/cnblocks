@@ -47,7 +47,9 @@
 									class="h-6 pr-1 pl-2 font-mono! text-xs! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
 								>
 									<span>{library.title}</span>
-									<Kbd.Root class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums">
+									<Kbd.Root
+										class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums"
+									>
 										{library.count}
 									</Kbd.Root>
 								</Sidebar.MenuSubButton>

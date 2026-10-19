@@ -69,7 +69,10 @@
 				{#each stats as stat (stat.label)}
 					<li class="-ml-0.5 flex items-center gap-2">
 						<span>{stat.emoji}</span>
-						<span><span class="font-medium text-foreground">{stat.value}</span> {stat.label}</span>
+						<span
+							><span class="font-medium text-foreground">{stat.value}</span>
+							{stat.label}</span
+						>
 					</li>
 				{/each}
 			</ul>

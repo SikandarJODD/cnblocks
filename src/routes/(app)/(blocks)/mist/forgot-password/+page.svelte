@@ -3,7 +3,6 @@
 	import { mistForgotPasswordBlocks } from "#lib/config/mist-blocks.js";
 </script>
 
-
 {#each mistForgotPasswordBlocks as block}
 	<MistBlockPreview {...block} />
 {/each}

@@ -19,9 +19,7 @@
 </script>
 
 <Frame.Root class="w-full rounded-xl p-0.5">
-	<Frame.Header
-		class="flex-row items-center justify-between gap-2 py-0 pr-1.5 pl-4"
-	>
+	<Frame.Header class="flex-row items-center justify-between gap-2 py-0 pr-1.5 pl-4">
 		<div class="flex min-w-0 items-center gap-1.5">
 			{#if code.lang === "svelte"}
 				<Svelte />
@@ -36,9 +34,7 @@
 			{:else}
 				<Svelte />
 			{/if}
-			<Frame.Title
-				class="truncate font-mono text-xs font-medium text-primary"
-			>
+			<Frame.Title class="truncate font-mono text-xs font-medium text-primary">
 				{code.filename}
 			</Frame.Title>
 		</div>
@@ -52,7 +48,7 @@
 					{/if}
 				</Button>
 			{/if}
-			<CopyButton size="icon-xs" variant='ghost' text={code.filecode} />
+			<CopyButton size="icon-xs" variant="ghost" text={code.filecode} />
 		</div>
 	</Frame.Header>
 	<Frame.Panel class="overflow-hidden p-0">
@@ -72,7 +68,7 @@
 				</Code.Root>
 			</Code.Overflow>
 		{:else}
-			<div class="scroll-fade scroll-fade-b-20 no-scrollbar max-h-[600px] overflow-y-auto">
+			<div class="no-scrollbar max-h-[600px] scroll-fade overflow-y-auto scroll-fade-b-20">
 				<Code.Root
 					lang={code.lang || "svelte"}
 					class="h-auto w-full overflow-visible rounded-none border-none bg-background"
