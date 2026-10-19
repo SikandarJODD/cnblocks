@@ -29,7 +29,7 @@
 					<a
 						href={item.slug}
 						class={cn(
-							"relative mt-1 -ml-1.5 flex items-center justify-between gap-4 rounded-lg border border-transparent px-2 py-1.5 text-sm text-muted-foreground transition-all duration-200 outline-none select-none hover:text-primary focus-visible:border-neutral-200 focus-visible:bg-muted/10 dark:focus-visible:border-neutral-800",
+							"relative mt-1 -ml-1.5 flex items-center justify-between gap-4 rounded-lg border border-transparent px-2 py-1.5 text-sm text-muted-foreground transition-colors duration-150 outline-none select-none hover:text-primary focus-visible:border-neutral-200 focus-visible:bg-muted/10 dark:focus-visible:border-neutral-800",
 							{
 								"text-primary": isActive(item.slug),
 							}

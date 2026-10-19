@@ -4,7 +4,7 @@
 	import { type VariantProps, tv } from "tailwind-variants";
 
 	export const buttonVariants = tv({
-		base: "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer",
+		base: "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-[color,background-color,border-color,box-shadow,filter] duration-150 focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 motion-reduce:transition-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer",
 		variants: {
 			variant: {
 				default:
@@ -12,7 +12,7 @@
 				destructive:
 					"text-destructive-foreground bg-destructive shadow-xs hover:bg-destructive/90",
 				outline:
-					"border border-zinc-300 bg-linear-to-t from-muted to-background shadow-xs shadow-zinc-950/10 duration-200 hover:to-muted dark:border-border dark:from-muted/50 dark:hover:to-muted/50",
+					"border border-zinc-300 bg-linear-to-t from-muted to-background shadow-xs shadow-zinc-950/10 hover:to-muted dark:border-border dark:from-muted/50 dark:hover:to-muted/50",
 				secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
 				ghost: "hover:bg-accent hover:text-accent-foreground",
 				link: "text-primary underline-offset-4 hover:underline",

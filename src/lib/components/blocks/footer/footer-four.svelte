@@ -37,7 +37,7 @@
 				{#each links as link, index}
 					<a
 						href={link.href}
-						class="block text-muted-foreground duration-150 hover:text-primary"
+						class="block text-muted-foreground transition-colors duration-150 hover:text-primary"
 					>
 						<span>{link.title}</span>
 					</a>

@@ -14,7 +14,7 @@
 
 <header>
 	<nav class="fixed z-20 w-full border-b bg-background/50 backdrop-blur-3xl">
-		<div class="mx-auto max-w-5xl px-6 transition-all duration-300">
+		<div class="mx-auto max-w-5xl px-6">
 			<div
 				class="flex flex-wrap items-center justify-between gap-6 py-3 lg:flex-nowrap lg:gap-6 lg:py-4"
 			>
@@ -60,13 +60,13 @@
 					>
 						<Menu
 							class={[
-								"m-auto size-6 duration-200",
+								"m-auto size-6 transition-[transform,opacity] duration-200 motion-reduce:transition-none",
 								menuState && "scale-0 rotate-180 opacity-0",
 							]}
 						/>
 						<X
 							class={[
-								"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200",
+								"absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 transition-[transform,opacity] duration-200 motion-reduce:transition-none",
 								menuState && "scale-100 rotate-0 opacity-100",
 							]}
 						/>
@@ -87,7 +87,7 @@
 								<li>
 									<a
 										href={item.href}
-										class="block text-muted-foreground duration-150 hover:text-accent-foreground"
+										class="block text-muted-foreground transition-colors duration-150 hover:text-accent-foreground"
 									>
 										<span>{item.name}</span>
 									</a>
@@ -107,4 +107,3 @@
 		</div>
 	</nav>
 </header>
-

@@ -88,7 +88,7 @@
 			<div
 				aria-hidden={true}
 				class={cn(
-					"absolute inset-0 grid grid-cols-4 mask-y-from-65% duration-300 *:bg-linear-to-r *:to-muted not-dark:opacity-50 dark:*:to-foreground/2",
+					"absolute inset-0 grid grid-cols-4 mask-y-from-65% transition-opacity duration-300 *:bg-linear-to-r *:to-muted not-dark:opacity-50 dark:*:to-foreground/2",
 					feature === "seamless-integrations" &&
 						"grid-cols-1 grid-rows-12 *:bg-linear-to-t",
 					feature === "developer-first" && "grid-cols-2 *:bg-linear-to-l dark:opacity-50",

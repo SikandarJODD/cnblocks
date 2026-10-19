@@ -45,7 +45,7 @@
 			<div class="relative flex flex-wrap items-center justify-between gap-6 py-6 lg:gap-0">
 				<div
 					class={cn(
-						"flex justify-between gap-6 duration-200 max-lg:w-full",
+						"flex justify-between gap-6 transition-[opacity,filter] duration-200 motion-reduce:transition-none max-lg:w-full",
 						isScrolled && "lg:opacity-0 lg:blur-[4px]"
 					)}
 				>
@@ -75,10 +75,10 @@
 						class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 					>
 						<Menu
-							class="m-auto size-6 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0"
+							class="m-auto size-6 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0 motion-reduce:transition-none"
 						/>
 						<X
-							class="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100"
+							class="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
 						/>
 					</button>
 				</div>
@@ -86,7 +86,7 @@
 				{#if isLarge}
 					<div
 						class={cn(
-							"absolute inset-0 z-50 m-auto flex size-fit h-11 items-center rounded-lg transition-all duration-500",
+							"absolute inset-0 z-50 m-auto flex size-fit h-11 items-center rounded-lg transition-[background-color,border-color,box-shadow,backdrop-filter] duration-500 motion-reduce:transition-none",
 							isScrolled
 								? "gap-4 bg-card shadow-lg ring-1 shadow-foreground/6.5 ring-border backdrop-blur"
 								: "gap-0 bg-transparent"
@@ -98,7 +98,7 @@
 
 						<div
 							class={cn(
-								"flex origin-left items-center overflow-hidden rounded-full transition-all duration-500",
+								"flex origin-left items-center overflow-hidden rounded-full transition-[transform,opacity,filter] duration-500 motion-reduce:transition-none",
 								isScrolled
 									? "blur-0 max-w-[32rem] opacity-100"
 									: "max-w-0 -translate-x-8 scale-95 opacity-0 blur-[4px]"
@@ -147,7 +147,7 @@
 					</div>
 					<div
 						class={cn(
-							"flex w-full flex-col space-y-3 duration-200 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit",
+							"flex w-full flex-col space-y-3 transition-[opacity,filter] duration-200 motion-reduce:transition-none sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit",
 							isScrolled && "lg:opacity-0 lg:blur-[4px]"
 						)}
 					>

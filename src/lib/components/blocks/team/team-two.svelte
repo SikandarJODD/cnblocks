@@ -60,7 +60,7 @@
 				{#each members as member, index}
 					<div class="group overflow-hidden">
 						<img
-							class="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 group-hover:h-[22.5rem] group-hover:rounded-xl hover:grayscale-0"
+							class="h-96 w-full rounded-md object-cover object-top grayscale transition-[height,border-radius,filter] duration-500 group-hover:h-[22.5rem] group-hover:rounded-xl hover:grayscale-0 motion-reduce:transition-none"
 							src={member.avatar}
 							alt="team member"
 							width="826"
@@ -69,7 +69,7 @@
 						<div class="px-2 pt-2 sm:pt-4 sm:pb-0">
 							<div class="flex justify-between">
 								<h3
-									class="text-title text-base font-medium transition-all duration-500 group-hover:tracking-wider"
+									class="text-title text-base font-medium transition-[letter-spacing] duration-500 group-hover:tracking-wider motion-reduce:transition-none"
 								>
 									{member.name}
 								</h3>
@@ -82,7 +82,7 @@
 								>
 								<a
 									href={member.link}
-									class="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 hover:underline"
+									class="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-[color,transform,opacity] duration-500 group-hover:translate-y-0 group-hover:opacity-100 hover:underline motion-reduce:transition-none"
 								>
 									{" "}
 									Linktree

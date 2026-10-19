@@ -39,7 +39,7 @@
                     return (
                         <div
                             key={i}
-                            class="after:h-(--line-height) after:bg-foreground/15 hover:after:bg-primary relative h-full w-px rounded-full duration-200 before:absolute before:inset-0 before:-inset-x-6 after:absolute after:inset-0 after:mt-auto hover:mx-2"
+                            class="after:h-(--line-height) after:bg-foreground/15 hover:after:bg-primary relative h-full w-px rounded-full transition-[margin] duration-200 before:absolute before:inset-0 before:-inset-x-6 after:absolute after:inset-0 after:mt-auto after:transition-colors after:duration-150 hover:mx-2"
                             style={{ '--line-height': `${height * 100}%` } as CSSProperties}
                         />
                     )
@@ -50,7 +50,7 @@
 			{@const noise = Math.sin(i * 0.7) * 0.08 + Math.sin(i * 1.3) * 0.05}
 			{@const height = Math.min(1, Math.max(0.05, base + noise * (0.3 + progress * 0.7)))}
 			<div
-				class="relative h-full w-px rounded-full duration-200 before:absolute before:inset-0 before:-inset-x-6 after:absolute after:inset-0 after:mt-auto after:h-(--line-height) after:bg-foreground/15 hover:mx-2 hover:after:bg-primary"
+				class="relative h-full w-px rounded-full transition-[margin] duration-200 before:absolute before:inset-0 before:-inset-x-6 after:absolute after:inset-0 after:mt-auto after:h-(--line-height) after:bg-foreground/15 after:transition-colors after:duration-150 hover:mx-2 hover:after:bg-primary"
 				style="--line-height: {height * 100}%"
 			></div>
 		{/each}

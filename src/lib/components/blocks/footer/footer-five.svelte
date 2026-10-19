@@ -165,7 +165,7 @@
 							<li>
 								<a
 									href={link.href}
-									class="text-sm text-muted-foreground duration-150 hover:text-primary"
+									class="text-sm text-muted-foreground transition-colors duration-150 hover:text-primary"
 								>
 									{link.label}
 								</a>
@@ -181,7 +181,7 @@
 						<li>
 							<a
 								href={link.href}
-								class="text-sm text-muted-foreground duration-150 hover:text-primary"
+								class="text-sm text-muted-foreground transition-colors duration-150 hover:text-primary"
 							>
 								{link.label}
 							</a>

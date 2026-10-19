@@ -541,7 +541,7 @@
 							bind:this={iframeRef}
 							{title}
 							height={iframeHeight}
-							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! border-r duration-200 will-change-auto dark:border-muted"
+							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! border-r transition-[opacity,filter] duration-200 will-change-auto motion-reduce:transition-none dark:border-muted"
 							src={preview}
 							id={`block-${title}`}
 							style="--iframe-height: {iframeHeight}px;"

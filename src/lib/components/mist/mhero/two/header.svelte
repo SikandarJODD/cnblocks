@@ -43,7 +43,7 @@
 		<div class="mx-auto max-w-5xl px-6">
 			<div
 				class={cn(
-					"relative flex flex-wrap items-center justify-between gap-6 py-6 transition-[padding] duration-200 motion-reduce:transition-none lg:gap-0",
+					"relative flex flex-wrap items-center justify-between gap-6 py-6 lg:gap-0",
 					isScrolled && "py-3"
 				)}
 			>
@@ -98,7 +98,7 @@
 									<a
 										href={item.href}
 										onclick={closeMenu}
-										class="block text-muted-foreground duration-150 hover:text-accent-foreground"
+										class="block text-muted-foreground transition-colors duration-150 hover:text-accent-foreground"
 									>
 										{item.name}
 									</a>

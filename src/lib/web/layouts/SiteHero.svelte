@@ -45,7 +45,7 @@
 									Introducing 60 New Blocks - Veil Kit
 								</span>
 								<div
-									class="size-6 overflow-hidden rounded-full bg-background duration-500 group-hover:bg-muted"
+									class="size-6 overflow-hidden rounded-full bg-background transition-colors duration-150 group-hover:bg-muted"
 								>
 									<div class="flex size-6">
 										<ArrowRight class="m-auto size-3" />
@@ -172,7 +172,7 @@
 			<div class="relative m-auto max-w-5xl px-6">
 				<div class="mx-auto mt-4 mt-10 flex max-w-2xl justify-center gap-4">
 					<div
-						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
+						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-colors duration-200 hover:bg-secondary"
 					>
 						<svg
 							viewBox="0 0 256 308"
@@ -189,7 +189,7 @@
 						>
 					</div>
 					<div
-						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
+						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-colors duration-200 hover:bg-secondary"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@
 						>
 					</div>
 					<div
-						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
+						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-colors duration-200 hover:bg-secondary"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

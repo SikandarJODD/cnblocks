@@ -161,7 +161,7 @@
 						{#each link.items as item, index}
 							<a
 								href={item.href}
-								class="block text-muted-foreground duration-150 hover:text-primary"
+								class="block text-muted-foreground transition-colors duration-150 hover:text-primary"
 							>
 								<span>{item.title}</span>
 							</a>
