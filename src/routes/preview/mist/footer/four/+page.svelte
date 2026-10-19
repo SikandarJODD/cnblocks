@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_footer } from "#lib/all_mists/footer.js";
-
-	const block = all_mists_footer.find((item) => item.slug === "four");
-
-	if (!block) {
-		throw new Error("Missing preview block for four in all_mists_footer");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mfooter/four.svelte";
 </script>
 
 <PreviewComponent />

@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_content } from "#lib/all_mists/content.js";
-
-	const block = all_mists_content.find((item) => item.slug === "three");
-
-	if (!block) {
-		throw new Error("Missing preview block for three in all_mists_content");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mcontent/three.svelte";
 </script>
 
 <PreviewComponent />

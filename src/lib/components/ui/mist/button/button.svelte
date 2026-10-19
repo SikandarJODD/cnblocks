@@ -26,7 +26,7 @@
 		},
 		defaultVariants: {
 			variant: "default",
-			size: "sm",
+			size: "default",
 		},
 	});
 

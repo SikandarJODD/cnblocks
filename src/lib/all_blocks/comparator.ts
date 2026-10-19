@@ -1,9 +1,40 @@
 import type { Block } from "../../types/blocks";
-import { getBlock } from "#lib";
-import ComparatorCode from "#lib/components/blocks/comparator/comparator-one.svelte?raw";
-import Comparator from "#lib/components/blocks/comparator/comparator-one.svelte";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
 
-let code = [ComparatorCode];
-let comps = [Comparator];
+import ComparatorOne from "#lib/components/blocks/comparator/comparator-one.svelte";
+import ComparatorOneCode from "#lib/components/blocks/comparator/comparator-one.svelte?raw";
 
-export let comparator: Block[] = getBlock(comps.length, "comparator", code, comps);
+const ComparatorOneFolderStructure = `# Folder structure
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+        ├── blocks/
+        │   └── comparator/
+        │       └── comparator-one.svelte
+        └── ui/
+            └── button/
+`;
+
+export const comparator: Block[] = [
+	{
+		itemId: "comparator-one",
+		slug: "comparator",
+		title: "one",
+		category: "comparator",
+		preview: "/preview/comparator/one",
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "comparator-one.svelte", code: ComparatorOneCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: ComparatorOneFolderStructure,
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
+		component: ComparatorOne,
+	},
+];

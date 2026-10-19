@@ -1,13 +1,6 @@
 <script>
 	import Button from "#lib/components/ui/button/button.svelte";
-	import {
-		Card,
-		CardContent,
-		CardDescription,
-		CardHeader,
-		CardTitle,
-		CardFooter,
-	} from "#lib/components/ui/card/index.js";
+	import * as Card from "#lib/components/ui/card/index.js";
 	import Check from "@lucide/svelte/icons/check";
 
 	let pricingList = {
@@ -41,14 +34,14 @@
 		</div>
 
 		<div class="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
-			<Card class="flex flex-col">
-				<CardHeader>
-					<CardTitle class="font-medium">Free</CardTitle>
+			<Card.Root class="flex flex-col">
+				<Card.Header>
+					<Card.Title class="font-medium">Free</Card.Title>
 					<span class="my-3 block text-2xl font-semibold">$0 / mo</span>
-					<CardDescription class="text-sm">Per editor</CardDescription>
-				</CardHeader>
+					<Card.Description class="text-sm">Per editor</Card.Description>
+				</Card.Header>
 
-				<CardContent class="space-y-4">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">
@@ -59,27 +52,27 @@
 							</li>
 						{/each}
 					</ul>
-				</CardContent>
+				</Card.Content>
 
-				<CardFooter class="mt-auto">
+				<Card.Footer class="mt-auto">
 					<Button href="/" variant="outline" class="w-full">Get Started</Button>
-				</CardFooter>
-			</Card>
+				</Card.Footer>
+			</Card.Root>
 
-			<Card class="relative">
+			<Card.Root class="relative">
 				<span
 					class="absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full bg-linear-to-br/increasing from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-white/20 ring-offset-1 ring-offset-gray-950/5 ring-inset"
 					>Popular</span
 				>
 
 				<div class="flex flex-col">
-					<CardHeader>
-						<CardTitle class="font-medium">Pro</CardTitle>
+					<Card.Header>
+						<Card.Title class="font-medium">Pro</Card.Title>
 						<span class="my-3 block text-2xl font-semibold">$19 / mo</span>
-						<CardDescription class="text-sm">Per editor</CardDescription>
-					</CardHeader>
+						<Card.Description class="text-sm">Per editor</Card.Description>
+					</Card.Header>
 
-					<CardContent class="space-y-4">
+					<Card.Content class="space-y-4">
 						<hr class="border-dashed" />
 						<ul class="list-outside space-y-3 text-sm">
 							{#each pricingList.pro as item}
@@ -89,22 +82,22 @@
 								</li>
 							{/each}
 						</ul>
-					</CardContent>
+					</Card.Content>
 
-					<CardFooter>
+					<Card.Footer>
 						<Button href="" class="w-full">Get Started</Button>
-					</CardFooter>
+					</Card.Footer>
 				</div>
-			</Card>
+			</Card.Root>
 
-			<Card class="flex flex-col">
-				<CardHeader>
-					<CardTitle class="font-medium">Startup</CardTitle>
+			<Card.Root class="flex flex-col">
+				<Card.Header>
+					<Card.Title class="font-medium">Startup</Card.Title>
 					<span class="my-3 block text-2xl font-semibold">$29 / mo</span>
-					<CardDescription class="text-sm">Per editor</CardDescription>
-				</CardHeader>
+					<Card.Description class="text-sm">Per editor</Card.Description>
+				</Card.Header>
 
-				<CardContent class="space-y-4">
+				<Card.Content class="space-y-4">
 					<hr class="border-dashed" />
 
 					<ul class="list-outside space-y-3 text-sm">
@@ -115,12 +108,12 @@
 							</li>
 						{/each}
 					</ul>
-				</CardContent>
+				</Card.Content>
 
-				<CardFooter class="mt-auto">
+				<Card.Footer class="mt-auto">
 					<Button href="/" variant="outline" class="w-full">Get Started</Button>
-				</CardFooter>
-			</Card>
+				</Card.Footer>
+			</Card.Root>
 		</div>
 	</div>
 </section>

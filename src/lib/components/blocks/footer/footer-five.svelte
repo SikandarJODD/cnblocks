@@ -165,7 +165,7 @@
 							<li>
 								<a
 									href={link.href}
-									class="text-sm text-muted-foreground duration-150 hover:text-primary"
+									class="text-sm text-muted-foreground transition-colors duration-150 hover:text-primary"
 								>
 									{link.label}
 								</a>
@@ -181,7 +181,7 @@
 						<li>
 							<a
 								href={link.href}
-								class="text-sm text-muted-foreground duration-150 hover:text-primary"
+								class="text-sm text-muted-foreground transition-colors duration-150 hover:text-primary"
 							>
 								{link.label}
 							</a>
@@ -208,7 +208,7 @@
 			</div>
 		</div>
 		<div class="mt-16 flex items-center justify-between rounded-md bg-muted p-4 px-6 py-3">
-			<span class="text-title">&copy; tailus 2021 - Present</span>
+			<span class="text-title">&copy; Svelte Blocks 2021 - Present</span>
 			<a href="/" class="text-sm text-muted-foreground hover:text-primary"> Licence </a>
 		</div>
 	</div>

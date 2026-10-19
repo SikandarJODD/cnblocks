@@ -16,13 +16,15 @@
 		</div>
 
 		<div
-			class="grid gap-4 [--color-card:var(--color-muted)] *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2 dark:[--color-muted:var(--color-zinc-900)]"
+			class="grid gap-4 *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2"
 		>
-			<Card class="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
+			<Card
+				class="grid grid-rows-[auto_1fr] gap-8 bg-muted sm:col-span-2 sm:p-6 lg:row-span-2 dark:bg-zinc-900"
+			>
 				<CardHeader>
 					<img
 						class="h-6 w-fit dark:invert"
-						src="https://html.tailus.io/blocks/customers/nike.svg"
+						src="https://cdn.simpleicons.org/nike/000000"
 						alt="Nike Logo"
 						height="24"
 						width="auto"
@@ -41,7 +43,7 @@
 						<div class="grid grid-cols-[auto_1fr] items-center gap-3">
 							<Avatar class="size-12">
 								<AvatarImage
-									src="https://tailus.io/images/reviews/shekinah.webp"
+									src="https://randomuser.me/api/portraits/women/44.jpg"
 									alt="Shekinah Tshiokufila"
 									height="400"
 									width="400"
@@ -60,7 +62,7 @@
 					</blockquote>
 				</CardContent>
 			</Card>
-			<Card class="md:col-span-2">
+			<Card class="bg-muted md:col-span-2 dark:bg-zinc-900">
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p class="text-xl font-medium">
@@ -71,7 +73,7 @@
 						<div class="grid grid-cols-[auto_1fr] items-center gap-3">
 							<Avatar class="size-12">
 								<AvatarImage
-									src="https://tailus.io/images/reviews/jonathan.webp"
+									src="https://randomuser.me/api/portraits/men/32.jpg"
 									alt="Jonathan Yombo"
 									height="400"
 									width="400"
@@ -89,7 +91,7 @@
 					</blockquote>
 				</CardContent>
 			</Card>
-			<Card>
+			<Card class="bg-muted dark:bg-zinc-900">
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p>
@@ -100,7 +102,7 @@
 						<div class="grid [grid-template-columns:auto_1fr] items-center gap-3">
 							<Avatar class="size-12">
 								<AvatarImage
-									src="https://tailus.io/images/reviews/yucel.webp"
+									src="https://randomuser.me/api/portraits/men/46.jpg"
 									alt="Yucel Faruksahan"
 									height="400"
 									width="400"
@@ -118,7 +120,7 @@
 					</blockquote>
 				</CardContent>
 			</Card>
-			<Card class="card variant-mixed">
+			<Card class="card variant-mixed bg-muted dark:bg-zinc-900">
 				<CardContent class="h-full pt-6">
 					<blockquote class="grid h-full grid-rows-[1fr_auto] gap-6">
 						<p>
@@ -129,7 +131,7 @@
 						<div class="grid grid-cols-[auto_1fr] gap-3">
 							<Avatar class="size-12">
 								<AvatarImage
-									src="https://tailus.io/images/reviews/rodrigo.webp"
+									src="https://randomuser.me/api/portraits/men/52.jpg"
 									alt="Rodrigo Aguilar"
 									height="400"
 									width="400"

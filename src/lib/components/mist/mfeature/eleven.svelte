@@ -1,22 +1,16 @@
 <script lang="ts">
-	import Card from "#lib/components/ui/card/card.svelte";
+	import Card from "#lib/components/ui/mist/card/card.svelte";
 
 	import ArrowUp from "@lucide/svelte/icons/arrow-up";
 	import Globe from "@lucide/svelte/icons/globe";
 	import Plus from "@lucide/svelte/icons/plus";
 	import Sparkles from "@lucide/svelte/icons/sparkles";
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 
-	const AIDEN_BLESER = "https://avatars.githubusercontent.com/u/117548273?v=4";
-	const BHIDE_SVELTE = "https://avatars.githubusercontent.com/u/93428946?v=4";
-	const RICH_HARRIS = "https://avatars.githubusercontent.com/u/1162160?v=4";
-	const HUNTER_JOHNSTON = "https://avatars.githubusercontent.com/u/64506580?v=4";
-
-	let avatars = [
-		{ src: BHIDE_SVELTE, alt: "Bhide Svelte" },
-		{ src: AIDEN_BLESER, alt: "Aiden Blesser" },
-		{ src: RICH_HARRIS, alt: "Rich Harris" },
-		{ src: HUNTER_JOHNSTON, alt: "Hunter Johnston" },
+	const stats = [
+		{ value: "90+", emoji: "⭐️", label: "Integrations" },
+		{ value: "56%", emoji: "👨🏽‍💻", label: "Productivity Boost" },
+		{ value: "24/7", emoji: "🦜", label: "Customer Support" },
 	];
 </script>
 
@@ -64,18 +58,26 @@
 </section>
 
 {#snippet AIAssistantIllustration()}
-	<Card
-		aria-hidden
-		class="mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover:translate-y-0"
-	>
+	<Card aria-hidden inert class="relative space-y-4 p-6">
 		<div class="w-fit">
 			<Sparkles class="size-3.5 fill-purple-300 stroke-purple-300" />
 			<p class="mt-2 line-clamp-2 text-sm">
 				How can I optimize my neural network to reduce inference time while maintaining
 				accuracy?
 			</p>
+			<ul role="list" class="mt-3 space-y-2 text-sm text-muted-foreground">
+				{#each stats as stat (stat.label)}
+					<li class="-ml-0.5 flex items-center gap-2">
+						<span>{stat.emoji}</span>
+						<span
+							><span class="font-medium text-foreground">{stat.value}</span>
+							{stat.label}</span
+						>
+					</li>
+				{/each}
+			</ul>
 		</div>
-		<div class="-mx-3 mt-3 -mb-3 space-y-3 rounded-lg bg-foreground/5 p-3">
+		<div class="-mx-3 -mb-3 space-y-3 rounded-lg bg-foreground/5 p-3">
 			<div class="text-sm text-muted-foreground">Ask AI Assistant</div>
 
 			<div class="flex justify-between">

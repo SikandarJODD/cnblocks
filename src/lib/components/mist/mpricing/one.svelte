@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Card from "#lib/components/ui/card/card.svelte";
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Card from "#lib/components/ui/mist/card/card.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
+	import { Spotify, SupabaseFull, VercelFull } from "#lib/svgs/index.js";
 	import Check from "@lucide/svelte/icons/check";
 </script>
 
-<div
-	class="relative bg-muted py-16 [--color-primary:var(--color-indigo-500)] md:py-32 dark:bg-muted/30"
->
+<div class="relative bg-muted py-16 md:py-20">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="mx-auto max-w-2xl text-center">
 			<h2 class="text-3xl font-bold text-balance md:text-4xl lg:text-5xl">
@@ -29,7 +28,7 @@
 						</span>
 
 						<div class="flex justify-center">
-							<Button variant="mdefault" size="lg">Get started</Button>
+							<Button variant="default" size="lg">Get started</Button>
 						</div>
 
 						<p class="mt-12 text-sm text-muted-foreground">
@@ -39,7 +38,7 @@
 					</div>
 					<div class="relative">
 						<ul role="list" class="space-y-4">
-							{#each ["First premium advantage", "Second advantage weekly", "Third advantage donate to project", "Fourth, access to all components weekly"] as item}
+							{#each ["First premium advantage", "Second advantage weekly", "Third advantage donate to project", "Fourth, access to all components weekly"] as item (item)}
 								<li class="flex items-center gap-2">
 									<Check class="size-3 text-primary" strokeWidth={3.5} />
 									<span>{item}</span>
@@ -50,34 +49,13 @@
 							Team can be any size, and you can add or switch members as needed.
 							Companies using our platform include:
 						</p>
-						<div class="mt-12 flex flex-wrap items-center justify-between gap-6">
-							<img
-								class="h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nvidia.svg"
-								alt="Nvidia Logo"
-								height="20"
-								width="auto"
-							/>
-							<img
-								class="h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/column.svg"
-								alt="Column Logo"
-								height="16"
-								width="auto"
-							/>
-							<img
-								class="h-4 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/github.svg"
-								alt="GitHub Logo"
-								height="16"
-								width="auto"
-							/>
-							<img
-								class="h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nike.svg"
-								alt="Nike Logo"
-								height="20"
-								width="auto"
+						<div class="mt-6 flex items-center gap-8 **:fill-foreground">
+							<VercelFull class="h-5 w-[76px]" />
+							<Spotify aria-label="Spotify" role="img" class="h-[22px] w-[73px]" />
+							<SupabaseFull
+								aria-label="Supabase"
+								role="img"
+								class="h-[22px] w-auto"
 							/>
 						</div>
 					</div>

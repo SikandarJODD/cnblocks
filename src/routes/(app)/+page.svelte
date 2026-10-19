@@ -1,31 +1,29 @@
 <script>
+	import FeatureShowcase from "#lib/components/base/landing/feature-showcase.svelte";
+	import LandingHero from "#lib/components/base/landing/hero.svelte";
+	import { projectUrl } from "#lib/config/seo.js";
 	import FeatureSection from "#lib/web/layouts/FeatureSection.svelte";
 	import FeatureSectionTwo from "#lib/web/layouts/FeatureSectionTwo.svelte";
 	import SiteHero from "#lib/web/layouts/SiteHero.svelte";
+	import { JsonLd } from "svelte-meta-tags";
+
+	const homepageDescription =
+		"Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon.";
 </script>
 
 <svelte:head>
-	<title>Svelte Shadcn Blocks - 150+ UI & Marketing Blocks</title>
-	<meta
-		name="description"
-		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
-	/>
+	<title>Svelte Shadcn Blocks - 200+ UI & Marketing Blocks</title>
+	<meta name="description" content={homepageDescription} />
 
-	<meta property="og:title" content="Svelte Shadcn Blocks - 50+ UI & Marketing Blocks" />
-	<meta
-		property="og:description"
-		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
-	/>
-	<meta property="og:image" content="https://sv-blocks.vercel.app/og.png" />
-	<meta property="og:url" content="https://sv-blocks.vercel.app" />
+	<meta property="og:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
+	<meta property="og:description" content={homepageDescription} />
+	<meta property="og:image" content={`${projectUrl}/og.png`} />
+	<meta property="og:url" content={projectUrl} />
 	<meta property="og:type" content="website" />
 
-	<meta name="twitter:title" content="Svelte Shadcn Blocks - 50+ UI & Marketing Blocks" />
-	<meta
-		name="twitter:description"
-		content="Svelte Shadcn Blocks offers 150+ UI & marketing components for building responsive landing pages."
-	/>
-	<meta name="twitter:image" content="https://sv-blocks.vercel.app/og.png" />
+	<meta name="twitter:title" content="Svelte Shadcn Blocks - 200+ UI & Marketing Blocks" />
+	<meta name="twitter:description" content={homepageDescription} />
+	<meta name="twitter:image" content={`${projectUrl}/og.png`} />
 	<meta name="twitter:card" content="summary_large_image" />
 
 	<meta
@@ -33,8 +31,64 @@
 		content="Svelte UI components, Blocks, Svelte blocks,  Svelte marketing blocks, ShadCN-Svelte, responsive UI, landing page builder, Svelte 5, Tailwind v4, Svelte Shadcn Blocks, Svelte marketing components, Svelte UI library, Svelte templates, Svelte components, Svelte UI kit"
 	/>
 	<meta name="author" content="Sikandar_Bhide" />
-	<link rel="canonical" href="https://sv-blocks.vercel.app" />
+	<link rel="canonical" href={projectUrl} />
 </svelte:head>
+
+<JsonLd
+	schema={{
+		"@type": "WebSite",
+		"@id": `${projectUrl}/#website`,
+		name: "Svelte Shadcn Blocks",
+		description: homepageDescription,
+		url: projectUrl,
+		inLanguage: "en",
+	}}
+/>
+
+<JsonLd
+	schema={{
+		"@type": "CollectionPage",
+		"@id": `${projectUrl}/#webpage`,
+		name: "Svelte UI and Marketing Block Collections",
+		description: homepageDescription,
+		url: projectUrl,
+		inLanguage: "en",
+		isPartOf: {
+			"@id": `${projectUrl}/#website`,
+		},
+		mainEntity: {
+			"@type": "ItemList",
+			name: "Svelte block collections",
+			numberOfItems: 4,
+			itemListElement: [
+				{
+					"@type": "ListItem",
+					position: 1,
+					name: "Kit blocks",
+					url: `${projectUrl}/kit/hero`,
+				},
+				{
+					"@type": "ListItem",
+					position: 2,
+					name: "Mist blocks",
+					url: `${projectUrl}/mist/hero`,
+				},
+				{
+					"@type": "ListItem",
+					position: 3,
+					name: "Veil blocks",
+					url: `${projectUrl}/veil`,
+				},
+				{
+					"@type": "ListItem",
+					position: 4,
+					name: "Dusk blocks",
+					description: "A new collection of 40 Svelte blocks coming soon.",
+				},
+			],
+		},
+	}}
+/>
 
 <!-- <section>
   <div
@@ -45,7 +99,7 @@
         Svelte Shadcn Blocks
       </h1>
       <h2 class="text-balance text-3xl sm:mt-1 font-bold sm:text-4xl">
-        50+ Pre-built UI & Marketing Blocks
+        200+ Pre-built UI & Marketing Blocks
       </h2>
       <p class="mb-6 mt-3 text-base font-montserrat text-muted-foreground">
         Speed up your workflow with responsive, pre-built UI blocks designed for
@@ -53,7 +107,7 @@
       </p>
 
       <div class="sm:space-x-2 gap-2 flex items-center flex-wrap">
-        <Button href="/hero" class="w-full sm:w-fit">Explore Blocks</Button>
+        <Button href="/kit/hero" class="w-full sm:w-fit">Explore Blocks</Button>
         <AnimatedButton href="/templates" class="w-full sm:w-fit"
           >Explore Templates</AnimatedButton
         >
@@ -61,6 +115,8 @@
     </div>
   </div>
 </section> -->
-<SiteHero />
-<FeatureSection />
+<!-- <SiteHero /> -->
+<!-- <FeatureSection /> -->
 <!-- <FeatureSectionTwo /> -->
+<LandingHero />
+<FeatureShowcase />

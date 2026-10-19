@@ -8,6 +8,30 @@ import StatsThree from "#lib/components/veil/stats/stats-three.svelte";
 import StatsThreeCode from "#lib/components/veil/stats/stats-three.svelte?raw";
 import StatsFour from "#lib/components/veil/stats/stats-four.svelte";
 import StatsFourCode from "#lib/components/veil/stats/stats-four.svelte?raw";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
+
+function createStatsCodeTree(fileName: string, code: string) {
+	const folderStructure = `# Folder structure
+
+I've simplified the layout to make it easier to browse.
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+        └── veil/
+            └── stats/
+                └── ${fileName}
+`;
+
+	return createBlockCodeTreeFromCode(
+		[
+			{ path: fileName, code, lang: "svelte" },
+			{ path: "folder-structure.md", code: folderStructure, lang: "markdown" },
+		],
+		{ defaultOpen: false }
+	);
+}
 
 export const all_veils_stats: MistBlock[] = [
 	{
@@ -16,10 +40,7 @@ export const all_veils_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/veil/stats/stats-one",
 		itemId: "stats-one",
-		code: {
-			code: StatsOneCode,
-			lang: "svelte",
-		},
+		codeTree: createStatsCodeTree("stats-one.svelte", StatsOneCode),
 		component: StatsOne,
 	},
 	{
@@ -28,10 +49,7 @@ export const all_veils_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/veil/stats/stats-two",
 		itemId: "stats-two",
-		code: {
-			code: StatsTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createStatsCodeTree("stats-two.svelte", StatsTwoCode),
 		component: StatsTwo,
 	},
 	{
@@ -40,10 +58,7 @@ export const all_veils_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/veil/stats/stats-three",
 		itemId: "stats-three",
-		code: {
-			code: StatsThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createStatsCodeTree("stats-three.svelte", StatsThreeCode),
 		component: StatsThree,
 	},
 	{
@@ -52,10 +67,7 @@ export const all_veils_stats: MistBlock[] = [
 		category: "stats",
 		preview: "/preview/veil/stats/stats-four",
 		itemId: "stats-four",
-		code: {
-			code: StatsFourCode,
-			lang: "svelte",
-		},
+		codeTree: createStatsCodeTree("stats-four.svelte", StatsFourCode),
 		component: StatsFour,
 	},
 ];

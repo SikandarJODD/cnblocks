@@ -46,20 +46,20 @@ const docsKeywords = [
 export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	introduction: {
 		key: "introduction",
-		path: "/v2-docs",
+		path: "/docs",
 		navTitle: "Introduction",
 		group: "guide",
 		toc: true,
 		seo: {
-			title: "Docs Introduction",
+			title: "Svelte Marketing Blocks documentation",
 			description:
-				"Overview of Svelte Shadcn Blocks, supported variants, and how to get started quickly.",
+				"Learn how to use accessible, responsive Svelte Marketing Blocks built with Svelte 5, Tailwind CSS, and shadcn-svelte.",
 			keywords: [...docsKeywords, "introduction", "overview"],
 		},
 	},
 	installation: {
 		key: "installation",
-		path: "/v2-docs/installation",
+		path: "/docs/installation",
 		navTitle: "Installation",
 		group: "guide",
 		toc: true,
@@ -72,7 +72,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	mistTheme: {
 		key: "mistTheme",
-		path: "/v2-docs/mist-theme",
+		path: "/docs/mist-theme",
 		navTitle: "Mist Theme Setup",
 		group: "theme",
 		toc: true,
@@ -85,7 +85,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	veilTheme: {
 		key: "veilTheme",
-		path: "/v2-docs/veil-theme",
+		path: "/docs/veil-theme",
 		navTitle: "Veil Theme Setup",
 		group: "theme",
 		toc: true,
@@ -107,7 +107,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	},
 	// mcp: {
 	// 	key: "mcp",
-	// 	path: "/v2-docs/mcp",
+	// 	path: "/docs/mcp",
 	// 	navTitle: "MCP Server",
 	// 	group: "resources",
 	// 	toc: true,
@@ -120,7 +120,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	// },
 	sponsors: {
 		key: "sponsors",
-		path: "/v2-docs/sponsors",
+		path: "/docs/sponsors",
 		navTitle: "Sponsors",
 		group: "resources",
 		toc: true,

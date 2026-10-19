@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 </script>
 
 <section class="[--color-primary:var(--color-indigo-500)]">
@@ -10,7 +10,7 @@
 					Build 10x Faster with Mist
 				</h2>
 				<div class="flex justify-center gap-3">
-					<Button variant="mdefault" href="/" size="lg">Get Started</Button>
+					<Button variant="default" href="/" size="lg">Get Started</Button>
 					<Button href="/" variant="outline" size="lg">Get a Demo</Button>
 				</div>
 			</div>

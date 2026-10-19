@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
-	import Card from "#lib/components/ui/card/card.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
+	import Card from "#lib/components/ui/mist/card/card.svelte";
 
 	import ArrowUp from "@lucide/svelte/icons/arrow-up";
 	import Globe from "@lucide/svelte/icons/globe";
@@ -24,9 +24,7 @@
 	];
 </script>
 
-<section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]"
->
+<section>
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div>
@@ -46,7 +44,7 @@
 					{@render MettingIllustration()}
 				</Card>
 
-				<Card variant="soft" class="group overflow-hidden px-6 pt-6">
+				<Card variant="soft" class="group/code-review overflow-hidden px-6 pt-6">
 					<CalendarCheck class="size-5 text-primary" />
 					<h3 class="mt-5 text-lg font-semibold text-foreground">
 						Intelligent Code Review
@@ -58,7 +56,7 @@
 
 					{@render CodeReviewIllustration()}
 				</Card>
-				<Card variant="soft" class="group overflow-hidden px-6 pt-6">
+				<Card variant="soft" class="group/assistant overflow-hidden px-6 pt-6">
 					<Sparkles class="size-5 text-primary" />
 					<h3 class="mt-5 text-lg font-semibold text-foreground">
 						Contextual AI Assistant
@@ -117,7 +115,7 @@
 {#snippet CodeReviewIllustration()}
 	<div aria-hidden="true" class="relative mt-6">
 		<Card
-			class="aspect-video w-4/5 translate-y-4 p-3 transition-transform duration-200 ease-in-out group-hover:-rotate-3"
+			class="aspect-video w-4/5 translate-y-4 p-3 transition-transform duration-200 ease-in-out group-hover/code-review:-rotate-3"
 		>
 			<div class="mb-3 flex items-center gap-2">
 				<div
@@ -145,7 +143,7 @@
 			<Signature class="mt-3 ml-8 size-5" />
 		</Card>
 		<Card
-			class="absolute -top-4 right-0 flex aspect-3/5 w-2/5 translate-y-4 p-2 transition-transform duration-200 ease-in-out group-hover:rotate-3"
+			class="absolute -top-4 right-0 flex aspect-3/5 w-2/5 translate-y-4 p-2 transition-transform duration-200 ease-in-out group-hover/code-review:rotate-3"
 		>
 			<div class="m-auto flex size-10 rounded-full bg-foreground/5">
 				<Play class="m-auto size-4 fill-foreground/50 stroke-foreground/50" />
@@ -157,7 +155,8 @@
 {#snippet AIAssistantIllustration()}
 	<Card
 		aria-hidden
-		class="mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover:translate-y-0"
+		inert
+		class="mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover/assistant:translate-y-0"
 	>
 		<div class="w-fit">
 			<Sparkles class="size-3.5 fill-purple-300 stroke-purple-300" />
@@ -187,7 +186,7 @@
 					</Button>
 				</div>
 
-				<Button size="icon" variant="mdefault" class="size-7 rounded-2xl">
+				<Button size="icon" variant="default" class="size-7 rounded-2xl">
 					<ArrowUp strokeWidth={3} />
 				</Button>
 			</div>

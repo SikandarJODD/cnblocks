@@ -4,7 +4,7 @@
 	let navs: NavItem[] = [
 		{ name: "Home", url: "/" },
 		{ name: "Docs", url: "/docs/installation" },
-		{ name: "Blocks", url: "/hero" },
+		{ name: "Blocks", url: "/kit/hero" },
 		{ name: "Veil", url: "/veil", isNew: true },
 		{ name: "Mists", url: "/mist/hero", isNew: true },
 		{ name: "Templates", url: "/templates" },
@@ -21,10 +21,10 @@
 	import { toggleMode, mode } from "mode-watcher";
 	import CaretDown from "@lucide/svelte/icons/chevron-down";
 	import { NavigationMenu } from "bits-ui";
-	import cn from "clsx";
 	import Badge from "#lib/components/ui/badge/badge.svelte";
 	import McpDialog from "./MCPDialog.svelte";
 	import { page } from "$app/state";
+	import { cn } from "cn";
 
 	type ListItemProps = {
 		className?: string;
@@ -37,52 +37,52 @@
 	let listItems: ListItemProps[] = [
 		{
 			title: "Hero",
-			href: "/hero",
+			href: "/kit/hero",
 			content: "9 blocks - bold and striking visuals.",
 		},
 		{
 			title: "Contact Us",
-			href: "/contact",
+			href: "/kit/contact",
 			content: "2 blocks - clean and simple layouts.",
 		},
 		{
 			title: "Features",
-			href: "/feature",
+			href: "/kit/feature",
 			content: "14 blocks - highlight key benefits.",
 		},
 		{
 			title: "Sign Up",
-			href: "/signup",
+			href: "/kit/signup",
 			content: "3 blocks - fast and easy signup.",
 		},
 		{
 			title: "Integrations",
-			href: "/integration",
+			href: "/kit/integration",
 			content: "8 blocks - connect with top tools.",
 		},
 		{
 			title: "Login",
-			href: "/login",
+			href: "/kit/login",
 			content: "3 blocks - modern, secure designs.",
 		},
 		{
 			title: "Testimonials",
-			href: "/testimonial",
+			href: "/kit/testimonial",
 			content: "6 blocks - trusted user feedback.",
 		},
 		{
 			title: "Forgot Password",
-			href: "/forgot-password",
+			href: "/kit/forgot-password",
 			content: "2 blocks - quick reset options.",
 		},
 		{
 			title: "Content",
-			href: "/content",
+			href: "/kit/content",
 			content: "7 blocks - engaging and informative.",
 		},
 		{
 			title: "FAQ",
-			href: "/faq",
+			href: "/kit/faq",
 			content: "4 blocks - clear and concise answers.",
 		},
 	];
@@ -126,11 +126,7 @@
 	});
 </script>
 
-<nav
-	class={cn(
-		"sticky top-0 z-1000 border-b bg-transparent  backdrop-blur-2xl transition-all duration-200"
-	)}
->
+<nav class="sticky top-0 z-1000 border-b bg-transparent backdrop-blur-2xl">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 items-center justify-between">
 			<div class="flex w-full items-center">
@@ -277,7 +273,7 @@
 												<p
 													class="text-sm leading-tight text-muted-foreground"
 												>
-													50+ UI & Marketing Blocks
+													200+ UI & Marketing Blocks
 												</p>
 											</NavigationMenu.Link>
 										</li>
@@ -309,7 +305,7 @@
 							</NavigationMenu.Item> -->
 
 							<NavigationMenu.Indicator
-								class="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 transition-[all,transform_250ms_ease] duration-200 data-[state=hidden]:animate-fade-out data-[state=hidden]:opacity-0 data-[state=visible]:animate-fade-in"
+								class="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden opacity-100 data-[state=hidden]:animate-fade-out data-[state=hidden]:opacity-0 data-[state=visible]:animate-fade-in motion-reduce:animate-none"
 							>
 								<div
 									class="relative top-[70%] size-2.5 rotate-45 rounded-tl-[2px] bg-border"
@@ -320,7 +316,7 @@
 							class="absolute top-full left-0 flex w-full justify-center perspective-[2000px]"
 						>
 							<NavigationMenu.Viewport
-								class="relative mt-2.5 h-(--bits-navigation-menu-viewport-height) w-full origin-[top_center] overflow-hidden rounded-lg border bg-background text-popover-foreground shadow-lg transition-[width,height] duration-100 data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in sm:w-(--bits-navigation-menu-viewport-width) "
+								class="relative mt-2.5 h-(--bits-navigation-menu-viewport-height) w-full origin-[top_center] overflow-hidden rounded-lg border bg-background text-popover-foreground shadow-lg data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in motion-reduce:animate-none sm:w-(--bits-navigation-menu-viewport-width)"
 							/>
 						</div>
 					</NavigationMenu.Root>

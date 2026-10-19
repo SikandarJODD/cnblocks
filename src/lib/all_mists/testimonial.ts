@@ -9,6 +9,9 @@ import TestimonialTwoCode from "#lib/components/mist/mtestimonial/two.svelte?raw
 import TestimonialThreeCode from "#lib/components/mist/mtestimonial/three.svelte?raw";
 import TestimonialFourCode from "#lib/components/mist/mtestimonial/four.svelte?raw";
 import TestimonialFiveCode from "#lib/components/mist/mtestimonial/five.svelte?raw";
+import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
+
+const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mtestimonial");
 export const all_mists_testimonial: MistBlock[] = [
 	{
 		slug: "one",
@@ -17,10 +20,9 @@ export const all_mists_testimonial: MistBlock[] = [
 		preview: "/preview/mist/testimonial/one",
 
 		itemId: "testimonial-one",
-		code: {
-			code: TestimonialOneCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "one.svelte", code: TestimonialOneCode, lang: "svelte" },
+		]),
 		component: TestimonialOne,
 	},
 	{
@@ -30,10 +32,9 @@ export const all_mists_testimonial: MistBlock[] = [
 		preview: "/preview/mist/testimonial/two",
 
 		itemId: "testimonial-two",
-		code: {
-			code: TestimonialTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "two.svelte", code: TestimonialTwoCode, lang: "svelte" },
+		]),
 		component: TestimonialTwo,
 	},
 	{
@@ -43,10 +44,9 @@ export const all_mists_testimonial: MistBlock[] = [
 		preview: "/preview/mist/testimonial/three",
 
 		itemId: "testimonial-three",
-		code: {
-			code: TestimonialThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "three.svelte", code: TestimonialThreeCode, lang: "svelte" },
+		]),
 		component: TestimonialThree,
 	},
 	{
@@ -56,10 +56,9 @@ export const all_mists_testimonial: MistBlock[] = [
 		preview: "/preview/mist/testimonial/four",
 
 		itemId: "testimonial-four",
-		code: {
-			code: TestimonialFourCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "four.svelte", code: TestimonialFourCode, lang: "svelte" },
+		]),
 		component: TestimonialFour,
 	},
 	{
@@ -69,10 +68,9 @@ export const all_mists_testimonial: MistBlock[] = [
 		preview: "/preview/mist/testimonial/five",
 
 		itemId: "testimonial-five",
-		code: {
-			code: TestimonialFiveCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "five.svelte", code: TestimonialFiveCode, lang: "svelte" },
+		]),
 		component: TestimonialFive,
 	},
 ];

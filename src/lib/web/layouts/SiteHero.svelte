@@ -45,7 +45,7 @@
 									Introducing 60 New Blocks - Veil Kit
 								</span>
 								<div
-									class="size-6 overflow-hidden rounded-full bg-background duration-500 group-hover:bg-muted"
+									class="size-6 overflow-hidden rounded-full bg-background transition-colors duration-150 group-hover:bg-muted"
 								>
 									<div class="flex size-6">
 										<ArrowRight class="m-auto size-3" />
@@ -134,7 +134,7 @@
 								>
 							</div>
 							Svelte Shadcn Blocks<br />
-							150+ UI & Marketing Blocks
+							200+ UI & Marketing Blocks
 						</h1>
 						<p
 							class="mx-auto mt-6 max-w-3xl text-sm text-balance text-muted-foreground md:mt-10 md:text-lg"
@@ -150,7 +150,7 @@
                 class="bg-foreground border p-0.5"
                 style="border-radius: calc(0.5rem + 0.125rem + 4px);"
               > -->
-							<Button href="/hero" size="lg" class="px-5 text-base">
+							<Button href="/kit/hero" size="lg" class="px-5 text-base">
 								<span class="text-nowrap">Explore Blocks</span>
 							</Button>
 							<!-- </div> -->
@@ -172,7 +172,7 @@
 			<div class="relative m-auto max-w-5xl px-6">
 				<div class="mx-auto mt-4 mt-10 flex max-w-2xl justify-center gap-4">
 					<div
-						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
+						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-colors duration-200 hover:bg-secondary"
 					>
 						<svg
 							viewBox="0 0 256 308"
@@ -189,7 +189,7 @@
 						>
 					</div>
 					<div
-						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
+						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-colors duration-200 hover:bg-secondary"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@
 						>
 					</div>
 					<div
-						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-secondary"
+						class="flex rounded-lg border bg-secondary/50 p-2 backdrop-blur-sm transition-colors duration-200 hover:bg-secondary"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

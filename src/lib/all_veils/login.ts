@@ -6,6 +6,7 @@ import LoginTwo from "#lib/components/veil/login/login-two.svelte";
 import LoginTwoCode from "#lib/components/veil/login/login-two.svelte?raw";
 import LoginThree from "#lib/components/veil/login/login-three.svelte";
 import LoginThreeCode from "#lib/components/veil/login/login-three.svelte?raw";
+import { createAuthCodeTree } from "./auth-code-tree.js";
 
 export const all_veils_login: MistBlock[] = [
 	{
@@ -14,10 +15,12 @@ export const all_veils_login: MistBlock[] = [
 		category: "login",
 		preview: "/preview/veil/login/login-one",
 		itemId: "login-one",
-		code: {
+		codeTree: createAuthCodeTree({
+			category: "login",
+			fileName: "login-one.svelte",
 			code: LoginOneCode,
-			lang: "svelte",
-		},
+			includeCard: true,
+		}),
 		component: LoginOne,
 	},
 	{
@@ -26,10 +29,11 @@ export const all_veils_login: MistBlock[] = [
 		category: "login",
 		preview: "/preview/veil/login/login-two",
 		itemId: "login-two",
-		code: {
+		codeTree: createAuthCodeTree({
+			category: "login",
+			fileName: "login-two.svelte",
 			code: LoginTwoCode,
-			lang: "svelte",
-		},
+		}),
 		component: LoginTwo,
 	},
 	{
@@ -38,10 +42,11 @@ export const all_veils_login: MistBlock[] = [
 		category: "login",
 		preview: "/preview/veil/login/login-three",
 		itemId: "login-three",
-		code: {
+		codeTree: createAuthCodeTree({
+			category: "login",
+			fileName: "login-three.svelte",
 			code: LoginThreeCode,
-			lang: "svelte",
-		},
+		}),
 		component: LoginThree,
 	},
 ];

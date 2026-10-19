@@ -1,30 +1,38 @@
 <script lang="ts" module>
-	import type { WithChildren, WithElementRef, WithoutChildren } from "bits-ui";
-	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
 	import { type VariantProps, tv } from "tailwind-variants";
+	import { cn, type WithElementRef } from "#lib/utils.js";
+	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
 
 	export const buttonVariants = tv({
-		base: "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+		base: "group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
 		variants: {
 			variant: {
-				default:
-					"border border-primary bg-radial-[at_52%_-52%] from-primary/70 to-primary/95 text-sm text-primary-foreground shadow-md ring-0 inset-shadow-2xs shadow-zinc-950/30 inset-shadow-white/25 transition-[filter] duration-200 **:[text-shadow:0_1px_0_var(--color-primary)] active:brightness-95 dark:border-0 dark:from-primary dark:to-primary/70 dark:inset-shadow-white dark:hover:to-primary",
-				destructive:
-					"text-destructive-foreground bg-destructive shadow-xs hover:bg-destructive/90",
+				default: "bg-primary text-primary-foreground hover:bg-primary/80",
 				outline:
-					"border border-zinc-300 bg-linear-to-t from-muted to-background shadow-xs shadow-zinc-950/10 duration-200 hover:to-muted dark:border-border dark:from-muted/50 dark:hover:to-muted/50",
-				secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-				ghost: "hover:bg-accent hover:text-accent-foreground",
+					"border-border bg-background shadow-xs hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+				secondary:
+					"bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+				ghost: "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+				destructive:
+					"bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
 				link: "text-primary underline-offset-4 hover:underline",
 				neutral: "bg-foreground text-background hover:brightness-95",
 				mdefault: "bg-primary text-primary-foreground hover:brightness-95",
+				ink: "bg-ink text-ink-dim hover:bg-ink/90 dark:bg-primary dark:text-primary-foreground hover:dark:bg-primary/90",
 			},
 			size: {
-				default: "h-9 px-4 py-2",
-				sm: "h-8 rounded-md px-3 text-xs",
-				lg: "h-10 rounded-md px-8",
+				default:
+					"h-9 gap-1.5 px-2.5 in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+				xs: "h-6 gap-1 rounded-[min(var(--radius-md),8px)] px-2 text-xs in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
+				sm: "h-8 gap-1 rounded-[min(var(--radius-md),10px)] px-2.5 in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5",
+				lg: "h-10 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+				icon: "size-9",
+				"icon-xs":
+					"size-6 rounded-[min(var(--radius-md),8px)] in-data-[slot=button-group]:rounded-md [&_svg:not([class*='size-'])]:size-3",
+				"icon-sm":
+					"size-8 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-md",
+				"icon-lg": "size-10",
 				extralg: "h-10 rounded-md px-8 md:h-12",
-				icon: "h-9 w-9",
 			},
 		},
 		defaultVariants: {
@@ -36,63 +44,36 @@
 	export type ButtonVariant = VariantProps<typeof buttonVariants>["variant"];
 	export type ButtonSize = VariantProps<typeof buttonVariants>["size"];
 
-	export type ButtonPropsWithoutHTML = WithChildren<{
-		ref?: HTMLElement | null;
-		variant?: ButtonVariant;
-		size?: ButtonSize;
-		loading?: boolean;
-		"data-slot"?: string;
-		onClickPromise?: (
-			e: MouseEvent & {
-				currentTarget: EventTarget & HTMLButtonElement;
-			}
-		) => Promise<void>;
-	}>;
-
-	export type AnchorElementProps = ButtonPropsWithoutHTML &
-		WithoutChildren<Omit<HTMLAnchorAttributes, "href" | "type">> & {
-			href: HTMLAnchorAttributes["href"];
-			type?: never;
-			disabled?: HTMLButtonAttributes["disabled"];
+	export type ButtonProps = WithElementRef<HTMLButtonAttributes> &
+		WithElementRef<HTMLAnchorAttributes> & {
+			variant?: ButtonVariant;
+			size?: ButtonSize;
 		};
-
-	export type ButtonElementProps = ButtonPropsWithoutHTML &
-		WithoutChildren<Omit<HTMLButtonAttributes, "type">> & {
-			type?: HTMLButtonAttributes["type"];
-			href?: never;
-			disabled?: HTMLButtonAttributes["disabled"];
-		};
-
-	export type ButtonProps = AnchorElementProps | ButtonElementProps;
 </script>
 
 <script lang="ts">
-	import { cn } from "#lib/utils.js";
-	import LoaderCircleIcon from "@lucide/svelte/icons/loader-circle";
-
 	let {
-		ref = $bindable(null),
+		class: className,
 		variant = "default",
 		size = "default",
+		ref = $bindable(null),
 		href = undefined,
 		type = "button",
-		loading = false,
-		disabled = false,
-		tabindex = 0,
-		onclick,
-		onClickPromise,
-		class: className,
-		"data-slot": dataSlot = "button",
+		disabled,
 		children,
-		...rest
+		...restProps
 	}: ButtonProps = $props();
 </script>
 
-<!-- {#if href}
+{#if href}
 	<a
 		bind:this={ref}
+		data-slot="button"
 		class={cn(buttonVariants({ variant, size }), className)}
-		{href}
+		href={disabled ? undefined : href}
+		aria-disabled={disabled}
+		role={disabled ? "link" : undefined}
+		tabindex={disabled ? -1 : undefined}
 		{...restProps}
 	>
 		{@render children?.()}
@@ -100,50 +81,12 @@
 {:else}
 	<button
 		bind:this={ref}
+		data-slot="button"
 		class={cn(buttonVariants({ variant, size }), className)}
 		{type}
+		{disabled}
 		{...restProps}
 	>
 		{@render children?.()}
 	</button>
-{/if} -->
-
-<!-- This approach to disabled links is inspired by bits-ui see: https://github.com/huntabyte/bits-ui/pull/1055 -->
-
-<svelte:element
-	this={href ? "a" : "button"}
-	{...rest}
-	data-slot={dataSlot}
-	type={href ? undefined : type}
-	href={href && !disabled ? href : undefined}
-	disabled={href ? undefined : disabled || loading}
-	aria-disabled={href ? disabled : undefined}
-	role={href && disabled ? "link" : undefined}
-	tabindex={href && disabled ? -1 : tabindex}
-	class={cn(buttonVariants({ variant, size }), className)}
-	bind:this={ref}
-	onclick={async (
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		e: any
-	) => {
-		onclick?.(e);
-
-		if (type === undefined) return;
-
-		if (onClickPromise) {
-			loading = true;
-
-			await onClickPromise(e);
-
-			loading = false;
-		}
-	}}
->
-	{#if type !== undefined && loading}
-		<div class="flex animate-spin place-items-center justify-center">
-			<LoaderCircleIcon class="size-4" />
-		</div>
-		<span class="sr-only">Loading</span>
-	{/if}
-	{@render children?.()}
-</svelte:element>
+{/if}

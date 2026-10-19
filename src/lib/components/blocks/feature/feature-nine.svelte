@@ -13,7 +13,6 @@
 	});
 
 	let svgOptions = {
-		backgroundColor: "var(--color-background)",
 		color: "currentColor",
 		radius: 0.15,
 	};
@@ -130,11 +129,7 @@
 {#snippet Map()}
 	{@const viewBox = "0 0 120 60"}
 
-	<svg
-		{viewBox}
-		xmlns="http://www.w3.org/2000/svg"
-		style="background-color: {svgOptions.backgroundColor};"
-	>
+	<svg {viewBox} class="bg-background" xmlns="http://www.w3.org/2000/svg">
 		{#each points as point, index}
 			<circle cx={point.x} cy={point.y} r={svgOptions.radius} fill={svgOptions.color} />
 		{/each}

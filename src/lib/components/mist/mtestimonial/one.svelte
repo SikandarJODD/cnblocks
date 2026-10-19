@@ -1,4 +1,4 @@
-<section class="[--color-primary:var(--color-indigo-500)]">
+<section>
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<blockquote

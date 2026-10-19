@@ -1,44 +1,35 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
-	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
-	import { MediaQuery } from "svelte/reactivity";
 	import Separator from "../ui/separator/separator.svelte";
 	import Button from "../ui/button/button.svelte";
 	import Maximize from "@lucide/svelte/icons/maximize";
-	import CodeEditor from "./CodeEditor.svelte";
+	import CodeEditor from "#lib/tree/layout/CodeEditor.svelte";
 	import ImportAliasToggle from "./ImportAliasToggle.svelte";
 	import PreviewInstallAdd from "./PreviewInstallAdd.svelte";
-	import { transformCodeImports, type ImportAliasStyle } from "./import-alias";
-	import { CopyButton } from "../ui/copy-button";
-	import { scale } from "svelte/transition";
-	import type { Component } from "svelte";
+	import { transformCodeTreeImports, type ImportAliasStyle } from "./import-alias";
+	// import { CopyButton } from "../ui/copy-button";
+	import { scale, slide } from "svelte/transition";
+	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
+	import { createBlockCodeTreeFromCode, type BlockCodeSource } from "#lib/tree/types.js";
 
-	export interface MistCode {
-		code: string;
-		lang?: SupportedLanguage;
-		name?: string;
-		highlight?: (number | [number, number])[];
-	}
-	interface BlockPreviewProps {
+	type BlockPreviewProps = {
 		itemId?: string;
-		code: MistCode | MistCode[];
 		preview: string;
 		previewMode?: "inline" | "iframe";
-		previewHeight?: number;
 		title: string;
 		category: string;
 		previewOnly?: boolean;
 		component: Component;
-	}
+	} & BlockCodeSource;
 
 	let {
 		itemId,
 		code,
+		codeTree,
 		preview,
 		previewMode = "inline",
-		previewHeight,
 		title = "Hero Section",
 		category = "Components",
 		previewOnly,
@@ -46,12 +37,13 @@
 	}: BlockPreviewProps = $props();
 
 	const radioItem =
-		"rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
+		"gap-1 rounded-full pr-3 pl-2.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background/70 data-[state=checked]:bg-background data-[state=checked]:shadow-xs dark:hover:bg-muted/50 dark:data-[state=checked]:bg-muted dark:data-[state=checked]:shadow-none";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
 	const MD_SIZE = 62;
 	const LG_SIZE = 82;
+	const MAX_IFRAME_HEIGHT = 1200;
 
 	let width = $state(DEFAULT_SIZE);
 	let mode = $state<"preview" | "code">("preview");
@@ -61,33 +53,15 @@
 		"sveltekit-import-alias-style",
 		"dollar"
 	);
-	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
-
-	let ref: PaneAPI | undefined = $state(undefined);
-
-	let large = new MediaQuery("min-width: 1024px");
+	let sourceCodeTree = $derived(codeTree ?? createBlockCodeTreeFromCode(code));
+	let displayedCodeTree = $derived(
+		transformCodeTreeImports(sourceCodeTree, importAliasStyle.current)
+	);
+	let hasCode = $derived(sourceCodeTree.nodes.length > 0);
 
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
-	// onMount(() => {
-	//   if (iframeRef) {
-	//     let iframe = iframeRef;
-	//     setTimeout(() => {
-	//       isLoading = false;
-	//       let contentHeight = iframe!.contentWindow!.document.body.scrollHeight;
-	//       iframeHeight = contentHeight + 20;
-	//     }, 3000);
-	//   }
-	// });
-	// $effect(() => {
-	//   const iframe = iframeRef;
-	//   if (iframe) {
-	//     iframe.addEventListener("load", () => {
-	//       isLoading = false;
-	//       let contentHeight = iframe.contentWindow!.document.body.scrollHeight;
-	//       iframeHeight = contentHeight + 20;
-	//     });
-	//   }
-	// });
+	let iframeResizeObserver: ResizeObserver | undefined;
+	let removeIframeWheelListener: (() => void) | undefined;
 
 	import {
 		Tooltip,
@@ -95,20 +69,69 @@
 		TooltipProvider,
 		TooltipTrigger,
 	} from "#lib/components/ui/tooltip/index.js";
-	import type { SupportedLanguage } from "../ui/code/shiki";
-
 	let showIframeComp = $derived(previewMode === "iframe");
 	let forcesIframe = $derived(previewMode === "iframe");
 	let shouldRenderInIframe = $derived(forcesIframe || showIframeComp);
-	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
 
-	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {
+	function setPreviewWidth(size: number) {
+		width = size;
+		iframeHeight = 0;
+	}
+
+	function cleanupIframe() {
+		iframeResizeObserver?.disconnect();
+		iframeResizeObserver = undefined;
+		removeIframeWheelListener?.();
+		removeIframeWheelListener = undefined;
+	}
+
+	function setupIframeAutoHeight(iframe: HTMLIFrameElement | null) {
 		const iframeDocument = iframe?.contentDocument;
-		if (!iframeDocument) return;
+		const iframeWindow = iframe?.contentWindow;
+		if (!iframeDocument || !iframeWindow) return;
+
+		cleanupIframe();
 
 		iframeDocument.documentElement.classList.add("no-scrollbar");
 		iframeDocument.body.classList.add("no-scrollbar");
+		iframeDocument.documentElement.style.overflow = "hidden";
+		iframeDocument.body.style.overflow = "hidden";
+
+		const syncHeight = () => {
+			const contentHeight = Math.min(
+				iframeDocument.documentElement.scrollHeight,
+				MAX_IFRAME_HEIGHT
+			);
+			if (contentHeight > 0 && contentHeight !== iframeHeight) {
+				iframeHeight = contentHeight;
+			}
+		};
+
+		iframeResizeObserver = new ResizeObserver(syncHeight);
+		iframeResizeObserver.observe(iframeDocument.documentElement);
+		iframeResizeObserver.observe(iframeDocument.body);
+
+		const forwardWheelToPage = (event: WheelEvent) => {
+			if (event.ctrlKey) return;
+
+			const multiplier =
+				event.deltaMode === WheelEvent.DOM_DELTA_LINE
+					? 16
+					: event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+						? window.innerHeight
+						: 1;
+
+			event.preventDefault();
+			window.scrollBy(event.deltaX * multiplier, event.deltaY * multiplier);
+		};
+
+		iframeWindow.addEventListener("wheel", forwardWheelToPage, { passive: false });
+		removeIframeWheelListener = () =>
+			iframeWindow.removeEventListener("wheel", forwardWheelToPage);
+		syncHeight();
 	}
+
+	onDestroy(cleanupIframe);
 
 	watch(
 		() => forcesIframe,
@@ -118,34 +141,32 @@
 			}
 		}
 	);
+
+	watch(
+		() => shouldRenderInIframe,
+		(isRendered) => {
+			if (!isRendered) cleanupIframe();
+		}
+	);
 </script>
 
 <section
-	id="{category}-{title}"
-	class="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
+	id={itemId ?? `${category}-${title}`}
+	class="group w-full max-w-full min-w-0 scroll-mt-10 overflow-hidden pb-2"
 >
-	<div class="relative border-y">
+	<div class="relative min-w-0 overflow-hidden rounded-2xl">
 		<div
-			class="absolute inset-x-4 -top-14 bottom-0 mx-auto hidden max-w-7xl md:block lg:inset-x-0"
+			class="relative z-10 hidden justify-between py-1.5 pr-6 pl-8 md:flex md:py-2 lg:pr-2 lg:pl-2"
 		>
-			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-		</div>
-
-		<div
-			class="relative z-10 mx-auto hidden max-w-7xl justify-between py-1.5 pr-6 pl-8 [--color-border:var(--color-zinc-200)] md:flex md:py-2 lg:pr-2 lg:pl-6 dark:[--color-border:var(--color-zinc-800)]"
-		>
-			<div class="-ml-3 flex items-center gap-2">
-				{#if code}
+			<div class="flex items-center gap-2">
+				{#if hasCode}
 					<div class="flex gap-0.5">
 						<Button
 							variant={mode === "preview" ? "secondary" : "ghost"}
 							size="sm"
 							onclick={() => (mode = "preview")}
+							aria-pressed={mode === "preview"}
+							data-state={mode === "preview" ? "checked" : "unchecked"}
 							class={radioItem}
 						>
 							<!-- <Eye class="size-3 sm:opacity-50" /> -->
@@ -177,6 +198,8 @@
 							variant={mode === "code" ? "secondary" : "ghost"}
 							size="sm"
 							onclick={() => (mode = "code")}
+							aria-pressed={mode === "code"}
+							data-state={mode === "code" ? "checked" : "unchecked"}
 							class={radioItem}
 						>
 							<svg
@@ -201,19 +224,24 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="hidden h-4! lg:block" />
+					<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				{/if}
-				<Button variant="ghost" size="sm" class="size-8" href={preview} target="_blank">
-					<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
+				<Button
+					variant="ghost"
+					class="size-7 transition-[color,background-color,box-shadow] duration-200 hover:bg-background data-[state=checked]:bg-background dark:hover:bg-muted"
+					href={preview}
+					target="_blank"
+				>
+					<Maximize strokeWidth={1.6} class="size-3.5! sm:opacity-80" />
 				</Button>
-				<Separator orientation="vertical" class="hidden h-4! lg:block" />
-				<span class="hidden text-sm text-muted-foreground lg:block"
+				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
+				<span class="hidden text-[13px] text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
-				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical" class="h-4!" />
-				<span class="ml-0 text-sm capitalize">{category + " " + title}</span>
-				<!-- {/if} -->
+				<Separator orientation="vertical" class="my-auto h-4!" />
+				<span class="ml-0 font-sidebar-content text-[13px] font-light capitalize"
+					>{category + " " + title}</span
+				>
 			</div>
 
 			<div class="flex items-center gap-2">
@@ -224,11 +252,7 @@
 							<Tooltip>
 								<TooltipTrigger
 									><Button
-										onclick={() => {
-											if (ref) {
-												ref.resize(DEFAULT_SIZE);
-											}
-										}}
+										onclick={() => setPreviewWidth(DEFAULT_SIZE)}
 										size="icon"
 										class="relative  h-8 w-8 cursor-pointer shadow-none"
 										variant="outline"
@@ -272,11 +296,7 @@
 							<Tooltip>
 								<TooltipTrigger>
 									<Button
-										onclick={() => {
-											if (ref) {
-												ref.resize(MD_SIZE);
-											}
-										}}
+										onclick={() => setPreviewWidth(MD_SIZE)}
 										size="icon"
 										class="relative h-8 w-8 cursor-pointer shadow-none"
 										variant="outline"
@@ -317,11 +337,7 @@
 							<Tooltip>
 								<TooltipTrigger
 									><Button
-										onclick={() => {
-											if (ref) {
-												ref.resize(SM_SIZE);
-											}
-										}}
+										onclick={() => setPreviewWidth(SM_SIZE)}
 										size="icon"
 										class="relative h-8 w-8 cursor-pointer shadow-none"
 										variant="outline"
@@ -365,60 +381,63 @@
 					<TooltipProvider delayDuration={120}>
 						<Tooltip>
 							<TooltipTrigger>
-								<Button
-									size="icon"
-									onclick={() => {
-										showIframeComp = !showIframeComp;
-									}}
-									class="relative h-8 w-8 cursor-pointer shadow-none"
-									variant="outline"
-									aria-label="Toggle Responsive UI"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="28"
-										height="28"
-										viewBox="0 0 24 24"
-										fill="none"
+								{#snippet child({ props })}
+									<Button
+										{...props}
+										size="icon-sm"
+										onclick={() => {
+											showIframeComp = !showIframeComp;
+										}}
+										class="relative size-7.5 cursor-pointer shadow-none"
+										variant="outline"
+										aria-label="Toggle Responsive UI"
 									>
-										<path
-											d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
-											class={showIframeComp
-												? "fill-green-500/10 stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-										<path
-											d="M10 3L10 21"
-											class={showIframeComp
-												? "stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-										<path
-											d="M5.5 7H6.5M5.5 10H6.5"
-											class={showIframeComp
-												? "stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-										<path
-											d="M17 10L15 12L17 14"
-											class={showIframeComp
-												? "stroke-green-500"
-												: "stroke-primary"}
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										></path>
-									</svg>
-								</Button>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="28"
+											height="28"
+											viewBox="0 0 24 24"
+											fill="none"
+										>
+											<path
+												d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
+												class={showIframeComp
+													? "fill-green-500/10 stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+											<path
+												d="M10 3L10 21"
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+											<path
+												d="M5.5 7H6.5M5.5 10H6.5"
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+											<path
+												d="M17 10L15 12L17 14"
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+										</svg>
+									</Button>
+								{/snippet}
 							</TooltipTrigger>
 							<TooltipContent align="center" class="px-2 py-1 text-[10px]"
 								>Responsive UI</TooltipContent
@@ -426,18 +445,17 @@
 						</Tooltip>
 					</TooltipProvider>
 				{/if}
-				{#if code}
+				{#if hasCode}
 					{#if mode === "code"}
-						<ImportAliasToggle bind:value={importAliasStyle.current} />
-						<Separator class="h-4!" orientation="vertical" />
+						<div
+							in:slide|global={{ axis: "x", duration: 150 }}
+							class="flex items-center gap-2"
+						>
+							<ImportAliasToggle bind:value={importAliasStyle.current} />
+							<Separator orientation="vertical" class="my-auto h-4!" />
+						</div>
 					{/if}
 					<PreviewInstallAdd {itemId} />
-
-					{#if !Array.isArray(displayedCode)}
-						<Separator class="h-4!" orientation="vertical" />
-
-						<CopyButton text={displayedCode.code} />
-					{/if}
 				{/if}
 			</div>
 		</div>
@@ -447,97 +465,61 @@
 			title={category + " " + title}
 			{preview}
 			{itemId}
-			code={displayedCode}
+			codeTree={displayedCodeTree}
 		/>
 	</div>
 
-	<div class="relative">
-		<div
-			class="absolute inset-x-4 -bottom-14 mx-auto hidden h-14 max-w-7xl md:block lg:inset-x-0"
-		>
+	<div class="relative max-w-full min-w-0 overflow-hidden px-2 md:px-0">
+		<div class="relative z-10 max-w-full min-w-0 overflow-hidden px-0 lg:px-0">
 			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"
-			></div>
-			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"
-			></div>
-		</div>
-
-		<div class="relative z-10 mx-auto max-w-7xl px-0 md:px-4 lg:border-x lg:px-0">
-			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
+				class={cn(
+					"mx-0 overflow-hidden rounded-2xl border border-neutral-200/70 bg-white md:mx-1 dark:border-muted dark:bg-muted/50!",
+					mode === "code" && "hidden"
+				)}
+			>
 				{#if shouldRenderInIframe}
-					<PaneGroup direction="horizontal">
-						<Pane
-							bind:pane={ref}
+					<div class="h-fit" style:width={`${width}%`}>
+						<iframe
+							loading="lazy"
+							allowFullScreen
+							bind:this={iframeRef}
+							{title}
+							height={iframeHeight}
+							class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) max-h-[1200px] min-h-56 w-full rounded-2xl! transition-[opacity,filter] duration-200 will-change-auto motion-reduce:transition-none"
+							src={preview}
 							id={`block-${title}`}
-							order={1}
-							onResize={(size) => {
-								width = Number(size);
+							style="--iframe-height: {iframeHeight}px;"
+							onload={() => {
+								isLoading = false;
+								setupIframeAutoHeight(iframeRef);
 							}}
-							defaultSize={DEFAULT_SIZE}
-							minSize={SM_SIZE}
-							class="h-fit border-r"
-						>
-							<iframe
-								loading="lazy"
-								allowFullScreen
-								bind:this={iframeRef}
-								{title}
-								height={resolvedIframeHeight}
-								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
-								src={preview}
-								id={`block-${title}`}
-								style="
-                --iframe-height: {resolvedIframeHeight}px;"
-								onload={() => {
-									isLoading = false;
-									applyIframeScrollbarStyles(iframeRef);
-									if (!previewHeight) {
-										let contentHeight =
-											iframeRef?.contentWindow?.document.body.scrollHeight;
-										if (contentHeight) {
-											iframeHeight = contentHeight + 20;
-										}
-									} else {
-										iframeHeight = previewHeight;
-									}
-								}}
-							></iframe>
-							{#if isLoading}
+						></iframe>
+						{#if isLoading}
+							<div
+								class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
+							>
 								<div
-									class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
-								>
-									<div
-										class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
-									></div>
-								</div>
-							{/if}
-						</Pane>
-						{#if large}
-							<PaneResizer
-								class="relative w-2 before:absolute before:inset-0 before:m-auto before:h-12 before:w-1 before:rounded-full before:bg-zinc-300 before:transition-[height,background] hover:before:h-16 hover:before:bg-zinc-400 focus:before:bg-zinc-400 dark:before:bg-zinc-600 dark:hover:before:bg-zinc-500 dark:focus:before:bg-zinc-400"
-							/>
-							<Pane
-								id={`code-${title}`}
-								order={2}
-								defaultSize={100 - DEFAULT_SIZE}
-								class="-mr-[0.5px] ml-px"
-							></Pane>
+									class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
+								></div>
+							</div>
 						{/if}
-					</PaneGroup>
+					</div>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="theme-container">
+					<div
+						class={cn(
+							"theme-container relative w-full overflow-hidden bg-background contain-[paint]",
+							category === "header" && "min-h-80 bg-background"
+						)}
+					>
 						<BlockComponent></BlockComponent>
 					</div>
 				{/if}
 			</div>
 
-			<div class="bg-secondary! dark:bg-transparent">
-				<!-- {#key code} -->
+			<div class="max-w-full min-w-0 overflow-hidden">
 				{#if mode === "code"}
-					<CodeEditor code={displayedCode} />
+					<CodeEditor codeTree={displayedCodeTree} />
 				{/if}
-				<!-- {/key} -->
 			</div>
 		</div>
 	</div>

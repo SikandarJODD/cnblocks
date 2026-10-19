@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ToggleGroup, ToggleGroupItem } from "#lib/components/ui/toggle-group/index.js";
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 	import { cn } from "#lib/utils.js";
 
 	import BoldIcon from "@lucide/svelte/icons/bold";
@@ -16,9 +16,7 @@
 	};
 </script>
 
-<section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]"
->
+<section>
 	<div class="bg-muted/50 py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div>
@@ -33,14 +31,12 @@
 				</p>
 			</div>
 
-			<div
-				class="space-y-6 border-foreground/5 [--color-border:color-mix(in_oklab,var(--color-foreground)10%,transparent)] sm:space-y-0 sm:divide-y"
-			>
-				<div class="grid sm:grid-cols-5">
+			<div class="space-y-6 sm:space-y-0 sm:divide-y sm:divide-foreground/10">
+				<div class="grid sm:grid-cols-5 sm:divide-x sm:divide-foreground/10">
 					{@render CodeIllustration({
 						_class: "sm:col-span-2",
 					})}
-					<div class="mt-6 sm:col-span-3 sm:mt-0 sm:border-l sm:pl-12">
+					<div class="mt-6 sm:col-span-3 sm:mt-0 sm:pl-12">
 						<h3 class="text-xl font-semibold text-foreground">Marketing Campaigns</h3>
 						<p class="mt-4 text-lg text-muted-foreground">
 							We'll put together your schedule on automatically. You'll keep app
@@ -48,13 +44,13 @@
 						</p>
 					</div>
 				</div>
-				<div class="grid sm:grid-cols-5">
+				<div class="grid sm:grid-cols-5 sm:divide-x sm:divide-foreground/10">
 					<div class="flex items-center justify-center pt-12 sm:col-span-2">
 						{@render ScheduleIllustation({
 							_class: "pt-8",
 						})}
 					</div>
-					<div class="mt-6 sm:col-span-3 sm:mt-0 sm:border-l sm:pt-12 sm:pl-12">
+					<div class="mt-6 sm:col-span-3 sm:mt-0 sm:pt-12 sm:pl-12">
 						<h3 class="text-xl font-semibold text-foreground">AI Meeting Scheduler</h3>
 						<p class="mt-4 text-lg text-muted-foreground">
 							Ask the chat to create or update your events. Ask it how much time
@@ -80,7 +76,7 @@
 				}
 			)}
 		>
-			<Button variant="mdefault" size="sm" class="rounded-sm">
+			<Button variant="default" size="sm" class="rounded-sm">
 				<Calendar1 class="size-3" />
 				<span class="text-sm font-medium">Schedule</span>
 			</Button>
@@ -100,7 +96,7 @@
 				</ToggleGroupItem>
 			</ToggleGroup>
 			<span class="block h-4 w-px bg-border"></span>
-			<Button size="icon" class="size-8" variant="ghost">
+			<Button size="icon" class="size-8" variant="ghost" aria-label="More options">
 				<Ellipsis class="size-3" />
 			</Button>
 		</div>

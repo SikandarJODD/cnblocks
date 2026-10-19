@@ -7,7 +7,7 @@
 </script>
 
 <section class="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-	<div class="@container mx-auto max-w-5xl px-6">
+	<div class="mx-auto max-w-5xl px-6">
 		<div class="text-center">
 			<h2 class="text-4xl font-semibold text-balance lg:text-5xl">
 				Built to cover your needs
@@ -17,9 +17,9 @@
 			</p>
 		</div>
 		<div
-			class="mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16 @min-4xl:max-w-full @min-4xl:grid-cols-3"
+			class="mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16 lg:max-w-full lg:grid-cols-3"
 		>
-			<Card class="group shadow-zinc-950/5">
+			<Card class="border-border/50 bg-transparent shadow-none">
 				<CardHeader class="pb-3">
 					<CardDecorator>
 						<Zap class="size-6" aria-hidden={true} />
@@ -36,7 +36,7 @@
 				</CardContent>
 			</Card>
 
-			<Card class="group shadow-zinc-950/5">
+			<Card class="border-border/50 bg-transparent shadow-none">
 				<CardHeader class="pb-3">
 					<CardDecorator>
 						<Settings2 class="size-6" aria-hidden={true} />
@@ -53,7 +53,7 @@
 				</CardContent>
 			</Card>
 
-			<Card class="group shadow-zinc-950/5">
+			<Card class="border-border/50 bg-transparent shadow-none">
 				<CardHeader class="pb-3">
 					<CardDecorator>
 						<Sparkles class="size-6" aria-hidden={true} />
@@ -72,27 +72,3 @@
 		</div>
 	</div>
 </section>
-
-<!-- Card Decorator Code  -->
-<!--
- <script lang="ts">
-  import type { Snippet } from "svelte";
-  let { children }: { children: Snippet } = $props();
-</script>
-
-<div
-  class="relative mx-auto size-36 duration-500 ease-in transition-all [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:bg-white/5 dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]"
->
-  <div
-    class="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px]"
-  ></div>
-  <div
-    class="bg-radial to-background absolute inset-0 from-transparent to-75%"
-  ></div>
-  <div
-    class="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t"
-  >
-    {@render children()}
-  </div>
-</div>
-   -->

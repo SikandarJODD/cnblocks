@@ -8,7 +8,7 @@
 			variant: {
 				default: "border border-transparent bg-card shadow ring-1 ring-foreground/5",
 				soft: "bg-foreground/5",
-				mixed: "border-foreground.5 border bg-foreground/5",
+				mixed: "border border-foreground/5 bg-foreground/5",
 			},
 		},
 		defaultVariants: {

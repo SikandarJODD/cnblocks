@@ -67,7 +67,7 @@
 			{#each links as link}
 				<a
 					href={link.href}
-					class="block text-muted-foreground duration-150 hover:text-primary"
+					class="block text-muted-foreground transition-colors duration-150 hover:text-primary"
 				>
 					<span>{link.title}</span>
 				</a>
@@ -201,7 +201,7 @@
 			</a>
 		</div>
 		<span class="block text-center text-sm text-muted-foreground">
-			© {new Date().getFullYear()} Tailus UI, All rights reserved</span
+			© {new Date().getFullYear()} Svelte Blocks, All rights reserved</span
 		>
 	</div>
 </footer>

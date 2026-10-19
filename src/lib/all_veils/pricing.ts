@@ -6,6 +6,42 @@ import PricingTwo from "#lib/components/veil/pricing/pricing-two.svelte";
 import PricingTwoCode from "#lib/components/veil/pricing/pricing-two.svelte?raw";
 import PricingThree from "#lib/components/veil/pricing/pricing-three.svelte";
 import PricingThreeCode from "#lib/components/veil/pricing/pricing-three.svelte?raw";
+import VeilButtonCode from "#lib/components/ui/veil/button/button.svelte?raw";
+import VeilCardCode from "#lib/components/ui/veil/card/card.svelte?raw";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
+
+function createPricingCodeTree(fileName: string, code: string) {
+	const folderStructure = `# Folder structure
+
+I've simplified the layout to make it easier to browse.
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+        ├── veil/
+        │   └── pricing/
+        │       └── ${fileName}
+        └── ui/
+            └── veil/
+                ├── button/
+                │   ├── button.svelte
+                │   └── index.ts
+                └── card/
+                    ├── card.svelte
+                    └── index.ts
+`;
+
+	return createBlockCodeTreeFromCode(
+		[
+			{ path: fileName, code, lang: "svelte" },
+			{ path: "ui/button.svelte", code: VeilButtonCode, lang: "svelte" },
+			{ path: "ui/card.svelte", code: VeilCardCode, lang: "svelte" },
+			{ path: "folder-structure.md", code: folderStructure, lang: "markdown" },
+		],
+		{ defaultOpen: false }
+	);
+}
 
 export const all_veils_pricing: MistBlock[] = [
 	{
@@ -14,10 +50,7 @@ export const all_veils_pricing: MistBlock[] = [
 		category: "pricing",
 		preview: "/preview/veil/pricing/pricing-one",
 		itemId: "pricing-one",
-		code: {
-			code: PricingOneCode,
-			lang: "svelte",
-		},
+		codeTree: createPricingCodeTree("pricing-one.svelte", PricingOneCode),
 		component: PricingOne,
 	},
 	{
@@ -26,10 +59,7 @@ export const all_veils_pricing: MistBlock[] = [
 		category: "pricing",
 		preview: "/preview/veil/pricing/pricing-two",
 		itemId: "pricing-two",
-		code: {
-			code: PricingTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createPricingCodeTree("pricing-two.svelte", PricingTwoCode),
 		component: PricingTwo,
 	},
 	{
@@ -38,10 +68,7 @@ export const all_veils_pricing: MistBlock[] = [
 		category: "pricing",
 		preview: "/preview/veil/pricing/pricing-three",
 		itemId: "pricing-three",
-		code: {
-			code: PricingThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createPricingCodeTree("pricing-three.svelte", PricingThreeCode),
 		component: PricingThree,
 	},
 ];

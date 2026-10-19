@@ -1,101 +1,200 @@
 <script lang="ts">
-	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
-	import { marked } from "marked";
-	const members = [
-		{
-			name: "Bhide Svelte",
-			role: "Svelte Developer",
-			avatar: "https://avatars.githubusercontent.com/u/93428946?v=4",
-			href: "https://github.com/SikandarJODD",
-		},
-		{
-			name: "Aidan Bleser",
-			role: "Creator of JSrepo",
-			avatar: "https://avatars.githubusercontent.com/u/117548273?v=4",
-			href: "https://github.com/ieedan",
-		},
+	import { page } from "$app/state";
+	import Sponsors from "#lib/components/base/sponsors/sponsors.svelte";
+	import { getDocsLayoutContext } from "#lib/components/layout/docs-layout-context.js";
+	import {
+		H1,
+		H2,
+		Link,
+		ListItem,
+		Paragraph,
+		Strong,
+		UnorderedList,
+	} from "#lib/components/markdown/index.js";
+	import { JsonLd, MetaTags } from "svelte-meta-tags";
+	import { FaviconLink } from "#lib/components/ui/favicon-link/index.ts";
+	import { projectUrl } from "#lib/config/seo.js";
+
+	const title = "Introduction | Svelte Marketing Blocks";
+	const description =
+		"Svelte Marketing Blocks provides accessible, responsive, and production-ready building blocks for creating polished Svelte websites.";
+	const keywords = [
+		"Svelte Marketing Blocks",
+		"Svelte 5 components",
+		"SvelteKit blocks",
+		"shadcn-svelte",
+		"Tailwind CSS components",
+		"Svelte landing page components",
+		"Svelte UI blocks",
 	];
 
-	let overview_content = `## Overview
-  Svelte Shadcn Blocks consists of 2 main variants:
-
-1. **Normal** - A vibrant, bold design with a focus on marketing and UI components.
-2. **Mist** - A clean, minimal design inspired by Notion, perfect for documentation and content-heavy applications.
-
-Each variant include **50+ blocks** that can be used in your projects. These blocks are designed to be easily customizable and integrate seamlessly with your Svelte applications.
-
-You can use these blocks to build landing pages, marketing sites, dashboards, and more.
-  `;
+	let canonical = $derived(`${projectUrl}${page.url.pathname}`);
+	let socialImage = $derived(`${projectUrl}/og.png`);
 </script>
 
-<svelte:head>
-	<title>Shadcn Marketing Blocks</title>
-	<meta
-		name="description"
-		content="Welcome to Shadcn Marketing Blocks! This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and Shadcn Svelte."
-	/>
-	<meta name="keywords" content="svelte, shadcn, marketing blocks, installation, jsrepo" />
-</svelte:head>
+<MetaTags
+	{title}
+	{description}
+	{canonical}
+	{keywords}
+	robots="index,follow"
+	additionalRobotsProps={{ maxSnippet: -1, maxImagePreview: "large", maxVideoPreview: -1 }}
+	openGraph={{
+		type: "website",
+		url: canonical,
+		title,
+		description,
+		siteName: "Svelte Marketing Blocks",
+		images: [
+			{
+				url: socialImage,
+				width: 1200,
+				height: 630,
+				alt: "Svelte Marketing Blocks documentation",
+			},
+		],
+	}}
+	twitter={{
+		cardType: "summary_large_image",
+		site: "@Sikandar_Bhide",
+		creator: "@Sikandar_Bhide",
+		title,
+		description,
+		image: socialImage,
+		imageAlt: "Svelte Marketing Blocks documentation",
+	}}
+/>
 
-<main class="space-y-6 xl:mb-24">
-	<div class="space-y-4">
-		<Breadcrumb.Root>
-			<Breadcrumb.List>
-				<Breadcrumb.Item>
-					<Breadcrumb.Link href="/">Docs</Breadcrumb.Link>
-				</Breadcrumb.Item>
-				<Breadcrumb.Separator />
-				<Breadcrumb.Item>
-					<Breadcrumb.Page>Introduction</Breadcrumb.Page>
-				</Breadcrumb.Item>
-			</Breadcrumb.List>
-		</Breadcrumb.Root>
-		<div class="space-y-3.5">
-			<h1 class="text-3xl font-bold -tracking-wide text-primary">Introduction</h1>
-			<p
-				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
+<JsonLd
+	schema={{
+		"@type": "WebPage",
+		name: title,
+		description,
+		url: canonical,
+		isPartOf: {
+			"@type": "WebSite",
+			name: "Svelte Marketing Blocks",
+			url: projectUrl,
+		},
+	}}
+/>
+
+<div class="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
+	<article class="min-w-0 space-y-12">
+		<header class="space-y-3">
+			<H1
+				id="introduction"
+				class="font-gmono text-3xl font-normal tracking-tight sm:text-4xl"
 			>
-				Welcome to Shadcn Marketing Blocks!
-				<br />
-				This is a collection of marketing components built with Svelte 5, Tailwind CSS v4 and
-				Shadcn Svelte.
-			</p>
-			<p
-				class="text-[16px] leading-relaxed font-normal text-black/80 dark:text-muted-foreground"
-			>
-				This project is inspired by <a
+				Introduction
+			</H1>
+			<Paragraph class="max-w-prose text-lg leading-relaxed text-pretty">
+				Svelte Marketing Blocks is a collection of accessible, responsive blocks designed
+				for high-quality landing pages and product experiences.
+			</Paragraph>
+		</header>
+
+		<section class="space-y-3">
+			<H2 id="credits" class="font-gmono font-normal">Credits</H2>
+			<Paragraph class="max-w-prose">
+				Inspired by <FaviconLink
 					href="https://tailark.com"
-					class="text-primary underline"
-					target="_blank">Tailark</a
-				>, this project is designed to bring a similarly smooth and efficient experience to
-				Svelte developers, with a focus on building landing and marketing pages
-				effortlessly.
-			</p>
-		</div>
-		<div class="prose dark:prose-invert prose-p:my-1 prose-li:my-1 prose-h2:my-3.5 max-w-none">
-			{@html marked(overview_content)}
-		</div>
-	</div>
-	<div class="grid grid-cols-2 gap-4 border-t py-4 md:grid-cols-6">
-		{#each members as member}
-			<a href={member.href} target="_blank" class="group">
-				<div
-					class="size-20 rounded-full border bg-background p-0.5 shadow shadow-zinc-950/5"
+					target="_blank"
+					rel="noreferrer"
+					faviconSrc="https://www.google.com/s2/favicons?domain=tailark.com&sz=128"
 				>
-					<img
-						class="aspect-square rounded-full object-cover"
-						src={member.avatar}
-						alt={member.name}
-						height="460"
-						width="460"
-						loading="lazy"
-					/>
-				</div>
-				<span class="mt-2 block text-sm">{member.name}</span>
-				<span class="block text-xs text-muted-foreground group-hover:text-yellow-500"
-					>{member.role}</span
+					Tailark
+				</FaviconLink>
+			</Paragraph>
+			<Paragraph class="max-w-prose leading-7 lg:leading-normal!">
+				Originally created by <FaviconLink
+					href="https://x.com/MeschacIrung"
+					target="_blank"
+					rel="noreferrer"
+					faviconSrc="https://www.google.com/s2/favicons?domain=irung.me&sz=128"
 				>
-			</a>
-		{/each}
-	</div>
-</main>
+					Méschac Irung
+				</FaviconLink> and ported to Svelte by <FaviconLink
+					href="https://bhide.dev?utm_source=svelte-marketing-blocks"
+					target="_blank"
+					rel="noreferrer"
+					class="rounded-sm text-ink/80 transition-colors duration-200 hover:text-ink lg:bg-ink/10 lg:px-1.5 dark:text-[oklch(0.654_0.234_34.196)] dark:hover:bg-[oklch(0.654_0.234_34.196)]/25 dark:hover:text-[oklch(0.72_0.19_34.196)] lg:dark:bg-[oklch(0.654_0.234_34.196)]/15"
+				>
+					Bhide Svelte
+				</FaviconLink>
+			</Paragraph>
+		</section>
+
+		<section class="space-y-3" aria-labelledby="variants">
+			<H2 id="variants" class="font-gmono font-normal">Blocks Variants</H2>
+			<table
+				class="w-full border-collapse border border-dashed border-ink/30 text-sm dark:border-emerald-400/40"
+			>
+				<tbody>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Normal</td
+						>
+						<td class="px-3 py-2 font-gmono text-muted-foreground"
+							>Bold marketing visuals.</td
+						>
+					</tr>
+					<tr class="border-b border-dashed border-ink/30 dark:border-emerald-400/40">
+						<td
+							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Mist</td
+						>
+						<td class="px-3 py-2 font-gmono text-muted-foreground">
+							Quiet, content-focused layouts.
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-28 border-r border-dashed border-ink/30 px-3 py-2 font-gmono text-ink/80 dark:border-emerald-400/40 dark:text-emerald-400"
+							>Veil</td
+						>
+						<td class="px-3 py-2 font-gmono text-muted-foreground">
+							Polished SaaS and product sections.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="space-y-3">
+			<H2 id="quick-start" class="font-gmono font-normal">Quick start</H2>
+			<Paragraph class="max-w-prose leading-relaxed">
+				Begin with <Link href="/docs/installation">installation</Link>, then choose the
+				theme that fits your project.
+			</Paragraph>
+		</section>
+
+		<section class="space-y-3">
+			<H2 id="features" class="font-gmono font-normal">Features</H2>
+			<UnorderedList>
+				<ListItem>
+					<Strong>200+ marketing blocks.</Strong> Find ready-made sections for every part of
+					your marketing site.
+				</ListItem>
+				<ListItem>
+					<Strong>Sections, pages, and templates.</Strong> Start with a single block or a complete
+					layout.
+				</ListItem>
+				<ListItem>
+					<Strong>Install your way.</Strong> Use the shadcn CLI or copy and paste the source
+					code.
+				</ListItem>
+				<ListItem>
+					<Strong>Responsive by default.</Strong> Each block works across mobile, tablet, and
+					desktop.
+				</ListItem>
+				<ListItem>
+					<Strong>Free and open source.</Strong> Use and customize the blocks in your own projects.
+				</ListItem>
+			</UnorderedList>
+		</section>
+
+		<Sponsors />
+	</article>
+</div>

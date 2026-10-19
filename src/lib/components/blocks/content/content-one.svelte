@@ -49,7 +49,7 @@
 							<cite class="block font-medium">John Doe, CEO</cite>
 							<img
 								class="h-5 w-fit dark:invert"
-								src="https://html.tailus.io/blocks/customers/nvidia.svg"
+								src="https://cdn.simpleicons.org/nvidia/000000"
 								alt="Nvidia Logo"
 								height="20"
 								width="auto"

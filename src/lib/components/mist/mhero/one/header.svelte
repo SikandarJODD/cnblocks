@@ -5,27 +5,42 @@
 	import Button from "#lib/components/ui/button/button.svelte";
 	import { scrollY } from "svelte/reactivity/window";
 
-	let menuItems = [
+	const menuItems = [
 		{ name: "Features", href: "/" },
 		{ name: "Solution", href: "/" },
 		{ name: "Pricing", href: "/" },
 		{ name: "About", href: "/" },
 	];
 	let menuState = $state(false);
+	let menuButton: HTMLButtonElement;
+	const id = $props.id();
+	const menuId = `${id}-menu`;
 	let isScrolled = $derived.by(() => {
 		if (scrollY.current !== undefined && scrollY.current > 50) {
 			return true;
 		}
 		return false;
 	});
+
+	function closeMenu() {
+		menuState = false;
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === "Escape" && menuState) {
+			closeMenu();
+			menuButton.focus();
+		}
+	}
 </script>
 
-<header class="[--color-primary:theme(colors.indigo.500)]">
-	<!-- add `fixed` class below to make it fixed on top -->
+<svelte:window onkeydown={handleKeydown} />
+
+<header>
 	<nav
 		data-state={menuState && "active"}
 		class={cn(
-			"z-20 w-full transition-all duration-300",
+			"fixed z-20 w-full transition-[background-color,border-color,backdrop-filter] duration-300 motion-reduce:transition-none",
 			isScrolled && "border-b border-black/5 bg-background/75 backdrop-blur-lg"
 		)}
 	>
@@ -67,26 +82,32 @@
 					</a>
 
 					<button
+						bind:this={menuButton}
 						onclick={() => (menuState = !menuState)}
 						aria-label={menuState == true ? "Close Menu" : "Open Menu"}
+						aria-controls={menuId}
+						aria-expanded={menuState}
 						class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 					>
 						<Menu
-							class="m-auto size-6 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0"
+							class="m-auto size-6 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0 motion-reduce:transition-none"
 						/>
 						<X
-							class="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100"
+							class="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
 						/>
 					</button>
 
 					<div class="m-auto hidden size-fit lg:block">
 						<ul class="flex gap-1">
-							{#each menuItems as item, index}
+							{#each menuItems as item}
 								<li>
-									<Button variant="ghost" size="sm">
-										<a href={item.href} class="text-base">
-											<span>{item.name}</span>
-										</a>
+									<Button
+										href={item.href}
+										variant="ghost"
+										size="sm"
+										class="rounded-full text-sm font-normal"
+									>
+										<span>{item.name}</span>
 									</Button>
 								</li>
 							{/each}
@@ -95,15 +116,17 @@
 				</div>
 
 				<div
+					id={menuId}
 					class="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent"
 				>
 					<div class="lg:hidden">
-						<ul class="space-y-6 text-base">
-							{#each menuItems as item, index}
+						<ul class="space-y-6 text-sm">
+							{#each menuItems as item}
 								<li>
 									<a
 										href={item.href}
-										class="block text-muted-foreground duration-150 hover:text-accent-foreground"
+										onclick={closeMenu}
+										class="block text-muted-foreground transition-colors duration-150 hover:text-accent-foreground"
 									>
 										<span>{item.name}</span>
 									</a>
@@ -115,6 +138,7 @@
 						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
 					>
 						<Button
+							onclick={closeMenu}
 							variant="ghost"
 							size="sm"
 							class={cn(isScrolled && "lg:hidden", "rounded-full")}
@@ -123,6 +147,7 @@
 							Login
 						</Button>
 						<Button
+							onclick={closeMenu}
 							href="/"
 							size="sm"
 							variant="mdefault"
@@ -131,8 +156,9 @@
 							Sign Up
 						</Button>
 						<Button
+							onclick={closeMenu}
 							size="sm"
-							class={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+							class={cn(isScrolled ? "lg:inline-flex" : "hidden", "rounded-full")}
 							href="/"
 						>
 							<span>Get Started</span>

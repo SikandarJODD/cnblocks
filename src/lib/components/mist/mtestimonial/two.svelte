@@ -28,7 +28,7 @@
 
 <section>
 	<div class="bg-muted py-24">
-		<div class="@container mx-auto w-full max-w-5xl px-6">
+		<div class="mx-auto w-full max-w-5xl px-6">
 			<div class="mb-12">
 				<h2 class="text-4xl font-semibold text-foreground">What Our Clients Say</h2>
 				<p class="my-4 text-lg text-balance text-muted-foreground">
@@ -37,16 +37,18 @@
 					service.
 				</p>
 			</div>
-			<div class="grid gap-6 @lg:grid-cols-2 @3xl:grid-cols-3">
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 				{#each testimonials as testimonial}
 					<div>
 						<div
-							class="rounded-2xl rounded-bl border border-transparent bg-background px-4 py-3 ring-1"
+							class="rounded-2xl rounded-bl border border-transparent bg-background px-4 py-3 ring-1 ring-foreground/10"
 						>
 							<p class="text-foreground">{testimonial.content}</p>
 						</div>
 						<div class="mt-4 flex items-center gap-2">
-							<Avatar class=" size-6 border border-transparent shadow ring-1">
+							<Avatar
+								class="size-6 border border-transparent shadow ring-1 ring-foreground/10"
+							>
 								<AvatarImage src={testimonial.avatar} alt={testimonial.name} />
 								<AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
 							</Avatar>

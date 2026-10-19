@@ -5,10 +5,7 @@
 </script>
 
 <section class="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
-	<form
-		action=""
-		class="m-auto h-fit w-full max-w-sm rounded-[calc(var(--radius)+.125rem)] border bg-card p-0.5 shadow-md dark:[--color-muted:var(--color-zinc-900)]"
-	>
+	<form action="" class="m-auto h-fit w-full max-w-sm rounded-xl border bg-card p-0.5 shadow-md">
 		<div class="p-8 pb-6">
 			<div>
 				<a href="/" aria-label="go home">
@@ -146,7 +143,7 @@
 			</div>
 		</div>
 
-		<div class="rounded-(--radius) border bg-muted p-3">
+		<div class="rounded-lg border bg-muted p-3 dark:bg-zinc-900">
 			<p class="text-center text-sm text-accent-foreground">
 				Have an account ?
 				<Button href="/" variant="link" class="px-2">Sign in</Button>

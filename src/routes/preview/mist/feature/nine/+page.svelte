@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_features } from "#lib/all_mists/feature.js";
-
-	const block = all_mists_features.find((item) => item.slug === "nine");
-
-	if (!block) {
-		throw new Error("Missing preview block for nine in all_mists_features");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mfeature/nine.svelte";
 </script>
 
 <PreviewComponent />

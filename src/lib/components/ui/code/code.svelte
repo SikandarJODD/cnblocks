@@ -4,7 +4,7 @@
 	import type { CodeRootProps } from "./types";
 	import { useCode } from "./code.svelte.js";
 	import { box } from "svelte-toolbelt";
-	//   import "../../../../app.css";
+	import "../../../../routes/layout.css";
 
 	let {
 		ref = $bindable(null),
@@ -32,7 +32,7 @@
 </div>
 
 <style lang="postcss">
-	@reference '../../../../app.css';
+	@reference '../../../../routes/layout.css';
 
 	:global(.dark) {
 		:global(.shiki, .shiki span) {
@@ -52,7 +52,7 @@
 	}
 
 	:global(pre.shiki) {
-		@apply overflow-x-auto rounded-lg bg-inherit py-4 text-xs sm:text-sm;
+		@apply overflow-x-auto rounded-lg bg-background py-4 text-xs sm:text-[13px];
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
@@ -63,7 +63,7 @@
 	}
 
 	:global(pre.shiki code) {
-		@apply grid min-w-full rounded-none border-0 bg-transparent p-0 wrap-break-word;
+		@apply grid min-w-full rounded-none border-0 bg-transparent p-0 font-gmono wrap-break-word;
 		counter-reset: line;
 		box-decoration-break: clone;
 	}
@@ -78,12 +78,12 @@
 		counter-increment: step;
 		display: inline-block;
 		width: 1.8rem;
-		margin-right: 1.4rem;
+		margin-right: 1.2rem;
 		text-align: right;
 	}
 
 	:global(pre.line-numbers .line::before) {
-		@apply text-muted-foreground;
+		@apply text-muted-foreground/80;
 	}
 
 	:global(pre .line.line--highlighted) {

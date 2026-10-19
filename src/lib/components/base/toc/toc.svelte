@@ -43,7 +43,7 @@
 <ul class={cn("m-0 list-none text-sm font-normal", { "pl-4": isChild })}>
 	{#each toc as heading, i (i)}
 		<li
-			class={cn("mt-0 truncate pt-2 text-muted-foreground transition-all", {
+			class={cn("mt-0 truncate pt-2 text-muted-foreground transition-colors duration-150", {
 				"text-foreground": heading.active,
 			})}
 		>

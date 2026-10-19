@@ -5,6 +5,10 @@ import CtaTwo from "#lib/components/mist/mcta/two.svelte";
 import CtaTwoCode from "#lib/components/mist/mcta/two.svelte?raw";
 import CtaThree from "#lib/components/mist/mcta/three.svelte";
 import CtaThreeCode from "#lib/components/mist/mcta/three.svelte?raw";
+import MistButtonCode from "#lib/components/ui/mist/button/button.svelte?raw";
+import { createSimpleMistCodeTreeFor } from "./simple-code-tree.js";
+
+const createSimpleMistCodeTree = createSimpleMistCodeTreeFor("mcta");
 
 export const all_mists_cta: MistBlock[] = [
 	{
@@ -14,10 +18,10 @@ export const all_mists_cta: MistBlock[] = [
 		preview: "/preview/mist/cta/one",
 
 		itemId: "cta-one",
-		code: {
-			code: CtaOneCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "one.svelte", code: CtaOneCode, lang: "svelte" },
+			{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+		]),
 		component: CtaOne,
 	},
 	{
@@ -27,10 +31,10 @@ export const all_mists_cta: MistBlock[] = [
 		preview: "/preview/mist/cta/two",
 
 		itemId: "cta-two",
-		code: {
-			code: CtaTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "two.svelte", code: CtaTwoCode, lang: "svelte" },
+			{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+		]),
 		component: CtaTwo,
 	},
 	{
@@ -40,10 +44,10 @@ export const all_mists_cta: MistBlock[] = [
 		preview: "/preview/mist/cta/three",
 
 		itemId: "cta-three",
-		code: {
-			code: CtaThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createSimpleMistCodeTree([
+			{ path: "three.svelte", code: CtaThreeCode, lang: "svelte" },
+			{ path: "ui/button.svelte", code: MistButtonCode, lang: "svelte" },
+		]),
 		component: CtaThree,
 	},
 ];

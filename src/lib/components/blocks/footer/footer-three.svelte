@@ -297,7 +297,7 @@
 						{#each link.items as item}
 							<a
 								href={item.href}
-								class="block text-muted-foreground duration-150 hover:text-primary"
+								class="block text-muted-foreground transition-colors duration-150 hover:text-primary"
 							>
 								<span>{item.title}</span>
 							</a>
@@ -326,7 +326,7 @@
 		</div>
 		<div class="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
 			<small class="order-last block text-center text-sm text-muted-foreground md:order-first"
-				>© {new Date().getFullYear()} Tailus UI, All rights reserved</small
+				>© {new Date().getFullYear()} Svelte Blocks, All rights reserved</small
 			>
 			<form action="">
 				<div class="relative">

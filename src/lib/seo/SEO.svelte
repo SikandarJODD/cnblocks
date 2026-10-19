@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import { projectUrl } from "#lib/config/seo.js";
 	import { MetaTags } from "svelte-meta-tags";
 
 	type Props = {
@@ -18,13 +19,13 @@
 
 	let { title, description, keywords, canonical, noindex = false, images }: Props = $props();
 
-	let resolvedCanonical = $derived(canonical ?? `${page.url.origin}${page.url.pathname}`);
+	let resolvedCanonical = $derived(canonical ?? `${projectUrl}${page.url.pathname}`);
 	let resolvedImages = $derived(
 		images && images.length > 0
 			? images
 			: [
 					{
-						url: `${page.url.origin}/og.png`,
+						url: `${projectUrl}/og.png`,
 						width: 1200,
 						height: 630,
 						alt: "Svelte Marketing Blocks",

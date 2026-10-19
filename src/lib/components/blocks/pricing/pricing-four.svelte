@@ -34,7 +34,7 @@
 
 		<div class="mt-8 grid gap-6 md:mt-20 md:grid-cols-5 md:gap-0">
 			<div
-				class="flex flex-col justify-between space-y-8 rounded-(--radius) border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10"
+				class="flex flex-col justify-between space-y-8 rounded-lg border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10"
 			>
 				<div class="space-y-4">
 					<div>
@@ -59,7 +59,7 @@
 			</div>
 
 			<div
-				class="rounded-(--radius) border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:bg-muted dark:[--color-muted:var(--color-zinc-900)]"
+				class="rounded-lg border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:bg-zinc-900"
 			>
 				<div class="grid gap-6 sm:grid-cols-2">
 					<div class="space-y-4">

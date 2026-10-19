@@ -15,7 +15,9 @@
 						are as stunning as they are user-friendly.
 					</p>
 					<footer class="mt-6 flex flex-col items-center justify-center">
-						<Avatar class=" size-12 border border-transparent shadow ring-1">
+						<Avatar
+							class="size-12 border border-transparent shadow ring-1 ring-foreground/10"
+						>
 							<AvatarImage
 								src="https://avatars.githubusercontent.com/u/68236786?v=4"
 								alt="Théo Balick"

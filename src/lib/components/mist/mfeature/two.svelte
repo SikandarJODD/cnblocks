@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card } from "#lib/components/ui/card/index.js";
+	import { Card } from "#lib/components/ui/mist/card/index.js";
 </script>
 
 <section>

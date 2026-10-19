@@ -1,21 +1,52 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import { SidebarCollapsedToolbar, SiteSidebar } from "#lib/components/sidebar/index.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import Header from "#lib/web/layouts/Header.svelte";
+	import MobileHeader from "#lib/web/layouts/MobileHeader.svelte";
 	import SiteFooter from "#lib/web/layouts/SiteFooter.svelte";
+	import { cn } from "cn";
 	let { children } = $props();
 
-	// If Path include v2-docs, then don't shwo site footer
-	let showHeaderFooter = $derived.by(() => {
+	// If Path include docs, then don't shwo site footer
+	let isDocsPath = $derived.by(() => {
 		let path = page.url.pathname;
-		return !path.includes("v2-docs");
+		return path.includes("docs");
 	});
+	let isKitBlocksPath = $derived.by(() => {
+		let path = page.url.pathname;
+		return path.includes("kit") || path.includes("mist");
+	});
+	let isHomePath = $derived.by(() => {
+		let path = page.url.pathname;
+		return path === "/" || path.includes("projects");
+	});
+	let isLandingPage = $derived(page.url.pathname === "/");
 </script>
 
-<!-- {#if showHeaderFooter} -->
-<Header />
-<!-- {/if} -->
-{@render children()}
-{#if showHeaderFooter}
-	<SiteFooter />
-{/if}
-<!-- <SiteFooter /> -->
+<Sidebar.Provider>
+	<SiteSidebar />
+	<Sidebar.Inset>
+		<main
+			class={cn(
+				"min-w-0 flex-1",
+				isLandingPage
+					? "rounded-none border-0 shadow-none md:rounded-2xl md:border"
+					: "rounded-2xl border",
+				isDocsPath || isHomePath
+					? "bg-none"
+					: isKitBlocksPath
+						? "bg-muted dark:bg-muted/50"
+						: "bg-white dark:bg-muted/50"
+			)}
+		>
+			<MobileHeader />
+			<SidebarCollapsedToolbar showOnMobile={false} />
+			<!-- <Header /> -->
+			{@render children()}
+			{#if !isDocsPath}
+				<SiteFooter />
+			{/if}
+		</main>
+	</Sidebar.Inset>
+</Sidebar.Provider>

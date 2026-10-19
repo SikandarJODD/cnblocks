@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import { Button } from "#lib/components/ui/mist/button/index.js";
 	import Sparkle from "@lucide/svelte/icons/sparkle";
 	import Header from "./header.svelte";
 </script>
 
 <div class="relative">
 	<Header />
-	<main class="[--color-primary:var(--color-indigo-500)]">
+	<main>
 		<section
 			class="relative overflow-hidden border-e-foreground before:absolute before:inset-1 before:h-[calc(100%-8rem)] before:rounded-2xl before:bg-muted sm:before:inset-2 md:before:rounded-[2rem] lg:before:h-[calc(100%-14rem)]"
 		>
@@ -41,7 +41,7 @@
 						</p>
 
 						<div class="flex items-center justify-center gap-3">
-							<Button variant="mdefault" size="lg">Start Building</Button>
+							<Button size="lg">Start Building</Button>
 							<Button size="lg" variant="outline">Watch Video</Button>
 						</div>
 					</div>

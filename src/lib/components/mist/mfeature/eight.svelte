@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "#lib/components/ui/card/card.svelte";
+	import Card from "#lib/components/ui/mist/card/card.svelte";
 
 	import Layout from "@lucide/svelte/icons/layout";
 	import Target from "@lucide/svelte/icons/target";
@@ -7,9 +7,7 @@
 	import Sparkles from "@lucide/svelte/icons/sparkles";
 </script>
 
-<section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)]"
->
+<section>
 	<div class="py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -22,7 +20,7 @@
 					</p>
 					<div class="-mt-2 mr-0.5 -ml-2 mask-b-from-95% pt-2 pl-2">
 						<div
-							class="relative mx-auto mt-8 h-96 overflow-hidden rounded-tl-(--radius) border border-transparent bg-background shadow ring-1"
+							class="relative mx-auto mt-8 h-96 overflow-hidden rounded-tl-(--radius) border border-transparent bg-background shadow ring-1 ring-foreground/5"
 						>
 							<img
 								src="/mist/tailark-3.png"

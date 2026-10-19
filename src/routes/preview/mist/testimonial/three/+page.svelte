@@ -1,13 +1,5 @@
 <script lang="ts">
-	import { all_mists_testimonial } from "#lib/all_mists/testimonial.js";
-
-	const block = all_mists_testimonial.find((item) => item.slug === "three");
-
-	if (!block) {
-		throw new Error("Missing preview block for three in all_mists_testimonial");
-	}
-
-	const PreviewComponent = block.component;
+	import PreviewComponent from "#lib/components/mist/mtestimonial/three.svelte";
 </script>
 
 <PreviewComponent />

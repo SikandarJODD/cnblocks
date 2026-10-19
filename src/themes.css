@@ -18,34 +18,55 @@
 	--accent: var(--color-zinc-700);
 	--accent-foreground: var(--color-white);
 	--destructive: var(--color-red-600);
+	--destructive-foreground: var(--color-white);
 	--border: var(--color-zinc-200);
 	--input: var(--color-zinc-200);
 	--ring: var(--color-indigo-500);
+	--chart-1: var(--color-blue-500);
+	--chart-2: var(--color-indigo-500);
+	--chart-3: var(--color-purple-500);
+	--chart-4: var(--color-cyan-400);
+	--chart-5: var(--color-red-500);
 
 	@variant dark {
 		--radius: 0.625rem;
-		--background: var(--color-white);
-		--foreground: var(--color-zinc-950);
-		--card: var(--color-white);
-		--card-foreground: black;
-		--popover: var(--color-white);
-		--popover-foreground: var(--color-zinc-950);
-		--primary: var(--color-indigo-500);
-		--primary-foreground: var(--color-white);
-		--secondary: var(--color-indigo-100);
-		--secondary-foreground: var(--color-indigo-600);
-		--muted: var(--color-zinc-100);
-		--muted-foreground: var(--color-zinc-600);
-		--accent: var(--color-zinc-700);
-		--accent-foreground: var(--color-white);
-		--destructive: var(--color-red-600);
-		--border: var(--color-zinc-200);
-		--input: var(--color-zinc-200);
-		--ring: var(--color-indigo-500);
+		--background: var(--color-zinc-950);
+		--foreground: var(--color-zinc-50);
+		--card: var(--color-zinc-900);
+		--card-foreground: var(--color-zinc-50);
+		--popover: var(--color-zinc-900);
+		--popover-foreground: var(--color-zinc-50);
+		--primary: var(--color-indigo-400);
+		--primary-foreground: var(--color-zinc-950);
+		--secondary: var(--color-indigo-950);
+		--secondary-foreground: var(--color-indigo-200);
+		--muted: var(--color-zinc-900);
+		--muted-foreground: var(--color-zinc-400);
+		--accent: var(--color-zinc-200);
+		--accent-foreground: var(--color-zinc-950);
+		--destructive: var(--color-red-500);
+		--destructive-foreground: var(--color-white);
+		--border: var(--color-zinc-800);
+		--input: var(--color-zinc-800);
+		--ring: var(--color-indigo-400);
+		--chart-1: var(--color-blue-400);
+		--chart-2: var(--color-indigo-400);
+		--chart-3: var(--color-purple-400);
+		--chart-4: var(--color-cyan-300);
+		--chart-5: var(--color-red-400);
 	}
 
-	@apply *:text-foreground;
+	/* @apply *:text-foreground; */
 }
+
+/*
+Mist theme usage:
+<div data-theme="mist">
+	<div class="theme-container">...</div>
+</div>
+
+Add class="dark" to an ancestor to use the dark palette.
+*/
 
 [data-theme="veil"] .theme-container {
 	--radius: 0.625rem;

@@ -1,28 +1,14 @@
 <script lang="ts">
-	import {
-		Tooltip,
-		TooltipContent,
-		TooltipProvider,
-		TooltipTrigger,
-	} from "#lib/components/ui/tooltip/index.js";
-	import { Button, type ButtonProps } from "#lib/components/ui/button/index.js";
+	import { Button } from "#lib/components/special/button/index.js";
 
 	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
-	import { cn } from "#lib/utils.js";
 	import { scale } from "svelte/transition";
-	import type { Snippet } from "svelte";
 
 	import Check from "@lucide/svelte/icons/check";
 	import Copy from "@lucide/svelte/icons/copy";
 	import X from "@lucide/svelte/icons/x";
 	import type { CopyButtonProps } from "./types";
-
-	// interface Props extends Omit<ButtonProps, "href"> {
-	// 	text: string;
-	// 	icon?: Snippet<[]>;
-	// 	animationDuration?: number;
-	// 	onCopy?: (status: UseClipboard["status"]) => void;
-	// }
+	import { cn } from "cn";
 
 	let {
 		text,
@@ -38,46 +24,36 @@
 	const clipboard = new UseClipboard({ delay: 1500 });
 </script>
 
-<TooltipProvider delayDuration={200}>
-	<Tooltip>
-		<TooltipTrigger class={className}>
-			<Button
-				{...restProps}
-				{variant}
-				{size}
-				class={cn("z-50 h-8 w-8")}
-				type="button"
-				name="copy"
-				tabindex={-1}
-				onclick={async () => {
-					const status = await clipboard.copy(text);
-					onCopy?.(status);
-				}}
-			>
-				{#if clipboard.status === "success"}
-					<div in:scale={{ duration: animationDuration, start: 0.5 }}>
-						<Check class="size-3.5! text-[#10B981]" />
-						<span class="sr-only">Copied</span>
-					</div>
-				{:else if clipboard.status === "failure"}
-					<div in:scale={{ duration: animationDuration, start: 0.5 }}>
-						<X class="size-3.5!" />
-						<span class="sr-only">Failed to copy</span>
-					</div>
-				{:else}
-					<div in:scale={{ duration: animationDuration, start: 0.5 }}>
-						{#if icon}
-							{@render icon()}
-						{:else}
-							<Copy class="size-3.5! opacity-50" />
-						{/if}
-						<span class="sr-only">Copy</span>
-					</div>
-				{/if}
-			</Button>
-		</TooltipTrigger>
-		<TooltipContent align="center" side="top" class="z-50 px-2 py-1 text-[10px]"
-			>Copy Code</TooltipContent
-		>
-	</Tooltip>
-</TooltipProvider>
+<Button
+	{...restProps}
+	{variant}
+	{size}
+	class={cn("group", className)}
+	type="button"
+	name="copy"
+	onclick={async () => {
+		const status = await clipboard.copy(text);
+		onCopy?.(status);
+	}}
+>
+	{#if clipboard.status === "success"}
+		<div in:scale={{ duration: animationDuration, start: 0.5 }}>
+			<Check class="size-3.5!" />
+			<span class="sr-only">Copied</span>
+		</div>
+	{:else if clipboard.status === "failure"}
+		<div in:scale={{ duration: animationDuration, start: 0.5 }}>
+			<X class="size-3.5!" />
+			<span class="sr-only">Failed to copy</span>
+		</div>
+	{:else}
+		<div in:scale={{ duration: animationDuration, start: 0.5 }}>
+			{#if icon}
+				{@render icon()}
+			{:else}
+				<Copy class="size-3.5! opacity-50 group-hover:opacity-80" />
+			{/if}
+			<span class="sr-only">Copy</span>
+		</div>
+	{/if}
+</Button>

@@ -50,13 +50,18 @@
 <div class={cn(style({ variant }), className)}>
 	<div class="flex place-items-center justify-between gap-2 border-b border-border py-1 pr-2">
 		<div class="flex place-items-center gap-2 px-2">
-			<div class="flex size-4 place-items-center justify-center bg-foreground opacity-50">
+			<div
+				class="flex size-4 place-items-center justify-center rounded-sm bg-foreground opacity-50 [corner-shape:superellipse(1.4)]"
+			>
 				<TerminalIcon class="size-3 text-background" />
 			</div>
 			<Tabs.Root bind:value={agent}>
 				<Tabs.List class="h-auto bg-transparent p-0">
 					{#each agents as pm (pm)}
-						<Tabs.Trigger value={pm} class="h-7 font-mono text-sm font-light">
+						<Tabs.Trigger
+							value={pm}
+							class="h-7 cursor-pointer font-mono text-sm font-normal shadow-none! data-[state=active]:border-ink/30 data-[state=active]:shadow-none"
+						>
 							{pm}
 						</Tabs.Trigger>
 					{/each}
@@ -79,7 +84,9 @@
 		</Tooltip.Provider>
 	</div>
 	<div class="no-scrollbar overflow-x-auto p-3">
-		<span class="font-mono text-sm leading-none font-light text-nowrap text-muted-foreground">
+		<span
+			class="font-mono text-sm leading-none font-light text-nowrap text-muted-foreground subpixel-antialiased"
+		>
 			{commandText}
 		</span>
 	</div>

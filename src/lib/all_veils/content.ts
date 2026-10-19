@@ -6,6 +6,22 @@ import ContentTwo from "#lib/components/veil/content/content-two.svelte";
 import ContentTwoCode from "#lib/components/veil/content/content-two.svelte?raw";
 import ContentThree from "#lib/components/veil/content/content-three.svelte";
 import ContentThreeCode from "#lib/components/veil/content/content-three.svelte?raw";
+import { createBlockCodeTreeFromCode } from "#lib/tree/types.js";
+
+function createContentFolderStructure(fileName: string) {
+	return `# Folder structure
+
+I've simplified the layout to make it easier to browse.
+
+Here is the original folder structure:
+
+    src/lib/
+    └── components/
+        └── veil/
+            └── content/
+                └── ${fileName}
+`;
+}
 
 export const all_veils_content: MistBlock[] = [
 	{
@@ -14,10 +30,17 @@ export const all_veils_content: MistBlock[] = [
 		category: "content",
 		preview: "/preview/veil/content/content-one",
 		itemId: "content-one",
-		code: {
-			code: ContentOneCode,
-			lang: "svelte",
-		},
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "content-one.svelte", code: ContentOneCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createContentFolderStructure("content-one.svelte"),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 		component: ContentOne,
 	},
 	{
@@ -26,10 +49,17 @@ export const all_veils_content: MistBlock[] = [
 		category: "content",
 		preview: "/preview/veil/content/content-two",
 		itemId: "content-two",
-		code: {
-			code: ContentTwoCode,
-			lang: "svelte",
-		},
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "content-two.svelte", code: ContentTwoCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createContentFolderStructure("content-two.svelte"),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 		component: ContentTwo,
 	},
 	{
@@ -38,10 +68,17 @@ export const all_veils_content: MistBlock[] = [
 		category: "content",
 		preview: "/preview/veil/content/content-three",
 		itemId: "content-three",
-		code: {
-			code: ContentThreeCode,
-			lang: "svelte",
-		},
+		codeTree: createBlockCodeTreeFromCode(
+			[
+				{ path: "content-three.svelte", code: ContentThreeCode, lang: "svelte" },
+				{
+					path: "folder-structure.md",
+					code: createContentFolderStructure("content-three.svelte"),
+					lang: "markdown",
+				},
+			],
+			{ defaultOpen: false }
+		),
 		component: ContentThree,
 	},
 ];

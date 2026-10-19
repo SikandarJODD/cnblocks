@@ -1,13 +1,11 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/mist/button/button.svelte";
 	import CalendarCheck from "@lucide/svelte/icons/calendar-check";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import Target from "@lucide/svelte/icons/target";
 </script>
 
-<section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]"
->
+<section>
 	<div class="bg-muted/50 py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div class="grid gap-12 md:grid-cols-5">
@@ -48,7 +46,7 @@
 
 			<div class="relative -mx-12 mt-16 px-12">
 				<div
-					class="relative mx-auto overflow-hidden rounded-xl border border-foreground/20 bg-background shadow-lg ring-1 shadow-black/10"
+					class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg ring-1 shadow-black/10 ring-black/10"
 				>
 					<img src="/mist/tailark-2.png" alt="app screen" width="2880" height="1842" />
 				</div>

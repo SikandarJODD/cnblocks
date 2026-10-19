@@ -1,6 +1,7 @@
 // place files you want to import through the `#lib` alias in this folder.
 
 import type { Block } from "../types/blocks";
+import { createBlockCodeTreeFromCode } from "./tree/types";
 
 const numbers: string[] = [
 	"one",
@@ -49,7 +50,7 @@ export function getBlock(
 			preview: `/preview/${category}/${numToString(i)}`,
 			previewMode: options.previewMode,
 			previewHeight: options.previewHeight,
-			code: { code: comps[i - 1] },
+			codeTree: createBlockCodeTreeFromCode({ code: comps[i - 1] }),
 			component: components[i - 1],
 		});
 	}

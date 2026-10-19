@@ -2,7 +2,9 @@ import { tv, type VariantProps } from "tailwind-variants";
 import Root from "./code.svelte";
 import Overflow from "./code-overflow.svelte";
 import CopyButton from "./code-copy-button.svelte";
+import CodeFiles from "./code-files.svelte";
 import MultipleCode from "./multiple-code.svelte";
+import FrameCode from "./frame-single.svelte";
 
 import type { CodeCopyButtonProps, CodeRootProps } from "./types";
 import type { SupportedLanguage } from "./shiki";
@@ -31,8 +33,10 @@ export type CodeBlock = {
 export {
 	Root,
 	CopyButton,
+	CodeFiles,
 	Overflow,
 	MultipleCode,
+	FrameCode,
 	type CodeRootProps as RootProps,
 	type CodeCopyButtonProps as CopyButtonProps,
 };

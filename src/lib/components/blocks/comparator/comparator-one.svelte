@@ -59,18 +59,16 @@
 <section class="py-16 md:py-32">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="w-full overflow-auto lg:overflow-visible">
-			<table
-				class="w-[200vw] border-separate border-spacing-x-3 md:w-full dark:[--color-muted:var(--color-zinc-900)]"
-			>
+			<table class="w-[200vw] border-separate border-spacing-x-3 md:w-full">
 				<thead class="sticky top-0 bg-background">
-					<tr class="*:py-4 *:text-left *:font-medium">
+					<tr class="*:py-4 *:font-medium [&>th:not(:first-child)]:text-center">
 						<th class="lg:w-2/5"></th>
 						<th class="space-y-3">
 							<span class="block">Free</span>
 
 							<Button variant="outline" size="sm">Get Started</Button>
 						</th>
-						<th class="space-y-3 rounded-t-(--radius) bg-muted px-4">
+						<th class="space-y-3 rounded-t-lg bg-muted px-4 dark:bg-zinc-900">
 							<span class="block">Pro</span>
 							<Button size="sm">Get Started</Button>
 						</th>
@@ -80,14 +78,14 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody class="text-caption text-sm">
+				<tbody class="text-caption text-sm [&>tr>td:not(:first-child)]:text-center">
 					<tr class="*:py-3">
 						<td class="flex items-center gap-2 font-medium">
 							<Cpu class="size-4" />
 							<span>Features</span>
 						</td>
 						<td></td>
-						<td class="border-none bg-muted px-4"></td>
+						<td class="border-none bg-muted px-4 dark:bg-zinc-900"></td>
 						<td></td>
 					</tr>
 					{#each tableData.slice(-4) as row, index}
@@ -99,7 +97,7 @@
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
 										fill="currentColor"
-										class="size-4"
+										class="mx-auto size-4"
 									>
 										<path
 											fill-rule="evenodd"
@@ -111,14 +109,14 @@
 									{row.free}
 								{/if}
 							</td>
-							<td class="border-none bg-muted px-4">
+							<td class="border-none bg-muted px-4 dark:bg-zinc-900">
 								<div class="-mb-3 border-b py-3">
 									{#if typeof row.pro === "boolean" && row.pro}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 24 24"
 											fill="currentColor"
-											class="size-4"
+											class="mx-auto size-4"
 										>
 											<path
 												fill-rule="evenodd"
@@ -137,7 +135,7 @@
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
 										fill="currentColor"
-										class="size-4"
+										class="mx-auto size-4"
 									>
 										<path
 											fill-rule="evenodd"
@@ -157,7 +155,7 @@
 							<span>AI Models</span>
 						</td>
 						<td></td>
-						<td class="border-none bg-muted px-4"></td>
+						<td class="border-none bg-muted px-4 dark:bg-zinc-900"></td>
 						<td></td>
 					</tr>
 					{#each tableData as row}
@@ -169,7 +167,7 @@
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
 										fill="currentColor"
-										class="size-4"
+										class="mx-auto size-4"
 									>
 										<path
 											fill-rule="evenodd"
@@ -179,14 +177,14 @@
 									</svg>
 								{/if}
 							</td>
-							<td class="border-none bg-muted px-4">
-								<div class="-mb-3 border-b py-3">
+							<td class="border-none bg-muted px-4 dark:bg-zinc-900">
+								<div class="-mb-3 border-b pb-3.5">
 									{#if typeof row.pro === "boolean" && row.pro}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 24 24"
 											fill="currentColor"
-											class="size-4"
+											class="mx-auto size-4"
 										>
 											<path
 												fill-rule="evenodd"
@@ -205,7 +203,7 @@
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
 										fill="currentColor"
-										class="size-4"
+										class="mx-auto size-4"
 									>
 										<path
 											fill-rule="evenodd"
@@ -222,7 +220,7 @@
 					<tr class="*:py-6">
 						<td></td>
 						<td></td>
-						<td class="rounded-b-(--radius) border-none bg-muted px-4"></td>
+						<td class="rounded-b-lg border-none bg-muted px-4 dark:bg-zinc-900"></td>
 						<td></td>
 					</tr>
 				</tbody>

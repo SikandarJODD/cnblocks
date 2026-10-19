@@ -1,8 +1,6 @@
-export type ImportAliasStyle = "dollar" | "hash";
+import type { BlockCodeNode, BlockCodeTree } from "#lib/tree/types.js";
 
-type CodeSnippet = {
-	code: string;
-};
+export type ImportAliasStyle = "dollar" | "hash";
 
 const SVELTEKIT_ALIASES = ["$app", "$env", "$service-worker"];
 const MODULE_SPECIFIER = /(\b(?:from|import)\s*(?:\(\s*)?)(["'])([$#][^"']+)\2/g;
@@ -32,19 +30,23 @@ export function transformImportAliases(source: string, style: ImportAliasStyle) 
 	);
 }
 
-export function transformCodeImports<T extends CodeSnippet | CodeSnippet[]>(
-	value: T,
-	style: ImportAliasStyle
-): T {
-	if (Array.isArray(value)) {
-		return value.map((item) => ({
-			...item,
-			code: transformImportAliases(item.code, style),
-		})) as T;
+function transformCodeTreeNode(node: BlockCodeNode, style: ImportAliasStyle): BlockCodeNode {
+	if (node.type === "folder") {
+		return {
+			...node,
+			children: node.children.map((child) => transformCodeTreeNode(child, style)),
+		};
 	}
 
+	return node.code ? { ...node, code: transformImportAliases(node.code, style) } : node;
+}
+
+export function transformCodeTreeImports(
+	tree: BlockCodeTree,
+	style: ImportAliasStyle
+): BlockCodeTree {
 	return {
-		...value,
-		code: transformImportAliases(value.code, style),
-	} as T;
+		...tree,
+		nodes: tree.nodes.map((node) => transformCodeTreeNode(node, style)),
+	};
 }

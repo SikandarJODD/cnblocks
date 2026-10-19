@@ -293,7 +293,7 @@
 							</div>
 						</div>
 						<div
-							class="relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px before:bg-(--color-border) sm:-my-6 sm:-mr-6"
+							class="relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px before:bg-border sm:-my-6 sm:-mr-6"
 						>
 							<div
 								class="relative flex h-full flex-col justify-center space-y-6 py-6"

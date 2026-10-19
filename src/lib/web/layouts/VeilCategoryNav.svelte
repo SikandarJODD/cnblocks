@@ -21,7 +21,7 @@
 							<a
 								href={category.href}
 								class={cn(
-									"flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 transition-all duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground",
+									"flex h-7 w-fit items-center rounded-full px-1 text-[13px] text-nowrap text-zinc-700 transition-colors duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground",
 									isActive(category.href) && "bg-muted text-primary!"
 								)}
 							>

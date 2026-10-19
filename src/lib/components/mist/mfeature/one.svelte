@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { Card } from "#lib/components/ui/card/index.js";
+	import { Card } from "#lib/components/ui/mist/card/index.js";
 	import FeatureTable from "./feature-table.svelte";
 </script>
 
 <!-- Card Variant : soft  -->
-<section
-	class="[--color-primary:theme(color.indigo.500)] [--color-secondary-foreground:theme(color.indigo.600)] [--color-secondary:theme(color.indigo.100)] dark:[--color-primary:theme(color.indigo.400)] dark:[--color-secondary-foreground:theme(color.indigo.500)] dark:[--color-secondary:theme(color.indigo.400)]"
->
+<section>
 	<div class="bg-muted/50 py-24">
 		<div class="mx-auto w-full max-w-5xl px-6">
 			<div>

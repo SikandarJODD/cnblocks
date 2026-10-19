@@ -1,5 +1,67 @@
 [
 	{
+		"name": "button",
+		"type": "registry:ui",
+		"description": "Veil button primitive",
+		"dependencies": [
+			"bits-ui",
+			"tailwind-variants"
+		],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "button.json"
+	},
+	{
+		"name": "card",
+		"type": "registry:ui",
+		"description": "Veil card primitive",
+		"dependencies": [
+			"bits-ui",
+			"tailwind-variants"
+		],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "card.json"
+	},
+	{
+		"name": "input",
+		"type": "registry:ui",
+		"description": "Veil input primitive",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "input.json"
+	},
+	{
+		"name": "textarea",
+		"type": "registry:ui",
+		"description": "Veil textarea primitive",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "textarea.json"
+	},
+	{
+		"name": "veil-theme",
+		"type": "registry:theme",
+		"description": "Veil color, typography, and UI primitives",
+		"dependencies": [
+			"@fontsource/asar",
+			"@fontsource-variable/geist"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:card",
+			"local:input",
+			"local:textarea"
+		],
+		"relativeUrl": "veil-theme.json"
+	},
+	{
 		"name": "hero-one",
 		"type": "registry:block",
 		"description": "Veil Hero component, variant One.",
@@ -8,8 +70,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card",
+			"local:button",
+			"local:card",
 			"local:header-one",
 			"local:svgs"
 		],
@@ -24,8 +86,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card",
+			"local:button",
+			"local:card",
 			"local:header-two",
 			"local:svgs"
 		],
@@ -40,7 +102,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
+			"local:button",
 			"local:header-three"
 		],
 		"relativeUrl": "hero-three.json"
@@ -54,7 +116,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
+			"local:button",
 			"local:header-four"
 		],
 		"relativeUrl": "hero-four.json"
@@ -68,7 +130,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "hero-five.json"
 	},
@@ -81,7 +143,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "header-one.json"
 	},
@@ -94,7 +156,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "header-two.json"
 	},
@@ -107,7 +169,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "header-three.json"
 	},
@@ -120,7 +182,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "header-four.json"
 	},
@@ -133,7 +195,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"card",
+			"local:card",
 			"local:svgs"
 		],
 		"relativeUrl": "features-one.json"
@@ -147,7 +209,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"card",
+			"local:card",
 			"local:svgs"
 		],
 		"relativeUrl": "features-two.json"
@@ -161,7 +223,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
+			"local:button",
 			"local:svgs"
 		],
 		"relativeUrl": "features-three.json"
@@ -204,7 +266,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
+			"local:button",
 			"local:svgs"
 		],
 		"relativeUrl": "integration-one.json"
@@ -218,7 +280,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
+			"local:button",
 			"local:svgs"
 		],
 		"relativeUrl": "integration-two.json"
@@ -232,7 +294,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "call-to-action-one.json"
 	},
@@ -245,8 +307,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "call-to-action-two.json"
 	},
@@ -259,7 +321,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "call-to-action-three.json"
 	},
@@ -272,8 +334,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "call-to-action-four.json"
 	},
@@ -322,8 +384,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "pricing-one.json"
 	},
@@ -336,8 +398,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "pricing-two.json"
 	},
@@ -350,8 +412,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "pricing-three.json"
 	},
@@ -371,7 +433,7 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"card"
+			"local:card"
 		],
 		"relativeUrl": "testimonial-two.json"
 	},
@@ -440,7 +502,7 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"accordion",
-			"card"
+			"local:card"
 		],
 		"relativeUrl": "faqs-one.json"
 	},
@@ -474,7 +536,7 @@
 		"devDependencies": [],
 		"registryDependencies": [
 			"accordion",
-			"card"
+			"local:card"
 		],
 		"relativeUrl": "faqs-four.json"
 	},
@@ -485,11 +547,11 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"card",
-			"input",
+			"local:button",
+			"local:card",
+			"local:input",
 			"label",
-			"textarea"
+			"local:textarea"
 		],
 		"relativeUrl": "contact-one.json"
 	},
@@ -500,12 +562,12 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"card",
-			"input",
+			"local:button",
+			"local:card",
+			"local:input",
 			"label",
 			"select",
-			"textarea"
+			"local:textarea"
 		],
 		"relativeUrl": "contact-two.json"
 	},
@@ -516,9 +578,9 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"card",
-			"input",
+			"local:button",
+			"local:card",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -531,8 +593,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"input",
+			"local:button",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -545,8 +607,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"input",
+			"local:button",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -559,9 +621,9 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"card",
-			"input",
+			"local:button",
+			"local:card",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -574,8 +636,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"input",
+			"local:button",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -588,8 +650,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"input",
+			"local:button",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -602,9 +664,9 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"card",
-			"input",
+			"local:button",
+			"local:card",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -617,8 +679,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"input",
+			"local:button",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -631,8 +693,8 @@
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [
-			"button",
-			"input",
+			"local:button",
+			"local:input",
 			"label",
 			"local:svgs"
 		],
@@ -647,8 +709,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "comparator-one.json"
 	},
@@ -661,8 +723,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "comparator-two.json"
 	},
@@ -675,8 +737,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
-			"card"
+			"local:button",
+			"local:card"
 		],
 		"relativeUrl": "comparator-three.json"
 	},
@@ -740,7 +802,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"button",
+			"local:button",
 			"local:theme-switcher"
 		],
 		"relativeUrl": "footer-six.json"
@@ -755,7 +817,7 @@
 			"mode-watcher"
 		],
 		"registryDependencies": [
-			"button"
+			"local:button"
 		],
 		"relativeUrl": "theme-switcher.json"
 	},

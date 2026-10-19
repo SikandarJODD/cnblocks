@@ -1,10 +1,11 @@
-<script>
-	import Button from "#lib/components/ui/button/button.svelte";
+<script lang="ts">
+	import { Button } from "#lib/components/ui/mist/button/index.js";
+	import TrustedLogos from "./trusted-logos.svelte";
 	import Header from "./header.svelte";
 </script>
 
 <Header />
-<main class="overflow-hidden bg-muted/50 [--color-primary:theme(colors.indigo.500)]">
+<main class="overflow-hidden bg-muted/50">
 	<section>
 		<div class="relative py-24">
 			<div class="mx-auto max-w-5xl px-6">
@@ -17,57 +18,19 @@
 					</p>
 
 					<div class="flex flex-col items-center gap-3 *:w-full sm:flex-row sm:*:w-fit">
-						<Button variant="mdefault" href="/" size="lg">Start Building</Button>
-						<Button href="/" size="lg" variant="outline">Request a demo</Button>
+						<Button href="#" size="lg">Start Building</Button>
+						<Button href="#" size="lg" variant="outline">Request a demo</Button>
 					</div>
 				</div>
 
 				<div class="mt-8">
 					<p class="font-medium text-muted-foreground">Trusted by teams at :</p>
-					<div class="mt-4 flex items-center gap-12">
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit"
-								src="https://html.tailus.io/blocks/customers/nvidia.svg"
-								alt="Nvidia Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit"
-								src="https://html.tailus.io/blocks/customers/column.svg"
-								alt="Column Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-4 w-fit"
-								src="https://html.tailus.io/blocks/customers/github.svg"
-								alt="GitHub Logo"
-								height="16"
-								width="auto"
-							/>
-						</div>
-						<div class="flex">
-							<img
-								class="mx-auto h-5 w-fit"
-								src="https://html.tailus.io/blocks/customers/nike.svg"
-								alt="Nike Logo"
-								height="20"
-								width="auto"
-							/>
-						</div>
-					</div>
+					<TrustedLogos class="mt-4 gap-12" />
 				</div>
 
 				<div class="relative mt-16 -mr-56 sm:mr-0">
 					<div
-						class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg shadow-black/10 ring-black/10"
+						class="relative mx-auto overflow-hidden rounded-(--radius) border border-transparent bg-background shadow-lg ring-1 shadow-black/10 ring-black/10"
 					>
 						<img
 							src="/mist/tailark-2.png"
