@@ -2,6 +2,7 @@
 	import { page } from "$app/state";
 	import Code from "#lib/components/ui/code/code.svelte";
 	import { CodeFiles, FrameCode, type CodeBlock } from "#lib/components/ui/code/index.js";
+	import { PMCommand } from "#lib/components/ui/pm-command/index.js";
 	import { H1, H2, H3, Link, Paragraph } from "#lib/components/markdown/index.js";
 	import { docsV2PageMap } from "#lib/config/docs-v2.js";
 	import { projectUrl } from "#lib/config/seo.js";
@@ -527,6 +528,22 @@ export {
 				{description}
 			</Paragraph>
 		</header>
+
+		<section class="border-b border-dashed border-ink/30 pb-12 dark:border-muted">
+			<H2 id="install-with-cli">Install with CLI</H2>
+			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
+				Install the Mist theme tokens and required UI primitives with the shadcn-svelte CLI.
+			</Paragraph>
+			<PMCommand
+				command="execute"
+				variant="secondary"
+				args={["shadcn-svelte@latest", "add", `${projectUrl}/m/mist-theme.json`]}
+			/>
+			<Paragraph class="mt-4 max-w-prose text-sm text-muted-foreground">
+				The CLI updates your main CSS theme variables. Use the manual setup below to keep
+				the theme variables separate without replacing the variables in your main CSS file.
+			</Paragraph>
+		</section>
 
 		<section>
 			<H2 id="folder-structure">Folder structure</H2>
