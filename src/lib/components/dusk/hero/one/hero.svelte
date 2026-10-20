@@ -65,7 +65,7 @@
 
 				<div class="relative mt-8 overflow-hidden p-6 max-sm:-mr-56 sm:mt-16">
 					<div
-						class="mask-t-from-25% mask-t-to-65% absolute inset-0 rounded-4xl border bg-linear-to-b to-zinc-600"
+						class="mask-t-from-25% mask-t-to-65% absolute inset-0 rounded-4xl border bg-linear-to-b from-amber-200 to-orange-300 dark:from-transparent dark:to-zinc-600"
 					></div>
 					<div
 						class="relative rounded-2xl bg-background p-2 shadow-xl ring ring-foreground/6.5 shadow-black/50 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:ring-foreground before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left"
