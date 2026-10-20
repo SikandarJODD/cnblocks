@@ -21,7 +21,11 @@
 
 					<div class="flex gap-2 max-md:justify-center">
 						<Button>Get Started</Button>
-						<Button variant="ghost" aria-label="Download App" class="hover:bg-transparent">
+						<Button
+							variant="ghost"
+							aria-label="Download App"
+							class="hover:bg-transparent"
+						>
 							<Kbd>D</Kbd>
 							Download App
 						</Button>
@@ -32,9 +36,11 @@
 					<div class="absolute inset-0 z-10 m-auto h-fit md:-translate-y-7 md:px-12">
 						<div class="relative">
 							<div
-								class="mt-auto h-fit rounded-3xl bg-card p-3 shadow-xl ring ring-foreground/15 shadow-black/25"
+								class="mt-auto h-fit rounded-3xl bg-card p-3 shadow-xl ring shadow-black/25 ring-foreground/15"
 							>
-								<div class="p-2 pb-3 text-sm text-muted-foreground">Ask Tailark what you need...</div>
+								<div class="p-2 pb-3 text-sm text-muted-foreground">
+									Ask Tailark what you need...
+								</div>
 								<div class="flex justify-between gap-3">
 									<div class="flex items-center gap-1">
 										<button
@@ -68,7 +74,7 @@
 					<img
 						src="https://images.unsplash.com/photo-1618003787019-95b65cc875d2?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 						alt="Abstract flower"
-						class="size-full scale-90 object-cover object-[25%_50%] mix-blend-lighten mask-b-from-65%"
+						class="size-full scale-90 mask-b-from-65% object-cover object-[25%_50%] mix-blend-lighten"
 						width="2148"
 						height="1611"
 					/>

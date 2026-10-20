@@ -39,7 +39,7 @@
 						class="relative aspect-square overflow-hidden rounded-3xl bg-muted md:aspect-5/3 lg:aspect-video"
 					>
 						<div
-							class="absolute top-4 left-4 z-10 min-w-4xl rounded-2xl bg-background p-2 shadow-lg ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground lg:top-16 lg:left-16 lg:min-w-5xl xl:min-w-7xl"
+							class="absolute top-4 left-4 z-10 min-w-4xl rounded-2xl bg-[oklch(0.145_0_0)] p-2 shadow-lg ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground lg:top-16 lg:left-16 lg:min-w-5xl xl:min-w-7xl dark:bg-background"
 						>
 							<div
 								aria-hidden="true"

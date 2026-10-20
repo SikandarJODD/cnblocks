@@ -27,7 +27,9 @@
 						class="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300"
 					>
 						<span class="text-sm font-medium">New:</span>
-						<span class="text-sm text-muted-foreground">Introducing the living customer graph</span>
+						<span class="text-sm text-muted-foreground"
+							>Introducing the living customer graph</span
+						>
 
 						<span class="size-6 overflow-hidden rounded-full">
 							<span
@@ -49,8 +51,8 @@
 						Customer universe, beautifully connected
 					</h1>
 					<p class="mx-auto mt-4 max-w-2xl text-balance text-muted-foreground md:text-lg">
-						Every account, signal, conversation, and next move in one living workspace that helps
-						teams turn momentum into revenue.
+						Every account, signal, conversation, and next move in one living workspace
+						that helps teams turn momentum into revenue.
 					</p>
 
 					<div class="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
@@ -65,14 +67,14 @@
 
 				<div class="relative mt-8 overflow-hidden p-6 max-sm:-mr-56 sm:mt-16">
 					<div
-						class="mask-t-from-25% mask-t-to-65% absolute inset-0 rounded-4xl border bg-linear-to-b from-amber-200 to-orange-300 dark:from-transparent dark:to-zinc-600"
+						class="absolute inset-0 rounded-4xl border bg-linear-to-b from-amber-200 to-orange-300 mask-t-from-25% mask-t-to-65% dark:from-transparent dark:to-zinc-600"
 					></div>
 					<div
-						class="relative rounded-2xl bg-background p-2 shadow-xl ring ring-foreground/6.5 shadow-black/50 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:ring-foreground before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left"
+						class="relative rounded-2xl bg-background p-2 shadow-xl ring shadow-black/50 ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground"
 					>
 						<div class="absolute inset-0 z-1 rounded-2xl bg-foreground/2"></div>
 						<img
-							class="relative aspect-15/8 rounded-2xl bg-background"
+							class="relative aspect-15/8 rounded-xl bg-background [corner-shape:superellipse(1.2)]"
 							src="/mail2.png"
 							alt="App screen showing the connected customer workspace"
 							width="2700"
