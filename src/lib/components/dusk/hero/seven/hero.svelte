@@ -44,15 +44,22 @@
 					class="relative aspect-square overflow-hidden rounded-3xl sm:aspect-5/3 lg:ml-auto lg:aspect-5/4 lg:max-w-xl"
 				>
 					<div
-						class="absolute top-6 left-6 z-10 min-w-3xl rounded-2xl bg-background p-2 shadow-lg ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground lg:top-8 lg:left-8"
+						class="absolute top-6 left-6 z-10 min-w-3xl rounded-2xl bg-white p-2 ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground lg:top-8 lg:left-8 dark:bg-background dark:shadow-lg"
 					>
 						<div
 							aria-hidden="true"
-							class="absolute inset-0 z-1 rounded-2xl bg-foreground/2"
+							class="absolute inset-0 z-1 rounded-2xl bg-white dark:bg-foreground/2"
 						></div>
 						<img
-							class="relative aspect-15/8 rounded-2xl bg-background"
+							class="relative hidden aspect-15/8 rounded-2xl dark:block dark:bg-background"
 							src="/mail2.png"
+							alt="App screen"
+							width="2700"
+							height="1440"
+						/>
+						<img
+							class="relative z-2 aspect-15/8 rounded-2xl dark:hidden"
+							src="/mail2-light.png"
 							alt="App screen"
 							width="2700"
 							height="1440"

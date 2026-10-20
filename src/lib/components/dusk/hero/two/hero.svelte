@@ -18,15 +18,24 @@
 			</div>
 
 			<div
-				class="relative -mx-2 mt-8 overflow-hidden rounded-3xl bg-black p-2 max-sm:-mr-56 sm:mt-12"
+				class="relative -mx-2 mt-8 overflow-hidden rounded-3xl p-2 max-sm:-mr-56 sm:mt-12 dark:bg-black"
 			>
 				<div
-					class="relative rounded-2xl bg-background p-2 shadow-2xl ring ring-foreground/6.5 shadow-black/55 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:ring-foreground before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left"
+					class="relative rounded-2xl bg-white p-2 ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground dark:bg-background dark:shadow-2xl dark:shadow-black/55"
 				>
-					<div class="absolute inset-0 z-1 rounded-2xl bg-foreground/2"></div>
+					<div
+						class="absolute inset-0 z-1 rounded-2xl bg-white dark:bg-foreground/2"
+					></div>
 					<img
-						class="relative aspect-15/8 rounded-2xl bg-background"
+						class="relative hidden aspect-15/8 rounded-2xl bg-background dark:block"
 						src="/mail2.png"
+						alt="App screen"
+						width="2700"
+						height="1440"
+					/>
+					<img
+						class="relative z-2 aspect-15/8 rounded-xl border border-border/50 dark:hidden"
+						src="/mail2-light.png"
 						alt="App screen"
 						width="2700"
 						height="1440"
