@@ -47,6 +47,8 @@ const veilCategories: CategoryItem[] = all_veils_category_block.map((category) =
 	count: category.length,
 }));
 
+const duskCategories: CategoryItem[] = [{ title: "Hero", href: "/dusk/hero", count: 5 }];
+
 export const blockLibraries: BlockLibrary[] = [
 	{
 		key: "kit",
@@ -69,14 +71,13 @@ export const blockLibraries: BlockLibrary[] = [
 		categories: veilCategories,
 		count: withTotal(veilCategories),
 	},
-	// {
-	// 	key: "dusk",
-	// 	title: "Dusk",
-	// 	href: "/dusk",
-	// 	coming_soon: true,
-	// 	categories: [],
-	// 	count: 40,
-	// },
+	{
+		key: "dusk",
+		title: "Dusk",
+		href: "/dusk/hero",
+		categories: duskCategories,
+		count: withTotal(duskCategories),
+	},
 ];
 
 export const primaryNavigation: NavigationItem[] = [
