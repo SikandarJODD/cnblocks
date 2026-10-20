@@ -7,11 +7,13 @@
 <Header />
 
 <main class="overflow-x-hidden">
-	<section class="pt-40 pb-24 md:pt-56">
+	<section class="bg-[#fcfaf6] pt-40 pb-24 dark:bg-transparent md:pt-56">
 		<div class="relative mx-auto max-w-7xl px-6">
 			<h1 class="text-center text-4xl font-medium tracking-tight text-balance">
 				Family money, finally organized. <br />
-				<span class="text-muted-foreground">Plan budgets, bills, and savings together</span>
+				<span class="text-stone-500 dark:text-muted-foreground">
+					Plan budgets, bills, and savings together
+				</span>
 			</h1>
 
 			<div
@@ -22,8 +24,8 @@
 					alt="Théo's avatar"
 					imageSrc="https://avatars.githubusercontent.com/u/68236786?v=4"
 					class="z-11 scale-85"
-					cardClass="bg-card/75"
-					rightMaskClass="border-foreground/35"
+					cardClass="bg-zinc-900/80 text-zinc-50 dark:bg-card/75 dark:text-foreground"
+					rightMaskClass="border-white/35 dark:border-foreground/35"
 				/>
 
 				<ProfileCard
@@ -31,7 +33,7 @@
 					alt="Shadcn avatar"
 					imageSrc="https://avatars.githubusercontent.com/u/124599?v=4"
 					class="origin-top -translate-y-1 scale-75"
-					cardClass="bg-white/90"
+					cardClass="bg-zinc-800/90 text-zinc-50 dark:bg-white/90 dark:text-foreground"
 				/>
 
 				<img
@@ -39,7 +41,15 @@
 					alt="Background"
 					width="1280"
 					height="1000"
-					class="size-full mask-y-from-80% mask-x-from-80% object-cover max-sm:scale-150 dark:mix-blend-lighten"
+					class="size-full rounded-[2rem] object-cover shadow-[0_32px_90px_-48px_rgba(82,62,38,0.45)] ring-1 ring-stone-900/5 max-sm:scale-150 dark:hidden"
+				/>
+
+				<img
+					src="https://images.unsplash.com/photo-1600856209923-34372e319a5d?q=80&w=1289&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					alt=""
+					width="1280"
+					height="1000"
+					class="hidden size-full mask-y-from-80% mask-x-from-80% object-cover max-sm:scale-150 dark:block dark:mix-blend-lighten"
 				/>
 			</div>
 		</div>

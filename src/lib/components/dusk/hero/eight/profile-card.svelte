@@ -20,11 +20,11 @@
 
 <div aria-hidden="true" class={cn("absolute inset-0 z-10 m-auto size-fit", className)}>
 	<div
-		class="mask-radial-from-bottom-left absolute inset-y-0 left-0 z-10 aspect-video rounded-l-2xl border-t border-l border-foreground/25 mask-radial-[100%_60%] mask-radial-from-65%"
+		class="mask-radial-from-bottom-left absolute inset-y-0 left-0 z-10 aspect-video rounded-l-2xl border-t border-l border-white/25 mask-radial-[100%_60%] mask-radial-from-65% dark:border-foreground/25"
 	></div>
 	<div
 		class={cn(
-			"mask-radial-from-bottom-right absolute inset-y-0 right-0 z-10 aspect-video rounded-r-2xl border-t border-r border-foreground/25 mask-radial-[60%_100%] mask-radial-from-65%",
+			"mask-radial-from-bottom-right absolute inset-y-0 right-0 z-10 aspect-video rounded-r-2xl border-t border-r border-white/25 mask-radial-[60%_100%] mask-radial-from-65% dark:border-foreground/25",
 			rightMaskClass
 		)}
 	></div>
@@ -47,7 +47,7 @@
 		>
 			<div class="flex gap-2">
 				<div
-					class="relative size-18 overflow-hidden rounded-xl shadow-md before:absolute before:inset-0 before:rounded-xl before:border before:border-foreground/20"
+					class="relative size-18 overflow-hidden rounded-xl shadow-md before:absolute before:inset-0 before:rounded-xl before:border before:border-white/20 dark:before:border-foreground/20"
 				>
 					<img src={imageSrc} {alt} width="136" height="136" />
 				</div>
@@ -55,12 +55,12 @@
 					<div class="text-sm font-medium">{name}</div>
 					<div class="mt-1.5 flex items-center gap-3">
 						<div>
-							<div class="text-xs text-foreground/50">Expenses</div>
+							<div class="text-xs text-zinc-50/50 dark:text-foreground/50">Expenses</div>
 							<div class="mt-0.5 text-sm font-semibold">$32.65k</div>
 						</div>
-						<div class="h-7 w-px bg-border"></div>
+						<div class="h-7 w-px bg-white/15 dark:bg-border"></div>
 						<div>
-							<div class="text-xs text-foreground/50">Income</div>
+							<div class="text-xs text-zinc-50/50 dark:text-foreground/50">Income</div>
 							<div class="mt-0.5 text-sm font-semibold">$2.65k</div>
 						</div>
 					</div>
