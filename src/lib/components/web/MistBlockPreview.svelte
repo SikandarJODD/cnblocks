@@ -88,14 +88,16 @@
 		TooltipProvider,
 		TooltipTrigger,
 	} from "#lib/components/ui/tooltip/index.js";
-	type ScopedTheme = "veil" | "mist";
+	type ScopedTheme = "veil" | "mist" | "dusk";
 
 	function resolveScopedTheme(): ScopedTheme | null {
 		let pathname = page.url.pathname.toString();
 		const segments = pathname.split("/").filter(Boolean);
 		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
 
-		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
+		return themeSegment === "veil" || themeSegment === "mist" || themeSegment === "dusk"
+			? themeSegment
+			: null;
 	}
 
 	let showIframeComp = $derived(previewMode === "iframe" || !BlockComponent);
