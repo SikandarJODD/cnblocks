@@ -33,7 +33,7 @@
 					alt="Shadcn avatar"
 					imageSrc="https://avatars.githubusercontent.com/u/124599?v=4"
 					class="origin-top -translate-y-1 scale-75"
-					cardClass="bg-zinc-800/90 text-zinc-50 dark:bg-white/90 dark:text-foreground"
+					cardClass="bg-zinc-800/90 text-zinc-50 dark:bg-card/75 dark:text-foreground"
 				/>
 
 				<img
