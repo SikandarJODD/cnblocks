@@ -1,0 +1,202 @@
+[
+	{
+		"name": "button",
+		"type": "registry:ui",
+		"description": "Dusk button primitive",
+		"dependencies": [
+			"tailwind-variants"
+		],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "button.json"
+	},
+	{
+		"name": "logo",
+		"type": "registry:component",
+		"description": "Shared brand logo used by Dusk navigation headers",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "logo.json"
+	},
+	{
+		"name": "svgs",
+		"type": "registry:component",
+		"description": "Shared SVG logo and icon components used by Dusk heroes",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "svgs.json"
+	},
+	{
+		"name": "hero-one",
+		"type": "registry:block",
+		"description": "Dusk centered hero with product preview and customer logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-one.json"
+	},
+	{
+		"name": "hero-two",
+		"type": "registry:block",
+		"description": "Dusk split hero with app preview and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-two.json"
+	},
+	{
+		"name": "hero-three",
+		"type": "registry:block",
+		"description": "Dusk fitness hero with immersive background image and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-three.json"
+	},
+	{
+		"name": "hero-four",
+		"type": "registry:block",
+		"description": "Dusk conversational AI hero with device mockup and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs",
+			"kbd"
+		],
+		"relativeUrl": "hero-four.json"
+	},
+	{
+		"name": "hero-five",
+		"type": "registry:block",
+		"description": "Dusk video hero with overlay content and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-five.json"
+	},
+	{
+		"name": "hero-six",
+		"type": "registry:block",
+		"description": "Dusk editorial hero with product preview and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-six.json"
+	},
+	{
+		"name": "hero-seven",
+		"type": "registry:block",
+		"description": "Dusk CRM hero with dashboard preview and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-seven.json"
+	},
+	{
+		"name": "hero-eight",
+		"type": "registry:block",
+		"description": "Dusk family finance hero with layered profile cards and ratings",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-eight.json"
+	},
+	{
+		"name": "hero-nine",
+		"type": "registry:block",
+		"description": "Dusk centered CRM hero with framed dashboard and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-nine.json"
+	},
+	{
+		"name": "hero-ten",
+		"type": "registry:block",
+		"description": "Dusk split-copy hero with layered product panels and logo cloud",
+		"dependencies": [
+			"runed"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "hero-ten.json"
+	}
+]
