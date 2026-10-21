@@ -228,11 +228,13 @@
 				{/if}
 				<Button
 					variant="ghost"
-					class="size-7 transition-[color,background-color,box-shadow] duration-200 hover:bg-background data-[state=checked]:bg-background dark:hover:bg-muted"
+					size="sm"
+					class="gap-1.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background dark:hover:bg-muted"
 					href={preview}
 					target="_blank"
 				>
-					<Maximize strokeWidth={1.6} class="size-3.5! sm:opacity-80" />
+					<!-- <Maximize strokeWidth={1.6} class="size-3.5! sm:opacity-80" /> -->
+					<span class="text-[13px]">Open preview</span>
 				</Button>
 				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				<span class="hidden text-[13px] text-muted-foreground lg:block"
