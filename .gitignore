@@ -30,3 +30,4 @@ vite.config.ts.timestamp-*
 !/scripts/create-tailark-feature.mjs
 !/scripts/generate-static-preview-routes.mjs
 !/scripts/generate-install-links.mjs
+!/scripts/generate-previews.js

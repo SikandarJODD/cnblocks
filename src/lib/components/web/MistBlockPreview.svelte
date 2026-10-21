@@ -109,7 +109,9 @@
 			? "/docs/veil-theme"
 			: activePreviewTheme === "mist"
 				? "/docs/mist-theme"
-				: null
+				: activePreviewTheme === "dusk"
+					? "/docs/dusk-theme"
+					: null
 	);
 
 	function setPreviewWidth(size: number) {
