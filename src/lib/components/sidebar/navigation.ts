@@ -92,6 +92,7 @@ export const docsNavigation: NavigationItem[] = [
 	{ title: "Installation", href: "/docs/installation" },
 	{ title: "Mist Theme Setup", href: "/docs/mist-theme" },
 	{ title: "Veil Theme Setup", href: "/docs/veil-theme" },
+	{ title: "Dusk Theme Setup", href: "/docs/dusk-theme" },
 ];
 
 export function getBlockLibrary(pathname: string) {
