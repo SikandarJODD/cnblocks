@@ -11,9 +11,11 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
+		"generate:previews": "node scripts/generate-previews.js",
 		"build:blocks": "pnpm shadcn-svelte registry build ./registry.json -o ./static/r",
 		"build:mist": "pnpm shadcn-svelte registry build ./mist-registry.json -o ./static/m",
-		"build:veil": "pnpm shadcn-svelte registry build ./veil-registry.json -o ./static/v"
+		"build:veil": "pnpm shadcn-svelte registry build ./veil-registry.json -o ./static/v",
+		"build:dusk": "pnpm shadcn-svelte registry build ./dusk-registry.json -o ./static/d"
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.12.4",

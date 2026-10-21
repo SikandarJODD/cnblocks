@@ -1,0 +1,570 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry.json",
+	"name": "sv-blocks - dusk variant",
+	"homepage": "https://sv-blocks.vercel.app/dusk",
+	"aliases": {
+		"lib": "$lib",
+		"ui": "$lib/components/ui",
+		"components": "$lib/components",
+		"utils": "$lib/utils",
+		"hooks": "$lib/hooks"
+	},
+	"items": [
+		{
+			"name": "button",
+			"type": "registry:ui",
+			"description": "Dusk button primitive",
+			"registryDependencies": [],
+			"dependencies": ["tailwind-variants"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/dusk/button/button.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/button/button.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/button/index.ts",
+					"type": "registry:ui",
+					"target": "ui/dusk/button/index.ts"
+				}
+			]
+		},
+		{
+			"name": "card",
+			"type": "registry:ui",
+			"description": "Dusk card primitive",
+			"registryDependencies": [],
+			"dependencies": ["bits-ui", "tailwind-variants"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/dusk/card/card.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/card-action.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card-action.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/card-content.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card-content.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/card-description.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card-description.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/card-footer.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card-footer.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/card-header.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card-header.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/card-title.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/card-title.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/card/index.ts",
+					"type": "registry:ui",
+					"target": "ui/dusk/card/index.ts"
+				}
+			]
+		},
+		{
+			"name": "input",
+			"type": "registry:ui",
+			"description": "Dusk input primitive",
+			"registryDependencies": [],
+			"dependencies": ["bits-ui"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/dusk/input/input.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/input/input.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/input/index.ts",
+					"type": "registry:ui",
+					"target": "ui/dusk/input/index.ts"
+				}
+			]
+		},
+		{
+			"name": "label",
+			"type": "registry:ui",
+			"description": "Dusk label primitive",
+			"registryDependencies": [],
+			"dependencies": ["bits-ui"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/ui/dusk/label/label.svelte",
+					"type": "registry:ui",
+					"target": "ui/dusk/label/label.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dusk/label/index.ts",
+					"type": "registry:ui",
+					"target": "ui/dusk/label/index.ts"
+				}
+			]
+		},
+		{
+			"name": "dusk-theme",
+			"type": "registry:theme",
+			"description": "Dusk Zinc color tokens and UI primitives",
+			"registryDependencies": ["local:button", "local:card", "local:input", "local:label"],
+			"files": [],
+			"cssVars": {
+				"light": {
+					"radius": "0.625rem",
+					"background": "oklch(1 0 0)",
+					"foreground": "oklch(0.141 0.005 285.823)",
+					"card": "oklch(1 0 0)",
+					"card-foreground": "oklch(0.141 0.005 285.823)",
+					"popover": "oklch(1 0 0)",
+					"popover-foreground": "oklch(0.141 0.005 285.823)",
+					"primary": "oklch(0.21 0.006 285.885)",
+					"primary-foreground": "oklch(0.985 0 0)",
+					"secondary": "oklch(0.967 0.001 286.375)",
+					"secondary-foreground": "oklch(0.21 0.006 285.885)",
+					"muted": "oklch(0.967 0.001 286.375)",
+					"muted-foreground": "oklch(0.552 0.016 285.938)",
+					"accent": "oklch(0.967 0.001 286.375)",
+					"accent-foreground": "oklch(0.21 0.006 285.885)",
+					"destructive": "oklch(0.577 0.245 27.325)",
+					"border": "oklch(0.92 0.004 286.32)",
+					"input": "oklch(0.92 0.004 286.32)",
+					"ring": "oklch(0.705 0.015 286.067)"
+				},
+				"dark": {
+					"radius": "0.625rem",
+					"background": "oklch(0.141 0.005 285.823)",
+					"foreground": "oklch(0.985 0 0)",
+					"card": "oklch(0.21 0.006 285.885)",
+					"card-foreground": "oklch(0.985 0 0)",
+					"popover": "oklch(0.21 0.006 285.885)",
+					"popover-foreground": "oklch(0.985 0 0)",
+					"primary": "oklch(0.92 0.004 286.32)",
+					"primary-foreground": "oklch(0.21 0.006 285.885)",
+					"secondary": "oklch(0.274 0.006 286.033)",
+					"secondary-foreground": "oklch(0.985 0 0)",
+					"muted": "oklch(0.274 0.006 286.033)",
+					"muted-foreground": "oklch(0.705 0.015 286.067)",
+					"accent": "oklch(0.274 0.006 286.033)",
+					"accent-foreground": "oklch(0.985 0 0)",
+					"destructive": "oklch(0.704 0.191 22.216)",
+					"border": "oklch(1 0 0 / 10%)",
+					"input": "oklch(1 0 0 / 15%)",
+					"ring": "oklch(0.552 0.016 285.938)"
+				}
+			}
+		},
+		{
+			"name": "logo",
+			"type": "registry:component",
+			"description": "Shared brand logo used by Dusk navigation headers",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/web/Logo.svelte",
+					"type": "registry:component",
+					"target": "web/Logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "svgs",
+			"type": "registry:component",
+			"description": "Shared SVG logo and icon components used by Dusk heroes",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/svgs/beacon.svelte",
+					"type": "registry:component",
+					"target": "svgs/beacon.svelte"
+				},
+				{
+					"path": "src/lib/svgs/bolt.svelte",
+					"type": "registry:component",
+					"target": "svgs/bolt.svelte"
+				},
+				{
+					"path": "src/lib/svgs/cisco.svelte",
+					"type": "registry:component",
+					"target": "svgs/cisco.svelte"
+				},
+				{
+					"path": "src/lib/svgs/claude.svelte",
+					"type": "registry:component",
+					"target": "svgs/claude.svelte"
+				},
+				{
+					"path": "src/lib/svgs/clerk.svelte",
+					"type": "registry:component",
+					"target": "svgs/clerk.svelte"
+				},
+				{
+					"path": "src/lib/svgs/figma.svelte",
+					"type": "registry:component",
+					"target": "svgs/figma.svelte"
+				},
+				{
+					"path": "src/lib/svgs/firebase-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/firebase-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/firebase.svelte",
+					"type": "registry:component",
+					"target": "svgs/firebase.svelte"
+				},
+				{
+					"path": "src/lib/svgs/g2.svelte",
+					"type": "registry:component",
+					"target": "svgs/g2.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/hulu.svelte",
+					"type": "registry:component",
+					"target": "svgs/hulu.svelte"
+				},
+				{
+					"path": "src/lib/svgs/linear.svelte",
+					"type": "registry:component",
+					"target": "svgs/linear.svelte"
+				},
+				{
+					"path": "src/lib/svgs/send-feedback.svelte",
+					"type": "registry:component",
+					"target": "svgs/send-feedback.svelte"
+				},
+				{
+					"path": "src/lib/svgs/slack.svelte",
+					"type": "registry:component",
+					"target": "svgs/slack.svelte"
+				},
+				{
+					"path": "src/lib/svgs/sponsor-project.svelte",
+					"type": "registry:component",
+					"target": "svgs/sponsor-project.svelte"
+				},
+				{
+					"path": "src/lib/svgs/spotify.svelte",
+					"type": "registry:component",
+					"target": "svgs/spotify.svelte"
+				},
+				{
+					"path": "src/lib/svgs/supabase-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/supabase-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/supabase.svelte",
+					"type": "registry:component",
+					"target": "svgs/supabase.svelte"
+				},
+				{
+					"path": "src/lib/svgs/svelte.svelte",
+					"type": "registry:component",
+					"target": "svgs/svelte.svelte"
+				},
+				{
+					"path": "src/lib/svgs/trustpilot.svelte",
+					"type": "registry:component",
+					"target": "svgs/trustpilot.svelte"
+				},
+				{
+					"path": "src/lib/svgs/twilio.svelte",
+					"type": "registry:component",
+					"target": "svgs/twilio.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vercel-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/vercel-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vercel.svelte",
+					"type": "registry:component",
+					"target": "svgs/vercel.svelte"
+				},
+				{
+					"path": "src/lib/svgs/index.ts",
+					"type": "registry:file",
+					"target": "svgs/index.ts"
+				}
+			]
+		},
+		{
+			"name": "hero-one",
+			"type": "registry:block",
+			"description": "Dusk centered hero with product preview and customer logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/one/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/one/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/one/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/one/header.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-two",
+			"type": "registry:block",
+			"description": "Dusk split hero with app preview and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/two/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/two/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/two/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/two/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/two/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/two/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-three",
+			"type": "registry:block",
+			"description": "Dusk fitness hero with immersive background image and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/three/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/three/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/three/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/three/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/three/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/three/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-four",
+			"type": "registry:block",
+			"description": "Dusk conversational AI hero with device mockup and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs", "kbd"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/four/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/four/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/four/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/four/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/four/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/four/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-five",
+			"type": "registry:block",
+			"description": "Dusk video hero with overlay content and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/five/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/five/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/five/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/five/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/five/hero-video.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/five/hero-video.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/five/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/five/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-six",
+			"type": "registry:block",
+			"description": "Dusk editorial hero with product preview and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/six/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/six/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/six/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/six/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/six/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/six/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-seven",
+			"type": "registry:block",
+			"description": "Dusk CRM hero with dashboard preview and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/seven/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/seven/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/seven/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/seven/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/seven/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/seven/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-eight",
+			"type": "registry:block",
+			"description": "Dusk family finance hero with layered profile cards and ratings",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/eight/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/eight/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/eight/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/eight/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/eight/profile-card.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/eight/profile-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-nine",
+			"type": "registry:block",
+			"description": "Dusk centered CRM hero with framed dashboard and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/nine/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/nine/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/nine/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/nine/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/nine/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/nine/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-ten",
+			"type": "registry:block",
+			"description": "Dusk split-copy hero with layered product panels and logo cloud",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": ["runed"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/hero/ten/hero.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/ten/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/ten/header.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/ten/header.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/hero/ten/logo-cloud.svelte",
+					"type": "registry:component",
+					"target": "dusk/hero/ten/logo-cloud.svelte"
+				}
+			]
+		}
+	]
+}

@@ -4,7 +4,11 @@
 
 	let { children } = $props();
 
-	type PreviewTheme = "veil" | "mist";
+	type PreviewTheme = "veil" | "mist" | "dusk";
+
+	function isPreviewTheme(value: string | undefined): value is PreviewTheme {
+		return value === "veil" || value === "mist" || value === "dusk";
+	}
 
 	const numberWords = new Map<string, string>([
 		["one", "One"],
@@ -56,10 +60,7 @@
 	function getPreviewMeta(pathname: string) {
 		const segments = pathname.split("/").filter(Boolean);
 		const previewSegments = segments[0] === "preview" ? segments.slice(1) : segments;
-		const themeSegment =
-			previewSegments[0] === "veil" || previewSegments[0] === "mist"
-				? previewSegments[0]
-				: null;
+		const themeSegment = isPreviewTheme(previewSegments[0]) ? previewSegments[0] : null;
 		const contentSegments = themeSegment ? previewSegments.slice(1) : previewSegments;
 		const [category = "component", ...variantParts] = contentSegments;
 
@@ -87,16 +88,13 @@
 		const segments = pathname.split("/").filter(Boolean);
 		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
 
-		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
+		return isPreviewTheme(themeSegment) ? themeSegment : null;
 	}
 
 	function getPreviewCategory(pathname: string): string | null {
 		const segments = pathname.split("/").filter(Boolean);
 		const previewSegments = segments[0] === "preview" ? segments.slice(1) : segments;
-		const themeSegment =
-			previewSegments[0] === "veil" || previewSegments[0] === "mist"
-				? previewSegments[0]
-				: null;
+		const themeSegment = isPreviewTheme(previewSegments[0]) ? previewSegments[0] : null;
 		const contentSegments = themeSegment ? previewSegments.slice(1) : previewSegments;
 
 		return contentSegments[0] ?? null;

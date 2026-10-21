@@ -2,7 +2,7 @@
 
 ![Svelte Shadcn Blocks](https://sv-blocks.vercel.app/og.png)
 
-200+ production-ready marketing blocks for building polished, accessible Svelte landing pages, including 40 new Dusk blocks coming soon.
+200+ production-ready marketing blocks for building polished, accessible Svelte landing pages, including the new Dusk collection.
 
 ## Collections
 
@@ -11,11 +11,11 @@
 | Kit     | Versatile marketing sections with bold layouts and visuals                 |     81 | [Explore](https://sv-blocks.vercel.app/kit/hero)  |
 | Mist    | Clean, restrained sections for product, marketing, and documentation sites |     51 | [Explore](https://sv-blocks.vercel.app/mist/hero) |
 | Veil    | Refined SaaS sections with stronger contrast and polished details          |     60 | [Explore](https://sv-blocks.vercel.app/veil/hero) |
-| Dusk    | A new collection of UI and marketing blocks                                |     40 | Coming soon                                       |
+| Dusk    | Zinc-based marketing blocks with dedicated UI primitives                   |     10 | [Explore](https://sv-blocks.vercel.app/dusk/hero) |
 
 ## Features
 
-- 200+ marketing and application blocks across four collections, including Dusk coming soon
+- 200+ marketing and application blocks across four collections
 - Built for Svelte 5, shadcn-svelte, and Tailwind CSS v4
 - Responsive layouts with light and dark mode support
 - Live previews and copy-ready source code
@@ -29,6 +29,7 @@
 - [Installation Guide](https://sv-blocks.vercel.app/docs/installation)
 - [Mist Theme Setup](https://sv-blocks.vercel.app/docs/mist-theme)
 - [Veil Theme Setup](https://sv-blocks.vercel.app/docs/veil-theme)
+- [Dusk Theme Setup](https://sv-blocks.vercel.app/docs/dusk-theme)
 
 ## Quick Start
 
@@ -49,6 +50,9 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
 
 # Veil
 pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json
+
+# Dusk
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/d/hero-one.json
 ```
 
 ## Other Similar Project

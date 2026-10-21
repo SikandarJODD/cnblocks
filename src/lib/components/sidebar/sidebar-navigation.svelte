@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import { Badge } from "#lib/components/spell/badge/index.js";
 	import * as Kbd from "#lib/components/ui/kbd/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import {
@@ -12,6 +13,8 @@
 
 	const pathname = $derived(page.url.pathname);
 	const activeLibrary = $derived(getBlockLibrary(pathname));
+	// veil, mist, dusk, kit, etc
+	let categoryName = $derived(activeLibrary?.key);
 	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
 	const sidebar = Sidebar.useSidebar();
 
@@ -51,13 +54,23 @@
 									href={library.href}
 									isActive={activeLibrary?.key === library.key}
 									class="h-8 touch-manipulation pr-1 pl-2 font-mono! text-xs! font-normal text-muted-foreground hover:bg-transparent hover:text-ink/80 active:bg-transparent md:h-6 md:text-xs! dark:hover:text-foreground data-active:bg-transparent data-active:font-medium data-active:text-ink/80 dark:data-active:text-primary"
+									data-s-event={"category:" + library.key}
 								>
 									<span>{library.title}</span>
-									<Kbd.Root
-										class="ms-auto h-4 min-w-5 px-1 text-[10px] tabular-nums"
-									>
-										{library.count}
-									</Kbd.Root>
+									<span class="ms-auto flex items-center gap-1">
+										{#if library.key === "dusk"}
+											<Badge
+												size="sm"
+												variant="emerald"
+												class="px-2 py-1! font-sans! text-[9px] font-normal"
+											>
+												New
+											</Badge>
+										{/if}
+										<Kbd.Root class="h-4 min-w-5 px-1 text-[10px] tabular-nums">
+											{library.count}
+										</Kbd.Root>
+									</span>
 								</Sidebar.MenuSubButton>
 							{/if}
 						</Sidebar.MenuSubItem>
@@ -70,6 +83,7 @@
 					<Sidebar.MenuButton
 						class="h-8 touch-manipulation pr-1 pl-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-7 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 						isActive={!item.coming_soon && isCurrentPath(pathname, item.href)}
+						data-s-event={"nav:" + item.title}
 					>
 						{#snippet child({ props })}
 							{#if item.coming_soon}
@@ -112,6 +126,10 @@
 							<Sidebar.MenuButton
 								class="h-8 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-6 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
 								isActive={pathname === category.href}
+								data-s-event={"block:" +
+									activeLibrary.key +
+									":" +
+									category.title.toLowerCase()}
 							>
 								{#snippet child({ props })}
 									<a href={category.href} {...props} onclick={closeMobileSidebar}>
@@ -151,6 +169,7 @@
 					<Sidebar.MenuItem>
 						<Sidebar.MenuButton
 							class="h-9 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-6 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
+							data-s-event="nav:LLM Index"
 						>
 							{#snippet child({ props })}
 								<a href="/llms.txt" {...props} onclick={closeMobileSidebar}>

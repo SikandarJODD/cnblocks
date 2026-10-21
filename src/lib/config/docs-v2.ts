@@ -7,6 +7,7 @@ export type DocsV2PageKey =
 	| "installation"
 	| "mistTheme"
 	| "veilTheme"
+	| "duskTheme"
 	// | "mcp"
 	| "sponsors";
 
@@ -102,6 +103,28 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 				"input",
 				"textarea",
 				"theme variables",
+			],
+		},
+	},
+	duskTheme: {
+		key: "duskTheme",
+		path: "/docs/dusk-theme",
+		navTitle: "Dusk Theme Setup",
+		group: "theme",
+		toc: true,
+		seo: {
+			title: "Dusk Theme Setup",
+			description:
+				"Set up the Zinc-based Dusk theme and its button, card, input, and label primitives for Svelte applications.",
+			keywords: [
+				...docsKeywords,
+				"dusk",
+				"zinc theme",
+				"theme setup",
+				"button",
+				"card",
+				"input",
+				"label",
 			],
 		},
 	},

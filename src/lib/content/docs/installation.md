@@ -38,6 +38,9 @@ pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/m/hero-one.json
 
 # Veil
 pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/v/hero-one.json
+
+# Dusk
+pnpm dlx shadcn-svelte@latest add https://sv-blocks.vercel.app/d/hero-one.json
 ```
 
 The CLI copies the block and its dependencies into your project. You own the generated code and can edit it directly.
@@ -47,9 +50,12 @@ The CLI copies the block and its dependencies into your project. You own the gen
 - Kit registry: https://sv-blocks.vercel.app/r/index.json
 - Mist registry: https://sv-blocks.vercel.app/m/index.json
 - Veil registry: https://sv-blocks.vercel.app/v/index.json
+- Dusk registry: https://sv-blocks.vercel.app/d/index.json
 
 ## Next steps
 
 - Mist theme setup: https://sv-blocks.vercel.app/docs/mist-theme.md
 - Veil theme setup: https://sv-blocks.vercel.app/docs/veil-theme.md
+- Dusk theme setup: https://sv-blocks.vercel.app/docs/dusk-theme.md
 - Browse Kit blocks: https://sv-blocks.vercel.app/kit/hero
+- Browse Dusk blocks: https://sv-blocks.vercel.app/dusk/hero
