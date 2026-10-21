@@ -5,10 +5,10 @@
 	import { watch } from "runed";
 
 	const menuItems = [
-		{ name: "Programs", href: "#link" },
-		{ name: "Coaches", href: "#link" },
-		{ name: "Pricing", href: "#link" },
-		{ name: "Company", href: "#link" },
+		{ name: "Programs", href: "/" },
+		{ name: "Coaches", href: "/" },
+		{ name: "Pricing", href: "/" },
+		{ name: "Company", href: "/" },
 	];
 
 	let menuState = $state(false);

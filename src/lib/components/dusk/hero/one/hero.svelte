@@ -23,7 +23,7 @@
 			<div class="mx-auto max-w-7xl">
 				<div class="px-6 text-center sm:mx-auto lg:mt-0 lg:mr-auto">
 					<a
-						href="#link"
+						href="/"
 						class="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300"
 					>
 						<span class="text-sm font-medium">New:</span>

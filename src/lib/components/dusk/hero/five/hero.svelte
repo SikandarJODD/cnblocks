@@ -19,7 +19,7 @@
 						<h1 class="max-w-md text-5xl text-balance md:text-6xl">Build 10x Faster with Ada</h1>
 
 						<div class="flex items-center gap-2">
-							<Button href="#link" class="pr-2.5">
+							<Button href="/" class="pr-2.5">
 								<span class="text-nowrap">Start Building</span>
 								<ChevronRight class="ml-1" />
 							</Button>
