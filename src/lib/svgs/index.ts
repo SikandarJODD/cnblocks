@@ -14,6 +14,8 @@ import Hulu from "./hulu.svelte";
 import Linear from "./linear.svelte";
 import MagicUI from "./magic-ui.svelte";
 import MediaWiki from "./media-wiki.svelte";
+import OpenAI from "./open-ai.svelte";
+import Perplexity from "./perplexity.svelte";
 import Replit from "./replit.svelte";
 import Slack from "./slack.svelte";
 import Spotify from "./spotify.svelte";
@@ -44,6 +46,8 @@ export {
 	Linear,
 	MagicUI,
 	MediaWiki,
+	OpenAI,
+	Perplexity,
 	Replit,
 	Slack,
 	Spotify,
