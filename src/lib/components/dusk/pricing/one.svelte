@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "#lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/dusk/button/button.svelte";
 	import Check from "@lucide/svelte/icons/check";
 
 	let starterItems: string[] = [
