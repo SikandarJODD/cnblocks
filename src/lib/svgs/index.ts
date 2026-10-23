@@ -7,9 +7,14 @@ import Figma from "./figma.svelte";
 import Firebase from "./firebase.svelte";
 import FirebaseFull from "./firebase-full.svelte";
 import G2 from "./g2.svelte";
+import Gemini from "./gemini.svelte";
 import Google from "./google.svelte";
+import GooglePaLM from "./google-palm.svelte";
 import Hulu from "./hulu.svelte";
 import Linear from "./linear.svelte";
+import MagicUI from "./magic-ui.svelte";
+import MediaWiki from "./media-wiki.svelte";
+import Replit from "./replit.svelte";
 import Slack from "./slack.svelte";
 import Spotify from "./spotify.svelte";
 import Supabase from "./supabase.svelte";
@@ -18,6 +23,7 @@ import Twilio from "./twilio.svelte";
 import Trustpilot from "./trustpilot.svelte";
 import Vercel from "./vercel.svelte";
 import VercelFull from "./vercel-full.svelte";
+import VSCodium from "./vs-codium.svelte";
 
 import Svelte from "./svelte.svelte";
 
@@ -31,9 +37,14 @@ export {
 	Firebase,
 	FirebaseFull,
 	G2,
+	Gemini,
 	Google,
+	GooglePaLM,
 	Hulu,
 	Linear,
+	MagicUI,
+	MediaWiki,
+	Replit,
 	Slack,
 	Spotify,
 	Supabase,
@@ -42,5 +53,6 @@ export {
 	Trustpilot,
 	Vercel,
 	VercelFull,
+	VSCodium,
 	Svelte,
 };
