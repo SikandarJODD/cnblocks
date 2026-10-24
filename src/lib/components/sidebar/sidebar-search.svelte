@@ -27,6 +27,7 @@
 		{ label: "Kit", value: "kit" },
 		{ label: "Mist", value: "mist" },
 		{ label: "Veil", value: "veil" },
+		{ label: "Dusk", value: "dusk" },
 	];
 
 	function showSearch() {
@@ -111,11 +112,13 @@
 						<CircleIcon class="size-3" />
 						<span>{item.name}</span>
 						<Badge
-							variant={item.library === "mist"
-								? "cyan"
-								: item.library === "veil"
-									? "amber"
-									: "secondary"}
+							variant={item.library === "dusk"
+								? "secondary"
+								: item.library === "mist"
+									? "cyan"
+									: item.library === "veil"
+										? "amber"
+										: "secondary"}
 							size="sm"
 							class="ml-auto rounded-full px-1.5 py-0.5 text-[10px] capitalize"
 						>

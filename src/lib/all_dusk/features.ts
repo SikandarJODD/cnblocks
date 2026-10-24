@@ -213,24 +213,24 @@ export const all_dusk_features: MistBlock[] = [
 			{ defaultOpen: false }
 		),
 	},
-	{
-		slug: "seven",
-		title: "Features Seven",
-		category: "features",
-		preview: "/preview/dusk/features/seven",
-		previewMode: "inline",
-		itemId: "features-seven",
-		component: FeaturesSeven,
-		codeTree: createBlockCodeTreeFromCode(
-			[
-				{ path: "features.svelte", code: FeaturesSevenCode, lang: "svelte" },
-				{
-					path: "folder-structure.md",
-					code: createMistFolderStructure(["components/dusk/features/seven.svelte"]),
-					lang: "markdown",
-				},
-			],
-			{ defaultOpen: false }
-		),
-	},
+	// {
+	// 	slug: "seven",
+	// 	title: "Features Seven",
+	// 	category: "features",
+	// 	preview: "/preview/dusk/features/seven",
+	// 	previewMode: "inline",
+	// 	itemId: "features-seven",
+	// 	component: FeaturesSeven,
+	// 	codeTree: createBlockCodeTreeFromCode(
+	// 		[
+	// 			{ path: "features.svelte", code: FeaturesSevenCode, lang: "svelte" },
+	// 			{
+	// 				path: "folder-structure.md",
+	// 				code: createMistFolderStructure(["components/dusk/features/seven.svelte"]),
+	// 				lang: "markdown",
+	// 			},
+	// 		],
+	// 		{ defaultOpen: false }
+	// 	),
+	// },
 ];
