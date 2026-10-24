@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-one",
+	"type": "registry:block",
+	"description": "Dusk integration grid with supported platform cards",
+	"registryDependencies": [
+		"./button.json",
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport IntegrationCard from \"./integration-card.svelte\";\n\timport Button from \"#lib/components/ui/dusk/button/button.svelte\";\n\timport {\n\t\tGemini,\n\t\tGooglePaLM,\n\t\tMagicUI,\n\t\tMediaWiki,\n\t\tReplit,\n\t\tVSCodium,\n\t} from \"#lib/svgs/index.js\";\n</script>\n\n<section>\n\t<div class=\"mx-auto max-w-7xl px-6 py-16 md:py-20\">\n\t\t<div class=\"grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12\">\n\t\t\t<div class=\"flex flex-col justify-between gap-12 pb-6 max-lg:order-last md:mt-6\">\n\t\t\t\t<div>\n\t\t\t\t\t<h2 class=\"text-4xl font-medium tracking-tight text-balance lg:text-5xl\">\n\t\t\t\t\t\tIntegrate with your favorite Tools\n\t\t\t\t\t</h2>\n\t\t\t\t\t<p class=\"mt-4 mb-6 text-lg text-balance text-muted-foreground\">\n\t\t\t\t\t\tConnect seamlessly with popular platforms and services to enhance your\n\t\t\t\t\t\tworkflow.\n\t\t\t\t\t</p>\n\t\t\t\t\t<Button variant=\"outline\" href=\"#\">Get Started</Button>\n\t\t\t\t</div>\n\n\t\t\t\t<p class=\"max-w-xs text-lg text-balance text-muted-foreground\">\n\t\t\t\t\tTailark CRM integrates with <span class=\"font-medium text-foreground\"\n\t\t\t\t\t\t>over 150 Tools</span\n\t\t\t\t\t>\n\t\t\t\t\tto enhance your workflow.\n\t\t\t\t</p>\n\t\t\t</div>\n\n\t\t\t<div\n\t\t\t\tclass=\"-mx-6 mask-radial-at-top-left mask-radial-from-65% mask-radial-[100%_80%] px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:mr-0 md:ml-auto\"\n\t\t\t>\n\t\t\t\t<div class=\"rounded-2xl border bg-card p-3 shadow-lg md:pb-12\">\n\t\t\t\t\t<div class=\"grid grid-cols-2 gap-2\">\n\t\t\t\t\t\t<IntegrationCard\n\t\t\t\t\t\t\ticon={Gemini}\n\t\t\t\t\t\t\tname=\"Gemini\"\n\t\t\t\t\t\t\tdescription=\"The AI model that powers Google's search engine.\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<IntegrationCard\n\t\t\t\t\t\t\ticon={Replit}\n\t\t\t\t\t\t\tname=\"Replit\"\n\t\t\t\t\t\t\tdescription=\"The AI model that powers Google's search engine.\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<IntegrationCard\n\t\t\t\t\t\t\ticon={GooglePaLM}\n\t\t\t\t\t\t\tname=\"GooglePaLM\"\n\t\t\t\t\t\t\tdescription=\"The AI model that powers Google's search engine.\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<IntegrationCard\n\t\t\t\t\t\t\ticon={MagicUI}\n\t\t\t\t\t\t\tname=\"MagicUI\"\n\t\t\t\t\t\t\tdescription=\"The AI model that powers Google's search engine.\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<IntegrationCard\n\t\t\t\t\t\t\ticon={VSCodium}\n\t\t\t\t\t\t\tname=\"VSCodium\"\n\t\t\t\t\t\t\tdescription=\"The AI model that powers Google's search engine.\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<IntegrationCard\n\t\t\t\t\t\t\ticon={MediaWiki}\n\t\t\t\t\t\t\tname=\"MediaWiki\"\n\t\t\t\t\t\t\tdescription=\"The AI model that powers Google's search engine.\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/integration/one.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport type { Component } from \"svelte\";\n\n\tlet {\n\t\ticon: Icon,\n\t\tname,\n\t\tdescription,\n\t}: {\n\t\ticon: Component<{ class?: string }>;\n\t\tname: string;\n\t\tdescription: string;\n\t} = $props();\n</script>\n\n<div\n\tclass=\"cursor-pointer space-y-4 rounded-lg border p-4 transition-colors hover:bg-foreground/5\"\n>\n\t<div class=\"flex size-fit items-center justify-center\">\n\t\t<Icon />\n\t</div>\n\t<div class=\"space-y-1\">\n\t\t<h3 class=\"text-sm font-medium\">{name}</h3>\n\t\t<p class=\"line-clamp-1 text-sm text-muted-foreground md:line-clamp-2\">\n\t\t\t{description}\n\t\t</p>\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "dusk/integration/integration-card.svelte"
+		}
+	]
+}

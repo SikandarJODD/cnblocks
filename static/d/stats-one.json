@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-one",
+	"type": "registry:block",
+	"description": "Dusk split statistics section with supporting copy",
+	"files": [
+		{
+			"content": "<section class=\"py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl px-6\">\n\t\t<div class=\"grid gap-4 md:grid-cols-2 md:gap-6\">\n\t\t\t<h2\n\t\t\t\tclass=\"max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground lg:text-5xl\"\n\t\t\t>\n\t\t\t\t<span class=\"text-foreground\">Close more deals.</span> <br /> Know every customer signal.\n\t\t\t</h2>\n\t\t\t<div class=\"flex flex-col gap-32 md:mx-auto xl:gap-44\">\n\t\t\t\t<p class=\"text-lg text-balance text-muted-foreground\">\n\t\t\t\t\tModern sales teams move faster when every account, conversation, and next step\n\t\t\t\t\tlives in one place. Tailark brings pipeline, outreach, and customer history into\n\t\t\t\t\ta focused CRM workspace where reps can spot momentum, prioritize follow-up, and\n\t\t\t\t\tturn relationships into revenue.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"grid gap-12 md:grid-cols-3 md:gap-12\">\n\t\t\t\t\t<div class=\"space-y-3 border-t pt-6\">\n\t\t\t\t\t\t<div class=\"text-4xl font-semibold tracking-tight\">21k</div>\n\t\t\t\t\t\t<p class=\"text-muted-foreground\">Deals tracked</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"space-y-3 border-t pt-6\">\n\t\t\t\t\t\t<div class=\"text-4xl font-semibold tracking-tight\">22m</div>\n\t\t\t\t\t\t<p class=\"text-muted-foreground\">Customer signals</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"space-y-3 border-t pt-6\">\n\t\t\t\t\t\t<div class=\"text-4xl font-semibold tracking-tight\">+500</div>\n\t\t\t\t\t\t<p class=\"text-muted-foreground\">Sales teams</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/stats/one.svelte"
+		}
+	]
+}

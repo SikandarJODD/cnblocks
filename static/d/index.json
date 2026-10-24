@@ -244,5 +244,308 @@
 			"local:svgs"
 		],
 		"relativeUrl": "hero-ten.json"
+	},
+	{
+		"name": "call-to-action-one",
+		"type": "registry:block",
+		"description": "Dusk centered call to action with primary and secondary actions",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "call-to-action-one.json"
+	},
+	{
+		"name": "call-to-action-two",
+		"type": "registry:block",
+		"description": "Dusk split call to action with a single primary action",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "call-to-action-two.json"
+	},
+	{
+		"name": "content-one",
+		"type": "registry:block",
+		"description": "Dusk image-led content section with supporting copy and action",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "content-one.json"
+	},
+	{
+		"name": "content-two",
+		"type": "registry:block",
+		"description": "Dusk split content section with feature highlights",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "content-two.json"
+	},
+	{
+		"name": "content-three",
+		"type": "registry:block",
+		"description": "Dusk product-preview content section with feature highlights",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "content-three.json"
+	},
+	{
+		"name": "faqs-one",
+		"type": "registry:block",
+		"description": "Dusk frequently asked questions accordion",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"accordion"
+		],
+		"relativeUrl": "faqs-one.json"
+	},
+	{
+		"name": "features-one",
+		"type": "registry:block",
+		"description": "Dusk card-based feature grid with pipeline highlights",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:card"
+		],
+		"relativeUrl": "features-one.json"
+	},
+	{
+		"name": "features-two",
+		"type": "registry:block",
+		"description": "Dusk card-based feature grid with revenue workflow highlights",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:card"
+		],
+		"relativeUrl": "features-two.json"
+	},
+	{
+		"name": "features-three",
+		"type": "registry:block",
+		"description": "Dusk visual feature gallery with product illustrations",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:card"
+		],
+		"relativeUrl": "features-three.json"
+	},
+	{
+		"name": "features-four",
+		"type": "registry:block",
+		"description": "Dusk feature cards with photographic product illustrations",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:card"
+		],
+		"relativeUrl": "features-four.json"
+	},
+	{
+		"name": "features-five",
+		"type": "registry:block",
+		"description": "Dusk interactive tabbed feature showcase",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "features-five.json"
+	},
+	{
+		"name": "features-six",
+		"type": "registry:block",
+		"description": "Dusk product interface feature section with supporting benefits",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "features-six.json"
+	},
+	{
+		"name": "features-seven",
+		"type": "registry:block",
+		"description": "Dusk analytics feature grid with map and pipeline chart",
+		"dependencies": [
+			"dotted-map"
+		],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "features-seven.json"
+	},
+	{
+		"name": "footer-one",
+		"type": "registry:block",
+		"description": "Dusk multi-column footer with newsletter form",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button",
+			"local:input",
+			"local:label",
+			"local:logo"
+		],
+		"relativeUrl": "footer-one.json"
+	},
+	{
+		"name": "footer-two",
+		"type": "registry:block",
+		"description": "Dusk multi-column footer with AI platform links",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button",
+			"local:logo",
+			"local:svgs"
+		],
+		"relativeUrl": "footer-two.json"
+	},
+	{
+		"name": "integration-one",
+		"type": "registry:block",
+		"description": "Dusk integration grid with supported platform cards",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button",
+			"local:svgs"
+		],
+		"relativeUrl": "integration-one.json"
+	},
+	{
+		"name": "logo-cloud-one",
+		"type": "registry:block",
+		"description": "Dusk interactive customer logo cloud",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logo-cloud-one.json"
+	},
+	{
+		"name": "logo-cloud-two",
+		"type": "registry:block",
+		"description": "Dusk full-width customer logo cloud",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logo-cloud-two.json"
+	},
+	{
+		"name": "logo-cloud-three",
+		"type": "registry:block",
+		"description": "Dusk compact centered customer logo cloud",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logo-cloud-three.json"
+	},
+	{
+		"name": "logo-cloud-four",
+		"type": "registry:block",
+		"description": "Dusk labeled customer logo row",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
+		"relativeUrl": "logo-cloud-four.json"
+	},
+	{
+		"name": "pricing-one",
+		"type": "registry:block",
+		"description": "Dusk four-tier pricing section",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "pricing-one.json"
+	},
+	{
+		"name": "pricing-two",
+		"type": "registry:block",
+		"description": "Dusk three-tier pricing section",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "pricing-two.json"
+	},
+	{
+		"name": "stats-one",
+		"type": "registry:block",
+		"description": "Dusk split statistics section with supporting copy",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-one.json"
+	},
+	{
+		"name": "stats-two",
+		"type": "registry:block",
+		"description": "Dusk large-metric statistics section",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "stats-two.json"
+	},
+	{
+		"name": "team-one",
+		"type": "registry:block",
+		"description": "Dusk team member grid with call to action",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "team-one.json"
+	},
+	{
+		"name": "team-two",
+		"type": "registry:block",
+		"description": "Dusk team testimonial with layered portraits",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "team-two.json"
 	}
 ]

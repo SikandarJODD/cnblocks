@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-three",
+	"type": "registry:block",
+	"description": "Dusk compact centered customer logo cloud",
+	"registryDependencies": [
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Beacon, Bolt, Hulu, Spotify, SupabaseFull, VercelFull } from \"#lib/svgs/index.js\";\n</script>\n\n<section class=\"bg-background py-16\">\n\t<div\n\t\tclass=\"relative mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 **:fill-muted-foreground md:gap-x-16\"\n\t>\n\t\t<Bolt height=\"22\" width=\"54\" />\n\t\t<VercelFull height=\"22\" width=\"84\" />\n\t\t<SupabaseFull class=\"h-6 w-auto\" />\n\t\t<Hulu height=\"18\" width=\"56\" />\n\t\t<Spotify height=\"26\" width=\"84\" />\n\t\t<Beacon height=\"24\" width=\"80\" />\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/logo-cloud/three.svelte"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "features-one",
+	"type": "registry:block",
+	"description": "Dusk card-based feature grid with pipeline highlights",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"./card.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Card } from \"#lib/components/ui/dusk/card/index.js\";\n\timport ArrowLeftRight from \"@lucide/svelte/icons/arrow-left-right\";\n\timport Bell from \"@lucide/svelte/icons/bell\";\n\timport LineChart from \"@lucide/svelte/icons/chart-line\";\n\timport Users from \"@lucide/svelte/icons/users\";\n</script>\n\n<section class=\"py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl px-6\">\n\t\t<h2\n\t\t\tclass=\"max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground lg:text-5xl\"\n\t\t>\n\t\t\t<span class=\"text-foreground\">Every deal, one view.</span><br /> Stages and owners in\n\t\t\tone place.\n\t\t</h2>\n\t\t<div class=\"mt-8 grid gap-3 *:bg-background md:mt-16 md:grid-cols-2 lg:grid-cols-3\">\n\t\t\t<Card class=\"p-8\">\n\t\t\t\t<p class=\"max-w-xs text-lg font-medium text-muted-foreground\">\n\t\t\t\t\t<span class=\"text-foreground\">One pipeline view.</span> See every deal stage, owner,\n\t\t\t\t\tand next step without switching tabs.\n\t\t\t\t</p>\n\t\t\t\t<div class=\"my-16\">\n\t\t\t\t\t<div aria-hidden=\"true\" class=\"relative mx-auto aspect-square w-10/12 rounded-xl border bg-background\">\n\t\t\t\t\t\t<div class=\"absolute right-0 bottom-0 aspect-square w-3/5 translate-x-8 translate-y-16 rounded-xl bg-card shadow-xl ring ring-foreground/6.5\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</Card>\n\t\t\t<Card class=\"lg:col-span-2\">\n\t\t\t\t<div class=\"p-8\">\n\t\t\t\t\t<p class=\"max-w-xs text-lg font-medium text-muted-foreground\">\n\t\t\t\t\t\t<span class=\"text-foreground\">Customer signals in context.</span> Notes, emails, and\n\t\t\t\t\t\ttasks stay linked to the account — not scattered across tools.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mt-6 pt-2 mask-x-from-65%\">\n\t\t\t\t\t<div aria-hidden=\"true\" class=\"relative h-72 rounded-xl bg-linear-to-b from-foreground/5 shadow-xl ring ring-foreground/6.5\"></div>\n\t\t\t\t</div>\n\t\t\t</Card>\n\t\t</div>\n\n\t\t<div class=\"mt-12 grid gap-3 *:max-w-xs max-sm:*:not-last:border-b max-sm:*:not-last:pb-3 sm:grid-cols-2 md:mt-16 md:gap-y-6 lg:mt-24 lg:grid-cols-4 lg:gap-6\">\n\t\t\t<p class=\"text-balance text-muted-foreground\"><span class=\"font-medium text-foreground\"><ArrowLeftRight class=\"inline size-4 -translate-y-0.5\" /> Pipeline visibility.</span> See every open deal and stage in one workspace.</p>\n\t\t\t<p class=\"text-balance text-muted-foreground\"><span class=\"font-medium text-foreground\"><Bell class=\"inline size-4 -translate-y-0.5\" /> Account history.</span> Every email, note, and task stays on the record.</p>\n\t\t\t<p class=\"text-balance text-muted-foreground\"><span class=\"font-medium text-foreground\"><Users class=\"inline size-4 -translate-y-0.5\" /> Team alignment.</span> Reps and managers work from shared customer context.</p>\n\t\t\t<p class=\"text-balance text-muted-foreground\"><span class=\"font-medium text-foreground\"><LineChart class=\"inline size-4 -translate-y-0.5\" /> Forecast health.</span> Spot risk and momentum before the quarter slips away.</p>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/features/one.svelte"
+		}
+	]
+}

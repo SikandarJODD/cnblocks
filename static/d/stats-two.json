@@ -1,0 +1,13 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "stats-two",
+	"type": "registry:block",
+	"description": "Dusk large-metric statistics section",
+	"files": [
+		{
+			"content": "<section class=\"py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl px-6\">\n\t\t<p\n\t\t\tclass=\"max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground lg:text-5xl\"\n\t\t>\n\t\t\t<span class=\"text-foreground\">Scale with confidence.</span> Handle thousands of transactions\n\t\t\tper second.\n\t\t</p>\n\n\t\t<div class=\"mt-32 grid gap-12 md:grid-cols-3 xl:mt-44\">\n\t\t\t<div class=\"space-y-3 border-t pt-6\">\n\t\t\t\t<div class=\"text-5xl font-semibold tracking-tight\">+21200</div>\n\t\t\t\t<p class=\"text-muted-foreground\">Stars on GitHub</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-3 border-t pt-6\">\n\t\t\t\t<div class=\"text-5xl font-semibold tracking-tight\">22 Million</div>\n\t\t\t\t<p class=\"text-muted-foreground\">Active Users</p>\n\t\t\t</div>\n\t\t\t<div class=\"space-y-3 border-t pt-6\">\n\t\t\t\t<div class=\"text-5xl font-semibold tracking-tight\">+500</div>\n\t\t\t\t<p class=\"text-muted-foreground\">Powered Apps</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/stats/two.svelte"
+		}
+	]
+}

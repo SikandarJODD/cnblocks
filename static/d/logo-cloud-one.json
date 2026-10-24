@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-one",
+	"type": "registry:block",
+	"description": "Dusk interactive customer logo cloud",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport {\n\t\tBeacon,\n\t\tBolt,\n\t\tClaude,\n\t\tFirebaseFull,\n\t\tHulu,\n\t\tSpotify,\n\t\tSupabaseFull,\n\t\tVercelFull,\n\t} from \"#lib/svgs/index.js\";\n\timport ChevronsRight from \"@lucide/svelte/icons/chevrons-right\";\n</script>\n\n<section class=\"bg-background py-16\">\n\t<div class=\"group relative m-auto max-w-5xl px-6\">\n\t\t<div\n\t\t\tclass=\"absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100\"\n\t\t>\n\t\t\t<a href=\"/\" class=\"block text-sm duration-150 hover:opacity-75\">\n\t\t\t\t<span>See the network</span>\n\t\t\t\t<ChevronsRight class=\"ml-1 inline-block size-3\" />\n\t\t\t</a>\n\t\t</div>\n\n\t\t<div\n\t\t\tclass=\"mx-auto grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 **:fill-foreground group-hover:opacity-50 group-hover:blur-xs sm:gap-x-16 sm:gap-y-14 md:grid-cols-4\"\n\t\t>\n\t\t\t<div class=\"flex items-center\"><Bolt class=\"mx-auto h-5 w-full\" /></div>\n\t\t\t<div class=\"flex items-center\"><VercelFull class=\"mx-auto h-4 w-full\" /></div>\n\t\t\t<div class=\"flex items-center\"><SupabaseFull class=\"mx-auto h-6\" /></div>\n\t\t\t<div class=\"flex items-center\"><Hulu class=\"mx-auto h-4 w-full\" /></div>\n\t\t\t<div class=\"flex items-center\"><Spotify class=\"mx-auto h-6 w-full\" /></div>\n\t\t\t<div class=\"flex items-center\"><FirebaseFull class=\"mx-auto h-6 w-full\" /></div>\n\t\t\t<div class=\"hidden items-center sm:flex\">\n\t\t\t\t<Beacon class=\"mx-auto h-4 w-full\" />\n\t\t\t</div>\n\t\t\t<div class=\"hidden items-center sm:flex\">\n\t\t\t\t<Claude class=\"mx-auto h-5 w-full\" />\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/logo-cloud/one.svelte"
+		}
+	]
+}

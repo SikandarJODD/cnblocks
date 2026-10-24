@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-four",
+	"type": "registry:block",
+	"description": "Dusk labeled customer logo row",
+	"registryDependencies": [
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Bolt, Hulu, Spotify, SupabaseFull, VercelFull } from \"#lib/svgs/index.js\";\n</script>\n\n<section class=\"bg-background py-12\">\n\t<div class=\"relative m-auto max-w-7xl px-6\">\n\t\t<div\n\t\t\tclass=\"relative flex gap-6 **:fill-foreground max-lg:flex-col lg:items-center lg:gap-12\"\n\t\t>\n\t\t\t<p class=\"shrink-0 text-muted-foreground lg:border-r lg:pr-12 lg:text-end\">\n\t\t\t\tPowering the <br class=\"max-lg:hidden\" /> best teams\n\t\t\t</p>\n\n\t\t\t<div class=\"flex w-full flex-wrap items-center justify-between gap-6\">\n\t\t\t\t<Bolt height=\"24\" width=\"58\" />\n\t\t\t\t<VercelFull height=\"24\" width=\"100\" />\n\t\t\t\t<SupabaseFull class=\"h-7 w-auto\" />\n\t\t\t\t<Hulu height=\"20\" width=\"60\" />\n\t\t\t\t<Spotify height=\"28\" width=\"90\" />\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/logo-cloud/four.svelte"
+		}
+	]
+}
