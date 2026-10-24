@@ -245,6 +245,16 @@
 					"target": "svgs/google.svelte"
 				},
 				{
+					"path": "src/lib/svgs/gemini.svelte",
+					"type": "registry:component",
+					"target": "svgs/gemini.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google-palm.svelte",
+					"type": "registry:component",
+					"target": "svgs/google-palm.svelte"
+				},
+				{
 					"path": "src/lib/svgs/hulu.svelte",
 					"type": "registry:component",
 					"target": "svgs/hulu.svelte"
@@ -253,6 +263,31 @@
 					"path": "src/lib/svgs/linear.svelte",
 					"type": "registry:component",
 					"target": "svgs/linear.svelte"
+				},
+				{
+					"path": "src/lib/svgs/magic-ui.svelte",
+					"type": "registry:component",
+					"target": "svgs/magic-ui.svelte"
+				},
+				{
+					"path": "src/lib/svgs/media-wiki.svelte",
+					"type": "registry:component",
+					"target": "svgs/media-wiki.svelte"
+				},
+				{
+					"path": "src/lib/svgs/open-ai.svelte",
+					"type": "registry:component",
+					"target": "svgs/open-ai.svelte"
+				},
+				{
+					"path": "src/lib/svgs/perplexity.svelte",
+					"type": "registry:component",
+					"target": "svgs/perplexity.svelte"
+				},
+				{
+					"path": "src/lib/svgs/replit.svelte",
+					"type": "registry:component",
+					"target": "svgs/replit.svelte"
 				},
 				{
 					"path": "src/lib/svgs/send-feedback.svelte",
@@ -308,6 +343,11 @@
 					"path": "src/lib/svgs/vercel.svelte",
 					"type": "registry:component",
 					"target": "svgs/vercel.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vs-codium.svelte",
+					"type": "registry:component",
+					"target": "svgs/vs-codium.svelte"
 				},
 				{
 					"path": "src/lib/svgs/index.ts",
@@ -563,6 +603,401 @@
 					"path": "src/lib/components/dusk/hero/ten/logo-cloud.svelte",
 					"type": "registry:component",
 					"target": "dusk/hero/ten/logo-cloud.svelte"
+				}
+			]
+		},
+		{
+			"name": "call-to-action-one",
+			"type": "registry:block",
+			"description": "Dusk centered call to action with primary and secondary actions",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/call-to-action/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/call-to-action/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "call-to-action-two",
+			"type": "registry:block",
+			"description": "Dusk split call to action with a single primary action",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/call-to-action/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/call-to-action/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "content-one",
+			"type": "registry:block",
+			"description": "Dusk image-led content section with supporting copy and action",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/content/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/content/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "content-two",
+			"type": "registry:block",
+			"description": "Dusk split content section with feature highlights",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/content/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/content/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "content-three",
+			"type": "registry:block",
+			"description": "Dusk product-preview content section with feature highlights",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/content/three.svelte",
+					"type": "registry:component",
+					"target": "dusk/content/three.svelte"
+				}
+			]
+		},
+		{
+			"name": "faqs-one",
+			"type": "registry:block",
+			"description": "Dusk frequently asked questions accordion",
+			"registryDependencies": ["accordion"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/faqs/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/faqs/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-one",
+			"type": "registry:block",
+			"description": "Dusk card-based feature grid with pipeline highlights",
+			"registryDependencies": ["local:card"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-two",
+			"type": "registry:block",
+			"description": "Dusk card-based feature grid with revenue workflow highlights",
+			"registryDependencies": ["local:card"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-three",
+			"type": "registry:block",
+			"description": "Dusk visual feature gallery with product illustrations",
+			"registryDependencies": ["local:button", "local:card"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/three.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/three.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-four",
+			"type": "registry:block",
+			"description": "Dusk feature cards with photographic product illustrations",
+			"registryDependencies": ["local:card"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/four.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/four.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-five",
+			"type": "registry:block",
+			"description": "Dusk interactive tabbed feature showcase",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/five.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/five.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-six",
+			"type": "registry:block",
+			"description": "Dusk product interface feature section with supporting benefits",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/six.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/six.svelte"
+				}
+			]
+		},
+		{
+			"name": "features-seven",
+			"type": "registry:block",
+			"description": "Dusk analytics feature grid with map and pipeline chart",
+			"registryDependencies": [],
+			"dependencies": ["dotted-map"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/features/seven.svelte",
+					"type": "registry:component",
+					"target": "dusk/features/seven.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-one",
+			"type": "registry:block",
+			"description": "Dusk multi-column footer with newsletter form",
+			"registryDependencies": ["local:button", "local:input", "local:label", "local:logo"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/footer/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/footer/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-two",
+			"type": "registry:block",
+			"description": "Dusk multi-column footer with AI platform links",
+			"registryDependencies": ["local:button", "local:logo", "local:svgs"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/footer/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/footer/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "integration-one",
+			"type": "registry:block",
+			"description": "Dusk integration grid with supported platform cards",
+			"registryDependencies": ["local:button", "local:svgs"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/integration/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/integration/one.svelte"
+				},
+				{
+					"path": "src/lib/components/dusk/integration/integration-card.svelte",
+					"type": "registry:component",
+					"target": "dusk/integration/integration-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-one",
+			"type": "registry:block",
+			"description": "Dusk interactive customer logo cloud",
+			"registryDependencies": ["local:svgs"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/logo-cloud/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/logo-cloud/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-two",
+			"type": "registry:block",
+			"description": "Dusk full-width customer logo cloud",
+			"registryDependencies": ["local:svgs"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/logo-cloud/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/logo-cloud/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-three",
+			"type": "registry:block",
+			"description": "Dusk compact centered customer logo cloud",
+			"registryDependencies": ["local:svgs"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/logo-cloud/three.svelte",
+					"type": "registry:component",
+					"target": "dusk/logo-cloud/three.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-four",
+			"type": "registry:block",
+			"description": "Dusk labeled customer logo row",
+			"registryDependencies": ["local:svgs"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/logo-cloud/four.svelte",
+					"type": "registry:component",
+					"target": "dusk/logo-cloud/four.svelte"
+				}
+			]
+		},
+		{
+			"name": "pricing-one",
+			"type": "registry:block",
+			"description": "Dusk four-tier pricing section",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/pricing/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/pricing/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "pricing-two",
+			"type": "registry:block",
+			"description": "Dusk three-tier pricing section",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/pricing/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/pricing/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "stats-one",
+			"type": "registry:block",
+			"description": "Dusk split statistics section with supporting copy",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/stats/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/stats/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "stats-two",
+			"type": "registry:block",
+			"description": "Dusk large-metric statistics section",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/stats/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/stats/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "team-one",
+			"type": "registry:block",
+			"description": "Dusk team member grid with call to action",
+			"registryDependencies": ["local:button"],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/team/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/team/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "team-two",
+			"type": "registry:block",
+			"description": "Dusk team testimonial with layered portraits",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/team/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/team/two.svelte"
 				}
 			]
 		}
