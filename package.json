@@ -60,6 +60,7 @@
 		"dompurify": "^3.3.0",
 		"isomorphic-dompurify": "^3.0.0",
 		"marked": "^18.0.0",
+		"motion-sv": "^0.2.2",
 		"package-manager-detector": "^1.9.0",
 		"runed": "^0.37.1",
 		"shadcn-svelte": "^1.7.0",
