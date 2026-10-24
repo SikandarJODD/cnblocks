@@ -70,6 +70,7 @@ export let all_dusks_category_block: CategoryBlock[] = [
 	{ title: "Stats", href: "/dusk/stats", length: 2 },
 	{ title: "Call To Action", href: "/dusk/call-to-action", length: 2 },
 	{ title: "Pricing", href: "/dusk/pricing", length: 2 },
+	{ title: "Testimonial", href: "/dusk/testimonials", length: 2 },
 	{ title: "Team", href: "/dusk/team", length: 2 },
 	{ title: "Logo Cloud", href: "/dusk/logo-cloud", length: 4 },
 	{ title: "FAQs", href: "/dusk/faqs", length: 1 },

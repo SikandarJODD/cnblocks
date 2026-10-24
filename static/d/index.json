@@ -547,5 +547,33 @@
 		"devDependencies": [],
 		"registryDependencies": [],
 		"relativeUrl": "team-two.json"
+	},
+	{
+		"name": "testimonials-one",
+		"type": "registry:block",
+		"description": "Dusk testimonial cards with branded customer quotes",
+		"dependencies": [],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button",
+			"local:svgs"
+		],
+		"relativeUrl": "testimonials-one.json"
+	},
+	{
+		"name": "testimonials-two",
+		"type": "registry:block",
+		"description": "Dusk animated testimonial carousel",
+		"dependencies": [
+			"motion-sv"
+		],
+		"devDependencies": [],
+		"registryDependencies": [
+			"local:button",
+			"local:svgs"
+		],
+		"relativeUrl": "testimonials-two.json"
 	}
 ]

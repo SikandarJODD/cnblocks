@@ -454,6 +454,10 @@ const duskSearchComponents: SearchComp[] = [
 		subcom: numberedItems("Pricing", 2, "/dusk/pricing", "dusk", "pricing"),
 	},
 	{
+		name: "Testimonial",
+		subcom: numberedItems("Testimonial", 2, "/dusk/testimonials", "dusk", "testimonial"),
+	},
+	{
 		name: "Team",
 		subcom: numberedItems("Team", 2, "/dusk/team", "dusk", "team"),
 	},

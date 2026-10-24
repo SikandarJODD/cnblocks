@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonials-one",
+	"type": "registry:block",
+	"description": "Dusk testimonial cards with branded customer quotes",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"registryDependencies": [
+		"./button.json",
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Play } from \"@lucide/svelte\";\n\timport Button from \"#lib/components/ui/dusk/button/button.svelte\";\n\timport { Gemini, OpenAI } from \"#lib/svgs\";\n</script>\n\n<section class=\"py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl space-y-8 px-6 md:space-y-16\">\n\t\t<div class=\"grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12\">\n\t\t\t<h2 class=\"text-4xl font-medium tracking-tight text-balance lg:text-5xl\">\n\t\t\t\tBy makers, loved by thousand developers\n\t\t\t</h2>\n\t\t</div>\n\n\t\t<div class=\"grid gap-3 lg:grid-cols-5\">\n\t\t\t<div\n\t\t\t\tclass=\"relative overflow-hidden rounded-xl bg-stone-100 p-8 after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:border after:border-foreground/10 lg:col-span-3 lg:row-span-2\"\n\t\t\t>\n\t\t\t\t<video\n\t\t\t\t\tautoplay\n\t\t\t\t\tloop\n\t\t\t\t\tmuted\n\t\t\t\t\tplaysinline\n\t\t\t\t\tclass=\"absolute inset-0 ml-auto h-full w-2/3 mask-l-from-foreground object-cover\"\n\t\t\t\t\tsrc=\"https://videos.pexels.com/video-files/7732814/7732814-hd_1920_1080_25fps.mp4\"\n\t\t\t\t></video>\n\n\t\t\t\t<div class=\"relative flex min-h-100 flex-col justify-between\">\n\t\t\t\t\t<p class=\"max-w-lg text-3xl text-black\">\n\t\t\t\t\t\tCongrats on your launch! Looks awesome! Still can't wait for your \"animated\n\t\t\t\t\t\tAI gradient circle\"\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<div class=\"grid grid-cols-[auto_1fr_auto] items-center gap-4\">\n\t\t\t\t\t\t<OpenAI class=\"size-10 fill-black\" />\n\t\t\t\t\t\t<div class=\"border-l border-black/10 pl-4\">\n\t\t\t\t\t\t\t<p class=\"text-sm font-medium text-black\">Shekinah Tshiokufila</p>\n\t\t\t\t\t\t\t<span class=\"block text-sm text-black/65\">Software Engineer</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<Button\n\t\t\t\t\t\t\tsize=\"icon\"\n\t\t\t\t\t\t\tvariant=\"secondary\"\n\t\t\t\t\t\t\tclass=\"self-end bg-black/20 inset-ring inset-ring-black/10\"\n\t\t\t\t\t\t\taria-label=\"Play testimonial video\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<Play\n\t\t\t\t\t\t\t\tfill=\"white\"\n\t\t\t\t\t\t\t\tstroke=\"white\"\n\t\t\t\t\t\t\t\tclass=\"translate-x-px drop-shadow-md drop-shadow-black/25\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div\n\t\t\t\tclass=\"relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-emerald-600 p-8 inset-ring inset-ring-foreground/10 lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid\"\n\t\t\t>\n\t\t\t\t<div class=\"pointer-events-none absolute inset-0 bg-linear-to-b to-black/25\"></div>\n\t\t\t\t<p class=\"max-w-lg text-3xl text-balance\">\n\t\t\t\t\tGreat work on tailfolio template. This is one of the best personal website that\n\t\t\t\t\tI have seen so far!\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"relative grid grid-cols-[auto_1fr] items-center gap-4 self-end\">\n\t\t\t\t\t<Gemini class=\"size-10\" />\n\t\t\t\t\t<div class=\"border-l border-foreground/10 pl-4\">\n\t\t\t\t\t\t<p class=\"text-sm font-medium\">Shekinah Tshiokufila</p>\n\t\t\t\t\t\t<span class=\"block text-sm text-foreground/65\">Software Engineer</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/testimonials/one.svelte"
+		}
+	]
+}

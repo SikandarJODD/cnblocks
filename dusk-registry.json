@@ -1000,6 +1000,36 @@
 					"target": "dusk/team/two.svelte"
 				}
 			]
+		},
+		{
+			"name": "testimonials-one",
+			"type": "registry:block",
+			"description": "Dusk testimonial cards with branded customer quotes",
+			"registryDependencies": ["local:button", "local:svgs"],
+			"dependencies": [],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/testimonials/one.svelte",
+					"type": "registry:component",
+					"target": "dusk/testimonials/one.svelte"
+				}
+			]
+		},
+		{
+			"name": "testimonials-two",
+			"type": "registry:block",
+			"description": "Dusk animated testimonial carousel",
+			"registryDependencies": ["local:button", "local:svgs"],
+			"dependencies": ["motion-sv"],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/dusk/testimonials/two.svelte",
+					"type": "registry:component",
+					"target": "dusk/testimonials/two.svelte"
+				}
+			]
 		}
 	]
 }
