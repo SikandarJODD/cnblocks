@@ -9,7 +9,7 @@
 			<img
 				class="size-full rounded-xl object-cover grayscale"
 				src="https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-				alt="team image"
+				alt="team img"
 				height="1080"
 				width="1920"
 				loading="lazy"
@@ -31,7 +31,7 @@
 					Modern sales teams move faster when every account, conversation, and next step
 					lives in one place.
 				</p>
-				<Button variant="secondary" size="sm" class="gap-1 pr-1.5" href="#">
+				<Button variant="secondary" size="sm" class="gap-1 pr-1.5" href="/">
 					<span>Explore CRM</span>
 					<ChevronRight class="size-2" />
 				</Button>

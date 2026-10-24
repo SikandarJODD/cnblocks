@@ -82,7 +82,7 @@
 
 						<X
 							aria-hidden="true"
-							class="absolute inset-0 m-auto size-6 -translate-x-[3px] -rotate-180 scale-0 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
+							class="absolute inset-0 m-auto size-6 -translate-x-[3px] scale-0 -rotate-180 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
 						/>
 					</button>
 
@@ -104,7 +104,7 @@
 
 				<div
 					id={menuId}
-					class="mb-6 hidden w-full flex-wrap items-center justify-end max-lg:space-y-8 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:in-data-[state=active]:flex"
+					class="mb-6 hidden w-full flex-wrap items-center justify-end in-data-[state=active]:block max-lg:space-y-8 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:in-data-[state=active]:flex"
 				>
 					<div class="lg:hidden">
 						<ul>
@@ -122,8 +122,12 @@
 						</ul>
 					</div>
 
-					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-						<Button href="#" size="sm" variant="outline" onclick={closeMenu}>Login</Button>
+					<div
+						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+					>
+						<Button href="/" size="sm" variant="outline" onclick={closeMenu}
+							>Login</Button
+						>
 					</div>
 				</div>
 			</div>

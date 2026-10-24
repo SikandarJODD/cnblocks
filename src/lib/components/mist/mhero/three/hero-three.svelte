@@ -18,8 +18,8 @@
 					</p>
 
 					<div class="flex flex-col items-center gap-3 *:w-full sm:flex-row sm:*:w-fit">
-						<Button href="#" size="lg">Start Building</Button>
-						<Button href="#" size="lg" variant="outline">Request a demo</Button>
+						<Button href="/" size="lg">Start Building</Button>
+						<Button href="/" size="lg" variant="outline">Request a demo</Button>
 					</div>
 				</div>
 

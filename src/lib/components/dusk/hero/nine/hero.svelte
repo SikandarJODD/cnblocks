@@ -22,7 +22,7 @@
 				<h1 class="text-4xl font-medium tracking-tight text-balance md:text-5xl">
 					Next gen CRM: Customer universe, beautifully connected
 				</h1>
-				<Button href="#" class="mx-auto w-fit" size="lg">Get Started</Button>
+				<Button href="/" class="mx-auto w-fit" size="lg">Get Started</Button>
 			</div>
 
 			<div

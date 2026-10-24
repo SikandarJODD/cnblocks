@@ -56,7 +56,9 @@
 		class="fixed top-0 z-20 w-full max-lg:data-[state=active]:bottom-0 max-lg:data-[state=active]:bg-background"
 	>
 		<div class="mx-auto max-w-7xl px-6">
-			<div class="relative flex flex-wrap items-center justify-between gap-6 py-4 lg:gap-0 lg:py-6">
+			<div
+				class="relative flex flex-wrap items-center justify-between gap-6 py-4 lg:gap-0 lg:py-6"
+			>
 				<div class="flex w-full items-center justify-between gap-12 lg:w-auto">
 					<a href="/" aria-label="Home" class="flex items-center space-x-2">
 						<Logo />
@@ -80,7 +82,7 @@
 
 						<X
 							aria-hidden="true"
-							class="absolute inset-0 m-auto size-6 -translate-x-[3px] -rotate-180 scale-0 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
+							class="absolute inset-0 m-auto size-6 -translate-x-[3px] scale-0 -rotate-180 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
 						/>
 					</button>
 
@@ -102,7 +104,7 @@
 
 				<div
 					id={menuId}
-					class="mb-6 hidden w-full flex-wrap items-center justify-end max-lg:space-y-8 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:in-data-[state=active]:flex"
+					class="mb-6 hidden w-full flex-wrap items-center justify-end in-data-[state=active]:block max-lg:space-y-8 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:in-data-[state=active]:flex"
 				>
 					<div class="lg:hidden">
 						<ul>
@@ -120,9 +122,13 @@
 						</ul>
 					</div>
 
-					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-						<Button href="#" size="sm" variant="outline" onclick={closeMenu}>Login</Button>
-						<Button href="#" size="sm" onclick={closeMenu}>Sign Up</Button>
+					<div
+						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+					>
+						<Button href="/" size="sm" variant="outline" onclick={closeMenu}
+							>Login</Button
+						>
+						<Button href="/" size="sm" onclick={closeMenu}>Sign Up</Button>
 					</div>
 				</div>
 			</div>

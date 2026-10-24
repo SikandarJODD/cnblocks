@@ -29,7 +29,7 @@
 								Modern websites and applications that look and feel the way you mean
 								it.
 							</p>
-							<Button href="#" class="w-fit">Get Started</Button>
+							<Button href="/" class="w-fit">Get Started</Button>
 						</div>
 					</div>
 				</div>

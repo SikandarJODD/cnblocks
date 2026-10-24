@@ -123,10 +123,10 @@
 					<div
 						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
 					>
-						<Button href="#" size="sm" variant="outline" onclick={closeMenu}
+						<Button href="/" size="sm" variant="outline" onclick={closeMenu}
 							>Login</Button
 						>
-						<Button href="#" size="sm" onclick={closeMenu}>Sign Up</Button>
+						<Button href="/" size="sm" onclick={closeMenu}>Sign Up</Button>
 					</div>
 				</div>
 			</div>

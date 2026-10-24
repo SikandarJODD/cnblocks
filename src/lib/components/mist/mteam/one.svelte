@@ -67,7 +67,7 @@
 					Together, we collaborate to deliver exceptional results and innovative solutions
 					for our clients.
 				</p>
-				<Button href="#" variant="outline" class="pr-2">
+				<Button href="/" variant="outline" class="pr-2">
 					We're hiring
 					<ChevronRight class="opacity-50" />
 				</Button>

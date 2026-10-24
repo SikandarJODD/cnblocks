@@ -6,9 +6,9 @@
 	type LinkItem = { label: string; href: string };
 
 	const links: LinkItem[] = [
-		{ label: "Features", href: "#" },
-		{ label: "Pricing", href: "#" },
-		{ label: "Blog", href: "#" },
+		{ label: "Features", href: "/" },
+		{ label: "Pricing", href: "/" },
+		{ label: "Blog", href: "/" },
 	];
 
 	const year = new Date().getFullYear();

@@ -33,7 +33,7 @@
 						{#each linksGroup.links as label (label)}
 							<li>
 								<a
-									href="#"
+									href="/"
 									class="text-sm text-muted-foreground duration-150 hover:text-primary"
 									>{label}</a
 								>
@@ -47,17 +47,17 @@
 		<div class="mt-24 grid gap-x-3 gap-y-6 border-t pt-6 sm:grid-cols-2">
 			<div>
 				<p class="text-sm text-muted-foreground">Get an AI summary of this page</p>
-				<div class="-ml-2.5 mt-2 flex items-center">
-					<Button variant="ghost" size="icon" href="#" aria-label="Claude AI">
+				<div class="mt-2 -ml-2.5 flex items-center">
+					<Button variant="ghost" size="icon" href="/" aria-label="Claude AI">
 						<Claude />
 					</Button>
-					<Button variant="ghost" size="icon" href="#" aria-label="OpenAI">
+					<Button variant="ghost" size="icon" href="/" aria-label="OpenAI">
 						<OpenAI />
 					</Button>
-					<Button variant="ghost" size="icon" href="#" aria-label="Perplexity">
+					<Button variant="ghost" size="icon" href="/" aria-label="Perplexity">
 						<Perplexity class="size-5!" />
 					</Button>
-					<Button variant="ghost" size="icon" href="#" aria-label="Gemini">
+					<Button variant="ghost" size="icon" href="/" aria-label="Gemini">
 						<Gemini />
 					</Button>
 				</div>

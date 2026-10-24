@@ -5,27 +5,27 @@
 			items: [
 				{
 					title: "Features",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Solution",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Customers",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Pricing",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Help",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "About",
-					href: "#",
+					href: "/",
 				},
 			],
 		},
@@ -34,27 +34,27 @@
 			items: [
 				{
 					title: "About",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Careers",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Blog",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Press",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Contact",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Help",
-					href: "#",
+					href: "/",
 				},
 			],
 		},
@@ -63,19 +63,19 @@
 			items: [
 				{
 					title: "Licence",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Privacy",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Cookies",
-					href: "#",
+					href: "/",
 				},
 				{
 					title: "Security",
-					href: "#",
+					href: "/",
 				},
 			],
 		},

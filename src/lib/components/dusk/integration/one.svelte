@@ -1,14 +1,7 @@
 <script lang="ts">
 	import IntegrationCard from "./integration-card.svelte";
 	import Button from "#lib/components/ui/dusk/button/button.svelte";
-	import {
-		Gemini,
-		GooglePaLM,
-		MagicUI,
-		MediaWiki,
-		Replit,
-		VSCodium,
-	} from "#lib/svgs/index.js";
+	import { Gemini, GooglePaLM, MagicUI, MediaWiki, Replit, VSCodium } from "#lib/svgs/index.js";
 </script>
 
 <section>
@@ -23,7 +16,7 @@
 						Connect seamlessly with popular platforms and services to enhance your
 						workflow.
 					</p>
-					<Button variant="outline" href="#">Get Started</Button>
+					<Button variant="outline" href="/">Get Started</Button>
 				</div>
 
 				<p class="max-w-xs text-lg text-balance text-muted-foreground">
@@ -35,7 +28,7 @@
 			</div>
 
 			<div
-				class="-mx-6 mask-radial-at-top-left mask-radial-from-65% mask-radial-[100%_80%] px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:mr-0 md:ml-auto"
+				class="-mx-6 mask-radial-[100%_80%] mask-radial-from-65% mask-radial-at-top-left px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:mr-0 md:ml-auto"
 			>
 				<div class="rounded-2xl border bg-card p-3 shadow-lg md:pb-12">
 					<div class="grid grid-cols-2 gap-2">

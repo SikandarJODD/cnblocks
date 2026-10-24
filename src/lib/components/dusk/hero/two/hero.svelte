@@ -14,7 +14,7 @@
 					Build Software business can rely on
 				</h1>
 
-				<Button href="#" class="w-fit" size="lg">Get Started</Button>
+				<Button href="/" class="w-fit" size="lg">Get Started</Button>
 			</div>
 
 			<div

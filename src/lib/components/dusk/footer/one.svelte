@@ -5,10 +5,10 @@
 	import Logo from "#lib/components/web/Logo.svelte";
 
 	const communityLinks = [
-		{ href: "#", label: "GitHub" },
-		{ href: "#", label: "Discord" },
-		{ href: "#", label: "Slack" },
-		{ href: "#", label: "X / Twitter" },
+		{ href: "/", label: "GitHub" },
+		{ href: "/", label: "Discord" },
+		{ href: "/", label: "Slack" },
+		{ href: "/", label: "X / Twitter" },
 	];
 
 	const footerLinks = [
@@ -41,7 +41,7 @@
 						{#each linksGroup.links as label (label)}
 							<li>
 								<a
-									href="#"
+									href="/"
 									class="text-sm text-muted-foreground duration-150 hover:text-primary"
 									>{label}</a
 								>

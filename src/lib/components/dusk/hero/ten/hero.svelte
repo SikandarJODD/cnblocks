@@ -17,7 +17,7 @@
 					<p class="text-lg text-balance text-muted-foreground">
 						Leads, deals, tasks, and conversations.
 					</p>
-					<Button href="#" class="w-fit">Get Started</Button>
+					<Button href="/" class="w-fit">Get Started</Button>
 				</div>
 			</div>
 

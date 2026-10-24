@@ -31,8 +31,8 @@
 								unified CRM. Start selling in seconds.
 							</p>
 							<div class="flex gap-3">
-								<Button href="#" class="w-fit">Get Started</Button>
-								<Button href="#" class="w-fit" variant="outline"
+								<Button href="/" class="w-fit">Get Started</Button>
+								<Button href="/" class="w-fit" variant="outline"
 									>Talk to sales</Button
 								>
 							</div>

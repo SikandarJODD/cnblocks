@@ -4,36 +4,36 @@
 	import Label from "#lib/components/ui/label/label.svelte";
 
 	const enterpriseLinks = [
-		{ href: "#", label: "About" },
-		{ href: "#", label: "Customers" },
-		{ href: "#", label: "Enterprise" },
-		{ href: "#", label: "Partners" },
-		{ href: "#", label: "Jobs" },
+		{ href: "/", label: "About" },
+		{ href: "/", label: "Customers" },
+		{ href: "/", label: "Enterprise" },
+		{ href: "/", label: "Partners" },
+		{ href: "/", label: "Jobs" },
 	];
 
 	const productLinks = [
-		{ href: "#", label: "Security" },
-		{ href: "#", label: "Customization" },
-		{ href: "#", label: "Enterprise" },
-		{ href: "#", label: "Partners" },
+		{ href: "/", label: "Security" },
+		{ href: "/", label: "Customization" },
+		{ href: "/", label: "Enterprise" },
+		{ href: "/", label: "Partners" },
 	];
 
 	const docsLinks = [
-		{ href: "#", label: "Introduction" },
-		{ href: "#", label: "Installation" },
-		{ href: "#", label: "Utils" },
-		{ href: "#", label: "Principles" },
-		{ href: "#", label: "Jargon" },
-		{ href: "#", label: "Plugin" },
-		{ href: "#", label: "Customizer" },
-		{ href: "#", label: "Boilerplates" },
+		{ href: "/", label: "Introduction" },
+		{ href: "/", label: "Installation" },
+		{ href: "/", label: "Utils" },
+		{ href: "/", label: "Principles" },
+		{ href: "/", label: "Jargon" },
+		{ href: "/", label: "Plugin" },
+		{ href: "/", label: "Customizer" },
+		{ href: "/", label: "Boilerplates" },
 	];
 
 	const communityLinks = [
-		{ href: "#", label: "GitHub" },
-		{ href: "#", label: "Discord" },
-		{ href: "#", label: "Slack" },
-		{ href: "#", label: "X / Twitter" },
+		{ href: "/", label: "GitHub" },
+		{ href: "/", label: "Discord" },
+		{ href: "/", label: "Slack" },
+		{ href: "/", label: "X / Twitter" },
 	];
 
 	const footerLinks = [
