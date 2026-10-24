@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Play } from "@lucide/svelte";
 	import Button from "#lib/components/ui/dusk/button/button.svelte";
-	import { Gemini, OpenAI } from "#lib/svgs";
+	import { Gemini, OpenAI } from "#lib/svgs/index.ts";
 </script>
 
 <section class="py-16 md:py-20">

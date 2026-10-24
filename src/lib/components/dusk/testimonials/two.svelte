@@ -3,7 +3,7 @@
 	import type { Component } from "svelte";
 	import type { SVGAttributes } from "svelte/elements";
 	import Button from "#lib/components/ui/dusk/button/button.svelte";
-	import { Claude, Gemini, OpenAI } from "#lib/svgs";
+	import { Claude, Gemini, OpenAI } from "#lib/svgs/index.ts";
 
 	type Testimonial = {
 		quote: string;
@@ -65,7 +65,8 @@
 					onclick={previousTestimonial}
 					disabled={activeIndex === 0}
 				>
-					<ArrowIcon class="size-3!" />
+					{@render ArrowIcon({ class: "size-3! rotate-180" })}
+					<!-- <ArrowIcon class="size-3!" /> -->
 				</Button>
 				<Button
 					variant="outline"
@@ -75,19 +76,13 @@
 					onclick={nextTestimonial}
 					disabled={activeIndex === testimonials.length - 1}
 				>
-					<ArrowIcon class="size-3! rotate-180" />
+					{@render ArrowIcon({ class: "size-3! rotate-180" })}
 				</Button>
 			</div>
 
 			<AnimatePresence mode="popLayout" initial={false}>
 				{#key activeIndex}
-					<motion.div
-						key={`testimonial-${activeIndex}`}
-						{initial}
-						animate={{ opacity: 1 }}
-						{exit}
-						{transition}
-					>
+					<motion.div {initial} animate={{ opacity: 1 }} {exit} {transition}>
 						<p
 							class="mb-20 text-2xl leading-snug font-medium text-muted-foreground md:text-4xl md:leading-tight"
 						>
@@ -99,7 +94,6 @@
 					</motion.div>
 
 					<motion.div
-						key={`author-${activeIndex}`}
 						{initial}
 						animate={{ opacity: 1 }}
 						{exit}
