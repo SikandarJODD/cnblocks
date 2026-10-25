@@ -31,3 +31,5 @@ vite.config.ts.timestamp-*
 !/scripts/generate-static-preview-routes.mjs
 !/scripts/generate-install-links.mjs
 !/scripts/generate-previews.js
+
+DUSK_PRODUCTION_CHECKLIST.md
