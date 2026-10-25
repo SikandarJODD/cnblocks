@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.12.4",
-		"@lucide/svelte": "^1.55.0",
+		"@lucide/svelte": "^1.61.0",
 		"@shikijs/langs": "^4.5.0",
 		"@shikijs/themes": "^4.5.0",
 		"@sveltejs/adapter-vercel": "^7.0.0",
@@ -27,7 +27,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.3.3",
-		"bits-ui": "^2.19.5",
+		"bits-ui": "^2.20.2",
 		"clsx": "^2.1.1",
 		"dotted-map": "^3.1.0",
 		"mode-watcher": "^1.0.6",
