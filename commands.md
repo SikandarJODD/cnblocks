@@ -48,3 +48,30 @@ Maximum compression can be much slower and usually has diminishing returns. Star
 - `--strip safe` removes nonessential metadata while retaining chunks that affect display.
 - Do not add `--alpha` when strict losslessness is required; it changes RGB values hidden behind fully transparent pixels and is only visually lossless.
 - Review the changed files and their sizes with `git diff --stat` before committing.
+
+# Generate Dusk category previews
+
+```sh
+pnpm generate:previews --theme dusk --category hero
+```
+
+Generates preview routes for every Dusk component in the `hero` category.
+
+# All Dusk components
+
+```bash
+pnpm generate:previews --theme dusk
+
+# All components in the Dusk content category
+
+pnpm generate:previews --theme dusk --category content
+
+# Only one component
+
+pnpm generate:previews --theme dusk --component content-one
+
+# Dry run for a category—shows changes without writing files
+
+pnpm generate:previews --theme dusk --category content --dry-run
+
+```
