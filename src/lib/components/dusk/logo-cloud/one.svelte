@@ -2,7 +2,7 @@
 	import {
 		Beacon,
 		Bolt,
-		Claude,
+		ClaudeFull,
 		FirebaseFull,
 		Hulu,
 		Spotify,
@@ -36,7 +36,7 @@
 				<Beacon class="mx-auto h-4 w-full" />
 			</div>
 			<div class="hidden items-center sm:flex">
-				<Claude class="mx-auto h-5 w-full" />
+				<ClaudeFull class="mx-auto h-5 w-full" />
 			</div>
 		</div>
 	</div>

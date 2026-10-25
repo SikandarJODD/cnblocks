@@ -2,6 +2,7 @@ import Beacon from "./beacon.svelte";
 import Bolt from "./bolt.svelte";
 import Cisco from "./cisco.svelte";
 import Claude from "./claude.svelte";
+import ClaudeFull from "./claude-full.svelte";
 import Clerk from "./clerk.svelte";
 import Figma from "./figma.svelte";
 import Firebase from "./firebase.svelte";
@@ -34,6 +35,7 @@ export {
 	Bolt,
 	Cisco,
 	Claude,
+	ClaudeFull,
 	Clerk,
 	Figma,
 	Firebase,
