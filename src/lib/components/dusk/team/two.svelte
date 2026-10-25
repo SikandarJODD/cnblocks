@@ -4,15 +4,14 @@
 			<h2
 				class="max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground"
 			>
-				<span class="text-foreground">Built by operators.</span><br /> Designed for revenue
-				teams.
+				<span class="text-foreground">Built by operators.</span><br /> Designed for revenue teams.
 			</h2>
 			<div class="flex flex-col gap-32 md:mx-auto xl:gap-44">
 				<p class="text-lg text-balance text-muted-foreground">
 					“We have led sales, success, and product teams through messy handoffs and
 					scattered customer data. Tailark is the CRM we wanted then: one clear workspace
-					for pipeline health, account history, next steps, and the signals that help teams
-					move deals forward.”
+					for pipeline health, account history, next steps, and the signals that help
+					teams move deals forward.”
 				</p>
 
 				<div class="grid grid-cols-[auto_1fr] items-center gap-7">
@@ -27,11 +26,12 @@
 								height="52"
 								class="size-full object-cover grayscale"
 								loading="lazy"
+								decoding="async"
 							/>
 						</div>
 
 						<div
-							class="absolute inset-0 z-1 size-10 -translate-y-1/2 translate-x-1/2 overflow-hidden rounded-full shadow-lg shadow-black/6 before:absolute before:inset-0 before:z-2 before:rounded-full before:border before:border-foreground/10"
+							class="absolute inset-0 z-1 size-10 translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full shadow-lg shadow-black/6 before:absolute before:inset-0 before:z-2 before:rounded-full before:border before:border-foreground/10"
 						>
 							<img
 								src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -40,6 +40,7 @@
 								height="52"
 								class="size-full object-cover object-top grayscale"
 								loading="lazy"
+								decoding="async"
 							/>
 						</div>
 					</div>

@@ -34,14 +34,14 @@
 					<img
 						class="relative hidden aspect-15/8 rounded-t-2xl bg-background dark:block"
 						src="/mail2.png"
-						alt="App screen"
+						alt="CRM email workspace"
 						width="2700"
 						height="1440"
 					/>
 					<img
 						class="relative z-2 aspect-15/8 rounded-t-2xl border border-border/25 dark:hidden"
 						src="/mail2-light.png"
-						alt="App screen"
+						alt="CRM email workspace"
 						width="2700"
 						height="1440"
 					/>
@@ -49,7 +49,7 @@
 
 				<img
 					src="https://images.unsplash.com/photo-1761798979849-ebb267341d50?q=80&w=2215&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					alt="Background"
+					alt=""
 					width="2215"
 					height="1477"
 					class="absolute inset-0 size-full rounded-3xl object-cover object-bottom"

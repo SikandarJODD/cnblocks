@@ -17,10 +17,14 @@
 				class="relative overflow-hidden rounded-xl bg-stone-100 p-8 after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:border after:border-foreground/10 lg:col-span-3 lg:row-span-2"
 			>
 				<video
+					aria-hidden="true"
 					autoplay
 					loop
 					muted
 					playsinline
+					preload="none"
+					width="1920"
+					height="1080"
 					class="absolute inset-0 ml-auto h-full w-2/3 mask-l-from-foreground object-cover"
 					src="https://videos.pexels.com/video-files/7732814/7732814-hd_1920_1080_25fps.mp4"
 				></video>
@@ -70,7 +74,8 @@
 						class="border-l border-[oklch(0.3_0.05_70/0.15)] pl-4 dark:border-foreground/10"
 					>
 						<p class="text-sm font-medium">Shekinah Tshiokufila</p>
-						<span class="block text-sm text-[oklch(0.3_0.05_70/0.65)] dark:text-foreground/65"
+						<span
+							class="block text-sm text-[oklch(0.3_0.05_70/0.65)] dark:text-foreground/65"
 							>Software Engineer</span
 						>
 					</div>

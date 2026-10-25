@@ -8,7 +8,7 @@
 	],
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\timport type { WithElementRef, WithoutChildren } from \"bits-ui\";\n\timport type { HTMLTextareaAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tvalue = $bindable(),\n\t\tclass: className,\n\t\t...restProps\n\t}: WithoutChildren<WithElementRef<HTMLTextareaAttributes>> = $props();\n</script>\n\n<textarea\n\tbind:this={ref}\n\tbind:value\n\tclass={cn(\n\t\t\"flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\n\t\tclassName\n\t)}\n\t{...restProps}\n></textarea>\n",
+			"content": "<script lang=\"ts\">\n\timport type { WithElementRef, WithoutChildren } from \"bits-ui\";\n\timport type { HTMLTextareaAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tvalue = $bindable(),\n\t\tclass: className,\n\t\t...restProps\n\t}: WithoutChildren<WithElementRef<HTMLTextareaAttributes>> = $props();\n</script>\n\n<textarea\n\tbind:this={ref}\n\tbind:value\n\tclass={cn(\n\t\t\"flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\n\t\tclassName\n\t)}\n\t{...restProps}></textarea>\n",
 			"type": "registry:ui",
 			"target": "ui/mist/textarea/textarea.svelte"
 		},

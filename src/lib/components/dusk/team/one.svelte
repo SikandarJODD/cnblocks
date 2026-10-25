@@ -78,6 +78,7 @@
 								height="1239"
 								sizes="(max-width: 768px) 100vw, 280px"
 								loading="lazy"
+								decoding="async"
 							/>
 						</div>
 						<div class="pt-3">

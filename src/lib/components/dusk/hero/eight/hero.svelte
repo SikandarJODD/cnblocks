@@ -7,7 +7,7 @@
 <Header />
 
 <main class="overflow-x-hidden">
-	<section class="bg-[#fcfaf6] pt-40 pb-24 dark:bg-transparent md:pt-56">
+	<section class="bg-[#fcfaf6] pt-40 pb-24 md:pt-56 dark:bg-transparent">
 		<div class="relative mx-auto max-w-7xl px-6">
 			<h1 class="text-center text-4xl font-medium tracking-tight text-balance">
 				Family money, finally organized. <br />
@@ -38,7 +38,7 @@
 
 				<img
 					src="https://images.unsplash.com/photo-1600856209923-34372e319a5d?q=80&w=1289&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					alt="Background"
+					alt=""
 					width="1280"
 					height="1000"
 					class="size-full rounded-[2rem] object-cover shadow-[0_32px_90px_-48px_rgba(82,62,38,0.45)] ring-1 ring-stone-900/5 max-sm:scale-150 dark:hidden"

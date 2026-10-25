@@ -22,16 +22,20 @@
 						<img
 							class="relative hidden aspect-15/8 rounded-2xl bg-background dark:block"
 							src="/mail2.png"
-							alt="App screen"
+							alt="CRM email workspace"
 							width="2700"
 							height="1440"
+							loading="lazy"
+							decoding="async"
 						/>
 						<img
 							class="relative z-2 aspect-15/8 rounded-xl border border-border/50 dark:hidden"
 							src="/mail2-light.png"
-							alt="App screen"
+							alt="CRM email workspace"
 							width="2700"
 							height="1440"
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 				</div>

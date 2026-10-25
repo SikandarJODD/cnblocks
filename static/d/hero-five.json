@@ -26,7 +26,7 @@
 			"target": "dusk/hero/five/header.svelte"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\tfunction setPlaybackRate(event: Event) {\n\t\t(event.currentTarget as HTMLVideoElement).playbackRate = 0.5;\n\t}\n</script>\n\n<video\n\taria-hidden=\"true\"\n\tautoplay\n\tmuted\n\tloop\n\tplaysinline\n\tclass=\"size-full object-cover\"\n\tsrc=\"https://videos.pexels.com/video-files/18419650/18419650-uhd_2560_1440_30fps.mp4\"\n\tonloadedmetadata={setPlaybackRate}\n></video>\n",
+			"content": "<script lang=\"ts\">\n\tfunction setPlaybackRate(event: Event) {\n\t\t(event.currentTarget as HTMLVideoElement).playbackRate = 0.5;\n\t}\n</script>\n\n<video\n\taria-hidden=\"true\"\n\tautoplay\n\tmuted\n\tloop\n\tplaysinline\n\tpreload=\"metadata\"\n\twidth=\"2560\"\n\theight=\"1440\"\n\tclass=\"size-full object-cover\"\n\tsrc=\"https://videos.pexels.com/video-files/18419650/18419650-uhd_2560_1440_30fps.mp4\"\n\tonloadedmetadata={setPlaybackRate}\n></video>\n",
 			"type": "registry:component",
 			"target": "dusk/hero/five/hero-video.svelte"
 		},

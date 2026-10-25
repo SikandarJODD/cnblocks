@@ -39,7 +39,7 @@
 
 				<img
 					src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					alt="Landscape"
+					alt=""
 					width="2215"
 					height="1477"
 					class="absolute inset-0 size-full object-cover"
