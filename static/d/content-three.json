@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-three",
+	"type": "registry:block",
+	"description": "Dusk product-preview content section with feature highlights",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\n\timport Zap from \"@lucide/svelte/icons/zap\";\n</script>\n\n<section class=\"overflow-hidden py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl space-y-8 px-6 md:space-y-16\">\n\t\t<div class=\"max-w-2xl max-lg:pr-6\">\n\t\t\t<h2 class=\"text-4xl font-medium tracking-tight text-balance md:text-5xl lg:text-6xl\">\n\t\t\t\tWorkspace for every customer relationship.\n\t\t\t</h2>\n\t\t</div>\n\t\t<div class=\"grid items-center gap-6 lg:grid-cols-3 lg:gap-20\">\n\t\t\t<div class=\"relative mask-b-from-foreground max-lg:-mr-6 lg:col-span-2\">\n\t\t\t\t<div class=\"relative overflow-hidden p-px max-sm:-mr-56\">\n\t\t\t\t\t<div\n\t\t\t\t\t\tclass=\"relative rounded-2xl bg-white p-2 ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground dark:bg-background dark:shadow-xl dark:shadow-black/50\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<div\n\t\t\t\t\t\t\tclass=\"absolute inset-0 z-1 rounded-2xl bg-white dark:bg-foreground/2\"\n\t\t\t\t\t\t></div>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\tclass=\"relative hidden aspect-15/8 rounded-2xl bg-background dark:block\"\n\t\t\t\t\t\t\tsrc=\"/mail2.png\"\n\t\t\t\t\t\t\talt=\"CRM email workspace\"\n\t\t\t\t\t\t\twidth=\"2700\"\n\t\t\t\t\t\t\theight=\"1440\"\n\t\t\t\t\t\t\tloading=\"lazy\"\n\t\t\t\t\t\t\tdecoding=\"async\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\tclass=\"relative z-2 aspect-15/8 rounded-xl border border-border/50 dark:hidden\"\n\t\t\t\t\t\t\tsrc=\"/mail2-light.png\"\n\t\t\t\t\t\t\talt=\"CRM email workspace\"\n\t\t\t\t\t\t\twidth=\"2700\"\n\t\t\t\t\t\t\theight=\"1440\"\n\t\t\t\t\t\t\tloading=\"lazy\"\n\t\t\t\t\t\t\tdecoding=\"async\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"relative space-y-4\">\n\t\t\t\t<p class=\"text-2xl text-balance text-muted-foreground\">\n\t\t\t\t\tTailark keeps pipeline, conversations, tasks, and account history connected so\n\t\t\t\t\tteams can spot the next best move.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"grid gap-4 pt-6 sm:grid-cols-2\">\n\t\t\t\t\t<p class=\"text-balance text-muted-foreground\">\n\t\t\t\t\t\t<span class=\"font-medium text-foreground\">\n\t\t\t\t\t\t\t<Zap class=\"inline size-4 -translate-y-0.5\" /> Fast.\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\tMove from signal to follow-up without losing context.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p class=\"text-balance text-muted-foreground\">\n\t\t\t\t\t\t<span class=\"font-medium text-foreground\">\n\t\t\t\t\t\t\t<Cpu class=\"inline size-4 -translate-y-0.5\" /> Powerful.\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\tUnify pipeline, tasks, and account history.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/content/three.svelte"
+		}
+	]
+}

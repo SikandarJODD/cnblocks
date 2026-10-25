@@ -13,9 +13,9 @@
 	};
 
 	const socials: SocialItem[] = [
-		{ id: "twitter", label: "Twitter", href: "#", icon: Twitter },
-		{ id: "linkedin", label: "LinkedIn", href: "#", icon: Linkedin },
-		{ id: "youtube", label: "YouTube", href: "#", icon: Youtube },
+		{ id: "twitter", label: "Twitter", href: "/", icon: Twitter },
+		{ id: "linkedin", label: "LinkedIn", href: "/", icon: Linkedin },
+		{ id: "youtube", label: "YouTube", href: "/", icon: Youtube },
 	];
 
 	let hoveredSocialMedia = $state<SocialMedia | null>(null);

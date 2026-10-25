@@ -2,27 +2,27 @@
 	let links = [
 		{
 			title: "Features",
-			href: "#",
+			href: "/",
 		},
 		{
 			title: "Solution",
-			href: "#",
+			href: "/",
 		},
 		{
 			title: "Customers",
-			href: "#",
+			href: "/",
 		},
 		{
 			title: "Pricing",
-			href: "#",
+			href: "/",
 		},
 		{
 			title: "Help",
-			href: "#",
+			href: "/",
 		},
 		{
 			title: "About",
-			href: "#",
+			href: "/",
 		},
 	];
 </script>

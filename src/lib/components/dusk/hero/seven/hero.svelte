@@ -31,8 +31,8 @@
 								unified CRM. Start selling in seconds.
 							</p>
 							<div class="flex gap-3">
-								<Button href="#" class="w-fit">Get Started</Button>
-								<Button href="#" class="w-fit" variant="outline"
+								<Button href="/" class="w-fit">Get Started</Button>
+								<Button href="/" class="w-fit" variant="outline"
 									>Talk to sales</Button
 								>
 							</div>
@@ -53,14 +53,14 @@
 						<img
 							class="relative hidden aspect-15/8 rounded-2xl dark:block dark:bg-background"
 							src="/mail2.png"
-							alt="App screen"
+							alt="CRM email workspace"
 							width="2700"
 							height="1440"
 						/>
 						<img
 							class="relative z-2 aspect-15/8 rounded-2xl dark:hidden"
 							src="/mail2-light.png"
-							alt="App screen"
+							alt="CRM email workspace"
 							width="2700"
 							height="1440"
 						/>
@@ -68,7 +68,7 @@
 
 					<img
 						src="https://images.unsplash.com/photo-1772037440088-2ef162671434?q=80&w=1313&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						alt="Background"
+						alt=""
 						width="1313"
 						height="1000"
 						class="size-full rotate-180 rounded-3xl object-cover object-bottom"

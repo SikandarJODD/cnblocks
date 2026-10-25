@@ -56,10 +56,10 @@
 					</p>
 
 					<div class="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
-						<Button href="#">
+						<Button href="/">
 							<span class="text-nowrap">Explore the graph</span>
 						</Button>
-						<Button href="#" variant="ghost">
+						<Button href="/" variant="ghost">
 							<span class="text-nowrap">Watch the flow</span>
 						</Button>
 					</div>

@@ -418,6 +418,63 @@ const veilSearchComponents: SearchComp[] = [
 	},
 ];
 
+const duskSearchComponents: SearchComp[] = [
+	{
+		name: "Hero",
+		subcom: numberedItems("Hero", 10, "/dusk/hero", "dusk", "hero"),
+	},
+	{
+		name: "Features",
+		subcom: numberedItems("Features", 7, "/dusk/features", "dusk", "features"),
+	},
+	{
+		name: "Content",
+		subcom: numberedItems("Content", 3, "/dusk/content", "dusk", "content"),
+	},
+	{
+		name: "Integration",
+		subcom: numberedItems("Integration", 1, "/dusk/integration", "dusk", "integration"),
+	},
+	{
+		name: "Stats",
+		subcom: numberedItems("Stats", 2, "/dusk/stats", "dusk", "stats"),
+	},
+	{
+		name: "CTA",
+		subcom: numberedItems(
+			"Call To Action",
+			2,
+			"/dusk/call-to-action",
+			"dusk",
+			"call-to-action"
+		),
+	},
+	{
+		name: "Pricing",
+		subcom: numberedItems("Pricing", 2, "/dusk/pricing", "dusk", "pricing"),
+	},
+	{
+		name: "Testimonial",
+		subcom: numberedItems("Testimonial", 2, "/dusk/testimonials", "dusk", "testimonial"),
+	},
+	{
+		name: "Team",
+		subcom: numberedItems("Team", 2, "/dusk/team", "dusk", "team"),
+	},
+	{
+		name: "Logo Cloud",
+		subcom: numberedItems("Logo Cloud", 4, "/dusk/logo-cloud", "dusk", "logo-cloud"),
+	},
+	{
+		name: "FAQ",
+		subcom: numberedItems("FAQs", 1, "/dusk/faqs", "dusk", "faqs"),
+	},
+	{
+		name: "Footer",
+		subcom: numberedItems("Footer", 2, "/dusk/footer", "dusk", "footer"),
+	},
+];
+
 function mergeSearchComponents(groups: SearchComp[]): SearchComp[] {
 	const merged = new Map<string, SearchComp>();
 
@@ -437,9 +494,10 @@ export const search_comp = mergeSearchComponents([
 	...kitComponents,
 	...mistSearchComponents,
 	...veilSearchComponents,
+	...duskSearchComponents,
 ]);
 
-export type SearchLibrary = "kit" | "mist" | "veil";
+export type SearchLibrary = "kit" | "mist" | "veil" | "dusk";
 
 export type SearchComp = {
 	name: string;

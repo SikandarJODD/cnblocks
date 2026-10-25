@@ -8,7 +8,7 @@
 	import { JsonLd } from "svelte-meta-tags";
 
 	const homepageDescription =
-		"Explore 200+ UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon.";
+		"Explore 230 UI and marketing blocks for Svelte, including 38 Dusk blocks available now.";
 </script>
 
 <svelte:head>
@@ -83,7 +83,8 @@
 					"@type": "ListItem",
 					position: 4,
 					name: "Dusk blocks",
-					description: "A new collection of 40 Svelte blocks coming soon.",
+					description: "A collection of 38 Zinc-based marketing blocks for Svelte.",
+					url: `${projectUrl}/dusk/hero`,
 				},
 			],
 		},

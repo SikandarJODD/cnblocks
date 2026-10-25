@@ -1,4 +1,5 @@
 import {
+	all_dusks_category_block,
 	all_mists_category_block,
 	all_veils_category_block,
 	category_blocks,
@@ -47,7 +48,11 @@ const veilCategories: CategoryItem[] = all_veils_category_block.map((category) =
 	count: category.length,
 }));
 
-const duskCategories: CategoryItem[] = [{ title: "Hero", href: "/dusk/hero", count: 10 }];
+const duskCategories: CategoryItem[] = all_dusks_category_block.map((category) => ({
+	title: category.title,
+	href: category.href,
+	count: category.length,
+}));
 
 export const blockLibraries: BlockLibrary[] = [
 	{

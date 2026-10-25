@@ -73,7 +73,7 @@
 
 					<img
 						src="https://images.unsplash.com/photo-1618003787019-95b65cc875d2?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						alt="Abstract flower"
+						alt=""
 						class="size-full scale-90 mask-b-from-65% object-cover object-[25%_50%] mix-blend-lighten"
 						width="2148"
 						height="1611"

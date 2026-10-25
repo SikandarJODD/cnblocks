@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "content-two",
+	"type": "registry:block",
+	"description": "Dusk split content section with feature highlights",
+	"devDependencies": [
+		"@lucide/svelte"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport Cpu from \"@lucide/svelte/icons/cpu\";\n\timport Zap from \"@lucide/svelte/icons/zap\";\n</script>\n\n<section class=\"py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl px-6\">\n\t\t<div class=\"grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12\">\n\t\t\t<h2 class=\"max-w-md text-4xl font-medium tracking-tight text-balance lg:text-5xl\">\n\t\t\t\tA CRM workspace for every customer relationship.\n\t\t\t</h2>\n\t\t\t<div class=\"space-y-6 lg:space-y-12\">\n\t\t\t\t<p class=\"text-lg text-balance text-muted-foreground\">\n\t\t\t\t\tTailark keeps pipeline, conversations, tasks, and account history connected so\n\t\t\t\t\tteams can spot the next best move, follow up with context, and turn every\n\t\t\t\t\tcustomer signal into momentum.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"grid gap-4 pt-6 sm:grid-cols-2\">\n\t\t\t\t\t<p class=\"text-lg text-balance text-muted-foreground\">\n\t\t\t\t\t\t<span class=\"font-medium text-foreground\">\n\t\t\t\t\t\t\t<Zap class=\"inline size-4 -translate-y-0.5\" /> Fast.\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\tMove from signal to follow-up without losing context.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p class=\"text-lg text-balance text-muted-foreground\">\n\t\t\t\t\t\t<span class=\"font-medium text-foreground\">\n\t\t\t\t\t\t\t<Cpu class=\"inline size-4 -translate-y-0.5\" /> Powerful.\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\tUnify pipeline, tasks, and account history.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/content/two.svelte"
+		}
+	]
+}

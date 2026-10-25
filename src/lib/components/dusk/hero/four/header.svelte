@@ -80,7 +80,7 @@
 
 						<X
 							aria-hidden="true"
-							class="absolute inset-0 m-auto size-6 -translate-x-[3px] -rotate-180 scale-0 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
+							class="absolute inset-0 m-auto size-6 -translate-x-[3px] scale-0 -rotate-180 opacity-0 transition-[transform,opacity] duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100 motion-reduce:transition-none"
 						/>
 					</button>
 
@@ -120,9 +120,13 @@
 						</ul>
 					</div>
 
-					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-						<Button href="#" size="sm" variant="outline" onclick={closeMenu}>Login</Button>
-						<Button href="#" size="sm" onclick={closeMenu}>Sign Up</Button>
+					<div
+						class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit"
+					>
+						<Button href="/" size="sm" variant="outline" onclick={closeMenu}
+							>Login</Button
+						>
+						<Button href="/" size="sm" onclick={closeMenu}>Sign Up</Button>
 					</div>
 				</div>
 			</div>

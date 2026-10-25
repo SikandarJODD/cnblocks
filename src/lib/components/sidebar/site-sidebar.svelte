@@ -4,7 +4,7 @@
 	import SidebarFooter from "./sidebar-footer.svelte";
 	import SidebarHeader from "./sidebar-header.svelte";
 	import SidebarNavigation from "./sidebar-navigation.svelte";
-	import SidebarSupportCard from "./sidebar-support-card.svelte";
+	// import SidebarSupportCard from "./sidebar-support-card.svelte";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 	const sidebar = Sidebar.useSidebar();
@@ -18,7 +18,7 @@
 	bind:ref
 	variant="inset"
 	collapsible="offcanvas"
-	class="[&[data-mobile=true]]:px-2 [&[data-mobile=true]]:pt-2"
+	class="data-[mobile=true]:px-2 data-[mobile=true]:pt-2"
 	{...restProps}
 >
 	<SidebarHeader />

@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-two",
+	"type": "registry:block",
+	"description": "Dusk full-width customer logo cloud",
+	"registryDependencies": [
+		"./svgs.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Beacon, Bolt, Hulu, Spotify, SupabaseFull, VercelFull } from \"#lib/svgs/index.js\";\n</script>\n\n<section class=\"bg-background\">\n\t<div class=\"relative m-auto max-w-7xl **:fill-foreground\">\n\t\t<div\n\t\t\tclass=\"grid grid-cols-2 items-center justify-items-center gap-x-10 gap-y-8 px-6 py-8 sm:grid-cols-3 lg:flex lg:justify-between lg:py-12\"\n\t\t>\n\t\t\t<Hulu height=\"20\" width=\"60\" />\n\t\t\t<VercelFull height=\"24\" width=\"100\" />\n\t\t\t<Bolt height=\"24\" width=\"58\" />\n\t\t\t<SupabaseFull class=\"h-7 w-auto\" />\n\t\t\t<Beacon height=\"26\" width=\"92\" />\n\t\t\t<Spotify height=\"28\" width=\"90\" />\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/logo-cloud/two.svelte"
+		}
+	]
+}

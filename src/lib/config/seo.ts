@@ -6,7 +6,7 @@ export let seoMetaTags: MetaTagsProps = {
 	title: "Svelte Shadcn Blocks - 200+ UI & Marketing Blocks",
 	titleTemplate: "%s | Svelte Shadcn Blocks",
 	description:
-		"Build beautiful websites faster with 200+ UI and marketing blocks built with Svelte, Tailwind CSS, and shadcn-svelte, including 40 new Dusk blocks coming soon.",
+		"Build beautiful websites faster with 230 UI and marketing blocks built with Svelte, Tailwind CSS, and shadcn-svelte, including 38 Dusk blocks available now.",
 	keywords: [
 		"Svelte UI components",
 		"Svelte marketing components",
@@ -73,7 +73,7 @@ export let seoMetaTags: MetaTagsProps = {
 		type: "website",
 		title: "Svelte Shadcn Blocks - 200+ UI & Marketing Blocks",
 		description:
-			"A collection of 200+ responsive, copy-ready UI and marketing blocks for Svelte, including 40 new Dusk blocks coming soon.",
+			"A collection of 230 responsive, copy-ready UI and marketing blocks for Svelte, including 38 Dusk blocks available now.",
 		siteName: "Svelte Shadcn Blocks",
 		images: [
 			{

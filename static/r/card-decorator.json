@@ -5,7 +5,7 @@
 	"description": "Decorative card component with visual effects",
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\n\tlet { children }: { children: Snippet } = $props();\n</script>\n\n<div\n\tclass=\"pointer-events-none relative mx-auto size-36 text-zinc-950/10 select-none dark:text-white/15\"\n>\n\t<div\n\t\tclass=\"absolute inset-0 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-size-[24px_24px] [mask-image:radial-gradient(circle,black_35%,transparent_75%)]\"\n\t></div>\n\t<div\n\t\tclass=\"absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l bg-background text-primary\"\n\t>\n\t\t{@render children()}\n\t</div>\n</div>\n",
+			"content": "<script lang=\"ts\">\n\timport type { Snippet } from \"svelte\";\n\n\tlet { children }: { children: Snippet } = $props();\n</script>\n\n<div\n\tclass=\"pointer-events-none relative mx-auto size-36 text-zinc-950/10 select-none dark:text-white/15\"\n>\n\t<div\n\t\tclass=\"absolute inset-0 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [mask-image:radial-gradient(circle,black_35%,transparent_75%)] bg-size-[24px_24px]\"\n\t></div>\n\t<div\n\t\tclass=\"absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l bg-background text-primary\"\n\t>\n\t\t{@render children()}\n\t</div>\n</div>\n",
 			"type": "registry:component",
 			"target": "blocks/feature/card-decorator.svelte"
 		}

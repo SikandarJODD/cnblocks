@@ -11,7 +11,7 @@
 | Kit     | Versatile marketing sections with bold layouts and visuals                 |     81 | [Explore](https://sv-blocks.vercel.app/kit/hero)  |
 | Mist    | Clean, restrained sections for product, marketing, and documentation sites |     51 | [Explore](https://sv-blocks.vercel.app/mist/hero) |
 | Veil    | Refined SaaS sections with stronger contrast and polished details          |     60 | [Explore](https://sv-blocks.vercel.app/veil/hero) |
-| Dusk    | Zinc-based marketing blocks with dedicated UI primitives                   |     10 | [Explore](https://sv-blocks.vercel.app/dusk/hero) |
+| Dusk    | Zinc-based marketing blocks with dedicated UI primitives                   |     38 | [Explore](https://sv-blocks.vercel.app/dusk/hero) |
 
 ## Features
 

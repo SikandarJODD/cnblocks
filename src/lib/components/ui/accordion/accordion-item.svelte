@@ -9,4 +9,9 @@
 	}: AccordionPrimitive.ItemProps = $props();
 </script>
 
-<AccordionPrimitive.Item bind:ref class={cn("border-b", className)} {...restProps} />
+<AccordionPrimitive.Item
+	bind:ref
+	data-slot="accordion-item"
+	class={cn("not-last:border-b", className)}
+	{...restProps}
+/>

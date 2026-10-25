@@ -18,7 +18,7 @@
 				200+ UI & Marketing Blocks for Svelte
 			</h1>
 			<!-- <p class="mt-4 max-w-3xl text-lg text-muted-foreground">
-				Including 40 new blocks from the Dusk collection, coming soon.
+				Including 38 blocks from the Dusk collection, available now.
 			</p> -->
 
 			<!-- <p class="mt-4 text-xl! text-muted-foreground">

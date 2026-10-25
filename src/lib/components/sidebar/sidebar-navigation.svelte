@@ -13,8 +13,6 @@
 
 	const pathname = $derived(page.url.pathname);
 	const activeLibrary = $derived(getBlockLibrary(pathname));
-	// veil, mist, dusk, kit, etc
-	let categoryName = $derived(activeLibrary?.key);
 	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
 	const sidebar = Sidebar.useSidebar();
 

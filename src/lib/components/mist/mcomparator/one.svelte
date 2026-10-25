@@ -60,15 +60,15 @@
 						<th class="space-y-3">
 							<span class="block">Free</span>
 
-							<Button href="#" variant="neutral">Get Started</Button>
+							<Button href="/" variant="neutral">Get Started</Button>
 						</th>
 						<th class="space-y-3">
 							<span class="block">Pro</span>
-							<Button href="#" variant="neutral">Get Started</Button>
+							<Button href="/" variant="neutral">Get Started</Button>
 						</th>
 						<th class="space-y-3">
 							<span class="block">Startup</span>
-							<Button href="#" variant="neutral">Get Started</Button>
+							<Button href="/" variant="neutral">Get Started</Button>
 						</th>
 					</tr>
 				</thead>

@@ -4,12 +4,12 @@
 	type LinkItem = { label: string; href: string };
 
 	const links: LinkItem[] = [
-		{ label: "Home", href: "#" },
-		{ label: "Features", href: "#" },
-		{ label: "Pricing", href: "#" },
-		{ label: "About", href: "#" },
-		{ label: "Blog", href: "#" },
-		{ label: "Contact", href: "#" },
+		{ label: "Home", href: "/" },
+		{ label: "Features", href: "/" },
+		{ label: "Pricing", href: "/" },
+		{ label: "About", href: "/" },
+		{ label: "Blog", href: "/" },
+		{ label: "Contact", href: "/" },
 	];
 
 	const year = new Date().getFullYear();

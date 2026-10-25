@@ -1,0 +1,16 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "call-to-action-two",
+	"type": "registry:block",
+	"description": "Dusk split call to action with a single primary action",
+	"registryDependencies": [
+		"./button.json"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport Button from \"#lib/components/ui/dusk/button/button.svelte\";\n</script>\n\n<section class=\"py-16 md:py-20\">\n\t<div class=\"mx-auto max-w-7xl px-6\">\n\t\t<div\n\t\t\tclass=\"flex items-center justify-center gap-6 max-lg:flex-col max-lg:text-center lg:items-end lg:justify-between\"\n\t\t>\n\t\t\t<h2 class=\"max-w-4xl text-5xl font-semibold tracking-tight text-balance xl:text-6xl\">\n\t\t\t\tStart building from here\n\t\t\t</h2>\n\n\t\t\t<Button size=\"lg\" href=\"/\">Get Started</Button>\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "dusk/call-to-action/two.svelte"
+		}
+	]
+}

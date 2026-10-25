@@ -61,3 +61,18 @@ export let all_veils_category_block: CategoryBlock[] = [
 	{ title: "Comparator", href: "/veil/comparator", length: 3 },
 	{ title: "Footer", href: "/veil/footer", length: 6 },
 ];
+
+export let all_dusks_category_block: CategoryBlock[] = [
+	{ title: "Hero", href: "/dusk/hero", length: 10 },
+	{ title: "Features", href: "/dusk/features", length: 7 },
+	{ title: "Content", href: "/dusk/content", length: 3 },
+	{ title: "Integration", href: "/dusk/integration", length: 1 },
+	{ title: "Stats", href: "/dusk/stats", length: 2 },
+	{ title: "Call To Action", href: "/dusk/call-to-action", length: 2 },
+	{ title: "Pricing", href: "/dusk/pricing", length: 2 },
+	{ title: "Testimonial", href: "/dusk/testimonials", length: 2 },
+	{ title: "Team", href: "/dusk/team", length: 2 },
+	{ title: "Logo Cloud", href: "/dusk/logo-cloud", length: 4 },
+	{ title: "FAQs", href: "/dusk/faqs", length: 1 },
+	{ title: "Footer", href: "/dusk/footer", length: 2 },
+];

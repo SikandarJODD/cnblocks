@@ -8,7 +8,7 @@
 	],
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLLabelAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLLabelAttributes> = $props();\n</script>\n\n<label\n\tbind:this={ref}\n\tdata-slot=\"label\"\n\tclass={cn(\n\t\t\"block select-none text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50\",\n\t\tclassName\n\t)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</label>\n",
+			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLLabelAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLLabelAttributes> = $props();\n</script>\n\n<label\n\tbind:this={ref}\n\tdata-slot=\"label\"\n\tclass={cn(\n\t\t\"block text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50\",\n\t\tclassName\n\t)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</label>\n",
 			"type": "registry:ui",
 			"target": "ui/mist/label/label.svelte"
 		},
