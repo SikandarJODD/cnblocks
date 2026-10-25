@@ -14,13 +14,22 @@
 			<div class="relative mask-b-from-foreground max-lg:-mr-6 lg:col-span-2">
 				<div class="relative overflow-hidden p-px max-sm:-mr-56">
 					<div
-						class="relative rounded-2xl bg-background p-2 shadow-xl shadow-black/50 ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:ring-foreground before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%]"
+						class="relative rounded-2xl bg-white p-2 ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground dark:bg-background dark:shadow-xl dark:shadow-black/50"
 					>
-						<div class="absolute inset-0 z-1 rounded-2xl bg-foreground/2"></div>
+						<div
+							class="absolute inset-0 z-1 rounded-2xl bg-white dark:bg-foreground/2"
+						></div>
 						<img
-							class="relative aspect-15/8 rounded-2xl bg-background"
+							class="relative hidden aspect-15/8 rounded-2xl bg-background dark:block"
 							src="/mail2.png"
-							alt="app screen"
+							alt="App screen"
+							width="2700"
+							height="1440"
+						/>
+						<img
+							class="relative z-2 aspect-15/8 rounded-xl border border-border/50 dark:hidden"
+							src="/mail2-light.png"
+							alt="App screen"
 							width="2700"
 							height="1440"
 						/>

@@ -66,9 +66,9 @@
 		<div class="mt-12 md:mt-24">
 			<div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
 				{#each members as member (member.name)}
-					<div class="group">
+					<div>
 						<div
-							class="aspect-square overflow-hidden transition-all duration-200 [clip-path:inset(0_0_0_0_round_12px)] group-hover:[clip-path:inset(0_0_4px_0_round_16px)]"
+							class="aspect-square overflow-hidden transition-[clip-path] duration-200 [clip-path:inset(0_0_0_0_round_12px)] hover:[clip-path:inset(0_0_4px_0_round_16px)] motion-reduce:transition-none"
 						>
 							<img
 								class="size-full object-cover object-top grayscale"

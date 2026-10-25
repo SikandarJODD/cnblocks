@@ -54,19 +54,23 @@
 			</div>
 
 			<div
-				class="relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-emerald-600 p-8 inset-ring inset-ring-foreground/10 lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid"
+				class="relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-emerald-100 p-8 text-emerald-950 inset-ring inset-ring-emerald-950/10 lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid dark:bg-emerald-600 dark:text-foreground dark:inset-ring-foreground/10"
 			>
-				<div class="pointer-events-none absolute inset-0 bg-linear-to-b to-black/25"></div>
-				<p class="max-w-lg text-3xl text-balance">
+				<div
+					class="pointer-events-none absolute inset-0 bg-linear-to-b to-emerald-200/50 dark:to-black/25"
+				></div>
+				<p class="relative max-w-lg text-3xl text-balance">
 					Great work on tailfolio template. This is one of the best personal website that
 					I have seen so far!
 				</p>
 
 				<div class="relative grid grid-cols-[auto_1fr] items-center gap-4 self-end">
 					<Gemini class="size-10" />
-					<div class="border-l border-foreground/10 pl-4">
+					<div class="border-l border-emerald-950/15 pl-4 dark:border-foreground/10">
 						<p class="text-sm font-medium">Shekinah Tshiokufila</p>
-						<span class="block text-sm text-foreground/65">Software Engineer</span>
+						<span class="block text-sm text-emerald-950/65 dark:text-foreground/65"
+							>Software Engineer</span
+						>
 					</div>
 				</div>
 			</div>

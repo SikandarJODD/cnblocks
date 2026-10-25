@@ -65,8 +65,7 @@
 					onclick={previousTestimonial}
 					disabled={activeIndex === 0}
 				>
-					{@render ArrowIcon({ class: "size-3! rotate-180" })}
-					<!-- <ArrowIcon class="size-3!" /> -->
+					{@render ArrowIcon({ class: "size-3!" })}
 				</Button>
 				<Button
 					variant="outline"

@@ -70,7 +70,7 @@
 
 			<div class="relative flex flex-col gap-8 bg-card shadow-xl max-lg:border-y lg:border-x">
 				<div
-					class="absolute top-0 right-0 w-fit translate-x-px -translate-y-px rounded-bl bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-200 inset-ring inset-ring-foreground/10 [corner-shape:bevel]"
+					class="absolute top-0 right-0 w-fit translate-x-px -translate-y-px rounded-bl bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-800 inset-ring inset-ring-emerald-950/10 [corner-shape:bevel] dark:bg-emerald-500/15 dark:text-emerald-200 dark:inset-ring-foreground/10"
 				>
 					Popular
 				</div>
