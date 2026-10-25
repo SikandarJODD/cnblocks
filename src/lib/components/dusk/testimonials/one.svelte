@@ -54,10 +54,10 @@
 			</div>
 
 			<div
-				class="relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-emerald-100 p-8 text-emerald-950 inset-ring inset-ring-emerald-950/10 lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid dark:bg-emerald-600 dark:text-foreground dark:inset-ring-foreground/10"
+				class="relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-linear-to-br from-white via-emerald-50 to-emerald-100 p-8 text-emerald-950 inset-ring inset-ring-emerald-950/10 lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid dark:bg-emerald-600 dark:bg-none dark:text-foreground dark:inset-ring-foreground/10"
 			>
 				<div
-					class="pointer-events-none absolute inset-0 bg-linear-to-b to-emerald-200/50 dark:to-black/25"
+					class="pointer-events-none absolute inset-0 hidden bg-linear-to-b to-black/25 dark:block"
 				></div>
 				<p class="relative max-w-lg text-3xl text-balance">
 					Great work on tailfolio template. This is one of the best personal website that
