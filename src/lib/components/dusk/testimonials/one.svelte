@@ -54,7 +54,7 @@
 			</div>
 
 			<div
-				class="relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-linear-to-br from-white via-emerald-50 to-emerald-100 p-8 text-emerald-950 inset-ring inset-ring-emerald-950/10 lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid dark:bg-emerald-600 dark:bg-none dark:text-foreground dark:inset-ring-foreground/10"
+				class="relative grid min-h-100 gap-8 overflow-hidden rounded-xl bg-linear-to-br from-[oklch(0.985_0.015_70)] via-[oklch(0.955_0.035_70)] to-[oklch(0.915_0.065_70)] p-8 text-[oklch(0.3_0.05_70)] inset-ring inset-ring-[oklch(0.3_0.05_70/0.12)] lg:col-span-2 lg:row-span-2 lg:grid-rows-subgrid dark:bg-emerald-600 dark:bg-none dark:text-foreground dark:inset-ring-foreground/10"
 			>
 				<div
 					class="pointer-events-none absolute inset-0 hidden bg-linear-to-b to-black/25 dark:block"
@@ -66,9 +66,11 @@
 
 				<div class="relative grid grid-cols-[auto_1fr] items-center gap-4 self-end">
 					<Gemini class="size-10" />
-					<div class="border-l border-emerald-950/15 pl-4 dark:border-foreground/10">
+					<div
+						class="border-l border-[oklch(0.3_0.05_70/0.15)] pl-4 dark:border-foreground/10"
+					>
 						<p class="text-sm font-medium">Shekinah Tshiokufila</p>
-						<span class="block text-sm text-emerald-950/65 dark:text-foreground/65"
+						<span class="block text-sm text-[oklch(0.3_0.05_70/0.65)] dark:text-foreground/65"
 							>Software Engineer</span
 						>
 					</div>
