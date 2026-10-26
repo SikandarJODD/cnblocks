@@ -94,9 +94,9 @@
 	</section>
 
 	<section class="bg-background pt-6 pb-16 md:pb-32">
-		<div class="group relative m-auto max-w-5xl px-6">
+		<div class="group/logos relative m-auto max-w-5xl px-6">
 			<div
-				class="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 transition-[transform,opacity] duration-500 group-hover:scale-100 group-hover:opacity-100 motion-reduce:transition-none"
+				class="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 transition-[transform,opacity] duration-500 group-hover/logos:scale-100 group-hover/logos:opacity-100 motion-reduce:transition-none"
 			>
 				<a href="/" class="block text-sm transition-opacity duration-150 hover:opacity-75">
 					<span>See the network</span>
@@ -105,7 +105,7 @@
 			</div>
 
 			<div
-				class="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 group-hover:blur-xs motion-reduce:transition-none sm:gap-x-16 sm:gap-y-14 md:grid-cols-4 [&_svg]:fill-foreground"
+				class="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 group-hover/logos:opacity-50 group-hover/logos:blur-xs motion-reduce:transition-none sm:gap-x-16 sm:gap-y-14 md:grid-cols-4 [&_svg]:fill-foreground"
 			>
 				<div class="flex items-center">
 					<Bolt class="mx-auto h-5 w-full" />
