@@ -110,7 +110,7 @@
 </Sidebar.Group>
 
 {#if activeLibrary}
-	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-1 md:pt-4">
+	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-1 md:pt-2">
 		<Sidebar.GroupLabel
 			class="h-6 px-1 font-mono text-sm text-ink/70 uppercase md:mb-1 md:text-xs dark:text-muted-foreground/80"
 		>

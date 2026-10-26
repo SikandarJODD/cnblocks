@@ -86,11 +86,25 @@ export const blockLibraries: BlockLibrary[] = [
 ];
 
 export const primaryNavigation: NavigationItem[] = [
-	{ title: "Pages", href: "/", coming_soon: true },
+	// { title: "Pages", href: "/", coming_soon: true },
 	// { title: "Templates", href: "/templates", coming_soon: true },
 	{ title: "Docs", href: "/docs" },
-	{ title: "More Projects", href: "/projects" },
+	{ title: "Explore more projects", href: "/projects" },
 ];
+
+// const sidebarProjects: NavigationItem[] = [
+// 	{ title: "Svelte Animations", href: "https://sv-animations.vercel.app" },
+// 	{ title: "Svelte 4 Animations", href: "https://animation-svelte.vercel.app" },
+// 	{ title: "Svelte Datatable Components", href: "https://sv-table.vercel.app" },
+// 	{ title: "Svelte Chan Components", href: "https://sv-chan.vercel.app" },
+// 	{ title: "Svelte Efferd Blocks", href: "https://sv-efferd.pages.dev" },
+// 	{ title: "Svelte Dot Matrix", href: "https://sv-matrix.vercel.app" },
+// 	{ title: "Svelte Form Builder", href: "https://svelte-form-builder.vercel.app" },
+// 	{ title: "Svelte Particles", href: "https://sv-particles.vercel.app/particles/button" },
+// 	{ title: "Svelte Globe Examples", href: "https://sv-globe.vercel.app" },
+// 	{ title: "Svelte AI Elements", href: "https://sv-ai-elements.vercel.app" },
+// 	{ title: "Svelte Agentation", href: "https://sv-agentation.com" },
+// ];
 
 export const docsNavigation: NavigationItem[] = [
 	{ title: "Introduction", href: "/docs" },

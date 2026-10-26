@@ -14,14 +14,15 @@
 <Sidebar.Header class="px-0 pt-0 pb-1">
 	<div class="flex h-10 items-center justify-between gap-1 md:h-8">
 		<Button
-			size="icon-sm"
+			size="sm"
 			variant="ghost"
 			href="/"
-			class="size-8 touch-manipulation rounded-md p-0 md:size-7"
+			class="h-8 touch-manipulation gap-1.5 rounded-md px-1.5 md:h-7"
 			aria-label="Go to homepage"
 			onclick={closeMobileSidebar}
 		>
 			<Logo />
+			<span class="font-cursive text-[13px] font-normal text-primary">sv-blocks</span>
 		</Button>
 		<div class="flex items-center gap-0">
 			<SidebarSearch />
