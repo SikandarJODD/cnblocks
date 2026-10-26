@@ -8,8 +8,8 @@
 	class="sticky top-0 z-20 flex h-12 shrink-0 items-center justify-between bg-background/80 px-2 backdrop-blur-md md:hidden"
 >
 	<div class="flex items-center">
-		<Sidebar.Trigger class="size-9 touch-manipulation text-muted-foreground [&_svg]:size-6" />
-		<SidebarSearch class="size-9 [&_svg]:size-5!" />
+		<Sidebar.Trigger class="size-8 touch-manipulation text-muted-foreground" />
+		<SidebarSearch class="size-8 [&_svg]:size-4!" />
 	</div>
 
 	<a

@@ -227,14 +227,17 @@
 					<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				{/if}
 				<Button
-					variant="ghost"
+					variant="secondary"
 					size="sm"
-					class="gap-1.5 transition-[color,background-color,box-shadow] duration-200 hover:bg-background dark:hover:bg-muted"
+					class="group/btn gap-1.5 rounded-full text-xs! text-muted-foreground hover:bg-ink-dim hover:text-ink dark:hover:bg-secondary dark:hover:text-secondary-foreground"
 					href={preview}
 					target="_blank"
 				>
-					<!-- <Maximize strokeWidth={1.6} class="size-3.5! sm:opacity-80" /> -->
-					<span class="text-[13px]">Open preview</span>
+					<Maximize
+						strokeWidth={1.6}
+						class="size-3.5! transition-transform duration-200 group-hover/btn:rotate-45 group-hover/btn:text-ink group-hover/btn:opacity-100 sm:opacity-80 group-hover/btn:dark:text-secondary-foreground"
+					/>
+					<span>Open preview</span>
 				</Button>
 				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				<span class="hidden text-[13px] text-muted-foreground lg:block"
