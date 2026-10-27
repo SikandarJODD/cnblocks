@@ -21,12 +21,12 @@
 				{
 					"path": "src/lib/components/ui/mist/button/button.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/button/button.svelte"
+					"target": "mist/button/button.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/button/index.ts",
 					"type": "registry:ui",
-					"target": "ui/mist/button/index.ts"
+					"target": "mist/button/index.ts"
 				}
 			]
 		},
@@ -41,37 +41,37 @@
 				{
 					"path": "src/lib/components/ui/mist/card/card.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/card/card.svelte"
+					"target": "mist/card/card.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/card/card-content.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/card/card-content.svelte"
+					"target": "mist/card/card-content.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/card/card-description.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/card/card-description.svelte"
+					"target": "mist/card/card-description.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/card/card-footer.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/card/card-footer.svelte"
+					"target": "mist/card/card-footer.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/card/card-header.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/card/card-header.svelte"
+					"target": "mist/card/card-header.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/card/card-title.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/card/card-title.svelte"
+					"target": "mist/card/card-title.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/card/index.ts",
 					"type": "registry:ui",
-					"target": "ui/mist/card/index.ts"
+					"target": "mist/card/index.ts"
 				}
 			]
 		},
@@ -86,12 +86,12 @@
 				{
 					"path": "src/lib/components/ui/mist/input/input.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/input/input.svelte"
+					"target": "mist/input/input.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/input/index.ts",
 					"type": "registry:ui",
-					"target": "ui/mist/input/index.ts"
+					"target": "mist/input/index.ts"
 				}
 			]
 		},
@@ -106,12 +106,12 @@
 				{
 					"path": "src/lib/components/ui/mist/label/label.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/label/label.svelte"
+					"target": "mist/label/label.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/label/index.ts",
 					"type": "registry:ui",
-					"target": "ui/mist/label/index.ts"
+					"target": "mist/label/index.ts"
 				}
 			]
 		},
@@ -126,12 +126,12 @@
 				{
 					"path": "src/lib/components/ui/mist/textarea/textarea.svelte",
 					"type": "registry:ui",
-					"target": "ui/mist/textarea/textarea.svelte"
+					"target": "mist/textarea/textarea.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/mist/textarea/index.ts",
 					"type": "registry:ui",
-					"target": "ui/mist/textarea/index.ts"
+					"target": "mist/textarea/index.ts"
 				}
 			]
 		},

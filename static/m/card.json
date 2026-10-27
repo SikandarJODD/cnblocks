@@ -11,37 +11,37 @@
 		{
 			"content": "<script module lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport { type VariantProps, tv } from \"tailwind-variants\";\n\n\texport const cardVariants = tv({\n\t\tbase: \"rounded-xl text-card-foreground\",\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault: \"border border-transparent bg-card shadow ring-1 ring-foreground/5\",\n\t\t\t\tsoft: \"bg-foreground/5\",\n\t\t\t\tmixed: \"border border-foreground/5 bg-foreground/5\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t},\n\t});\n\n\texport type CardVariant = VariantProps<typeof cardVariants>[\"variant\"];\n\n\texport type CardProps = WithElementRef<HTMLAttributes<HTMLDivElement>> & {\n\t\tvariant?: CardVariant;\n\t};\n</script>\n\n<script lang=\"ts\">\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\tvariant = \"default\",\n\t\t...restProps\n\t}: CardProps = $props();\n</script>\n\n<div bind:this={ref} class={cn(cardVariants({ variant }), className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/card.svelte"
+			"target": "mist/card/card.svelte"
 		},
 		{
 			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"p-6 pt-0\", className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/card-content.svelte"
+			"target": "mist/card/card-content.svelte"
 		},
 		{
 			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLParagraphElement>> = $props();\n</script>\n\n<p bind:this={ref} class={cn(\"text-sm text-muted-foreground\", className)} {...restProps}>\n\t{@render children?.()}\n</p>\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/card-description.svelte"
+			"target": "mist/card/card-description.svelte"
 		},
 		{
 			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"p-6 pt-0\", className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/card-footer.svelte"
+			"target": "mist/card/card-footer.svelte"
 		},
 		{
 			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"flex flex-col space-y-1.5 p-6\", className)} {...restProps}>\n\t{@render children?.()}\n</div>\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/card-header.svelte"
+			"target": "mist/card/card-header.svelte"
 		},
 		{
 			"content": "<script lang=\"ts\">\n\timport type { WithElementRef } from \"bits-ui\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tlevel = 3,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> & {\n\t\tlevel?: 1 | 2 | 3 | 4 | 5 | 6;\n\t} = $props();\n</script>\n\n<div\n\trole=\"heading\"\n\taria-level={level}\n\tbind:this={ref}\n\tclass={cn(\"leading-none font-semibold tracking-tight\", className)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</div>\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/card-title.svelte"
+			"target": "mist/card/card-title.svelte"
 		},
 		{
 			"content": "import Root from \"./card.svelte\";\nimport Content from \"./card-content.svelte\";\nimport Description from \"./card-description.svelte\";\nimport Footer from \"./card-footer.svelte\";\nimport Header from \"./card-header.svelte\";\nimport Title from \"./card-title.svelte\";\n\nexport {\n\tRoot,\n\tContent,\n\tDescription,\n\tFooter,\n\tHeader,\n\tTitle,\n\t//\n\tRoot as Card,\n\tContent as CardContent,\n\tDescription as CardDescription,\n\tFooter as CardFooter,\n\tHeader as CardHeader,\n\tTitle as CardTitle,\n};\n",
 			"type": "registry:ui",
-			"target": "ui/mist/card/index.ts"
+			"target": "mist/card/index.ts"
 		}
 	]
 }

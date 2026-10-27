@@ -21,12 +21,12 @@
 				{
 					"path": "src/lib/components/ui/veil/button/button.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/button/button.svelte"
+					"target": "veil/button/button.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/button/index.ts",
 					"type": "registry:ui",
-					"target": "ui/veil/button/index.ts"
+					"target": "veil/button/index.ts"
 				}
 			]
 		},
@@ -41,37 +41,37 @@
 				{
 					"path": "src/lib/components/ui/veil/card/card.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/card/card.svelte"
+					"target": "veil/card/card.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/card/card-content.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/card/card-content.svelte"
+					"target": "veil/card/card-content.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/card/card-description.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/card/card-description.svelte"
+					"target": "veil/card/card-description.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/card/card-footer.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/card/card-footer.svelte"
+					"target": "veil/card/card-footer.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/card/card-header.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/card/card-header.svelte"
+					"target": "veil/card/card-header.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/card/card-title.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/card/card-title.svelte"
+					"target": "veil/card/card-title.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/card/index.ts",
 					"type": "registry:ui",
-					"target": "ui/veil/card/index.ts"
+					"target": "veil/card/index.ts"
 				}
 			]
 		},
@@ -86,12 +86,12 @@
 				{
 					"path": "src/lib/components/ui/veil/input/input.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/input/input.svelte"
+					"target": "veil/input/input.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/input/index.ts",
 					"type": "registry:ui",
-					"target": "ui/veil/input/index.ts"
+					"target": "veil/input/index.ts"
 				}
 			]
 		},
@@ -106,12 +106,12 @@
 				{
 					"path": "src/lib/components/ui/veil/textarea/textarea.svelte",
 					"type": "registry:ui",
-					"target": "ui/veil/textarea/textarea.svelte"
+					"target": "veil/textarea/textarea.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/veil/textarea/index.ts",
 					"type": "registry:ui",
-					"target": "ui/veil/textarea/index.ts"
+					"target": "veil/textarea/index.ts"
 				}
 			]
 		},

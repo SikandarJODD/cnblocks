@@ -21,12 +21,12 @@
 				{
 					"path": "src/lib/components/ui/dusk/button/button.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/button/button.svelte"
+					"target": "dusk/button/button.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/button/index.ts",
 					"type": "registry:ui",
-					"target": "ui/dusk/button/index.ts"
+					"target": "dusk/button/index.ts"
 				}
 			]
 		},
@@ -41,42 +41,42 @@
 				{
 					"path": "src/lib/components/ui/dusk/card/card.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card.svelte"
+					"target": "dusk/card/card.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/card-action.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card-action.svelte"
+					"target": "dusk/card/card-action.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/card-content.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card-content.svelte"
+					"target": "dusk/card/card-content.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/card-description.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card-description.svelte"
+					"target": "dusk/card/card-description.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/card-footer.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card-footer.svelte"
+					"target": "dusk/card/card-footer.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/card-header.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card-header.svelte"
+					"target": "dusk/card/card-header.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/card-title.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/card-title.svelte"
+					"target": "dusk/card/card-title.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/card/index.ts",
 					"type": "registry:ui",
-					"target": "ui/dusk/card/index.ts"
+					"target": "dusk/card/index.ts"
 				}
 			]
 		},
@@ -91,12 +91,12 @@
 				{
 					"path": "src/lib/components/ui/dusk/input/input.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/input/input.svelte"
+					"target": "dusk/input/input.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/input/index.ts",
 					"type": "registry:ui",
-					"target": "ui/dusk/input/index.ts"
+					"target": "dusk/input/index.ts"
 				}
 			]
 		},
@@ -111,12 +111,12 @@
 				{
 					"path": "src/lib/components/ui/dusk/label/label.svelte",
 					"type": "registry:ui",
-					"target": "ui/dusk/label/label.svelte"
+					"target": "dusk/label/label.svelte"
 				},
 				{
 					"path": "src/lib/components/ui/dusk/label/index.ts",
 					"type": "registry:ui",
-					"target": "ui/dusk/label/index.ts"
+					"target": "dusk/label/index.ts"
 				}
 			]
 		},

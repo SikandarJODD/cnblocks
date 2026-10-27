@@ -10,12 +10,12 @@
 		{
 			"content": "<script lang=\"ts\">\n\timport { Label as LabelPrimitive } from \"bits-ui\";\n\timport { cn } from \"#lib/utils.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t...restProps\n\t}: LabelPrimitive.RootProps = $props();\n</script>\n\n<LabelPrimitive.Root\n\tbind:ref\n\tdata-slot=\"label\"\n\tclass={cn(\n\t\t\"flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50\",\n\t\tclassName\n\t)}\n\t{...restProps}\n/>\n",
 			"type": "registry:ui",
-			"target": "ui/dusk/label/label.svelte"
+			"target": "dusk/label/label.svelte"
 		},
 		{
 			"content": "import Root from \"./label.svelte\";\n\nexport {\n\tRoot,\n\t//\n\tRoot as Label,\n};\n",
 			"type": "registry:ui",
-			"target": "ui/dusk/label/index.ts"
+			"target": "dusk/label/index.ts"
 		}
 	]
 }
