@@ -29,6 +29,7 @@
 		let pathname = page.url.pathname.toString();
 		if (pathname.includes("mist")) return "m";
 		if (pathname.includes("veil")) return "v";
+		if (pathname.includes("dusk")) return "d";
 		return registryPath;
 	});
 

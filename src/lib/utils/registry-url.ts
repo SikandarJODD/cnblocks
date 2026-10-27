@@ -1,12 +1,12 @@
-export type RegistryNamespace = "r" | "v" | "m";
+export type RegistryNamespace = "r" | "v" | "m" | "d";
 
 function sanitizeBase(originOrBase: string): string {
-	return originOrBase.replace(/\/+$/, "").replace(/\/(r|v|m)$/i, "");
+	return originOrBase.replace(/\/+$/, "").replace(/\/(r|v|m|d)$/i, "");
 }
 
 function sanitizeRegistryPath(registryPath?: string | null): RegistryNamespace {
 	const normalized = (registryPath ?? "").replace(/^\/+|\/+$/g, "").toLowerCase();
-	if (normalized === "m" || normalized === "v") return normalized;
+	if (normalized === "m" || normalized === "v" || normalized === "d") return normalized;
 	return "r";
 }
 
@@ -17,6 +17,7 @@ export function getRegistryPathFromPathname(pathname?: string | null): RegistryN
 
 	if (familySegment === "mist") return "m";
 	if (familySegment === "veil") return "v";
+	if (familySegment === "dusk") return "d";
 	return "r";
 }
 
