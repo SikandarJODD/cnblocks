@@ -3,6 +3,9 @@
 	"name": "logocloud-one",
 	"type": "registry:block",
 	"description": "Mist-style grayscale logo cloud",
+	"registryDependencies": [
+		"./svgs.json"
+	],
 	"files": [
 		{
 			"content": "<script lang=\"ts\">\n\timport { Hulu, Spotify, SupabaseFull, VercelFull } from \"#lib/svgs/index.js\";\n</script>\n\n<section>\n\t<div class=\"mx-auto max-w-5xl px-6 py-8\">\n\t\t<div>\n\t\t\t<p class=\"font-medium text-muted-foreground\">Trusted by teams at :</p>\n\t\t\t<div class=\"mt-4 flex items-center gap-12 **:fill-foreground\">\n\t\t\t\t<Spotify aria-label=\"Spotify\" role=\"img\" class=\"h-[22px] w-[73px]\" />\n\t\t\t\t<VercelFull aria-label=\"Vercel\" role=\"img\" class=\"h-5 w-[76px]\" />\n\t\t\t\t<SupabaseFull aria-label=\"Supabase\" role=\"img\" class=\"h-[22px] w-auto\" />\n\t\t\t\t<Hulu aria-label=\"Hulu\" role=\"img\" class=\"h-4 w-[50px]\" />\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n",

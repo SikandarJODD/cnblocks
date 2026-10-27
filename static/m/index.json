@@ -425,7 +425,8 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"local:button"
+			"local:button",
+			"local:svgs"
 		],
 		"relativeUrl": "hero-one.json"
 	},
@@ -551,7 +552,9 @@
 		"description": "Mist-style grayscale logo cloud",
 		"dependencies": [],
 		"devDependencies": [],
-		"registryDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
 		"relativeUrl": "logocloud-one.json"
 	},
 	{
@@ -560,7 +563,9 @@
 		"description": "Mist-style logo cloud with hover",
 		"dependencies": [],
 		"devDependencies": [],
-		"registryDependencies": [],
+		"registryDependencies": [
+			"local:svgs"
+		],
 		"relativeUrl": "logocloud-two.json"
 	},
 	{
@@ -643,7 +648,8 @@
 		],
 		"registryDependencies": [
 			"local:button",
-			"local:card"
+			"local:card",
+			"local:svgs"
 		],
 		"relativeUrl": "pricing-one.json"
 	},
@@ -799,5 +805,14 @@
 			"avatar"
 		],
 		"relativeUrl": "testimonial-two.json"
+	},
+	{
+		"name": "svgs",
+		"type": "registry:component",
+		"description": "Shared SVG logo and icon components",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "svgs.json"
 	}
 ]

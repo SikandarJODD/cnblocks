@@ -8,7 +8,8 @@
 	],
 	"registryDependencies": [
 		"./button.json",
-		"./card.json"
+		"./card.json",
+		"./svgs.json"
 	],
 	"files": [
 		{
