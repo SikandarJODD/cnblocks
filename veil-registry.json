@@ -1292,6 +1292,66 @@
 					"target": "svgs/vercel-full.svelte"
 				},
 				{
+					"path": "src/lib/svgs/claude-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/claude-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/g2.svelte",
+					"type": "registry:component",
+					"target": "svgs/g2.svelte"
+				},
+				{
+					"path": "src/lib/svgs/gemini.svelte",
+					"type": "registry:component",
+					"target": "svgs/gemini.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google-palm.svelte",
+					"type": "registry:component",
+					"target": "svgs/google-palm.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/magic-ui.svelte",
+					"type": "registry:component",
+					"target": "svgs/magic-ui.svelte"
+				},
+				{
+					"path": "src/lib/svgs/media-wiki.svelte",
+					"type": "registry:component",
+					"target": "svgs/media-wiki.svelte"
+				},
+				{
+					"path": "src/lib/svgs/open-ai.svelte",
+					"type": "registry:component",
+					"target": "svgs/open-ai.svelte"
+				},
+				{
+					"path": "src/lib/svgs/perplexity.svelte",
+					"type": "registry:component",
+					"target": "svgs/perplexity.svelte"
+				},
+				{
+					"path": "src/lib/svgs/replit.svelte",
+					"type": "registry:component",
+					"target": "svgs/replit.svelte"
+				},
+				{
+					"path": "src/lib/svgs/trustpilot.svelte",
+					"type": "registry:component",
+					"target": "svgs/trustpilot.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vs-codium.svelte",
+					"type": "registry:component",
+					"target": "svgs/vs-codium.svelte"
+				},
+				{
 					"path": "src/lib/svgs/index.ts",
 					"type": "registry:file",
 					"target": "svgs/index.ts"

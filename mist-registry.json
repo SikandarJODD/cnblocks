@@ -650,7 +650,7 @@
 			"name": "hero-one",
 			"type": "registry:block",
 			"description": "Mist-style centered hero with CTA",
-			"registryDependencies": ["local:button"],
+			"registryDependencies": ["local:button", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -853,7 +853,7 @@
 			"name": "logocloud-one",
 			"type": "registry:block",
 			"description": "Mist-style grayscale logo cloud",
-			"registryDependencies": [],
+			"registryDependencies": ["local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -868,7 +868,7 @@
 			"name": "logocloud-two",
 			"type": "registry:block",
 			"description": "Mist-style logo cloud with hover",
-			"registryDependencies": [],
+			"registryDependencies": ["local:svgs"],
 			"dependencies": [],
 			"devDependencies": [],
 			"files": [
@@ -995,7 +995,7 @@
 			"name": "pricing-one",
 			"type": "registry:block",
 			"description": "Mist-style simple pricing cards",
-			"registryDependencies": ["local:button", "local:card"],
+			"registryDependencies": ["local:button", "local:card", "local:svgs"],
 			"dependencies": [],
 			"devDependencies": ["@lucide/svelte"],
 			"files": [
@@ -1198,6 +1198,181 @@
 					"path": "src/lib/components/mist/mtestimonial/two.svelte",
 					"type": "registry:component",
 					"target": "mist/mtestimonial/two.svelte"
+				}
+			]
+		},
+		{
+			"name": "svgs",
+			"type": "registry:component",
+			"description": "Shared SVG logo and icon components",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/svgs/beacon.svelte",
+					"type": "registry:component",
+					"target": "svgs/beacon.svelte"
+				},
+				{
+					"path": "src/lib/svgs/bolt.svelte",
+					"type": "registry:component",
+					"target": "svgs/bolt.svelte"
+				},
+				{
+					"path": "src/lib/svgs/cisco.svelte",
+					"type": "registry:component",
+					"target": "svgs/cisco.svelte"
+				},
+				{
+					"path": "src/lib/svgs/claude-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/claude-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/claude.svelte",
+					"type": "registry:component",
+					"target": "svgs/claude.svelte"
+				},
+				{
+					"path": "src/lib/svgs/clerk.svelte",
+					"type": "registry:component",
+					"target": "svgs/clerk.svelte"
+				},
+				{
+					"path": "src/lib/svgs/figma.svelte",
+					"type": "registry:component",
+					"target": "svgs/figma.svelte"
+				},
+				{
+					"path": "src/lib/svgs/firebase-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/firebase-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/firebase.svelte",
+					"type": "registry:component",
+					"target": "svgs/firebase.svelte"
+				},
+				{
+					"path": "src/lib/svgs/g2.svelte",
+					"type": "registry:component",
+					"target": "svgs/g2.svelte"
+				},
+				{
+					"path": "src/lib/svgs/gemini.svelte",
+					"type": "registry:component",
+					"target": "svgs/gemini.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google-palm.svelte",
+					"type": "registry:component",
+					"target": "svgs/google-palm.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/hulu.svelte",
+					"type": "registry:component",
+					"target": "svgs/hulu.svelte"
+				},
+				{
+					"path": "src/lib/svgs/index.ts",
+					"type": "registry:file",
+					"target": "svgs/index.ts"
+				},
+				{
+					"path": "src/lib/svgs/linear.svelte",
+					"type": "registry:component",
+					"target": "svgs/linear.svelte"
+				},
+				{
+					"path": "src/lib/svgs/magic-ui.svelte",
+					"type": "registry:component",
+					"target": "svgs/magic-ui.svelte"
+				},
+				{
+					"path": "src/lib/svgs/media-wiki.svelte",
+					"type": "registry:component",
+					"target": "svgs/media-wiki.svelte"
+				},
+				{
+					"path": "src/lib/svgs/open-ai.svelte",
+					"type": "registry:component",
+					"target": "svgs/open-ai.svelte"
+				},
+				{
+					"path": "src/lib/svgs/perplexity.svelte",
+					"type": "registry:component",
+					"target": "svgs/perplexity.svelte"
+				},
+				{
+					"path": "src/lib/svgs/replit.svelte",
+					"type": "registry:component",
+					"target": "svgs/replit.svelte"
+				},
+				{
+					"path": "src/lib/svgs/send-feedback.svelte",
+					"type": "registry:component",
+					"target": "svgs/send-feedback.svelte"
+				},
+				{
+					"path": "src/lib/svgs/slack.svelte",
+					"type": "registry:component",
+					"target": "svgs/slack.svelte"
+				},
+				{
+					"path": "src/lib/svgs/sponsor-project.svelte",
+					"type": "registry:component",
+					"target": "svgs/sponsor-project.svelte"
+				},
+				{
+					"path": "src/lib/svgs/spotify.svelte",
+					"type": "registry:component",
+					"target": "svgs/spotify.svelte"
+				},
+				{
+					"path": "src/lib/svgs/supabase-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/supabase-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/supabase.svelte",
+					"type": "registry:component",
+					"target": "svgs/supabase.svelte"
+				},
+				{
+					"path": "src/lib/svgs/svelte.svelte",
+					"type": "registry:component",
+					"target": "svgs/svelte.svelte"
+				},
+				{
+					"path": "src/lib/svgs/trustpilot.svelte",
+					"type": "registry:component",
+					"target": "svgs/trustpilot.svelte"
+				},
+				{
+					"path": "src/lib/svgs/twilio.svelte",
+					"type": "registry:component",
+					"target": "svgs/twilio.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vercel-full.svelte",
+					"type": "registry:component",
+					"target": "svgs/vercel-full.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vercel.svelte",
+					"type": "registry:component",
+					"target": "svgs/vercel.svelte"
+				},
+				{
+					"path": "src/lib/svgs/vs-codium.svelte",
+					"type": "registry:component",
+					"target": "svgs/vs-codium.svelte"
 				}
 			]
 		}
