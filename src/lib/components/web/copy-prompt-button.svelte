@@ -3,7 +3,7 @@
 	import { onDestroy } from "svelte";
 	import { CopyButton } from "#lib/components/chan/copy-button/index.js";
 	import { projectUrl } from "#lib/config/seo.js";
-	import { getRegistryItemUrl } from "#lib/utils/registry-url.js";
+	import { getRegistryItemUrl, getRegistryPathFromPathname } from "#lib/utils/registry-url.js";
 	import { createCopyPrompt } from "./copy-prompt.js";
 
 	type CopyPromptButtonProps = {
@@ -17,6 +17,10 @@
 	let resetTimer: ReturnType<typeof setTimeout> | undefined;
 	let installUrl = $derived(
 		itemId ? getRegistryItemUrl(projectUrl, page.url.pathname, itemId) : ""
+	);
+	let registryPath = $derived(getRegistryPathFromPathname(page.url.pathname));
+	let variant = $derived<"outline" | "secondary">(
+		registryPath === "r" || registryPath === "m" ? "outline" : "secondary"
 	);
 	let prompt = $derived(createCopyPrompt({ installUrl, componentName }));
 
@@ -35,8 +39,8 @@
 	<CopyButton
 		text={prompt}
 		size="sm"
-		variant="ghost"
-		class="rounded-full text-xs text-muted-foreground"
+		{variant}
+		class="rounded-full text-xs text-muted-foreground shadow-none"
 		aria-label={copied ? "Prompt copied" : `Copy prompt for ${componentName}`}
 		onCopySuccess={showCopiedState}
 	>

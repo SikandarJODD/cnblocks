@@ -4,11 +4,11 @@ type CreateCopyPromptOptions = {
 };
 
 export function createCopyPrompt({ installUrl, componentName }: CreateCopyPromptOptions) {
-	return `Installation URL:
-${installUrl}
+	return `Install:
+pnpm dlx shadcn-svelte@latest add ${installUrl}
 
 Steps:
-1. Install ${componentName} using the project's package manager.
+1. Detect the project's package manager and run the equivalent command using pnpm dlx, npx, yarn dlx, or bunx to add ${componentName}.
 2. Review the installed dependencies and imports.
 3. Show me how to use the component.
 

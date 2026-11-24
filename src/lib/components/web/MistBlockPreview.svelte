@@ -369,12 +369,12 @@
 					/>
 					<span>Open preview</span>
 				</Button>
-				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
+				<!-- <Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				<span class="hidden text-[13px] text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
-				>
+				> -->
 				<!-- {#if previewOnly} -->
-				<Separator orientation="vertical" class="my-auto h-4!" />
+				<!-- <Separator orientation="vertical" class="my-auto h-4!" /> -->
 				<span class="ml-0 font-sidebar-content text-[13px] font-light capitalize"
 					>{title}</span
 				>
