@@ -11,7 +11,6 @@
 		{ name: "Introduction", slug: "/docs" },
 		{ name: "Installation", slug: "/docs/installation" },
 		{ name: "MCP Server", slug: "/docs/mcp", isNew: true },
-		{ name: "Sponsors", slug: "/docs/sponsors" },
 	];
 	let isActive = (slug: string) => {
 		return page.url.pathname === slug;

@@ -9,11 +9,11 @@
 
 {#if (sidebar.isMobile && showOnMobile) || (!sidebar.isMobile && sidebar.state === "collapsed")}
 	<div
-		in:slide|global={{ axis: "y", duration: 400 }}
-		out:slide|global={{ axis: "y", duration: 100 }}
-		class="flex h-11 shrink-0 items-center gap-1 px-3"
+		in:slide|global={{ axis: "x", duration: 400 }}
+		out:slide|global={{ axis: "x", duration: 100 }}
+		class="absolute top-1 left-1 flex shrink-0 items-center"
 	>
-		<Sidebar.Trigger class="size-7 text-muted-foreground" />
-		<SidebarSearch />
+		<Sidebar.Trigger class="rounded-full text-muted-foreground" />
+		<SidebarSearch class="rounded-full" />
 	</div>
 {/if}

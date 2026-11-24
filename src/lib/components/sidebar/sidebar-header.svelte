@@ -26,7 +26,7 @@
 		</Button>
 		<div class="flex items-center gap-0">
 			<SidebarSearch />
-			<Sidebar.Trigger class="size-7 touch-manipulation text-muted-foreground md:size-7" />
+			<Sidebar.Trigger class="touch-manipulation text-muted-foreground" />
 		</div>
 	</div>
 </Sidebar.Header>

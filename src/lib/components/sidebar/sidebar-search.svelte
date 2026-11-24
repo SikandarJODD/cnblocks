@@ -72,8 +72,8 @@
 <Button
 	bind:ref={triggerRef}
 	variant="ghost"
-	size="icon-sm"
-	class={cn("size-7 touch-manipulation text-muted-foreground md:size-7", className)}
+	size="icon"
+	class={cn("touch-manipulation text-muted-foreground", className)}
 	aria-label="Search components"
 	onclick={showSearch}
 >

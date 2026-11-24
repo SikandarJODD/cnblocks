@@ -7,9 +7,8 @@ export type DocsV2PageKey =
 	| "installation"
 	| "mistTheme"
 	| "veilTheme"
-	| "duskTheme"
-	// | "mcp"
-	| "sponsors";
+	| "duskTheme";
+	// | "mcp";
 
 export type DocsV2PageMeta = {
 	key: DocsV2PageKey;
@@ -147,20 +146,6 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	// 		keywords: [...docsKeywords, "mcp", "cursor", "windsurf"],
 	// 	},
 	// },
-	sponsors: {
-		key: "sponsors",
-		path: "/docs/sponsors",
-		navTitle: "Sponsors",
-		navDescription: "Support the project.",
-		group: "resources",
-		toc: true,
-		seo: {
-			title: "Sponsors",
-			description:
-				"Support Svelte Shadcn Blocks and learn how to become a sponsor of the project.",
-			keywords: [...docsKeywords, "sponsors", "community", "support"],
-		},
-	},
 };
 
 export const docsV2Pages = Object.values(docsV2PageMap);
