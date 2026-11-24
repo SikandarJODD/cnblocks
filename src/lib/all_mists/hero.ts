@@ -65,7 +65,6 @@ export const all_mists_heros: MistBlock[] = [
 		category: "hero",
 		preview: "/preview/mist/hero/one",
 		previewMode: "inline",
-
 		itemId: "hero-one",
 		component: HeroOne,
 		codeTree: createBlockCodeTreeFromCode(
