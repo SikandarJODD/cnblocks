@@ -87,7 +87,7 @@
 			<Button
 				variant={activeLibrary === filter.value ? "secondary" : "ghost"}
 				size="sm"
-				class="h-7 rounded-full px-3 text-xs"
+				class="h-7 rounded-full px-3 text-xs focus-visible:ring-1 focus-visible:ring-ring/30"
 				aria-pressed={activeLibrary === filter.value}
 				onclick={() => (activeLibrary = filter.value)}
 			>

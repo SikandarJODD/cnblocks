@@ -103,7 +103,7 @@
 				href="https://github.com/SikandarJODD/cnblocks"
 				target="_blank"
 				variant="link"
-				class="-ml-4 gap-1 text-sm text-foreground decoration-primary"
+				class="-ml-2.5 gap-1 text-sm text-foreground decoration-primary"
 			>
 				GitHub
 				<ArrowUpRight class="size-3.5! opacity-80" />
