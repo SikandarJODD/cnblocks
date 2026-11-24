@@ -20,6 +20,7 @@
 		type BlockCodeTree,
 	} from "#lib/tree/types.js";
 	import type { MistBlock } from "#lib/types/mists.js";
+	import { CopyButton } from "#lib/components/chan/copy-button/index.js";
 
 	type BlockPreviewProps = {
 		itemId?: string;
@@ -117,6 +118,12 @@
 	function setPreviewWidth(size: number) {
 		width = size;
 		iframeHeight = 0;
+	}
+
+	function getShareUrl() {
+		const url = new URL(window.location.href);
+		url.hash = itemId ?? `${category}-${title}`;
+		return url.href;
 	}
 
 	async function loadCode() {
@@ -370,6 +377,13 @@
 				<span class="ml-0 font-sidebar-content text-[13px] font-light capitalize"
 					>{title}</span
 				>
+				<CopyButton
+					text={getShareUrl}
+					size="icon-sm"
+					variant="ghost"
+					class="text-muted-foreground"
+					aria-label={`Copy link to ${title}`}
+				/>
 				<!-- {/if} -->
 			</div>
 
