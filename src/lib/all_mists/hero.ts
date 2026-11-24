@@ -61,7 +61,7 @@ function createHeroFolderStructure(folderName: string, fileNames: string[]) {
 export const all_mists_heros: MistBlock[] = [
 	{
 		slug: "one",
-		title: "one",
+		title: "Hero One",
 		category: "hero",
 		preview: "/preview/mist/hero/one",
 		previewMode: "inline",
