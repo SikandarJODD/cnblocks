@@ -68,6 +68,26 @@ A collection of **60+ premium marketing blocks** designed for high-conversion Sa
 - Built with Svelte 5, Shadcn-Svelte and Tailwind CSS.
 - Free and open source under the MIT License.
 
+## Other projects and libraries
+
+### Projects
+
+- [Svelte Animations](https://sv-animations.vercel.app)
+- [Svelte 4 Animations](https://animation-svelte.vercel.app)
+- [Svelte Datatable Components](https://sv-table.vercel.app)
+- [Svelte Chan Components](https://sv-chan.vercel.app)
+- [Svelte Dot Matrix](https://sv-matrix.vercel.app)
+- [Svelte Form Builder](https://svelte-form-builder.vercel.app)
+- [Svelte Particles](https://sv-particles.vercel.app/particles/button)
+- [Svelte Globe Examples](https://sv-globe.vercel.app)
+- [Svelte AI Elements](https://sv-ai-elements.vercel.app)
+
+### Libraries
+
+- [Svelte Agentation](https://sv-agentation.com)
+- [Svelte Drawesome](https://www.npmjs.com/package/sv-drawesome)
+- [Svelte Pierre Words](https://www.npmjs.com/package/@sv-pierre/words)
+
 ---
 
 ## Credits

@@ -105,6 +105,19 @@
 			description: "Provides the right context for AI and LLM workflows.",
 			source: "https://github.com/SikandarJODD/sv-agentation",
 		},
+		{
+			name: "Svelte Drawesome",
+			href: "https://npmx.dev/package/sv-drawesome",
+			description: "A drawing toolbar for Svelte 5.",
+			source: "https://github.com/SikandarJODD/sv-drawesome",
+		},
+		{
+			name: "Svelte Pierre Words",
+			href: "https://sv-pierre.pages.dev",
+			description:
+				"Render static and streaming Markdown in Svelte with incremental DOM updates, syntax highlighting, math, and diagrams.",
+			source: "https://github.com/SikandarJODD/sv-pierre",
+		},
 	];
 
 	const withUtmSource = (href: string) =>

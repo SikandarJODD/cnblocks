@@ -17,14 +17,6 @@
 			>
 				200+ UI & Marketing Blocks for Svelte
 			</h1>
-			<!-- <p class="mt-4 max-w-3xl text-lg text-muted-foreground">
-				Including 38 blocks from the Dusk collection, available now.
-			</p> -->
-
-			<!-- <p class="mt-4 text-xl! text-muted-foreground">
-				<span class="font-gmono text-foreground">200+</span> Free and Open-Source UI and Marketing
-				blocks for building responsive Svelte websites.
-			</p> -->
 			<p class="mt-6 text-lg leading-8 text-muted-foreground md:leading-normal">
 				Originally created by <FaviconLink
 					href="https://x.com/MeschacIrung"
@@ -49,11 +41,16 @@
 					>Explore blocks</Button
 				>
 				<Button
-					href="/docs/installation"
+					href="https://github.com/SikandarJODD/cnblocks"
+					target="_blank"
+					rel="noopener noreferrer"
 					size="lg"
 					variant="outline"
-					class="rounded-full px-6 text-base">Get started</Button
+					class="rounded-full px-4 text-base shadow-none"
 				>
+					<Github />
+					Start on Github
+				</Button>
 			</div>
 		</div>
 	</div>
