@@ -15,6 +15,7 @@ export type DocsV2PageMeta = {
 	key: DocsV2PageKey;
 	path: string;
 	navTitle: string;
+	navDescription: string;
 	group: DocsV2GroupKey;
 	toc?: boolean;
 	seo: SEO;
@@ -49,6 +50,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "introduction",
 		path: "/docs",
 		navTitle: "Introduction",
+		navDescription: "Start with the basics.",
 		group: "guide",
 		toc: true,
 		seo: {
@@ -62,6 +64,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "installation",
 		path: "/docs/installation",
 		navTitle: "Installation",
+		navDescription: "Set up your project.",
 		group: "guide",
 		toc: true,
 		seo: {
@@ -75,6 +78,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "mistTheme",
 		path: "/docs/mist-theme",
 		navTitle: "Mist Theme Setup",
+		navDescription: "Add the Mist theme.",
 		group: "theme",
 		toc: true,
 		seo: {
@@ -88,6 +92,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "veilTheme",
 		path: "/docs/veil-theme",
 		navTitle: "Veil Theme Setup",
+		navDescription: "Add the Veil theme.",
 		group: "theme",
 		toc: true,
 		seo: {
@@ -110,6 +115,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "duskTheme",
 		path: "/docs/dusk-theme",
 		navTitle: "Dusk Theme Setup",
+		navDescription: "Add the Dusk theme.",
 		group: "theme",
 		toc: true,
 		seo: {
@@ -145,6 +151,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "sponsors",
 		path: "/docs/sponsors",
 		navTitle: "Sponsors",
+		navDescription: "Support the project.",
 		group: "resources",
 		toc: true,
 		seo: {
