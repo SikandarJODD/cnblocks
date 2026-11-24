@@ -55,12 +55,16 @@
 					<div class="text-sm font-medium">{name}</div>
 					<div class="mt-1.5 flex items-center gap-3">
 						<div>
-							<div class="text-xs text-zinc-50/50 dark:text-foreground/50">Expenses</div>
+							<div class="text-xs text-zinc-50/50 dark:text-foreground/50">
+								Expenses
+							</div>
 							<div class="mt-0.5 text-sm font-semibold">$32.65k</div>
 						</div>
 						<div class="h-7 w-px bg-white/15 dark:bg-border"></div>
 						<div>
-							<div class="text-xs text-zinc-50/50 dark:text-foreground/50">Income</div>
+							<div class="text-xs text-zinc-50/50 dark:text-foreground/50">
+								Income
+							</div>
 							<div class="mt-0.5 text-sm font-semibold">$2.65k</div>
 						</div>
 					</div>

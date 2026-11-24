@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.12.4",
-		"@lucide/svelte": "^1.61.0",
+		"@lucide/svelte": "^1.78.0",
 		"@shikijs/langs": "^4.5.0",
 		"@shikijs/themes": "^4.5.0",
 		"@sveltejs/adapter-vercel": "^7.0.0",

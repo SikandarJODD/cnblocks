@@ -15,7 +15,7 @@
 	const activeLibrary = $derived(getBlockLibrary(pathname));
 	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
 	const showDocsNavigation = $derived(
-		docsActive || pathname === "/" || isCurrentPath(pathname, "/projects"),
+		docsActive || pathname === "/" || isCurrentPath(pathname, "/projects")
 	);
 	const sidebar = Sidebar.useSidebar();
 

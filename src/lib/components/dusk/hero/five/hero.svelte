@@ -11,12 +11,14 @@
 <main class="overflow-x-hidden">
 	<section>
 		<div
-			class="relative mx-auto flex aspect-square flex-col justify-end sm:aspect-3/2 lg:min-h-200 lg:aspect-auto xl:aspect-video min-[1996px]:max-h-240"
+			class="relative mx-auto flex aspect-square flex-col justify-end min-[1996px]:max-h-240 sm:aspect-3/2 lg:aspect-auto lg:min-h-200 xl:aspect-video"
 		>
 			<div class="relative z-10 flex flex-col justify-end">
 				<div class="mx-auto w-full max-w-7xl px-6 pb-6 lg:pb-12">
 					<div class="flex flex-wrap items-end justify-between gap-4 lg:w-2/3">
-						<h1 class="max-w-md text-5xl text-balance md:text-6xl">Build 10x Faster with Ada</h1>
+						<h1 class="max-w-md text-5xl text-balance md:text-6xl">
+							Build 10x Faster with Ada
+						</h1>
 
 						<div class="flex items-center gap-2">
 							<Button href="/" class="pr-2.5">

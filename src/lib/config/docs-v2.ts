@@ -3,12 +3,8 @@ import type { SEO } from "#lib/types/seo.js";
 export type DocsV2GroupKey = "guide" | "theme" | "resources";
 
 export type DocsV2PageKey =
-	| "introduction"
-	| "installation"
-	| "mistTheme"
-	| "veilTheme"
-	| "duskTheme";
-	// | "mcp";
+	"introduction" | "installation" | "mistTheme" | "veilTheme" | "duskTheme";
+// | "mcp";
 
 export type DocsV2PageMeta = {
 	key: DocsV2PageKey;

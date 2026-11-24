@@ -144,7 +144,8 @@
 		<section class="border-b border-dashed border-ink/30 pb-12 dark:border-muted">
 			<H2 id="install-with-cli">Install with CLI</H2>
 			<Paragraph class="mt-1 mb-6 max-w-prose text-muted-foreground">
-				Install the Dusk Zinc tokens and all required UI primitives with the shadcn-svelte CLI.
+				Install the Dusk Zinc tokens and all required UI primitives with the shadcn-svelte
+				CLI.
 			</Paragraph>
 			<PMCommand
 				command="execute"
@@ -152,8 +153,8 @@
 				args={["shadcn-svelte@latest", "add", `${projectUrl}/d/dusk-theme.json`]}
 			/>
 			<Paragraph class="mt-4 max-w-prose text-sm text-muted-foreground">
-				Dusk uses the shadcn-svelte Zinc palette with Dusk-specific component styling. The CLI
-				updates your main CSS variables; use the manual setup below to keep them scoped.
+				Dusk uses the shadcn-svelte Zinc palette with Dusk-specific component styling. The
+				CLI updates your main CSS variables; use the manual setup below to keep them scoped.
 			</Paragraph>
 		</section>
 
@@ -247,16 +248,11 @@
 		<section>
 			<H2 id="required-components">Required Components</H2>
 			<Paragraph class="mt-1 mb-6 text-muted-foreground">
-				The Dusk registry keeps these four primitives isolated from your default shadcn-svelte
-				components.
+				The Dusk registry keeps these four primitives isolated from your default
+				shadcn-svelte components.
 			</Paragraph>
 			<div class="grid gap-3 sm:grid-cols-2">
-				{#each [
-					["Button", "#lib/components/ui/dusk/button"],
-					["Card", "#lib/components/ui/dusk/card"],
-					["Input", "#lib/components/ui/dusk/input"],
-					["Label", "#lib/components/ui/dusk/label"],
-				] as component}
+				{#each [["Button", "#lib/components/ui/dusk/button"], ["Card", "#lib/components/ui/dusk/card"], ["Input", "#lib/components/ui/dusk/input"], ["Label", "#lib/components/ui/dusk/label"]] as component}
 					<div class="border border-dashed border-ink/30 p-4 dark:border-emerald-400/40">
 						<div class="font-gmono">{component[0]}</div>
 						<code class="text-xs text-muted-foreground">{component[1]}</code>
@@ -268,7 +264,8 @@
 		<section>
 			<H2 id="button-component">Button Component</H2>
 			<Paragraph class="mt-1 mb-6">
-				Dusk uses rounded actions and includes neutral, ink, and marketing-oriented variants.
+				Dusk uses rounded actions and includes neutral, ink, and marketing-oriented
+				variants.
 			</Paragraph>
 			<div class="space-y-6">
 				<div class="space-y-2">
@@ -330,7 +327,8 @@
 		<section>
 			<H2 id="input-component">Input Component</H2>
 			<Paragraph class="mt-1 mb-6">
-				Dusk inputs cover text and file fields with matching focus, invalid, and disabled states.
+				Dusk inputs cover text and file fields with matching focus, invalid, and disabled
+				states.
 			</Paragraph>
 			<div class="space-y-6">
 				<div class="space-y-2">
