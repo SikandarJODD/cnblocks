@@ -13,6 +13,7 @@
 	import { onDestroy, untrack, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
+	import CopyPromptButton from "./copy-prompt-button.svelte";
 	import CodeEditor from "#lib/tree/layout/CodeEditor.svelte";
 	import {
 		createBlockCodeTreeFromCode,
@@ -388,6 +389,7 @@
 			</div>
 
 			<div class="flex items-center gap-1.5">
+				<CopyPromptButton {itemId} componentName={title} />
 				{#if shouldRenderInIframe}
 					<div transition:scale={{ start: 0.8 }}>
 						<!-- Laptop Icon -->

@@ -12,6 +12,7 @@
 	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
+	import CopyPromptButton from "./copy-prompt-button.svelte";
 	import { createBlockCodeTreeFromCode, type BlockCodeSource } from "#lib/tree/types.js";
 	import { CopyButton } from "#lib/components/chan/copy-button/index.js";
 
@@ -264,6 +265,7 @@
 			</div>
 
 			<div class="flex items-center gap-2">
+				<CopyPromptButton {itemId} componentName={category + " " + title} />
 				{#if shouldRenderInIframe}
 					<div transition:scale={{ start: 0.8 }}>
 						<!-- Laptop Icon -->
