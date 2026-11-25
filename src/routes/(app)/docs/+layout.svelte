@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import Toc from "#lib/components/base/toc/toc.svelte";
+	import DocsBottomNavigation from "#lib/components/docs/docs-bottom-navigation.svelte";
 	import { docsV2Pages } from "#lib/config/docs-v2.js";
 	import { setDocsLayoutContext } from "#lib/components/layout/docs-layout-context.js";
 	import { UseToc } from "#lib/hooks/use-toc.svelte.js";
@@ -31,3 +32,4 @@
 </script>
 
 {@render children()}
+<DocsBottomNavigation />

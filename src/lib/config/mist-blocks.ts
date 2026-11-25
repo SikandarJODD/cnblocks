@@ -104,7 +104,7 @@ export const mistForgotPasswordBlocks = createMistBlocks(
 export const mistHeroBlocks = createMistBlocks(
 	"hero",
 	[
-		["one", "one"],
+		["one", "Hero One"],
 		["two", "Hero Two"],
 		["three", "Hero Three"],
 		["four", "Hero Four"],

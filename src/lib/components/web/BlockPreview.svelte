@@ -12,7 +12,9 @@
 	import { onDestroy, type Component } from "svelte";
 	import { PersistedState, watch } from "runed";
 	import MobileBlockPreviewToolbar from "./MobileBlockPreviewToolbar.svelte";
+	import CopyPromptButton from "./copy-prompt-button.svelte";
 	import { createBlockCodeTreeFromCode, type BlockCodeSource } from "#lib/tree/types.js";
+	import { CopyButton } from "#lib/components/chan/copy-button/index.js";
 
 	type BlockPreviewProps = {
 		itemId?: string;
@@ -76,6 +78,12 @@
 	function setPreviewWidth(size: number) {
 		width = size;
 		iframeHeight = 0;
+	}
+
+	function getShareUrl() {
+		const url = new URL(window.location.href);
+		url.hash = itemId ?? `${category}-${title}`;
+		return url.href;
 	}
 
 	function cleanupIframe() {
@@ -224,7 +232,7 @@
 							<span class="hidden text-[13px] sm:block">Code</span>
 						</Button>
 					</div>
-					<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
+					<!-- <Separator orientation="vertical" class="my-auto hidden h-4! lg:block" /> -->
 				{/if}
 				<Button
 					variant="secondary"
@@ -239,17 +247,25 @@
 					/>
 					<span>Open preview</span>
 				</Button>
-				<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
+				<!-- <Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 				<span class="hidden text-[13px] text-muted-foreground lg:block"
 					>{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}</span
 				>
-				<Separator orientation="vertical" class="my-auto h-4!" />
+				<Separator orientation="vertical" class="my-auto h-4!" /> -->
 				<span class="ml-0 font-sidebar-content text-[13px] font-light capitalize"
 					>{category + " " + title}</span
 				>
+				<CopyButton
+					text={getShareUrl}
+					size="icon-sm"
+					variant="ghost"
+					class="text-muted-foreground"
+					aria-label={`Copy link to ${category} ${title}`}
+				/>
 			</div>
 
 			<div class="flex items-center gap-2">
+				<CopyPromptButton {itemId} componentName={category + " " + title} />
 				{#if shouldRenderInIframe}
 					<div transition:scale={{ start: 0.8 }}>
 						<!-- Laptop Icon -->

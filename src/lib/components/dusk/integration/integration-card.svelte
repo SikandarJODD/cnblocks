@@ -12,9 +12,7 @@
 	} = $props();
 </script>
 
-<div
-	class="cursor-pointer space-y-4 rounded-lg border p-4 transition-colors hover:bg-foreground/5"
->
+<div class="cursor-pointer space-y-4 rounded-lg border p-4 transition-colors hover:bg-foreground/5">
 	<div class="flex size-fit items-center justify-center">
 		<Icon />
 	</div>

@@ -78,8 +78,7 @@
 
 	let resolvedAddItem = $derived(addItem ?? getLegacyItemFromCommand(installCommand));
 	let installPathname = $derived(previewHref ?? page.url.pathname);
-	const getInstallBase = (base: string) =>
-		base.replace(/\/+$/, "").replace(/\/(r|v|m|d)$/i, "");
+	const getInstallBase = (base: string) => base.replace(/\/+$/, "").replace(/\/(r|v|m|d)$/i, "");
 	let resolvedInstallUrl = $derived(
 		installUrl ??
 			(resolvedAddItem

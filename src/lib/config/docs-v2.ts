@@ -3,18 +3,14 @@ import type { SEO } from "#lib/types/seo.js";
 export type DocsV2GroupKey = "guide" | "theme" | "resources";
 
 export type DocsV2PageKey =
-	| "introduction"
-	| "installation"
-	| "mistTheme"
-	| "veilTheme"
-	| "duskTheme"
-	// | "mcp"
-	| "sponsors";
+	"introduction" | "installation" | "mistTheme" | "veilTheme" | "duskTheme";
+// | "mcp";
 
 export type DocsV2PageMeta = {
 	key: DocsV2PageKey;
 	path: string;
 	navTitle: string;
+	navDescription: string;
 	group: DocsV2GroupKey;
 	toc?: boolean;
 	seo: SEO;
@@ -49,6 +45,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "introduction",
 		path: "/docs",
 		navTitle: "Introduction",
+		navDescription: "Start with the basics.",
 		group: "guide",
 		toc: true,
 		seo: {
@@ -62,6 +59,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "installation",
 		path: "/docs/installation",
 		navTitle: "Installation",
+		navDescription: "Set up your project.",
 		group: "guide",
 		toc: true,
 		seo: {
@@ -75,6 +73,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "mistTheme",
 		path: "/docs/mist-theme",
 		navTitle: "Mist Theme Setup",
+		navDescription: "Add the Mist theme.",
 		group: "theme",
 		toc: true,
 		seo: {
@@ -88,6 +87,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "veilTheme",
 		path: "/docs/veil-theme",
 		navTitle: "Veil Theme Setup",
+		navDescription: "Add the Veil theme.",
 		group: "theme",
 		toc: true,
 		seo: {
@@ -110,6 +110,7 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 		key: "duskTheme",
 		path: "/docs/dusk-theme",
 		navTitle: "Dusk Theme Setup",
+		navDescription: "Add the Dusk theme.",
 		group: "theme",
 		toc: true,
 		seo: {
@@ -141,19 +142,6 @@ export const docsV2PageMap: Record<DocsV2PageKey, DocsV2PageMeta> = {
 	// 		keywords: [...docsKeywords, "mcp", "cursor", "windsurf"],
 	// 	},
 	// },
-	sponsors: {
-		key: "sponsors",
-		path: "/docs/sponsors",
-		navTitle: "Sponsors",
-		group: "resources",
-		toc: true,
-		seo: {
-			title: "Sponsors",
-			description:
-				"Support Svelte Shadcn Blocks and learn how to become a sponsor of the project.",
-			keywords: [...docsKeywords, "sponsors", "community", "support"],
-		},
-	},
 };
 
 export const docsV2Pages = Object.values(docsV2PageMap);

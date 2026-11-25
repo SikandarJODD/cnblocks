@@ -14,6 +14,9 @@
 	const pathname = $derived(page.url.pathname);
 	const activeLibrary = $derived(getBlockLibrary(pathname));
 	const docsActive = $derived(isCurrentPath(pathname, "/docs"));
+	const showDocsNavigation = $derived(
+		docsActive || pathname === "/" || isCurrentPath(pathname, "/projects")
+	);
 	const sidebar = Sidebar.useSidebar();
 
 	function closeMobileSidebar() {
@@ -141,7 +144,7 @@
 			</div>
 		</Sidebar.GroupContent>
 	</Sidebar.Group>
-{:else if docsActive}
+{:else if showDocsNavigation}
 	<Sidebar.Group class="min-h-0 flex-1 overflow-hidden px-1 pt-1 md:pt-2">
 		<Sidebar.GroupLabel
 			class="h-6 px-1 font-mono text-sm text-ink/70 uppercase md:mb-1 md:text-xs dark:text-muted-foreground/80 "
@@ -167,11 +170,11 @@
 					<Sidebar.MenuItem>
 						<Sidebar.MenuButton
 							class="h-9 touch-manipulation px-2 text-sm font-normal text-muted-foreground hover:bg-transparent hover:text-foreground active:bg-transparent md:h-6 md:text-[13px] data-active:bg-transparent data-active:font-medium data-active:text-primary"
-							data-s-event="nav:LLM Index"
+							data-s-event="nav:llms.txt"
 						>
 							{#snippet child({ props })}
 								<a href="/llms.txt" {...props} onclick={closeMobileSidebar}>
-									<span>LLM Index</span>
+									<span>llms.txt</span>
 								</a>
 							{/snippet}
 						</Sidebar.MenuButton>
