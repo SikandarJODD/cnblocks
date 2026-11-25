@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import ThemeToggle from "#lib/web/layouts/ThemeToggle.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
 
 	const sidebar = Sidebar.useSidebar();
 
@@ -9,13 +9,15 @@
 	}
 </script>
 
-<Sidebar.Footer class="p-0 md:p-2">
-	<div class="flex items-center gap-1">
-		<a
+<Sidebar.Footer class="p-0 md:px-1.5">
+	<div class="flex items-center gap-0.5">
+		<Button
 			href="https://x.com/Sikandar_Bhide"
 			target="_blank"
-			rel="noreferrer"
-			class="flex size-10 touch-manipulation items-center justify-center rounded-md text-muted-foreground ring-sidebar-ring outline-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 md:size-8"
+			rel="noopener noreferrer"
+			variant="secondary"
+			size="sm"
+			class="touch-manipulation text-muted-foreground hover:text-foreground"
 			aria-label="Follow on X"
 			onclick={closeMobileSidebar}
 		>
@@ -29,12 +31,15 @@
 					d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.967 6.817H1.68l7.73-8.835L1.254 2.25h6.826l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"
 				/>
 			</svg>
-		</a>
-		<a
+			Twitter
+		</Button>
+		<Button
 			href="https://github.com/SikandarJODD/cnblocks"
 			target="_blank"
-			rel="noreferrer"
-			class="flex size-10 touch-manipulation items-center justify-center rounded-md text-muted-foreground ring-sidebar-ring outline-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 md:size-8"
+			rel="noopener noreferrer"
+			variant="secondary"
+			size="sm"
+			class="touch-manipulation text-muted-foreground hover:text-foreground"
 			aria-label="View cnblocks on GitHub"
 			onclick={closeMobileSidebar}
 		>
@@ -50,9 +55,7 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-		</a>
-		<div class="ms-auto [&_button]:size-10 [&_button]:touch-manipulation md:[&_button]:size-8">
-			<ThemeToggle />
-		</div>
+			GitHub
+		</Button>
 	</div>
 </Sidebar.Footer>
